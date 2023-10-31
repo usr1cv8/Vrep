@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="77a09c03-07f8-4276-8be2-b175d9291c14">
+  <producedTypes>
+    <objectType typeId="4390f877-b76e-4584-b134-7994211cf6a0" valueTypeId="c1aaaa75-7fb1-4962-9604-cab94611fb11"/>
+    <refType typeId="4a154739-03c3-47ea-9a0e-cb40f31521c9" valueTypeId="3ce20d9c-3875-44fd-bd32-45b994090be3"/>
+    <selectionType typeId="575245a3-bd7b-47de-aec0-39c2f2ebc373" valueTypeId="c2573620-a22f-4af2-87bf-e08afaaeff34"/>
+    <listType typeId="9f1b5abb-75bc-4709-908a-cc285b779fd4" valueTypeId="7ed4c7b5-d0f6-457a-928c-a27f42301d74"/>
+    <managerType typeId="1b33bd0e-0cc1-4783-9541-323fccb70969" valueTypeId="3aed5a18-a43d-4320-ab82-9bdd98538448"/>
+  </producedTypes>
+  <name>OtherExpenses</name>
+  <synonym>
+    <key>en</key>
+    <value>Other costs (expenses)</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Прочие затраты (расходы)</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Chi phí khác</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.OtherExpenses.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Posted</name>
+    <synonym>
+      <key>en</key>
+      <value>Posted</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Проведен</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đã kết chuyển</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Document posting flag</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак проведения документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Dấu hiệu kết chuyển chứng từ</value>
+    </toolTip>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <synonym>
+      <key>en</key>
+      <value>Ref</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Ссылка</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tham chiếu</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Reference to document</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Ссылка на документ</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tham chiếu đến chứng từ</value>
+    </toolTip>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <synonym>
+      <key>en</key>
+      <value>Deletion mark</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Пометка удаления</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đặt dấu xóa</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Document deletion mark</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Пометка удаления документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Đặt dấu xóa chứng từ</value>
+    </toolTip>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Date</name>
+    <synonym>
+      <key>en</key>
+      <value>Date</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ngày</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Document date</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Дата документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Ngày chứng từ</value>
+    </toolTip>
+    <fillValue xsi:type="core:DateValue">
+      <value>0001-01-01T00:00:00</value>
+    </fillValue>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Number</name>
+    <synonym>
+      <key>en</key>
+      <value>Number</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Номер</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Document number</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Номер документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Số chứng từ</value>
+    </toolTip>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <listPresentation>
+    <key>en</key>
+    <value>Other costs (expenses)</value>
+  </listPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Прочие затраты (расходы)</value>
+  </listPresentation>
+  <listPresentation>
+    <key>vi</key>
+    <value>Chi phí khác</value>
+  </listPresentation>
+  <explanation>
+    <key>en</key>
+    <value>Documents of recording other costs (expenses) of companies</value>
+  </explanation>
+  <explanation>
+    <key>ru</key>
+    <value>Документы по отражению прочих затрат (расходов) организаций</value>
+  </explanation>
+  <explanation>
+    <key>vi</key>
+    <value>Chứng từ phản ánh chi phí khác của doanh nghiệp</value>
+  </explanation>
+  <numberType>String</numberType>
+  <numberLength>11</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.OtherExpenses.Form.DocumentForm</defaultObjectForm>
+  <defaultListForm>Document.OtherExpenses.Form.ListForm</defaultListForm>
+  <defaultChoiceForm>Document.OtherExpenses.Form.ChoiceForm</defaultChoiceForm>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecordsDeletion>AutoDeleteOff</registerRecordsDeletion>
+  <registerRecords>AccountingRegister.Managerial</registerRecords>
+  <registerRecords>AccumulationRegister.Inventory</registerRecords>
+  <registerRecords>AccumulationRegister.IncomeAndExpenses</registerRecords>
+  <registerRecords>AccumulationRegister.SettlementsWithOtherCounterparties</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="ebfebbce-250c-405a-89cf-e3f450df8505">
+    <name>Company</name>
+    <synonym>
+      <key>en</key>
+      <value>Company</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Doanh nghiệp</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Companies</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Own company on whose behalf the document is issued</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Собственная организация, от имени которой оформляется документ</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Doanh nghiệp riêng mà nhân danh doanh nghiệp đó để lập chứng từ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.Companies.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="08d521a2-5490-4f5f-8a7f-bade657101a2">
+    <name>StructuralUnit</name>
+    <synonym>
+      <key>en</key>
+      <value>Department</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Bộ phận</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.StructuralUnits</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Department to which expenses are allocated</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Подразделение, на которое относятся расходы</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Bộ phận mà có liên quan đến chi phí</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameters>
+      <name>Filter.StructuralUnitType</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.StructuralUnitsTypes.EnumValue.Department</value>
+      </value>
+    </choiceParameters>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.StructuralUnits.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="92d54e58-e224-4879-b4a1-86c975a8cb13">
+    <name>Comment</name>
+    <synonym>
+      <key>en</key>
+      <value>Comment</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ghi chú</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Arbitrary comment to the document</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Произвольный комментарий к документу</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Ghi chú tùy ý đối với chứng từ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="138dd974-582b-4b29-bd8d-de780ead8713">
+    <name>Correspondence</name>
+    <synonym>
+      <key>en</key>
+      <value>Correspondence (Cr)</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Корреспонденция (кредит)</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đối ứng (có)</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Managerial</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Expense source</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Источник расходов</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nguồn chi</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameters>
+      <name>Filter.TypeOfAccount</name>
+      <value xsi:type="core:FixedArrayValue">
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.GLAccountsTypes.EnumValue.OtherIncome</value>
+        </values>
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.GLAccountsTypes.EnumValue.OtherCurrentAssets</value>
+        </values>
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.GLAccountsTypes.EnumValue.Loans</value>
+        </values>
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.GLAccountsTypes.EnumValue.LongtermObligations</value>
+        </values>
+      </value>
+    </choiceParameters>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>ChartOfAccounts.Managerial.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="47d0a219-42eb-4cc2-8d8e-141982ec5b8e">
+    <name>DocumentAmount</name>
+    <synonym>
+      <key>en</key>
+      <value>Amount</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số tiền</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Document amount</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Заполняется сумма документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Điền số tiền của chứng từ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <quickChoice>DontUse</quickChoice>
+    <createOnInput>Use</createOnInput>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="a1b23317-72d6-4d77-b14d-f261fd9c98a4">
+    <name>Author</name>
+    <synonym>
+      <key>en</key>
+      <value>Author</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Người lập</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Users</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>User who created the document</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Пользователь, создавший документ</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Người sử dụng mà đã lập chứng từ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="fe1c0963-ca57-4f35-9b5a-98195bb8dee3">
+    <name>Counterparty</name>
+    <synonym>
+      <key>en</key>
+      <value>Counterparty</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đối tác</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Counterparties</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Information about the supplier</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Информация о поставщике</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Thông tin về nhà cung cấp</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="bf42b753-e6a8-4de2-9a86-0a6e6c987625">
+    <name>Contract</name>
+    <synonym>
+      <key>en</key>
+      <value>Contract</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Hợp đồng</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.CounterpartyContracts</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Counterparty contract under which the document is issued</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Договор контрагента в рамках которого оформляется документ</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Hợp đồng với đối tác, trong khuôn khổ đó có lập chứng từ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameterLinks>
+      <name>Filter.Owner</name>
+      <field>Document.OtherExpenses.Attribute.Counterparty</field>
+    </choiceParameterLinks>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="5f925e0e-619c-4688-934c-c40455ae70bc">
+    <name>OtherSettlementsAccounting</name>
+    <synonym>
+      <key>en</key>
+      <value>Other settlements accounting (counterparties, founders)</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Учет прочих расчетов (контрагенты, учредители)</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Kế toán hạch toán khác (đối tác, người sáng lập)</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="ff1f7edb-8df9-4642-9fe8-7dc98993ffe3">
+    <name>DocumentForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Document form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu chứng từ</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="63abf7f5-7fa5-4df2-a7b4-a8ab64f8915b">
+    <name>ListForm</name>
+    <synonym>
+      <key>en</key>
+      <value>List form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu danh sách</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="ce4b0150-f629-4024-a409-14b21004d363">
+    <name>ChoiceForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Selection form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu chọn</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="0d6bd595-a1b0-4e5c-8c84-03b36ed20447">
+    <producedTypes>
+      <objectType typeId="7fcb3555-ad15-4557-b1fc-6058ea141722" valueTypeId="b56b58cb-b6c6-4f00-a11b-dd3a9386779a"/>
+      <rowType typeId="a771f3fa-38c5-486c-aff1-60ce3685c5d4" valueTypeId="683d6f55-09c5-47f3-be22-fe2db704a206"/>
+    </producedTypes>
+    <name>Expenses</name>
+    <synonym>
+      <key>en</key>
+      <value>Expenses</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Расходы</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Chi phí</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="ff6a4098-4eef-41ae-8120-7394bc26fed0">
+      <name>GLExpenseAccount</name>
+      <synonym>
+        <key>en</key>
+        <value>GL expense account (Dr)</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Счет затрат (дебет)</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Tài khoản chi phí (nợ)</value>
+      </synonym>
+      <type>
+        <types>ChartOfAccountsRef.Managerial</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>The account to record the expenses on</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Счет, на который будут отнесены расходы</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Tài khoản mà chi phí sẽ được đưa vào đó</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <choiceParameterLinks>
+        <name>StructuralUnit</name>
+        <changeMode>DontChange</changeMode>
+        <field>Document.OtherExpenses.Attribute.StructuralUnit</field>
+      </choiceParameterLinks>
+      <choiceParameters>
+        <name>Filter.TypeOfAccount</name>
+        <value xsi:type="core:FixedArrayValue">
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.GLAccountsTypes.EnumValue.UnfinishedProduction</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.GLAccountsTypes.EnumValue.IndirectExpenses</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.GLAccountsTypes.EnumValue.Expenses</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.GLAccountsTypes.EnumValue.OtherExpenses</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.GLAccountsTypes.EnumValue.LoanInterest</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.GLAccountsTypes.EnumValue.UndistributedProfit</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.GLAccountsTypes.EnumValue.OtherIncome</value>
+          </values>
+        </value>
+      </choiceParameters>
+      <choiceParameters>
+        <name>IncludeCostOfOther</name>
+        <value xsi:type="core:BooleanValue">
+          <value>true</value>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="87ec8438-b832-465d-bf1c-e37358b0e909">
+      <name>BusinessActivity</name>
+      <synonym>
+        <key>en</key>
+        <value>Business area</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Направление деятельности</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Lĩnh vực hoạt động</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.BusinessActivities</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Business area for expense allocation</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Направление деятельности, на которое будут отнесены расходы</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Lĩnh vực hoạt động mà sẽ đưa chi phí vào đó</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>GLExpenseAccount</name>
+        <field>Document.OtherExpenses.TabularSection.Expenses.Attribute.GLExpenseAccount</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="981ae90c-7d5f-4641-80a2-ee65c539e4ef">
+      <name>CustomerOrder</name>
+      <synonym>
+        <key>en</key>
+        <value>Customer order</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Заказ покупателя</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Đơn hàng của khách</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.CustomerOrder</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Customer order to which expenses will be allocated</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Заказ покупателя, на который будут отнесены расходы</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Đơn hàng của khách mà sẽ phát sinh chi phí</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>GLExpenseAccount</name>
+        <field>Document.OtherExpenses.TabularSection.Expenses.Attribute.GLExpenseAccount</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="6315dc86-7217-4b9d-bb71-e5dc16410251">
+      <name>Amount</name>
+      <synonym>
+        <key>en</key>
+        <value>Amount</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Số tiền</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Amount of expenses in the management accounting currency</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Сумма расходов в валюте управленческого учета</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Số tiền chi phí bằng tiền tệ kế toán quản trị</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="1eabb5d5-629e-4781-a1eb-74c52224d55e">
+      <name>Counterparty</name>
+      <synonym>
+        <key>en</key>
+        <value>Counterparty</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Контрагент</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Đối tác</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Counterparties</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Information about the supplier</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Информация о поставщике</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Thông tin về nhà cung cấp</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Filter.CustomerAdvancesGLAccount</name>
+        <field>Document.OtherExpenses.TabularSection.Expenses.Attribute.GLExpenseAccount</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="d46ce90f-ae9b-4d27-bbc7-4112fc068541">
+      <name>Contract</name>
+      <synonym>
+        <key>en</key>
+        <value>Contract</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Договор</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Hợp đồng</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.CounterpartyContracts</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Counterparty contract under which the document is issued</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Договор контрагента в рамках которого оформляется документ</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Hợp đồng với đối tác, trong khuôn khổ đó có lập chứng từ</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>GLExpenseAccount</name>
+        <field>Document.OtherExpenses.TabularSection.Expenses.Attribute.GLExpenseAccount</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

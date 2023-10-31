@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <title>
+    <key>en</key>
+    <value>Set up company accounting</value>
+  </title>
+  <title>
+    <key>ru</key>
+    <value>Настройка учета по организациям (компании)</value>
+  </title>
+  <title>
+    <key>vi</key>
+    <value>Tùy chỉnh kế toán theo doanh nghiệp</value>
+  </title>
+  <items xsi:type="form:FormGroup">
+    <name>CompanySettings</name>
+    <id>5</id>
+    <items xsi:type="form:FormField">
+      <name>MultipleCompaniesAccounting</name>
+      <id>6</id>
+      <title>
+        <key>en</key>
+        <value>Keep accounting by several companies in the infobase</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Вести учет в информационной базе по нескольким организациям</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Tiến hành kế toán theo nhiều doanh nghiệp trong cơ sở thông tin</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ConstantsSet.FunctionalOptionAccountingByMultipleCompanies</segments>
+      </dataPath>
+      <titleLocation>Right</titleLocation>
+      <toolTipRepresentation>ShowBottom</toolTipRepresentation>
+      <handlers>
+        <event>OnChange</event>
+        <name>UseSeveralCompaniesOnChange</name>
+      </handlers>
+      <extendedTooltip>
+        <name>MultipleCompaniesAccountingExtendedTooltip</name>
+        <id>63</id>
+        <title>
+          <key>en</key>
+          <value>The application provides an option to keep accounts both by one company (entrepreneur without a legal entity) and by two or more companies. If you need to keep accounts by several companies, then enable this option. </value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>В программном продукте предусмотрена возможность ведения учета как по одной организации (предпринимателю без образования юридического лица), так и по двум и более. Если учет по нескольким организациям необходим, то нужно установить эту опцию. </value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Trong chương trình có thể tiến hành kế toán theo một doanh nghiệp (cá nhân kinh doanh), theo hai và nhiều hơn. Nếu kế toán theo nhiều doanh nghiệp (cá nhân kinh doanh) thì cần thiết lập tùy chọn này.</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>MultipleCompaniesAccountingContextMenu</name>
+        <id>7</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>CheckBoxField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>CompanySettingsSettings</name>
+      <id>10</id>
+      <items xsi:type="form:FormGroup">
+        <name>SettingsAreCounterparty</name>
+        <id>18</id>
+        <items xsi:type="form:FormField">
+          <name>AccountingBySubsidiaryCompany</name>
+          <id>12</id>
+          <title>
+            <key>en</key>
+            <value>Keep accounting by &quot;Company - subsidiaries&quot;:</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Вести учет по &quot;Организации - компании&quot;:</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Tiến hành kế toán theo &quot;Doanh nghiệp mẹ - doanh nghiệp con&quot;:</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ConstantsSet.AccountingBySubsidiaryCompany</segments>
+          </dataPath>
+          <titleLocation>Right</titleLocation>
+          <toolTip>
+            <key>en</key>
+            <value>Allows company accounting - a group of companies which constitute a single entity in terms of business</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Разрешает учет по компании - группе организаций, представляющих собой, с точки зрения управления бизнесом, единое целое</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Cho phép kế toán theo doanh nghiệp - nhóm doanh nghiệp mà được coi là một khối thống nhất theo phương diện quản lý</value>
+          </toolTip>
+          <handlers>
+            <event>OnChange</event>
+            <name>AccountingBySubsidiaryCompanyOnChange</name>
+          </handlers>
+          <extendedTooltip>
+            <name>AccountingBySubsidiaryCompanyExtendedTooltip</name>
+            <id>67</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>AccountingBySubsidiaryCompanyContextMenu</name>
+            <id>13</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>CheckBoxField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>SubsidiaryCompany</name>
+          <id>16</id>
+          <title>
+            <key>en</key>
+            <value>Company</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Организация-компания</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Doanh nghiệp</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ConstantsSet.SubsidiaryCompany</segments>
+          </dataPath>
+          <titleLocation>None</titleLocation>
+          <toolTip>
+            <key>en</key>
+            <value>To keep accounting by company, specify the company by which the data will be consolidated</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Для учета по компании, необходимо указать организацию-компанию, по которой будет осуществляться консолидация данных</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Để hạch toán kế toán theo doanh nghiệp, cần chỉ ra doanh nghiệp chính để hợp nhất dữ liệu</value>
+          </toolTip>
+          <toolTipRepresentation>Button</toolTipRepresentation>
+          <extendedTooltip>
+            <name>SubsidiaryCompanyExtendedTooltip</name>
+            <id>68</id>
+            <title>
+              <key>en</key>
+              <value>&lt;b>&quot;Accounting by company&quot;&lt;/>. 
+
+
+There are two schemes of accounting in the software when the accounting system includes several companies: • &lt;b>Independent&lt;/>&lt;b>.&lt;/> Accounting is separate for each company, the source documents are issued separately in each company. The advantage of this approach is usage of common catalogs (analytics objects) and common infobase (all information is kept in one place). 
+
+• &lt;b>By company&lt;/>. The accounting is done aggregatively for the whole company, the source documents are issued separately in each company. The advantage of this approach is the usage of common catalogs (analytics objects), common infobase (all information is stored in one place), and accounting for the whole company (if all companies constitute a single entity from the point of view of business).
+
+
+
+&lt;b>&lt;color #ff0000>IMPORTANT!&lt;/>&lt;/> Key parameter. If prior to this, the accounting was done by the subsidiary, the transition to the accounting by seperate companies is not possible. If prior to this the accounting was done by several companies, but without company's accounting data aggregation, the transition to the accounting by the subsidiary company is not possible. </value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>&quot;Вести учет по компании&quot;.   В программном продукте предусмотрено две схемы учета в случае, когда в учетной системе присутствуют несколько организаций:   
+ • Независимая. Учет ведется обособленно по каждой организации, первичные документы оформляются отдельно по каждой организации. Преимущество такого подхода заключается в использовании общих справочников (объектов аналитики), а также общей информационной базы (вся информация хранится в одном месте).  • По компании. Учет ведется агрегировано, по компании в целом, первичные документы оформляются отдельно по каждой организации. Преимущество такого подхода заключается в использовании общих справочников (объектов аналитики), использовании общей информационной базы (вся информация хранится в одном месте), организации учета по компании (если с точки зрения ведения бизнеса все организации представляют собой единое целое).   ВАЖНО!  Параметр является ключевым. Если ранее осуществлялся учет по компании, переход к ведению учета по отдельным организациям невозможен. Если ранее ведение учета осуществлялось по нескольким организациям, но без агрегирования учетных данных по компании, переход к учету по компании невозможен. </value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>&quot;Tiến hành kế toán theo doanh nghiệp&quot;. Trong giải pháp có xem xét hai sơ đồ ghi nhận trong trường hợp, khi trong hệ thống kế toán có nhiều doanh nghiệp:    • Độc lập. Việc tính toán được tiến hành độc lập theo mỗi doanh nghiệp, chứng từ gốc được lập riêng biệt theo mỗi doanh nghiệp. Ưu điểm của cách tiếp cận này là sử dụng chung nhiều danh mục (đối tượng phân tích), cũng như sử dụng chung cơ sở thông tin (toàn bộ thông tin được lưu tại một nơi).  • Theo doanh nghiệp. Việc tính toán được tiến hành tổng hợp theo doanh nghiệp nói chung, chứng từ gốc được lập riêng biệt theo mỗi doanh nghiệp. Ưu điểm của phương pháp tiếp cận này là ở việc sử dụng danh mục chung (đối tượng phân tích) và việc sử dụng chung cơ sở thông tin (toàn bộ thông tin được lưu tại một chỗ), tổ chức kế toán theo doanh nghiệp (nếu từ quan điểm kinh doanh, toàn bộ thông tin là một thể thống nhất). QUAN TRỌNG! Tham số là tham số chính. Nếu trước đây đã ghi nhận theo doanh nghiệp thì không thể chuyển sang quản lý ghi nhận theo các doanh nghiệp riêng biệt. Nếu trước đây, việc tiến hành kế toán được thực hiện theo nhiều doanh nghiệp nhưng không có việc tổng hợp dữ liệu kế toán theo doanh nghiệp thì không thể chuyển sang kế toán theo doanh nghiệp.</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <formatted>true</formatted>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>SubsidiaryCompanyContextMenu</name>
+            <id>17</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <horizontalStretch>false</horizontalStretch>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>en</key>
+          <value>Company organization settings</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Настройки организации компании</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Tùy chỉnh cấu trúc doanh nghiệp</value>
+        </title>
+        <toolTip>
+          <key>en</key>
+          <value>Company organization settings</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>Настройки организации компании</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Tùy chỉnh cấu trúc doanh nghiệp</value>
+        </toolTip>
+        <horizontalStretch>true</horizontalStretch>
+        <extendedTooltip>
+          <name>SettingsAreCounterpartyExtendedTooltip</name>
+          <id>66</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Company settings settings</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Настройки организации настройки</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Tùy chỉnh doanh nghiệp tùy chỉnh</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Company settings settings</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Настройки организации настройки</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Tùy chỉnh doanh nghiệp tùy chỉnh</value>
+      </toolTip>
+      <toolTipRepresentation>ShowBottom</toolTipRepresentation>
+      <horizontalStretch>true</horizontalStretch>
+      <extendedTooltip>
+        <name>SettingsCompaniesSettingsExtendedTooltip</name>
+        <id>65</id>
+        <title>
+          <key>en</key>
+          <value>The application provides two accounting methods if there are several companies in the accounting system: independent and by company. For more information, see help.</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>В программном продукте предусмотрено две схемы учета в случае, когда в учетной системе присутствуют несколько организаций: независимая и по компании. Подробнее можно посмотреть в опциональной справке.</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Trong phần mềm có hai sơ đồ kế toán trong trường hợp hệ thống kế toán có nhiều doanh nghiệp: độc lập và theo doanh nghiệp mẹ. Có thể xem chi tiết trong trợ giúp tùy chọn.</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
+        <representation>NormalSeparation</representation>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Company settings</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Настройки организации</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Tùy chỉnh doanh nghiệp</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Company settings</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Настройки организации</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tùy chỉnh doanh nghiệp</value>
+    </toolTip>
+    <width>107</width>
+    <horizontalStretch>false</horizontalStretch>
+    <extendedTooltip>
+      <name>SettingsCompaniesExtendedTooltip</name>
+      <id>62</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>Commands</name>
+    <id>57</id>
+    <items xsi:type="form:Button">
+      <name>WriteAndClose</name>
+      <id>58</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>WriteAndCloseExtendedTooltip</name>
+        <id>72</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.StandardCommand.WriteAndClose</commandName>
+      <representation>Auto</representation>
+      <defaultButton>true</defaultButton>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <items xsi:type="form:Button">
+      <name>Close</name>
+      <id>59</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>CloseExtendedTooltip</name>
+        <id>73</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.StandardCommand.Close</commandName>
+      <representation>PictureAndText</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Commands</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Команды</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Lệnh</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Commands</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Команды</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Lệnh</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>CommandsExtendedTooltip</name>
+      <id>71</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>CommandBar</type>
+    <extInfo xsi:type="form:CommandBarExtInfo">
+      <horizontalAlign>Right</horizontalAlign>
+    </extInfo>
+  </items>
+  <autoCommandBar>
+    <name>FormCommandBar</name>
+    <id>-1</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <horizontalAlign>Left</horizontalAlign>
+  </autoCommandBar>
+  <handlers>
+    <event>OnOpen</event>
+    <name>OnOpen</name>
+  </handlers>
+  <width>70</width>
+  <windowOpeningMode>LockOwnerWindow</windowOpeningMode>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <enabled>true</enabled>
+  <verticalScroll>UseIfNecessary</verticalScroll>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>ConstantsSet</name>
+    <title>
+      <key>en</key>
+      <value>Constant set</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Набор констант</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Tập hợp hằng</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>ConstantsSet</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.AccountingBySubsidiaryCompany</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.AccountingCurrency</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.ArchiveCRReceiptsOnCloseCashCRSession</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.ControlBalancesOnPosting</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.CustomerPaymentDueDate</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.FunctionalCurrencyTransactionsAccounting</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.FunctionalOptionAccountingByCells</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.FunctionalOptionAccountingByProjects</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.FunctionalOptionAccountingCashMethodIncomeAndExpenses</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.FunctionalOptionAccountingRetail</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.FunctionalOptionInventoryReservation</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.FunctionalOptionReceiveGoodsOnCommission</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.FunctionalOptionTakingInventoryOnResponsibleStorage</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.FunctionalOptionTolling</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.FunctionalOptionTransferGoodsOnCommission</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.FunctionalOptionTransferInventoryOnSafeCustody</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.FunctionalOptionTransferRawMaterialsForProcessing</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.FunctionalOptionUseBatches</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.FunctionalOptionUseBudgeting</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.FunctionalOptionUseCharacteristics</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.FunctionalOptionUseDiscountsMarkups</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.FunctionalOptionUseOrderWarehouse</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.FunctionalOptionUseTechOperations</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.NationalCurrency</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.ProductsAndServicesSKUInContent</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.SubsidiaryCompany</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.UseSeveralCompanies</segments>
+    </notDefaultUseAlwaysAttributes>
+    <main>true</main>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>ValueOnOpenAccountingForSeveralCompanies</name>
+    <title>
+      <key>en</key>
+      <value>Value on opening accounting of several companies</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Значение при открытии учет по нескольким организациям</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Giá trị khi mở kế toán theo nhiều doanh nghiệp</value>
+    </title>
+    <id>1</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <formCommands>
+    <name>CatalogCompanies</name>
+    <title>
+      <key>en</key>
+      <value>Companies catalog</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Справочник &quot;Организации&quot;</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Danh mục &quot;Doanh nghiệp&quot;</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>en</key>
+      <value>Company catalog</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Справочник организации</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Danh mục doanh nghiệp</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>CatalogCompanies</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+  <extInfo xsi:type="form:ConstantsFormExtInfo">
+    <handlers>
+      <event>AfterWrite</event>
+      <name>AfterWrite</name>
+    </handlers>
+    <handlers>
+      <event>BeforeWriteAtServer</event>
+      <name>BeforeWriteAtServer</name>
+    </handlers>
+  </extInfo>
+</form:Form>

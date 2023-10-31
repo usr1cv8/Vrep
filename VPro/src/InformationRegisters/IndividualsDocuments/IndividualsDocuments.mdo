@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="063c6c7b-b0ee-468b-9793-9fb91be15932">
+  <producedTypes>
+    <selectionType typeId="bf64bb85-b06d-4446-9baa-7c41a5b2112f" valueTypeId="a4f7e9cb-a6f2-4ed5-9d27-25ab884b15f4"/>
+    <listType typeId="3485371f-a2a3-42bd-812d-8b3d6cbf4a9d" valueTypeId="44b11b25-13e5-4250-bf80-1a42cee8d542"/>
+    <managerType typeId="a1563f38-725f-43c4-9ff1-e2b68dc51fd8" valueTypeId="2e27eef8-f070-453c-956d-40f52f9d8af4"/>
+    <recordSetType typeId="41b0b500-764e-4dda-8583-ff82a11f342b" valueTypeId="2774cd2a-3581-4aff-ad11-51387a60c901"/>
+    <recordKeyType typeId="2c3280d0-c7c3-4e44-865f-e1ada2a25ea7" valueTypeId="ae0adfe0-aa9c-429a-9ce9-7f68c2787ec1"/>
+    <recordType typeId="3d6804ac-a209-4618-ac1f-e81e6b705133" valueTypeId="d95f338d-698f-459e-abde-4b9a6d7fd917"/>
+    <recordManagerType typeId="142c8d07-2aba-4515-ace4-958193616f37" valueTypeId="f873feba-c74a-4aeb-bcdf-86bdf1398a8f"/>
+  </producedTypes>
+  <name>IndividualsDocuments</name>
+  <synonym>
+    <key>en</key>
+    <value>Individuals' documents</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Документы физических лиц</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Giấy tờ cá nhân</value>
+  </synonym>
+  <defaultRecordForm>InformationRegister.IndividualsDocuments.Form.RecordForm</defaultRecordForm>
+  <defaultListForm>InformationRegister.IndividualsDocuments.Form.ListForm</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <synonym>
+      <key>en</key>
+      <value>Entry is valid from</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Запись действует с</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Bản ghi hiệu lực từ</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Date since which the record on this document is valid</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Дата, с которой действует запись об этом документе.</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Ngày mà bản ghi về chứng từ này bắt đầu có hiệu lực.</value>
+    </toolTip>
+    <fillValue xsi:type="core:DateValue">
+      <value>0001-01-01T00:00:00</value>
+    </fillValue>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>en</key>
+    <value>Document</value>
+  </recordPresentation>
+  <recordPresentation>
+    <key>ru</key>
+    <value>документ</value>
+  </recordPresentation>
+  <recordPresentation>
+    <key>vi</key>
+    <value>chứng từ</value>
+  </recordPresentation>
+  <listPresentation>
+    <key>en</key>
+    <value>Documents</value>
+  </listPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Документы</value>
+  </listPresentation>
+  <listPresentation>
+    <key>vi</key>
+    <value>Chứng từ</value>
+  </listPresentation>
+  <resources uuid="5abb6c76-028d-4d26-a4bc-ee5879127b18">
+    <name>Series</name>
+    <synonym>
+      <key>en</key>
+      <value>Series</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Серия</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ký hiệu</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>14</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Document series</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Серия документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Sê-ri của chứng từ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="a80149d3-8e2e-4764-8674-2a97f3602f85">
+    <name>Number</name>
+    <synonym>
+      <key>en</key>
+      <value>Number</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Номер</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>STT</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>14</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Document number</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Номер документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Số chứng từ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="433e502d-ab5c-4e8e-a7c0-0fde1aa6f767">
+    <name>IssueDate</name>
+    <synonym>
+      <key>en</key>
+      <value>Date of issue</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Дата выдачи</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ngày cấp</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Document issue date</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Дата выдачи документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Ngày cấp chứng từ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="6bd65f02-9531-4dd4-bd4a-4132aa3c4787">
+    <name>ValidityPeriod</name>
+    <synonym>
+      <key>en</key>
+      <value>Expiration date</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Дата окончания действия</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ngày kết thúc thao tác</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Document expiration date</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Срок действия документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Thời hạn hiệu lực của chứng từ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="56f80a4f-9fd2-424a-88c5-3cd2c0c12aa6">
+    <name>WhoIssued</name>
+    <synonym>
+      <key>en</key>
+      <value>Issued by</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Кем выдан</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Nơi cấp</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>200</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Issuing authority of document</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Кем выдан документ</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nơi cấp chứng từ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="af6e3d98-8f91-46c2-a1e3-fe67c474a09a">
+    <name>DepartmentCode</name>
+    <synonym>
+      <key>en</key>
+      <value>Department code</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Код подразделения</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Mã nơi cấp</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>15</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Document department code</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Код подразделения документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Mã bộ phận của chứng từ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="218302fa-674d-45e1-a7e2-2cce2d011342">
+    <name>IsIdentityDocument</name>
+    <synonym>
+      <key>en</key>
+      <value>This is an identity document</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Является документом, удостоверяющим личность</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Là giấy tờ tùy thân</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Shows that the document is an identity one</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак того, что документ является удостоверением личности</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Dấu hiệu cho thấy rằng, chứng từ là giấy tờ tùy thân</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="70264a0a-95c5-426f-a1bf-0f57b86d4030">
+    <name>Presentation</name>
+    <synonym>
+      <key>en</key>
+      <value>Document</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>документ</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>chứng từ</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>500</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Document presentation</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Представление документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Trình bày chứng từ</value>
+    </toolTip>
+    <multiLine>true</multiLine>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="988623f8-3a47-4ff8-9df7-7f286fe3e671">
+    <name>Ind</name>
+    <synonym>
+      <key>en</key>
+      <value>Individual</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Физ. лицо</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Cá nhân</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Individuals</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Individual</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Физ. лицо</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Cá nhân</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="d867720c-c937-4689-b241-0afda05ef993">
+    <name>DocumentKind</name>
+    <synonym>
+      <key>en</key>
+      <value>Document kind</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Вид документа</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Dạng chứng từ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.IndividualsDocumentsKinds</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Individual's document kind</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Вид документа физического лица</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Dạng giấy tờ cá nhân</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="1390da8f-bac6-44ee-8413-1438f1f66074">
+    <name>ListForm</name>
+    <synonym>
+      <key>en</key>
+      <value>List form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu danh sách</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="9616956d-a537-44fd-9d3f-5071fb5f4883">
+    <name>RecordForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Entry form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu bản ghi</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="4ad1eed9-89ff-4086-b0ff-4eadcebcdce9">
+    <name>DocumentsOfIndividual</name>
+    <synonym>
+      <key>en</key>
+      <value>Documents of Individual</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Документы физического лица</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Giấy tờ tùy thân</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="90d10b43-643b-4773-a591-6863744a985f">
+    <name>FormFillingDetails</name>
+    <synonym>
+      <key>en</key>
+      <value>Form filling details</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Mẫu điền chi tiết</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="41d31712-6181-4cfe-9aa4-02b7a50150b0">
+    <name>DocumentsOfIndividual</name>
+    <synonym>
+      <key>en</key>
+      <value>Documents</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Документы</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Chứng từ</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>CatalogRef.Individuals</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:InformationRegister>

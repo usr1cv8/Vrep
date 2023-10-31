@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="da04845f-b2f9-40aa-af2f-a93ff969f234">
+  <producedTypes>
+    <objectType typeId="5bcc9d05-831f-4b4e-affe-26883c996044" valueTypeId="d5969af3-5df2-45e6-a438-b91c04c6e103"/>
+    <refType typeId="57d30f54-53fa-4218-a8f7-9e00dbfebed0" valueTypeId="e6e1aa20-be76-4483-bd09-c992602e8b34"/>
+    <selectionType typeId="eebd5184-0bdf-46a2-b224-d5bf066d7eed" valueTypeId="afd6c9f9-65b4-47e2-8b9a-242760a87c7c"/>
+    <listType typeId="cc1a529b-f37c-408d-841a-cc66cf396110" valueTypeId="b568a9b9-f41c-49bc-bde0-51cd6bebd2e6"/>
+    <managerType typeId="b1013baa-0dde-4c2e-80f5-052d4883914b" valueTypeId="f9eff5a8-f8bc-4ec3-a562-c1bc23301e41"/>
+  </producedTypes>
+  <name>SuppliersProductsAndServices</name>
+  <synonym>
+    <key>en</key>
+    <value>Supplier products and services</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Номенклатура поставщиков</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Mặt hàng nhà cung cấp</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.SuppliersProductsAndServices.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.SuppliersProductsAndServices.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>PredefinedDataName</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Predefined</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <fillValue xsi:type="core:BooleanValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>IsFolder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Owner</name>
+    <synonym>
+      <key>en</key>
+      <value>Counterparties</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагенты</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đối tác</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Company counterparty that owns products and services item</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Контрагент предприятия, которому принадлежит номенклатурная позиция</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Đối tác doanh nghiệp mà mặt hàng trực thuộc</value>
+    </toolTip>
+    <fillValue xsi:type="core:ReferenceValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Parent</name>
+    <synonym>
+      <key>en</key>
+      <value>Products and services group</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Группа номенклатура</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Nhóm mặt hàng</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Group into which these products and services of the partner are included.</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа, в которую входит данная позиция номенклатуры партнера.</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nhóm mà trong đó có  nhóm sản phẩm này của bạn hàng</value>
+    </toolTip>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue"/>
+    <choiceParameterLinks>
+      <name>Filter.Owner</name>
+      <field>Catalog.SuppliersProductsAndServices.StandardAttribute.Owner</field>
+    </choiceParameterLinks>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Description</name>
+    <toolTip>
+      <key>en</key>
+      <value>Used for quick visual identification of supplier products and services in the application.</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Используется для быстрой визуальной идентификации номенклатуры поставщика в процессе работы с программой</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Được sử dụng để định danh nhanh một cách trực quan mặt hàng của nhà cung cấp trong quá trình làm việc chương trình</value>
+    </toolTip>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Code</name>
+    <toolTip>
+      <key>en</key>
+      <value>Unique identifier of supplier products and services.</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Уникальный идентификатор номенклатуры поставщика</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tên mặt hàng đơn trị của nhà cung cấp</value>
+    </toolTip>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <characteristics>
+    <characteristicTypes>Catalog.AdditionalAttributesAndInformationSets.TabularSection.AdditionalAttributes</characteristicTypes>
+    <keyField>Catalog.AdditionalAttributesAndInformationSets.TabularSection.AdditionalAttributes.Attribute.Property</keyField>
+    <typesFilterField>Catalog.AdditionalAttributesAndInformationSets.TabularSection.AdditionalAttributes.StandardAttribute.Ref</typesFilterField>
+    <typesFilterValue xsi:type="core:ReferenceValue">
+      <value>Catalog.AdditionalAttributesAndInformationSets.Catalog_SuppliersProductsAndServices</value>
+    </typesFilterValue>
+    <dataPathField>-1</dataPathField>
+    <multipleValuesUseField>-1</multipleValuesUseField>
+    <characteristicValues>Catalog.SuppliersProductsAndServices.TabularSection.AdditionalAttributes</characteristicValues>
+    <objectField>Catalog.SuppliersProductsAndServices.TabularSection.AdditionalAttributes.StandardAttribute.Ref</objectField>
+    <typeField>Catalog.SuppliersProductsAndServices.TabularSection.AdditionalAttributes.Attribute.Property</typeField>
+    <valueField>Catalog.SuppliersProductsAndServices.TabularSection.AdditionalAttributes.Attribute.Value</valueField>
+    <multipleValuesKeyField>-1</multipleValuesKeyField>
+    <multipleValuesOrderField>-1</multipleValuesOrderField>
+  </characteristics>
+  <characteristics>
+    <characteristicTypes>Catalog.AdditionalAttributesAndInformationSets.TabularSection.AdditionalInformation</characteristicTypes>
+    <keyField>Catalog.AdditionalAttributesAndInformationSets.TabularSection.AdditionalInformation.Attribute.Property</keyField>
+    <typesFilterField>Catalog.AdditionalAttributesAndInformationSets.TabularSection.AdditionalInformation.StandardAttribute.Ref</typesFilterField>
+    <typesFilterValue xsi:type="core:ReferenceValue">
+      <value>Catalog.AdditionalAttributesAndInformationSets.Catalog_SuppliersProductsAndServices</value>
+    </typesFilterValue>
+    <dataPathField>-1</dataPathField>
+    <multipleValuesUseField>-1</multipleValuesUseField>
+    <characteristicValues>InformationRegister.AdditionalInformation</characteristicValues>
+    <objectField>InformationRegister.AdditionalInformation.Dimension.Object</objectField>
+    <typeField>InformationRegister.AdditionalInformation.Dimension.Property</typeField>
+    <valueField>InformationRegister.AdditionalInformation.Resource.Value</valueField>
+    <multipleValuesKeyField>-1</multipleValuesKeyField>
+    <multipleValuesOrderField>-1</multipleValuesOrderField>
+  </characteristics>
+  <createOnInput>Use</createOnInput>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <listPresentation>
+    <key>en</key>
+    <value>Supplier products and services</value>
+  </listPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Номенклатура поставщиков</value>
+  </listPresentation>
+  <listPresentation>
+    <key>vi</key>
+    <value>Mặt hàng nhà cung cấp</value>
+  </listPresentation>
+  <explanation>
+    <key>en</key>
+    <value>List of goods and services provided by the supplier and their connection to the company products and services. </value>
+  </explanation>
+  <explanation>
+    <key>ru</key>
+    <value>Перечень товаров и услуг, предоставляемых поставщиком и их связь с номенклатурными позициями предприятия. </value>
+  </explanation>
+  <explanation>
+    <key>vi</key>
+    <value>Danh sách hàng hóa và dịch vụ của nhà cung cấp và liên kết các mặt hàng đó với mặt hàng của doanh nghiệp.</value>
+  </explanation>
+  <hierarchical>true</hierarchical>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <owners>Catalog.Counterparties</owners>
+  <codeLength>11</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <codeSeries>WithinOwnerSubordination</codeSeries>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.SuppliersProductsAndServices.Form.ItemForm</defaultObjectForm>
+  <defaultListForm>Catalog.SuppliersProductsAndServices.Form.ListForm</defaultListForm>
+  <defaultChoiceForm>Catalog.SuppliersProductsAndServices.Form.ChoiceForm</defaultChoiceForm>
+  <attributes uuid="514ce619-cadb-4cbf-9c5a-4574253c3b95">
+    <name>ProductsAndServices</name>
+    <synonym>
+      <key>en</key>
+      <value>Products and services</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Продукция и услуги</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Mặt hàng</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ProductsAndServices</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Products and services to which the supplier products and services correspond</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Номенклатура, которой соответствует номенклатура поставщика</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Mặt hàng tương ứng với mặt hàng của nhà cung cấp</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.ProductsAndServices.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="03930068-1459-4282-9c18-4b3db00e121b">
+    <name>Characteristic</name>
+    <synonym>
+      <key>en</key>
+      <value>Characteristic</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Characteristic</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đặc tính</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ProductsAndServicesCharacteristics</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Characteristic of products and services which the supplier products and services correspond to</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Характеристика номенклатуры, которой соответствует номенклатура поставщика</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Đặc tính mặt hàng tương ứng với mặt hàng nhà cung cấp</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Filter.Owner</name>
+      <field>Catalog.SuppliersProductsAndServices.Attribute.ProductsAndServices</field>
+    </choiceParameterLinks>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.ProductsAndServicesCharacteristics.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ef328951-150c-4196-8364-1a7b52cd9b50">
+    <name>SKU</name>
+    <synonym>
+      <key>en</key>
+      <value>SKU</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Артикул</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Mã hiệu</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>25</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>SKU of products and services of the supplier</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Артикул номенклатуры поставщика</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Mã hiệu mặt hàng của nhà cung cấp</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="07934881-f034-4c6b-804a-134c2f7dee37">
+    <name>ID</name>
+    <synonym>
+      <key>en</key>
+      <value>Identifier</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tên định danh</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>110</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Supplier products and services ID</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Идентификатор номенклатуры поставщика</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tên định danh mặt hàng nhà cung cấp</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="0e22bce7-9e35-4e8a-8d22-002588f2e03a">
+    <producedTypes>
+      <objectType typeId="f11f555d-10cd-4a81-8592-0bd7b2907c94" valueTypeId="67d95b5b-e5d6-481a-889f-bc398f739363"/>
+      <rowType typeId="e6b66698-d9f3-4ccf-a9bd-b5691960b3b1" valueTypeId="7049d49d-6d5e-43e7-949b-4a21a33cc0e8"/>
+    </producedTypes>
+    <name>AdditionalAttributes</name>
+    <synonym>
+      <key>en</key>
+      <value>Additional object attributes</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Дополнительные реквизиты объекта</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Mục tin bổ sung của đối tượng</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Additional attributes of inventory batch</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Дополнительные реквизиты партии запасов</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Mục tin bổ sung của lô vật tư</value>
+    </toolTip>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="c0a21164-f87a-43a6-8aa0-773360e89f25">
+      <name>Property</name>
+      <synonym>
+        <key>en</key>
+        <value>Property</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Свойство</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Thuộc tính</value>
+      </synonym>
+      <type>
+        <types>ChartOfCharacteristicTypesRef.AdditionalAttributesAndInformation</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>(Additional attribute)</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>(Дополнительный реквизит)</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>(Mục tin bổ sung)</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="48d4ac0d-1688-4882-9fc0-0f29939fa51e">
+      <name>Value</name>
+      <synonym>
+        <key>en</key>
+        <value>Value</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Значение</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Giá trị</value>
+      </synonym>
+      <type>
+        <types>Characteristic.AdditionalAttributesAndInformation</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Additional attribute value</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Значение дополнительного реквизита</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Giá trị mục tin bổ sung</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Filter.Owner</name>
+        <field>Catalog.SuppliersProductsAndServices.TabularSection.AdditionalAttributes.Attribute.Property</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="0e33523e-c3d2-48a2-b132-a11c62567889">
+      <name>TextString</name>
+      <synonym>
+        <key>en</key>
+        <value>Text string</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Текстовая строка</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Dòng văn bản</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Full text of additional attribute of string type</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Полный текст строкового дополнительного реквизита</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Nội dung đầy đủ của mục tin bổ sung theo dòng</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <forms uuid="b6a6387d-81bc-4b63-84b8-4fabe23ec800">
+    <name>ItemForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Item form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu phần tử</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="bb0da67b-87e4-42dd-b269-fd9670f30368">
+    <name>ListForm</name>
+    <synonym>
+      <key>en</key>
+      <value>List form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu danh sách</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="f706981f-d6e0-4ad0-9d04-c3b3011198c7">
+    <name>ChoiceForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Selection form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu chọn</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <items xsi:type="form:FormField">
+    <name>Recorder</name>
+    <id>15</id>
+    <title>
+      <key>en</key>
+      <value>Document</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>По документу</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Theo chứng từ</value>
+    </title>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Recorder</segments>
+    </dataPath>
+    <extendedTooltip>
+      <name>RecorderExtendedTooltip</name>
+      <id>17</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>RecorderContextMenu</name>
+      <id>16</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>LabelField</type>
+    <editMode>Enter</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:LabelFieldExtInfo">
+      <autoMaxHeight>true</autoMaxHeight>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>TimeGroup</name>
+    <id>22</id>
+    <items xsi:type="form:FormField">
+      <name>RadioButtonAccrualDay</name>
+      <id>3</id>
+      <title>
+        <key>en</key>
+        <value>Remind on</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Напомнить</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Nhắc nhớ</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>RadioButtonAccrualDay</segments>
+      </dataPath>
+      <titleLocation>Left</titleLocation>
+      <extendedTooltip>
+        <name>RadioButtonAccrualDayExtendedTooltip</name>
+        <id>5</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>RadioButtonAccrualDayContextMenu</name>
+        <id>4</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>RadioButtonField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
+        <radioButtonsType>Tumbler</radioButtonsType>
+        <choiceList>
+          <presentation>
+            <key>en</key>
+            <value>the day before payment</value>
+          </presentation>
+          <presentation>
+            <key>ru</key>
+            <value>За день до оплаты</value>
+          </presentation>
+          <presentation>
+            <key>vi</key>
+            <value>trong ngày trước khi thanh toán</value>
+          </presentation>
+          <value xsi:type="core:NumberValue">
+            <value>1</value>
+          </value>
+        </choiceList>
+        <choiceList>
+          <presentation>
+            <key>en</key>
+            <value>the payment day</value>
+          </presentation>
+          <presentation>
+            <key>ru</key>
+            <value>В день оплаты</value>
+          </presentation>
+          <presentation>
+            <key>vi</key>
+            <value>trong ngày thanh toán</value>
+          </presentation>
+          <value xsi:type="core:NumberValue">
+            <value>2</value>
+          </value>
+        </choiceList>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>Time</name>
+      <id>6</id>
+      <title>
+        <key>en</key>
+        <value>at</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>В</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>trong</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Time</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>TimeExtendedTooltip</name>
+        <id>8</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>TimeContextMenu</name>
+        <id>7</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>InputField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:InputFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <wrap>true</wrap>
+        <dropListButton>false</dropListButton>
+        <choiceButton>false</choiceButton>
+        <editFormat>
+          <key>en</key>
+          <value>DLF=T</value>
+        </editFormat>
+        <editFormat>
+          <key>ru</key>
+          <value>ДФ=ЧЧ:мм</value>
+        </editFormat>
+        <editFormat>
+          <key>vi</key>
+          <value>DLF=T</value>
+        </editFormat>
+        <autoMarkIncomplete>true</autoMarkIncomplete>
+        <chooseType>true</chooseType>
+        <typeDomainEnabled>true</typeDomainEnabled>
+        <textEdit>true</textEdit>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Time group</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>ГруппаВремя</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Nhóm thời gian</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Time group</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nhóm thời gian</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>TimeGroupExtendedTooltip</name>
+      <id>23</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>HorizontalIfPossible</group>
+      <representation>WeakSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormField">
+    <name>User</name>
+    <id>9</id>
+    <title>
+      <key>en</key>
+      <value>Remind to</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Пользователю</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Nhắc nhớ</value>
+    </title>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>User</segments>
+    </dataPath>
+    <extendedTooltip>
+      <name>UserExtendedTooltip</name>
+      <id>11</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>UserContextMenu</name>
+      <id>10</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>InputField</type>
+    <editMode>Enter</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:InputFieldExtInfo">
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <wrap>true</wrap>
+      <autoMarkIncomplete>true</autoMarkIncomplete>
+      <chooseType>true</chooseType>
+      <typeDomainEnabled>true</typeDomainEnabled>
+      <textEdit>true</textEdit>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>GroupHyperlinkToReminderListWithFilterByLoanContract</name>
+    <id>20</id>
+    <items xsi:type="form:Decoration">
+      <name>ThereRemindersForLoanContract</name>
+      <id>12</id>
+      <title>
+        <key>en</key>
+        <value>There are reminders for the credit (loan) contract</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>По договору кредита (займа) есть напоминания</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Theo hợp đồng tín dụng (nợ) có nhắc nhớ</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ThereRemindersForLoanContractExtendedTooltip</name>
+        <id>14</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ThereRemindersForLoanContractContextMenu</name>
+        <id>13</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <handlers>
+          <event>Click</event>
+          <name>ThereRemindersForObjectClick</name>
+        </handlers>
+        <hyperlink>true</hyperlink>
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Group hyperlink to reminder list with filter by credit loan contract</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Группа гиперссылка на список напоминаний с отбором по договору кредита займа</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Nhóm tham chiếu đến danh sách nhắc nhớ có lọc theo hợp đồng vay nợ</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Group hyperlink to reminder list with filter by credit loan contract</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа гиперссылка на список напоминаний с отбором по договору кредита займа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nhóm tham chiếu đến danh sách nhắc nhớ có lọc theo hợp đồng vay nợ</value>
+    </toolTip>
+    <horizontalStretch>true</horizontalStretch>
+    <extendedTooltip>
+      <name>GroupHyperlinkToReminderListWithFilterByLoanContractExtendedTooltip</name>
+      <id>21</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <horizontalAlign>Left</horizontalAlign>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <commandBarLocation>Bottom</commandBarLocation>
+  <autoCommandBar>
+    <name>FormCommandBar</name>
+    <id>-1</id>
+    <items xsi:type="form:Button">
+      <name>FormCreate</name>
+      <id>1</id>
+      <title>
+        <key>en</key>
+        <value>Create payment reminders</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Создать напоминания о платежах</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Tạo nhắc nhớ về thanh toán</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>FormCreateExtendedTooltip</name>
+        <id>2</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.Create</commandName>
+      <representation>Auto</representation>
+      <defaultButton>true</defaultButton>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <items xsi:type="form:Button">
+      <name>FormClose</name>
+      <id>18</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>FormCloseExtendedTooltip</name>
+        <id>19</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.StandardCommand.Close</commandName>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <horizontalAlign>Left</horizontalAlign>
+  </autoCommandBar>
+  <handlers>
+    <event>OnOpen</event>
+    <name>OnOpen</name>
+  </handlers>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>OnCreateAtServer</name>
+  </handlers>
+  <width>54</width>
+  <windowOpeningMode>LockOwnerWindow</windowOpeningMode>
+  <autoSaveDataInSettings>Use</autoSaveDataInSettings>
+  <autoTitle>true</autoTitle>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <enabled>true</enabled>
+  <verticalScroll>UseIfNecessary</verticalScroll>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>AddressPaymentAndAccrualScheduleInStorage</name>
+    <title>
+      <key>en</key>
+      <value>Address of payment and accrual schedule in the storage</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Адрес график платежей и начислений в хранилище</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Địa chỉ lịch biểu thanh toán và tính toán trong kho chứa</value>
+    </title>
+    <id>5</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>RadioButtonAccrualDay</name>
+    <title>
+      <key>en</key>
+      <value>Radio button accrual day</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Переключатель день начисления</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Nút gạt ngày tính toán</value>
+    </title>
+    <id>1</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>RadioButtonAccrualDay</segments>
+    </settingsSavedData>
+  </attributes>
+  <attributes>
+    <name>DocumentFormID</name>
+    <title>
+      <key>en</key>
+      <value>Document form ID</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Идентификатор формы документа</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Tên định danh (ID) biểu mẫu chứng từ</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>Recorder</name>
+    <title>
+      <key>en</key>
+      <value>Recorder</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Регистратор</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Nguồn ghi</value>
+    </title>
+    <id>3</id>
+    <valueType>
+      <types>DocumentRef.LoanContract</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>Time</name>
+    <title>
+      <key>en</key>
+      <value>Time</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Время</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Thời gian</value>
+    </title>
+    <id>4</id>
+    <valueType>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Time</dateFractions>
+      </dateQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>Time</segments>
+    </settingsSavedData>
+  </attributes>
+  <attributes>
+    <name>User</name>
+    <title>
+      <key>en</key>
+      <value>User</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Người sử dụng</value>
+    </title>
+    <id>6</id>
+    <valueType>
+      <types>CatalogRef.Users</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>User</segments>
+    </settingsSavedData>
+  </attributes>
+  <attributes>
+    <name>CounterpartyBank</name>
+    <title>
+      <key>en</key>
+      <value>Counterparty bank</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Банк контрагент</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Ngân hàng đối tác</value>
+    </title>
+    <id>7</id>
+    <valueType>
+      <types>CatalogRef.Counterparties</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <formCommands>
+    <name>Create</name>
+    <title>
+      <key>en</key>
+      <value>Create</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Создать</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Tạo</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>en</key>
+      <value>Create</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Создать</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tạo</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Create</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+</form:Form>

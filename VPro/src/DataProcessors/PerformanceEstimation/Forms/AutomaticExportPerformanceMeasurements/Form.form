@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <items xsi:type="form:FormField">
+    <name>ToDoExport</name>
+    <id>14</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>ToDoExport</segments>
+    </dataPath>
+    <titleLocation>Right</titleLocation>
+    <handlers>
+      <event>OnChange</event>
+      <name>ToExportDataIfYouChange</name>
+    </handlers>
+    <extendedTooltip>
+      <name>PerformExportExtendedTooltip</name>
+      <id>29</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>PerformExportContextMenu</name>
+      <id>15</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>CheckBoxField</type>
+    <editMode>Enter</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>ExportSettingsInLocalDirectory</name>
+    <id>8</id>
+    <items xsi:type="form:FormField">
+      <name>PerformExportInLocalDirectory</name>
+      <id>20</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>PerformExportInLocalDirectory</segments>
+      </dataPath>
+      <handlers>
+        <event>OnChange</event>
+        <name>ToExportCatalogIfYouChange</name>
+      </handlers>
+      <extendedTooltip>
+        <name>PerformExportInLocalDirectoryExtendedTooltip</name>
+        <id>31</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>PerformExportInLocalDirectoryContextMenu</name>
+        <id>21</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>CheckBoxField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>LocalExportDirectory</name>
+      <id>9</id>
+      <title>
+        <key>en</key>
+        <value>Local export directory</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Локальный каталог экспорта</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Thư mục kết xuất cục bộ</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>LocalExportDirectory</segments>
+      </dataPath>
+      <handlers>
+        <event>OnChange</event>
+        <name>LocalExportDirectoryOnChange</name>
+      </handlers>
+      <extendedTooltip>
+        <name>LocalDirectoryExportExtendedTooltip</name>
+        <id>32</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>LocalDirectoryExportContextMenu</name>
+        <id>10</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>InputField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:InputFieldExtInfo">
+        <handlers>
+          <event>StartChoice</event>
+          <name>LocalDirectoryExportFilesBeginningSelection</name>
+        </handlers>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <wrap>true</wrap>
+        <choiceButton>true</choiceButton>
+        <chooseType>true</chooseType>
+        <typeDomainEnabled>true</typeDomainEnabled>
+        <textEdit>true</textEdit>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Set up export to local directory</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Настройки экспорта в локальный каталог</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Tùy chỉnh kết xuất vào thư mục cục bộ</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Set up export to local directory</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Настройки экспорта в локальный каталог</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tùy chỉnh kết xuất vào thư mục cục bộ</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>ExportSettingsInLocalDirectoryExtendedTooltip</name>
+      <id>30</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <representation>WeakSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <showTitle>true</showTitle>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>ExportSettingsOnFTP</name>
+    <id>24</id>
+    <items xsi:type="form:FormField">
+      <name>PerformExportToFTP</name>
+      <id>18</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>PerformExportToFTP</segments>
+      </dataPath>
+      <handlers>
+        <event>OnChange</event>
+        <name>ToExportCatalogIfYouChange</name>
+      </handlers>
+      <extendedTooltip>
+        <name>PerformExportOnFTPExtendedTooltip</name>
+        <id>34</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>PerformExportOnFTPContextMenu</name>
+        <id>19</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>CheckBoxField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>FTPExportDirectory</name>
+      <id>22</id>
+      <title>
+        <key>en</key>
+        <value>FTP server address</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Адрес ftp-сервера</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Địa chỉ ftp-server</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>FTPExportDirectory</segments>
+      </dataPath>
+      <handlers>
+        <event>OnChange</event>
+        <name>FTPExportDirectoryOnChange</name>
+      </handlers>
+      <extendedTooltip>
+        <name>FTPDirectoryExportExtendedTooltip</name>
+        <id>35</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>FTPDirectoryExportContextMenu</name>
+        <id>23</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>InputField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:InputFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <wrap>true</wrap>
+        <chooseType>true</chooseType>
+        <typeDomainEnabled>true</typeDomainEnabled>
+        <textEdit>true</textEdit>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Set up FTP export</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Настройки экспорта на FTP</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Tùy chỉnh kết xuất vào FTP</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Set up FTP export</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Настройки экспорта на FTP</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tùy chỉnh kết xuất vào FTP</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>ExportSettingsForFTPExtendedTooltip</name>
+      <id>33</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <representation>WeakSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <showTitle>true</showTitle>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:Button">
+    <name>ConfigureExportSchedule</name>
+    <id>11</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <extendedTooltip>
+      <name>ConfigureScheduleExportsExtendedTooltip</name>
+      <id>36</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>Hyperlink</type>
+    <commandName>Form.Command.ConfigureExportSchedule</commandName>
+    <representation>Auto</representation>
+    <autoMaxWidth>true</autoMaxWidth>
+    <autoMaxHeight>true</autoMaxHeight>
+    <placementArea>UserCmds</placementArea>
+    <representationInContextMenu>Auto</representationInContextMenu>
+  </items>
+  <autoCommandBar>
+    <name>FormCommandBar</name>
+    <id>-1</id>
+    <items xsi:type="form:Button">
+      <name>FormSaveClose</name>
+      <id>17</id>
+      <title>
+        <key>en</key>
+        <value>Save and close</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Сохранить и закрыть</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Lưu và đóng</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>FormSaveCloseExtendedTooltip</name>
+        <id>25</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.SaveClose</commandName>
+      <representation>Auto</representation>
+      <defaultButton>true</defaultButton>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <backColor xsi:type="core:ColorDef">
+        <red>51</red>
+        <green>102</green>
+        <blue>255</blue>
+      </backColor>
+      <borderColor xsi:type="core:ColorDef">
+        <red>179</red>
+        <green>3</green>
+        <blue>3</blue>
+      </borderColor>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <items xsi:type="form:Button">
+      <name>FormSaveSettings</name>
+      <id>16</id>
+      <title>
+        <key>en</key>
+        <value>Write</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Записать</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Ghi lại</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>FormSaveSettingsExtendedTooltip</name>
+        <id>26</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.SaveSettings</commandName>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
+  </autoCommandBar>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>OnCreateAtServer</name>
+  </handlers>
+  <handlers>
+    <event>FillCheckProcessingAtServer</event>
+    <name>FillCheckProcessingAtServer</name>
+  </handlers>
+  <windowOpeningMode>LockOwnerWindow</windowOpeningMode>
+  <autoTitle>true</autoTitle>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <allowFormCustomize>true</allowFormCustomize>
+  <enabled>true</enabled>
+  <verticalScroll>UseIfNecessary</verticalScroll>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>LocalExportDirectory</name>
+    <title>
+      <key>en</key>
+      <value>Local export directory</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Локальный каталог экспорта</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Thư mục kết xuất cục bộ</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>255</length>
+      </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>ToDoExport</name>
+    <title>
+      <key>en</key>
+      <value>Export</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Выполнять экспорт</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Thực hiện kết xuất</value>
+    </title>
+    <id>3</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>PerformExportInLocalDirectory</name>
+    <title>
+      <key>en</key>
+      <value>Export to local directory</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Выполнять экспорт в локальный каталог</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Thực hiện kết xuất vào thư mục cục bộ</value>
+    </title>
+    <id>1</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>PerformExportToFTP</name>
+    <title>
+      <key>en</key>
+      <value>Export to FTP</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Выполнять экспорт на FTP</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Thực hiện kết xuất vào FTP</value>
+    </title>
+    <id>4</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>FTPExportDirectory</name>
+    <title>
+      <key>en</key>
+      <value>FTP server address</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Адрес ftp-сервера</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Địa chỉ ftp-server</value>
+    </title>
+    <id>5</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>255</length>
+      </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <savedData>true</savedData>
+  </attributes>
+  <formCommands>
+    <name>ConfigureExportSchedule</name>
+    <title>
+      <key>en</key>
+      <value>Configure export schedule</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Настроить расписание экспорта</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Thiết lập lịch biểu kết xuất</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>en</key>
+      <value>Configure export schedule</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Настроить расписание экспорта</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Thiết lập lịch biểu kết xuất</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ConfigureExportSchedule</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>SaveSettings</name>
+    <title>
+      <key>en</key>
+      <value>Save settings</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Save settings</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Lưu các cài đặt</value>
+    </title>
+    <id>2</id>
+    <toolTip>
+      <key>en</key>
+      <value>Save settings</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Save settings</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Lưu các cài đặt</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>SaveSettings</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>SaveClose</name>
+    <title>
+      <key>en</key>
+      <value>Save and close</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Сохранить и закрыть</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Lưu và đóng</value>
+    </title>
+    <id>3</id>
+    <toolTip>
+      <key>en</key>
+      <value>Save close</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Сохранить закрыть</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Lưu đóng</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>SaveClose</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+</form:Form>

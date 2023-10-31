@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DocumentJournal xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ff0bc0a1-ba37-44c0-80ba-c5840e208089">
+  <producedTypes>
+    <selectionType typeId="51da2606-8dd4-4453-8892-cd0a8fa01feb" valueTypeId="4cb93251-65a1-401c-a51e-774620d78ef1"/>
+    <listType typeId="aafccfdb-ce60-45bc-930a-aef8e1e2001b" valueTypeId="6d0986d5-1e9a-4580-8359-fc4e81110443"/>
+    <managerType typeId="9078c324-0a33-424f-9088-0d2add05a026" valueTypeId="e957ac7a-6f62-457a-af60-26b38eff54a4"/>
+  </producedTypes>
+  <name>WarehouseWarrants</name>
+  <synonym>
+    <key>en</key>
+    <value>Warehouse slips</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Складские ордера</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Phiếu kho</value>
+  </synonym>
+  <defaultForm>DocumentJournal.WarehouseWarrants.Form.ListForm</defaultForm>
+  <useStandardCommands>true</useStandardCommands>
+  <registeredDocuments>Document.GoodsReceipt</registeredDocuments>
+  <registeredDocuments>Document.GoodsExpense</registeredDocuments>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Type</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Date</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Posted</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Number</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <columns uuid="89f8317e-6241-43af-9a51-fe1dd793af47">
+    <name>Company</name>
+    <synonym>
+      <key>en</key>
+      <value>Company</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Doanh nghiệp</value>
+    </synonym>
+    <references>Document.GoodsReceipt.Attribute.Company</references>
+    <references>Document.GoodsExpense.Attribute.Company</references>
+  </columns>
+  <columns uuid="e38a935e-42b7-47f0-b668-9ac79755f57d">
+    <name>Warehouse</name>
+    <synonym>
+      <key>en</key>
+      <value>Warehouse</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Склад, на который приходуются запасы</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Kho bãi</value>
+    </synonym>
+    <references>Document.GoodsReceipt.Attribute.StructuralUnit</references>
+    <references>Document.GoodsExpense.Attribute.StructuralUnit</references>
+  </columns>
+  <columns uuid="33ac92bb-a672-4367-90e3-11808e043330">
+    <name>Cell</name>
+    <synonym>
+      <key>en</key>
+      <value>Storage bin</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Ячейка</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ô hàng</value>
+    </synonym>
+    <references>Document.GoodsReceipt.Attribute.Cell</references>
+    <references>Document.GoodsExpense.Attribute.Cell</references>
+  </columns>
+  <columns uuid="1772f0d3-e79a-48cc-904d-acd35cc2a5c2">
+    <name>Comment</name>
+    <synonym>
+      <key>en</key>
+      <value>Note</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Примечание</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ghi chú</value>
+    </synonym>
+    <references>Document.GoodsExpense.Attribute.Comment</references>
+    <references>Document.GoodsReceipt.Attribute.Comment</references>
+  </columns>
+  <columns uuid="3da30247-ad0e-4113-954e-46420f6f2498">
+    <name>Author</name>
+    <synonym>
+      <key>en</key>
+      <value>Created by</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Ведомость составил</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Người lập</value>
+    </synonym>
+    <references>Document.GoodsReceipt.Attribute.Author</references>
+    <references>Document.GoodsExpense.Attribute.Author</references>
+  </columns>
+  <forms uuid="f3233291-88d8-4f14-b77b-c8020285dcad">
+    <name>ListForm</name>
+    <synonym>
+      <key>en</key>
+      <value>List form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu danh sách</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DocumentJournal>

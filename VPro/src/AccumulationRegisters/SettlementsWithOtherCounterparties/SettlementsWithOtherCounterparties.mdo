@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f926b1be-25f5-40ec-86bd-2cffbae47371">
+  <producedTypes>
+    <selectionType typeId="d9d214d8-3154-4153-8c2d-c558987e3136" valueTypeId="e2d7934b-2969-4116-9e36-ba24651ebadc"/>
+    <listType typeId="85677238-468f-4a2e-ad6f-8cee56b65646" valueTypeId="377673d3-82ab-4df5-a59b-7ad0be8f049c"/>
+    <managerType typeId="2e12911a-e753-44c2-b257-cb4f2528eaf7" valueTypeId="b48b506f-32b7-4de6-8f5e-f189b12e68ef"/>
+    <recordSetType typeId="8bd55901-9960-4a0c-bb50-e436387ee21b" valueTypeId="3835c2e4-b507-4a99-9740-571b72ff9462"/>
+    <recordKeyType typeId="0488d5b0-b7f0-41bb-81d5-1c2e64817845" valueTypeId="4b3367ff-04a8-4a46-8350-051a85db187c"/>
+    <recordType typeId="d47b6d00-09d5-48b3-a60a-5b1457642bfc" valueTypeId="d336eafe-0227-49ab-935f-fa24802ed02a"/>
+  </producedTypes>
+  <name>SettlementsWithOtherCounterparties</name>
+  <synonym>
+    <key>en</key>
+    <value>Settlements with other counterparties</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Расчеты с прочими контрагентами</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Hạch toán với đối tác khác</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>RecordType</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="832da7a2-49fe-498c-b3bd-c0fdad204ed8">
+    <name>Amount</name>
+    <synonym>
+      <key>en</key>
+      <value>Amount</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số tiền</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="97567c57-0156-4ba7-ae2e-056147a3497f">
+    <name>AmountCur</name>
+    <synonym>
+      <key>en</key>
+      <value>Amount (curr.)</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма (вал.)</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số tiền (nguyên tệ)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="bbbee885-5401-450b-b8b0-9138c71d69dd">
+    <name>ContentOfAccountingRecord</name>
+    <synonym>
+      <key>en</key>
+      <value>Content of accounting record</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Содержание проводки</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Nội dung bút toán</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="806d61c5-0d87-400f-8272-8432ae946b81">
+    <name>Comment</name>
+    <synonym>
+      <key>en</key>
+      <value>Comment</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Comment</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ghi chú</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="94ba8bf5-dc3e-482c-9bfc-17f321d2102c">
+    <name>GLAccount</name>
+    <synonym>
+      <key>en</key>
+      <value>GL account</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Счет учета</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tài khoản kế toán</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Managerial</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="cada484e-d01d-4698-a718-7261c0e0cff8">
+    <name>Company</name>
+    <synonym>
+      <key>en</key>
+      <value>Company</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Doanh nghiệp</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Companies</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="cb76f514-5f1e-48ca-a33c-51c14a7ddead">
+    <name>Counterparty</name>
+    <synonym>
+      <key>en</key>
+      <value>Counterparty</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đối tác</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Counterparties</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="d61977b3-2670-4b7e-b22d-577b24613cfd">
+    <name>Contract</name>
+    <synonym>
+      <key>en</key>
+      <value>Contract</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Hợp đồng</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.CounterpartyContracts</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

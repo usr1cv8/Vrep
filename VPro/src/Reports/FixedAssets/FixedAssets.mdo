@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9ad893bd-4476-4d0c-a5cc-884095507cca">
+  <producedTypes>
+    <objectType typeId="8d0aa518-6013-441b-8b95-eec58dc3cd76" valueTypeId="54b9577d-1910-4701-bdc2-9aeabc6b7b04"/>
+    <managerType typeId="c4a31c1b-70ec-42e9-8579-ccc1d9632af6" valueTypeId="a59b5969-3ee9-42d6-994e-7e244bea1027"/>
+  </producedTypes>
+  <name>FixedAssets</name>
+  <synonym>
+    <key>en</key>
+    <value>Assets</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Имущество</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Tài sản</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <mainDataCompositionSchema>Report.FixedAssets.Template.MainDataCompositionSchema</mainDataCompositionSchema>
+  <variantsStorage>SettingsStorage.ReportsVariantsStorage</variantsStorage>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <templates uuid="9474da7b-6b78-4c26-b536-cc711f35a6f8">
+    <name>MainDataCompositionSchema</name>
+    <synonym>
+      <key>en</key>
+      <value>Main data composition schema</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Sơ đồ dàn dựng dữ liệu chính</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <commands uuid="2cef7984-f89d-4597-acc1-f0fbc5db4c46">
+    <name>DepreciationStatement</name>
+    <synonym>
+      <key>en</key>
+      <value>Accrued depreciation</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Depreciation accrued</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Khấu hao đã phát sinh</value>
+    </synonym>
+    <group>FormNavigationPanelSeeAlso</group>
+    <commandParameterType>
+      <types>CatalogRef.FixedAssets</types>
+    </commandParameterType>
+    <parameterUseMode>Multiple</parameterUseMode>
+    <representation>Auto</representation>
+  </commands>
+  <commands uuid="0d104e66-d577-4d47-9d1e-63840bea2fbc">
+    <name>InventoryCard</name>
+    <synonym>
+      <key>en</key>
+      <value>Inventory card</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Инвентарная карточка</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Thẻ kiểm kê</value>
+    </synonym>
+    <group>FormNavigationPanelSeeAlso</group>
+    <commandParameterType>
+      <types>CatalogRef.FixedAssets</types>
+    </commandParameterType>
+    <parameterUseMode>Multiple</parameterUseMode>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:Report>

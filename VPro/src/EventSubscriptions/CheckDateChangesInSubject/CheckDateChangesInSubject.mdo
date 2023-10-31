@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bde05768-2dd6-4800-985d-27075f610cca">
+  <name>CheckDateChangesInSubject</name>
+  <synonym>
+    <key>en</key>
+    <value>Check the change of dates in subject</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Проверить изменения дат в предмете</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Kiểm tra thay đổi ngày trong chủ đề</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.SettlementsReconciliation</types>
+    <types>DocumentObject.SubcontractorReport</types>
+    <types>DocumentObject.InvoiceForPayment</types>
+    <types>DocumentObject.PaymentExpense</types>
+    <types>DocumentObject.EmploymentContract</types>
+    <types>DocumentObject.ProcessingReport</types>
+    <types>DocumentObject.CashPayment</types>
+    <types>CatalogObject.Counterparties</types>
+    <types>DocumentObject.PaymentOrder</types>
+    <types>DocumentObject.CustomerOrder</types>
+    <types>CatalogObject.CounterpartyContracts</types>
+    <types>CatalogObject.Individuals</types>
+    <types>DocumentObject.WorkOrder</types>
+    <types>DocumentObject.BulkMail</types>
+    <types>DocumentObject.AgentReport</types>
+    <types>DocumentObject.PayrollSheet</types>
+    <types>DocumentObject.PurchaseOrder</types>
+    <types>DocumentObject.Payroll</types>
+    <types>DocumentObject.Event</types>
+    <types>DocumentObject.ProductionOrder</types>
+    <types>DocumentObject.ReportToPrincipal</types>
+    <types>CatalogObject.ContactPersons</types>
+    <types>DocumentObject.SupplierInvoiceForPayment</types>
+    <types>DocumentObject.SupplierInvoice</types>
+    <types>DocumentObject.CustomerInvoice</types>
+    <types>DocumentObject.AcceptanceCertificate</types>
+    <types>DocumentObject.PaymentReceipt</types>
+    <types>DocumentObject.CashReceipt</types>
+    <types>DocumentObject.InventoryReconciliation</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.UserRemindersService.CheckDatesChangesInSubjectOnWrite</handler>
+</mdclass:EventSubscription>

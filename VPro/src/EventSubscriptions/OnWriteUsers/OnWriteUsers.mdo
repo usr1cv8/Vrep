@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c4ab375f-4353-4f5e-9de9-0efddc3d3cef">
+  <name>OnWriteUsers</name>
+  <synonym>
+    <key>en</key>
+    <value>When writing users</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>При записи пользователей</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Khi ghi người sử dụng</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.Users</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.UsersOverridable.UserOnWrite</handler>
+</mdclass:EventSubscription>

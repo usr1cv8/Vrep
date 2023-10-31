@@ -1,0 +1,1624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <items xsi:type="form:FormField">
+    <name>Text</name>
+    <id>15</id>
+    <title>
+      <key>en</key>
+      <value>Subject</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Тема</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Chủ đề</value>
+    </title>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Object.Definition</segments>
+    </dataPath>
+    <defaultItem>true</defaultItem>
+    <titleLocation>None</titleLocation>
+    <extendedTooltip>
+      <name>TextExtendedTooltip</name>
+      <id>111</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>TextContextMenu</name>
+      <id>16</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>InputField</type>
+    <editMode>Enter</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:InputFieldExtInfo">
+      <width>30</width>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <wrap>true</wrap>
+      <chooseType>true</chooseType>
+      <typeDomainEnabled>true</typeDomainEnabled>
+      <textEdit>true</textEdit>
+      <editTextUpdate>OnValueChange</editTextUpdate>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>TimeSetting</name>
+    <id>102</id>
+    <items xsi:type="form:FormGroup">
+      <name>RadioButtonsPanel</name>
+      <id>82</id>
+      <items xsi:type="form:FormField">
+        <name>ReminderTimeSettingVariant</name>
+        <id>39</id>
+        <title>
+          <key>en</key>
+          <value>*Remind</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Напомнить</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Nhắc việc</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>ReminderTimeSettingVariant</segments>
+        </dataPath>
+        <titleLocation>Left</titleLocation>
+        <toolTip>
+          <key>en</key>
+          <value>Time after which to remind or method of reminder time setup</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>Время, через которое нужно напомнить, или способ установки времени напоминания</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Thời gian mà trong đó cần nhắc việc hoặc cách đặt thời gian nhắc việc</value>
+        </toolTip>
+        <handlers>
+          <event>OnChange</event>
+          <name>ReminderTimeSettingVariantOnChange</name>
+        </handlers>
+        <extendedTooltip>
+          <name>ReminderTimeSettingVariantExtendedTooltip</name>
+          <id>114</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ReminderTimeSettingVariantContextMenu</name>
+          <id>40</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <width>20</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <wrap>true</wrap>
+          <dropListButton>true</dropListButton>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+          <editTextUpdate>OnValueChange</editTextUpdate>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Radio button panel</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Панель переключателей</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Thanh lệnh nút gạt</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Radio button panel</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Панель переключателей</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Thanh lệnh nút gạt</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>SwitchPanelExtendedTooltip</name>
+        <id>113</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>DetailedSettingsPanel</name>
+      <id>72</id>
+      <items xsi:type="form:FormGroup">
+        <name>WithoutDelatization</name>
+        <id>76</id>
+        <items xsi:type="form:Decoration">
+          <name>ReminderCalculatingTime</name>
+          <id>97</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <toolTip>
+            <key>en</key>
+            <value>Estimated time</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Расчетное время</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Thời gian đã tính</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>DesignedReminderTimeExtendedTooltip</name>
+            <id>117</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>DesignedReminderEndTimeContextMenu</name>
+            <id>98</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>true</horizontalStretch>
+          <verticalStretch>true</verticalStretch>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+            <verticalAlign>Bottom</verticalAlign>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>en</key>
+          <value>No details</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Без детализации</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Không chi tiết hóa</value>
+        </title>
+        <toolTip>
+          <key>en</key>
+          <value>No details</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>Без детализации</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Không chi tiết hóa</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>WithNoDetalisationExtendedTooltip</name>
+          <id>116</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>Page</type>
+        <extInfo xsi:type="form:PageGroupExtInfo"/>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>DateTime</name>
+        <id>73</id>
+        <items xsi:type="form:FormField">
+          <name>Date</name>
+          <id>17</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Object.EventTime</segments>
+          </dataPath>
+          <titleLocation>None</titleLocation>
+          <toolTip>
+            <key>en</key>
+            <value>Reminder date</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Дата напоминания</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Ngày nhắc việc</value>
+          </toolTip>
+          <handlers>
+            <event>OnChange</event>
+            <name>DateOnChange</name>
+          </handlers>
+          <extendedTooltip>
+            <name>DateExtendedTooltip</name>
+            <id>119</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>DateContextMenu</name>
+            <id>18</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <horizontalAlign>Left</horizontalAlign>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <width>12</width>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <horizontalStretch>true</horizontalStretch>
+            <wrap>true</wrap>
+            <editFormat>
+              <key>en</key>
+              <value>DLF=D</value>
+            </editFormat>
+            <editFormat>
+              <key>ru</key>
+              <value>DLF=D</value>
+            </editFormat>
+            <editFormat>
+              <key>vi</key>
+              <value>DLF=D</value>
+            </editFormat>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+            <editTextUpdate>OnValueChange</editTextUpdate>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>Time</name>
+          <id>19</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Object.EventTime</segments>
+          </dataPath>
+          <titleLocation>None</titleLocation>
+          <toolTip>
+            <key>en</key>
+            <value>Reminder time</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Время напоминания</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Thời gian nhắc việc</value>
+          </toolTip>
+          <handlers>
+            <event>OnChange</event>
+            <name>TimeOnChange</name>
+          </handlers>
+          <extendedTooltip>
+            <name>TimeExtendedTooltip</name>
+            <id>120</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ContextMenuTime</name>
+            <id>20</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <horizontalAlign>Left</horizontalAlign>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <width>7</width>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <horizontalStretch>true</horizontalStretch>
+            <dropListButton>true</dropListButton>
+            <choiceButton>false</choiceButton>
+            <mask>99:99</mask>
+            <editFormat>
+              <key>en</key>
+              <value>DF=HH:mm</value>
+            </editFormat>
+            <editFormat>
+              <key>ru</key>
+              <value>ДФ=HH:mm</value>
+            </editFormat>
+            <editFormat>
+              <key>vi</key>
+              <value>DF=HH:mm</value>
+            </editFormat>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+            <editTextUpdate>OnValueChange</editTextUpdate>
+            <dropListWidth>5</dropListWidth>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>en</key>
+          <value>Date time</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Дата время</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Ngày thời gian</value>
+        </title>
+        <toolTip>
+          <key>en</key>
+          <value>Date time</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>Дата время</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Ngày thời gian</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>DateTimeExtendedTooltip</name>
+          <id>118</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>Page</type>
+        <extInfo xsi:type="form:PageGroupExtInfo"/>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>SourceSetting</name>
+        <id>74</id>
+        <items xsi:type="form:Decoration">
+          <name>TitleFor</name>
+          <id>57</id>
+          <title>
+            <key>en</key>
+            <value>for</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>за</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>trong</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>TitleOverExtendedTooltip</name>
+            <id>122</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>TitleOverContextMenu</name>
+            <id>58</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Right</horizontalAlign>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>TimeIntervalRelativelyToSource</name>
+          <id>59</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>TimeIntervalAsString</segments>
+          </dataPath>
+          <titleLocation>None</titleLocation>
+          <toolTip>
+            <key>en</key>
+            <value>Time before the date in subject attribute within which reminder must be sent</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Время, за которое необходимо напомнить до даты в реквизите предмета</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Thời gian mà cần nhắc việc trước ngày trong mục tin của chủ đề</value>
+          </toolTip>
+          <handlers>
+            <event>OnChange</event>
+            <name>TimeIntervalOnChange</name>
+          </handlers>
+          <extendedTooltip>
+            <name>TimeIntervalSourceExtendedTooltip</name>
+            <id>123</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>TimeIntervalSourceContextMenu</name>
+            <id>60</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <width>9</width>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <horizontalStretch>false</horizontalStretch>
+            <wrap>true</wrap>
+            <dropListButton>true</dropListButton>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+            <editTextUpdate>OnValueChange</editTextUpdate>
+            <choiceList>
+              <presentation>
+                <key>en</key>
+                <value>5 minutes</value>
+              </presentation>
+              <presentation>
+                <key>ru</key>
+                <value>5 минут</value>
+              </presentation>
+              <presentation>
+                <key>vi</key>
+                <value>5 phút</value>
+              </presentation>
+              <value xsi:type="core:StringValue">
+                <value>5m</value>
+              </value>
+            </choiceList>
+            <choiceList>
+              <presentation>
+                <key>en</key>
+                <value>10 minutes</value>
+              </presentation>
+              <presentation>
+                <key>ru</key>
+                <value>10 минут</value>
+              </presentation>
+              <presentation>
+                <key>vi</key>
+                <value>10 phút</value>
+              </presentation>
+              <value xsi:type="core:StringValue">
+                <value>10m</value>
+              </value>
+            </choiceList>
+            <choiceList>
+              <presentation>
+                <key>en</key>
+                <value>15 minutes</value>
+              </presentation>
+              <presentation>
+                <key>ru</key>
+                <value>15 минут</value>
+              </presentation>
+              <presentation>
+                <key>vi</key>
+                <value>15 phút</value>
+              </presentation>
+              <value xsi:type="core:StringValue">
+                <value>15 m</value>
+              </value>
+            </choiceList>
+            <choiceList>
+              <presentation>
+                <key>en</key>
+                <value>30 minutes</value>
+              </presentation>
+              <presentation>
+                <key>ru</key>
+                <value>30 минут</value>
+              </presentation>
+              <presentation>
+                <key>vi</key>
+                <value>30 phút</value>
+              </presentation>
+              <value xsi:type="core:StringValue">
+                <value>30m</value>
+              </value>
+            </choiceList>
+            <choiceList>
+              <presentation>
+                <key>en</key>
+                <value>1 hour</value>
+              </presentation>
+              <presentation>
+                <key>ru</key>
+                <value>1 час</value>
+              </presentation>
+              <presentation>
+                <key>vi</key>
+                <value>1 giờ</value>
+              </presentation>
+              <value xsi:type="core:StringValue">
+                <value>1h</value>
+              </value>
+            </choiceList>
+            <choiceList>
+              <presentation>
+                <key>en</key>
+                <value>2 hours</value>
+              </presentation>
+              <presentation>
+                <key>ru</key>
+                <value>2 часа</value>
+              </presentation>
+              <presentation>
+                <key>vi</key>
+                <value>2 tuần</value>
+              </presentation>
+              <value xsi:type="core:StringValue">
+                <value>2h</value>
+              </value>
+            </choiceList>
+            <choiceList>
+              <presentation>
+                <key>en</key>
+                <value>4 hours</value>
+              </presentation>
+              <presentation>
+                <key>ru</key>
+                <value>4 часа</value>
+              </presentation>
+              <presentation>
+                <key>vi</key>
+                <value>4 giờ</value>
+              </presentation>
+              <value xsi:type="core:StringValue">
+                <value>4h</value>
+              </value>
+            </choiceList>
+            <choiceList>
+              <presentation>
+                <key>en</key>
+                <value>8 hours</value>
+              </presentation>
+              <presentation>
+                <key>ru</key>
+                <value>8 часов</value>
+              </presentation>
+              <presentation>
+                <key>vi</key>
+                <value>8 giờ</value>
+              </presentation>
+              <value xsi:type="core:StringValue">
+                <value>8h</value>
+              </value>
+            </choiceList>
+            <choiceList>
+              <presentation>
+                <key>en</key>
+                <value>1 day</value>
+              </presentation>
+              <presentation>
+                <key>ru</key>
+                <value>1 день</value>
+              </presentation>
+              <presentation>
+                <key>vi</key>
+                <value>1 ngày</value>
+              </presentation>
+              <value xsi:type="core:StringValue">
+                <value>1d</value>
+              </value>
+            </choiceList>
+            <choiceList>
+              <presentation>
+                <key>en</key>
+                <value>2 days</value>
+              </presentation>
+              <presentation>
+                <key>ru</key>
+                <value>2 дня</value>
+              </presentation>
+              <presentation>
+                <key>vi</key>
+                <value>2 ngày</value>
+              </presentation>
+              <value xsi:type="core:StringValue">
+                <value>2d</value>
+              </value>
+            </choiceList>
+            <choiceList>
+              <presentation>
+                <key>en</key>
+                <value>3 days</value>
+              </presentation>
+              <presentation>
+                <key>ru</key>
+                <value>3 дня</value>
+              </presentation>
+              <presentation>
+                <key>vi</key>
+                <value>3 ngày</value>
+              </presentation>
+              <value xsi:type="core:StringValue">
+                <value>3d</value>
+              </value>
+            </choiceList>
+            <choiceList>
+              <presentation>
+                <key>en</key>
+                <value>1 week</value>
+              </presentation>
+              <presentation>
+                <key>ru</key>
+                <value>1 неделю</value>
+              </presentation>
+              <presentation>
+                <key>vi</key>
+                <value>1 tuần</value>
+              </presentation>
+              <value xsi:type="core:StringValue">
+                <value>1n</value>
+              </value>
+            </choiceList>
+            <choiceList>
+              <presentation>
+                <key>en</key>
+                <value>2 weeks</value>
+              </presentation>
+              <presentation>
+                <key>ru</key>
+                <value>2 недели</value>
+              </presentation>
+              <presentation>
+                <key>vi</key>
+                <value>2 tuần</value>
+              </presentation>
+              <value xsi:type="core:StringValue">
+                <value>2n</value>
+              </value>
+            </choiceList>
+          </extInfo>
+        </items>
+        <items xsi:type="form:Decoration">
+          <name>TitleBefore</name>
+          <id>33</id>
+          <title>
+            <key>en</key>
+            <value>to</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>до</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>đến</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>WFTitleExtendedTooltip</name>
+            <id>124</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>WFTitleContextMenu</name>
+            <id>34</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>SourceAttributeName</name>
+          <id>35</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Object.SourceAttributeName</segments>
+          </dataPath>
+          <titleLocation>None</titleLocation>
+          <toolTip>
+            <key>en</key>
+            <value>Name of subject attribute in relation to which the reminder time is set</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Имя реквизита предмета, относительно которого устанавливается время напоминания</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Tên mục tin của chủ đề, theo đó có đặt thời gian nhắc việc</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>SourceAttributeNameExtendedTooltip</name>
+            <id>125</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>SourceAttributeNameContextMenu</name>
+            <id>36</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <width>13</width>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <horizontalStretch>false</horizontalStretch>
+            <wrap>true</wrap>
+            <listChoiceMode>true</listChoiceMode>
+            <typeDomainEnabled>true</typeDomainEnabled>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>en</key>
+          <value>Source setup</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Настройка источника</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Tùy chỉnh nguồn</value>
+        </title>
+        <toolTip>
+          <key>en</key>
+          <value>Source setup</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>Настройка источника</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Tùy chỉnh nguồn</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>SettingSourceExtendedTooltip</name>
+          <id>121</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>Page</type>
+        <extInfo xsi:type="form:PageGroupExtInfo"/>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>PeriodicitySetting</name>
+        <id>75</id>
+        <items xsi:type="form:FormField">
+          <name>FrequencyVariant</name>
+          <id>61</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>FrequencyVariant</segments>
+          </dataPath>
+          <titleLocation>None</titleLocation>
+          <handlers>
+            <event>OnChange</event>
+            <name>VariantFrequencyOnChange</name>
+          </handlers>
+          <extendedTooltip>
+            <name>RatioVariantExtendedTooltip</name>
+            <id>127</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>RatioVariantContextMenu</name>
+            <id>62</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <handlers>
+              <event>Opening</event>
+              <name>PeriodicityVariantOpenning</name>
+            </handlers>
+            <width>25</width>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <openButton>true</openButton>
+            <listChoiceMode>true</listChoiceMode>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <choiceList>
+              <presentation>
+                <key>en</key>
+                <value>every hour</value>
+              </presentation>
+              <presentation>
+                <key>ru</key>
+                <value>каждый час</value>
+              </presentation>
+              <presentation>
+                <key>vi</key>
+                <value>từng giờ</value>
+              </presentation>
+              <value xsi:type="core:StringValue">
+                <value>1h</value>
+              </value>
+            </choiceList>
+            <choiceList>
+              <presentation>
+                <key>en</key>
+                <value>daily</value>
+              </presentation>
+              <presentation>
+                <key>ru</key>
+                <value>ежедневно</value>
+              </presentation>
+              <presentation>
+                <key>vi</key>
+                <value>hàng ngày</value>
+              </presentation>
+              <value xsi:type="core:StringValue">
+                <value>1d</value>
+              </value>
+            </choiceList>
+            <choiceList>
+              <presentation>
+                <key>en</key>
+                <value>weekly</value>
+              </presentation>
+              <presentation>
+                <key>ru</key>
+                <value>еженедельно</value>
+              </presentation>
+              <presentation>
+                <key>vi</key>
+                <value>hàng tuần</value>
+              </presentation>
+              <value xsi:type="core:StringValue">
+                <value>1n</value>
+              </value>
+            </choiceList>
+            <choiceList>
+              <presentation>
+                <key>en</key>
+                <value>other...</value>
+              </presentation>
+              <presentation>
+                <key>ru</key>
+                <value>Другие...</value>
+              </presentation>
+              <presentation>
+                <key>vi</key>
+                <value>Khác...</value>
+              </presentation>
+              <value xsi:type="core:StringValue">
+                <value></value>
+              </value>
+            </choiceList>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>en</key>
+          <value>Frequency setting</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Настройка периодичности</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Tùy chỉnh tính định kỳ</value>
+        </title>
+        <toolTip>
+          <key>en</key>
+          <value>Frequency setting</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>Настройка периодичности</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Tùy chỉnh tính định kỳ</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>PeridiocitySetupExtendedTooltip</name>
+          <id>126</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>Page</type>
+        <extInfo xsi:type="form:PageGroupExtInfo"/>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Advanced setting panel</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Панель детальных настроек</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Thanh lệnh tùy chỉnh chi tiết</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Advanced setting panel</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Панель детальных настроек</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Thanh lệnh tùy chỉnh chi tiết</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>DetailedSetupPanelExtendedTooltip</name>
+        <id>115</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>Pages</type>
+      <extInfo xsi:type="form:PagesGroupExtInfo">
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>*Remind</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Напомнить</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Nhắc việc</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Time settings</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Настройка времени</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tùy chỉnh thời gian</value>
+    </toolTip>
+    <verticalStretch>false</verticalStretch>
+    <extendedTooltip>
+      <name>TimeSettingExtendedTooltip</name>
+      <id>112</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <autoCommandBar>
+    <name>FormCommandBar</name>
+    <id>-1</id>
+    <items xsi:type="form:Button">
+      <name>Delete</name>
+      <id>109</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>DeleteExtendedTooltip</name>
+        <id>110</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.Delete</commandName>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+      <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
+  </autoCommandBar>
+  <handlers>
+    <event>OnOpen</event>
+    <name>OnOpen</name>
+  </handlers>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>OnCreateAtServer</name>
+  </handlers>
+  <excludedCommands>Copy</excludedCommands>
+  <excludedCommands>CustomizeForm</excludedCommands>
+  <excludedCommands>Delete</excludedCommands>
+  <excludedCommands>Reread</excludedCommands>
+  <excludedCommands>Write</excludedCommands>
+  <windowOpeningMode>LockOwnerWindow</windowOpeningMode>
+  <autoTitle>true</autoTitle>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <allowFormCustomize>true</allowFormCustomize>
+  <enabled>true</enabled>
+  <verticalScroll>UseIfNecessary</verticalScroll>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>Object</name>
+    <id>1</id>
+    <valueType>
+      <types>InformationRegisterRecordManager.UserReminders</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <main>true</main>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>RichText</name>
+    <title>
+      <key>en</key>
+      <value>Formatted text</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Форматированный текст</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Nội dung được định dạng</value>
+    </title>
+    <id>4</id>
+    <valueType>
+      <types>FormattedDocument</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>TimeIntervalAsString</name>
+    <title>
+      <key>en</key>
+      <value>Time interval as a string</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Интервал времени строкой</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Khoảng thời gian bằng dòng</value>
+    </title>
+    <id>6</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>ReminderTimeSettingVariant</name>
+    <title>
+      <key>en</key>
+      <value>Reminder time setup method</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Способ установки времени напоминания</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Phương thức đặt thời gian nhắc việc</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>FrequencyVariant</name>
+    <title>
+      <key>en</key>
+      <value>Periodicity option</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Вариант периодичности</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Phương án định kỳ</value>
+    </title>
+    <id>3</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>30</length>
+      </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>Schedule</name>
+    <title>
+      <key>en</key>
+      <value>Schedule</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Расписание</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Lịch biểu</value>
+    </title>
+    <id>5</id>
+    <valueType/>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>InitialParameters</name>
+    <title>
+      <key>en</key>
+      <value>Original parameters</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Исходные параметры</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Tham số ban đầu</value>
+    </title>
+    <id>7</id>
+    <valueType/>
+    <view>
+      <common>true</common>
+    </view>
+    <edit/>
+  </attributes>
+  <formCommands>
+    <name>Delete</name>
+    <title>
+      <key>en</key>
+      <value>Delete</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Удалить</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Xóa bỏ</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>en</key>
+      <value>Remove reminder</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Удалить напоминание</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Xóa nhắc việc</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.Delete</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Delete</name>
+      </handler>
+    </action>
+    <representation>Picture</representation>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+  <extInfo xsi:type="form:InformationRegisterManagerFormExtInfo">
+    <handlers>
+      <event>AfterWrite</event>
+      <name>AfterWrite</name>
+    </handlers>
+    <handlers>
+      <event>OnReadAtServer</event>
+      <name>OnReadAtServer</name>
+    </handlers>
+    <handlers>
+      <event>BeforeWrite</event>
+      <name>BeforeWrite</name>
+    </handlers>
+    <handlers>
+      <event>BeforeWriteAtServer</event>
+      <name>BeforeWriteAtServer</name>
+    </handlers>
+  </extInfo>
+</form:Form>

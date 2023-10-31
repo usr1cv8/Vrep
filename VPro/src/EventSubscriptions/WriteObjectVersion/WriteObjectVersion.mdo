@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e06048ac-0ae5-49a1-927a-1915c5766afa">
+  <name>WriteObjectVersion</name>
+  <synonym>
+    <key>en</key>
+    <value>Write object version</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Записать версию объекта</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Ghi lại phiên bản đối tượng</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.ProductsAndServices</types>
+    <types>CatalogObject.Specifications</types>
+    <types>CatalogObject.ContactPersons</types>
+    <types>CatalogObject.Projects</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.VersioningEventObjects.WriteObjectVersion</handler>
+</mdclass:EventSubscription>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="75bcec27-da56-430a-8098-029502edc0c9">
+  <producedTypes>
+    <objectType typeId="f461a1ab-8833-472f-8af0-2fc93a60ac6d" valueTypeId="76a1a93c-44db-452d-8370-b080c50538a0"/>
+    <managerType typeId="26164b57-35c4-4f4b-a608-dbd676c78ef5" valueTypeId="a2b1118d-3798-4955-8374-b05c406a6360"/>
+  </producedTypes>
+  <name>PaymentCalendar</name>
+  <synonym>
+    <key>en</key>
+    <value>Payment calendar</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Платежный календарь</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Lịch thanh toán</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.PaymentCalendar.Form.ReportForm</defaultForm>
+  <mainDataCompositionSchema>Report.PaymentCalendar.Template.MainDataCompositionSchema</mainDataCompositionSchema>
+  <variantsStorage>SettingsStorage.ReportsVariantsStorage</variantsStorage>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <attributes uuid="ac5a99c3-9b09-4bde-a762-c56ad9f30173">
+    <name>DelayedPaymentsPeriod</name>
+    <synonym>
+      <key>en</key>
+      <value>Overdue payment period</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Период просроченных платежей</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Kỳ thanh toán quá hạn</value>
+    </synonym>
+    <type>
+      <types>StandardPeriod</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="f2a9b860-02cd-49c0-b65e-5dd4951c59ea">
+    <name>FuturePaymentsPeriod</name>
+    <synonym>
+      <key>en</key>
+      <value>Future payment period</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Период будущих платежей</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Kỳ thanh toán sắp tới</value>
+    </synonym>
+    <type>
+      <types>StandardPeriod</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="099f3922-35b6-46c6-9b51-b47bb52df725">
+    <name>WorkingDate</name>
+    <synonym>
+      <key>en</key>
+      <value>Workday</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Рабочая дата</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ngày làm việc</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="f15d6e50-d4f7-4715-acb3-31e8b62742ac">
+    <name>ReportForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Report form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu báo cáo</value>
+    </synonym>
+    <comment>Payment calendar</comment>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="69e3bd19-2202-425d-bfd3-7626d5ad94be">
+    <name>MainDataCompositionSchema</name>
+    <synonym>
+      <key>en</key>
+      <value>Main data composition schema</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Sơ đồ dàn dựng dữ liệu chính</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <commands uuid="b7d279c9-b33f-4776-b778-8461f0de8716">
+    <name>OpenPaymentCalendar</name>
+    <synonym>
+      <key>en</key>
+      <value>Payment calendar</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Платежный календарь</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Lịch thanh toán</value>
+    </synonym>
+    <group>NavigationPanelOrdinary</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:Report>

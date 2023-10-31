@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6fbf63b7-1692-495e-a8ec-bdda182997a3">
+  <name>RefreshAccessValuesGroups</name>
+  <synonym>
+    <key>en</key>
+    <value>Update access value groups</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Обновить группы значений доступа</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Cập nhật nhóm giá trị truy cập</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.FileFolders</types>
+    <types>CatalogObject.Counterparties</types>
+    <types>CatalogObject.ExternalUsersGroups</types>
+    <types>CatalogObject.Companies</types>
+    <types>CatalogObject.ExternalUsers</types>
+    <types>CatalogObject.Users</types>
+    <types>CatalogObject.UsersGroups</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.AccessManagementService.RefreshAccessValuesGroups</handler>
+</mdclass:EventSubscription>

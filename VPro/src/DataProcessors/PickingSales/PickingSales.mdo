@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="70907bc0-c3f0-46ed-8810-a6a70b613596">
+  <producedTypes>
+    <objectType typeId="3257ed32-3a38-4e71-b734-b29d9d5d2895" valueTypeId="586f41d0-6c48-43d4-988a-20853c1cd3ac"/>
+    <managerType typeId="71a99aed-71a9-4306-86dc-bd4f74c218ec" valueTypeId="570f1301-d29f-436c-a679-17b0c86ddda5"/>
+  </producedTypes>
+  <name>PickingSales</name>
+  <synonym>
+    <key>en</key>
+    <value>Select products and services in sales documents</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Подбор номенклатуры в документах реализаций</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Chọn mặt hàng vào chứng từ giao hàng</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.PickingSales.Form.InformationAboutDocument</defaultForm>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <attributes uuid="0ec4bc93-8055-4490-9a3e-a1c6d7b8819b">
+    <name>Date</name>
+    <synonym>
+      <key>en</key>
+      <value>Date</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ngày</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="de33b6da-bb43-4b3a-b761-8e1612961555">
+    <name>Company</name>
+    <synonym>
+      <key>en</key>
+      <value>Company</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đối tác</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Companies</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="9f9d4ae7-eb55-49aa-bf1b-08f7809991f6">
+    <name>StructuralUnit</name>
+    <synonym>
+      <key>en</key>
+      <value>Business unit bin</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Ячейка структурной единицы</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ô hàng của kho bãi</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.StructuralUnits</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="c1b6c1a2-e399-4fa1-af80-75891510fb4c">
+    <name>PriceKind</name>
+    <synonym>
+      <key>en</key>
+      <value>Price kind</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Вид цены</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Dạng giá</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.PriceKinds</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Products and services item prices added to the tabular section will be of the selected type</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Цены позиции номенклатуры, добавляемых в табличную часть документа, будут выбранного вида</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Giá của mặt hàng mà được bổ sung vào phần bảng của chứng từ, sẽ có dạng đã chọn</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="4bad917b-a071-4047-85c0-c1d70e8a5119">
+    <name>DiscountMarkupKind</name>
+    <synonym>
+      <key>en</key>
+      <value>Kind of discount, markup</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Вид скидки, наценки</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Dạng chiết khấu, phụ thu</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.MarkupAndDiscountKinds</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Document discount (markup) will be of the selected kind</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Скидка (наценка) документа, будет выбранного вида</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Chiết khấu (phụ thu) của chứng từ, sẽ là dạng đã chọn</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="15e1a365-36f6-46af-8b4e-b4acfab7ae5e">
+    <name>PricePeriod</name>
+    <synonym>
+      <key>en</key>
+      <value>Price period</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Период цен</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Kỳ đơn giá</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="ca81d5bd-1817-4904-a773-b5faeb752981">
+    <name>AmountIncludesVAT</name>
+    <synonym>
+      <key>en</key>
+      <value>Amount includes VAT</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма включает НДС</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số tiền gồm thuế GTGT</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>If the check box is selected, VAT will be included in the document amount</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>При установленном флаге НДС будет включен в сумму документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Khi đặt dấu hộp kiểm, số tiền trong chứng từ sẽ bao gồm thuế GTGT</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="c12bc15e-4718-4122-8c03-03b09fcc4414">
+    <name>VATTaxation</name>
+    <synonym>
+      <key>en</key>
+      <value>Taxation</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Налогообложение</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tính thuế</value>
+    </synonym>
+    <type>
+      <types>EnumRef.VATTaxationTypes</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>VAT taxation type of the goods and services sale</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Тип налогообложения продажи товаров и услуг налогом на добавленную стоимость</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Dạng thuế khi bán hàng hóa và cung cấp dịch vụ là thuế GTGT</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="a1fcddbb-1d93-41e9-af21-3ff5d51e3bda">
+    <name>DocumentCurrency</name>
+    <synonym>
+      <key>en</key>
+      <value>Currency</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Вал.</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ngoại tệ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Currencies</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Currency</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Вал.</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Ngoại tệ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="7debdfe2-9085-4a4e-8bcf-c4a7e31cb63e">
+    <name>PriceKindCurrency</name>
+    <synonym>
+      <key>en</key>
+      <value>Price kind currency</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Валюта вида цен</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tiền tệ dạng giá</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Currencies</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Currency</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Вал.</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Ngoại tệ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="3c16ebcf-8bd0-4f81-83a2-371790d182eb">
+    <name>ProductsAndServicesType</name>
+    <synonym>
+      <key>en</key>
+      <value>Products and services type</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Тип номенклатуры</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Kiểu mặt hàng</value>
+    </synonym>
+    <type>
+      <types>ValueList</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="b476204d-d264-4739-988d-54d8ba9e7c98">
+    <name>OwnerFormUUID</name>
+    <synonym>
+      <key>en</key>
+      <value>Unique ID of the owner form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Уникальный идентификатор формы владельца</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tên biểu mẫu duy nhất của chủ sở hữu</value>
+    </synonym>
+    <type>
+      <types>UUID</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="be6caedf-2108-409b-82f1-f86e4f705b2e">
+    <name>DynamicPriceKindPercent</name>
+    <synonym>
+      <key>en</key>
+      <value>Dynamic price kind (percent)</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Динамический вид цен (процент)</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Dạng giá biến động (%)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="09d27341-b600-4b67-9268-51d9988e186f">
+    <name>DynamicPriceKindBasic</name>
+    <synonym>
+      <key>en</key>
+      <value>Dynamic price kind basic</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Динамический вид цен базовый</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Dạng giá biến động cơ sở</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.PriceKinds</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="f2ec12e8-1b16-4f71-9fe3-8c3fec49b33e">
+    <name>RoundingOrder</name>
+    <synonym>
+      <key>en</key>
+      <value>Rounding procedure</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Порядок округления</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Quy tắc làm tròn</value>
+    </synonym>
+    <comment>Round precision</comment>
+    <type>
+      <types>EnumRef.RoundingMethods</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Used to specify the price rounding procedure</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Используется для указания порядка округления цен</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Được sử dụng để chỉ ra quy tắc làm tròn giá</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <quickChoice>Use</quickChoice>
+    <createOnInput>DontUse</createOnInput>
+  </attributes>
+  <attributes uuid="8defc833-8667-4ebf-ae38-6ddde7fa6fac">
+    <name>RoundUp</name>
+    <synonym>
+      <key>en</key>
+      <value>Round up</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Округлять в большую сторону</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Làm tròn số về phía lớn hơn</value>
+    </synonym>
+    <comment>True - for round precision &quot;5&quot; 0.01 it will be approximated to 5, False - rounding according to arithmetic rules</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Used to specify the flag of price rounding up</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Используется для указания признака округления цены в большую сторону</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Được sử dụng để chỉ ra dấu hiệu làm tròn đơn giá lớn hơn </value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <quickChoice>DontUse</quickChoice>
+    <createOnInput>Use</createOnInput>
+  </attributes>
+  <attributes uuid="2c6d3e53-76f1-4c1f-b5da-e502543092fa">
+    <name>DiscountCard</name>
+    <synonym>
+      <key>en</key>
+      <value>Discount card</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Дисконтная карта</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Thẻ ưu đãi</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.DiscountCards</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="94e9243f-ba48-4cf2-b55c-c1bb0e105352">
+    <name>DiscountPercentByDiscountCard</name>
+    <synonym>
+      <key>en</key>
+      <value>Discount card discount percent</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Процент скидки по дисконтной карте</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Phần trăm chiết khấu theo thẻ thanh toán</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="fc9721ee-86d3-4d6e-aed5-d3a16cc90dd8">
+    <producedTypes>
+      <objectType typeId="11587279-119c-4180-a9b7-36d6d2d72c81" valueTypeId="b9378931-2e35-4413-a989-4b7701b3bd26"/>
+      <rowType typeId="5eb3c151-a69b-4554-a639-459cdd5ae863" valueTypeId="b692dcbd-0b39-4e01-9e4e-d8020045c790"/>
+    </producedTypes>
+    <name>CartPriceBalanceReserveCharacteristic</name>
+    <synonym>
+      <key>en</key>
+      <value>Shopping cart (price, balance, reserve, characteristic)</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Корзина (цена, остаток, резерв, характеристика)</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Giỏ hàng (đơn giá, số dư, dự phòng, đặc tính)</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="5280d73b-8392-48d7-9434-04cf72d2bebc">
+      <name>ProductsAndServices</name>
+      <synonym>
+        <key>en</key>
+        <value>Products and services</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Продукция и услуги</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Mặt hàng</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ProductsAndServices</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:ReferenceValue">
+        <value>Catalog.ProductsAndServices.EmptyRef</value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="ed07d5f1-7643-4d0a-ab62-44170966b9c5">
+      <name>Characteristic</name>
+      <synonym>
+        <key>en</key>
+        <value>Characteristic</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Characteristic</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Đặc tính</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ProductsAndServicesCharacteristics</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Filter.Owner</name>
+        <field>DataProcessor.PickingSales.TabularSection.CartPriceBalanceReserveCharacteristic.Attribute.ProductsAndServices</field>
+      </choiceParameterLinks>
+      <fillValue xsi:type="core:ReferenceValue">
+        <value>Catalog.ProductsAndServicesCharacteristics.EmptyRef</value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="2049e527-7aba-47fe-86ca-3443b657e3cf">
+      <name>Batch</name>
+      <synonym>
+        <key>en</key>
+        <value>Batch</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Партия</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Lô hàng</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ProductsAndServicesBatches</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:ReferenceValue">
+        <value>Catalog.ProductsAndServicesBatches.EmptyRef</value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="8572b478-0d46-4f7b-8115-1caa40b7af0f">
+      <name>Quantity</name>
+      <synonym>
+        <key>en</key>
+        <value>Quantity</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Quantity</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Số lượng</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:NumberValue">
+        <value>0</value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="37c1c08d-3c3f-432e-b37c-8e9d40776f0c">
+      <name>Reserve</name>
+      <synonym>
+        <key>en</key>
+        <value>Reserve</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Резерв</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Dự phòng</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:NumberValue">
+        <value>0</value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="ae5a28cb-0b7c-4f21-b764-1f4f2277b999">
+      <name>MeasurementUnit</name>
+      <synonym>
+        <key>en</key>
+        <value>Unit of measure</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Единица измерения</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Đơn vị tính</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.UOMClassifier</types>
+        <types>CatalogRef.UOM</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Filter.Owner</name>
+        <field>DataProcessor.PickingSales.TabularSection.CartPriceBalanceReserveCharacteristic.Attribute.ProductsAndServices</field>
+      </choiceParameterLinks>
+      <fillValue xsi:type="core:ReferenceValue"/>
+    </attributes>
+    <attributes uuid="d061cafa-17dd-48ac-b309-fbd1a4ab9a67">
+      <name>Price</name>
+      <synonym>
+        <key>en</key>
+        <value>Price</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Цена</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Đơn giá</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:NumberValue">
+        <value>0</value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="dd735cf9-208e-41fe-9590-55f41cc8e208">
+      <name>DiscountMarkupPercent</name>
+      <synonym>
+        <key>en</key>
+        <value>Discount %</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>% Скидки</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>% Chiết khấu</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Discount (markup) percent.</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Процент скидки (наценки).</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Phần trăm chiết khấu (phụ thu),</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:StringValue">
+        <value>100</value>
+      </maxValue>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="8e679616-c5eb-415d-8616-551d51d8ebc0">
+      <name>Amount</name>
+      <synonym>
+        <key>en</key>
+        <value>Amount</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Amount</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Số tiền</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Cost of products and services of this line which should be sold (shipped)</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Стоимость номенклатуры по данной строке, подлежащей реализации (отгрузке)</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Giá trị của mặt hàng theo dòng này cần phải giao hàng</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="f3c76757-3708-4636-9e4b-abf48d400052">
+      <name>VATRate</name>
+      <synonym>
+        <key>en</key>
+        <value>VAT rate</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Указывается ставка НДС</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Thuế suất GTGT</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.VATRates</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>VAT rate</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Указывается ставка НДС</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Thuế suất GTGT</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="b7e62f64-c8e8-4e6f-b5fd-2eb736e76727">
+      <name>VATAmount</name>
+      <synonym>
+        <key>en</key>
+        <value>VAT amount</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Указывается сумма НДС</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Chỉ ra số tiền thuế GTGT</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>VAT amount of the specified row.</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Сумма налога на добавленную стоимость по данной строке.</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Số tiền thuế GTGT theo dòng này.</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="5a41b8fc-48cd-4a17-a0bc-1f29b26bc2e8">
+      <name>Total</name>
+      <synonym>
+        <key>en</key>
+        <value>Total</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Итого</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Tổng số</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Field automatically filled in with the total inventory cost according to the settings of prices and currencies.</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле, автоматически заполняемое суммарной стоимостью запасов согласно настройкам цен и валют.</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Trường mà được điền tự động bởi giá trị của vật tư theo tùy chỉnh giá và tiền tệ</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="89075149-838d-4126-aca9-551dc47fde65">
+      <name>CountryOfOrigin</name>
+      <synonym>
+        <key>ru</key>
+        <value>Страна происхождения</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Nước xuất xứ</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.WorldCountries</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="3a32b544-e786-4417-8844-e18389beae23">
+    <name>CartPriceBalanceReserveCharacteristic</name>
+    <synonym>
+      <key>en</key>
+      <value>Shopping cart price balance reserve characteristic</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Корзина цена остаток резерв характеристика</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Giỏ hàng đơn giá số dư dự phòng đặc tính</value>
+    </synonym>
+    <comment>Selection with indicators: Price, Balance, Reserve, Characteristic, Warehouse.</comment>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="c5990464-0557-480c-989b-30ece4be2286">
+    <name>QuantityAndPrice</name>
+    <synonym>
+      <key>en</key>
+      <value>Quantity and price</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Количество и цена</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số lượng và đơn giá</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="19f9810f-60b2-4938-bfaf-6c9d5309d350">
+    <name>Setting</name>
+    <synonym>
+      <key>en</key>
+      <value>Setting</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>настройка</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>tùy chỉnh</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="0b3e51b6-d546-4e6e-a6b5-48cad82edaa8">
+    <name>InformationAboutDocument</name>
+    <synonym>
+      <key>en</key>
+      <value>Document information</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Сведения о документе</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Thông tin về chứng từ</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="4d2debe6-088f-4f38-b5a6-8ae59b1c6754">
+    <name>DecryptReserve</name>
+    <synonym>
+      <key>en</key>
+      <value>Decrypt reserve</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Расшифровать резерв</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Diễn giải dự phòng</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

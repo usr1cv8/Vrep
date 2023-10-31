@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1d7cbf68-f29d-4c22-abda-b1874e4a6c29">
+  <name>SetDeletionMarkOnAttachedFiles</name>
+  <synonym>
+    <key>en</key>
+    <value>Set deletion mark for attachments</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Установить пометку удаления присоединенных файлов</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Đặt dấu xóa tệp đính kèm</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.InvoiceForPaymentAttachedFiles</types>
+    <types>CatalogObject.InventoryAssemblyAttachedFiles</types>
+    <types>CatalogObject.FileFolders</types>
+    <types>CatalogObject.Counterparties</types>
+    <types>CatalogObject.CounterpartyContracts</types>
+    <types>CatalogObject.Individuals</types>
+    <types>CatalogObject.ProductionOrderAttachedFiles</types>
+    <types>CatalogObject.AcceptanceCertificateAttachedFiles</types>
+    <types>CatalogObject.ProductsAndServices</types>
+    <types>CatalogObject.Specifications</types>
+    <types>CatalogObject.Companies</types>
+    <types>CatalogObject.CustomerInvoiceAttachedFiles</types>
+    <types>CatalogObject.LegalDocuments</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.AttachedFiles.SetDeletionMarkOnAttachedFiles</handler>
+</mdclass:EventSubscription>

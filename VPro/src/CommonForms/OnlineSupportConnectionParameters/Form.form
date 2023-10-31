@@ -1,0 +1,1241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <title>
+    <key>en</key>
+    <value>Online user support connection parameters</value>
+  </title>
+  <title>
+    <key>ru</key>
+    <value>Параметры подключения к Интернет-поддержке пользователей</value>
+  </title>
+  <title>
+    <key>vi</key>
+    <value>Tham số kết nối với hỗ trợ người sử dụng qua Internet</value>
+  </title>
+  <items xsi:type="form:FormGroup">
+    <name>GroupLoginAndPassword</name>
+    <id>35</id>
+    <items xsi:type="form:FormGroup">
+      <name>GroupLoginAndPasswordVertically</name>
+      <id>45</id>
+      <items xsi:type="form:Button">
+        <name>Logon</name>
+        <id>43</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>LogonExtendedTooltip</name>
+          <id>68</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualButton</type>
+        <commandName>Form.Command.EnterLoginAndPasswordOrRegister</commandName>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>GroupFieldsLoginAndPassword</name>
+        <id>61</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>en</key>
+          <value>Group of login and password fields</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Группа полей логина и пароля</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Nhóm trường tên đăng nhập và mật khẩu</value>
+        </title>
+        <toolTip>
+          <key>en</key>
+          <value>Group of login and password fields</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>Группа полей логина и пароля</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Nhóm trường tên đăng nhập và mật khẩu</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>GroupLoginAndPasswordFieldsExtendedTooltip</name>
+          <id>69</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>Vertical</group>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <items xsi:type="form:Decoration">
+        <name>DecorationExplanationLoginPassword</name>
+        <id>54</id>
+        <title>
+          <key>en</key>
+          <value>When connecting online support, the following is used:</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>При подключении Интернет-поддержки используется:</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Khi kết nỗi hỗ trợ qua Internet đã sử dụng:</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>DecorationExplanationLoginPasswordExtendedTooltip</name>
+          <id>70</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>DecorationExplanationLoginPasswordContextMenu</name>
+          <id>55</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>Login</name>
+        <id>37</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Login</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>LoginExtendedTooltip</name>
+          <id>71</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>LoginContextMenu</name>
+          <id>38</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>LabelField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:LabelFieldExtInfo">
+          <width>30</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <width>80</width>
+      <extendedTooltip>
+        <name>GroupLoginAndPasswordVerticallyExtendedTooltip</name>
+        <id>67</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:Decoration">
+      <name>DecorationExplanationGettingLoginPassword</name>
+      <id>51</id>
+      <title>
+        <key>en</key>
+        <value>Users can use the same username and password as for the &lt;link open:UsersSite>users.v8.1c.ru&lt;/> site to log on user Online support system. If you do not have username and password, you should register yourself or request the support from the partner of 1C company with whom you have the ITS agreement.</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Для авторизации в системе Интернет-поддержки пользователей используется тот же логин и пароль, что и на сайте users.v8.1c.ru. Если у Вас еще нет логина и пароля, то выполните регистрацию самостоятельно или обратитесь за помощью к партнеру фирмы «1С», с которым у Вас заключен договор ИТС.</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Để đăng nhập vào hệ thống Hỗ trợ người sử dụng qua Internet, có sử dụng tên đăng nhập và mật khẩu trên Website users.v8.1c.ru. Nếu bạn vẫn chưa có tên đăng nhập và mật khẩu thì hãy tự đăng ký hoặc liên hệ với đối tác của hãng &amp;quot;1C&amp;quot; mà bạn đã ký hợp đồng ITS để được hỗ trợ.</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>DecorationExplanationGettingLoginPasswordExtendedTooltip</name>
+        <id>72</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>DecorationExplanationGettingLoginPasswordContextMenu</name>
+        <id>52</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <formatted>true</formatted>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <height>4</height>
+      <autoMaxHeight>true</autoMaxHeight>
+      <textColor xsi:type="core:ColorDef">
+        <red>69</red>
+        <green>81</green>
+        <blue>133</blue>
+      </textColor>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <handlers>
+          <event>URLProcessing</event>
+          <name>DecorationExplanationGettingLoginPasswordDataProcessorNavigationRef</name>
+        </handlers>
+        <horizontalAlign>Left</horizontalAlign>
+        <verticalAlign>Top</verticalAlign>
+        <titleHeight>4</titleHeight>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Online support service authorization parameters</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Параметры авторизации в сервисе Интернет-поддержки</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Tham số đăng nhập vào dịch vụ hỗ trợ qua Internet</value>
+    </title>
+    <horizontalStretch>true</horizontalStretch>
+    <extendedTooltip>
+      <name>GroupLoginAndPasswordExtendedTooltip</name>
+      <id>66</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>IndentGroupAndConnectionParameters</name>
+    <id>49</id>
+    <items xsi:type="form:FormGroup">
+      <name>GroupConnectionParameters</name>
+      <id>47</id>
+      <items xsi:type="form:FormGroup">
+        <name>GroupConnectionFromServer</name>
+        <id>12</id>
+        <items xsi:type="form:FormGroup">
+          <name>GroupRadioButtonConnectionSide</name>
+          <id>59</id>
+          <items xsi:type="form:FormField">
+            <name>ConnectionFromServer</name>
+            <id>1</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>ConnectionFromServer</segments>
+            </dataPath>
+            <titleLocation>Left</titleLocation>
+            <titleHeight>2</titleHeight>
+            <handlers>
+              <event>OnChange</event>
+              <name>ConnectionFromServerOnChange</name>
+            </handlers>
+            <extendedTooltip>
+              <name>ConnectionFromServerExtendedTooltip</name>
+              <id>77</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>ConnectionFromServerContextMenu</name>
+              <id>2</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>RadioButtonField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
+              <columnsCount>1</columnsCount>
+              <choiceList>
+                <presentation>
+                  <key>en</key>
+                  <value>On local computer</value>
+                </presentation>
+                <presentation>
+                  <key>ru</key>
+                  <value>На локальном компьютере</value>
+                </presentation>
+                <presentation>
+                  <key>vi</key>
+                  <value>Trong máy tính trong mạng cục bộ</value>
+                </presentation>
+                <value xsi:type="core:NumberValue">
+                  <value>0</value>
+                </value>
+              </choiceList>
+              <choiceList>
+                <presentation>
+                  <key>en</key>
+                  <value>On 1C:Enterprise server</value>
+                </presentation>
+                <presentation>
+                  <key>ru</key>
+                  <value>На сервере 1С:Предприятие</value>
+                </presentation>
+                <presentation>
+                  <key>vi</key>
+                  <value>Trên server 1C:DOANH NGHIỆP</value>
+                </presentation>
+                <value xsi:type="core:NumberValue">
+                  <value>1</value>
+                </value>
+              </choiceList>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <width>43</width>
+          <height>4</height>
+          <extendedTooltip>
+            <name>GroupRadioButtonConnectionSideExtendedTooltip</name>
+            <id>76</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>Vertical</group>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <items xsi:type="form:Decoration">
+          <name>DecorationExplanationConnectionFromServer</name>
+          <id>10</id>
+          <title>
+            <key>en</key>
+            <value>Select a computer with the Internet access. If local computers have the Internet access, it is recommended to select &quot;On local computer&quot;. If the Internet access is on the 1C:Enterprise server, select &quot;On 1C:Enterprise server&quot;.</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Выбор компьютера, на котором организован доступ к сети Интернет. Если локальные компьютеры имеют доступ к Интернет, рекомендуется выбрать &quot;На локальном компьютере&quot;. Если доступ к Интернет организован на сервере 1С:Предприятия, необходимо выбрать &quot;На сервере 1С:Предприятия&quot;.</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Chọn máy tính có kết nối đến mạng Internet. Nếu máy tính cục bộ có truy cập đến Internet, nên chọn &quot;Trên máy tính trong mạng cục bộ&quot;. Nếu có thể truy cập đến Internet trên Server 1C:DOANH NGHIỆP thì cần chọn &quot;Trên Server 1C:DOANH NGHIỆP&quot;.</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>DecorationExplanationConnectionFromServerExtendedTooltip</name>
+            <id>78</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>DecorationExplanationConnectionFromServerContextMenu</name>
+            <id>11</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <height>4</height>
+          <autoMaxHeight>true</autoMaxHeight>
+          <textColor xsi:type="core:ColorDef">
+            <red>69</red>
+            <green>81</green>
+            <blue>133</blue>
+          </textColor>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+            <verticalAlign>Top</verticalAlign>
+            <titleHeight>4</titleHeight>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>GroupConnectionFromServerExtendedTooltip</name>
+          <id>75</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <representation>NormalSeparation</representation>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>GroupTimeout</name>
+        <id>5</id>
+        <items xsi:type="form:FormGroup">
+          <name>GoreGroupTimeout</name>
+          <id>15</id>
+          <items xsi:type="form:FormField">
+            <name>ConnectionTimeout</name>
+            <id>3</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>ConnectionTimeout</segments>
+            </dataPath>
+            <handlers>
+              <event>OnChange</event>
+              <name>ConnectionTimeoutOnChange</name>
+            </handlers>
+            <extendedTooltip>
+              <name>ConnectionTimeoutExtendedTooltip</name>
+              <id>81</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>ConnectionTimeoutContextMenu</name>
+              <id>4</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <spinButton>true</spinButton>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
+          <items xsi:type="form:Decoration">
+            <name>DecorationTimeout</name>
+            <id>6</id>
+            <title>
+              <key>en</key>
+              <value>sec</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>сек.</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>giây.</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>DecorationTimeoutExtendedTooltip</name>
+              <id>82</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>DecorationTimeoutContextMenu</name>
+              <id>7</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <width>43</width>
+          <extendedTooltip>
+            <name>GoreGroupTimeoutExtendedTooltip</name>
+            <id>80</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <items xsi:type="form:Decoration">
+          <name>DecorationExplanationTimeout</name>
+          <id>16</id>
+          <title>
+            <key>en</key>
+            <value>Maximum timeout in seconds to establish connection with the online user support server.</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Максимальное время в секундах, в течение которого необходимо ожидать соединение с сервером Интернет-поддержки пользователей.</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Thời gian tối đa tính theo giây cần chờ để kết nối với Server hỗ trợ người sử dụng qua Internet.</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>DecorationTimeoutExplanationExtendedTooltip</name>
+            <id>83</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>DecorationTimeoutExplanationContextMenu</name>
+            <id>17</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <height>2</height>
+          <autoMaxHeight>true</autoMaxHeight>
+          <textColor xsi:type="core:ColorDef">
+            <red>69</red>
+            <green>81</green>
+            <blue>133</blue>
+          </textColor>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+            <verticalAlign>Top</verticalAlign>
+            <titleHeight>2</titleHeight>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>GroupTimeoutExtendedTooltip</name>
+          <id>79</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Connection parameters</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Параметры соединения</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Tham số kết nối</value>
+      </title>
+      <horizontalStretch>true</horizontalStretch>
+      <extendedTooltip>
+        <name>GroupConnectionParametersExtendedTooltip</name>
+        <id>74</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
+        <representation>WeakSeparation</representation>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <showTitle>true</showTitle>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Indent and connection parameters</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Отступ и параметры соединения</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Cách lề và tham số kết nối</value>
+    </title>
+    <horizontalStretch>true</horizontalStretch>
+    <extendedTooltip>
+      <name>GroupIndentAndConnectionParametersExtendedTooltip</name>
+      <id>73</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <representation>NormalSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>GroupGeneralExplanation</name>
+    <id>57</id>
+    <items xsi:type="form:Decoration">
+      <name>DecorationRecommendations</name>
+      <id>22</id>
+      <title>
+        <key>en</key>
+        <value>If you are using a firewall on the computer, it is recommended to add the address of user Online support server -webits.1c.ru, ports 80 (HTTP) and 443 (HTTPS), to the list of allowed addresses. The settings of exceptions for each particular firewall or antivirus are configured according to the user's manual provided with the corresponding firewall or antivirus.
+If necessary, you should allow access to the specified address and network ports at Internet gateway.</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Если на компьютере используется межсетевой экран (фаервол), рекомендуется добавить в список разрешенных адресов адрес сервера Интернет-поддержки пользователей: webits.1c.ru, порты 80 (HTTP) и 443 (HTTPS). Настройка исключений в каждом конкретном межсетевом экране или антивирусе выполняется согласно инструкции пользователя, поставляемой вместе с межсетевым экраном или антивирусом.
+При необходимости следует разрешить доступ к указанным адресу и сетевым портам на Интернет-шлюзе.</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Nếu trên máy tính sử dụng màn hình liên mạng (tường lửa) thì  trong danh sách các địa chỉ cho phép nên bổ sung địa chỉ Server hỗ trợ người sử dụng qua Internet: webits.1c.ru, các cổng 80 (HTTP) và 443 (HTTPS). Tùy chỉnh ngoại trừ trong từng màn hình liên mạng hoặc antivirus cụ thể theo chỉ dẫn người sử dụng được cấp kèm theo.
+Khi cần thiết, cho phép truy cập đến địa chỉ hoặc cổng mạng đã chỉ ra trên Internet-Gateway.</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>DecorationRecommendationsExtendedTooltip</name>
+        <id>85</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>DecorationRecomendationsContextMenu</name>
+        <id>23</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>Label</type>
+      <width>96</width>
+      <autoMaxWidth>true</autoMaxWidth>
+      <height>4</height>
+      <autoMaxHeight>true</autoMaxHeight>
+      <horizontalStretch>true</horizontalStretch>
+      <verticalStretch>false</verticalStretch>
+      <textColor xsi:type="core:ColorDef">
+        <red>69</red>
+        <green>81</green>
+        <blue>133</blue>
+      </textColor>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+        <verticalAlign>Top</verticalAlign>
+      </extInfo>
+    </items>
+    <items xsi:type="form:Decoration">
+      <name>DecorationRecommendationsKS83</name>
+      <id>64</id>
+      <title>
+        <key>en</key>
+        <value>If the connection with the online support server is established on 1C:Enterprise server, it is necessary to allow contacting webits.1c.ru Internet resource in 1C:Enterprise security profile through safe connection protocol (HTTPS, port 443).</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Если соединение с сервером Интернет-поддержки устанавливается на сервере 1С:Предприятия, тогда необходимо разрешить в профиле безопасности сервера 1С:Предприятия обращение к Интернет-ресурсу webits.1c.ru по протоколу безопасного соединения (HTTPS, порт 443).</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Nếu liên kết với Server hỗ trợ qua Internet được thiết lập qua Server 1C:DOANH NGHIỆP, thì trong hồ sơ an toàn của Server 1C:DOANH NGHIỆP cần cho phép truy cập tới nguồn Internet webits.1c.ru theo giao thức liên kết an toàn (HTTPS, cổng 443).</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>DecorationRecommendationsKS83ExtendedTooltip</name>
+        <id>86</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>DecorationRecommendationsKS83ContextMenu</name>
+        <id>65</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>Label</type>
+      <width>96</width>
+      <autoMaxWidth>true</autoMaxWidth>
+      <height>2</height>
+      <autoMaxHeight>true</autoMaxHeight>
+      <horizontalStretch>true</horizontalStretch>
+      <verticalStretch>false</verticalStretch>
+      <textColor xsi:type="core:ColorDef">
+        <red>69</red>
+        <green>81</green>
+        <blue>133</blue>
+      </textColor>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+        <verticalAlign>Top</verticalAlign>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Recommendations on setting connection to the online support server</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Рекомендации по настройке соединения с сервером Интернет-поддержки</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Khuyến nghị tùy chỉnh kết nối với Server hỗ trợ qua Internet</value>
+    </title>
+    <horizontalStretch>false</horizontalStretch>
+    <extendedTooltip>
+      <name>GroupCommonExplanationExtendedTooltip</name>
+      <id>84</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <representation>WeakSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <showTitle>true</showTitle>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <commandBarLocation>Bottom</commandBarLocation>
+  <autoCommandBar>
+    <name>FormCommandBar</name>
+    <id>-1</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <horizontalAlign>Right</horizontalAlign>
+    <autoFill>true</autoFill>
+  </autoCommandBar>
+  <handlers>
+    <event>NotificationProcessing</event>
+    <name>NotificationProcessing</name>
+  </handlers>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>OnCreateAtServer</name>
+  </handlers>
+  <excludedCommands>Abort</excludedCommands>
+  <excludedCommands>Close</excludedCommands>
+  <excludedCommands>CustomizeForm</excludedCommands>
+  <excludedCommands>Help</excludedCommands>
+  <excludedCommands>Ignore</excludedCommands>
+  <excludedCommands>No</excludedCommands>
+  <excludedCommands>OK</excludedCommands>
+  <excludedCommands>RestoreValues</excludedCommands>
+  <excludedCommands>Retry</excludedCommands>
+  <excludedCommands>SaveValues</excludedCommands>
+  <excludedCommands>Yes</excludedCommands>
+  <width>96</width>
+  <windowOpeningMode>LockOwnerWindow</windowOpeningMode>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <allowFormCustomize>true</allowFormCustomize>
+  <enabled>true</enabled>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>ConnectionFromServer</name>
+    <title>
+      <key>en</key>
+      <value>Establish connection with the Online support server</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Устанавливать соединение с сервером Интернет-поддержки</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Thiết lập liên kết với Server hỗ trợ qua Internet</value>
+    </title>
+    <id>1</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ConnectionTimeout</name>
+    <title>
+      <key>en</key>
+      <value>Connection timeout</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Таймаут соединения</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Timeout connection</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>3</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>Login</name>
+    <title>
+      <key>en</key>
+      <value>Login</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Логин</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Tên đăng nhập</value>
+    </title>
+    <id>5</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>EmptyLogin</name>
+    <title>
+      <key>en</key>
+      <value>Blank login</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Логин пустой</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Tên đăng nhập trống</value>
+    </title>
+    <id>3</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <formCommands>
+    <name>EnterLoginAndPasswordOrRegister</name>
+    <title>
+      <key>en</key>
+      <value>Connect Online support</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Подключить Интернет-поддержку</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Kết nối hỗ trợ Internet</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>en</key>
+      <value>Enter login and password or register</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Ввести логин и пароль или зарегистрироваться</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nhập tên và mật khẩu hoặc đăng ký</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>EnterLoginPasswordOrRegister</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+</form:Form>

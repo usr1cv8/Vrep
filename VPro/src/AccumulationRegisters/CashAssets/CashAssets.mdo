@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bbb5b3d5-8e37-40a4-b24f-866145297308">
+  <producedTypes>
+    <selectionType typeId="9a66ae50-5e9a-4e64-b612-080cf1f994b1" valueTypeId="1fb55f87-b7d8-492d-bbf6-bd4534992541"/>
+    <listType typeId="84750141-0c37-4eea-9546-d1b15b8dc4c5" valueTypeId="7e70fdd5-29dd-48d3-8360-3cea7340fb94"/>
+    <managerType typeId="9015c48f-7a6f-4615-af23-e3ae8be0ad5e" valueTypeId="6ec5d029-d6da-4206-8c6c-7d26d5b965cc"/>
+    <recordSetType typeId="ee4db26b-197d-40c7-82ca-a9d9024b0357" valueTypeId="e928060b-2c6e-4a43-a2ce-cc36b760663c"/>
+    <recordKeyType typeId="d73c4cc5-39d4-48b4-b480-32b3f941a2fc" valueTypeId="7416cbf6-a76b-4c55-bdb3-470c87c7f34b"/>
+    <recordType typeId="88ae53d1-1eb8-4b28-b0d5-afd4d165f5f0" valueTypeId="a1541c94-345b-4b39-8b8b-33986c676bf0"/>
+  </producedTypes>
+  <name>CashAssets</name>
+  <synonym>
+    <key>en</key>
+    <value>Funds</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Денежные средства</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Tiền mặt và tiền gửi</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>RecordType</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="3f125aee-0031-4fa7-8256-4d35d18da6fe">
+    <name>Amount</name>
+    <synonym>
+      <key>en</key>
+      <value>Amount</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số tiền</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="37792a5d-9e07-46ac-af63-99ccfa9d9bca">
+    <name>AmountCur</name>
+    <synonym>
+      <key>en</key>
+      <value>Amount (curr.)</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма (вал.)</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số tiền (nguyên tệ)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="88f43626-6387-4a2b-8314-13ce1925c194">
+    <name>ContentOfAccountingRecord</name>
+    <synonym>
+      <key>en</key>
+      <value>Posting content</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Содержание проводки</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Nội dung bút toán</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="e6f83b2c-2ed6-4684-9914-8a367d71b5a0">
+    <name>Item</name>
+    <synonym>
+      <key>en</key>
+      <value>Item</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Статья</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Dạng</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.CashFlowItems</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="c8e2a0fe-e6a5-418f-be07-f45b54f56107">
+    <name>Company</name>
+    <synonym>
+      <key>en</key>
+      <value>Company</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Doanh nghiệp</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Companies</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="ad0c9c71-3b85-406d-afab-6a6f96355d19">
+    <name>CashAssetsType</name>
+    <synonym>
+      <key>en</key>
+      <value>Funds type</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Тип денежных средств</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Kiểu vốn bằng tiền</value>
+    </synonym>
+    <type>
+      <types>EnumRef.CashAssetTypes</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="0967afd7-e765-4413-bcd6-92d3a9db3133">
+    <name>BankAccountPettyCash</name>
+    <synonym>
+      <key>en</key>
+      <value>Bank account, cash fund</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Банковский счет, касса</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tài khoản ngân hàng, quỹ tiền mặt</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.BankAccounts</types>
+      <types>CatalogRef.PettyCashes</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="3e122d7c-e6d8-4aca-860e-390ffd8d04ea">
+    <name>Currency</name>
+    <synonym>
+      <key>en</key>
+      <value>Currency</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Валюта</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tiền tệ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Currencies</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

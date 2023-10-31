@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2a479b8f-7569-43d0-8ca3-9001d6ec57f0">
+  <producedTypes>
+    <objectType typeId="ccba9c7f-d50c-45fe-9cd3-6ce5582ae24f" valueTypeId="8d09a7d5-e478-4c72-a92d-a38d2f974f0f"/>
+    <managerType typeId="5469c8a0-ea9b-4cc6-8ea0-c84357f9b770" valueTypeId="2ac55ec5-ebec-4a1d-9439-3c305c535dcf"/>
+  </producedTypes>
+  <name>UserWorkBlocking</name>
+  <synonym>
+    <key>en</key>
+    <value>User operation locking</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Блокировка работы пользователей</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Phong tỏa công việc người sử dụng</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.UserWorkBlocking.Form.Form</defaultForm>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <attributes uuid="e4abafc6-f859-4d96-9818-5b9bf8d66d69">
+    <name>ProhibitUserWorkTemporarily</name>
+    <synonym>
+      <key>en</key>
+      <value>Temporarily prohibit users from using the application</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Временно запретить работу пользователей</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tạm thời cấm người sử dụng làm việc</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Shows whether the user operation is locked</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак того, что включена блокировка работы пользователей</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Dấu hiệu bật phong tỏa công việc người sử dụng</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="535acd2c-26d2-4f32-9ae6-cc1956317c59">
+    <name>DisableScheduledJobs</name>
+    <synonym>
+      <key>en</key>
+      <value>Disable scheduled jobs</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Запретить работу регламентных заданий</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Cấm làm việc với nhiệm vụ thường kỳ</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Shows whether the scheduled job is locked</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак того, что включена блокировка работы регламентных заданий</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Dấu hiệu bật phong tỏa công việc nhiệm vụ thường kỳ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="801adeeb-8a7f-44c1-b649-a7dfffc7b65d">
+    <name>UnlockCode</name>
+    <synonym>
+      <key>en</key>
+      <value>Code for unlocking</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Код для разблокировки</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Mã để gỡ phong tỏa</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Permission code enabling the administrator to enter the locked base.</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Код разрешения, позволяющий администратору войти в заблокированную базу.</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Mã cho phép giúp người quản trị vào cơ sở bị phong tỏa.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="ac4e0868-ba49-46b4-8872-d42483a5591f">
+    <name>LockBegin</name>
+    <synonym>
+      <key>en</key>
+      <value>Lock action start</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Начало действия блокировки</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Bắt đầu hiệu lực phong tỏa</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Time when user operation lock starts</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Момент времени, с которого начинает действовать блокировка работы пользователей</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Thời điểm mà từ đó bắt đầu phong tỏa công việc của người sử dụng</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="45e6c4a6-1d63-4b94-a7d2-fbd3fb68061b">
+    <name>LockEnding</name>
+    <synonym>
+      <key>en</key>
+      <value>Lock action end</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Окончание действия блокировки</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Hết hiệu lực phong tỏa</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Time when user operation lock ends</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Момент времени окончания действия блокировки работы пользователей</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Thời điểm kết thúc thao tác phong tỏa công việc của người sử dụng</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="0493dcf1-5f94-41f9-a4c7-a52e12a29068">
+    <name>MessageForUsers</name>
+    <synonym>
+      <key>en</key>
+      <value>Message for users</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Сообщение для пользователей</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Thông báo cho người sử dụng</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>300</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Message on lock reason displayed to user trying to access the locked IB</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Сообщение о причине блокировки, которое выводится пользователю при попытке войти в заблокированную ИБ</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Thông báo về nguyên nhân phong tỏa mà sẽ đưa ra cho người sử dụng khi thử đăng nhập vào CSTT bị phong tỏa</value>
+    </toolTip>
+    <multiLine>true</multiLine>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="ca4c0299-625a-4b03-be0e-36ffb45c6d08">
+    <name>Form</name>
+    <synonym>
+      <key>en</key>
+      <value>Lock of connections with infobase</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Блокировка соединений с информационной базой</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Phong tỏa kết nối với cơ sở thông tin</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="7fa1119b-4321-4b8f-a879-1d940084145a">
+    <name>ExclusiveModeSetupError</name>
+    <synonym>
+      <key>en</key>
+      <value>Error occurred while setting exclusive mode</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Ошибка установки монопольного режима</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Lỗi thiết lập chế độ độc quyền</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

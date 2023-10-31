@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5d338e31-a56b-45f0-8a62-0270ca543f6a">
+  <name>ItemOrderSetupOnCopying</name>
+  <synonym>
+    <key>en</key>
+    <value>Set up item order on copying</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Настройка порядка элементов при копировании</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Tùy chỉnh trình tự phần tử khi sao chép</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.ContactInformationKinds</types>
+  </source>
+  <event>OnCopy</event>
+  <handler>CommonModule.ItemOrderSetup.ResetOrderingAttributeValue</handler>
+</mdclass:EventSubscription>

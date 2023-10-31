@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <title>
+    <key>en</key>
+    <value>Customer order fulfillment</value>
+  </title>
+  <title>
+    <key>ru</key>
+    <value>Выполнение заказов покупателей</value>
+  </title>
+  <title>
+    <key>vi</key>
+    <value>Thực hiện đơn hàng của khách</value>
+  </title>
+  <items xsi:type="form:FormGroup">
+    <name>UserSettingsGroup</name>
+    <id>34</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <toolTip>
+      <key>en</key>
+      <value>User settings group</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа пользовательских настроек</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nhóm tùy chỉnh tự tạo</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>UserSettingsGroupExtendedTooltip</name>
+      <id>35</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <representation>WeakSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <backColor xsi:type="core:ColorRef">
+        <color>Style.QuickSettingsGroupBackground</color>
+      </backColor>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>MainCommandBar</name>
+    <id>5</id>
+    <items xsi:type="form:Button">
+      <name>FormHelp</name>
+      <id>36</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>FormHelpExtendedTooltip</name>
+        <id>37</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.StandardCommand.Help</commandName>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+      <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Main command bar</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Основная командная панель</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Thanh lệnh chính</value>
+    </title>
+    <extendedTooltip>
+      <name>MainCommandBarExtendedTooltip</name>
+      <id>19</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>CommandBar</type>
+    <extInfo xsi:type="form:CommandBarExtInfo">
+      <horizontalAlign>Left</horizontalAlign>
+      <commandSource>Form</commandSource>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>FolderFilterInteractive</name>
+    <id>13</id>
+    <items xsi:type="form:FormField">
+      <name>FilterByOrderStatuses</name>
+      <id>11</id>
+      <title>
+        <key>en</key>
+        <value>Filter by customer orders</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Фильтр по заказам покупателей</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Lọc theo đơn hàng của khách</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Report.FilterByOrderStatuses</segments>
+      </dataPath>
+      <handlers>
+        <event>OnChange</event>
+        <name>FilterByOrderStatusesOnChange</name>
+      </handlers>
+      <extendedTooltip>
+        <name>FilterByOrderStatusesExtendedTooltip</name>
+        <id>22</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>FilterByOrdersStateContextMenu</name>
+        <id>12</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>RadioButtonField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
+        <choiceList>
+          <presentation>
+            <key>en</key>
+            <value>All orders</value>
+          </presentation>
+          <presentation>
+            <key>ru</key>
+            <value>Все заказы</value>
+          </presentation>
+          <presentation>
+            <key>vi</key>
+            <value>Tất cả đơn hàng</value>
+          </presentation>
+          <value xsi:type="core:StringValue">
+            <value>All orders</value>
+          </value>
+        </choiceList>
+        <choiceList>
+          <presentation>
+            <key>en</key>
+            <value>Unclosed</value>
+          </presentation>
+          <presentation>
+            <key>ru</key>
+            <value>Незакрытые</value>
+          </presentation>
+          <presentation>
+            <key>vi</key>
+            <value>Chưa đóng</value>
+          </presentation>
+          <value xsi:type="core:StringValue">
+            <value>Unclosed</value>
+          </value>
+        </choiceList>
+        <choiceList>
+          <presentation>
+            <key>en</key>
+            <value>Not shipped</value>
+          </presentation>
+          <presentation>
+            <key>ru</key>
+            <value>Неотгруженные</value>
+          </presentation>
+          <presentation>
+            <key>vi</key>
+            <value>Chưa giao hàng</value>
+          </presentation>
+          <value xsi:type="core:StringValue">
+            <value>NotShipped</value>
+          </value>
+        </choiceList>
+        <choiceList>
+          <presentation>
+            <key>en</key>
+            <value>Not supplied</value>
+          </presentation>
+          <presentation>
+            <key>ru</key>
+            <value>Необеспеченные</value>
+          </presentation>
+          <presentation>
+            <key>vi</key>
+            <value>Không đảm bảo</value>
+          </presentation>
+          <value xsi:type="core:StringValue">
+            <value>Unsecured</value>
+          </value>
+        </choiceList>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <toolTip>
+      <key>en</key>
+      <value>Group interactive filter</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа интерактивный фильтр</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nhóm lọc trực tác</value>
+    </toolTip>
+    <horizontalStretch>true</horizontalStretch>
+    <extendedTooltip>
+      <name>GroupInteractiveFilterExtendedTooltip</name>
+      <id>20</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormField">
+    <name>Result</name>
+    <id>9</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Result</segments>
+    </dataPath>
+    <defaultItem>true</defaultItem>
+    <titleLocation>None</titleLocation>
+    <extendedTooltip>
+      <name>ResultExtendedTooltip</name>
+      <id>33</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>ResultContextMenu</name>
+      <id>10</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>SpreadsheetDocumentField</type>
+    <editMode>Enter</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:SpreadSheetDocFieldExtInfo">
+      <width>100</width>
+      <autoMaxWidth>true</autoMaxWidth>
+      <height>10</height>
+      <autoMaxHeight>true</autoMaxHeight>
+      <horizontalStretch>true</horizontalStretch>
+      <verticalStretch>true</verticalStretch>
+      <pointerType>Special</pointerType>
+      <verticalScrollBar>ScrollAlways</verticalScrollBar>
+      <horizontalScrollBar>ScrollAlways</horizontalScrollBar>
+      <selectionShowMode>Always</selectionShowMode>
+      <drawingSelectionShowMode>Auto</drawingSelectionShowMode>
+      <showGroups>true</showGroups>
+      <enableStartDrag>true</enableStartDrag>
+      <enableDrag>true</enableDrag>
+      <viewScalingMode>Normal</viewScalingMode>
+    </extInfo>
+  </items>
+  <commandBarLocation>None</commandBarLocation>
+  <autoCommandBar>
+    <name>FormCommandBar</name>
+    <id>-1</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <horizontalAlign>Left</horizontalAlign>
+  </autoCommandBar>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>OnCreateAtServer</name>
+  </handlers>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <allowFormCustomize>true</allowFormCustomize>
+  <enabled>true</enabled>
+  <verticalScroll>UseIfNecessary</verticalScroll>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>Report</name>
+    <id>1</id>
+    <valueType>
+      <types>ReportObject.CustomerOrdersAnalysis</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <main>true</main>
+  </attributes>
+  <attributes>
+    <name>CurrentVariantDescription</name>
+    <title>
+      <key>en</key>
+      <value>Report variant</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Вариант отчета</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Phương án báo cáo</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>Result</name>
+    <title>
+      <key>en</key>
+      <value>Result</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Результат</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Kết quả</value>
+    </title>
+    <id>3</id>
+    <valueType>
+      <types>SpreadsheetDocument</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <extInfo xsi:type="form:SpreadsheetDocumentExtInfo"/>
+  </attributes>
+  <attributes>
+    <name>DetailsData</name>
+    <id>4</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+  <extInfo xsi:type="form:ReportFormExtInfo">
+    <handlers>
+      <event>OnSaveUserSettingsAtServer</event>
+      <name>OnSaveUserSettingsAtServer</name>
+    </handlers>
+    <reportResult>Result</reportResult>
+    <detailsInformation>DetailsData</detailsInformation>
+    <currentVariantPresentationField>CurrentVariantDescription</currentVariantPresentationField>
+  </extInfo>
+</form:Form>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e047a187-db8a-4bfb-bf97-22a6513fcce7">
+  <producedTypes>
+    <managerType typeId="5cfef04e-a208-4a32-b0ba-e9dd3da5d0de" valueTypeId="a5fa864c-93dd-4030-99d0-b9d65e417fb2"/>
+    <valueManagerType typeId="1f570eda-6496-4150-815f-1fdf6a47dc79" valueTypeId="ff0fd483-6670-4af5-9558-5d6e4c2863b5"/>
+    <valueKeyType typeId="553cd3a2-f2d3-5d69-883b-62fec5fdd197" valueTypeId="eceae43f-bf11-5f6f-8b98-8dddd5e29e12"/>
+  </producedTypes>
+  <name>PurchaseOrdersCompletedStatus</name>
+  <synonym>
+    <key>en</key>
+    <value>&quot;Completed&quot; state of purchase orders</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Состояние выполнен заказов поставщикам</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Trạng thái đã thực hiện đơn hàng đặt nhà cung cấp</value>
+  </synonym>
+  <type>
+    <types>CatalogRef.PurchaseOrderStates</types>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <choiceParameters>
+    <name>Filter.OrderStatus</name>
+    <value xsi:type="core:ReferenceValue">
+      <value>Enum.OrderStatuses.EnumValue.Completed</value>
+    </value>
+  </choiceParameters>
+  <choiceForm>Catalog.PurchaseOrderStates.Form.ChoiceForm</choiceForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

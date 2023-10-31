@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6c82f264-2afe-42e2-9d23-aecc2ad704b3">
+  <producedTypes>
+    <selectionType typeId="4d909aea-d8b7-45d7-b7b6-1a81569406f6" valueTypeId="3575a2d7-aa61-4dad-aecc-a2c510196aac"/>
+    <listType typeId="21270b77-da92-4e82-b39c-faaa1ecb6636" valueTypeId="1c9588cc-e409-440d-86d7-dbfdb93e3051"/>
+    <managerType typeId="dab81085-761d-40f5-a58c-82f494f310ee" valueTypeId="2579b726-ba07-4510-9b09-39c7898c207b"/>
+    <recordSetType typeId="2b212de4-b989-473b-a5ff-6f900368c2c0" valueTypeId="27d8584b-8c88-4666-84af-3015eddf2543"/>
+    <recordKeyType typeId="db682746-6c24-4db8-a88b-72b3d417717c" valueTypeId="d9befa80-79f3-4038-9712-c13148f8a143"/>
+    <recordType typeId="99d74249-c1c1-4062-bd6a-3ff778f608b8" valueTypeId="ca93fe4c-848d-43b1-83de-ef5337f2c8e2"/>
+  </producedTypes>
+  <name>JobSheets</name>
+  <synonym>
+    <key>en</key>
+    <value>Job sheets</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Сдельные наряды</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Công khoán</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <registerType>Turnovers</registerType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="aed96820-f9d0-499f-a619-8acfaa01120c">
+    <name>StandardHours</name>
+    <synonym>
+      <key>en</key>
+      <value>Standard hours</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Нормочасы</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Giờ công định mức</value>
+    </synonym>
+    <comment>Import in hours</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="83b2d8df-d586-4b38-9b0e-bd29deb542ff">
+    <name>QuantityPlan</name>
+    <synonym>
+      <key>en</key>
+      <value>Quantity (plan)</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Количество (план)</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số lượng (dự tính)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>7</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="4441d825-2b34-4aca-8307-acbe0f80f429">
+    <name>QuantityFact</name>
+    <synonym>
+      <key>en</key>
+      <value>Quantity (actual)</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Количество (факт)</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số lượng (thực tế)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>7</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="8569fe51-c995-473e-a0fe-001c7494fa27">
+    <name>Company</name>
+    <synonym>
+      <key>en</key>
+      <value>Company</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Doanh nghiệp</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Companies</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="aa9a6299-ec5f-495c-b508-b56cbaa25926">
+    <name>StructuralUnit</name>
+    <synonym>
+      <key>en</key>
+      <value>Department</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Bộ phận</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.StructuralUnits</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="b7c32ce3-44fa-463e-af7c-54cf9aa48f87">
+    <name>Performer</name>
+    <synonym>
+      <key>en</key>
+      <value>Performer</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Исполнитель</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Người thực hiện</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Teams</types>
+      <types>CatalogRef.Employees</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="59d80e58-c517-479f-b138-5090c1379181">
+    <name>Operation</name>
+    <synonym>
+      <key>en</key>
+      <value>Operation</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Операция</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Hoạt động</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ProductsAndServices</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameters>
+      <name>Filter.ProductsAndServicesType</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.ProductsAndServicesTypes.EnumValue.Operation</value>
+      </value>
+    </choiceParameters>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="78bff762-a3c0-4df3-a92a-95cb2f588990">
+    <name>ProductsAndServices</name>
+    <synonym>
+      <key>en</key>
+      <value>Product or service</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Mặt hàng</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ProductsAndServices</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="84162088-2643-478f-8e60-b660aaa5557c">
+    <name>Characteristic</name>
+    <synonym>
+      <key>en</key>
+      <value>Characteristic</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đặc tính</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ProductsAndServicesCharacteristics</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="789bac87-91da-4146-8e31-d55b03e882b1">
+    <name>CustomerOrder</name>
+    <synonym>
+      <key>en</key>
+      <value>Customer order</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ покупателя</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đơn hàng của khách</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.CustomerOrder</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="954dee9a-f43c-451e-909b-38e42abb2142">
+    <name>ProductionDocument</name>
+    <synonym>
+      <key>en</key>
+      <value>Production document</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Production document</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Chứng từ sản xuất</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ProductionOrder</types>
+      <types>DocumentRef.InventoryAssembly</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="f34cc673-6f9a-4a69-b07e-786ab9d80790">
+    <name>Stage</name>
+    <synonym>
+      <key>en</key>
+      <value>Stage</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Stage</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Công đoạn</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ProductionStages</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

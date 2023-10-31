@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2aa7ea6b-311b-4577-ae16-a6b4c8170d26">
+  <producedTypes>
+    <selectionType typeId="6d9c20f3-05da-4078-997c-ff8a629624df" valueTypeId="00b12b07-1aac-4b67-930e-c7378aaafa35"/>
+    <listType typeId="e7df86f3-bc48-45cb-a63b-c9da55fa9491" valueTypeId="b82fb18d-576d-4eae-a8db-27b9f0cf4181"/>
+    <managerType typeId="31d0d289-ecb2-49c5-8677-0e2ce6faabec" valueTypeId="4713e86a-1a4e-49b6-9ba1-418e1638b6e7"/>
+    <recordSetType typeId="2c702756-c037-447b-89ee-6cd08bb89846" valueTypeId="73ad58a5-238d-4f80-bccc-46e153bfa145"/>
+    <recordKeyType typeId="0bfcfc9f-3dd9-41c8-8f42-3a947ab77de8" valueTypeId="c90bd5e3-7910-47ba-a9c8-3112315bbb90"/>
+    <recordType typeId="a599b161-7127-469a-9332-bfeab04b84fc" valueTypeId="fa0acbe3-2d36-482d-80a6-9084f31d9236"/>
+    <recordManagerType typeId="9c89cd1a-5238-4509-8002-c54fe4b43397" valueTypeId="4c35fc07-a5a0-47a1-8884-a63f4a821473"/>
+  </producedTypes>
+  <name>FixedAssetsStates</name>
+  <synonym>
+    <key>en</key>
+    <value>Property states</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Состояния имущества</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Trạng thái tài sản cố định</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>RecorderPosition</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="68f3c038-a709-448f-b873-7966120d608b">
+    <name>AccrueDepreciation</name>
+    <synonym>
+      <key>en</key>
+      <value>Accrue depreciation</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Начислить амортизацию</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Trích khấu hao</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:BooleanValue"/>
+  </resources>
+  <resources uuid="ce1e2794-3776-4be1-b252-88c52bd88a22">
+    <name>AccrueDepreciationInCurrentMonth</name>
+    <synonym>
+      <key>en</key>
+      <value>Accrue depreciation in the current month</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Начислять амортизацию В текущем месяце</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Trích khấu hao trong tháng hiện tại</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:BooleanValue"/>
+  </resources>
+  <resources uuid="890fe387-327f-4a01-a298-b51978160d27">
+    <name>State</name>
+    <synonym>
+      <key>en</key>
+      <value>State</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Trạng thái</value>
+    </synonym>
+    <type>
+      <types>EnumRef.FixedAssetsStates</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="ef754019-7c9e-49d0-8cf8-026a4dba7d56">
+    <name>Company</name>
+    <synonym>
+      <key>en</key>
+      <value>Company</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Doanh nghiệp</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Companies</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="82730826-692a-4e05-aae3-254d8ad7877a">
+    <name>FixedAsset</name>
+    <synonym>
+      <key>en</key>
+      <value>Property</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Имущество</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tài sản</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.FixedAssets</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.FixedAssets.EmptyRef</value>
+    </fillValue>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

@@ -1,0 +1,2525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <title>
+    <key>en</key>
+    <value>Inventory auto movement parameters</value>
+  </title>
+  <title>
+    <key>ru</key>
+    <value>Параметры автоперемещения запасов</value>
+  </title>
+  <title>
+    <key>vi</key>
+    <value>Tham số tự động điều chuyển vật tư</value>
+  </title>
+  <items xsi:type="form:FormGroup">
+    <name>TransferAssemblingDisassembling</name>
+    <id>1</id>
+    <items xsi:type="form:FormGroup">
+      <name>LeftColumn</name>
+      <id>16</id>
+      <items xsi:type="form:FormField">
+        <name>TransferSource</name>
+        <id>2</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>TransferSource</segments>
+        </dataPath>
+        <handlers>
+          <event>OnChange</event>
+          <name>TransferSourceOnChange</name>
+        </handlers>
+        <extendedTooltip>
+          <name>TransferSourceExtendedTooltip</name>
+          <id>63</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>TransferSourceContextMenu</name>
+          <id>3</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <handlers>
+            <event>Opening</event>
+            <name>TransferSourceOpening</name>
+          </handlers>
+          <width>30</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+          <choiceParameters>
+            <name>Filter.StructuralUnitType</name>
+            <value xsi:type="form:FormChoiceListDesTimeValue">
+              <value xsi:type="core:FixedArrayValue">
+                <values xsi:type="form:FormChoiceListDesTimeValue">
+                  <value xsi:type="core:ReferenceValue">
+                    <value>Enum.StructuralUnitsTypes.EnumValue.Warehouse</value>
+                  </value>
+                </values>
+                <values xsi:type="form:FormChoiceListDesTimeValue">
+                  <value xsi:type="core:ReferenceValue">
+                    <value>Enum.StructuralUnitsTypes.EnumValue.Department</value>
+                  </value>
+                </values>
+                <values xsi:type="form:FormChoiceListDesTimeValue">
+                  <value xsi:type="core:ReferenceValue">
+                    <value>Enum.StructuralUnitsTypes.EnumValue.Retail</value>
+                  </value>
+                </values>
+                <values xsi:type="form:FormChoiceListDesTimeValue">
+                  <value xsi:type="core:ReferenceValue">
+                    <value>Enum.StructuralUnitsTypes.EnumValue.RetailAccrualAccounting</value>
+                  </value>
+                </values>
+              </value>
+            </value>
+          </choiceParameters>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>TransferRecipient</name>
+        <id>12</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>TransferRecipient</segments>
+        </dataPath>
+        <handlers>
+          <event>OnChange</event>
+          <name>TransferRecipientOnChange</name>
+        </handlers>
+        <extendedTooltip>
+          <name>TransferRecipientExtendedTooltip</name>
+          <id>64</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>RecipientMoveContextMenu</name>
+          <id>13</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <handlers>
+            <event>Opening</event>
+            <name>TransferRecipientOpening</name>
+          </handlers>
+          <width>30</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+          <choiceParameters>
+            <name>Filter.StructuralUnitType</name>
+            <value xsi:type="form:FormChoiceListDesTimeValue">
+              <value xsi:type="core:FixedArrayValue">
+                <values xsi:type="form:FormChoiceListDesTimeValue">
+                  <value xsi:type="core:ReferenceValue">
+                    <value>Enum.StructuralUnitsTypes.EnumValue.Warehouse</value>
+                  </value>
+                </values>
+                <values xsi:type="form:FormChoiceListDesTimeValue">
+                  <value xsi:type="core:ReferenceValue">
+                    <value>Enum.StructuralUnitsTypes.EnumValue.Department</value>
+                  </value>
+                </values>
+                <values xsi:type="form:FormChoiceListDesTimeValue">
+                  <value xsi:type="core:ReferenceValue">
+                    <value>Enum.StructuralUnitsTypes.EnumValue.Retail</value>
+                  </value>
+                </values>
+                <values xsi:type="form:FormChoiceListDesTimeValue">
+                  <value xsi:type="core:ReferenceValue">
+                    <value>Enum.StructuralUnitsTypes.EnumValue.RetailAccrualAccounting</value>
+                  </value>
+                </values>
+              </value>
+            </value>
+          </choiceParameters>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>RecipientOfWastes</name>
+        <id>49</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>RecipientOfWastes</segments>
+        </dataPath>
+        <handlers>
+          <event>OnChange</event>
+          <name>RecipientOfWastesOnChange</name>
+        </handlers>
+        <extendedTooltip>
+          <name>WastesRecipientExtendedTooltip</name>
+          <id>65</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>RecipientOfWastesContextMenu</name>
+          <id>50</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <handlers>
+            <event>Opening</event>
+            <name>RecipientOfWastesOpening</name>
+          </handlers>
+          <width>30</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+          <choiceParameters>
+            <name>Filter.StructuralUnitType</name>
+            <value xsi:type="form:FormChoiceListDesTimeValue">
+              <value xsi:type="core:FixedArrayValue">
+                <values xsi:type="form:FormChoiceListDesTimeValue">
+                  <value xsi:type="core:ReferenceValue">
+                    <value>Enum.StructuralUnitsTypes.EnumValue.Warehouse</value>
+                  </value>
+                </values>
+                <values xsi:type="form:FormChoiceListDesTimeValue">
+                  <value xsi:type="core:ReferenceValue">
+                    <value>Enum.StructuralUnitsTypes.EnumValue.Department</value>
+                  </value>
+                </values>
+              </value>
+            </value>
+          </choiceParameters>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Left column</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Левая колонка</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Cột trái</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Left column</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Левая колонка</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Cột trái</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>LeftColumnExtendedTooltip</name>
+        <id>62</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>RightColumn</name>
+      <id>17</id>
+      <items xsi:type="form:FormField">
+        <name>TransferSourceCell</name>
+        <id>4</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>TransferSourceCell</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>TransferSourceCellExtendedTooltip</name>
+          <id>67</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>TransferSourceCellContextMenu</name>
+          <id>5</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <width>20</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+          <choiceParameterLinks>
+            <name>Filter.Owner</name>
+            <datapath xsi:type="form:DataPath">
+              <segments>TransferSource</segments>
+            </datapath>
+          </choiceParameterLinks>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>TransferRecipientCell</name>
+        <id>14</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>TransferRecipientCell</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>TransferRecipientCellExtendedTooltip</name>
+          <id>68</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>TransferRecipientCellContextMenu</name>
+          <id>15</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <width>20</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+          <choiceParameterLinks>
+            <name>Filter.Owner</name>
+            <datapath xsi:type="form:DataPath">
+              <segments>TransferRecipient</segments>
+            </datapath>
+          </choiceParameterLinks>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>DisposalsRecipientCell</name>
+        <id>51</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>DisposalsRecipientCell</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>WastesRecipientCellExtendedTooltip</name>
+          <id>69</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>RecipientCellWasteContextMenu</name>
+          <id>52</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <width>20</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+          <choiceParameterLinks>
+            <name>Filter.Owner</name>
+            <datapath xsi:type="form:DataPath">
+              <segments>RecipientOfWastes</segments>
+            </datapath>
+          </choiceParameterLinks>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Right column</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Правая колонка</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Cột phải</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Right column</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Правая колонка</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Cột phải</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>RightColumnExtendedTooltip</name>
+        <id>66</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Movement, picking, manufacture</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Перемещение, комплектация, производство</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Điều chuyển, đóng bộ sản phẩm, sản xuất</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Movement, picking, manufacture</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Перемещение, комплектация, производство</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Điều chuyển, đóng bộ sản phẩm, sản xuất</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>TransferAssemblingDisassemblingExtendedTooltip</name>
+      <id>61</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <representation>NormalSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <showTitle>true</showTitle>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>WriteOffFromfFromfToExpenses</name>
+    <id>11</id>
+    <items xsi:type="form:FormGroup">
+      <name>WriteOffFrom</name>
+      <id>39</id>
+      <items xsi:type="form:FormField">
+        <name>WriteOffToExpensesSource</name>
+        <id>47</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>WriteOffToExpensesSource</segments>
+        </dataPath>
+        <handlers>
+          <event>OnChange</event>
+          <name>WriteOffToExpensesSourceOnChange</name>
+        </handlers>
+        <extendedTooltip>
+          <name>WriteOffToExpensesSourceExtendedTooltip</name>
+          <id>72</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ExpenseWriteOffFromfFromfSourceContextMenu</name>
+          <id>48</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <width>30</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+          <choiceParameters>
+            <name>Filter.StructuralUnitType</name>
+            <value xsi:type="form:FormChoiceListDesTimeValue">
+              <value xsi:type="core:ReferenceValue">
+                <value>Enum.StructuralUnitsTypes.EnumValue.Warehouse</value>
+              </value>
+            </value>
+          </choiceParameters>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>WriteOffToExpensesSourceCell</name>
+        <id>43</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>WriteOffToExpensesSourceCell</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>WritingOffToExpensesCellExtendedTooltip</name>
+          <id>73</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>CellSourceOfWriteOffFromfFromfForExpensesContextMenu</name>
+          <id>44</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <width>20</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+          <choiceParameterLinks>
+            <name>Filter.Owner</name>
+            <datapath xsi:type="form:DataPath">
+              <segments>WriteOffToExpensesSource</segments>
+            </datapath>
+          </choiceParameterLinks>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Write off from</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Списание ИЗ</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Ghi giảm từ</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Write off from</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Списание ИЗ</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Ghi giảm từ</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>WritingOffFromExtendedTooltip</name>
+        <id>71</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>WritingOffIn</name>
+      <id>40</id>
+      <items xsi:type="form:FormField">
+        <name>WriteOffToExpensesRecipient</name>
+        <id>45</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>WriteOffToExpensesRecipient</segments>
+        </dataPath>
+        <handlers>
+          <event>OnChange</event>
+          <name>WriteOffToExpensesRecipientOnChange</name>
+        </handlers>
+        <extendedTooltip>
+          <name>WriteOffToExpensesRecipientExtendedTooltip</name>
+          <id>75</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ExpenseWriteOffFromfFromfRecipientContextMenu</name>
+          <id>46</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <width>30</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+          <choiceParameters>
+            <name>Filter.StructuralUnitType</name>
+            <value xsi:type="form:FormChoiceListDesTimeValue">
+              <value xsi:type="core:ReferenceValue">
+                <value>Enum.StructuralUnitsTypes.EnumValue.Department</value>
+              </value>
+            </value>
+          </choiceParameters>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>WriteOffToExpensesRecipientCell</name>
+        <id>41</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>WriteOffToExpensesRecipientCell</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>WriteOffToExpensesRecipientCellExtendedTooltip</name>
+          <id>76</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>CellPayeeWriteOffFromfFromfForExpensesContextMenu</name>
+          <id>42</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <width>20</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+          <choiceParameterLinks>
+            <name>Filter.Owner</name>
+            <datapath xsi:type="form:DataPath">
+              <segments>WriteOffToExpensesRecipient</segments>
+            </datapath>
+          </choiceParameterLinks>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Write off to</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Списание В</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Ghi giảm VÀO</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Write off to</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Списание В</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Ghi giảm VÀO</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>WritingOffToExtendedTooltip</name>
+        <id>74</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Write off</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Списание на расходы</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Ghi giảm vào chi phí</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Write off</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Списание на расходы</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Ghi giảm vào chi phí</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>WritingOffToExpensesExtendedTooltip</name>
+      <id>70</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <representation>NormalSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <showTitle>true</showTitle>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>TransferToOperation</name>
+    <id>6</id>
+    <items xsi:type="form:FormGroup">
+      <name>ExploitationFrom</name>
+      <id>22</id>
+      <items xsi:type="form:FormField">
+        <name>PassToOperationSource</name>
+        <id>23</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>PassToOperationSource</segments>
+        </dataPath>
+        <handlers>
+          <event>OnChange</event>
+          <name>PassToOperationSourceOnChange</name>
+        </handlers>
+        <extendedTooltip>
+          <name>PassToOperationSourceExtendedTooltip</name>
+          <id>79</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>PassToOperationSourceContextMenu</name>
+          <id>24</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <width>30</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+          <choiceParameters>
+            <name>Filter.StructuralUnitType</name>
+            <value xsi:type="form:FormChoiceListDesTimeValue">
+              <value xsi:type="core:ReferenceValue">
+                <value>Enum.StructuralUnitsTypes.EnumValue.Warehouse</value>
+              </value>
+            </value>
+          </choiceParameters>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>PassToOperationSourceCell</name>
+        <id>25</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>PassToOperationSourceCell</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>PassToOperationSourceCellExtendedTooltip</name>
+          <id>80</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>SourceCellTransferInOperationContextMenu</name>
+          <id>26</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <width>20</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+          <choiceParameterLinks>
+            <name>Filter.Owner</name>
+            <datapath xsi:type="form:DataPath">
+              <segments>PassToOperationSource</segments>
+            </datapath>
+          </choiceParameterLinks>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Operation from</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Эксплуатация ИЗ</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Sử dụng TỪ</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Operation from</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Эксплуатация ИЗ</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Sử dụng TỪ</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>OperationFromExtendedTooltip</name>
+        <id>78</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>OperationIn</name>
+      <id>27</id>
+      <items xsi:type="form:FormField">
+        <name>PassToOperationRecipient</name>
+        <id>18</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>PassToOperationRecipient</segments>
+        </dataPath>
+        <handlers>
+          <event>OnChange</event>
+          <name>PassToOperationRecipientOnChange</name>
+        </handlers>
+        <extendedTooltip>
+          <name>PassToOperationRecipientExtendedTooltip</name>
+          <id>82</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>PassToOperationRecipientContextMenu</name>
+          <id>19</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <width>30</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+          <choiceParameters>
+            <name>Filter.StructuralUnitType</name>
+            <value xsi:type="form:FormChoiceListDesTimeValue">
+              <value xsi:type="core:ReferenceValue">
+                <value>Enum.StructuralUnitsTypes.EnumValue.Department</value>
+              </value>
+            </value>
+          </choiceParameters>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>PassToOperationRecipientCell</name>
+        <id>20</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>PassToOperationRecipientCell</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>PassToOperationRecipientCellExtendedTooltip</name>
+          <id>83</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>CellPayeeTransferInOperationContextMenu</name>
+          <id>21</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <width>20</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+          <choiceParameterLinks>
+            <name>Filter.Owner</name>
+            <datapath xsi:type="form:DataPath">
+              <segments>PassToOperationRecipient</segments>
+            </datapath>
+          </choiceParameterLinks>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Operation in</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Эксплуатация В</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Sử dụng Vào</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Operation in</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Эксплуатация В</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Sử dụng Vào</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>OperationInExtendedTooltip</name>
+        <id>81</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Commissioning</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Передача в эксплуатацию</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Đưa vào sử dụng</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Commissioning</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Передача в эксплуатацию</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Đưa vào sử dụng</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>TransferToOperationExtendedTooltip</name>
+      <id>77</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <representation>NormalSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <showTitle>true</showTitle>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>ReturnFromExploitation</name>
+    <id>28</id>
+    <items xsi:type="form:FormGroup">
+      <name>OperationReturnFrom</name>
+      <id>29</id>
+      <items xsi:type="form:FormField">
+        <name>ReturnFromOperationSource</name>
+        <id>37</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>ReturnFromOperationSource</segments>
+        </dataPath>
+        <handlers>
+          <event>OnChange</event>
+          <name>ReturnFromOperationSourceOnChange</name>
+        </handlers>
+        <extendedTooltip>
+          <name>ReturnFromOperationSourceExtendedTooltip</name>
+          <id>86</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ReturnFromOperationSourceContextMenu</name>
+          <id>38</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <width>30</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+          <choiceParameters>
+            <name>Filter.StructuralUnitType</name>
+            <value xsi:type="form:FormChoiceListDesTimeValue">
+              <value xsi:type="core:ReferenceValue">
+                <value>Enum.StructuralUnitsTypes.EnumValue.Department</value>
+              </value>
+            </value>
+          </choiceParameters>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>ReturnFromOperationSourceCell</name>
+        <id>31</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>ReturnFromOperationSourceCell</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>ReturnFromOperationSourceCellExtendedTooltip</name>
+          <id>87</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>CellSourceOfReturnFromOperationContextMenu</name>
+          <id>32</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <width>20</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+          <choiceParameterLinks>
+            <name>Filter.Owner</name>
+            <datapath xsi:type="form:DataPath">
+              <segments>ReturnFromOperationSource</segments>
+            </datapath>
+          </choiceParameterLinks>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Operation return from</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Эксплуатация возврат из</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Sử dụng trả lại từ</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Operation return from</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Эксплуатация возврат из</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Sử dụng trả lại từ</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>OperationReturnFromExtendedTooltip</name>
+        <id>85</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>OperationReturnIn</name>
+      <id>30</id>
+      <items xsi:type="form:FormField">
+        <name>ReturnFromOperationRecipient</name>
+        <id>35</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>ReturnFromOperationRecipient</segments>
+        </dataPath>
+        <handlers>
+          <event>OnChange</event>
+          <name>ReturnFromOperationRecipientOnChange</name>
+        </handlers>
+        <extendedTooltip>
+          <name>ReturnFromOperationRecipientExtendedTooltip</name>
+          <id>89</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ReturnFromOperationRecipientContextMenu</name>
+          <id>36</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <width>30</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+          <choiceParameters>
+            <name>Filter.StructuralUnitType</name>
+            <value xsi:type="form:FormChoiceListDesTimeValue">
+              <value xsi:type="core:ReferenceValue">
+                <value>Enum.StructuralUnitsTypes.EnumValue.Warehouse</value>
+              </value>
+            </value>
+          </choiceParameters>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>ReturnFromOperationRecipientCell</name>
+        <id>33</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>ReturnFromOperationRecipientCell</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>TransferFromOperationRecipientCellExtendedTooltip</name>
+          <id>90</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>CellOfReturnFromOperationRecipientContextMenu</name>
+          <id>34</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <width>20</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+          <choiceParameterLinks>
+            <name>Filter.Owner</name>
+            <datapath xsi:type="form:DataPath">
+              <segments>ReturnFromOperationRecipient</segments>
+            </datapath>
+          </choiceParameterLinks>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Operation return to</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Эксплуатация возврат В</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Sử dụng trả lại Vào</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Operation return to</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Эксплуатация возврат В</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Sử dụng trả lại Vào</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>OperationReturnInExtendedTooltip</name>
+        <id>88</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Return from operation</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Возврат из эксплуатации</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Thu lại từ sử dụng</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Return from operation</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Возврат из эксплуатации</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Thu lại từ sử dụng</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>ReturnFromOperationExtendedTooltip</name>
+      <id>84</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <representation>NormalSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <showTitle>true</showTitle>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <commandBarLocation>Bottom</commandBarLocation>
+  <autoCommandBar>
+    <name>FormCommandBar</name>
+    <id>-1</id>
+    <items xsi:type="form:Button">
+      <name>OK</name>
+      <id>53</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <defaultItem>true</defaultItem>
+      <skipOnInput>false</skipOnInput>
+      <extendedTooltip>
+        <name>OKExtendedTooltip</name>
+        <id>57</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.CommandOK</commandName>
+      <representation>Auto</representation>
+      <defaultButton>true</defaultButton>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <items xsi:type="form:Button">
+      <name>Close</name>
+      <id>54</id>
+      <title>
+        <key>en</key>
+        <value>Cancel</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Отменить</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Hủy bỏ</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <skipOnInput>false</skipOnInput>
+      <extendedTooltip>
+        <name>CloseExtendedTooltip</name>
+        <id>58</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.StandardCommand.Close</commandName>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <items xsi:type="form:Button">
+      <name>ChangeForm</name>
+      <id>56</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <skipOnInput>false</skipOnInput>
+      <extendedTooltip>
+        <name>ChangeFormExtendedTooltip</name>
+        <id>59</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.StandardCommand.CustomizeForm</commandName>
+      <representation>Picture</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+      <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
+    </items>
+    <items xsi:type="form:Button">
+      <name>Help</name>
+      <id>55</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <skipOnInput>false</skipOnInput>
+      <extendedTooltip>
+        <name>HelpExtendedTooltip</name>
+        <id>60</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.StandardCommand.Help</commandName>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <horizontalAlign>Right</horizontalAlign>
+  </autoCommandBar>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>OnCreateAtServer</name>
+  </handlers>
+  <windowOpeningMode>LockOwnerWindow</windowOpeningMode>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <allowFormCustomize>true</allowFormCustomize>
+  <enabled>true</enabled>
+  <verticalScroll>UseIfNecessary</verticalScroll>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>TransferSource</name>
+    <title>
+      <key>en</key>
+      <value>Write off from</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Списание ИЗ</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Ghi giảm từ</value>
+    </title>
+    <id>1</id>
+    <valueType>
+      <types>CatalogRef.StructuralUnits</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>TransferSourceCell</name>
+    <title>
+      <key>en</key>
+      <value>Storage bin</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Ячейка</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Ô hàng</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>CatalogRef.Cells</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <functionalOptions>FunctionalOption.AccountingByCells</functionalOptions>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>PassToOperationRecipient</name>
+    <title>
+      <key>en</key>
+      <value>Recipient</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Получатель</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Nơi nhận</value>
+    </title>
+    <id>3</id>
+    <valueType>
+      <types>CatalogRef.StructuralUnits</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>PassToOperationRecipientCell</name>
+    <title>
+      <key>en</key>
+      <value>Storage bin</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Ячейка</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Ô hàng</value>
+    </title>
+    <id>4</id>
+    <valueType>
+      <types>CatalogRef.Cells</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <functionalOptions>FunctionalOption.AccountingByCells</functionalOptions>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>TransferRecipient</name>
+    <title>
+      <key>en</key>
+      <value>Recipient</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Получатель</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Nơi nhận</value>
+    </title>
+    <id>5</id>
+    <valueType>
+      <types>CatalogRef.StructuralUnits</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>TransferRecipientCell</name>
+    <title>
+      <key>en</key>
+      <value>Storage bin</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Ячейка</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Ô hàng</value>
+    </title>
+    <id>6</id>
+    <valueType>
+      <types>CatalogRef.Cells</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <functionalOptions>FunctionalOption.AccountingByCells</functionalOptions>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>PassToOperationSource</name>
+    <title>
+      <key>en</key>
+      <value>Write off from</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Списание ИЗ</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Ghi giảm từ</value>
+    </title>
+    <id>7</id>
+    <valueType>
+      <types>CatalogRef.StructuralUnits</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>PassToOperationSourceCell</name>
+    <title>
+      <key>en</key>
+      <value>Storage bin</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Ячейка</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Ô hàng</value>
+    </title>
+    <id>8</id>
+    <valueType>
+      <types>CatalogRef.Cells</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <functionalOptions>FunctionalOption.AccountingByCells</functionalOptions>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>ReturnFromOperationSource</name>
+    <title>
+      <key>en</key>
+      <value>Write off from</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Списание ИЗ</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Ghi giảm từ</value>
+    </title>
+    <id>9</id>
+    <valueType>
+      <types>CatalogRef.StructuralUnits</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>ReturnFromOperationRecipient</name>
+    <title>
+      <key>en</key>
+      <value>Recipient</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Получатель</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Nơi nhận</value>
+    </title>
+    <id>10</id>
+    <valueType>
+      <types>CatalogRef.StructuralUnits</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>ReturnFromOperationSourceCell</name>
+    <title>
+      <key>en</key>
+      <value>Storage bin</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Ячейка</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Ô hàng</value>
+    </title>
+    <id>11</id>
+    <valueType>
+      <types>CatalogRef.Cells</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <functionalOptions>FunctionalOption.AccountingByCells</functionalOptions>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>ReturnFromOperationRecipientCell</name>
+    <title>
+      <key>en</key>
+      <value>Storage bin</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Ячейка</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Ô hàng</value>
+    </title>
+    <id>12</id>
+    <valueType>
+      <types>CatalogRef.Cells</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <functionalOptions>FunctionalOption.AccountingByCells</functionalOptions>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>WriteOffToExpensesSource</name>
+    <title>
+      <key>en</key>
+      <value>Write off from</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Списание ИЗ</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Ghi giảm từ</value>
+    </title>
+    <id>13</id>
+    <valueType>
+      <types>CatalogRef.StructuralUnits</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>WriteOffToExpensesRecipient</name>
+    <title>
+      <key>en</key>
+      <value>Recipient</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Получатель</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Nơi nhận</value>
+    </title>
+    <id>14</id>
+    <valueType>
+      <types>CatalogRef.StructuralUnits</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>WriteOffToExpensesRecipientCell</name>
+    <title>
+      <key>en</key>
+      <value>Storage bin</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Ячейка</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Ô hàng</value>
+    </title>
+    <id>15</id>
+    <valueType>
+      <types>CatalogRef.Cells</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <functionalOptions>FunctionalOption.AccountingByCells</functionalOptions>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>WriteOffToExpensesSourceCell</name>
+    <title>
+      <key>en</key>
+      <value>Storage bin</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Ячейка</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Ô hàng</value>
+    </title>
+    <id>16</id>
+    <valueType>
+      <types>CatalogRef.Cells</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <functionalOptions>FunctionalOption.AccountingByCells</functionalOptions>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>RecipientOfWastes</name>
+    <title>
+      <key>en</key>
+      <value>Waste recipient</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Получатель отходов</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Nơi nhận phế liệu</value>
+    </title>
+    <id>17</id>
+    <valueType>
+      <types>CatalogRef.StructuralUnits</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>DisposalsRecipientCell</name>
+    <title>
+      <key>en</key>
+      <value>Storage bin</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Ячейка</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Ô hàng</value>
+    </title>
+    <id>18</id>
+    <valueType>
+      <types>CatalogRef.Cells</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <functionalOptions>FunctionalOption.AccountingByCells</functionalOptions>
+    <savedData>true</savedData>
+  </attributes>
+  <formCommands>
+    <name>CommandOK</name>
+    <title>
+      <key>en</key>
+      <value>OK</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Ок</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Đồng ý</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>en</key>
+      <value>Command OK</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Команда ОК</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Lệnh Đồng ý</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>CommandOK</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+</form:Form>

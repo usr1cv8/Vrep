@@ -1,0 +1,1313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Stage</dataPath>
+			<field>Stage</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Order</dataPath>
+			<field>Order</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ProductsAndServices</dataPath>
+			<field>ProductsAndServices</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Specification</dataPath>
+			<field>Specification</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Characteristic</dataPath>
+			<field>Characteristic</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Batch</dataPath>
+			<field>Batch</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Company</dataPath>
+			<field>Company</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>StructuralUnit</dataPath>
+			<field>StructuralUnit</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Structural unit</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структурная единица</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Bộ phận</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ProductionOrder</dataPath>
+			<field>ProductionOrder</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Production order</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Đơn hàng sản xuất</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ord</dataPath>
+			<field>Ord</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Ord</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Đơn</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>CustomerOrder</dataPath>
+			<field>CustomerOrder</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Customer order</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Đơn hàng của khách</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Counterparty</dataPath>
+			<field>Counterparty</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Counterparty</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Đối tác</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ProductionKind</dataPath>
+			<field>ProductionKind</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Production kind</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Dạng mặt hàng</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Planned</dataPath>
+			<field>Planned</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Planned</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Kế hoạch</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>StagesQuantity</dataPath>
+			<field>StagesQuantity</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Stages quantity</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество этапов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Số lượng công đoạn</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>InventoryAssembly</dataPath>
+			<field>InventoryAssembly</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Inventory assembly</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Đóng bộ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>InventoryAssemblyQuantity</dataPath>
+			<field>InventoryAssemblyQuantity</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Inventory assembly quantity</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Đóng bộ số lượng</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>JobSheet</dataPath>
+			<field>JobSheet</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Job sheet</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Công khoán</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>JobSheetQuantity</dataPath>
+			<field>JobSheetQuantity</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Job sheet quantity</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Số lượng công khoán</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ProductionQuantity</dataPath>
+			<field>ProductionQuantity</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Production quantity</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Số lượng thành phẩm</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Performed</dataPath>
+			<field>Performed</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Performed</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Thực hiện</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>PerformerByDefault</dataPath>
+			<field>PerformerByDefault</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Performer by default</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Thực hiện mặc định</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>PerformerHide</dataPath>
+			<field>PerformerHide</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Performer hide</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Ẩn thực hiện</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ChoosePerformer</dataPath>
+			<field>ChoosePerformer</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Choose performer</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Chọn người thực hiện</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>OnThisDay</dataPath>
+			<field>OnThisDay</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>On this day</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Cho hôm nay</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>SELECT
+	ЭтапыПроизводстваОбороты.Order AS Order,
+	ЭтапыПроизводстваОбороты.ProductsAndServices AS ProductsAndServices,
+	ЭтапыПроизводстваОбороты.Characteristic AS Characteristic,
+	ЭтапыПроизводстваОбороты.Specification AS Specification,
+	ЭтапыПроизводстваОбороты.Batch AS Batch
+INTO ПродукцияБезПроверкиЭтапов
+FROM
+	AccumulationRegister.ProductionStages.Turnovers(
+			,
+			,
+			Period,
+			NOT Order.OrderState IN (VALUE(Catalog.CustomerOrderStates.Closed), VALUE(Catalog.ProductionOrderStates.Closed))
+				AND (NOT &amp;OnlyPlanned
+					OR &amp;PlaningDate = DATETIME(1, 1, 1)
+					OR Order REFS Document.ProductionOrder
+						AND &amp;PlaningDate &gt;= BEGINOFPERIOD(Order.Finish, DAY)
+					OR Order REFS Document.CustomerOrder
+						AND &amp;PlaningDate &gt;= BEGINOFPERIOD(Order.ShipmentDate, DAY))) AS ЭтапыПроизводстваОбороты,
+	Constant.SerialNumbersBalanceControl AS КонтрольОстатковСерийныхНомеров
+WHERE
+	(NOT КонтрольОстатковСерийныхНомеров.Value
+			OR NOT ЭтапыПроизводстваОбороты.ProductsAndServices.UseSerialNumbers)
+	AND (ЭтапыПроизводстваОбороты.ProductsAndServices.CountryOfOrigin = VALUE(Catalog.WorldCountries.Russia)
+			OR ЭтапыПроизводстваОбороты.ProductsAndServices.CountryOfOrigin = VALUE(Catalog.WorldCountries.ПустаяСсылка))
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	ЭтапыПроизводстваОбороты.Order AS Order,
+	ЭтапыПроизводстваОбороты.ProductsAndServices AS ProductsAndServices,
+	ЭтапыПроизводстваОбороты.Characteristic AS Characteristic,
+	ЭтапыПроизводстваОбороты.Specification AS Specification,
+	ЭтапыПроизводстваОбороты.Batch AS Batch
+INTO ПродукцияПроизводствоЗавершено
+FROM
+	AccumulationRegister.ProductionStages.Turnovers(
+			,
+			,
+			Period,
+			Stage = VALUE(Catalog.ProductionStages.ProductionComplete)
+				AND (Order, ProductsAndServices, Characteristic, Specification, Batch) IN
+					(SELECT
+						ПродукцияБезПроверкиЭтапов.Order,
+						ПродукцияБезПроверкиЭтапов.ProductsAndServices,
+						ПродукцияБезПроверкиЭтапов.Characteristic,
+						ПродукцияБезПроверкиЭтапов.Specification,
+						ПродукцияБезПроверкиЭтапов.Batch
+					FROM
+						ПродукцияБезПроверкиЭтапов)) AS ЭтапыПроизводстваОбороты
+WHERE
+	ЭтапыПроизводстваОбороты.QuantityFactTurnover &gt; 0
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	ПродукцияБезПроверкиЭтапов.Order AS Order,
+	ПродукцияБезПроверкиЭтапов.ProductsAndServices AS ProductsAndServices,
+	ПродукцияБезПроверкиЭтапов.Characteristic AS Characteristic,
+	ПродукцияБезПроверкиЭтапов.Specification AS Specification,
+	ПродукцияБезПроверкиЭтапов.Batch AS Batch
+INTO Products
+FROM
+	ПродукцияБезПроверкиЭтапов AS ПродукцияБезПроверкиЭтапов
+WHERE
+	NOT (ПродукцияБезПроверкиЭтапов.Order, ПродукцияБезПроверкиЭтапов.ProductsAndServices, ПродукцияБезПроверкиЭтапов.Characteristic, ПродукцияБезПроверкиЭтапов.Specification, ПродукцияБезПроверкиЭтапов.Batch) IN
+				(SELECT
+					ПродукцияПроизводствоЗавершено.Order,
+					ПродукцияПроизводствоЗавершено.ProductsAndServices,
+					ПродукцияПроизводствоЗавершено.Characteristic,
+					ПродукцияПроизводствоЗавершено.Specification,
+					ПродукцияПроизводствоЗавершено.Batch
+				FROM
+					ПродукцияПроизводствоЗавершено)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	ProductionStages.Order AS Order,
+	ProductionStages.ProductsAndServices AS ProductsAndServices,
+	ProductionStages.Characteristic AS Characteristic,
+	ProductionStages.Specification AS Specification,
+	ProductionStages.Batch AS Batch,
+	MAX(ProductionStages.StructuralUnit) AS StructuralUnit,
+	MAX(ProductionStages.QuantityPlan) AS ProductionQuantity
+INTO СтруктурныеЕдиницыЗавершения
+FROM
+	AccumulationRegister.ProductionStages AS ProductionStages
+WHERE
+	(ProductionStages.Order, ProductionStages.ProductsAndServices, ProductionStages.Characteristic, ProductionStages.Specification, ProductionStages.Batch) IN
+			(SELECT
+				Products.Order,
+				Products.ProductsAndServices,
+				Products.Characteristic,
+				Products.Specification,
+				Products.Batch
+			FROM
+				Products)
+
+GROUP BY
+	ProductionStages.Order,
+	ProductionStages.ProductsAndServices,
+	ProductionStages.Characteristic,
+	ProductionStages.Specification,
+	ProductionStages.Batch
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	ЗаказНаПроизводствоПродукция.CustomerOrder AS CustomerOrder,
+	ЗаказНаПроизводствоПродукция.ProductsAndServices AS ProductsAndServices,
+	ЗаказНаПроизводствоПродукция.Characteristic AS Characteristic,
+	ЗаказНаПроизводствоПродукция.Specification AS Specification,
+	ЗаказНаПроизводствоПродукция.Batch AS Batch,
+	MAX(ЗаказНаПроизводствоПродукция.Ref) AS ProductionOrder
+INTO ЗаказыНаПроизводствоПоЗаказамПокупателей
+FROM
+	Document.ProductionOrder.Products AS ЗаказНаПроизводствоПродукция
+WHERE
+	ЗаказНаПроизводствоПродукция.Ref.Posted
+	AND (ЗаказНаПроизводствоПродукция.CustomerOrder, ЗаказНаПроизводствоПродукция.ProductsAndServices, ЗаказНаПроизводствоПродукция.Characteristic, ЗаказНаПроизводствоПродукция.Specification, ЗаказНаПроизводствоПродукция.Batch) IN
+			(SELECT
+				Products.Order,
+				Products.ProductsAndServices,
+				Products.Characteristic,
+				Products.Specification,
+				Products.Batch
+			FROM
+				Products
+			WHERE
+				Products.Order REFS Document.CustomerOrder)
+
+GROUP BY
+	ЗаказНаПроизводствоПродукция.Characteristic,
+	ЗаказНаПроизводствоПродукция.ProductsAndServices,
+	ЗаказНаПроизводствоПродукция.CustomerOrder,
+	ЗаказНаПроизводствоПродукция.Specification,
+	ЗаказНаПроизводствоПродукция.Batch
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	ЭтапыСОперациями.Specification AS Specification,
+	CASE
+		WHEN ЭтапыСОперациями.Stage = VALUE(Catalog.ProductionStages.ПустаяСсылка)
+			THEN VALUE(Catalog.ProductionStages.ProductionComplete)
+		ELSE ЭтапыСОперациями.Stage
+	END AS Stage,
+	ЭтапыСОперациями.Order AS Order,
+	ЭтапыСОперациями.ChoosePerformer AS ChoosePerformer,
+	MAX(ЭтапыСОперациями.Performer) AS Performer
+INTO ЭтапыСОперациями
+FROM
+	(SELECT
+		СпецификацииОперации.Ref AS Specification,
+		СпецификацииОперации.Stage AS Stage,
+		VALUE(Документ.ProductionOrder.ПустаяСсылка) AS Order,
+		TRUE AS ChoosePerformer,
+		VALUE(Catalog.Employees.ПустаяСсылка) AS Performer
+	FROM
+		Catalog.Specifications.Operations AS СпецификацииОперации
+	WHERE
+		СпецификацииОперации.Ref IN
+				(SELECT
+					Products.Specification
+				FROM
+					Products)
+	
+	UNION ALL
+	
+	SELECT
+		ЗаказНаПроизводствоПродукция.Specification,
+		ЗаказНаПроизводствоОперации.Stage,
+		ЗаказНаПроизводствоОперации.Ref,
+		FALSE,
+		CASE
+			WHEN ЗаказНаПроизводствоОперации.Ref.PerformerPosition = VALUE(Enum.AttributePositionOnForm.InHeader)
+				THEN ЗаказНаПроизводствоОперации.Ref.Performer
+			ELSE ЗаказНаПроизводствоОперации.Performer
+		END
+	FROM
+		Document.ProductionOrder.Operations AS ЗаказНаПроизводствоОперации
+			LEFT JOIN Document.ProductionOrder.Products AS ЗаказНаПроизводствоПродукция
+			ON ЗаказНаПроизводствоОперации.Ref = ЗаказНаПроизводствоПродукция.Ref
+				AND ЗаказНаПроизводствоОперации.ConnectionKeyProduct = ЗаказНаПроизводствоПродукция.ConnectionKey
+	WHERE
+		(ЗаказНаПроизводствоОперации.Ref, ЗаказНаПроизводствоПродукция.Specification) IN
+				(SELECT
+					ISNULL(ЗаказыНаПроизводствоПоЗаказамПокупателей.ProductionOrder, Products.Order) AS Заказ,
+					Products.Specification
+				FROM
+					Products AS Products
+						LEFT JOIN ЗаказыНаПроизводствоПоЗаказамПокупателей
+						ON
+							Products.Order REFS Document.CustomerOrder
+								AND Products.Order = ЗаказыНаПроизводствоПоЗаказамПокупателей.CustomerOrder
+								AND Products.ProductsAndServices = ЗаказыНаПроизводствоПоЗаказамПокупателей.ProductsAndServices
+								AND Products.Characteristic = ЗаказыНаПроизводствоПоЗаказамПокупателей.Characteristic
+								AND Products.Specification = ЗаказыНаПроизводствоПоЗаказамПокупателей.Specification
+								AND Products.Batch = ЗаказыНаПроизводствоПоЗаказамПокупателей.Batch
+				WHERE
+					ISNULL(ЗаказыНаПроизводствоПоЗаказамПокупателей.ProductionOrder, Products.Order) REFS Document.ProductionOrder)) AS ЭтапыСОперациями
+
+GROUP BY
+	ЭтапыСОперациями.Specification,
+	ЭтапыСОперациями.Stage,
+	ЭтапыСОперациями.Order,
+	ЭтапыСОперациями.ChoosePerformer
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	ЭтапыПроизводстваОбороты.Order AS Order,
+	ЭтапыПроизводстваОбороты.ProductsAndServices AS ProductsAndServices,
+	ЭтапыПроизводстваОбороты.Characteristic AS Characteristic,
+	ЭтапыПроизводстваОбороты.Specification AS Specification,
+	ЭтапыПроизводстваОбороты.Batch AS Batch,
+	ЭтапыПроизводстваОбороты.Stage AS Stage,
+	CASE
+		WHEN COUNT(DISTINCT CASE
+					WHEN ЭтапыПроизводстваОбороты.Recorder REFS Document.InventoryAssembly
+						THEN ЭтапыПроизводстваОбороты.Recorder
+					ELSE NULL
+				END) = 1
+			THEN MAX(CASE
+						WHEN ЭтапыПроизводстваОбороты.Recorder REFS Document.InventoryAssembly
+							THEN ЭтапыПроизводстваОбороты.Recorder
+						ELSE NULL
+					END)
+		ELSE VALUE(Документ.InventoryAssembly.ПустаяСсылка)
+	END AS InventoryAssembly,
+	COUNT(DISTINCT CASE
+			WHEN ЭтапыПроизводстваОбороты.Recorder REFS Document.InventoryAssembly
+				THEN ЭтапыПроизводстваОбороты.Recorder
+			ELSE NULL
+		END) AS InventoryAssemblyQuantity,
+	CASE
+		WHEN COUNT(DISTINCT CASE
+					WHEN ЭтапыПроизводстваОбороты.Recorder REFS Document.JobSheet
+						THEN ЭтапыПроизводстваОбороты.Recorder
+					ELSE NULL
+				END) = 1
+			THEN MAX(CASE
+						WHEN ЭтапыПроизводстваОбороты.Recorder REFS Document.JobSheet
+							THEN ЭтапыПроизводстваОбороты.Recorder
+						ELSE NULL
+					END)
+		ELSE VALUE(Документ.JobSheet.ПустаяСсылка)
+	END AS JobSheet,
+	COUNT(DISTINCT CASE
+			WHEN ЭтапыПроизводстваОбороты.Recorder REFS Document.JobSheet
+				THEN ЭтапыПроизводстваОбороты.Recorder
+			ELSE NULL
+		END) AS JobSheetQuantity,
+	CASE
+		WHEN COUNT(DISTINCT CASE
+						WHEN ЭтапыПроизводстваОбороты.Recorder REFS Document.InventoryAssembly
+							THEN ЭтапыПроизводстваОбороты.Recorder
+						ELSE NULL
+					END) &gt; 1
+				OR COUNT(DISTINCT CASE
+						WHEN ЭтапыПроизводстваОбороты.Recorder REFS Document.JobSheet
+							THEN ЭтапыПроизводстваОбороты.Recorder
+						ELSE NULL
+					END) &gt; 1
+			THEN FALSE
+		WHEN MAX(ЭтапыПроизводстваОбороты.SecondPeriod) BETWEEN &amp;BeginDay AND &amp;EndDay
+			THEN TRUE
+		ELSE FALSE
+	END AS OnThisDay
+INTO ВыполненыеЭтапы
+FROM
+	AccumulationRegister.ProductionStages.Turnovers(
+			,
+			,
+			Auto,
+			(Order, ProductsAndServices, Characteristic, Specification, Batch) IN
+				(SELECT
+					Products.Order,
+					Products.ProductsAndServices,
+					Products.Characteristic,
+					Products.Specification,
+					Products.Batch
+				FROM
+					Products)) AS ЭтапыПроизводстваОбороты
+
+GROUP BY
+	ЭтапыПроизводстваОбороты.Order,
+	ЭтапыПроизводстваОбороты.ProductsAndServices,
+	ЭтапыПроизводстваОбороты.Characteristic,
+	ЭтапыПроизводстваОбороты.Stage,
+	ЭтапыПроизводстваОбороты.Batch,
+	ЭтапыПроизводстваОбороты.Specification
+
+HAVING
+	SUM(ЭтапыПроизводстваОбороты.QuantityFactTurnover) &gt; 0
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	ЭтапыПроизводстваОбороты.Company AS Company,
+	CASE
+		WHEN ЭтапыПроизводстваОбороты.Order REFS Document.CustomerOrder
+			THEN ЭтапыПроизводстваОбороты.Order
+		ELSE VALUE(Документ.CustomerOrder.ПустаяСсылка)
+	END AS CustomerOrder,
+	CASE
+		WHEN ЭтапыПроизводстваОбороты.Order REFS Document.ProductionOrder
+			THEN ЭтапыПроизводстваОбороты.Order
+		ELSE ISNULL(ЗаказыНаПроизводствоПоЗаказамПокупателей.ProductionOrder, VALUE(Документ.ProductionOrder.ПустаяСсылка))
+	END AS ProductionOrder,
+	CASE
+		WHEN ЭтапыПроизводстваОбороты.Order REFS Document.CustomerOrder
+			THEN ЭтапыПроизводстваОбороты.Order.Counterparty
+		ELSE VALUE(Catalog.Counterparties.ПустаяСсылка)
+	END AS Counterparty,
+	ЭтапыПроизводстваОбороты.ProductsAndServices AS ProductsAndServices,
+	ЭтапыПроизводстваОбороты.Characteristic AS Characteristic,
+	ЭтапыПроизводстваОбороты.Specification AS Specification,
+	ЭтапыПроизводстваОбороты.Specification.ProductionKind AS ProductionKind,
+	ЭтапыПроизводстваОбороты.Batch AS Batch,
+	ЭтапыПроизводстваОбороты.Stage AS Stage,
+	CASE
+		WHEN SUM(ЭтапыПроизводстваОбороты.QuantityPlanTurnover) &gt; 0
+			THEN TRUE
+		ELSE FALSE
+	END AS Planned,
+	CASE
+		WHEN SUM(ЭтапыПроизводстваОбороты.QuantityFactTurnover) &gt; 0
+			THEN TRUE
+		ELSE FALSE
+	END AS Completed,
+	ISNULL(ProductionKindsStages.LineNumber, 0) AS OrderNumber,
+	ISNULL(ВыполненыеЭтапы.OnThisDay, FALSE) AS OnThisDay,
+	ЭтапыПроизводстваОбороты.Stage AS StageQuantity,
+	ISNULL(СтруктурныеЕдиницыЗавершения.ProductionQuantity, 0) AS ProductionQuantity,
+	ISNULL(ВыполненыеЭтапы.InventoryAssembly, VALUE(Документ.InventoryAssembly.ПустаяСсылка)) AS InventoryAssembly,
+	ISNULL(ВыполненыеЭтапы.InventoryAssemblyQuantity, 0) AS InventoryAssemblyQuantity,
+	ISNULL(ВыполненыеЭтапы.JobSheet, VALUE(Документ.JobSheet.ПустаяСсылка)) AS JobSheet,
+	ISNULL(ВыполненыеЭтапы.JobSheetQuantity, 0) AS JobSheetQuantity,
+	ISNULL(СтруктурныеЕдиницыЗавершения.StructuralUnit, VALUE(Catalog.StructuralUnits.ПустаяСсылка)) AS StructuralUnit
+INTO Result
+FROM
+	AccumulationRegister.ProductionStages.Turnovers(
+			,
+			,
+			Period,
+			(Order, ProductsAndServices, Characteristic, Specification, Batch) IN
+				(SELECT
+					Products.Order,
+					Products.ProductsAndServices,
+					Products.Characteristic,
+					Products.Specification,
+					Products.Batch
+				FROM
+					Products)) AS ЭтапыПроизводстваОбороты
+		LEFT JOIN Catalog.Specifications AS Specifications
+			LEFT JOIN Catalog.ProductionKinds.Stages AS ProductionKindsStages
+			ON Specifications.ProductionKind = ProductionKindsStages.Ref
+		ON ЭтапыПроизводстваОбороты.Specification = Specifications.Ref
+			AND (ЭтапыПроизводстваОбороты.Stage = ProductionKindsStages.Stage)
+		LEFT JOIN СтруктурныеЕдиницыЗавершения AS СтруктурныеЕдиницыЗавершения
+		ON ЭтапыПроизводстваОбороты.Order = СтруктурныеЕдиницыЗавершения.Order
+			AND ЭтапыПроизводстваОбороты.ProductsAndServices = СтруктурныеЕдиницыЗавершения.ProductsAndServices
+			AND ЭтапыПроизводстваОбороты.Characteristic = СтруктурныеЕдиницыЗавершения.Characteristic
+			AND ЭтапыПроизводстваОбороты.Specification = СтруктурныеЕдиницыЗавершения.Specification
+			AND ЭтапыПроизводстваОбороты.Batch = СтруктурныеЕдиницыЗавершения.Batch
+		LEFT JOIN ВыполненыеЭтапы AS ВыполненыеЭтапы
+		ON ЭтапыПроизводстваОбороты.Order = ВыполненыеЭтапы.Order
+			AND ЭтапыПроизводстваОбороты.ProductsAndServices = ВыполненыеЭтапы.ProductsAndServices
+			AND ЭтапыПроизводстваОбороты.Characteristic = ВыполненыеЭтапы.Characteristic
+			AND ЭтапыПроизводстваОбороты.Specification = ВыполненыеЭтапы.Specification
+			AND ЭтапыПроизводстваОбороты.Batch = ВыполненыеЭтапы.Batch
+			AND ЭтапыПроизводстваОбороты.Stage = ВыполненыеЭтапы.Stage
+		LEFT JOIN ЗаказыНаПроизводствоПоЗаказамПокупателей AS ЗаказыНаПроизводствоПоЗаказамПокупателей
+		ON (ЭтапыПроизводстваОбороты.Order REFS Document.CustomerOrder)
+			AND ЭтапыПроизводстваОбороты.Order = ЗаказыНаПроизводствоПоЗаказамПокупателей.CustomerOrder
+			AND ЭтапыПроизводстваОбороты.ProductsAndServices = ЗаказыНаПроизводствоПоЗаказамПокупателей.ProductsAndServices
+			AND ЭтапыПроизводстваОбороты.Characteristic = ЗаказыНаПроизводствоПоЗаказамПокупателей.Characteristic
+			AND ЭтапыПроизводстваОбороты.Specification = ЗаказыНаПроизводствоПоЗаказамПокупателей.Specification
+			AND ЭтапыПроизводстваОбороты.Batch = ЗаказыНаПроизводствоПоЗаказамПокупателей.Batch
+
+GROUP BY
+	CASE
+		WHEN ЭтапыПроизводстваОбороты.Order REFS Document.CustomerOrder
+			THEN ЭтапыПроизводстваОбороты.Order
+		ELSE VALUE(Документ.CustomerOrder.ПустаяСсылка)
+	END,
+	CASE
+		WHEN ЭтапыПроизводстваОбороты.Order REFS Document.CustomerOrder
+			THEN ЭтапыПроизводстваОбороты.Order.Counterparty
+		ELSE VALUE(Catalog.Counterparties.ПустаяСсылка)
+	END,
+	ЭтапыПроизводстваОбороты.ProductsAndServices,
+	ЭтапыПроизводстваОбороты.Characteristic,
+	ЭтапыПроизводстваОбороты.Stage,
+	ЭтапыПроизводстваОбороты.Batch,
+	ЭтапыПроизводстваОбороты.Specification,
+	ЭтапыПроизводстваОбороты.Specification.ProductionKind,
+	ISNULL(ProductionKindsStages.LineNumber, 0),
+	CASE
+		WHEN ЭтапыПроизводстваОбороты.Order REFS Document.ProductionOrder
+			THEN ЭтапыПроизводстваОбороты.Order
+		ELSE ISNULL(ЗаказыНаПроизводствоПоЗаказамПокупателей.ProductionOrder, VALUE(Документ.ProductionOrder.ПустаяСсылка))
+	END,
+	ЭтапыПроизводстваОбороты.Company,
+	ISNULL(ВыполненыеЭтапы.OnThisDay, FALSE),
+	ISNULL(ВыполненыеЭтапы.InventoryAssembly, VALUE(Документ.InventoryAssembly.ПустаяСсылка)),
+	ISNULL(ВыполненыеЭтапы.InventoryAssemblyQuantity, 0),
+	ISNULL(ВыполненыеЭтапы.JobSheet, VALUE(Документ.JobSheet.ПустаяСсылка)),
+	ISNULL(ВыполненыеЭтапы.JobSheetQuantity, 0),
+	ISNULL(СтруктурныеЕдиницыЗавершения.StructuralUnit, VALUE(Catalog.StructuralUnits.ПустаяСсылка)),
+	ISNULL(СтруктурныеЕдиницыЗавершения.ProductionQuantity, 0),
+	ЭтапыПроизводстваОбороты.Stage
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	CASE
+		WHEN УчетПоКомпании.Value
+				AND VALUETYPE(Result.ProductionOrder) = TYPE(Document.ProductionOrder)
+				AND Result.ProductionOrder &lt;&gt; VALUE(Документ.ProductionOrder.ПустаяСсылка)
+			THEN CAST(Result.ProductionOrder AS Document.ProductionOrder).Company
+		WHEN УчетПоКомпании.Value
+				AND VALUETYPE(Result.CustomerOrder) = TYPE(Document.CustomerOrder)
+				AND Result.CustomerOrder &lt;&gt; VALUE(Документ.CustomerOrder.ПустаяСсылка)
+			THEN CAST(Result.CustomerOrder AS Document.CustomerOrder).Company
+		ELSE Result.Company
+	END AS Company,
+	Result.CustomerOrder AS CustomerOrder,
+	Result.ProductionOrder AS ProductionOrder,
+	Result.Counterparty AS Counterparty,
+	Result.ProductsAndServices AS ProductsAndServices,
+	Result.Characteristic AS Characteristic,
+	Result.Specification AS Specification,
+	Result.ProductionKind AS ProductionKind,
+	Result.Batch AS Batch,
+	Result.Stage AS Stage,
+	Result.Planned AS Planned,
+	Result.Completed AS Performed,
+	Result.OrderNumber AS Ord,
+	Result.OnThisDay AS OnThisDay,
+	Result.StageQuantity AS StagesQuantity,
+	Result.ProductionQuantity AS ProductionQuantity,
+	Result.InventoryAssembly AS InventoryAssembly,
+	Result.InventoryAssemblyQuantity AS InventoryAssemblyQuantity,
+	Result.JobSheet AS JobSheet,
+	Result.JobSheetQuantity AS JobSheetQuantity,
+	Result.StructuralUnit AS StructuralUnit,
+	CASE
+		WHEN ISNULL(ЭтапыСОперациями.Stage, ЭтапыСОперациямиПоСпецификации.Stage) IS NULL
+			THEN TRUE
+		ELSE FALSE
+	END AS PerformerHide,
+	CASE
+		WHEN ISNULL(ЭтапыСОперациями.ChoosePerformer, ЭтапыСОперациямиПоСпецификации.ChoosePerformer) IS NULL
+			THEN FALSE
+		ELSE ISNULL(ЭтапыСОперациями.ChoosePerformer, ЭтапыСОперациямиПоСпецификации.ChoosePerformer)
+	END AS ChoosePerformer,
+	ISNULL(ЭтапыСОперациями.Performer, ЭтапыСОперациямиПоСпецификации.Performer) AS PerformerByDefault
+FROM
+	Result AS Result
+		LEFT JOIN ЭтапыСОперациями AS ЭтапыСОперациями
+		ON Result.ProductionOrder = ЭтапыСОперациями.Order
+			AND Result.Specification = ЭтапыСОперациями.Specification
+			AND Result.Stage = ЭтапыСОперациями.Stage
+		LEFT JOIN ЭтапыСОперациями AS ЭтапыСОперациямиПоСпецификации
+		ON (ЭтапыСОперациямиПоСпецификации.Order = VALUE(Документ.ProductionOrder.EmptyRef))
+			AND Result.Specification = ЭтапыСОперациямиПоСпецификации.Specification
+			AND Result.Stage = ЭтапыСОперациямиПоСпецификации.Stage,
+	Constant.AccountingBySubsidiaryCompany AS УчетПоКомпании
+
+GROUP BY
+	CASE
+		WHEN УчетПоКомпании.Value
+				AND VALUETYPE(Result.ProductionOrder) = TYPE(Document.ProductionOrder)
+				AND Result.ProductionOrder &lt;&gt; VALUE(Документ.ProductionOrder.ПустаяСсылка)
+			THEN CAST(Result.ProductionOrder AS Document.ProductionOrder).Company
+		WHEN УчетПоКомпании.Value
+				AND VALUETYPE(Result.CustomerOrder) = TYPE(Document.CustomerOrder)
+				AND Result.CustomerOrder &lt;&gt; VALUE(Документ.CustomerOrder.ПустаяСсылка)
+			THEN CAST(Result.CustomerOrder AS Document.CustomerOrder).Company
+		ELSE Result.Company
+	END,
+	Result.CustomerOrder,
+	Result.ProductionOrder,
+	Result.Counterparty,
+	Result.ProductsAndServices,
+	Result.Characteristic,
+	Result.Specification,
+	Result.ProductionKind,
+	Result.Batch,
+	Result.Stage,
+	Result.Planned,
+	Result.Completed,
+	Result.OrderNumber,
+	Result.OnThisDay,
+	Result.StageQuantity,
+	Result.ProductionQuantity,
+	Result.InventoryAssembly,
+	Result.InventoryAssemblyQuantity,
+	Result.JobSheet,
+	Result.JobSheetQuantity,
+	Result.StructuralUnit,
+	CASE
+		WHEN ISNULL(ЭтапыСОперациями.Stage, ЭтапыСОперациямиПоСпецификации.Stage) IS NULL
+			THEN TRUE
+		ELSE FALSE
+	END,
+	CASE
+		WHEN ISNULL(ЭтапыСОперациями.ChoosePerformer, ЭтапыСОперациямиПоСпецификации.ChoosePerformer) IS NULL
+			THEN FALSE
+		ELSE ISNULL(ЭтапыСОперациями.ChoosePerformer, ЭтапыСОперациямиПоСпецификации.ChoosePerformer)
+	END,
+	ISNULL(ЭтапыСОперациями.Performer, ЭтапыСОперациямиПоСпецификации.Performer)</query>
+	</dataSet>
+	<totalField>
+		<dataPath>StagesQuantity</dataPath>
+		<expression>Count(Distinct StagesQuantity)</expression>
+	</totalField>
+	<parameter>
+		<name>BeginPeriod</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Đầu kỳ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>EndPerid</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Cuối kỳ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ProductionDate</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата производства</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Ngày sản xuất</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>BeginOfPeriod</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Begin of period</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Đầu kỳ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>EndOfPeriod</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>End of period</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Cuối kỳ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>OnlyPlanned</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Only planned</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Chỉ kế hoạch</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>PlaningDate</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Planing date</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Ngày kế hoạch</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>BeginDay</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Begin day</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Đầu ngày</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>EndDay</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>End day</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Cuối ngày</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>StagesQuantity</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>CustomerOrder</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ProductionOrder</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ProductsAndServices</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Characteristic</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Batch</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Specification</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Ord</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>HorizontalOverallPlacement</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>VerticalOverallPlacement</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>CustomerOrder</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ProductionOrder</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Counterparty</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Company</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ProductsAndServices</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Characteristic</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Batch</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Specification</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>StructuralUnit</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ProductionQuantity</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ProductionOrder.StructuralUnit</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ProductionKind</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Stage</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Performed</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Planned</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>OnThisDay</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Ord</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>InventoryAssembly</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>JobSheet</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>InventoryAssembly.Number</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>InventoryAssembly.Date</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>JobSheet.Number</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>JobSheet.Date</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>InventoryAssembly.Performer</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>JobSheet.Performer</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>PerformerHide</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ChoosePerformer</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>InventoryAssemblyQuantity</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>JobSheetQuantity</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>PerformerByDefault</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

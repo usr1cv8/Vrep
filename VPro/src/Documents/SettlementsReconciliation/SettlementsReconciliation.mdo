@@ -1,0 +1,1638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="fb7d1608-7e75-438b-a03f-38e5029bdbd9">
+  <producedTypes>
+    <objectType typeId="03a1804c-2f5a-4ab8-ae3f-39c5c8f74816" valueTypeId="cbc35625-5ca7-4f80-9d50-6052bcf773bd"/>
+    <refType typeId="14994f26-33ea-47a6-b7f1-13484fae22db" valueTypeId="fe8c2e3c-4864-42a1-88ea-56f583906187"/>
+    <selectionType typeId="58d6ab2d-1f12-4176-9998-5ec1a589c40e" valueTypeId="793138b6-b614-4750-9b73-7410c49375fb"/>
+    <listType typeId="096e7e12-0a24-45ea-ac13-6fb21d28320d" valueTypeId="8c88a7cd-8946-48db-84db-d0ca4aec1e37"/>
+    <managerType typeId="a61c853d-e7e7-4631-9aae-0112e30d56b6" valueTypeId="35cf47a6-1442-4ec4-a4d9-4f2b9eadb735"/>
+  </producedTypes>
+  <name>SettlementsReconciliation</name>
+  <synonym>
+    <key>en</key>
+    <value>Mutual settlements reconciliation</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Сверка взаиморасчетов</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Đối chiếu công nợ</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.SettlementsReconciliation.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Posted</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Date</name>
+    <synonym>
+      <key>en</key>
+      <value>Document creation date</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Дата создания документа</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ngày tạo chứng từ</value>
+    </synonym>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Number</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <listPresentation>
+    <key>en</key>
+    <value>Mutual settlements reconciliations</value>
+  </listPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Сверки взаиморасчетов</value>
+  </listPresentation>
+  <listPresentation>
+    <key>vi</key>
+    <value>Đối chiếu công nợ</value>
+  </listPresentation>
+  <numberType>String</numberType>
+  <numberLength>11</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.SettlementsReconciliation.Form.DocumentForm</defaultObjectForm>
+  <defaultListForm>Document.SettlementsReconciliation.Form.ListForm</defaultListForm>
+  <defaultChoiceForm>Document.SettlementsReconciliation.Form.ChoiceForm</defaultChoiceForm>
+  <posting>Deny</posting>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecordsDeletion>AutoDeleteOff</registerRecordsDeletion>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="c8757923-f60f-45e9-8165-118c6a05e8a8">
+    <name>Company</name>
+    <synonym>
+      <key>en</key>
+      <value>Company</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Doanh nghiệp</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Companies</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Company organization on whose behalf the document is issued.</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Организация предприятия, от имени которой оформляется документ.</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Doanh nghiệp, đại diện doanh nghiệp này lập chứng từ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.Companies.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1d917b6f-8733-4234-996d-06ef1cb5f990">
+    <name>Counterparty</name>
+    <synonym>
+      <key>en</key>
+      <value>Counterparties</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагенты</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đối tác</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Counterparties</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Customer or supplier with whom reconciliation is performed</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Клиент или поставщик, с которым производится сверка</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Khách hàng hoặc nhà cung cấp mà có tiến hành đối chiếu</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.Counterparties.EmptyRef</value>
+    </fillValue>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="a6b5bcc4-56ca-43f1-bb53-792e6550a2cc">
+    <name>BeginOfPeriod</name>
+    <synonym>
+      <key>en</key>
+      <value>Reconciliation period from</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Период сверки с</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Kỳ đối chiếu từ</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Reconciliation period start</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Начало периода, за который производится сверка</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Đầu kỳ thực hiện đối chiếu</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="f58d2290-3115-4b4e-abcf-d5861512d6e3">
+    <name>EndOfPeriod</name>
+    <synonym>
+      <key>en</key>
+      <value>to</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>до</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>đến</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Period end for which the reconciliation is performed</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Конец периода, за который производится сверка</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Cuối kỳ mà tiến hành đối chiếu</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="48a54fec-2d6b-498e-bf56-73fed0b9fea3">
+    <name>Status</name>
+    <synonym>
+      <key>en</key>
+      <value>Status</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Статус</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Trạng thái</value>
+    </synonym>
+    <type>
+      <types>EnumRef.SettlementsReconciliationStatuses</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Current certificate status</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Текущий статус акта</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Trạng thái hiện tại của biên bản</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="18e5c303-a271-4635-8dcf-6b82b14d40b6">
+    <name>Responsible</name>
+    <synonym>
+      <key>en</key>
+      <value>Responsible manager</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный менеджер</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Chịu trách nhiệm quản lý</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Employees</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Document owner</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Ответственный за документ</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Chịu trách nhiệm chứng từ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.Employees.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="814a961e-4e5d-40b1-aa9c-1a252ecdc02b">
+    <name>Comment</name>
+    <synonym>
+      <key>en</key>
+      <value>Note</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Примечание</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ghi chú</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Arbitrary text</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Произвольный текст</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nội dung tùy ý</value>
+    </toolTip>
+    <multiLine>true</multiLine>
+    <extendedEdit>true</extendedEdit>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="3245ae0f-06a7-48d0-8ce6-46e3288ce566">
+    <name>CounterpartyRepresentative</name>
+    <synonym>
+      <key>en</key>
+      <value>Contact</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Контактное лицо</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Người liên hệ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ContactPersons</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Full print name of the counterparty manager</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>ФИО руководителя контрагента для печати</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Họ tên lãnh đạo của đối tác để in</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Filter.Owner</name>
+      <field>Document.SettlementsReconciliation.Attribute.Counterparty</field>
+    </choiceParameterLinks>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="0a2e0d6e-4d1b-4ed4-96c0-850aafe212a1">
+    <name>DocumentCurrency</name>
+    <synonym>
+      <key>en</key>
+      <value>Currency</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Вал.</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tiền tệ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Currencies</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d6981857-3d7a-4e08-8283-56564b621a27">
+    <name>DescriptionContractsSelection</name>
+    <synonym>
+      <key>en</key>
+      <value>Contracts</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>контракты</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Hợp đồng</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="070930d2-7c9b-43a5-b894-6a9d557f772d">
+    <name>SortByContracts</name>
+    <synonym>
+      <key>en</key>
+      <value>Sort by contracts</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Сортировать по договорам</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Sắp xếp theo hợp đồng</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7d22861f-2f1d-49f3-bb7a-7823e05a095c">
+    <name>BalanceBeginPeriod</name>
+    <synonym>
+      <key>en</key>
+      <value>Balance (beginning of the period)</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Сальдо (начало периода)</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số dư (đầu kỳ)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ae1a480f-4192-45e6-a3bc-cdf5e8e350af">
+    <name>Author</name>
+    <synonym>
+      <key>en</key>
+      <value>Created by</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Ведомость составил</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Người lập</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Users</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>User who created the document</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Пользователь, создавший документ</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Người sử dụng mà đã lập chứng từ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="02976a2f-01af-425a-8a56-b167bfc1559d">
+    <name>DeleteCounterpartyRepresentativePosition</name>
+    <synonym>
+      <key>en</key>
+      <value>Delete counterparty representative position</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Удалить должность представителя контрагента</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Xóa chức vụ người đại diện của đối tác</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ContactPersonsRoles</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Counterparty manager position for printing</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Должность руководителя контрагента для печати</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Chức vụ của người lãnh đạo bên đối tác để in</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c89edb51-b2fa-411f-9044-2341358587ab">
+    <name>DeleteContract</name>
+    <synonym>
+      <key>en</key>
+      <value>Delete contract</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Удалить договор</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Xóa hợp đồng</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.CounterpartyContracts</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Filter.Owner</name>
+      <field>Document.SettlementsReconciliation.Attribute.Counterparty</field>
+    </choiceParameterLinks>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="6ea77c39-3391-457f-96fe-6ddd2ba9f049">
+    <name>DocumentDescription</name>
+    <synonym>
+      <key>en</key>
+      <value>Document description</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Описание документа</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Mô tả chứng từ</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Arbitrary text</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Произвольный текст</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nội dung tùy ý</value>
+    </toolTip>
+    <multiLine>true</multiLine>
+    <extendedEdit>true</extendedEdit>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="f72a63c0-9a04-450d-86d6-bc6c9a25fba8">
+    <name>AddCompanyInDocumentPresentation</name>
+    <synonym>
+      <key>en</key>
+      <value>Add company to document presentation</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Добавлять организацию в представление документа</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Thêm doanh nghiệp vào phần trình bày chứng từ</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="d22edd0c-f120-44e6-82ab-b994acb657b6">
+    <name>DocumentForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Document form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu chứng từ</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="40aa1c4c-32d4-49fa-a901-9654f50aad38">
+    <name>ListForm</name>
+    <synonym>
+      <key>en</key>
+      <value>List form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu danh sách</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="d6046af3-a3e9-4176-b8f4-63b611f61d5c">
+    <name>ChoiceForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Selection form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu chọn</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="eb1e1100-bcc1-49c0-a373-b17e2b7ae423">
+    <name>CounterpartyContractsForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Counterparty contract form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма договоров контрагента</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu hợp đồng đối tác</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="b524db9d-d482-4754-8e0e-9717f156df45">
+    <producedTypes>
+      <objectType typeId="e68cc105-0208-4707-bce3-4e171f0a3817" valueTypeId="4f55e164-c8f4-484b-ba3c-2690ab9f38a2"/>
+      <rowType typeId="bbf40e52-99a0-4a5e-a8c3-b67fa94c4ccf" valueTypeId="c865c292-8d39-498d-82f1-78f4ad871bce"/>
+    </producedTypes>
+    <name>CompanyData</name>
+    <synonym>
+      <key>en</key>
+      <value>Company data</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Данные организации</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Dữ liệu của doanh nghiệp</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Debt according to the company data</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Задолженность по данным организации</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Công nợ theo dữ liệu của doanh nghiệp</value>
+    </toolTip>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="a8c6b6f1-7ce1-4deb-b5a9-21f14b6892ce">
+      <name>DocumentDate</name>
+      <synonym>
+        <key>en</key>
+        <value>Document date</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Дата документа</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Ngày chứng từ</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <indexing>Index</indexing>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="50cf3cb4-b62c-408b-966f-c56662d6121e">
+      <name>DocumentNumber</name>
+      <synonym>
+        <key>en</key>
+        <value>Document number</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Номер документа</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Số chứng từ</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>11</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="eb82161c-d7f8-48bd-a1fb-17394344d011">
+      <name>AccountingDocument</name>
+      <synonym>
+        <key>en</key>
+        <value>Payment document</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Расчетный документ</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Chứng từ thanh toán</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.CustomerInvoice</types>
+        <types>DocumentRef.AgentReport</types>
+        <types>DocumentRef.SupplierInvoice</types>
+        <types>DocumentRef.AcceptanceCertificate</types>
+        <types>DocumentRef.PaymentExpense</types>
+        <types>DocumentRef.ProcessingReport</types>
+        <types>DocumentRef.OtherExpenses</types>
+        <types>DocumentRef.ExpenseReport</types>
+        <types>DocumentRef.CashReceipt</types>
+        <types>DocumentRef.CustomerOrder</types>
+        <types>DocumentRef.ProductionOrder</types>
+        <types>DocumentRef.SubcontractorReport</types>
+        <types>DocumentRef.ReportToPrincipal</types>
+        <types>DocumentRef.CashPayment</types>
+        <types>DocumentRef.Netting</types>
+        <types>DocumentRef.PaymentReceipt</types>
+        <types>DocumentRef.EnterOpeningBalance</types>
+        <types>DocumentRef.AdditionalCosts</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>The document by which the debt was recorded</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Документ, по которому зафиксирована задолженность</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Chứng từ, theo đó có ghi nhận công nợ</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Filter.Counterparty</name>
+        <field>Document.SettlementsReconciliation.Attribute.Counterparty</field>
+      </choiceParameterLinks>
+      <choiceParameterLinks>
+        <name>Filter.Company</name>
+        <field>Document.SettlementsReconciliation.Attribute.Company</field>
+      </choiceParameterLinks>
+      <choiceParameters>
+        <name>SelectWorkOrder</name>
+        <value xsi:type="core:BooleanValue">
+          <value>true</value>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="94ce9d92-2942-434b-8a89-6674d16ce6e6">
+      <name>DocumentDescription</name>
+      <synonym>
+        <key>en</key>
+        <value>Document description</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Описание документа</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Mô tả chứng từ</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Document description (kind, number, date, amount, owner)</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Описание документа (вид, номер, дата, сумма, владелец)</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Mô tả chứng từ (dạng, số, ngày, số tiền, chủ thẻ)</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="664be3c9-bed4-4480-951f-dc01ea3a38d9">
+      <name>ContractCurrency</name>
+      <synonym>
+        <key>en</key>
+        <value>Currency</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Вал.</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Tiền tệ</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Currencies</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Currency of mutual settlements with a partner</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Валюта взаиморасчетов с партнером</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Tiền tệ hạch toán công nợ với bạn hàng</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <quickChoice>Use</quickChoice>
+      <createOnInput>DontUse</createOnInput>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="46023dcd-db5b-41f7-a2bf-ea88d4340602">
+      <name>CompanyDebtAmount</name>
+      <synonym>
+        <key>en</key>
+        <value>Company debt</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Долг организации</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Công nợ phải trả</value>
+      </synonym>
+      <comment>Company's debt according to company data</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Partner's debt amount in the mutual settlements currency</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Сумма долга партнера в валюте взаиморасчетов</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Số tiền công nợ của đối tác theo nguyên tệ hạch toán</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="62549c87-eb45-4e30-8c8d-6d84974f234f">
+      <name>ClientDebtAmount</name>
+      <synonym>
+        <key>en</key>
+        <value>Counterparty debt</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Долг контрагента</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Đối tác nợ</value>
+      </synonym>
+      <comment>Counterparty debt by counterparty data</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Company debt amount in the mutual settlements currency</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Сумма долга организации в валюте взаиморасчетов</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Số tiền công nợ của doanh nghiệp theo nguyên tệ hạch toán</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="402e3709-aec6-415e-9a70-2b5826be22ba">
+      <name>Contract</name>
+      <synonym>
+        <key>en</key>
+        <value>Contract</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Контракт</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Hợp đồng</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.CounterpartyContracts</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <choiceParameterLinks>
+        <name>Filter.Owner</name>
+        <field>Document.SettlementsReconciliation.Attribute.Counterparty</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <indexing>Index</indexing>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="22a6207a-80d6-4f97-9f02-f5d99adc1ab8">
+    <producedTypes>
+      <objectType typeId="cde6a271-a36f-45ee-8d98-0092d8a774cd" valueTypeId="276b0d5e-5aa0-4a11-99f8-09e1fa88423e"/>
+      <rowType typeId="83c45a98-5104-4dfe-9e21-e884b40f2388" valueTypeId="dbe75727-be10-4401-8ab9-daa9a58df41b"/>
+    </producedTypes>
+    <name>CounterpartyData</name>
+    <synonym>
+      <key>en</key>
+      <value>Counterparty data</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Данные контрагента</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Dữ liệu của đối tác</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Debt amount according to the counterparty</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Задолженность по данным контрагента</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Công nợ theo dữ liệu của đối tác</value>
+    </toolTip>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="822db9e3-4e01-41f1-9041-cbf48a61272c">
+      <name>IncomingDocumentDate</name>
+      <synonym>
+        <key>en</key>
+        <value>Counterparty date</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Дата контрагента</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Ngày của đối tác</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <indexing>Index</indexing>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="8c0a617f-69b6-44b0-8971-ef9f91923be1">
+      <name>IncomingDocumentNumber</name>
+      <synonym>
+        <key>en</key>
+        <value>Counterparty number</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Номер контрагента</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Số đối tác</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>30</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="f60ca56c-9a62-4113-8d25-5a16db0dd408">
+      <name>AccountingDocument</name>
+      <synonym>
+        <key>en</key>
+        <value>Payment document</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Расчетный документ</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Chứng từ thanh toán</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.CustomerInvoice</types>
+        <types>DocumentRef.AgentReport</types>
+        <types>DocumentRef.SupplierInvoice</types>
+        <types>DocumentRef.AcceptanceCertificate</types>
+        <types>DocumentRef.PaymentExpense</types>
+        <types>DocumentRef.ProcessingReport</types>
+        <types>DocumentRef.OtherExpenses</types>
+        <types>DocumentRef.ExpenseReport</types>
+        <types>DocumentRef.CashReceipt</types>
+        <types>DocumentRef.CustomerOrder</types>
+        <types>DocumentRef.ProductionOrder</types>
+        <types>DocumentRef.SubcontractorReport</types>
+        <types>DocumentRef.ReportToPrincipal</types>
+        <types>DocumentRef.CashPayment</types>
+        <types>DocumentRef.Netting</types>
+        <types>DocumentRef.PaymentReceipt</types>
+        <types>DocumentRef.EnterOpeningBalance</types>
+        <types>DocumentRef.AdditionalCosts</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>The document by which the debt was recorded</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Документ, по которому зафиксирована задолженность</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Chứng từ, theo đó có ghi nhận công nợ</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Filter.Counterparty</name>
+        <changeMode>DontChange</changeMode>
+        <field>Document.SettlementsReconciliation.Attribute.Counterparty</field>
+      </choiceParameterLinks>
+      <choiceParameterLinks>
+        <name>Filter.Company</name>
+        <changeMode>DontChange</changeMode>
+        <field>Document.SettlementsReconciliation.Attribute.Company</field>
+      </choiceParameterLinks>
+      <choiceParameters>
+        <name>SelectWorkOrder</name>
+        <value xsi:type="core:BooleanValue">
+          <value>true</value>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="c244e400-3af5-45d7-914d-1d20cfc68227">
+      <name>DocumentDescription</name>
+      <synonym>
+        <key>en</key>
+        <value>Document description</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Описание документа</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Mô tả chứng từ</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Document description (kind, number, date, amount, owner)</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Описание документа (вид, номер, дата, сумма, владелец)</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Mô tả chứng từ (dạng, số, ngày, số tiền, chủ thẻ)</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="b7b1a30d-6b67-41e7-ba5a-a3254bc6b5f6">
+      <name>DocumentCurrency</name>
+      <synonym>
+        <key>en</key>
+        <value>Currency</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Вал.</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Tiền tệ</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Currencies</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Currency of mutual settlements with a partner</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Валюта взаиморасчетов с партнером</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Tiền tệ hạch toán công nợ với bạn hàng</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <quickChoice>Use</quickChoice>
+      <createOnInput>DontUse</createOnInput>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="0fe2d794-3060-40b8-b892-f8bc9875560e">
+      <name>CompanyDebtAmount</name>
+      <synonym>
+        <key>en</key>
+        <value>Counterparty debt</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Долг контрагента</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Đối tác nợ</value>
+      </synonym>
+      <comment>Counterparty debt by counterparty data</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Partner's debt amount in the mutual settlements currency</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Сумма долга партнера в валюте взаиморасчетов</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Số tiền công nợ của đối tác theo nguyên tệ hạch toán</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="ffb2aba2-79bd-4460-9353-456bc45a79c1">
+      <name>ClientDebtAmount</name>
+      <synonym>
+        <key>en</key>
+        <value>Company debt</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Долг организации</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Công nợ phải trả</value>
+      </synonym>
+      <comment>Company's debt according to counterparty data</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Company debt amount in the mutual settlements currency</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Сумма долга организации в валюте взаиморасчетов</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Số tiền công nợ của doanh nghiệp theo nguyên tệ hạch toán</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a3025e66-fe04-4600-818a-65708670f874">
+      <name>Contract</name>
+      <synonym>
+        <key>en</key>
+        <value>Contract</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Контракт</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Hợp đồng</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.CounterpartyContracts</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <choiceParameterLinks>
+        <name>Filter.Owner</name>
+        <field>Document.SettlementsReconciliation.Attribute.Counterparty</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <indexing>Index</indexing>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="ff87c741-dd73-478a-9b56-61f242a23105">
+    <producedTypes>
+      <objectType typeId="a3d0119a-e557-4fc2-8d3a-97cd2d49a8b2" valueTypeId="37f41592-f4e1-42cb-808c-11a6595e5563"/>
+      <rowType typeId="df1e5a57-ebbf-4b08-883f-29dd0b9590e2" valueTypeId="80931134-b8d0-4d7b-9d01-d40f2f7c61bf"/>
+    </producedTypes>
+    <name>DeleteEnteredCorrections</name>
+    <synonym>
+      <key>en</key>
+      <value>Remove entered adjustments</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Удалить введеные корректировки</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Xóa những điều chỉnh đưa vào</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="85f4d4f4-fff0-46d5-be23-9419293472dc">
+      <name>CorrectionDocument</name>
+      <synonym>
+        <key>en</key>
+        <value>Correction Document</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Документ корректировки</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Chứng từ điều chỉnh</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.Netting</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="f0fea440-9731-46d6-929f-ab43ab511320">
+      <name>DebtDelta</name>
+      <synonym>
+        <key>en</key>
+        <value>Delta debit</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Дельта дебет</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Delta bên Nợ</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="543a176a-47d7-454a-a10a-63b328e66ab5">
+      <name>CreditDelta</name>
+      <synonym>
+        <key>en</key>
+        <value>Delta credit</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Дельта кредит</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Delta bên Có</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="97633190-2040-42ef-a7c4-afea38cd2a36">
+    <producedTypes>
+      <objectType typeId="1fdc8b7d-2154-409d-8536-6910fe4d537c" valueTypeId="e2ec4dbb-16d9-4b32-adee-af0536b0f772"/>
+      <rowType typeId="5228d725-8b7e-4af7-913d-b5a5fafa2262" valueTypeId="512902eb-4611-42dc-849f-8ae443feca06"/>
+    </producedTypes>
+    <name>CounterpartyContracts</name>
+    <synonym>
+      <key>en</key>
+      <value>Counterparty contracts</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Договоры контрагентов</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Hợp đồng với đối tác</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="0afe4978-c79c-47ff-a5c5-6d48db2398a8">
+      <name>Select</name>
+      <synonym>
+        <key>en</key>
+        <value>Select</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Выбрать</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Chọn</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <indexing>Index</indexing>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="12665c48-77d9-4319-a107-e58eb02f5274">
+      <name>Contract</name>
+      <synonym>
+        <key>en</key>
+        <value>Contract</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Контракт</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Hợp đồng</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.CounterpartyContracts</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Filter.Owner</name>
+        <field>Document.SettlementsReconciliation.Attribute.Counterparty</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <templates uuid="db3bc512-006c-4470-888c-afaef3f18f4f">
+    <name>PF_MXL_SettlementsReconciliationActChecked</name>
+    <synonym>
+      <key>en</key>
+      <value>Mutual settlements reconciliation statement (reconciled)</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Акт сверки взаиморасчетов (сверено)</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biên bản đối chiếu công nợ (soát lại)</value>
+    </synonym>
+  </templates>
+  <templates uuid="834bf579-c1dd-4f43-8803-2b0ef70445a6">
+    <name>PF_MXL_SettlementsReconciliationAct</name>
+    <synonym>
+      <key>en</key>
+      <value>Mutual settlements reconciliation statement (on reconciliation)</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Акт сверки взаиморасчетов (на сверке)</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biên bản đối chiếu công nợ (để đối chiếu)</value>
+    </synonym>
+  </templates>
+</mdclass:Document>

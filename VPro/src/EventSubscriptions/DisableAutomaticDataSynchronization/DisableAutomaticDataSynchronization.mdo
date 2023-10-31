@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b82bcff8-49c9-44a9-8a9f-4428b0cc54a5">
+  <name>DisableAutomaticDataSynchronization</name>
+  <synonym>
+    <key>en</key>
+    <value>Disable automatic data synchronization</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Отключить автоматическую синхронизацию данных</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Ngắt bỏ tự động đồng bộ hóa dữ liệu</value>
+  </synonym>
+  <comment>Checks if disabling auto data sync is necessary</comment>
+  <source>
+    <types>InformationRegisterRecordSet.ExchangeTransportSettings</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.DataExchangeEvents.DisableAutomaticDataSynchronizationOnWrite</handler>
+</mdclass:EventSubscription>

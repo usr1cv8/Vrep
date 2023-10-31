@@ -1,0 +1,1575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="eae1be44-3cb9-4a33-bc8d-9e48abdd4599">
+  <producedTypes>
+    <objectType typeId="4bb910c8-eda1-4ab1-b74b-acc47d057b01" valueTypeId="45ed9a72-71b1-47d7-86a6-4d05fd2321e9"/>
+    <refType typeId="26463a68-46e4-4296-930e-df031c0077ad" valueTypeId="070e12b9-d81d-48e3-96d1-85d4e2547c20"/>
+    <selectionType typeId="053929d4-ede9-4a1d-a8b5-e025062190ba" valueTypeId="ece50884-bc1e-4945-b4d7-c52046827575"/>
+    <listType typeId="8c768b8a-e013-4c04-b188-1286b09bd084" valueTypeId="52dedcbd-fd38-4d7b-9457-68319ae00119"/>
+    <managerType typeId="4b6c24ec-9263-454e-8956-906f13a98fe5" valueTypeId="387d02cb-3378-414f-85cb-102e832191f3"/>
+  </producedTypes>
+  <name>WorkOrder</name>
+  <synonym>
+    <key>en</key>
+    <value>Job task</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Задание на работу</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Giao việc</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.WorkOrder.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Posted</name>
+    <comment>Posted</comment>
+    <toolTip>
+      <key>en</key>
+      <value>Document posting flag</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак проведения документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Dấu hiệu kết chuyển chứng từ</value>
+    </toolTip>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <synonym>
+      <key>en</key>
+      <value>Ref</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Ссылка</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tham chiếu</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Reference to document</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Ссылка на документ</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tham chiếu đến chứng từ</value>
+    </toolTip>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <synonym>
+      <key>en</key>
+      <value>Deletion mark</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>ПометкаУдаления</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>DeletioMark</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Document deletion mark</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Пометка удаления документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Đặt dấu xóa chứng từ</value>
+    </toolTip>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Date</name>
+    <synonym>
+      <key>en</key>
+      <value>Date</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ngày</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Document date</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Дата документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Ngày chứng từ</value>
+    </toolTip>
+    <fillValue xsi:type="core:DateValue">
+      <value>0001-01-01T00:00:00</value>
+    </fillValue>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Number</name>
+    <synonym>
+      <key>en</key>
+      <value>Number</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Номер</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Document number</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Номер документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Số chứng từ</value>
+    </toolTip>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <characteristics>
+    <characteristicTypes>Catalog.AdditionalAttributesAndInformationSets.TabularSection.AdditionalAttributes</characteristicTypes>
+    <keyField>Catalog.AdditionalAttributesAndInformationSets.TabularSection.AdditionalAttributes.Attribute.Property</keyField>
+    <typesFilterField>Catalog.AdditionalAttributesAndInformationSets.TabularSection.AdditionalAttributes.StandardAttribute.Ref</typesFilterField>
+    <typesFilterValue xsi:type="core:ReferenceValue">
+      <value>Catalog.AdditionalAttributesAndInformationSets.Document_WorkOrder</value>
+    </typesFilterValue>
+    <dataPathField>-1</dataPathField>
+    <multipleValuesUseField>-1</multipleValuesUseField>
+    <characteristicValues>Document.WorkOrder.TabularSection.AdditionalAttributes</characteristicValues>
+    <objectField>Document.WorkOrder.TabularSection.AdditionalAttributes.StandardAttribute.Ref</objectField>
+    <typeField>Document.WorkOrder.TabularSection.AdditionalAttributes.Attribute.Property</typeField>
+    <valueField>Document.WorkOrder.TabularSection.AdditionalAttributes.Attribute.Value</valueField>
+    <multipleValuesKeyField>-1</multipleValuesKeyField>
+    <multipleValuesOrderField>-1</multipleValuesOrderField>
+  </characteristics>
+  <characteristics>
+    <characteristicTypes>Catalog.AdditionalAttributesAndInformationSets.TabularSection.AdditionalInformation</characteristicTypes>
+    <keyField>Catalog.AdditionalAttributesAndInformationSets.TabularSection.AdditionalInformation.Attribute.Property</keyField>
+    <typesFilterField>Catalog.AdditionalAttributesAndInformationSets.TabularSection.AdditionalInformation.StandardAttribute.Ref</typesFilterField>
+    <typesFilterValue xsi:type="core:ReferenceValue">
+      <value>Catalog.AdditionalAttributesAndInformationSets.Document_WorkOrder</value>
+    </typesFilterValue>
+    <dataPathField>-1</dataPathField>
+    <multipleValuesUseField>-1</multipleValuesUseField>
+    <characteristicValues>InformationRegister.AdditionalInformation</characteristicValues>
+    <objectField>InformationRegister.AdditionalInformation.Dimension.Object</objectField>
+    <typeField>InformationRegister.AdditionalInformation.Dimension.Property</typeField>
+    <valueField>InformationRegister.AdditionalInformation.Resource.Value</valueField>
+    <multipleValuesKeyField>-1</multipleValuesKeyField>
+    <multipleValuesOrderField>-1</multipleValuesOrderField>
+  </characteristics>
+  <basedOn>Document.Event</basedOn>
+  <basedOn>Document.CustomerOrder</basedOn>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <listPresentation>
+    <key>en</key>
+    <value>Job tasks</value>
+  </listPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Задания на работу</value>
+  </listPresentation>
+  <listPresentation>
+    <key>vi</key>
+    <value>Giao việc</value>
+  </listPresentation>
+  <explanation>
+    <key>en</key>
+    <value>Jobs to perform works or provide services</value>
+  </explanation>
+  <explanation>
+    <key>ru</key>
+    <value>Задания на выполнение работ или оказание услуг</value>
+  </explanation>
+  <explanation>
+    <key>vi</key>
+    <value>Nhiệm vụ thực hiện công việc hoặc cung cấp dịch vụ</value>
+  </explanation>
+  <numberType>String</numberType>
+  <numberLength>11</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.WorkOrder.Form.DocumentForm</defaultObjectForm>
+  <defaultListForm>Document.WorkOrder.Form.ListForm</defaultListForm>
+  <defaultChoiceForm>Document.WorkOrder.Form.ChoiceForm</defaultChoiceForm>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecordsDeletion>AutoDeleteOff</registerRecordsDeletion>
+  <registerRecords>AccumulationRegister.WorkOrders</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="2e7cacd9-27bf-4ea5-a607-94fc3077614d">
+    <name>Company</name>
+    <synonym>
+      <key>en</key>
+      <value>Company</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Doanh nghiệp</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Companies</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Company on whose behalf the job is registered. Selected from the &quot;Companies&quot; catalog. Attribute is displayed in the form if accounting for several companies is enabled in the accounting parameter settings</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Организация, от лица которой оформляется задание. Выбирается из справочника &quot;Организации&quot;. Реквизит отображается на форме, если в настройках параметров учета включено ведение учета по нескольким организациям</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Doanh nghiệp mà để tạo nhiệm vụ. Chọn từ danh mục &quot;Doanh nghiệp&quot;. Mục tin được hiển thị trên biểu mẫu, nếu trong thiết lập tham số kế toán có đặt chế độ tiến hành kế toán theo nhiều doanh nghiệp</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.Companies.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="9c9b604e-c9b1-413f-ad5d-a9c13d4aa88b">
+    <name>OperationKind</name>
+    <synonym>
+      <key>en</key>
+      <value>Operation</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Операция</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Giao dịch</value>
+    </synonym>
+    <type>
+      <types>EnumRef.OperationKindsWorkOrder</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Select a job kind: external (execution of a job under a specific order, contract), internal (execution of a job for the company).</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Необходимо выбрать вид задания: Внешняя (выполнение какого-либо задания по конкретному заказу, по договору), Внутренняя (выполнение какого-либо задания для компании).</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Cần chọn dạng nhiệm vụ: Ngoài (thực hiện nhiệm vụ nào đó theo đơn hàng cụ thể, theo hợp đồng), Nội bộ (thực hiện nhiệm vụ nào đó đối với công ty).</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Enum.OperationKindsWorkOrder.EnumValue.External</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e38edfbe-a832-4e68-8972-8bb14c098593">
+    <name>State</name>
+    <synonym>
+      <key>en</key>
+      <value>State</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Trạng thái</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.EventStates</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Job category classification</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Классификация категории заданий</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Bảng phân loại thể loại nhiệm vụ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.EventStates.Planned</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="06cf3343-b1d7-4050-b4b1-c1c885729673">
+    <name>WorkKind</name>
+    <synonym>
+      <key>en</key>
+      <value>Activity kind</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Вид работ</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Dạng công việc</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ProductsAndServices</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Planned work kind</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Планируемый вид работ</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Dạng công việc dự tính</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>OperationKind</name>
+      <field>Document.WorkOrder.Attribute.OperationKind</field>
+    </choiceParameterLinks>
+    <choiceParameters>
+      <name>Filter.ProductsAndServicesType</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.ProductsAndServicesTypes.EnumValue.WorkKind</value>
+      </value>
+    </choiceParameters>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.ProductsAndServices.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="9600ed33-ab95-4a5c-b21f-f009a3e8d663">
+    <name>PriceKind</name>
+    <synonym>
+      <key>en</key>
+      <value>Price kind</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Вид цены</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Dạng giá</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.PriceKinds</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Price kind by which the cost of works is determined for the customer</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Вид цен, по которому определяется стоимость работ для заказчика</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Dạng giá, theo đó có xác định giá trị công việc đối với người đặt hàng</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>OperationKind</name>
+      <field>Document.WorkOrder.Attribute.OperationKind</field>
+    </choiceParameterLinks>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.PriceKinds.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="f0d74416-93c9-4ab0-89e7-c38b4b826b0a">
+    <name>Employee</name>
+    <synonym>
+      <key>en</key>
+      <value>Performer</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Исполнитель</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Người thực hiện</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Employees</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Employee who is assigned with the job</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Сотрудник, которому назначается задание</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Người lao động được giao nhiệm vụ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.Employees.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="aa2ebf05-0412-4440-ba40-e7d93bfb8362">
+    <name>StructuralUnit</name>
+    <synonym>
+      <key>en</key>
+      <value>Department</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Bộ phận</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.StructuralUnits</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Department where job is planned</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Подразделение, в котором планируется задание</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Bộ phận mà tại đó có lập kế hoạch nhiệm vụ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameters>
+      <name>Filter.StructuralUnitType</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.StructuralUnitsTypes.EnumValue.Department</value>
+      </value>
+    </choiceParameters>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.StructuralUnits.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="63968e27-ed78-4cc1-8547-1d670f19b48a">
+    <name>DocumentAmount</name>
+    <synonym>
+      <key>en</key>
+      <value>Amount</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số tiền</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Document amount</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Заполняется сумма документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Điền số tiền của chứng từ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <quickChoice>DontUse</quickChoice>
+    <createOnInput>Use</createOnInput>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b6c9c98b-f75c-4abe-b00c-5e2259aea21c">
+    <name>WorkKindPosition</name>
+    <synonym>
+      <key>en</key>
+      <value>Work kind position</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Положение вида работ</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Quy định dạng công việc</value>
+    </synonym>
+    <comment>Position of the works type (in the heading, in the list)</comment>
+    <type>
+      <types>EnumRef.AttributePositionOnForm</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Enum.AttributePositionOnForm.EnumValue.InHeader</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2971dcfd-7603-44a0-9cab-c3d418b23cda">
+    <name>Event</name>
+    <synonym>
+      <key>en</key>
+      <value>Event</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Событие</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Sự kiện</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.Event</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Service attribute to register connection with event</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Служебный реквизит для регистрации связи с событием</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Mục tin phụ trợ để ghi nhận mối liên hệ với sự kiện</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b76c3eac-fdb3-4d90-92b0-603a4b907b6f">
+    <name>Comment</name>
+    <synonym>
+      <key>en</key>
+      <value>Note</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Примечание</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ghi chú</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Any additional information related to the document</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Указывается любая дополнительная информация к документу</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Chỉ ra thông tin bổ sung bất kỳ đối với chứng từ</value>
+    </toolTip>
+    <multiLine>true</multiLine>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="8b272b76-3b99-4834-b7f1-f778414a7909">
+    <name>Author</name>
+    <synonym>
+      <key>en</key>
+      <value>Created by</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Ведомость составил</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Người lập</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Users</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>User who created the document</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Пользователь, создавший документ</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Người sử dụng mà đã lập chứng từ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="e6c0e3ea-fded-425b-a9f1-50eb024fb5f2">
+    <name>DocumentForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Document form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu chứng từ</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="40d92d9f-f67e-4823-a742-ed27014b92b3">
+    <name>ListForm</name>
+    <synonym>
+      <key>en</key>
+      <value>List form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu danh sách</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="477d147f-4630-46b9-b088-8e94b3812a7c">
+    <name>ChoiceForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Selection form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu chọn</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="ba2cb4c3-f1e8-4d6c-9ebf-df8eb244a690">
+    <producedTypes>
+      <objectType typeId="3b7c2e18-b55a-4358-bf5a-7466328bb20a" valueTypeId="9d83222d-7966-4716-aaf4-627e212cf017"/>
+      <rowType typeId="fa65bda2-bdb3-473d-a79b-3482a8dc856c" valueTypeId="9d0af7b3-d249-43b3-b2af-fd76ddd6a1f5"/>
+    </producedTypes>
+    <name>Works</name>
+    <synonym>
+      <key>en</key>
+      <value>Works</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Работает</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đang làm việc</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="78219028-1f40-4191-ae58-2e24423e26aa">
+      <name>WorkKind</name>
+      <synonym>
+        <key>en</key>
+        <value>Activity kind</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Вид работ</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Dạng công việc</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ProductsAndServices</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Planned work kind</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Планируемый вид работ</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Dạng công việc dự tính</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>OperationKind</name>
+        <field>Document.WorkOrder.Attribute.OperationKind</field>
+      </choiceParameterLinks>
+      <choiceParameters>
+        <name>Filter.ProductsAndServicesType</name>
+        <value xsi:type="core:ReferenceValue">
+          <value>Enum.ProductsAndServicesTypes.EnumValue.WorkKind</value>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="6f2e1936-6327-4ce6-ad09-feb6d3087984">
+      <name>Customer</name>
+      <synonym>
+        <key>en</key>
+        <value>Customer</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Покупатель</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Khách hàng</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.CounterpartyContracts</types>
+        <types>DocumentRef.CustomerOrder</types>
+        <types>CatalogRef.Counterparties</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Customer of work, service</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Заказчик работы, услуги</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Người đặt hàng công việc, dịch vụ</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="001580c4-f50c-48f3-9b09-a86bbcd5bb26">
+      <name>ProductsAndServices</name>
+      <synonym>
+        <key>en</key>
+        <value>Work, service</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Работа, услуга</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Công việc, dịch vụ</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ProductsAndServices</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Work, service for which the job is executed</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Работа, услуга, для которой выполняется задание</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Công việc, dịch vụ mà có thực hiện nhiệm vụ</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>OperationKind</name>
+        <field>Document.WorkOrder.Attribute.OperationKind</field>
+      </choiceParameterLinks>
+      <choiceParameters>
+        <name>Filter.ProductsAndServicesType</name>
+        <value xsi:type="core:FixedArrayValue">
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ProductsAndServicesTypes.EnumValue.Work</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ProductsAndServicesTypes.EnumValue.Service</value>
+          </values>
+        </value>
+      </choiceParameters>
+      <choiceParameters>
+        <name>Additionally.TypeRestriction</name>
+        <value xsi:type="core:FixedArrayValue">
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ProductsAndServicesTypes.EnumValue.Work</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ProductsAndServicesTypes.EnumValue.Service</value>
+          </values>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="643e3964-68dc-4153-afef-0a6de59a2f30">
+      <name>Characteristic</name>
+      <synonym>
+        <key>en</key>
+        <value>Characteristic</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Characteristic</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Đặc tính</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ProductsAndServicesCharacteristics</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Characteristic of products and services for the production of which the job is performed</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Характеристика номенклатуры, для изготовления которой выполняется задание</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Đặc tính mặt hàng mà nhiệm vụ được thực hiện để sản xuất mặt hàng đó</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>OperationKind</name>
+        <field>Document.WorkOrder.Attribute.OperationKind</field>
+      </choiceParameterLinks>
+      <choiceParameterLinks>
+        <name>Filter.Owner</name>
+        <field>Document.WorkOrder.TabularSection.Works.Attribute.ProductsAndServices</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="5318849e-d477-45ee-ae66-0ca735437607">
+      <name>Day</name>
+      <synonym>
+        <key>en</key>
+        <value>Day</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>день</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>ngày</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Day - planned job execution date</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>День - планируемая дата выполнения задания</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Ngày - ngày dự tính thực hiện nhiệm vụ</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="24ca3a3f-a657-4151-8d42-a5f6433f6b21">
+      <name>BeginTime</name>
+      <synonym>
+        <key>en</key>
+        <value>Start time</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Время начала</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Thời gian bắt đầu</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Time</dateFractions>
+        </dateQualifiers>
+      </type>
+      <format>
+        <key>en</key>
+        <value>DF='H:mm'</value>
+      </format>
+      <format>
+        <key>ru</key>
+        <value>ДФ='H:mm'</value>
+      </format>
+      <format>
+        <key>vi</key>
+        <value>DF='H:mm'</value>
+      </format>
+      <editFormat>
+        <key>en</key>
+        <value>DF='H:mm'</value>
+      </editFormat>
+      <editFormat>
+        <key>ru</key>
+        <value>ДФ='H:mm'</value>
+      </editFormat>
+      <editFormat>
+        <key>vi</key>
+        <value>DF='H:mm'</value>
+      </editFormat>
+      <toolTip>
+        <key>en</key>
+        <value>Start time of job completion</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Время начала выполнения задания</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Thời gian bắt đầu thực hiện nhiệm vụ</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="b73af171-bfed-426f-8c32-086f5342e1a1">
+      <name>EndTime</name>
+      <synonym>
+        <key>en</key>
+        <value>End time</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Время конца</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Thời gian kết thúc</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Time</dateFractions>
+        </dateQualifiers>
+      </type>
+      <format>
+        <key>en</key>
+        <value>DF='H:mm'</value>
+      </format>
+      <format>
+        <key>ru</key>
+        <value>ДФ='H:mm'</value>
+      </format>
+      <format>
+        <key>vi</key>
+        <value>DF='H:mm'</value>
+      </format>
+      <editFormat>
+        <key>en</key>
+        <value>DF='H:mm'</value>
+      </editFormat>
+      <editFormat>
+        <key>ru</key>
+        <value>ДФ='H:mm'</value>
+      </editFormat>
+      <editFormat>
+        <key>vi</key>
+        <value>DF='H:mm'</value>
+      </editFormat>
+      <toolTip>
+        <key>en</key>
+        <value>Job end time</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Время окончания выполнения задания</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Thời gian kết thúc thực hiện nhiệm vụ</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="d42a8552-17f9-4350-817e-4b7a5ac33cca">
+      <name>Duration</name>
+      <synonym>
+        <key>en</key>
+        <value>Duration</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Продолжительность</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Thời lượng</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Time</dateFractions>
+        </dateQualifiers>
+      </type>
+      <format>
+        <key>en</key>
+        <value>DF='H:mm'</value>
+      </format>
+      <format>
+        <key>ru</key>
+        <value>ДФ='H:mm'</value>
+      </format>
+      <format>
+        <key>vi</key>
+        <value>DF='H:mm'</value>
+      </format>
+      <editFormat>
+        <key>en</key>
+        <value>DF='H:mm'</value>
+      </editFormat>
+      <editFormat>
+        <key>ru</key>
+        <value>ДФ='H:mm'</value>
+      </editFormat>
+      <editFormat>
+        <key>vi</key>
+        <value>DF='H:mm'</value>
+      </editFormat>
+      <toolTip>
+        <key>en</key>
+        <value>Job completion time in the HH: MM format</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Длительность выполнения задания в формате ЧЧ:ММ</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Thời lượng thực hiện nhiệm vụ dưới định dạng HH:MM</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="32cb5008-115b-4bc6-b994-2c8638a07df9">
+      <name>DurationInHours</name>
+      <synonym>
+        <key>en</key>
+        <value>Duration (H)</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Длительность (ч)</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Thời lượng (giờ)</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Duration (h) - job execution in hours</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Длительность (ч) - длительность выполнения задания в часах</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Thời lượng (giờ) - thời lượng thực hiện nhiệm vụ tính bằng giờ</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="60cbd73d-0f7f-4fc1-8880-2f6b9e1bd2ae">
+      <name>Price</name>
+      <synonym>
+        <key>en</key>
+        <value>Price</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Цена</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Đơn giá</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Price - hourly cost when working under job</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Цена - стоимость часа работы по заданию</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Giá - giá trị giờ làm việc theo nhiệm vụ</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="13b0c501-6f7b-4dfd-b448-5bac170a4456">
+      <name>Amount</name>
+      <synonym>
+        <key>en</key>
+        <value>Amount</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Số tiền</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Amount - cost of job performed for the customer</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Сумма - стоимость выполнения задания для клиента</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Số tiền - giá trị thực hiện nhiệm vụ đối với khách hàng</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="f4e1d6b1-7681-499c-854c-95b2f084bfb9">
+      <name>Comment</name>
+      <synonym>
+        <key>en</key>
+        <value>Description</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Наименование</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Tên gọi</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Any additional information about the operation is specified</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Указывается любая дополнительная информация по работе</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Chỉ ra thông tin bổ sung bất kỳ theo công việc</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="d3ccc820-a31e-4e65-b1ec-9dade16109ff">
+    <producedTypes>
+      <objectType typeId="8a9b9653-c39f-4106-87e4-3dbc448e9b3b" valueTypeId="547b6da9-c980-4060-a235-806a89e65195"/>
+      <rowType typeId="2e9a921d-2ee9-432d-8ac5-dfd5f8e6ed20" valueTypeId="a002d088-d9e2-4763-ba85-cc219bc13b26"/>
+    </producedTypes>
+    <name>AdditionalAttributes</name>
+    <synonym>
+      <key>en</key>
+      <value>Additional object attributes</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Дополнительные реквизиты объекта</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Mục tin bổ sung của đối tượng</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Additional attributes of inventory batch</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Дополнительные реквизиты партии запасов</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Mục tin bổ sung của lô vật tư</value>
+    </toolTip>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="4612ec8d-c204-4617-89ee-ebd1209d8a98">
+      <name>Property</name>
+      <synonym>
+        <key>en</key>
+        <value>Property</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Свойство</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Thuộc tính</value>
+      </synonym>
+      <type>
+        <types>ChartOfCharacteristicTypesRef.AdditionalAttributesAndInformation</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>(Additional attribute)</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>(Дополнительный реквизит)</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>(Mục tin bổ sung)</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="2523e618-867e-4e77-b950-4da7ff583a66">
+      <name>Value</name>
+      <synonym>
+        <key>en</key>
+        <value>Value</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Значение</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Giá trị</value>
+      </synonym>
+      <type>
+        <types>Characteristic.AdditionalAttributesAndInformation</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Additional attribute value</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Значение дополнительного реквизита</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Giá trị mục tin bổ sung</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Filter.Owner</name>
+        <field>Document.WorkOrder.TabularSection.AdditionalAttributes.Attribute.Property</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="44eec293-b962-49f6-8a24-5731fca842db">
+      <name>TextString</name>
+      <synonym>
+        <key>en</key>
+        <value>Text string</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Текстовая строка</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Dòng văn bản</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Full text of additional attribute of string type</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Полный текст строкового дополнительного реквизита</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Nội dung đầy đủ của mục tin bổ sung theo dòng</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <templates uuid="bc255056-104c-4c16-ab36-06284318a080">
+    <name>PF_MXL_Task</name>
+    <synonym>
+      <key>en</key>
+      <value>Work order</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ наряд</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đơn hàng trọn gói</value>
+    </synonym>
+  </templates>
+  <commands uuid="51069e38-c2da-45df-8a2d-76a23847e891">
+    <name>EnterTimeTracking</name>
+    <synonym>
+      <key>en</key>
+      <value>Time-keeping</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Учет времени</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ghi nhận thời gian</value>
+    </synonym>
+    <group>FormCommandBarCreateBasedOn</group>
+    <commandParameterType>
+      <types>DocumentRef.WorkOrder</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+  </commands>
+  <commands uuid="3e7d4e23-d445-4b50-bd5d-8fe6f9bb4ca6">
+    <name>CommandEventCreateBasedOn</name>
+    <synonym>
+      <key>en</key>
+      <value>Event</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Событие</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Sự kiện</value>
+    </synonym>
+    <group>FormCommandBarCreateBasedOn</group>
+    <commandParameterType>
+      <types>DocumentRef.WorkOrder</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+  </commands>
+  <commands uuid="d8bb12ea-7cfd-4406-896e-0bcf01d01112">
+    <name>OpenWorOrdersListSectionMain</name>
+    <synonym>
+      <key>en</key>
+      <value>Jobs</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Задания</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Nhiệm vụ</value>
+    </synonym>
+    <group>NavigationPanelImportant</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:Document>

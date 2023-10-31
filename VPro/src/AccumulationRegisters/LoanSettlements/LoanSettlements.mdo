@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cacc1eaa-3194-4f3e-84bb-4afe7dae15c3">
+  <producedTypes>
+    <selectionType typeId="83542cd4-8c0f-442c-90e2-48a4822a1061" valueTypeId="4ac9d08d-f8f0-4929-99f8-507f03694c5a"/>
+    <listType typeId="f5c4fc58-f367-407f-9c85-b9fa60f5263c" valueTypeId="fd61e950-68e6-42de-a1de-9ae83b9006aa"/>
+    <managerType typeId="47016322-33ed-4b77-aa45-0fdc89a23342" valueTypeId="ce015250-2f64-423b-a4d1-51e0e5c97f61"/>
+    <recordSetType typeId="dca78ecf-e85b-47a0-86cb-9a14b59dca6d" valueTypeId="dcb75350-92b1-4f47-a016-537d02d53bfc"/>
+    <recordKeyType typeId="c00d0261-75b9-46c4-ad4a-b098e3653f5f" valueTypeId="a04fbc9f-a34b-4b6d-b09a-d82373ef696f"/>
+    <recordType typeId="1d04b42a-12d3-4d34-be6f-2b6819befb62" valueTypeId="40153376-3103-4ead-9580-cd0490f72016"/>
+  </producedTypes>
+  <name>LoanSettlements</name>
+  <synonym>
+    <key>en</key>
+    <value>Settlements on credits and loans</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Расчеты по кредитам и займам</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Hạch toán theo khoản vay và nợ</value>
+  </synonym>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>RecordType</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="4bc21421-a151-4fb7-bf57-a8f52128dfa5">
+    <name>PrincipalDebt</name>
+    <synonym>
+      <key>en</key>
+      <value>Principal debt</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Основной долг</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Nợ gốc</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="f2a4cf7b-4b69-4f26-b287-6dfef3df826b">
+    <name>PrincipalDebtCur</name>
+    <synonym>
+      <key>en</key>
+      <value>Principal debt cur</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Основной долг вал</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Nợ gốc tiền tệ</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="9bed26db-3b64-48b9-9d59-b6466d2ceecd">
+    <name>Interest</name>
+    <synonym>
+      <key>en</key>
+      <value>Interest</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Проценты</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Lãi</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="193ed7f4-59eb-4be4-ac0d-7a782b37008c">
+    <name>InterestCur</name>
+    <synonym>
+      <key>en</key>
+      <value>Interest cur</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Проценты вал</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Lãi tiền tệ</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="5733d030-f2e1-4cc1-89b7-3066d045029a">
+    <name>Commission</name>
+    <synonym>
+      <key>en</key>
+      <value>Commission</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Комиссия</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Phí ngân hàng</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="9de75fce-5501-4036-9348-0b134bc6f6dd">
+    <name>CommissionCur</name>
+    <synonym>
+      <key>en</key>
+      <value>Commission cur</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Комиссия вал</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Phí ngân hàng tiền tệ</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="ff70ab1c-dd30-4a28-b801-1d04cb8abf7a">
+    <name>DeductedFromSalary</name>
+    <synonym>
+      <key>en</key>
+      <value>Deducted from salary</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Удержано из зарплаты</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Được giữ lại từ lương</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="3ae37f87-221a-4eb1-8aca-4cda8607ee95">
+    <name>ContentOfAccountingRecord</name>
+    <synonym>
+      <key>en</key>
+      <value>Content of accounting record</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Содержание проводки</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Nội dung của bút toán</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="6e96f387-13aa-4cb3-9cd7-10beb6c68562">
+    <name>StructuralUnit</name>
+    <synonym>
+      <key>en</key>
+      <value>Business unit</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Структурная единица</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Bộ phận, kho bãi</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.StructuralUnits</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="c087cebd-8555-4242-9ed1-27d267dfd781">
+    <name>LoanKind</name>
+    <synonym>
+      <key>en</key>
+      <value>Loan kind</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Вид договора</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Dạng hợp đồng</value>
+    </synonym>
+    <type>
+      <types>EnumRef.LoanContractTypes</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="6f6d228b-2fbb-4279-aeae-3528df2633a7">
+    <name>Counterparty</name>
+    <synonym>
+      <key>en</key>
+      <value>Counterparty</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đối tác</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Counterparties</types>
+      <types>CatalogRef.Employees</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="56494162-8308-4d91-9918-2335ae652ae7">
+    <name>Company</name>
+    <synonym>
+      <key>en</key>
+      <value>Company</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Doanh nghiệp</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Companies</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="771518d7-611f-45be-b8d4-f4e6ac65f72f">
+    <name>LoanContract</name>
+    <synonym>
+      <key>en</key>
+      <value>Loan contract</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Договор кредита (займа)</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Hợp đồng tín dụng (vay nợ)</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.LoanContract</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

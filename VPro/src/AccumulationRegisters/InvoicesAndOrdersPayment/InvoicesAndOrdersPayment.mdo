@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1e4612e7-e50d-4407-ae63-fbfaabb6679d">
+  <producedTypes>
+    <selectionType typeId="75e2e325-af9e-47c8-8cb9-99e61c81c2d5" valueTypeId="1567a932-17ec-4330-9677-2786b90ae26c"/>
+    <listType typeId="8bb9ba20-3d6f-41b6-bd28-fbacb3afeaad" valueTypeId="358a9d83-c470-4b23-b72f-f403eb83df18"/>
+    <managerType typeId="16195cc5-cf11-4de3-9d0c-ac88fc47baa1" valueTypeId="dfe6cf05-70f2-4865-b3b8-264d68b85597"/>
+    <recordSetType typeId="014d8615-7d22-421f-b5d8-c0c80d9207cf" valueTypeId="985fd7bb-a495-478d-9a9f-10560d22431c"/>
+    <recordKeyType typeId="3df7daf7-ddd3-434c-ace7-068cbd46ecf9" valueTypeId="fadd18ac-2333-4318-8b70-d86651c7e91d"/>
+    <recordType typeId="6fa6db16-1971-4e03-b55a-2387c1e9f8ac" valueTypeId="bde0aab2-0ead-4cf8-b512-fd6ecbe48379"/>
+  </producedTypes>
+  <name>InvoicesAndOrdersPayment</name>
+  <synonym>
+    <key>en</key>
+    <value>Invoice and order payment</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Оплата счетов и заказов</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Thanh toán hóa đơn và đơn hàng</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <registerType>Turnovers</registerType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="de8b02b3-8142-42c0-9bd8-51a56ddda865">
+    <name>Amount</name>
+    <synonym>
+      <key>en</key>
+      <value>Amount</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số tiền</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="c073cd38-a43c-4612-ab75-56bd378879d2">
+    <name>AdvanceAmount</name>
+    <synonym>
+      <key>en</key>
+      <value>Advance amount</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма аванса</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số tiền ứng trước</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="2996bb88-baac-424c-a4ed-1f4afff723a3">
+    <name>PaymentAmount</name>
+    <synonym>
+      <key>en</key>
+      <value>Payment amount</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма оплаты</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số tiền thanh toán</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="e4a11bda-3f67-45c4-8eb9-894f2bb419fc">
+    <name>InvoiceForPayment</name>
+    <synonym>
+      <key>en</key>
+      <value>Proforma invoice</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Счет на оплату</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Hóa đơn thanh toán</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.CustomerOrder</types>
+      <types>DocumentRef.InvoiceForPayment</types>
+      <types>DocumentRef.PurchaseOrder</types>
+      <types>DocumentRef.SupplierInvoiceForPayment</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="96774a70-3501-4084-a366-c3c8c7567f3d">
+    <name>Company</name>
+    <synonym>
+      <key>en</key>
+      <value>Company</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Doanh nghiệp</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Companies</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

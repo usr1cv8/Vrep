@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="03833bbc-6ece-45c5-8d13-c08b9faca831">
+  <name>SetDeletionMarkOnCatalogFiles</name>
+  <synonym>
+    <key>en</key>
+    <value>Select the deletion mark of the catalog files</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Установить пометку удаления файлов справочников</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Đặt dấu xóa tệp danh mục</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.FileFolders</types>
+    <types>CatalogObject.Counterparties</types>
+    <types>CatalogObject.CounterpartyContracts</types>
+    <types>CatalogObject.Individuals</types>
+    <types>CatalogObject.ProductsAndServices</types>
+    <types>CatalogObject.Specifications</types>
+    <types>CatalogObject.Companies</types>
+    <types>CatalogObject.LegalDocuments</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.FileOperations.SetDeletionMarkOfFilesBeforeWrite</handler>
+</mdclass:EventSubscription>

@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="be926e72-1e65-49d3-a0f8-d94ad6496d93">
+  <producedTypes>
+    <objectType typeId="fec2ba09-32e8-43dc-a638-08f974cca55e" valueTypeId="7685673c-f257-458b-8a0f-90843b20a1d1"/>
+    <managerType typeId="267c41fb-ed38-42ee-a6bf-247af3f2bb6a" valueTypeId="b2cfdd51-3e61-4cb1-954d-9ab54db35611"/>
+  </producedTypes>
+  <name>ImportFromSpreadsheet</name>
+  <synonym>
+    <key>en</key>
+    <value>Import from a spreadsheet</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Загрузка из электронной таблицы</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Kết nhập từ bảng tính</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ImportFromSpreadsheet.Form.Form</defaultForm>
+  <tabularSections uuid="f31ed517-8362-4c6c-bb1c-22054f144288">
+    <producedTypes>
+      <objectType typeId="5cc51a5c-cdb0-4151-bb58-bd24d25037df" valueTypeId="aabf066b-4ef4-48e1-934e-780de4fd98b7"/>
+      <rowType typeId="a01f0bcb-6154-4d10-93f8-697ead8cffbc" valueTypeId="85442923-eab9-48e1-aae0-7f2bca2f1b3f"/>
+    </producedTypes>
+    <name>ImportingList</name>
+    <synonym>
+      <key>en</key>
+      <value>Import list</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Список загрузки</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Danh sách kết nhập</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="5e87ab10-a823-444d-bbbf-a1661ab5529e">
+      <name>ImportingFlag</name>
+      <synonym>
+        <key>en</key>
+        <value>Import check box</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Флаг загрузки</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Hộp kiểm kết nhập</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="aeaa2a00-e5c5-4135-906c-44899866f7fb">
+      <name>Description</name>
+      <synonym>
+        <key>en</key>
+        <value>Description</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Description</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Mô tả</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>255</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="34c19f23-a511-424b-a9b8-e78fe1636d3e">
+      <name>Ref</name>
+      <synonym>
+        <key>en</key>
+        <value>Ref</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Ссылка</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Tham chiếu</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ProductsAndServices</types>
+        <types>CatalogRef.Counterparties</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="d2085113-5e0e-4a33-8c8f-057073b633cc">
+      <name>IsNew</name>
+      <synonym>
+        <key>en</key>
+        <value>This is new</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Это новый</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Đây là mới</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="d970b4ef-9a41-4ccb-8246-af77d9931fa8">
+      <name>SKU</name>
+      <synonym>
+        <key>en</key>
+        <value>SKU</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Артикул</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Mã hiệu</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>255</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="95384d15-e77b-4281-b194-1d3f04846deb">
+      <name>Code</name>
+      <synonym>
+        <key>en</key>
+        <value>Code</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>код</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>mã</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>255</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="8a41985f-85d3-4fd2-bb4a-5429cbfe192f">
+      <name>VAT</name>
+      <synonym>
+        <key>en</key>
+        <value>VAT</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>НДС</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Thuế GTGT</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>255</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="641472ca-7a41-4063-b65b-0c8bc10543b8">
+      <name>Comment</name>
+      <synonym>
+        <key>en</key>
+        <value>Note</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Примечание</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Ghi chú</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>255</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="aa8f66a0-a145-4fba-9c5a-b0c5a2e8ac84">
+      <name>DescriptionFull</name>
+      <synonym>
+        <key>en</key>
+        <value>Full description</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Полное наименование</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Tên gọi đầy đủ</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>255</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="e181bb88-211a-4e23-8683-0b58bf88bd27">
+      <name>TIN</name>
+      <synonym>
+        <key>en</key>
+        <value>TIN</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>ИНН</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Mã số thuế</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>255</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="c3e7a5bb-f27f-402b-aab8-589a335af2cf">
+      <name>Price</name>
+      <synonym>
+        <key>en</key>
+        <value>Price</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Цена</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Đơn giá</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>255</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="497674a1-ebfa-4c25-9461-72618c6d043a">
+      <name>Quantity</name>
+      <synonym>
+        <key>en</key>
+        <value>Quantity</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Quantity</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Số lượng</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>255</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+  </tabularSections>
+  <forms uuid="279c359e-a094-4157-af0d-a625e92c44c2">
+    <name>Form</name>
+    <synonym>
+      <key>en</key>
+      <value>Form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="61dc519e-89b6-4c14-914b-b2543510532b">
+    <name>Template</name>
+    <synonym>
+      <key>en</key>
+      <value>Template</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Макет</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Khuôn in</value>
+    </synonym>
+  </templates>
+</mdclass:DataProcessor>

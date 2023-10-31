@@ -1,0 +1,1448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4a749e8c-cb35-4bc4-9b31-fb5bc0eab474">
+  <producedTypes>
+    <objectType typeId="7148efcf-1c6c-4702-b1aa-47b84b4347e2" valueTypeId="f74a9993-09fa-46f7-b9f3-1fac4bf8ebc3"/>
+    <managerType typeId="0f005862-6a6f-49ca-96d3-f3965a220fcd" valueTypeId="1090945d-2022-46fb-a559-471df72dd1b6"/>
+  </producedTypes>
+  <name>ConfigurationUpdate</name>
+  <synonym>
+    <key>en</key>
+    <value>Search and install updates</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Поиск и установка обновлений</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Tìm kiếm và cài đặt bản cập nhật</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ConfigurationUpdate.Form.Form</defaultForm>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <attributes uuid="da4a0c05-2285-434b-b7f8-83b2a0d7f23d">
+    <name>EmailAddress</name>
+    <synonym>
+      <key>en</key>
+      <value>Postal address</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Почтовый адрес</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Địa chỉ Email</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Email address for sending the report on update</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Адрес электронной почты для отправки отчета об обновлении</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Địa chỉ E-mail để gửi báo cáo về việc cập nhật</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="8afa9a0e-04c1-4cac-82bb-6767cc0594d9">
+    <name>RestoreInfobase</name>
+    <synonym>
+      <key>en</key>
+      <value>Restore Infobase</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Восстанавливать информационную базу</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Phục hồi cơ sở thông tin</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Infobase recovery is required</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Требуется восстанавливать информационную базу</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Cần khôi phục cơ sở thông tin</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="ecbe625a-55eb-437a-8dee-33fb034d4c0d">
+    <name>SendReportToEMail</name>
+    <synonym>
+      <key>en</key>
+      <value>Send report by email</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Выслать отчет на почту</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Gửi báo cáo qua bưu điện</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Enable to send the report to your email</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Включите для отправки отчета на почту</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Hãy bật để gửi báo cáo vào thư</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="5d4cefac-5dc4-4d73-8b4b-900a8464fbb2">
+    <name>UpdateDateTime</name>
+    <synonym>
+      <key>en</key>
+      <value>Update Date Time</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Дата время обновления</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ngày giờ cập nhật</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Date and time of scheduled update</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Дата и время запланированного обновления</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Ngày và giờ cập nhật dự tính</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="84796b00-79db-42ba-94d0-5bf543e09cd6">
+    <name>SaveUpdatesServerPassword</name>
+    <synonym>
+      <key>en</key>
+      <value>Remember update server password</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Запомнить пароль сервера обновлений</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Lưu mật khẩu Server cập nhật</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Remember update server password</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Запоминать пароль сервера обновлений</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Lưu mật khẩu Server cập nhật</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="948b10b3-0d7c-4dca-8816-75eb86e7881b">
+    <name>InfobaseBackupDirectoryName</name>
+    <synonym>
+      <key>en</key>
+      <value>Name of IB backup directory</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Имя каталога резервной копии ИБ</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tên thư mục bản sao lưu dự phòng cơ sở thông tin</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Name of application backup directory</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Имя каталога резервной копии программы</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tên thư mục sao lưu dự phòng chương trình</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="9de91b5a-98e4-414b-b650-b669b0159b49">
+    <name>UpdateFileName</name>
+    <synonym>
+      <key>en</key>
+      <value>Update File Name</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Имя файла обновления</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tên tệp cập nhật</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>File name with update</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Имя файла с обновлением</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tên tệp có bản cập nhật</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="840dc727-288a-4bf2-8b1a-47629d28229c">
+    <name>UseScheduleForUpdateCheck</name>
+    <synonym>
+      <key>en</key>
+      <value>Use schedule to check for update</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Использовать расписание для проверки обновления</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Sử dụng lịch biểu để kiểm tra bản cập nhật</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Check update on schedule</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Проверку обновления выполнять по расписанию</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Kiểm tra cập nhật thực hiện theo lịch biểu</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="314ac8ca-8845-40c2-b844-91beb05fb601">
+    <name>UpdateSource</name>
+    <synonym>
+      <key>en</key>
+      <value>Update Source</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Источник обновления</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Nguồn cập nhật</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Select update source</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Выбор источник получения обновления</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Chọn nguồn nhận bản cập nhật</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="3de3948d-40ff-4e0d-8445-9bf49c916161">
+    <name>SchedulerTaskCode</name>
+    <synonym>
+      <key>en</key>
+      <value>Task scheduler code</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Код задачи планировщика</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Mã nhiệm vụ của bảng kế hoạch</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Internal code of task scheduler</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Внутренний код задачи планировщика</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Mã nội bộ của nhiệm vụ lập kế hoạch</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="37ae1946-9436-47ef-8b8c-17ed0a24971c">
+    <name>UpdateServerUserCode</name>
+    <synonym>
+      <key>en</key>
+      <value>Code of update server user</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Код пользователя сервера обновлений</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Mã người sử dụng Server cập nhật</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Registration number of update server user</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Регистрационный номер пользователя сервера обновлений</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Số đăng ký của người sử dụng Server cập nhật</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="d844d861-fbe9-4391-89e3-00e505b33b33">
+    <name>NeedUpdateFile</name>
+    <synonym>
+      <key>en</key>
+      <value>Update file is required</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Нужен файл обновления</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Cần tệp cập nhật</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Select update delivery file</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Выбор файла поставки обновления</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Chọn tệp cài đặt bản cập nhật</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="c0688817-fd73-4ead-b9dd-ec966780a2c2">
+    <name>UpdatesServerPassword</name>
+    <synonym>
+      <key>en</key>
+      <value>Update Server Password</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Пароль сервера обновлений</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Mật khẩu của Server bản cập nhật</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Password for the update server</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Пароль для сервера обновлений</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Mật khẩu cho Server cập nhật</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="b1fbfbfe-766f-4018-9491-507748193808">
+    <name>SecondStart</name>
+    <synonym>
+      <key>en</key>
+      <value>Rerun</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Повторный запуск</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Khởi động lặp lại</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Update rerun</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Повторный запуск обновления</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Khởi động lặp lại cập nhật</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="e55dfadb-8e12-4808-ad90-e891a4644548">
+    <name>CheckUpdateExistsOnStart</name>
+    <synonym>
+      <key>en</key>
+      <value>Check for update on startup</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Проверять наличие обновления при запуске</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Kiểm tra sự tồn tại của bản cập nhật khi khởi động</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Check the availability of update at startup </value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>При запуске проверять наличие обновления </value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Khi khởi động kiểm tra xem có cập nhật nào không</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="a792b3dc-ac80-492b-bd94-83eb0438ba9f">
+    <name>ScheduleOfUpdateExistsCheck</name>
+    <synonym>
+      <key>en</key>
+      <value>Update check schedule</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Расписание проверки наличия обновления</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Lịch biểu kiểm tra sự tồn tại của bản cập nhật</value>
+    </synonym>
+    <type/>
+    <toolTip>
+      <key>en</key>
+      <value>Setting update check schedule</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Настройка расписание проверки наличия обновления</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tùy chỉnh lịch biểu kiểm tra bản cập nhật</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="73a093ea-1927-483b-b6f5-8f0cbd253753">
+    <name>UpdateMode</name>
+    <synonym>
+      <key>en</key>
+      <value>Update Mode</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Режим обновления</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Chế độ cập nhật</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Update installation method</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Способ установки обновления</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Phương pháp thiết lập cập nhật</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="345f04c0-0274-4e79-b523-f1fa3cf0d92a">
+    <name>UpdateResult</name>
+    <synonym>
+      <key>en</key>
+      <value>Update Result</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Результат обновления</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Kết quả cập nhật</value>
+    </synonym>
+    <type/>
+    <toolTip>
+      <key>en</key>
+      <value>Information on update result</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Информация о результате обновления</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Thông tin về kết quả cập nhật</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="f3a14787-de1b-4b65-8cb1-bc33a785821c">
+    <name>CreateBackup</name>
+    <synonym>
+      <key>en</key>
+      <value>Back up</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Создавать резервную копию</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tạo bản sao lưu dự phòng</value>
+    </synonym>
+    <comment>0 - don't create; 1 - temporary; 2 - in the specified directory</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Whether backup is required</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Требуется ли создавать резервную копию</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Có cần tạo bản sao dự phòng hay không</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="b9ba3ce3-9059-4135-9d31-725f01907431">
+    <name>TechnicalErrorInfo</name>
+    <synonym>
+      <key>en</key>
+      <value>Technical information on the error</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Техническая информация об ошибке</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Thông tin về lỗi kỹ thuật</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Technical information on update error</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Техническая информация об произошедшей ошибке во время обновления</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Thông tin kỹ thuật về lỗi xảy ra trong quá trình cập nhật</value>
+    </toolTip>
+    <multiLine>true</multiLine>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="4d2b3767-7c96-44a6-bb1b-ab74b103b90e">
+    <producedTypes>
+      <objectType typeId="bb7bfc5e-bbbb-49ea-9399-f01bcaa35039" valueTypeId="4236c254-5e7c-4ef6-ad6b-b02843a4a2ec"/>
+      <rowType typeId="75e01756-d874-4b32-84ea-5ac8e4a8cc90" valueTypeId="f6d5fea7-0e8d-4887-b24b-3ab8883f952c"/>
+    </producedTypes>
+    <name>AvailableUpdates</name>
+    <synonym>
+      <key>en</key>
+      <value>Available Updates</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Доступные обновления</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Bản cập nhật khả dụng</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="fc9fc58f-c888-41f0-9f57-70748b21706e">
+      <name>Configuration</name>
+      <synonym>
+        <key>en</key>
+        <value>Configuration</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Конфигурация</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Cấu hình</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Configuration name</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Configuration name</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Configuration name</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="fc761833-aa85-4c6d-a36c-d1ed060e3bb1">
+      <name>Vendor</name>
+      <synonym>
+        <key>en</key>
+        <value>Vendor</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Поставщик</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Nhà cung cấp</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Update supplier</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Поставщик обновления</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Nhà cung cấp cập nhật</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="f0ba2ff2-b353-4f84-8e45-23e47ee6c1b6">
+      <name>Version</name>
+      <synonym>
+        <key>en</key>
+        <value>Version</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Версия</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Phiên bản</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Configuration version number</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Номер версии конфигурации</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Số phiên bản cấu hình</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="bb8bade2-5c1b-49a6-b66f-79a3ebff86f7">
+      <name>Version1Digit</name>
+      <synonym>
+        <key>en</key>
+        <value>Version 1st digit</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Версия 1-й разряд</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Phiên bản chữ số thứ 1</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>3</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>First digit of configuration version</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Первый разряд версии конфигурации</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Chữ số đầu tiên của phiên bản cấu hình</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="33596560-3d45-4d3e-b6ec-1c22162110ad">
+      <name>Version2Digit</name>
+      <synonym>
+        <key>en</key>
+        <value>Version 2nd digit</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Версия 2-й разряд</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Phiên bản chữ số thứ 2</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>3</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Second digit of configuration version</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Второй разряд версии конфигурации</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Chữ số thứ hai trong phiên bản cấu hình</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="d3e82a06-daae-4f4d-b3f8-45a406e31664">
+      <name>Version3Digit</name>
+      <synonym>
+        <key>en</key>
+        <value>Version 3rd digit</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Версия 3-й разряд</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Phiên bản chữ số thứ 3</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>3</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Third digit of the configuration version</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Третий разряд версии конфигурации</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Chữ số thứ 3 của phiên bản cấu hình</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="af76c3c9-d8dc-4156-9e10-80ee02fcf4fe">
+      <name>Version4Digit</name>
+      <synonym>
+        <key>en</key>
+        <value>Version 4th digit</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Версия 4-й разряд</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Phiên bản chữ số thứ 4</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>3</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Fourth configuration version category</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Четвертый разряд версии конфигурации</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Chữ số thứ 5 của phiên bản cấu hình</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="ac6a184d-1247-4b54-a023-f0d16daa5fe9">
+      <name>VersionForUpdate</name>
+      <synonym>
+        <key>en</key>
+        <value>Version for Update</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Версия для обновления</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Phiên bản để cập nhật</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Version available for update</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Доступная для обновления версия</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Phiên bản khả dụng để cập nhật</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="f9af5fe6-0b4f-4d48-92a4-1f2a29972155">
+      <name>PathToUpdateFile</name>
+      <synonym>
+        <key>en</key>
+        <value>Path to the update file</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Путь к файлу обновления</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Đường dẫn đến tệp cập nhật</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Update file location</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Расположение файла обновления</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Vị trí của tệp cập nhật</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="3ca1682d-5ff5-4b2b-96c2-54d2dd5297a9">
+      <name>UpdateFile</name>
+      <synonym>
+        <key>en</key>
+        <value>Update File</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Файл обновления</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Tệp cập nhật</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Update File Name</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Имя файла обновления</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Tên tệp cập nhật</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="a687d346-73cf-4aea-a4d0-f29824f0f6f1">
+      <name>UpdateFileSize</name>
+      <synonym>
+        <key>en</key>
+        <value>Update File Size</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Размер файла обновления</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Dung lượng tệp cập nhật</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>File size for update</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Размер файла для обновления</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Dung lượng tệp để cập nhật</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="f51fda72-56d9-4b45-a775-a0e1dfbf3a27">
+      <name>PathToLocalFile</name>
+      <synonym>
+        <key>en</key>
+        <value>Path to Local File</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Путь к локальному файлу</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Đường dẫn đến tệp cục bộ</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Path to the local file on hard drive</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Путь к локальному файлу на диске</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Đường dẫn đến tệp cục bộ trên đĩa</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="8bf73614-81a4-4702-88b9-3c6f2594d204">
+      <name>PathToLocalUpdateFile</name>
+      <synonym>
+        <key>en</key>
+        <value>Path to the update local file</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Путь к локальному файлу обновления</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Đường dẫn đến tệp cục bộ của bản cập nhật</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Path to the update local file on hard drive</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Путь к локальному файлу обновления на диске</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Đường dẫn đến tệp cục bộ cập nhật trên đĩa</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="b8d4410b-f626-41b8-87c8-67102256bae2">
+      <name>LocalRelativeDirectory</name>
+      <synonym>
+        <key>en</key>
+        <value>Local Relative Directory</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Локальный относительный каталог</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Thư mục cục bộ tương ứng</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Local relative directory on the disk</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Локальный относительный каталог на диске</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Thư mục cục bộ tương ứng trên đĩa</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="484eeb5f-12af-4139-a081-4dcac067a712">
+      <name>ITSDiskNumber</name>
+      <synonym>
+        <key>en</key>
+        <value>ITS disk number</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Номер диска ИТС</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Số đĩa ITS</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>255</length>
+        </stringQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Number of ITS disk with update</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Номер диска ИТС с обновлением</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Số đĩa ITS có bản cập nhật</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="44d8556f-5abf-4b8a-bbb1-637642e0ab4e">
+      <name>PlatformVersion</name>
+      <synonym>
+        <key>en</key>
+        <value>Platform version</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Версия платформы</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Phiên bản nền tảng</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Min necessary platform version</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Минимально необходимая версия платформы</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Phiên bản nền tảng tối thiểu cần thiết</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+  </tabularSections>
+  <forms uuid="ec61075e-fbcb-494a-b790-81548a212d2b">
+    <name>Form</name>
+    <synonym>
+      <key>en</key>
+      <value>Form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="2f3bdc3c-4c5d-4fcb-85bb-932fe1747d98">
+    <name>ScheduleSetup</name>
+    <synonym>
+      <key>en</key>
+      <value>Configure schedule</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Настройка расписания</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tùy chỉnh lịch biểu</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>en</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="0c444045-302b-4dbd-a9a3-81fd40004948">
+    <name>BackupSetup</name>
+    <synonym>
+      <key>en</key>
+      <value>Backup settings</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Настройка резервной копии</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tùy chỉnh bản sao lưu dự phòng</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>en</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="16099d54-e84f-47c5-aaf3-f8ced3cba5e0">
+    <name>Browser</name>
+    <synonym>
+      <key>en</key>
+      <value>Browser</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Обозреватель</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Trình duyệt</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="1528b799-1c0f-4244-85e8-e738b827934a">
+    <name>TemplateOfConfigurationUpdateFile</name>
+    <synonym>
+      <key>en</key>
+      <value>Template of the configuration update file</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Макет файла обновления конфигурации</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Khuôn in tệp cập nhật cấu hình</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="45d79e4d-8c2a-432b-abb8-fb9046abea40">
+    <name>AdditFileOfUpdateOfConfiguration</name>
+    <synonym>
+      <key>en</key>
+      <value>Additional file for configuration update</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Доп файл обновления конфигурации</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tệp bổ sung cập nhật cấu hình</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="8f4d2fa9-c6ed-4f85-b3ef-f9214468ffc4">
+    <name>SplashOfConfigurationUpdate</name>
+    <synonym>
+      <key>en</key>
+      <value>Configuration update splash screen</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Заставка обновления конфигурации</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Họa tiết cập nhật cấu hình</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="cb73c8c2-3b09-42e9-ac26-1bd51854efb6">
+    <name>OfflineConfigurationUpdate</name>
+    <synonym>
+      <key>en</key>
+      <value>Non-interactive configuration update</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Неинтерактивное обновление конфигурации</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Cập nhật cấu hình không trực tác</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+</mdclass:DataProcessor>

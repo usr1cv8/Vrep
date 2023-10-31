@@ -1,0 +1,2214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <title>
+    <key>en</key>
+    <value>Configure data synchronization</value>
+  </title>
+  <title>
+    <key>ru</key>
+    <value>Настройка синхронизация данных</value>
+  </title>
+  <title>
+    <key>vi</key>
+    <value>Tùy chỉnh đồng bộ hóa dữ liệu</value>
+  </title>
+  <items xsi:type="form:FormGroup">
+    <name>DataSynchronizationRules</name>
+    <id>165</id>
+    <items xsi:type="form:FormGroup">
+      <name>GroupAutomaticSynchronization</name>
+      <id>166</id>
+      <items xsi:type="form:FormField">
+        <name>AutomaticSynchronization</name>
+        <id>167</id>
+        <title>
+          <key>en</key>
+          <value>Automatic synchronization</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Автоматическая синхронизация</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Tự động đồng bộ hóa</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>SynchronizationMode</segments>
+        </dataPath>
+        <titleLocation>None</titleLocation>
+        <toolTipRepresentation>ShowBottom</toolTipRepresentation>
+        <handlers>
+          <event>OnChange</event>
+          <name>AutomaticSynchronizationOnChange</name>
+        </handlers>
+        <extendedTooltip>
+          <name>AutomaticSynchronizationExtendedTooltip</name>
+          <id>212</id>
+          <title>
+            <key>en</key>
+            <value>The application automatically controls and registers the catalogs and documents changes for sending according to the synchronization conditions specified. </value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Программа автоматически отслеживает и регистрирует к отправке изменения справочников и документов в соответствии с заданными условиями синхронизации. </value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Chương trình tự động theo dõi và ghi nhận các thay đổi danh mục và chứng từ cần gửi phù hợp với điều kiện đồng bộ hóa đã xác định.</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>AutomaticSynchronizationContextMenu</name>
+          <id>168</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>RadioButtonField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
+          <columnsCount>1</columnsCount>
+          <choiceList>
+            <presentation>
+              <key>en</key>
+              <value>Automatic synchronization</value>
+            </presentation>
+            <presentation>
+              <key>ru</key>
+              <value>Автоматическая синхронизация</value>
+            </presentation>
+            <presentation>
+              <key>vi</key>
+              <value>Tự động đồng bộ hóa</value>
+            </presentation>
+            <value xsi:type="core:StringValue">
+              <value>AutomaticSynchronization</value>
+            </value>
+          </choiceList>
+          <font xsi:type="core:AutoFont">
+            <bold>true</bold>
+          </font>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>DataSendConditionsGroup</name>
+        <id>171</id>
+        <items xsi:type="form:FormGroup">
+          <name>SubgroupTermsOfDataTransmit</name>
+          <id>172</id>
+          <items xsi:type="form:Decoration">
+            <name>DocumentsSynchronizationConditionsTitle</name>
+            <id>173</id>
+            <title>
+              <key>en</key>
+              <value>Data synchronization conditions:</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Условия синхронизации данных:</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Điều kiện đồng bộ hóa dữ liệu:</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>DocumentsSynchronizationDocumentsTitleExtendedTooltip</name>
+              <id>216</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>DocumentsSynchronizationDocumentsTitleContextMenu</name>
+              <id>174</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <font xsi:type="core:FontRef">
+              <font>System.DefaultGUIFont</font>
+              <bold>true</bold>
+              <italic>false</italic>
+              <underline>false</underline>
+              <strikeout>false</strikeout>
+            </font>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>DocumentsDumpStartDate</name>
+            <id>175</id>
+            <title>
+              <key>en</key>
+              <value>Send documents from</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Отправлять документы начиная с даты</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Gửi chứng từ bắt đầu từ ngày</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>DocumentsDumpStartDate</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>DocumentsDumpStartDateExtendedTooltip</name>
+              <id>217</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>DocumentsDumpStartDateContextMenu</name>
+              <id>176</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormGroup">
+            <name>FilterByCompanies</name>
+            <id>177</id>
+            <items xsi:type="form:FormGroup">
+              <name>CompaniesFilterGroup</name>
+              <id>178</id>
+              <items xsi:type="form:FormField">
+                <name>CompaniesSyncMode</name>
+                <id>179</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <dataPath xsi:type="form:DataPath">
+                  <segments>CompaniesSyncMode</segments>
+                </dataPath>
+                <titleLocation>None</titleLocation>
+                <handlers>
+                  <event>OnChange</event>
+                  <name>SynchronizationModeCompanyOnChange</name>
+                </handlers>
+                <extendedTooltip>
+                  <name>SynchronizationModeCompanyExtendedTooltip</name>
+                  <id>220</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <contextMenu>
+                  <name>SynchronizationModeCompanyContextMenu</name>
+                  <id>180</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <autoFill>true</autoFill>
+                </contextMenu>
+                <type>RadioButtonField</type>
+                <editMode>Enter</editMode>
+                <showInHeader>true</showInHeader>
+                <headerHorizontalAlign>Left</headerHorizontalAlign>
+                <showInFooter>true</showInFooter>
+                <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
+                  <columnsCount>1</columnsCount>
+                  <choiceList>
+                    <presentation>
+                      <key>en</key>
+                      <value>By all companies</value>
+                    </presentation>
+                    <presentation>
+                      <key>ru</key>
+                      <value>по всем организациям</value>
+                    </presentation>
+                    <presentation>
+                      <key>vi</key>
+                      <value>theo tất cả doanh nghiệp</value>
+                    </presentation>
+                    <value xsi:type="core:StringValue">
+                      <value>SynchronizeDataByAllCompanies</value>
+                    </value>
+                  </choiceList>
+                  <choiceList>
+                    <presentation>
+                      <key>en</key>
+                      <value>Only by the selected companies:</value>
+                    </presentation>
+                    <presentation>
+                      <key>ru</key>
+                      <value>Только по выбранным организациям:</value>
+                    </presentation>
+                    <presentation>
+                      <key>vi</key>
+                      <value>Chỉ đối với doanh nghiệp được chọn:</value>
+                    </presentation>
+                    <value xsi:type="core:StringValue">
+                      <value>SynchronizeDataBySelectedCompaniesOnly</value>
+                    </value>
+                  </choiceList>
+                </extInfo>
+              </items>
+              <items xsi:type="form:FormGroup">
+                <name>ListGroupSelectedCompany</name>
+                <id>181</id>
+                <items xsi:type="form:Decoration">
+                  <name>Decoration5</name>
+                  <id>182</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <extendedTooltip>
+                    <name>Decoration5ExtendedTooltip</name>
+                    <id>222</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <contextMenu>
+                    <name>Decoration5ContextMenu</name>
+                    <id>183</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <autoFill>true</autoFill>
+                  </contextMenu>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <height>1</height>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:PictureDecorationExtInfo"/>
+                </items>
+                <items xsi:type="form:FormGroup">
+                  <name>Group7</name>
+                  <id>184</id>
+                  <items xsi:type="form:Decoration">
+                    <name>OpenFilterFormByCompanies</name>
+                    <id>185</id>
+                    <title>
+                      <key>en</key>
+                      <value>Select companies </value>
+                    </title>
+                    <title>
+                      <key>ru</key>
+                      <value>Выбрать организации </value>
+                    </title>
+                    <title>
+                      <key>vi</key>
+                      <value>Chọn doanh nghiệp</value>
+                    </title>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <extendedTooltip>
+                      <name>OpenFilterFormByCompaniesExtendedTooltip</name>
+                      <id>224</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>OpenFilterFormByCompaniesContextMenu</name>
+                      <id>186</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <height>1</height>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <handlers>
+                        <event>Click</event>
+                        <name>OpenFilterFormByCompanies</name>
+                      </handlers>
+                      <hyperlink>true</hyperlink>
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </items>
+                  <items xsi:type="form:Button">
+                    <name>CompanyFilterClean</name>
+                    <id>187</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <extendedTooltip>
+                      <name>ClearFilterForCompaniesExtendedTooltip</name>
+                      <id>225</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <type>UsualButton</type>
+                    <commandName>Form.Command.CompanyFilterClean</commandName>
+                    <representation>Picture</representation>
+                    <width>2</width>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <height>1</height>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <placementArea>UserCmds</placementArea>
+                    <representationInContextMenu>Auto</representationInContextMenu>
+                  </items>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <extendedTooltip>
+                    <name>Group7ExtendedTooltip</name>
+                    <id>223</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <type>UsualGroup</type>
+                  <extInfo xsi:type="form:UsualGroupExtInfo">
+                    <showLeftMargin>true</showLeftMargin>
+                    <united>true</united>
+                    <throughAlign>Auto</throughAlign>
+                    <currentRowUse>Auto</currentRowUse>
+                  </extInfo>
+                </items>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <title>
+                  <key>en</key>
+                  <value>Group selected company list</value>
+                </title>
+                <title>
+                  <key>ru</key>
+                  <value>Группа список выбранных организаций</value>
+                </title>
+                <title>
+                  <key>vi</key>
+                  <value>Nhóm danh sách doanh nghiệp được chọn</value>
+                </title>
+                <toolTip>
+                  <key>en</key>
+                  <value>Group selected company list</value>
+                </toolTip>
+                <toolTip>
+                  <key>ru</key>
+                  <value>Группа список выбранных организаций</value>
+                </toolTip>
+                <toolTip>
+                  <key>vi</key>
+                  <value>Nhóm danh sách doanh nghiệp được chọn</value>
+                </toolTip>
+                <extendedTooltip>
+                  <name>ListGroupSelectedCompanyExtendedTooltip</name>
+                  <id>221</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualGroup</type>
+                <extInfo xsi:type="form:UsualGroupExtInfo">
+                  <group>Vertical</group>
+                  <showLeftMargin>true</showLeftMargin>
+                  <united>true</united>
+                  <throughAlign>Auto</throughAlign>
+                  <currentRowUse>Auto</currentRowUse>
+                </extInfo>
+              </items>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <title>
+                <key>en</key>
+                <value>Group filter by companies</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Группа отбор по организациям</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Nhóm lọc theo doanh nghiệp</value>
+              </title>
+              <toolTip>
+                <key>en</key>
+                <value>Group filter by companies</value>
+              </toolTip>
+              <toolTip>
+                <key>ru</key>
+                <value>Группа отбор по организациям</value>
+              </toolTip>
+              <toolTip>
+                <key>vi</key>
+                <value>Nhóm lọc theo doanh nghiệp</value>
+              </toolTip>
+              <horizontalStretch>true</horizontalStretch>
+              <extendedTooltip>
+                <name>GroupFilterForCompaniesExtendedTooltip</name>
+                <id>219</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualGroup</type>
+              <extInfo xsi:type="form:UsualGroupExtInfo">
+                <showLeftMargin>true</showLeftMargin>
+                <united>true</united>
+                <throughAlign>Auto</throughAlign>
+                <currentRowUse>Auto</currentRowUse>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>en</key>
+              <value>Filter by companies</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Отбор по организациям</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Lọc theo doanh nghiệp</value>
+            </title>
+            <toolTip>
+              <key>en</key>
+              <value>Filter by companies</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Отбор по организациям</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Lọc theo doanh nghiệp</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>FilterForCompaniesExtendedTooltip</name>
+              <id>218</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualGroup</type>
+            <extInfo xsi:type="form:UsualGroupExtInfo">
+              <group>Vertical</group>
+              <representation>NormalSeparation</representation>
+              <showLeftMargin>true</showLeftMargin>
+              <united>true</united>
+              <throughAlign>Auto</throughAlign>
+              <currentRowUse>Auto</currentRowUse>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormGroup">
+            <name>DocumentTypesFilter</name>
+            <id>188</id>
+            <items xsi:type="form:FormGroup">
+              <name>DocumentKindsFilterGroup</name>
+              <id>189</id>
+              <items xsi:type="form:FormField">
+                <name>DocumentSynchronizationMode</name>
+                <id>190</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <dataPath xsi:type="form:DataPath">
+                  <segments>DocumentSynchronizationMode</segments>
+                </dataPath>
+                <titleLocation>None</titleLocation>
+                <handlers>
+                  <event>OnChange</event>
+                  <name>DocumentSynchronizationModeOnChange</name>
+                </handlers>
+                <extendedTooltip>
+                  <name>DocumentSynchronizationModeExtendedTooltip</name>
+                  <id>228</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <contextMenu>
+                  <name>DocumentSynchronizationModeContextMenu</name>
+                  <id>191</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <autoFill>true</autoFill>
+                </contextMenu>
+                <type>RadioButtonField</type>
+                <editMode>Enter</editMode>
+                <showInHeader>true</showInHeader>
+                <headerHorizontalAlign>Left</headerHorizontalAlign>
+                <showInFooter>true</showInFooter>
+                <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
+                  <columnsCount>1</columnsCount>
+                  <choiceList>
+                    <presentation>
+                      <key>en</key>
+                      <value>All documents</value>
+                    </presentation>
+                    <presentation>
+                      <key>ru</key>
+                      <value>Все документы</value>
+                    </presentation>
+                    <presentation>
+                      <key>vi</key>
+                      <value>Tất cả chứng từ</value>
+                    </presentation>
+                    <value xsi:type="core:StringValue">
+                      <value>SynchronizateDataByAllDocuments</value>
+                    </value>
+                  </choiceList>
+                  <choiceList>
+                    <presentation>
+                      <key>en</key>
+                      <value>Only the selected document kinds:</value>
+                    </presentation>
+                    <presentation>
+                      <key>ru</key>
+                      <value>Только выбранные виды документов:</value>
+                    </presentation>
+                    <presentation>
+                      <key>vi</key>
+                      <value>Chỉ dạng chứng từ được chọn:</value>
+                    </presentation>
+                    <value xsi:type="core:StringValue">
+                      <value>DataSynchronizeOnlyForSelectedOfDocumentKinds</value>
+                    </value>
+                  </choiceList>
+                </extInfo>
+              </items>
+              <items xsi:type="form:FormGroup">
+                <name>ListGroupSelectedDocumentTypes</name>
+                <id>192</id>
+                <items xsi:type="form:Decoration">
+                  <name>Decoration2</name>
+                  <id>193</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <extendedTooltip>
+                    <name>Decoration2ExtendedTooltip</name>
+                    <id>230</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <contextMenu>
+                    <name>Decoration2ContextMenu</name>
+                    <id>194</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <autoFill>true</autoFill>
+                  </contextMenu>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <height>1</height>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:PictureDecorationExtInfo"/>
+                </items>
+                <items xsi:type="form:FormGroup">
+                  <name>Group6</name>
+                  <id>195</id>
+                  <items xsi:type="form:Decoration">
+                    <name>OpenFormFilterByDocumentTypes</name>
+                    <id>196</id>
+                    <title>
+                      <key>en</key>
+                      <value>Select documents types </value>
+                    </title>
+                    <title>
+                      <key>ru</key>
+                      <value>Выбрать виды документов </value>
+                    </title>
+                    <title>
+                      <key>vi</key>
+                      <value>Chọn dạng chứng từ</value>
+                    </title>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <extendedTooltip>
+                      <name>OpenFormFilterByDocumentTypesExtendedTooltip</name>
+                      <id>232</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>OpenFormFilterByDocumentTypesContextMenu</name>
+                      <id>197</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <height>1</height>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <handlers>
+                        <event>Click</event>
+                        <name>OpenFormFilterByDocumentTypes</name>
+                      </handlers>
+                      <hyperlink>true</hyperlink>
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </items>
+                  <items xsi:type="form:Button">
+                    <name>ClearDocumentTypesFilter</name>
+                    <id>198</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <extendedTooltip>
+                      <name>ClearDocumentTypesFilterExtendedTooltip</name>
+                      <id>233</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <type>UsualButton</type>
+                    <commandName>Form.Command.ClearDocumentTypesFilter</commandName>
+                    <representation>Picture</representation>
+                    <width>2</width>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <height>1</height>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <placementArea>UserCmds</placementArea>
+                    <representationInContextMenu>Auto</representationInContextMenu>
+                  </items>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <extendedTooltip>
+                    <name>Group6ExtendedTooltip</name>
+                    <id>231</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <type>UsualGroup</type>
+                  <extInfo xsi:type="form:UsualGroupExtInfo">
+                    <showLeftMargin>true</showLeftMargin>
+                    <united>true</united>
+                    <throughAlign>Auto</throughAlign>
+                    <currentRowUse>Auto</currentRowUse>
+                  </extInfo>
+                </items>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <title>
+                  <key>en</key>
+                  <value>Group selected document kind list</value>
+                </title>
+                <title>
+                  <key>ru</key>
+                  <value>Группа список выбранных видов документов</value>
+                </title>
+                <title>
+                  <key>vi</key>
+                  <value>Nhóm danh sách dạng chứng từ được chọn</value>
+                </title>
+                <toolTip>
+                  <key>en</key>
+                  <value>Group selected document kind list</value>
+                </toolTip>
+                <toolTip>
+                  <key>ru</key>
+                  <value>Группа список выбранных видов документов</value>
+                </toolTip>
+                <toolTip>
+                  <key>vi</key>
+                  <value>Nhóm danh sách dạng chứng từ được chọn</value>
+                </toolTip>
+                <extendedTooltip>
+                  <name>ListGroupSelectedDocumentTypesExtendedTooltip</name>
+                  <id>229</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualGroup</type>
+                <extInfo xsi:type="form:UsualGroupExtInfo">
+                  <group>Vertical</group>
+                  <showLeftMargin>true</showLeftMargin>
+                  <united>true</united>
+                  <throughAlign>Auto</throughAlign>
+                  <currentRowUse>Auto</currentRowUse>
+                </extInfo>
+              </items>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <title>
+                <key>en</key>
+                <value>Group filter by document kinds</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Группа отбор по видам документов</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Nhóm lọc theo dạng chứng từ</value>
+              </title>
+              <toolTip>
+                <key>en</key>
+                <value>Group filter by document kinds</value>
+              </toolTip>
+              <toolTip>
+                <key>ru</key>
+                <value>Группа отбор по видам документов</value>
+              </toolTip>
+              <toolTip>
+                <key>vi</key>
+                <value>Nhóm lọc theo dạng chứng từ</value>
+              </toolTip>
+              <horizontalStretch>true</horizontalStretch>
+              <extendedTooltip>
+                <name>GroupDocumentTypesFilterExtendedTooltip</name>
+                <id>227</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualGroup</type>
+              <extInfo xsi:type="form:UsualGroupExtInfo">
+                <showLeftMargin>true</showLeftMargin>
+                <united>true</united>
+                <throughAlign>Auto</throughAlign>
+                <currentRowUse>Auto</currentRowUse>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>en</key>
+              <value>Filter by document kinds</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Отбор по видам документов</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Lọc theo dạng chứng từ</value>
+            </title>
+            <toolTip>
+              <key>en</key>
+              <value>Filter by document kinds</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Отбор по видам документов</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Lọc theo dạng chứng từ</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>DocumentTypesFilterExtendedTooltip</name>
+              <id>226</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualGroup</type>
+            <extInfo xsi:type="form:UsualGroupExtInfo">
+              <group>Vertical</group>
+              <showLeftMargin>true</showLeftMargin>
+              <united>true</united>
+              <throughAlign>Auto</throughAlign>
+              <currentRowUse>Auto</currentRowUse>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>en</key>
+            <value>Data sending conditions</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Условия отправки данных</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Điều kiện gửi dữ liệu</value>
+          </title>
+          <toolTip>
+            <key>en</key>
+            <value>Data sending conditions</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Условия отправки данных</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Điều kiện gửi dữ liệu</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>SubgroupTermsOfDataTransmitExtendedTooltip</name>
+            <id>215</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>Vertical</group>
+            <representation>NormalSeparation</representation>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>en</key>
+          <value>Group data sending conditions</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Группа условия отправки данных</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Nhóm điều kiện gửi dữ liệu</value>
+        </title>
+        <toolTip>
+          <key>en</key>
+          <value>Group data sending conditions</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>Группа условия отправки данных</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Nhóm điều kiện gửi dữ liệu</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>DataSendConditionsGroupExtendedTooltip</name>
+          <id>214</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Group automatic synchronization</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Группа автоматическая синхронизация</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Nhóm đồng bộ hóa tự động</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Group automatic synchronization</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Группа автоматическая синхронизация</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Nhóm đồng bộ hóa tự động</value>
+      </toolTip>
+      <horizontalStretch>true</horizontalStretch>
+      <extendedTooltip>
+        <name>GroupAutomaticSynchronizationExtendedTooltip</name>
+        <id>211</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
+        <representation>StrongSeparation</representation>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>ManualSynchronizationGroup</name>
+      <id>199</id>
+      <items xsi:type="form:FormField">
+        <name>ManualSynchronization</name>
+        <id>200</id>
+        <title>
+          <key>en</key>
+          <value>Manual synchronization</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Ручная синхронизация</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Đồng bộ hóa thủ công</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>SynchronizationMode</segments>
+        </dataPath>
+        <titleLocation>None</titleLocation>
+        <toolTipRepresentation>ShowBottom</toolTipRepresentation>
+        <handlers>
+          <event>OnChange</event>
+          <name>ManualSynchronizationOnChange</name>
+        </handlers>
+        <extendedTooltip>
+          <name>ManualSynchronizationExtendedTooltip</name>
+          <id>235</id>
+          <title>
+            <key>en</key>
+            <value>The application automatically registers for sending only changes of catalog data. Documents are sent manually and users choose the documents to send. Users also control relevance of documents in the &quot;Enterprise Accounting&quot; infobase.</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Программа автоматически региструет к отправке только изменения данных справочников. Отправка документов выполняется вручную, и пользователь самостоятельно определяет состав передаваемых документов. При этом контроль актуальности документов в информационной базе &quot;Бухгалтерия предприятия&quot; он также выполняет самостоятельно.</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Chương trình tự động ghi nhận chỉ các thay đổi của danh mục này cần gửi. Việc gửi chứng từ được thực hiện thủ công và người sử dụng tự xác định thành phần chứng từ được chuyển. Lúc này, việc kiểm soát tính hiện hoạt của chứng từ trong cơ sở thông tin &quot;Kế toán doanh nghiệp&quot; mà nó đang tự thực hiện.</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ManualSynchronizationContextMenu</name>
+          <id>201</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>RadioButtonField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
+          <columnsCount>1</columnsCount>
+          <choiceList>
+            <presentation>
+              <key>en</key>
+              <value>Manual synchronization</value>
+            </presentation>
+            <presentation>
+              <key>ru</key>
+              <value>Ручная синхронизация</value>
+            </presentation>
+            <presentation>
+              <key>vi</key>
+              <value>Đồng bộ hóa thủ công</value>
+            </presentation>
+            <value xsi:type="core:StringValue">
+              <value>ManualSynchronization</value>
+            </value>
+          </choiceList>
+          <font xsi:type="core:AutoFont">
+            <bold>true</bold>
+          </font>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Group manual synchronization</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Группа ручная синхронизация</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Nhóm đồng bộ thủ công</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Group manual synchronization</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Группа ручная синхронизация</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Nhóm đồng bộ thủ công</value>
+      </toolTip>
+      <horizontalStretch>true</horizontalStretch>
+      <extendedTooltip>
+        <name>GroupManualSynchronizationExtendedTooltip</name>
+        <id>234</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
+        <representation>StrongSeparation</representation>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Data synchronization rules</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Правила синхронизации данных</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Quy tắc đồng bộ hóa dữ liệu</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Data synchronization rules</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Правила синхронизации данных</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Quy tắc đồng bộ hóa dữ liệu</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>SynchronizationDataRulesExtendedTooltip</name>
+      <id>210</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <autoCommandBar>
+    <name>FormCommandBar</name>
+    <id>-1</id>
+    <items xsi:type="form:Button">
+      <name>FormWriteAndClose</name>
+      <id>164</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>FormWriteAndCloseExtendedTooltip</name>
+        <id>209</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.WriteAndClose</commandName>
+      <representation>Auto</representation>
+      <defaultButton>true</defaultButton>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <horizontalAlign>Left</horizontalAlign>
+  </autoCommandBar>
+  <handlers>
+    <event>ChoiceProcessing</event>
+    <name>ChoiceProcessing</name>
+  </handlers>
+  <handlers>
+    <event>BeforeClose</event>
+    <name>BeforeClose</name>
+  </handlers>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>OnCreateAtServer</name>
+  </handlers>
+  <windowOpeningMode>LockOwnerWindow</windowOpeningMode>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <allowFormCustomize>true</allowFormCustomize>
+  <enabled>true</enabled>
+  <verticalScroll>UseIfNecessary</verticalScroll>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>CompaniesSyncMode</name>
+    <title>
+      <key>en</key>
+      <value>Company synchronization mode</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Режим синхронизации организаций</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Chế độ đồng bộ hóa doanh nghiệp</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>DocumentSynchronizationMode</name>
+    <title>
+      <key>en</key>
+      <value>Document synchronization mode</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Режим синхронизации документов</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Chế độ đồng bộ hóa chứng từ</value>
+    </title>
+    <id>5</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>Companies</name>
+    <title>
+      <key>en</key>
+      <value>Companies</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Компании</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Doanh nghiệp</value>
+    </title>
+    <id>3</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Company</name>
+      <title>
+        <key>en</key>
+        <value>Company</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Организация</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Doanh nghiệp</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>CatalogRef.Companies</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Use</name>
+      <title>
+        <key>en</key>
+        <value>Use</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Использовать</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Sử dụng</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>RefUUID</name>
+      <title>
+        <key>en</key>
+        <value>Unique reference identifier</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Уникальный идентификатор ссылки</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Tên tham chiếu duy nhất</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>DocumentKinds</name>
+    <title>
+      <key>en</key>
+      <value>Document kinds</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Виды документов</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Dạng chứng từ</value>
+    </title>
+    <id>6</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>MetadataObjectName</name>
+      <title>
+        <key>en</key>
+        <value>metadata object name</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Имя объекта метаданных</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Tên đối tượng metadata</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Presentation</name>
+      <title>
+        <key>en</key>
+        <value>Presentation</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Представление</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Trình bày</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Use</name>
+      <title>
+        <key>en</key>
+        <value>Use</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Использовать</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Sử dụng</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>DocumentType</name>
+      <title>
+        <key>en</key>
+        <value>Document type</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Тип документа</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Kiểu chứng từ</value>
+      </title>
+      <id>4</id>
+      <valueType>
+        <types>DocumentRef</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>RefUUID</name>
+      <title>
+        <key>en</key>
+        <value>Unique reference identifier</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Уникальный идентификатор ссылки</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Tên tham chiếu duy nhất</value>
+      </title>
+      <id>5</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>UseDocumentTypesFilter</name>
+    <title>
+      <key>en</key>
+      <value>Use filter by document kinds</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Использовать отбор по видам документов</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Sử dụng bộ lọc theo dạng chứng từ</value>
+    </title>
+    <id>8</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>DocumentsDumpStartDate</name>
+    <title>
+      <key>en</key>
+      <value>Document export start date</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Дата начала выгрузки документов</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Ngày bắt đầu kết xuất chứng từ</value>
+    </title>
+    <id>1</id>
+    <valueType>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>UseCompaniesFilter</name>
+    <title>
+      <key>en</key>
+      <value>Use filter by companies</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Использовать отбор по организациям</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Sử dụng bộ lọc theo doanh nghiệp</value>
+    </title>
+    <id>10</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>FilterSettingsAtNode</name>
+    <title>
+      <key>en</key>
+      <value>Configure filters on node</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Настройка отборов на узле</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Tùy chỉnh bộ lọc tại nút</value>
+    </title>
+    <id>11</id>
+    <valueType/>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>SynchronizationMode</name>
+    <title>
+      <key>en</key>
+      <value>Synchronization mode</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Режим синхронизации</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Chế độ đồng bộ hóa</value>
+    </title>
+    <id>4</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ManualExchange</name>
+    <title>
+      <key>en</key>
+      <value>Manual exchange</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Ручной обмен</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Trao đổi thủ công</value>
+    </title>
+    <id>9</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ContextDetails</name>
+    <title>
+      <key>en</key>
+      <value>Context description</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Описание контекста</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Mô tả nội dung</value>
+    </title>
+    <id>12</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>Context</name>
+    <title>
+      <key>en</key>
+      <value>Context</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Контекст</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Nội dung</value>
+    </title>
+    <id>13</id>
+    <valueType/>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>Attributes</name>
+    <title>
+      <key>en</key>
+      <value>Attributes</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Реквизиты</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Mục tin</value>
+    </title>
+    <id>14</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>CorrespondentVersion</name>
+    <title>
+      <key>en</key>
+      <value>Correspondent version</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Версия корреспондента</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Phiên bản nơi trao đổi tin</value>
+    </title>
+    <id>15</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>CorrespondentInfobaseNodeFilterSetup</name>
+    <title>
+      <key>en</key>
+      <value>Configure filters on correspondent base node</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Настройка отборов на узле базы корреспондента</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Tùy chỉnh lọc tại nút cơ sở nơi trao đổi tin</value>
+    </title>
+    <id>16</id>
+    <valueType/>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <formCommands>
+    <name>CompanyFilterClean</name>
+    <title>
+      <key>en</key>
+      <value>Clear filter by companies</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Очистить отбор по организациям</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Xóa lọc theo doanh nghiệp?</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>en</key>
+      <value>Clear filter by companies</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Очистить отбор по организациям</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Xóa lọc theo doanh nghiệp?</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.InputFieldClear</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>CompanyFilterClean</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ClearDocumentTypesFilter</name>
+    <title>
+      <key>en</key>
+      <value>Clear selection by document kinds</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Очистить отбор по видам документов</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Xóa lọc theo các dạng chứng từ</value>
+    </title>
+    <id>2</id>
+    <toolTip>
+      <key>en</key>
+      <value>Clear selection by document kinds</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Очистить отбор по видам документов</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Xóa lọc theo các dạng chứng từ</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.InputFieldClear</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ClearDocumentTypesFilter</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>WriteAndClose</name>
+    <title>
+      <key>en</key>
+      <value>Save and close</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Сохранить и закрыть</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Lưu và đóng</value>
+    </title>
+    <id>3</id>
+    <toolTip>
+      <key>en</key>
+      <value>Save and close</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Сохранить и закрыть</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Lưu và đóng</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>WriteAndClose</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <parameters>
+    <name>Settings</name>
+    <valueType/>
+  </parameters>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+  <extInfo xsi:type="form:ObjectFormExtInfo">
+    <handlers>
+      <event>BeforeWriteAtServer</event>
+      <name>BeforeWriteAtServer</name>
+    </handlers>
+  </extInfo>
+</form:Form>

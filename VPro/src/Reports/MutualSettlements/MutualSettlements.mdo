@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9edc37d0-364a-4d22-bd66-4632b8b1bb62">
+  <producedTypes>
+    <objectType typeId="401d2d0d-3146-4b7b-b732-18b92c551088" valueTypeId="ba3866fb-9728-43d3-9330-42516be00ead"/>
+    <managerType typeId="f3964b15-2cc7-491d-bb7e-0f19cde85a33" valueTypeId="60e19e8d-ba7e-48f8-85c9-8a5bb94ccd61"/>
+  </producedTypes>
+  <name>MutualSettlements</name>
+  <synonym>
+    <key>en</key>
+    <value>Mutual settlements</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Взаиморасчеты</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Hạch toán công nợ</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <mainDataCompositionSchema>Report.MutualSettlements.Template.MainDataCompositionSchema</mainDataCompositionSchema>
+  <variantsStorage>SettingsStorage.ReportsVariantsStorage</variantsStorage>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <explanation>
+    <key>en</key>
+    <value>Report on mutual settlements with counterparties (customers and suppliers)</value>
+  </explanation>
+  <explanation>
+    <key>ru</key>
+    <value>Отчет по взаиморасчетам с контрагентами (с покупателями и поставщиками)</value>
+  </explanation>
+  <explanation>
+    <key>vi</key>
+    <value>Báo cáo công nợ với đối tác (với khách hàng và nhà cung cấp)</value>
+  </explanation>
+  <forms uuid="1c3b2213-f6e0-475f-b0b0-d42258176932">
+    <name>ReportFormAdditional</name>
+    <synonym>
+      <key>en</key>
+      <value>Additional report form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета дополнительная</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu báo cáo bổ sung</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="4ba3326e-0a22-4b9a-b2f1-8407d5f21919">
+    <name>MainDataCompositionSchema</name>
+    <synonym>
+      <key>en</key>
+      <value>Main data composition schema</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Sơ đồ dàn dựng dữ liệu chính</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <commands uuid="2c6c6ecf-7183-4d22-a03a-efa3cbd11244">
+    <name>MutualSettlements</name>
+    <synonym>
+      <key>en</key>
+      <value>Mutual settlements</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Взаиморасчеты</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Hạch toán công nợ</value>
+    </synonym>
+    <group>FormNavigationPanelImportant</group>
+    <commandParameterType>
+      <types>DocumentRef.CustomerInvoice</types>
+      <types>DocumentRef.AgentReport</types>
+      <types>DocumentRef.SupplierInvoice</types>
+      <types>DocumentRef.AcceptanceCertificate</types>
+      <types>DocumentRef.PaymentExpense</types>
+      <types>DocumentRef.ProcessingReport</types>
+      <types>DocumentRef.CashReceipt</types>
+      <types>DocumentRef.CustomerOrder</types>
+      <types>DocumentRef.InvoiceForPayment</types>
+      <types>DocumentRef.SubcontractorReport</types>
+      <types>DocumentRef.ReportToPrincipal</types>
+      <types>DocumentRef.CashPayment</types>
+      <types>DocumentRef.PurchaseOrder</types>
+      <types>DocumentRef.PaymentReceipt</types>
+      <types>DocumentRef.SupplierInvoiceForPayment</types>
+      <types>DocumentRef.AdditionalCosts</types>
+    </commandParameterType>
+    <parameterUseMode>Multiple</parameterUseMode>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:Report>

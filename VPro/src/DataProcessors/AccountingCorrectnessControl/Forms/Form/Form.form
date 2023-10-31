@@ -1,0 +1,4568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <title>
+    <key>en</key>
+    <value>Accounting analysis wizard</value>
+  </title>
+  <title>
+    <key>ru</key>
+    <value>Помощник анализа ведения учета</value>
+  </title>
+  <title>
+    <key>vi</key>
+    <value>Trợ giúp phân tích tiến hành kế toán</value>
+  </title>
+  <items xsi:type="form:FormGroup">
+    <name>Settings</name>
+    <id>68</id>
+    <items xsi:type="form:FormGroup">
+      <name>OutOfContext</name>
+      <id>127</id>
+      <items xsi:type="form:Button">
+        <name>PeriodMinus</name>
+        <id>134</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>PeriodMinusExtendedTooltip</name>
+          <id>135</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualButton</type>
+        <commandName>Form.Command.PeriodMinus</commandName>
+        <representation>Picture</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>PeriodPresentation</name>
+        <id>69</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>PeriodPresentation</segments>
+        </dataPath>
+        <titleLocation>None</titleLocation>
+        <extendedTooltip>
+          <name>PeriodPresentationExtendedTooltip</name>
+          <id>102</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>PeriodPresentationContextMenu</name>
+          <id>70</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <readOnly>true</readOnly>
+        <horizontalAlign>Center</horizontalAlign>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+        </extInfo>
+      </items>
+      <items xsi:type="form:Button">
+        <name>PeriodPlus</name>
+        <id>136</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>PeriodPlusExtendedTooltip</name>
+          <id>137</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualButton</type>
+        <commandName>Form.Command.PeriodPlus</commandName>
+        <representation>Picture</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>Company</name>
+        <id>71</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Company</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>CounterpartyExtendedTooltip</name>
+          <id>103</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>CounterpartyContextMenu</name>
+          <id>72</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <wrap>true</wrap>
+          <autoMarkIncomplete>true</autoMarkIncomplete>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Without context</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Без контекста</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Không có ngữ cảnh</value>
+      </title>
+      <extendedTooltip>
+        <name>OutOfContextExtendedTooltip</name>
+        <id>128</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>InContextOf</name>
+      <id>129</id>
+      <items xsi:type="form:Decoration">
+        <name>PeriodCompanyLabel</name>
+        <id>131</id>
+        <title>
+          <key>en</key>
+          <value>Label period company</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Надпись период организация</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Nhãn kỳ doanh nghiệp</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>PeriodCompanyLabelExtendedTooltip</name>
+          <id>133</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>PeriodCompanyLabelContextMenu</name>
+          <id>132</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <font xsi:type="core:FontRef">
+          <font>System.DefaultGUIFont</font>
+          <height>14.0</height>
+          <bold>false</bold>
+          <italic>false</italic>
+          <underline>false</underline>
+          <strikeout>false</strikeout>
+        </font>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>With context</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>С контекстом</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Với bối cảnh</value>
+      </title>
+      <extendedTooltip>
+        <name>InContextOfExtendedTooltip</name>
+        <id>130</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <extendedTooltip>
+      <name>SettingsExtendedTooltip</name>
+      <id>101</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>Tables</name>
+    <id>3</id>
+    <items xsi:type="form:FormGroup">
+      <name>Sections</name>
+      <id>78</id>
+      <items xsi:type="form:Table">
+        <name>SectionTree</name>
+        <id>53</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>SectionTree</segments>
+        </dataPath>
+        <titleLocation>None</titleLocation>
+        <items xsi:type="form:FormField">
+          <name>SectionTreeLevel</name>
+          <id>56</id>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>SectionTree.Level</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>SectionTreeExtendedTooltipLevel</name>
+            <id>107</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>SectionTreeContextMenuLevel</name>
+            <id>57</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>SectionTreeAccountingSection</name>
+          <id>58</id>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>SectionTree.AccountingSection</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>SectionTreeAccountingSectionExtendedTooltip</name>
+            <id>108</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>SectionTreeAccountingSectionContextMenu</name>
+            <id>59</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>EnterOnInput</editMode>
+          <autoCellHeight>true</autoCellHeight>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>SectionTreeAnalysisExecuted</name>
+          <id>60</id>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>SectionTree.AnalysisExecuted</segments>
+          </dataPath>
+          <titleLocation>None</titleLocation>
+          <extendedTooltip>
+            <name>SectionTreeAnalysisExecutedExtendedTooltip</name>
+            <id>109</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>SectionTreeAnalysisExecutedContextMenu</name>
+            <id>61</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>CheckBoxField</type>
+          <readOnly>true</readOnly>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>SectionTreeAccountingSectionPresentation</name>
+          <id>62</id>
+          <title>
+            <key>en</key>
+            <value>Accounting section</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Раздел учета</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Phần hành kế toán</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>SectionTree.AccountingSectionPresentation</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>SectionTreeAccountingSectionPresentationExtendedTooltip</name>
+            <id>110</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>SectionTreeAccountingSectionPresentationContextMenu</name>
+            <id>63</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <readOnly>true</readOnly>
+          <editMode>EnterOnInput</editMode>
+          <autoCellHeight>true</autoCellHeight>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <horizontalStretch>false</horizontalStretch>
+            <verticalStretch>false</verticalStretch>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>SectionTreeSectionNumber</name>
+          <id>66</id>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>SectionTree.SectionNumber</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>SectionTreeSectionNumberExtendedTooltip</name>
+            <id>111</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>SectionTreeSectionNumberContextMenu</name>
+            <id>67</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>SectionTreeTreeLineNumber</name>
+          <id>76</id>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>SectionTree.TreeLineNumber</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>SectionTreeTreeLineNumberExtendedTooltip</name>
+            <id>112</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>SectionTreeTreeLineNumberContextMenu</name>
+            <id>77</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <commandBarLocation>None</commandBarLocation>
+        <autoCommandBar>
+          <name>SectionTreeCommandBar</name>
+          <id>55</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <horizontalAlign>Left</horizontalAlign>
+          <autoFill>true</autoFill>
+        </autoCommandBar>
+        <handlers>
+          <event>OnActivateRow</event>
+          <name>SectionTreeOnActivateRow</name>
+        </handlers>
+        <searchStringAddition>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <name>SectionTreeSearchString</name>
+          <id>138</id>
+          <extendedTooltip>
+            <name>SectionTreeSearchStringExtendedTooltip</name>
+            <id>140</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>SectionTreeSearchStringContextMenu</name>
+            <id>139</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <source>SectionTreeSearchString</source>
+          <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </searchStringAddition>
+        <viewStatusAddition>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <name>SectionTreeViewStatus</name>
+          <id>141</id>
+          <extendedTooltip>
+            <name>SectionTreeViewStatusExtendedTooltip</name>
+            <id>143</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>SectionTreeViewStatusContextMenu</name>
+            <id>142</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>ViewStatusAddition</type>
+          <source>SectionTreeViewStatus</source>
+          <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </viewStatusAddition>
+        <searchControlAddition>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <name>SectionTreeSearchControl</name>
+          <id>144</id>
+          <extendedTooltip>
+            <name>SectionTreeSearchControlExtendedTooltip</name>
+            <id>146</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>SectionTreeSearchControlContextMenu</name>
+            <id>145</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>SearchControlAddition</type>
+          <source>SectionTreeSearchControl</source>
+          <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </searchControlAddition>
+        <extendedTooltip>
+          <name>SectionTreeExtendedTooltip</name>
+          <id>106</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>SectionTreeContextMenu</name>
+          <id>54</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <representation>Tree</representation>
+        <width>50</width>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <autoMaxRowsCount>true</autoMaxRowsCount>
+        <header>true</header>
+        <headerHeight>1</headerHeight>
+        <footerHeight>1</footerHeight>
+        <horizontalScrollBar>AutoUse</horizontalScrollBar>
+        <verticalScrollBar>AutoUse</verticalScrollBar>
+        <horizontalLines>true</horizontalLines>
+        <verticalLines>true</verticalLines>
+        <autoInsertNewRow>true</autoInsertNewRow>
+        <searchOnInput>Auto</searchOnInput>
+        <initialListView>Auto</initialListView>
+        <initialTreeView>ExpandAllLevels</initialTreeView>
+        <verticalStretch>true</verticalStretch>
+        <rowPictureDataPath xsi:type="form:DataPath">
+          <segments>SectionTree.PictureIndex</segments>
+        </rowPictureDataPath>
+        <rowsPicture xsi:type="core:PictureRef">
+          <picture>CommonPicture.AccountControlResults</picture>
+        </rowsPicture>
+        <searchStringLocation>None</searchStringLocation>
+        <viewStatusLocation>None</viewStatusLocation>
+        <searchControlLocation>None</searchControlLocation>
+      </items>
+      <items xsi:type="form:Decoration">
+        <name>Legend</name>
+        <id>79</id>
+        <title>
+          <key>en</key>
+          <value>States of sections after analysis:</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Состояния разделов после выполнения анализа:</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Trạng thái phần hành sau khi phân tích:</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>LegendExtendedTooltip</name>
+          <id>113</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>LegendContextMenu</name>
+          <id>80</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <textColor xsi:type="core:ColorRef">
+          <color>Style.FieldSelectionBackColor</color>
+        </textColor>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>NoErrorsGroup</name>
+        <id>81</id>
+        <items xsi:type="form:Decoration">
+          <name>NoErrorsPicture</name>
+          <id>82</id>
+          <title>
+            <key>en</key>
+            <value>Picture no errors</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Картинка ошибок нет</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Hình vẽ không có lỗi</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>NoErrorsPictureExtendedTooltip</name>
+            <id>115</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>NoErrorsPictureContextMenu</name>
+            <id>83</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <width>2</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <height>1</height>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:PictureDecorationExtInfo">
+            <picture xsi:type="core:PictureRef">
+              <picture>CommonPicture.ErrorsNotNoticed16</picture>
+            </picture>
+          </extInfo>
+        </items>
+        <items xsi:type="form:Decoration">
+          <name>LabelNoError</name>
+          <id>84</id>
+          <title>
+            <key>en</key>
+            <value> - errors are not detected</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value> - ошибок не обнаружено</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value> - không tìm thấy lỗi</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>NoErrorLabelExtendedTooltip</name>
+            <id>116</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>NoErrorLabelContextMenu</name>
+            <id>85</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <textColor xsi:type="core:ColorRef">
+            <color>Style.FieldSelectionBackColor</color>
+          </textColor>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>en</key>
+          <value>Group no errors</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Группа ошибок нет</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Nhóm không có lỗi</value>
+        </title>
+        <extendedTooltip>
+          <name>NoErrorsGroupExtendedTooltip</name>
+          <id>114</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>DetectedErrorsGroup</name>
+        <id>86</id>
+        <items xsi:type="form:Decoration">
+          <name>DetectedErrorsPicture</name>
+          <id>87</id>
+          <title>
+            <key>en</key>
+            <value>Picture errors detected</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Картика обнаружены ошибки</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Hình vẽ hiển thị lỗi</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>DetectedErrorsPictureExtendedTooltip</name>
+            <id>118</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>DetectedErrorsPictureContextMenu</name>
+            <id>88</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <width>2</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <height>1</height>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:PictureDecorationExtInfo">
+            <picture xsi:type="core:PictureRef">
+              <picture>CommonPicture.Errors16AreNoticed</picture>
+            </picture>
+          </extInfo>
+        </items>
+        <items xsi:type="form:Decoration">
+          <name>DetectedErrorsLabel</name>
+          <id>89</id>
+          <title>
+            <key>en</key>
+            <value> - errors are detected</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>- обнаружены ошибки</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>- đã tìm thấy lỗi</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>DetectedErrorsLabelExtendedTooltip</name>
+            <id>119</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>DetectedErrorsLabelContextMenu</name>
+            <id>90</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <textColor xsi:type="core:ColorRef">
+            <color>Style.FieldSelectionBackColor</color>
+          </textColor>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>en</key>
+          <value>Group errors detected</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Группа обнаружены ошибки</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Nhóm tìm thấy lỗi</value>
+        </title>
+        <toolTip>
+          <key>en</key>
+          <value>Group errors detected</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>Группа обнаружены ошибки</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Nhóm tìm thấy lỗi</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>DetectedErrorsGroupExtendedTooltip</name>
+          <id>117</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>PartiallyCorrectedGroup</name>
+        <id>91</id>
+        <items xsi:type="form:Decoration">
+          <name>PartiallyCorrectedPicture</name>
+          <id>92</id>
+          <title>
+            <key>en</key>
+            <value>Picture partially corrected</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Картинка частично исправлены</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Hình vẽ sửa lỗi từng phần</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>PartiallyCorrectedPictureExtendedTooltip</name>
+            <id>121</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>PartiallyCorrectedPictureContextMenu</name>
+            <id>93</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <width>2</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <height>1</height>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:PictureDecorationExtInfo">
+            <picture xsi:type="core:PictureRef">
+              <picture>CommonPicture.PartiallyCorrected16</picture>
+            </picture>
+          </extInfo>
+        </items>
+        <items xsi:type="form:Decoration">
+          <name>PartiallyCorrectedLabel</name>
+          <id>94</id>
+          <title>
+            <key>en</key>
+            <value> - detected errors are partially fixed</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value> - обнаруженные ошибки частично исправлены</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value> - đã sửa một phần lỗi tìm thấy</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>PartiallyCorrectedLabelExtendedTooltip</name>
+            <id>122</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>PartiallyCorrectedLabelContextMenu</name>
+            <id>95</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <textColor xsi:type="core:ColorRef">
+            <color>Style.FieldSelectionBackColor</color>
+          </textColor>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>PartiallyCorrectedGroupExtendedTooltip</name>
+          <id>120</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>FullyCorrectedGroup</name>
+        <id>96</id>
+        <items xsi:type="form:Decoration">
+          <name>FullyCorrectedPicture</name>
+          <id>97</id>
+          <title>
+            <key>en</key>
+            <value>Fully corrected picture</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Картинка полностью исправлены</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Hình vẽ đã sửa lỗi toàn bộ</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>FullyCorrectedPictureExtendedTooltip</name>
+            <id>124</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>FullyCorrectedPictureContextMenu</name>
+            <id>98</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <width>2</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <height>1</height>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:PictureDecorationExtInfo">
+            <picture xsi:type="core:PictureRef">
+              <picture>CommonPicture.CompletelyCorrected16</picture>
+            </picture>
+          </extInfo>
+        </items>
+        <items xsi:type="form:Decoration">
+          <name>FullyCorrectedLabel</name>
+          <id>99</id>
+          <title>
+            <key>en</key>
+            <value> - errors are completely corrected</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value> - ошибки полностью исправлены</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value> - đã sửa lỗi hoàn toàn</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>FullyCorrectedLabelExtendedTooltip</name>
+            <id>125</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>FullyCorrectedLabelContextMenu</name>
+            <id>100</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <textColor xsi:type="core:ColorRef">
+            <color>Style.FieldSelectionBackColor</color>
+          </textColor>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>en</key>
+          <value>Group fully corrected</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Группа полностью исправлены</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Nhóm sửa toàn bộ</value>
+        </title>
+        <extendedTooltip>
+          <name>FullyCorrectedGroupExtendedTooltip</name>
+          <id>123</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Sections</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>секции</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>quầy
+hàng</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Sections</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>секции</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>quầy
+hàng</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>SectionsExtendedTooltip</name>
+        <id>105</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ResultDocument</name>
+      <id>64</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ResultDocument</segments>
+      </dataPath>
+      <titleLocation>None</titleLocation>
+      <extendedTooltip>
+        <name>ResultDocumentExtendedTooltip</name>
+        <id>126</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ResultDocumentContextMenu</name>
+        <id>65</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>SpreadsheetDocumentField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:SpreadSheetDocFieldExtInfo">
+        <handlers>
+          <event>Selection</event>
+          <name>ChoiceResultDocument</name>
+        </handlers>
+        <handlers>
+          <event>DetailProcessing</event>
+          <name>ResultProcessingTranscriptionsDocument</name>
+        </handlers>
+        <width>50</width>
+        <autoMaxWidth>true</autoMaxWidth>
+        <height>10</height>
+        <autoMaxHeight>true</autoMaxHeight>
+        <horizontalStretch>true</horizontalStretch>
+        <verticalStretch>true</verticalStretch>
+        <pointerType>Special</pointerType>
+        <verticalScrollBar>ScrollAlways</verticalScrollBar>
+        <horizontalScrollBar>ScrollAlways</horizontalScrollBar>
+        <protection>true</protection>
+        <drawingSelectionShowMode>Auto</drawingSelectionShowMode>
+        <showGroups>true</showGroups>
+        <enableStartDrag>true</enableStartDrag>
+        <enableDrag>true</enableDrag>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <toolTip>
+      <key>en</key>
+      <value>Tables</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Таблицы</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Bảng</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>TablesExtendedTooltip</name>
+      <id>104</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <commandBarLocation>None</commandBarLocation>
+  <autoCommandBar>
+    <name>FormCommandBar</name>
+    <id>-1</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
+  </autoCommandBar>
+  <handlers>
+    <event>ChoiceProcessing</event>
+    <name>ChoiceProcessing</name>
+  </handlers>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>OnCreateAtServer</name>
+  </handlers>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <allowFormCustomize>true</allowFormCustomize>
+  <enabled>true</enabled>
+  <verticalScroll>UseIfNecessary</verticalScroll>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>Object</name>
+    <id>1</id>
+    <valueType>
+      <types>DataProcessorObject.AccountingCorrectnessControl</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <main>true</main>
+  </attributes>
+  <attributes>
+    <name>ArrayTypePaymentDocuments</name>
+    <title>
+      <key>en</key>
+      <value>The array of payment document types</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Массив типов документы оплаты</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Mảng kiểu chứng từ thanh toán</value>
+    </title>
+    <id>9</id>
+    <valueType>
+      <types>ValueList</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <extInfo xsi:type="form:ValueListExtInfo">
+      <itemValueType/>
+    </extInfo>
+  </attributes>
+  <attributes>
+    <name>SectionTree</name>
+    <title>
+      <key>en</key>
+      <value>Section tree</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Дерево разделов</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Cây phân hệ</value>
+    </title>
+    <id>10</id>
+    <valueType>
+      <types>ValueTree</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Level</name>
+      <title>
+        <key>en</key>
+        <value>Level</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Уровень</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Lớp</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>2</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>AccountingSection</name>
+      <title>
+        <key>en</key>
+        <value>Accounting section</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Раздел учета</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Phần hành kế toán</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>AnalysisExecuted</name>
+      <title>
+        <key>en</key>
+        <value>Analysis is performed</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Анализ выполнен</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Đã thực hiện phân tích</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>AccountingSectionPresentation</name>
+      <title>
+        <key>en</key>
+        <value>Accounting section presentation</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Раздел учета предствление</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Phần hành kế toán trình bày</value>
+      </title>
+      <id>4</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ParentOutputSection</name>
+      <title>
+        <key>en</key>
+        <value>Section parent is displayed</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Раздел родитель выведен</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Đã chọn phần hành lớp trên</value>
+      </title>
+      <id>5</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>SectionNumber</name>
+      <title>
+        <key>en</key>
+        <value>Section number</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Номер секции</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Số bộ phận</value>
+      </title>
+      <id>6</id>
+      <valueType>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>2</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ExecutionDate</name>
+      <title>
+        <key>en</key>
+        <value>Correction date</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Дата исправления</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Ngày chỉnh sửa</value>
+      </title>
+      <id>7</id>
+      <valueType>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>PictureIndex</name>
+      <title>
+        <key>en</key>
+        <value>Image index</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Индекс картинки</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Chỉ số hình vẽ</value>
+      </title>
+      <id>8</id>
+      <valueType>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>TreeLineNumber</name>
+      <title>
+        <key>en</key>
+        <value>Tree row number</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Номер строки дерева</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Thứ tự dòng trong cây</value>
+      </title>
+      <id>9</id>
+      <valueType>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>LinkToHelp</name>
+      <title>
+        <key>en</key>
+        <value>Help link</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Ссылка на справку</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Tham chiếu tới trợ giúp</value>
+      </title>
+      <id>10</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>ResultDocument</name>
+    <title>
+      <key>en</key>
+      <value>Document result</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Документ результат</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Chứng từ kết quả</value>
+    </title>
+    <id>11</id>
+    <valueType>
+      <types>SpreadsheetDocument</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <extInfo xsi:type="form:SpreadsheetDocumentExtInfo"/>
+  </attributes>
+  <attributes>
+    <name>CurrentSectionNumber</name>
+    <title>
+      <key>en</key>
+      <value>Current section number</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Номер текущего раздела</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Số phần hành hiện tại</value>
+    </title>
+    <id>13</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>AllSectionsAvailable</name>
+    <title>
+      <key>en</key>
+      <value>Total available sections</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Всего разделов доступно</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Tổng số phần hành khả dụng</value>
+    </title>
+    <id>14</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>CurrentAccountingSection</name>
+    <title>
+      <key>en</key>
+      <value>Current accounting section</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Текущий раздел учета</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Phần hành kế toán hiện tại</value>
+    </title>
+    <id>15</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>CurrentAccountingSectionPresentation</name>
+    <title>
+      <key>en</key>
+      <value>Current accounting section presentation</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Текущий раздел учета предствление</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Phần hành kế toán hiện tại trình bày</value>
+    </title>
+    <id>16</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>AccountsPayableFilledWith</name>
+    <title>
+      <key>en</key>
+      <value>Settlements with suppliers filled in</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Расчеты с поставщиками заполнялось</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Đã điền đủ hạch toán với nhà cung cấp</value>
+    </title>
+    <id>21</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ExchangeDifferencesDocumentsPereprovedeny</name>
+    <title>
+      <key>en</key>
+      <value>Exchange rate differences documents reposted</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Курсовые разницы документы перепроведены</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Chênh lệch tỷ giá chứng từ đã kết chuyển lại</value>
+    </title>
+    <id>22</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>CurrencyRatesDifferencesFilledWith</name>
+    <title>
+      <key>en</key>
+      <value>Exchange rate differences filled in</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Курсовые разницы заполнялось</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Đã điền chênh lệch tỷ giá</value>
+    </title>
+    <id>23</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ProductsAndServicesWithoutSpecifications</name>
+    <title>
+      <key>en</key>
+      <value>Products and services without BOMs</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Номенклатура без спецификаций</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Mặt hàng không có bảng kê chi tiết</value>
+    </title>
+    <id>24</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>ProductsAndServices</name>
+      <title>
+        <key>en</key>
+        <value>Products and services</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Продукция и услуги</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Mặt hàng</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>CatalogRef.ProductsAndServices</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Specification</name>
+      <title>
+        <key>en</key>
+        <value>Bill of materials</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Спецификация</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Bảng kê chi tiết</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>CatalogRef.Specifications</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>DataProcessorExecuted</name>
+      <title>
+        <key>en</key>
+        <value>Process succeeded</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Обработка выполнена</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Bộ xử lý đã thực hiện</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>SpecificationsAmount</name>
+      <title>
+        <key>en</key>
+        <value>BOM quantity</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Количество спецификаций</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Số lượng thành phần chi tiết</value>
+      </title>
+      <id>4</id>
+      <valueType>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>2</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>ProductsAndServicesWithoutFilledWithSpecifications</name>
+    <title>
+      <key>en</key>
+      <value>Products and services without bills of materials filled in</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Номенклатура без спецификаций заполнялось</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Mặt hàng không có bảng kê chi tiết đã điền</value>
+    </title>
+    <id>25</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>SubcontractorSpecificationsReports</name>
+    <title>
+      <key>en</key>
+      <value>Processor reports BOMs</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Отчеты переработчиков спецификации</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Báo cáo gia công chi tiết</value>
+    </title>
+    <id>26</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>DocumentRef</name>
+      <title>
+        <key>en</key>
+        <value>Reference document</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Документ ссылка</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Chứng từ tham chiếu</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>DocumentRef.SubcontractorReport</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Specification</name>
+      <title>
+        <key>en</key>
+        <value>Bill of materials</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Спецификация</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Bảng kê chi tiết</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>CatalogRef.Specifications</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>DataProcessorExecuted</name>
+      <title>
+        <key>en</key>
+        <value>Process succeeded</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Обработка выполнена</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Bộ xử lý đã thực hiện</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>ReportsPereireWithoutFilledSpecifications</name>
+    <title>
+      <key>en</key>
+      <value>Processor reports without BOMs filled in</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Отчеты перер без спецификаций заполнялось</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Đã điền báo cáo gia công mà không có bảng kê chi tiết</value>
+    </title>
+    <id>27</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>IncorrectExchangeDifferencesDC</name>
+    <title>
+      <key>en</key>
+      <value>Funds incorrect exchange rate differences</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>ДС некорректные курсовые разницы</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>LCTT chênh lệch tỷ giá sai</value>
+    </title>
+    <id>29</id>
+    <valueType>
+      <types>ValueTree</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>BankAccountPettyCash</name>
+      <title>
+        <key>en</key>
+        <value>Bank account, cash fund</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Банковский счет, касса</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Tài khoản ngân hàng, quỹ tiền mặt</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>CatalogRef.BankAccounts</types>
+        <types>CatalogRef.PettyCashes</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Recorder</name>
+      <title>
+        <key>en</key>
+        <value>Recorder</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Регистратор</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Nguồn ghi</value>
+      </title>
+      <id>7</id>
+      <valueType>
+        <types>DocumentRef</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>IncorrectExchangeDifferencesCustomers</name>
+    <title>
+      <key>en</key>
+      <value>Incorrect exchange differences customers</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Некорректные курсовые разницы покупатели</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Sai tỷ giá hối đoái của khách hàng</value>
+    </title>
+    <id>30</id>
+    <valueType>
+      <types>ValueTree</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Counterparty</name>
+      <title>
+        <key>en</key>
+        <value>Counterparties</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Контрагенты</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Đối tác</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>CatalogRef.Counterparties</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Recorder</name>
+      <title>
+        <key>en</key>
+        <value>Recorder</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Регистратор</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Nguồn ghi</value>
+      </title>
+      <id>9</id>
+      <valueType>
+        <types>DocumentRef</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>IncorrectExchangeDifferencesSuppliers</name>
+    <title>
+      <key>en</key>
+      <value>Incorrect exchange differences suppliers</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Некорректные курсовые разницы поставщики</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Sai tỷ giá hối đoái của nhà cung cấp</value>
+    </title>
+    <id>31</id>
+    <valueType>
+      <types>ValueTree</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Counterparty</name>
+      <title>
+        <key>en</key>
+        <value>Counterparties</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Контрагенты</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Đối tác</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>CatalogRef.Counterparties</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Recorder</name>
+      <title>
+        <key>en</key>
+        <value>Recorder</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Регистратор</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Nguồn ghi</value>
+      </title>
+      <id>7</id>
+      <valueType>
+        <types>DocumentRef</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>EndOfPeriod</name>
+    <title>
+      <key>en</key>
+      <value>Period end</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Окончание периода</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Cuối kỳ</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>EndOfPeriod</segments>
+    </settingsSavedData>
+  </attributes>
+  <attributes>
+    <name>BeginOfPeriod</name>
+    <title>
+      <key>en</key>
+      <value>Period start</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Начало периода</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Đầu kỳ</value>
+    </title>
+    <id>3</id>
+    <valueType>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>BeginOfPeriod</segments>
+    </settingsSavedData>
+  </attributes>
+  <attributes>
+    <name>Company</name>
+    <title>
+      <key>en</key>
+      <value>Company</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Организация</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Doanh nghiệp</value>
+    </title>
+    <id>4</id>
+    <valueType>
+      <types>CatalogRef.Companies</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>PeriodPresentation</name>
+    <title>
+      <key>en</key>
+      <value>Period presentation</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Представление периода</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Trình bày kỳ</value>
+    </title>
+    <id>6</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>SubcontractorInconsistenciesReports</name>
+    <title>
+      <key>en</key>
+      <value>Mismatch processor reports</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Отчеты переработчиков несоответствия</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Báo cáo gia công không tương ứng</value>
+    </title>
+    <id>7</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>DocumentRef</name>
+      <title>
+        <key>en</key>
+        <value>Reference document</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Документ ссылка</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Chứng từ tham chiếu</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>DocumentRef.SubcontractorReport</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>DataProcessorExecuted</name>
+      <title>
+        <key>en</key>
+        <value>Process succeeded</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Обработка выполнена</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Bộ xử lý đã thực hiện</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>DifferencesTable</name>
+      <title>
+        <key>en</key>
+        <value>Discrepancy table</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Таблица расхождений</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Bảng xung đột</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>ValueTable</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <additionalColumns>
+      <tablePath xsi:type="form:DataPath">
+        <segments>SubcontractorInconsistenciesReports.DifferencesTable</segments>
+      </tablePath>
+      <columns>
+        <name>ProductsAndServices</name>
+        <title>
+          <key>en</key>
+          <value>Products and services</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Продукция и услуги</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Mặt hàng</value>
+        </title>
+        <id>1</id>
+        <valueType>
+          <types>CatalogRef.ProductsAndServices</types>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+      <columns>
+        <name>Characteristic</name>
+        <title>
+          <key>en</key>
+          <value>Characteristic</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Characteristic</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Đặc tính</value>
+        </title>
+        <id>2</id>
+        <valueType>
+          <types>CatalogRef.ProductsAndServicesCharacteristics</types>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+      <columns>
+        <name>QuantityInFact</name>
+        <title>
+          <key>en</key>
+          <value>Actual quantity</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Количество по факту</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Số lượng thực tế</value>
+        </title>
+        <id>3</id>
+        <valueType>
+          <types>Number</types>
+          <numberQualifiers>
+            <precision>15</precision>
+            <scale>3</scale>
+          </numberQualifiers>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+      <columns>
+        <name>QuantityOnSpecification</name>
+        <title>
+          <key>en</key>
+          <value>Quantity according to BOM</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Количество по спецификации</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Số lượng theo bảng kê chi tiết</value>
+        </title>
+        <id>4</id>
+        <valueType>
+          <types>Number</types>
+          <numberQualifiers>
+            <precision>15</precision>
+            <scale>3</scale>
+          </numberQualifiers>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+    </additionalColumns>
+  </attributes>
+  <attributes>
+    <name>SubcontractorFilledWithInconsistenciesReports</name>
+    <title>
+      <key>en</key>
+      <value>Mismatch processor reports filled in</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Отчеты переработчиков несоответствия заполнялось</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Đã điền báo cáo gia công không tương ứng</value>
+    </title>
+    <id>8</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>RunAccountingBySubsidiaryCompany</name>
+    <title>
+      <key>en</key>
+      <value>Keep accounting by company</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Вести учет по компании</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Tiến hành kế toán theo doanh nghiệp</value>
+    </title>
+    <id>5</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>DocProductionSpecifications</name>
+    <title>
+      <key>en</key>
+      <value>Doc BOM production</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Док производство спецификации</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Chứng từ sản xuất bảng kê chi tiết</value>
+    </title>
+    <id>12</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>DocumentRef</name>
+      <title>
+        <key>en</key>
+        <value>Reference document</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Документ ссылка</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Chứng từ tham chiếu</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>DocumentRef.InventoryAssembly</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>DataProcessorExecuted</name>
+      <title>
+        <key>en</key>
+        <value>Process succeeded</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Обработка выполнена</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Bộ xử lý đã thực hiện</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>DocFilledWithProductionSpecifications</name>
+    <title>
+      <key>en</key>
+      <value>Doc BOM production filled in</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Док производство спецификации заполнялось</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Chứng từ sản xuất bảng kê chi tiết đã điền</value>
+    </title>
+    <id>32</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>DocProductionInconsistencies</name>
+    <title>
+      <key>en</key>
+      <value>Doc mismatch production</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Док производство несоответствия</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Chứng từ sản xuất không tương ứng</value>
+    </title>
+    <id>33</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>DocumentRef</name>
+      <title>
+        <key>en</key>
+        <value>Reference document</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Документ ссылка</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Chứng từ tham chiếu</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>DocumentRef.InventoryAssembly</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>DataProcessorExecuted</name>
+      <title>
+        <key>en</key>
+        <value>Process succeeded</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Обработка выполнена</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Bộ xử lý đã thực hiện</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>DifferencesTable</name>
+      <title>
+        <key>en</key>
+        <value>Discrepancy table</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Таблица расхождений</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Bảng xung đột</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>ValueTable</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <additionalColumns>
+      <tablePath xsi:type="form:DataPath">
+        <segments>DocProductionInconsistencies.DifferencesTable</segments>
+      </tablePath>
+      <columns>
+        <name>ProductsAndServices</name>
+        <title>
+          <key>en</key>
+          <value>Products and services</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Продукция и услуги</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Mặt hàng</value>
+        </title>
+        <id>1</id>
+        <valueType>
+          <types>CatalogRef.ProductsAndServices</types>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+      <columns>
+        <name>Characteristic</name>
+        <title>
+          <key>en</key>
+          <value>Characteristic</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Characteristic</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Đặc tính</value>
+        </title>
+        <id>2</id>
+        <valueType>
+          <types>CatalogRef.ProductsAndServicesCharacteristics</types>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+      <columns>
+        <name>QuantityInFact</name>
+        <title>
+          <key>en</key>
+          <value>Actual quantity</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Количество по факту</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Số lượng thực tế</value>
+        </title>
+        <id>3</id>
+        <valueType>
+          <types>Number</types>
+          <numberQualifiers>
+            <precision>15</precision>
+            <scale>3</scale>
+          </numberQualifiers>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+      <columns>
+        <name>QuantityOnSpecification</name>
+        <title>
+          <key>en</key>
+          <value>Quantity according to BOM</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Количество по спецификации</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Số lượng theo bảng kê chi tiết</value>
+        </title>
+        <id>4</id>
+        <valueType>
+          <types>Number</types>
+          <numberQualifiers>
+            <precision>15</precision>
+            <scale>3</scale>
+          </numberQualifiers>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+    </additionalColumns>
+  </attributes>
+  <attributes>
+    <name>DocFilledWithProductionInconsistencies</name>
+    <title>
+      <key>en</key>
+      <value>Doc mismatch production filled in</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Док производство несоответствия заполнялось</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Chứng từ sản xuất không tương ứng đã điền</value>
+    </title>
+    <id>34</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>CurrentTreeLineNumber</name>
+    <title>
+      <key>en</key>
+      <value>Current tree line number</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Номер текущей строки дерева</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Số dòng hiện tại trong cây</value>
+    </title>
+    <id>35</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>PurchasePricesAnalysis</name>
+    <title>
+      <key>en</key>
+      <value>Purchasing price analysis</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Анализ закупочных цен</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Phân tích giá mua</value>
+    </title>
+    <id>36</id>
+    <valueType>
+      <types>ValueTree</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>ProductsAndServices</name>
+      <title>
+        <key>en</key>
+        <value>Products and services</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Продукция и услуги</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Mặt hàng</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>CatalogRef.ProductsAndServices</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Characteristic</name>
+      <title>
+        <key>en</key>
+        <value>Characteristic</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Characteristic</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Đặc tính</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>CatalogRef.ProductsAndServicesCharacteristics</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>PurchaseDate</name>
+      <title>
+        <key>en</key>
+        <value>Purchase date</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Дата закупки</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Ngày mua</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ThereIsDeviation</name>
+      <title>
+        <key>en</key>
+        <value>Variance detected</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Есть отклонение</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Có chênh lệch</value>
+      </title>
+      <id>4</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>PurchasePrice</name>
+      <title>
+        <key>en</key>
+        <value>Purchase price</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Цена закупки</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Giá mua</value>
+      </title>
+      <id>5</id>
+      <valueType>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>PurchaseDocument</name>
+      <title>
+        <key>en</key>
+        <value>Purchase document</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Документ закупки</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Chứng từ mua hàng</value>
+      </title>
+      <id>6</id>
+      <valueType>
+        <types>DocumentRef.SupplierInvoice</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>PurchasePricesAnalysisFilledWith</name>
+    <title>
+      <key>en</key>
+      <value>Purchasing price analysis filled in</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Анализ закупочных цен заполнялось</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Phân tích giá mua đã điền</value>
+    </title>
+    <id>37</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>CurrentLinkToHelp</name>
+    <title>
+      <key>en</key>
+      <value>Current reference to help</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Текущая ссылка на справку</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Tham chiếu hiện tại tới tham chiếu</value>
+    </title>
+    <id>17</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>CurrentDateLatestCorrection</name>
+    <title>
+      <key>en</key>
+      <value>The current date of the latest correction</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Текущая дата последного исправления</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Dữ liệu hiện tại của lần sửa lỗi gần nhất</value>
+    </title>
+    <id>38</id>
+    <valueType>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>AccountsPayable</name>
+    <title>
+      <key>en</key>
+      <value>Company debt</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Долг организации</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Công nợ phải trả</value>
+    </title>
+    <id>41</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Counterparty</name>
+      <title>
+        <key>en</key>
+        <value>Counterparties</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Контрагенты</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Đối tác</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>CatalogRef.Counterparties</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>DataProcessorExecuted</name>
+      <title>
+        <key>en</key>
+        <value>Process succeeded</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Обработка выполнена</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Bộ xử lý đã thực hiện</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ThereAreTurnoversForPeriod</name>
+      <title>
+        <key>en</key>
+        <value>There are turnovers for the period</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Есть обороты за период</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Có phát sinh trong kỳ</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>WereCorrections</name>
+      <title>
+        <key>en</key>
+        <value>There were corrections</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Были исправления</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Đã sửa</value>
+      </title>
+      <id>4</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>AccountsReceivable</name>
+    <title>
+      <key>en</key>
+      <value>Receivable</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Дебиторская задолженность</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Công nợ phải thu</value>
+    </title>
+    <id>20</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Counterparty</name>
+      <title>
+        <key>en</key>
+        <value>Counterparties</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Контрагенты</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Đối tác</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>CatalogRef.Counterparties</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>DataProcessorExecuted</name>
+      <title>
+        <key>en</key>
+        <value>Process succeeded</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Обработка выполнена</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Bộ xử lý đã thực hiện</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ThereAreTurnoversForPeriod</name>
+      <title>
+        <key>en</key>
+        <value>There are turnovers for the period</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Есть обороты за период</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Có phát sinh trong kỳ</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>WereCorrections</name>
+      <title>
+        <key>en</key>
+        <value>There were corrections</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Были исправления</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Đã sửa</value>
+      </title>
+      <id>4</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>AccountsReceivableFilledWith</name>
+    <title>
+      <key>en</key>
+      <value>Settlements with customers filled in</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Расчеты с покупателями заполнялось</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Đã điền đủ hạch toán với khách hàng</value>
+    </title>
+    <id>42</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>DocumentsTreeCompanyContract</name>
+    <title>
+      <key>en</key>
+      <value>Company contract document tree</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Дерево документов договора организации</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Cây chứng từ hợp đồng của doanh nghiệp</value>
+    </title>
+    <id>18</id>
+    <valueType>
+      <types>ValueTree</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>MainDocument</name>
+      <title>
+        <key>en</key>
+        <value>Main document</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Основной документ</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Chứng từ chính</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>DocumentRef</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>SubordinateDocument</name>
+      <title>
+        <key>en</key>
+        <value>Subordinate document</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Подчиненный документ</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Chứng từ trực thuộc</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>DocumentRef</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>MessageText</name>
+      <title>
+        <key>en</key>
+        <value>Message text</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Текст сообщения</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Nội dung thông báo</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>CompanyInHeader</name>
+      <title>
+        <key>en</key>
+        <value>Company in the header</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Организация в шапке</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Doanh nghiệp trong phần đầu</value>
+      </title>
+      <id>4</id>
+      <valueType>
+        <types>CatalogRef.Companies</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Contract</name>
+      <title>
+        <key>en</key>
+        <value>Contract</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Контракт</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Hợp đồng</value>
+      </title>
+      <id>5</id>
+      <valueType>
+        <types>CatalogRef.CounterpartyContracts</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>CompanyInContract</name>
+      <title>
+        <key>en</key>
+        <value>Company in the contract</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Организация в договоре</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Doanh nghiệp trong hợp đồng</value>
+      </title>
+      <id>6</id>
+      <valueType>
+        <types>CatalogRef.Companies</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>DocumentTreeFilledWithCompanyContract</name>
+    <title>
+      <key>en</key>
+      <value>Company contract document tree filled in</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Дерево документов договора организации заполнялось</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Đã điền cây chứng từ hợp đồng của doanh nghiệp</value>
+    </title>
+    <id>19</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>CashFlowItems</name>
+    <title>
+      <key>en</key>
+      <value>Cash flow items</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Статьи движения денежных средств</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Dạng lưu chuyển tiền tệ</value>
+    </title>
+    <id>39</id>
+    <valueType>
+      <types>ValueTree</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Item</name>
+      <title>
+        <key>en</key>
+        <value>Item</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Элемент</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Phần tử</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>CatalogRef.CashFlowItems</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Recorder</name>
+      <title>
+        <key>en</key>
+        <value>Recorder</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Регистратор</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Nguồn ghi</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>DocumentRef</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>AmountReceipt</name>
+      <title>
+        <key>en</key>
+        <value>Receipt amount</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Сумма приход</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Số tiền thu</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>AmountExpense</name>
+      <title>
+        <key>en</key>
+        <value>Amount expense</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Сумма расход</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Số tiền chi</value>
+      </title>
+      <id>4</id>
+      <valueType>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Currency</name>
+      <title>
+        <key>en</key>
+        <value>Currency</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Вал.</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Ngoại tệ</value>
+      </title>
+      <id>5</id>
+      <valueType>
+        <types>CatalogRef.Currencies</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ItemsGroup</name>
+      <title>
+        <key>en</key>
+        <value>Group items</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Группа статьи</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Nhóm dạng</value>
+      </title>
+      <id>6</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>20</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>CashFlowItemsFilledWith</name>
+    <title>
+      <key>en</key>
+      <value>Cash flow items Filled in</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Статьи ДДСЗаполнялось</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Đã điền dạng lưu chuyển tiền tệ</value>
+    </title>
+    <id>40</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <formCommands>
+    <name>PeriodMinus</name>
+    <title>
+      <key>en</key>
+      <value>Period minus</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Период минус</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Kỳ trừ</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>en</key>
+      <value>Previous month</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Предыдущий месяц</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tháng trước</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.MoveLeft</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>PeriodMinus</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>PeriodPlus</name>
+    <title>
+      <key>en</key>
+      <value>Period Plus</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Период плюс</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Kỳ cộng</value>
+    </title>
+    <id>2</id>
+    <toolTip>
+      <key>en</key>
+      <value>Next month</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Следующий месяц</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tháng sau</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.MoveRight</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>PeriodPlus</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <parameters>
+    <name>MonthEndContext</name>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+  </parameters>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+  <extInfo xsi:type="form:ObjectFormExtInfo"/>
+</form:Form>

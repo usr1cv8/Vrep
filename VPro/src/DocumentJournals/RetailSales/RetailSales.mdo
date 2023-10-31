@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DocumentJournal xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b8ba526e-dfb7-4f5f-84b0-2b308becd606">
+  <producedTypes>
+    <selectionType typeId="999571b1-bc7b-40a8-8aeb-2eab06dac864" valueTypeId="4d3648db-41c0-4fcd-b0c8-4d4a0d75dbd8"/>
+    <listType typeId="aab7a305-e7bb-431a-b91c-ad80510b229d" valueTypeId="71ee25c5-7e30-4dfb-a9a6-54a18226fadb"/>
+    <managerType typeId="13b5b8f5-7860-43f2-83b9-76304ed13ea1" valueTypeId="4492a49a-c992-4d24-8927-14c1967185c6"/>
+  </producedTypes>
+  <name>RetailSales</name>
+  <synonym>
+    <key>en</key>
+    <value>Retail sales</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Розничные продажи</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Bán lẻ</value>
+  </synonym>
+  <registeredDocuments>Document.ReceiptCR</registeredDocuments>
+  <registeredDocuments>Document.ReceiptCRReturn</registeredDocuments>
+  <registeredDocuments>Document.RetailReport</registeredDocuments>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Type</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Date</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Posted</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Number</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <explanation>
+    <key>en</key>
+    <value>Service log for cashier work place (CWP)</value>
+  </explanation>
+  <explanation>
+    <key>ru</key>
+    <value>Служебный журнал для организации работы рабочего места кассира (РМК)</value>
+  </explanation>
+  <explanation>
+    <key>vi</key>
+    <value>Nhật ký hệ thống để tổ chức hoạt động chỗ làm việc của thu ngân</value>
+  </explanation>
+  <columns uuid="765a4dc3-3be3-4c10-b1af-bffe01b3184f">
+    <name>ReceiptNumber</name>
+    <synonym>
+      <key>en</key>
+      <value>Receipt number</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Номер чека</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số phiếu</value>
+    </synonym>
+    <references>Document.ReceiptCR.Attribute.ReceiptCRNumber</references>
+    <references>Document.ReceiptCRReturn.Attribute.ReceiptCRNumber</references>
+    <references>Document.RetailReport.Attribute.CashCRSessionEnd</references>
+  </columns>
+  <columns uuid="1fe1b525-4763-4421-8185-b7c53494ae9a">
+    <name>Amount</name>
+    <synonym>
+      <key>en</key>
+      <value>Amount</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số tiền</value>
+    </synonym>
+    <references>Document.ReceiptCR.Attribute.DocumentAmount</references>
+    <references>Document.ReceiptCRReturn.Attribute.DocumentAmount</references>
+    <references>Document.RetailReport.Attribute.DocumentAmount</references>
+  </columns>
+  <columns uuid="453b8e2b-1e5c-4871-9911-62bfdef82fe9">
+    <name>CashCR</name>
+    <synonym>
+      <key>en</key>
+      <value>Cash register</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Касса ККМ</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Quầy thu ngân</value>
+    </synonym>
+    <references>Document.RetailReport.Attribute.CashCR</references>
+    <references>Document.ReceiptCR.Attribute.CashCR</references>
+    <references>Document.ReceiptCRReturn.Attribute.CashCR</references>
+  </columns>
+  <columns uuid="46751fd3-277c-41a3-917d-23d400ddebba">
+    <name>CashCRSessionStatus</name>
+    <synonym>
+      <key>en</key>
+      <value>Register shift status</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Статус кассовой смены</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Trạng thái phiên thu ngân</value>
+    </synonym>
+    <references>Document.RetailReport.Attribute.CashCRSessionStatus</references>
+  </columns>
+  <columns uuid="aac9a0e2-5a46-44ef-9ee2-8be79c19aa71">
+    <name>CashCRSession</name>
+    <synonym>
+      <key>en</key>
+      <value>Register shift</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Кассовая смена</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Phiên thu ngân</value>
+    </synonym>
+    <references>Document.ReceiptCR.Attribute.CashCRSession</references>
+    <references>Document.ReceiptCRReturn.Attribute.CashCRSession</references>
+  </columns>
+</mdclass:DocumentJournal>

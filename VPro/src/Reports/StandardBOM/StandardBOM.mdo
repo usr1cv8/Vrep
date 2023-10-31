@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f68bf63f-4165-4bf0-9b07-d9c06cd2075b">
+  <producedTypes>
+    <objectType typeId="609e0755-dc5c-41a7-a39c-159fd2d81923" valueTypeId="2eaadd6b-5082-4b26-bbf8-593bc09f7ef1"/>
+    <managerType typeId="1c81cbf6-2074-46d0-b621-eb4dcbfe2097" valueTypeId="00fb38f9-a157-4e6c-bb10-fb02f0cab496"/>
+  </producedTypes>
+  <name>StandardBOM</name>
+  <synonym>
+    <key>en</key>
+    <value>Standard bill of materials</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Нормативный состав изделия</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Thành phần định mức của sản phẩm</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.StandardBOM.Form.ReportForm</defaultForm>
+  <variantsStorage>SettingsStorage.ReportsVariantsStorage</variantsStorage>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <attributes uuid="6e8dec3e-1fda-459f-8fc9-56e100ecc228">
+    <name>ProductsAndServices</name>
+    <synonym>
+      <key>en</key>
+      <value>Products and services</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Продукция и услуги</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Mặt hàng</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ProductsAndServices</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameters>
+      <name>Filter.ProductsAndServicesType</name>
+      <value xsi:type="core:FixedArrayValue">
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.ProductsAndServicesTypes.EnumValue.InventoryItem</value>
+        </values>
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.ProductsAndServicesTypes.EnumValue.Work</value>
+        </values>
+      </value>
+    </choiceParameters>
+    <choiceParameters>
+      <name>Additionally.TypeRestriction</name>
+      <value xsi:type="core:FixedArrayValue">
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.ProductsAndServicesTypes.EnumValue.InventoryItem</value>
+        </values>
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.ProductsAndServicesTypes.EnumValue.Work</value>
+        </values>
+      </value>
+    </choiceParameters>
+  </attributes>
+  <attributes uuid="01e12717-287b-429a-8650-d6a2d3281b6c">
+    <name>Characteristic</name>
+    <synonym>
+      <key>en</key>
+      <value>Characteristic</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Characteristic</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đặc tính</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ProductsAndServicesCharacteristics</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Filter.Owner</name>
+      <field>Report.StandardBOM.Attribute.ProductsAndServices</field>
+    </choiceParameterLinks>
+  </attributes>
+  <attributes uuid="1c9bf186-f449-42d0-a1be-d842b0bf2ec6">
+    <name>Specification</name>
+    <synonym>
+      <key>en</key>
+      <value>Bill of materials</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Спецификация</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Bảng kê chi tiết</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Specifications</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameterLinks>
+      <name>Filter.Owner</name>
+      <field>Report.StandardBOM.Attribute.ProductsAndServices</field>
+    </choiceParameterLinks>
+    <choiceParameterLinks>
+      <name>Filter.ProductCharacteristic</name>
+      <field>Report.StandardBOM.Attribute.Characteristic</field>
+    </choiceParameterLinks>
+    <choiceParameters>
+      <name>IsTemplate</name>
+      <value xsi:type="core:BooleanValue">
+        <value>true</value>
+      </value>
+    </choiceParameters>
+  </attributes>
+  <attributes uuid="89f8aedc-e6d2-45d7-80cd-540107a80ab2">
+    <name>CalculationDate</name>
+    <synonym>
+      <key>en</key>
+      <value>Settlement date</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Дата расчета</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ngày thanh toán</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="d8def8bf-43cc-4927-a7b7-d17f1ec9baaa">
+    <name>PriceKind</name>
+    <synonym>
+      <key>en</key>
+      <value>Price kind</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Вид цены</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Dạng giá</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.PriceKinds</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="83d51357-52ec-417d-8d61-af1c8715904e">
+    <name>Quantity</name>
+    <synonym>
+      <key>en</key>
+      <value>Quantity</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số lượng</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="0a43f33d-e59c-48cf-a7c0-06c75c595e21">
+    <name>Cost</name>
+    <synonym>
+      <key>en</key>
+      <value>Cost</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Себестоимость</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Giá vốn</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="a0f56506-4804-423a-aad2-1d1a956fc43f">
+    <name>ReportForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Report form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu báo cáo</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="12ec0580-5565-481d-abf2-0d2a7b63173b">
+    <name>Template</name>
+    <synonym>
+      <key>en</key>
+      <value>Template</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Макет</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Khuôn in</value>
+    </synonym>
+    <comment>Template</comment>
+  </templates>
+</mdclass:Report>

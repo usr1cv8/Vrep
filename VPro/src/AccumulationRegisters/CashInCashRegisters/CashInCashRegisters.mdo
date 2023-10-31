@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="11ec31ba-bdd6-47cd-9b54-fc73e9615ad8">
+  <producedTypes>
+    <selectionType typeId="7b2bd146-09a1-4f7c-a001-e81a94f3e384" valueTypeId="be551668-d055-404d-ab34-d0e568441114"/>
+    <listType typeId="56117d27-3b6a-4fde-98b6-fe06e981ac10" valueTypeId="38141a37-4b59-4d11-a5c8-15dc1e1fee35"/>
+    <managerType typeId="04bb8722-7f31-41b9-b36e-2c73c65686ce" valueTypeId="bd5a6c5b-5a2f-48ae-aef9-d9e345546574"/>
+    <recordSetType typeId="ad959372-a642-4342-b7b8-6a46866cd9e4" valueTypeId="4057c089-4023-459a-be7d-e4a272185800"/>
+    <recordKeyType typeId="d2109e8d-f31d-4e3b-9c6a-16b0f7a97113" valueTypeId="d84d90da-e915-44d2-9993-5ad3f2a17abf"/>
+    <recordType typeId="3b1249fb-1560-42f9-acec-330c1e9d9cab" valueTypeId="e7ea1e0d-7918-4155-b981-74379fa6a1e6"/>
+  </producedTypes>
+  <name>CashInCashRegisters</name>
+  <synonym>
+    <key>en</key>
+    <value>Cash in cash registers</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Денежные средства в кассах ККМ</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Tiền mặt tại quầy thu ngân</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>RecordType</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="156aba18-7735-4bc1-a981-27a3172c6fcc">
+    <name>Amount</name>
+    <synonym>
+      <key>en</key>
+      <value>Amount</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số tiền</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Amount of cash in accounting currency</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Сумма денежных средств в валюте учета</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Số tiền nguyên tệ theo tiền tệ kế toán</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="31935489-d3dc-4f0a-b8ea-6c1599a638d3">
+    <name>AmountCur</name>
+    <synonym>
+      <key>en</key>
+      <value>Amount (curr.)</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма (вал.)</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số tiền (nguyên tệ)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Cash amount in the cash fund currency</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Сумма денежных средств в валюте кассы</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Số tiền nguyên tệ theo tiền tệ của quỹ tiền măt</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="35909114-c664-4f56-84b0-94db86d9ccef">
+    <name>ContentOfAccountingRecord</name>
+    <synonym>
+      <key>en</key>
+      <value>Posting content</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Содержание проводки</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Nội dung bút toán</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="ff259b57-5889-4439-bf5a-873cdc443bc9">
+    <name>Company</name>
+    <synonym>
+      <key>en</key>
+      <value>Company</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Doanh nghiệp</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Companies</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Company for which cash is accounted in the cash register</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Организация, по которой ведется учет денежных средств в кассе ККМ</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Doanh nghiệp mà tiến hành kế toán vốn bằng tiền tại quầy thu ngân</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <quickChoice>DontUse</quickChoice>
+    <createOnInput>Use</createOnInput>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="24b0c9e5-7e7f-479e-900c-24614a872719">
+    <name>CashCR</name>
+    <synonym>
+      <key>en</key>
+      <value>Cash register</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Касса ККМ</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Quầy thu ngân</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.CashRegisters</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Company cash fund</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Касса организации</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Quỹ tiền mặt của doanh nghiệp</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

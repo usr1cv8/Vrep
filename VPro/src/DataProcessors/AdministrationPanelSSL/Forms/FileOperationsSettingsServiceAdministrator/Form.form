@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <items xsi:type="form:FormGroup">
+    <name>GroupTitle</name>
+    <id>2015</id>
+    <items xsi:type="form:Decoration">
+      <name>SectionDescription</name>
+      <id>2016</id>
+      <title>
+        <key>en</key>
+        <value>Configure parameters of file import, storage and processing. Restrictions are applied to all data areas and override administrator settings.</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Настройка параметров загрузки, хранения и обработки файлов. Ограничения, которое применяются для всех областей данных и имеют приоритет над настройками администраторов приложений.</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Tùy chỉnh tham số kết nhập, lưu và xử lý tệp. Hạn chế được sử dụng đối với tất cả vùng dữ liệu và có ưu điểm đối với việc tùy chỉnh ứng dụng của người quản trị.</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>SectionDescriptionExtendedTooltip</name>
+        <id>2045</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>SectionDescriptionContextMenu</name>
+        <id>2017</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>Label</type>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+        <verticalAlign>Top</verticalAlign>
+        <titleHeight>2</titleHeight>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <extendedTooltip>
+      <name>GroupHeaderExtendedTooltip</name>
+      <id>2044</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>CommonParametersForAllDataAreas</name>
+    <id>2022</id>
+    <items xsi:type="form:FormGroup">
+      <name>GroupMaximumFileSize</name>
+      <id>2033</id>
+      <items xsi:type="form:FormGroup">
+        <name>GroupSize1</name>
+        <id>2034</id>
+        <items xsi:type="form:FormField">
+          <name>MaximumFileSize</name>
+          <id>2035</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>MaximumFileSize</segments>
+          </dataPath>
+          <toolTipRepresentation>ShowRight</toolTipRepresentation>
+          <handlers>
+            <event>OnChange</event>
+            <name>MaximumFileSizeOnChange</name>
+          </handlers>
+          <extendedTooltip>
+            <name>MaxFileSizeExtendedTooltip</name>
+            <id>2087</id>
+            <title>
+              <key>en</key>
+              <value>Mbytes</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Мбайт</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Mbyte</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>MaxFileSizeContextMenu</name>
+            <id>2036</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <width>8</width>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <spinButton>true</spinButton>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>en</key>
+          <value>Size group</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Группа размер</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Nhóm kích cỡ</value>
+        </title>
+        <toolTip>
+          <key>en</key>
+          <value>Size group</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>Группа размер</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Nhóm kích cỡ</value>
+        </toolTip>
+        <toolTipRepresentation>ShowBottom</toolTipRepresentation>
+        <width>43</width>
+        <horizontalStretch>false</horizontalStretch>
+        <extendedTooltip>
+          <name>GroupSize1ExtendedTooltip</name>
+          <id>2086</id>
+          <title>
+            <key>en</key>
+            <value>Import restriction of files which exceed the specified size.</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Ограничение загрузки файлов, превышающих указанный размер.</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Hạn chế kết nhập tệp vượt quá kích cỡ đã chỉ ra.</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <width>82</width>
+      <horizontalStretch>false</horizontalStretch>
+      <extendedTooltip>
+        <name>GroupMaxSizeFileExtendedTooltip</name>
+        <id>2085</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <slaveItemsWidth>Equal</slaveItemsWidth>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>ListExtensionFilesOpenDocumentGroup</name>
+      <id>2029</id>
+      <items xsi:type="form:FormGroup">
+        <name>Group1</name>
+        <id>2095</id>
+        <items xsi:type="form:FormField">
+          <name>FileExtensionListOpenDocument</name>
+          <id>2024</id>
+          <title>
+            <key>en</key>
+            <value>ODF file extensions</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Расширения файлов ODF</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Phần mở rộng của tệp ODF</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ConstantsSet.FileExtensionListOpenDocument</segments>
+          </dataPath>
+          <titleLocation>None</titleLocation>
+          <toolTipRepresentation>ShowBottom</toolTipRepresentation>
+          <handlers>
+            <event>OnChange</event>
+            <name>FileExtensionsListOpenDocumentOnChange</name>
+          </handlers>
+          <extendedTooltip>
+            <name>FileExtensionListOpenDocumentExtendedTooltip</name>
+            <id>2094</id>
+            <title>
+              <key>en</key>
+              <value>Extensions of open file documents for desktop applications.
+Are specified through the &quot;space&quot;.</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Расширения файлов открытого формата документов для офисных приложений.
+Указываются через &quot;пробел&quot;.</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Phần mở rộng của tệp định dạng mở của tài liệu cho các ứng dụng văn phòng.
+Hãy chỉ ra qua &quot;dấu cách&quot;.</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>FileExtensionListOpenDocumentContextMenu</name>
+            <id>2025</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+            <inputHint>
+              <key>en</key>
+              <value>Open Document file extensions</value>
+            </inputHint>
+            <inputHint>
+              <key>ru</key>
+              <value>Расширения файлов Open Document</value>
+            </inputHint>
+            <inputHint>
+              <key>vi</key>
+              <value>Phần mở rộng của tệp Open Document</value>
+            </inputHint>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <width>43</width>
+        <horizontalStretch>false</horizontalStretch>
+        <extendedTooltip>
+          <name>Group1ExtendedTooltip</name>
+          <id>2096</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>Group2</name>
+        <id>2097</id>
+        <items xsi:type="form:FormField">
+          <name>ProhibitedExtensionsList</name>
+          <id>2013</id>
+          <title>
+            <key>en</key>
+            <value>Extensions prohibited for import</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Расширения, запрещенные для загрузки</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Phần mở rộng bị cấm kết nhập</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ConstantsSet.ProhibitedExtensionsList</segments>
+          </dataPath>
+          <titleLocation>None</titleLocation>
+          <toolTipRepresentation>ShowBottom</toolTipRepresentation>
+          <handlers>
+            <event>OnChange</event>
+            <name>ProhibitedExtensionsListOnChange</name>
+          </handlers>
+          <extendedTooltip>
+            <name>ProhibitedFileExtensionListExtendedTooltip</name>
+            <id>2091</id>
+            <title>
+              <key>en</key>
+              <value>File extensions for which import to the application folders should be prohibited (specify them separated with &quot;space&quot;).</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Расширения файлов, для которых будет запрещена загрузка в папки программы (указываются через &quot;пробел&quot;).</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Phần mở rộng của tệp mà sẽ cấm kết nhập vào thư mục chương trình (chỉ ra sau &quot;dấu cách&quot;).</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ProhibitedFileExtensionListContextMenu</name>
+            <id>2014</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <horizontalStretch>true</horizontalStretch>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+            <inputHint>
+              <key>en</key>
+              <value>Extensions prohibited for import</value>
+            </inputHint>
+            <inputHint>
+              <key>ru</key>
+              <value>Расширения, запрещенные для загрузки</value>
+            </inputHint>
+            <inputHint>
+              <key>vi</key>
+              <value>Phần mở rộng bị cấm kết nhập</value>
+            </inputHint>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <width>43</width>
+        <horizontalStretch>false</horizontalStretch>
+        <extendedTooltip>
+          <name>Group2ExtendedTooltip</name>
+          <id>2098</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <width>86</width>
+      <horizontalStretch>false</horizontalStretch>
+      <extendedTooltip>
+        <name>ListExtensionFilesOpenDocumentGroupExtendedTooltip</name>
+        <id>2093</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <slaveItemsWidth>Equal</slaveItemsWidth>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>File characteristic management for all data areas</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Управление характеристиками файлов всех областей данных</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Quản lý đặc tính tệp của tất cả các vùng dữ liệu</value>
+    </title>
+    <titleTextColor xsi:type="core:ColorRef">
+      <color>Style.TitleColorSettingsGroup</color>
+    </titleTextColor>
+    <toolTip>
+      <key>en</key>
+      <value>Parameters common to all data areas</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Общие параметры для всех областей данных</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tham số chung cho tất cả các vùng dữ liệu</value>
+    </toolTip>
+    <width>82</width>
+    <horizontalStretch>false</horizontalStretch>
+    <extendedTooltip>
+      <name>CommonParametersForAllDataAreasExtendedTooltip</name>
+      <id>2083</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <representation>NormalSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <showTitle>true</showTitle>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <autoCommandBar>
+    <name>FormCommandBar</name>
+    <id>-1</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <horizontalAlign>Left</horizontalAlign>
+  </autoCommandBar>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>OnCreateAtServer</name>
+  </handlers>
+  <handlers>
+    <event>OnClose</event>
+    <name>OnClose</name>
+  </handlers>
+  <excludedCommands>Abort</excludedCommands>
+  <excludedCommands>Cancel</excludedCommands>
+  <excludedCommands>Ignore</excludedCommands>
+  <excludedCommands>No</excludedCommands>
+  <excludedCommands>OK</excludedCommands>
+  <excludedCommands>RestoreValues</excludedCommands>
+  <excludedCommands>Retry</excludedCommands>
+  <excludedCommands>SaveValues</excludedCommands>
+  <excludedCommands>Write</excludedCommands>
+  <excludedCommands>WriteAndClose</excludedCommands>
+  <excludedCommands>Yes</excludedCommands>
+  <width>84</width>
+  <autoTitle>true</autoTitle>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <enabled>true</enabled>
+  <verticalScroll>UseIfNecessary</verticalScroll>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>ConstantsSet</name>
+    <id>1</id>
+    <valueType>
+      <types>ConstantsSet</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.FileExtensionListOpenDocument</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.MaximumFileSize</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ConstantsSet.ProhibitedExtensionsList</segments>
+    </notDefaultUseAlwaysAttributes>
+    <main>true</main>
+  </attributes>
+  <attributes>
+    <name>MaxDataAreaFileSize</name>
+    <title>
+      <key>en</key>
+      <value>Maximum file size</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Максимальный размер файла</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Dung lượng tối đa của tệp</value>
+    </title>
+    <id>10</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes>
+    <name>RunMode</name>
+    <title>
+      <key>en</key>
+      <value>Run mode</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Режим работы</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Chế độ làm việc</value>
+    </title>
+    <id>15</id>
+    <valueType/>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>MaximumFileSize</name>
+    <title>
+      <key>en</key>
+      <value>Maximum file size</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Максимальный размер файла</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Dung lượng tối đa của tệp</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+  <extInfo xsi:type="form:ConstantsFormExtInfo"/>
+</form:Form>

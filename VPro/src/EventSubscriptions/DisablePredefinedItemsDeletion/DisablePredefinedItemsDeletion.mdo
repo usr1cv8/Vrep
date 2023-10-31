@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="23e79add-7f1c-422a-9df1-8f76ebf805df">
+  <name>DisablePredefinedItemsDeletion</name>
+  <synonym>
+    <key>en</key>
+    <value>Prohibit deleting predefined items</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Запретить удаление предопределенных элементов</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Cấm xóa phần tử định trước</value>
+  </synonym>
+  <source>
+    <types>ChartOfCalculationTypesObject</types>
+    <types>ChartOfAccountsObject</types>
+    <types>ChartOfCharacteristicTypesObject</types>
+    <types>CatalogObject</types>
+  </source>
+  <event>BeforeDelete</event>
+  <handler>CommonModule.StandardSubsystemsServer.DisablePredefinedItemsDeletionBeforeDeletion</handler>
+</mdclass:EventSubscription>

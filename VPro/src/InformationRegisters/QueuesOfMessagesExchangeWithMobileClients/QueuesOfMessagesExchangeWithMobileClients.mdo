@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="547bfc85-4286-4cc4-a4cf-af2b636f7e46">
+  <producedTypes>
+    <selectionType typeId="a3986f3b-bb86-4c67-b24b-0f3b41518c72" valueTypeId="86e9f480-472b-4490-8b4f-8ca34033ad6c"/>
+    <listType typeId="f328c5f5-4e65-42cf-b070-d5e6d2069041" valueTypeId="4d5a984f-d407-48d2-801c-57e85d81efd5"/>
+    <managerType typeId="4f20c579-c665-4d59-b7ec-8ae3f1f1fd54" valueTypeId="2f09810b-68c3-43b6-8f52-ce592ed0c0be"/>
+    <recordSetType typeId="cbbef0d4-8677-4146-a4a3-8cbebff8f379" valueTypeId="40ca6963-f98d-4e7a-ba2a-e3d5ff813733"/>
+    <recordKeyType typeId="2e465acc-7966-4a11-8597-2d5730b01698" valueTypeId="0c9d05dc-d19e-4b33-911a-5b1a7fbc8998"/>
+    <recordType typeId="31874ee9-a272-4ada-830d-fc30175295c8" valueTypeId="bba2c08a-80b1-47c4-879b-7182bc3de19f"/>
+    <recordManagerType typeId="0f2a23c9-fad0-4ec6-a95c-366951cc6b00" valueTypeId="25ebfb52-0290-43fa-b332-a29b0feac2f8"/>
+  </producedTypes>
+  <name>QueuesOfMessagesExchangeWithMobileClients</name>
+  <synonym>
+    <key>en</key>
+    <value>Queues of messages exchange with mobile clients</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Очереди сообщений обмена с мобильными клиентами</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Hàng đợi thông báo trao đổi với Client di động</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="e1f31822-5c3a-45f4-ac9c-bb43c6174c92">
+    <name>PostExchange</name>
+    <synonym>
+      <key>en</key>
+      <value>Post exchange</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Сообщение обмена</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Thông báo trao đổi</value>
+    </synonym>
+    <type>
+      <types>ValueStorage</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="3a06d1d0-6e0e-46b1-b4c7-2b9d12d0130c">
+    <name>MobileClient</name>
+    <synonym>
+      <key>en</key>
+      <value>Mobile client</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Мобильный клиент</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Client di động</value>
+    </synonym>
+    <type>
+      <types>ExchangePlanRef.MobileApplications</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="2d061c01-cd2e-4b7b-be13-f6313a93ee90">
+    <name>MessageNumber</name>
+    <synonym>
+      <key>en</key>
+      <value>Message number</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Номер сообщения</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số thông báo</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

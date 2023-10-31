@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2ccbc9aa-52d3-4cf3-8e83-77aaef82a38d">
+  <name>WriteVersionAtDataExchange</name>
+  <synonym>
+    <key>en</key>
+    <value>Write version on data exchange</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Записать версию при обмене данными</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Ghi lại phiên bản khi trao đổi dữ liệu</value>
+  </synonym>
+  <comment>Writing object version on data exchange</comment>
+  <source>
+    <types>BusinessProcessObject</types>
+    <types>ChartOfCalculationTypesObject</types>
+    <types>ChartOfAccountsObject</types>
+    <types>ChartOfCharacteristicTypesObject</types>
+    <types>CatalogObject</types>
+    <types>TaskObject</types>
+    <types>DocumentObject</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.VersioningEventObjects.WriteObjectVersionOnDataExchange</handler>
+</mdclass:EventSubscription>

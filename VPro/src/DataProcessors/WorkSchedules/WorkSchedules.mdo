@@ -1,0 +1,1029 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0c4cd550-6e0c-482b-bdcf-e79f8c9d699f">
+  <producedTypes>
+    <objectType typeId="cb1f1e56-b45f-4c2a-9305-6124829899cd" valueTypeId="47935942-a525-426f-9497-f983e1093d66"/>
+    <managerType typeId="306be337-db0c-46d7-819c-844dcb29600d" valueTypeId="e2571744-1627-46cb-95b9-f43aabd3ec71"/>
+  </producedTypes>
+  <name>WorkSchedules</name>
+  <synonym>
+    <key>en</key>
+    <value>Work schedules</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Графики работы</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Lịch làm việc</value>
+  </synonym>
+  <defaultForm>DataProcessor.WorkSchedules.Form.FormGraph</defaultForm>
+  <attributes uuid="7557a751-52d3-4ecb-9510-a8beb2224330">
+    <name>FillMethod</name>
+    <synonym>
+      <key>ru</key>
+      <value>Способ заполнения</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Phương thức điền</value>
+    </synonym>
+    <type>
+      <types>EnumRef.WorkScheduleFillingMethods</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="dd6dac29-8590-4685-92f3-c1badb3df899">
+    <name>UseSchedule</name>
+    <synonym>
+      <key>ru</key>
+      <value>Использовать расписание</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Sử dụng lịch biểu</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="e2ac5a74-a3c0-4b42-bd6b-0c9ffcae9375">
+    <name>AccountHolidays</name>
+    <synonym>
+      <key>ru</key>
+      <value>Учитывать праздничные дни как выходные</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tính ngày nghỉ là cuối tuần</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="97a46634-d0c6-4d3b-8215-4f9607afc6ce">
+    <name>DeleteBeginnigDate</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удалить дата отсчета</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Xóa ngày đếm ngược</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="44028dee-60c8-48af-8337-0aeb1e6afaa3">
+    <name>BusinessCalendar</name>
+    <synonym>
+      <key>ru</key>
+      <value>Производственный календарь</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Lịch sản xuất</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.BusinessCalendars</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="72318277-1e80-4b07-9839-3c4ea72f6de4">
+    <producedTypes>
+      <objectType typeId="2ae32105-31b6-4daf-ab78-c6311c1a6a40" valueTypeId="2f094737-417c-4c85-9c78-47bc2b9c71e2"/>
+      <rowType typeId="c7793f59-43de-4ace-8607-5bf449ddbda5" valueTypeId="c2391fb5-a87a-44f4-8c85-dfd6027b5a5e"/>
+    </producedTypes>
+    <name>WorkSchedule</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расписание работы</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Lịch biểu làm việc</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="d0470feb-05d6-4de0-b8af-693bcf3dd8b2">
+      <name>WorkSchedule</name>
+      <synonym>
+        <key>en</key>
+        <value>Work schedule</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>График работы</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Lịch làm việc</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.WorkSchedules</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="a6119777-e455-4582-9b5f-c72b70f3f2dc">
+      <name>CycleDayNumber</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер дня цикла</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Số ngày chu kỳ</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>2</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="bcd898e1-6654-4cce-ba38-0eb4be9851ce">
+      <name>BeginTime</name>
+      <synonym>
+        <key>ru</key>
+        <value>Время начала</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Thời gian bắt đầu</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Time</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="62ccfd49-5263-4aa1-96a4-1d95704adc88">
+      <name>EndTime</name>
+      <synonym>
+        <key>ru</key>
+        <value>Время окончания</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Thời gian kết thúc</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Time</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="cd71af2f-1612-4fd4-991f-10eacd610d9a">
+      <name>WorkHoursQuantity</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество рабочих часов</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Số giờ làm việc</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>4</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="0799a659-ee5e-48eb-835c-c77040129ac1">
+      <name>TimeBreak</name>
+      <synonym>
+        <key>ru</key>
+        <value>Время перерывов</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Giờ giải lao</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>4</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="d67845cb-2397-4be4-90c5-1f7a95de74bc">
+      <name>DayIncludedInSchedule</name>
+      <synonym>
+        <key>ru</key>
+        <value>День включен в график</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Ngày được đưa vào lịch biểu</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="423b85ea-3714-47ce-b64e-00f9e48cc52e">
+      <name>Active</name>
+      <synonym>
+        <key>ru</key>
+        <value>Активность</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Hoạt động</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="3f7564a4-b2fb-4643-b0f0-a0cfe152e001">
+    <producedTypes>
+      <objectType typeId="c555b2be-7f5e-4f2e-b6f8-46f2d1c4ec51" valueTypeId="3e010952-fa07-4d06-8b79-1be98faf1c06"/>
+      <rowType typeId="4dbaa394-0f56-49b9-9fe2-0425fb2613a7" valueTypeId="b6453631-ce95-4653-af53-4e0f688671bb"/>
+    </producedTypes>
+    <name>Breaks</name>
+    <synonym>
+      <key>ru</key>
+      <value>Перерывы</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Nghỉ giải lao</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="478758c6-b6e9-4a63-b300-fcc295d41e3b">
+      <name>WorkSchedule</name>
+      <synonym>
+        <key>en</key>
+        <value>Work schedule</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>График работы</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Lịch làm việc</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.WorkSchedules</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="5dbc3493-be60-4e3c-8c05-d5c05719c35e">
+      <name>DayNumber</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер дня</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Số ngày</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>2</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="7f7d8a4f-a3b4-4714-bcb7-b5bd36bab38d">
+      <name>BeginTime</name>
+      <synonym>
+        <key>ru</key>
+        <value>Время начала</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Thời gian bắt đầu</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Time</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="c9494d95-97e1-49c4-8a5e-18f51c53f0fa">
+      <name>EndTime</name>
+      <synonym>
+        <key>ru</key>
+        <value>Время окончания</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Thời gian kết thúc</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Time</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="0a668193-7165-4d5b-9c82-815ef785ec9a">
+      <name>Duration</name>
+      <synonym>
+        <key>ru</key>
+        <value>Длительность</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Thời lượng</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="177efdb0-73f1-426a-b95f-50cea6db56e0">
+    <producedTypes>
+      <objectType typeId="afa2dc8d-59de-4ddd-a2db-6e3915dac32d" valueTypeId="03aef1b9-895d-4a80-9afb-1ce608e9b53e"/>
+      <rowType typeId="6aeeee41-cea9-4530-8024-9b1c9ce004ef" valueTypeId="79e9127d-3d59-43d5-9ac7-5286cc36234d"/>
+    </producedTypes>
+    <name>TemplateByYear</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблоны по году</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Mẫu theo năm</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="49dad0f4-49c4-46fe-9f57-915791d9106d">
+      <name>WorkSchedule</name>
+      <synonym>
+        <key>en</key>
+        <value>Work schedule</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>График работы</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Lịch làm việc</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.WorkSchedules</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="e9cf4033-237e-495c-87bc-14e49cad4670">
+      <name>Year</name>
+      <synonym>
+        <key>ru</key>
+        <value>Год</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Trong năm tới</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>4</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="c8aa6f18-b632-4a51-bb99-7071fd2468ce">
+      <name>TemplateGraphFill</name>
+      <synonym>
+        <key>ru</key>
+        <value>Шаблон заполнения графика</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Mẫu điền lịch</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.WorkTimeGraphsTemplates</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="41b1147b-e5a7-43fc-9a4a-eeaf1140b64f">
+      <name>BeginnigDate</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата отсчета</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Ngày bắt đầu tính</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="0c2441d6-50da-437a-b4f9-bf1544415b23">
+      <name>ScheduleType</name>
+      <synonym>
+        <key>ru</key>
+        <value>Тип графика</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Loại biểu đồ</value>
+      </synonym>
+      <type>
+        <types>EnumRef.WorkScheduleTypes</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="c8c66a6e-0800-46cf-8909-f2d18621616e">
+    <producedTypes>
+      <objectType typeId="4099d31d-5f99-44fc-bb03-441a2ee039b5" valueTypeId="27483cbe-97fe-4c15-a351-49ba7692999a"/>
+      <rowType typeId="67db269f-93ab-432f-a08b-c061a68f217b" valueTypeId="79e4c8cd-2815-47a4-b2d7-828e7e972563"/>
+    </producedTypes>
+    <name>AdditionalFillingSettings</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дополнительные настройки заполнения</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Bổ sung cài đặt điền</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="e27203da-017c-4e94-90bc-7cc3fe751e95">
+      <name>WorkSchedule</name>
+      <synonym>
+        <key>en</key>
+        <value>Work schedule</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>График работы</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Lịch làm việc</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.WorkSchedules</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="4f4d06b3-9455-4783-a7df-d0a83368a66a">
+      <name>SettingValue</name>
+      <synonym>
+        <key>ru</key>
+        <value>Значение настройки</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Giá trị cài đặt</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>50</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="886d8b74-7050-43d5-a068-a9d3bcaf2cef">
+      <name>BeginTime</name>
+      <synonym>
+        <key>ru</key>
+        <value>Время начала</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Thời gian bắt đầu</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Time</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="18ffda89-93af-4113-b91e-c67abd667a80">
+      <name>EndTime</name>
+      <synonym>
+        <key>ru</key>
+        <value>Время окончания</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Thời gian kết thúc</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Time</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="03ceab9a-8705-40a0-ba04-8e6db679bcf1">
+      <name>WorkHoursQuantity</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество рабочих часов</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Số giờ làm việc</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>4</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="65498c91-b6e8-4845-97a6-41d9c4a51dd0">
+      <name>TimeBreak</name>
+      <synonym>
+        <key>ru</key>
+        <value>Время перерывов</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Giờ giải lao</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>4</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="569d2d58-ea90-4763-9fd1-fe9b4029c04a">
+    <producedTypes>
+      <objectType typeId="89d80d90-8fb5-4658-8b7a-32a56cb90eac" valueTypeId="1737fe76-b2ea-4863-b4fd-8e121b6f09b8"/>
+      <rowType typeId="41517f32-7be4-4003-9a78-3b57afea4b29" valueTypeId="ea50a14f-1320-4cc1-a0a0-025da84c8008"/>
+    </producedTypes>
+    <name>AdditionalFillingSettingsPeriods</name>
+    <synonym>
+      <key>ru</key>
+      <value>Периоды дополнительных настроек заполнения</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Thời gian cài đặt điền bổ sung</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="baca44da-5153-4f36-80a5-2ee162afc1c8">
+      <name>WorkSchedule</name>
+      <synonym>
+        <key>en</key>
+        <value>Work schedule</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>График работы</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Lịch làm việc</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.WorkSchedules</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="8429a022-dc91-4b2a-86d4-82d227067cf0">
+      <name>SettingValue</name>
+      <synonym>
+        <key>ru</key>
+        <value>Значение настройки</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Giá trị cài đặt</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>50</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="aad08fa3-229f-4324-a55f-d98ac179b079">
+      <name>BeginTime</name>
+      <synonym>
+        <key>ru</key>
+        <value>Время начала</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Thời gian bắt đầu</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Time</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="a1de4f63-0a87-4650-badb-dc53084834ba">
+      <name>EndTime</name>
+      <synonym>
+        <key>ru</key>
+        <value>Время окончания</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Thời gian kết thúc</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Time</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="9917f5d8-9268-42fd-a1d4-4346ff19c569">
+      <name>Duration</name>
+      <synonym>
+        <key>ru</key>
+        <value>Длительность</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Thời lượng</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>4</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="c9cda2b3-b28a-4622-ab80-894ac4e12f85">
+      <name>BreakHours</name>
+      <synonym>
+        <key>ru</key>
+        <value>Часов перерывов</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Giờ giải lao</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>4</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="6eb8ff72-6b7d-47b0-9586-4090ef680938">
+    <producedTypes>
+      <objectType typeId="4d0dcadc-801a-4c1a-afe1-41ec37985f9d" valueTypeId="42485976-598a-4973-8940-ee98e8099546"/>
+      <rowType typeId="06af8afa-d129-4090-9ff1-4f6d9829b177" valueTypeId="c2eb78dc-0b9a-47b7-8e70-1b9db3a19d63"/>
+    </producedTypes>
+    <name>GraphPeriods</name>
+    <synonym>
+      <key>ru</key>
+      <value>Периоды графика</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Kỳ lịch</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="38fca9a8-b4c9-4be5-a398-64e73a04c088">
+      <name>WorkSchedule</name>
+      <synonym>
+        <key>en</key>
+        <value>Work schedule</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>График работы</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Lịch làm việc</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.WorkSchedules</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="0c1125d9-2f53-4f37-94ec-42a332322cf2">
+      <name>CycleDayNumber</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер дня цикла</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Số ngày chu kỳ</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>3</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="193a2065-85c0-483a-b40b-821f21a587b9">
+      <name>BeginTime</name>
+      <synonym>
+        <key>ru</key>
+        <value>Время начала</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Thời gian bắt đầu</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Time</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="251edf7e-3b03-4bc7-ab0b-2f5ad8d2a8c7">
+      <name>EndTime</name>
+      <synonym>
+        <key>ru</key>
+        <value>Время окончания</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Thời gian kết thúc</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Time</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="259fcf95-dbe7-4743-8857-2373e302ba53">
+      <name>Duration</name>
+      <synonym>
+        <key>ru</key>
+        <value>Длительность</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Thời lượng</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>4</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="1e8718bc-c9f1-4e65-804d-8c4cf07d0d7d">
+      <name>BreakHours</name>
+      <synonym>
+        <key>ru</key>
+        <value>Часов перерывов</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Giờ giải lao</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>4</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="cea34f8b-8bb6-42b2-b66e-c05fd37cccd3">
+    <name>FormGraph</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма графика</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Mẫu dạng lịch</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="761b95e2-516d-4df0-9df6-b4dff307a868">
+    <name>WorkSchedule</name>
+    <synonym>
+      <key>en</key>
+      <value>Work schedule</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>График работы</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Lịch làm việc</value>
+    </synonym>
+  </templates>
+  <commands uuid="7c68a12d-39ae-4c1d-a19b-89241f6568c8">
+    <name>WorkTimetable</name>
+    <synonym>
+      <key>en</key>
+      <value>Schedule</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>График работы</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Lịch làm việc</value>
+    </synonym>
+    <group>FormNavigationPanelImportant</group>
+    <commandParameterType>
+      <types>CatalogRef.KeyResources</types>
+      <types>CatalogRef.Employees</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:DataProcessor>

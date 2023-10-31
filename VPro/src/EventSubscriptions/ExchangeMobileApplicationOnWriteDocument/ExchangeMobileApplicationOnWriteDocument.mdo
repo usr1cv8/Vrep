@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c038585e-d640-443f-b915-01f6e0299eca">
+  <name>ExchangeMobileApplicationOnWriteDocument</name>
+  <synonym>
+    <key>en</key>
+    <value>Exchange mobile application on write document</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Обмен мобильное приложение при записи документа</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Trao đổi ứng dụng di động khi ghi chứng từ</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ReceiptCR</types>
+    <types>DocumentObject.CashPayment</types>
+    <types>DocumentObject.CustomerOrder</types>
+    <types>DocumentObject.RetailReport</types>
+    <types>DocumentObject.ReceiptCRReturn</types>
+    <types>DocumentObject.SupplierInvoice</types>
+    <types>DocumentObject.InventoryAssembly</types>
+    <types>DocumentObject.CustomerInvoice</types>
+    <types>DocumentObject.CashReceipt</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.ExchangeMobileApplicationCommon.ExchangeMobileApplicationOnWriteDocument</handler>
+</mdclass:EventSubscription>

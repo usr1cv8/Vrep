@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:WebService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e8f6bb7f-d65d-4a9d-8fe8-ab0ab80664bf">
+  <name>MobileService</name>
+  <synonym>
+    <key>ru</key>
+    <value>Mobile service</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Dịch vụ di động</value>
+  </synonym>
+  <namespace>http://www.1c.com.vn/CM/MobileExchange</namespace>
+  <xdtoPackages xsi:type="core:ReferenceValue">
+    <value>XDTOPackage.MobileClientIntegration</value>
+  </xdtoPackages>
+  <xdtoPackages xsi:type="core:StringValue">
+    <value>http://v8.1c.ru/8.1/data/core</value>
+  </xdtoPackages>
+  <descriptorFileName>mobile.1cws</descriptorFileName>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <operations uuid="47567d84-b9f2-4000-81bd-3490b5da8c24">
+    <name>GetPackageExchange</name>
+    <synonym>
+      <key>en</key>
+      <value>Get package exchange</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Get package exchange</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Nhận gói trao đổi</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>ValueStorage</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>GetPackageExchange</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="aad4f55d-6bc8-4242-a540-e1e204a4cc91">
+      <name>MobileDeviceCode</name>
+      <synonym>
+        <key>en</key>
+        <value>Mobile device code</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Mobile device code</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Mã thiết bị di động</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="0e82b590-141f-472e-84be-6fb7de8525c3">
+      <name>ExchangeMessageNumber</name>
+      <synonym>
+        <key>en</key>
+        <value>Exchange message number</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Exchange message number</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Trao đổi số thư</value>
+      </synonym>
+      <xdtoValueType>
+        <name>decimal</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="cd940d69-e04a-4105-90c3-5504bc26bf39">
+      <name>JobID</name>
+      <synonym>
+        <key>en</key>
+        <value>Job ID</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Job ID</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Tên công việc</value>
+      </synonym>
+      <xdtoValueType>
+        <name>UUID</name>
+        <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+  <operations uuid="009e6e71-c297-4588-ac03-c4aab32db66c">
+    <name>SendPackageExchangeServiceWithID</name>
+    <synonym>
+      <key>en</key>
+      <value>Send package exchange service with ID</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Send package exchange service with ID</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Gửi gói dịch vụ trao đổi với tên</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>ValueStorage</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <nillable>true</nillable>
+    <procedureName>SendPackageExchangeServiceWithID</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="e123deb2-a99a-4c84-a346-d6362c2a0b22">
+      <name>MobileApplicationData</name>
+      <synonym>
+        <key>en</key>
+        <value>Mobile application data</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Mobile application data</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Ngày ứng dụng di động</value>
+      </synonym>
+      <xdtoValueType>
+        <name>ValueStorage</name>
+        <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="f2ed3c51-6e40-4722-9a08-f26e5ea673f7">
+      <name>MobileDeviceCode</name>
+      <synonym>
+        <key>en</key>
+        <value>Mobile device code</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Mobile device code</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Mã thiết bị di động</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="7c7b093d-d1c6-45f2-b984-6aba2bac82ae">
+      <name>MobileDeviceName</name>
+      <synonym>
+        <key>en</key>
+        <value>Mobile device name</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Mobile device name</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Tên thiết bị di động</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+    <parameters uuid="1fde704a-a51d-4439-a8d2-ffc29ff28d5a">
+      <name>SentNumber</name>
+      <synonym>
+        <key>en</key>
+        <value>Sent number</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Sent number</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Gửi số</value>
+      </synonym>
+      <xdtoValueType>
+        <name>decimal</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+    <parameters uuid="e9058fc4-7ea2-481a-bb83-c8710081bb3d">
+      <name>ReceivedNumber</name>
+      <synonym>
+        <key>en</key>
+        <value>Received number</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Received number</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Số đã nhận</value>
+      </synonym>
+      <xdtoValueType>
+        <name>decimal</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+    <parameters uuid="9f060807-6104-409f-a606-a94986d9eb9d">
+      <name>ExportPeriod</name>
+      <synonym>
+        <key>en</key>
+        <value>Export period</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Export period</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Kỳ kết xuất</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+    <parameters uuid="8e0d466c-7cf4-45c9-a3da-26bd283638ce">
+      <name>MobileAppVersion</name>
+      <synonym>
+        <key>en</key>
+        <value>Mobile app version</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Mobile app version</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Phiên bản ứng dụng di động</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+    <parameters uuid="f96aa89f-ac9e-4925-8b81-93bb55322eae">
+      <name>SubscriberID</name>
+      <synonym>
+        <key>en</key>
+        <value>Subscriber ID</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>ИдентификаторПодписчика</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>TênNgườiĐăngKý</value>
+      </synonym>
+      <xdtoValueType>
+        <name>ValueStorage</name>
+        <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+  <operations uuid="a502c69b-69cd-4b2f-ad69-6a0424914a79">
+    <name>GetProductPhoto</name>
+    <synonym>
+      <key>en</key>
+      <value>Get product photo</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Get product photo</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Nhận ảnh sản phẩm</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>base64Binary</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <nillable>true</nillable>
+    <procedureName>GetProductPhoto</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="e5b7c056-eb2c-46c9-a1c5-b54accb21bfd">
+      <name>Nomenclature</name>
+      <synonym>
+        <key>en</key>
+        <value>Nomenclature</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Nomenclature</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Mặt hàng</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="9a2c2f86-869d-4a38-9faf-9dcd2943554d">
+    <name>GetNumberOfDevices</name>
+    <synonym>
+      <key>en</key>
+      <value>Get number of devices</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Get number of devices</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Nhận số thiết bị</value>
+    </synonym>
+    <comment>not used</comment>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>GetNumberOfDevices</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+  </operations>
+  <operations uuid="75fe8cb3-4718-4e81-a9c3-dbd153924544">
+    <name>GetApplicationVersion</name>
+    <synonym>
+      <key>en</key>
+      <value>Get application version</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Get application version</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tải phiên bản ứng dụng</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>GetApplicationVersion</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+  </operations>
+  <operations uuid="9e579266-c43c-4f25-be36-7812a0916b5c">
+    <name>IsMobileTarifPlan</name>
+    <synonym>
+      <key>en</key>
+      <value>Is mobile tariff plan</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Is mobile tariff plan</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Là gói cước di động</value>
+    </synonym>
+    <comment>not used</comment>
+    <xdtoReturningValueType>
+      <name>boolean</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>IsMobileTarifPlan</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+  </operations>
+  <operations uuid="d9611b54-58c5-4b59-bc9f-dc149f01f63d">
+    <name>DeleteSuccessfulBackgroundJobId</name>
+    <synonym>
+      <key>en</key>
+      <value>Delete successful background job id</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Удалить успешное ИД фонового задания</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Xóa ID công việc nền thành công</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <nillable>true</nillable>
+    <procedureName>DeleteSuccessfulBackgroundJobId</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="2e2115f6-ba40-44a7-96fd-b0b873201ed4">
+      <name>MobileDeviceCode</name>
+      <synonym>
+        <key>en</key>
+        <value>Mobile device code</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Mobile device code</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Mã thiết bị di động</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+</mdclass:WebService>

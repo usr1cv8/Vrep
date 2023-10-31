@@ -1,0 +1,1097 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <title>
+    <key>en</key>
+    <value>Personal settings for email and SMS</value>
+  </title>
+  <title>
+    <key>ru</key>
+    <value>Персональные настройки электронной почты и SMS</value>
+  </title>
+  <title>
+    <key>vi</key>
+    <value>Tùy chỉnh cá nhân E-mail và SMS</value>
+  </title>
+  <items xsi:type="form:FormGroup">
+    <name>GroupTitle</name>
+    <id>14</id>
+    <items xsi:type="form:Decoration">
+      <name>SectionDescription</name>
+      <id>16</id>
+      <title>
+        <key>en</key>
+        <value>Use this section to set personal settings for default email client and SMS sending</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>В разделе устанавливаются персональные настройки использования встроенного почтового клиента и отправки SMS</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Trong phần hành đã thiết lập tùy chọn cá nhân sử dụng thư hệ thống của khách hàng và gửi tin nhắn</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>SectionDescriptionExtendedTooltip</name>
+        <id>18</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>SectionDescriptionContextMenu</name>
+        <id>17</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>Label</type>
+      <width>70</width>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <horizontalStretch>false</horizontalStretch>
+      <verticalStretch>false</verticalStretch>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+        <verticalAlign>Top</verticalAlign>
+      </extInfo>
+    </items>
+    <items xsi:type="form:Decoration">
+      <name>DecorationGap1</name>
+      <id>19</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>DecorationIndent1ExtendedTooltip</name>
+        <id>21</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>DecorationIndent1ContextMenu</name>
+        <id>20</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <horizontalStretch>true</horizontalStretch>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <extendedTooltip>
+      <name>GroupHeaderExtendedTooltip</name>
+      <id>15</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>MainMail</name>
+    <id>22</id>
+    <items xsi:type="form:FormGroup">
+      <name>GroupMail</name>
+      <id>26</id>
+      <items xsi:type="form:FormField">
+        <name>DefaultEmailAccount</name>
+        <id>1</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>DefaultEmailAccount</segments>
+        </dataPath>
+        <titleLocation>None</titleLocation>
+        <toolTipRepresentation>ShowBottom</toolTipRepresentation>
+        <handlers>
+          <event>OnChange</event>
+          <name>AtAttributeChange</name>
+        </handlers>
+        <extendedTooltip>
+          <name>DefaultEmailAccountExtendedTooltip</name>
+          <id>3</id>
+          <title>
+            <key>en</key>
+            <value>Email account that will be used by default when you send outgoing emails</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Учетная запись электронной почты, которая будет подставляться по умолчанию при отправке исходящей корреспонденции</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Trương mục E-mail mà sẽ chèn theo mặc định khi gửi thư đi</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>DefaultEmailAccountContextMenu</name>
+          <id>2</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+          <choiceParameters>
+            <name>Filter.UseForSending</name>
+            <value xsi:type="form:FormChoiceListDesTimeValue">
+              <value xsi:type="core:BooleanValue">
+                <value>true</value>
+              </value>
+            </value>
+          </choiceParameters>
+        </extInfo>
+      </items>
+      <items xsi:type="form:Decoration">
+        <name>DecorationGap2</name>
+        <id>28</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>DecorationIndent2ExtendedTooltip</name>
+          <id>30</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>DecorationIndent2ContextMenu</name>
+          <id>29</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Group email</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Группа почта</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Nhóm E-mail</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Group email</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Группа почта</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Nhóm E-mail</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>GroupMailExtendedTooltip</name>
+        <id>27</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <slaveItemsWidth>Equal</slaveItemsWidth>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Main email</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Основная почта</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>E-mail chính</value>
+    </title>
+    <titleTextColor xsi:type="core:ColorRef">
+      <color>Style.TitleColorSettingsGroup</color>
+    </titleTextColor>
+    <toolTip>
+      <key>en</key>
+      <value>Main email</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Основная почта</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>E-mail chính</value>
+    </toolTip>
+    <width>82</width>
+    <horizontalStretch>false</horizontalStretch>
+    <extendedTooltip>
+      <name>MainMailExtendedTooltip</name>
+      <id>23</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <representation>NormalSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <showTitle>true</showTitle>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>Signature</name>
+    <id>24</id>
+    <items xsi:type="form:FormGroup">
+      <name>GroupSignatures</name>
+      <id>31</id>
+      <items xsi:type="form:FormField">
+        <name>AddSignatureForNewMessages</name>
+        <id>4</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>AddSignatureForNewMessages</segments>
+        </dataPath>
+        <titleLocation>Right</titleLocation>
+        <toolTipRepresentation>ShowBottom</toolTipRepresentation>
+        <handlers>
+          <event>OnChange</event>
+          <name>AtAttributeChange</name>
+        </handlers>
+        <extendedTooltip>
+          <name>AddSignatureForNewMessagesExtendedTooltip</name>
+          <id>6</id>
+          <title>
+            <key>en</key>
+            <value>The specified signature will be added to the email text when you send a new message</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>При отправке новых сообщений в текст письма будет добавляться заданная подпись</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Khi gửi thông báo mới, trong nội dung thư sẽ bổ sung chữ ký đã đặt</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>AddSignatureForNewMessagesContextMenu</name>
+          <id>5</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>CheckBoxField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+      </items>
+      <items xsi:type="form:Button">
+        <name>SaveSignature</name>
+        <id>36</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>SaveSignatureExtendedTooltip</name>
+          <id>37</id>
+          <title>
+            <key>en</key>
+            <value>Save signature without closing settings</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Сохранить подпись, не закрывая настройки</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Lưu chữ ký mà không đóng tùy chỉnh</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualButton</type>
+        <commandName>Form.Command.SaveSignature</commandName>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <toolTipRepresentation>ShowBottom</toolTipRepresentation>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Group signatures</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Группа подписи</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Nhóm ký tên</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Group signatures</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Группа подписи</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Nhóm ký tên</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>GroupSignaturesExtendedTooltip</name>
+        <id>32</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <slaveItemsWidth>Equal</slaveItemsWidth>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>CommandBarFormattedDocument</name>
+      <id>10</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Command bar of the formatted document</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Командная панель форматированного документа</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Thanh lệnh chứng từ định dạng</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Command bar of the formatted document</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Командная панель форматированного документа</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Thanh lệnh chứng từ định dạng</value>
+      </toolTip>
+      <width>82</width>
+      <horizontalStretch>false</horizontalStretch>
+      <extendedTooltip>
+        <name>CommandBarFormattedDocumentExtendedTooltip</name>
+        <id>11</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>CommandBar</type>
+      <extInfo xsi:type="form:CommandBarExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+        <commandSource>Item.SignatureFormattedDocument</commandSource>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>SignatureFormattedDocument</name>
+      <id>7</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>SignatureFormattedDocument</segments>
+      </dataPath>
+      <titleLocation>None</titleLocation>
+      <excludedCommands>Picture</excludedCommands>
+      <handlers>
+        <event>OnChange</event>
+        <name>AtAttributeChange</name>
+      </handlers>
+      <extendedTooltip>
+        <name>SignatureFormattedDocumentExtendedTooltip</name>
+        <id>9</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>SignatureFormattedDocumentContextMenu</name>
+        <id>8</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>FormattedDocumentField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:FormattedDocFieldExtInfo">
+        <width>82</width>
+        <autoMaxWidth>true</autoMaxWidth>
+        <height>6</height>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Signature</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>подпись</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Ký tên</value>
+    </title>
+    <titleTextColor xsi:type="core:ColorRef">
+      <color>Style.TitleColorSettingsGroup</color>
+    </titleTextColor>
+    <toolTip>
+      <key>en</key>
+      <value>Main email</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Основная почта</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>E-mail chính</value>
+    </toolTip>
+    <width>82</width>
+    <extendedTooltip>
+      <name>SignatureExtendedTooltip</name>
+      <id>25</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <representation>NormalSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <showTitle>true</showTitle>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>SMS</name>
+    <id>38</id>
+    <items xsi:type="form:FormGroup">
+      <name>GroupSMSSenderName</name>
+      <id>40</id>
+      <items xsi:type="form:FormField">
+        <name>SMSSenderName</name>
+        <id>42</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>SMSSenderName</segments>
+        </dataPath>
+        <titleLocation>None</titleLocation>
+        <toolTipRepresentation>ShowBottom</toolTipRepresentation>
+        <handlers>
+          <event>OnChange</event>
+          <name>AtAttributeChange</name>
+        </handlers>
+        <extendedTooltip>
+          <name>SMSSenderNameExtendedTooltip</name>
+          <id>44</id>
+          <title>
+            <key>en</key>
+            <value>SMS sender name that will be automatically inserted when sending SMS</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Имя отправителя SMS, которое будет подставляться по умолчанию при отправке SMS сообщений</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Tên người gửi SMS mà sẽ được chèn theo mặc định khi gửi thông báo SMS</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>SMSSenderNameContextMenu</name>
+          <id>43</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+          <choiceParameters>
+            <name>Filter.UseForSending</name>
+            <value xsi:type="form:FormChoiceListDesTimeValue">
+              <value xsi:type="core:BooleanValue">
+                <value>true</value>
+              </value>
+            </value>
+          </choiceParameters>
+        </extInfo>
+      </items>
+      <items xsi:type="form:Decoration">
+        <name>DecorationGap3</name>
+        <id>45</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>DecorationIndent3ExtendedTooltip</name>
+          <id>47</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>DecorationIndent3ContextMenu</name>
+          <id>46</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Group SMS sender name</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Группа имя отправителя SMS</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Nhóm tên người gửi SMS</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Group email</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Группа почта</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Nhóm E-mail</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>GroupSMSSenderNameExtendedTooltip</name>
+        <id>41</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <slaveItemsWidth>Equal</slaveItemsWidth>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>SMS</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>смс</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Tin nhắn SMS</value>
+    </title>
+    <titleTextColor xsi:type="core:ColorRef">
+      <color>Style.TitleColorSettingsGroup</color>
+    </titleTextColor>
+    <toolTip>
+      <key>en</key>
+      <value>Main email</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Основная почта</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>E-mail chính</value>
+    </toolTip>
+    <width>82</width>
+    <horizontalStretch>false</horizontalStretch>
+    <extendedTooltip>
+      <name>SMSExtendedTooltip</name>
+      <id>39</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <representation>NormalSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <showTitle>true</showTitle>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <autoCommandBar>
+    <name>FormCommandBar</name>
+    <id>-1</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <horizontalAlign>Left</horizontalAlign>
+  </autoCommandBar>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>OnCreateAtServer</name>
+  </handlers>
+  <width>84</width>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <enabled>true</enabled>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>AddSignatureForNewMessages</name>
+    <title>
+      <key>en</key>
+      <value>Enable signature for new messages</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Включать подпись для новых сообщений</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Bật chữ ký đối với thông báo mới</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>SignatureFormattedDocument</name>
+    <title>
+      <key>en</key>
+      <value>Signature formatted document</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Подпись форматированный документ</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Chữ ký chứng từ có định dạng</value>
+    </title>
+    <id>1</id>
+    <valueType>
+      <types>FormattedDocument</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>DefaultEmailAccount</name>
+    <id>3</id>
+    <valueType>
+      <types>CatalogRef.EmailAccounts</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>SMSSenderName</name>
+    <title>
+      <key>en</key>
+      <value>SMS sender name</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Имя отправителя SMS</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Tên người gửi SMS</value>
+    </title>
+    <id>4</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <formCommands>
+    <name>SaveSignature</name>
+    <title>
+      <key>en</key>
+      <value>Save signature</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Сохранить подпись</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Lưu chữ ký</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>en</key>
+      <value>Save signature</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Сохранить подпись</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Lưu chữ ký</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>SaveSignature</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+</form:Form>

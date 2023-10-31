@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2529ba04-0bcb-40d0-9e18-2fedaec544aa">
+  <name>AttachedFileBeforeDelete</name>
+  <synonym>
+    <key>en</key>
+    <value>Attached file before deletion</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Присоединенный файл перед удалением</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Tệp đính kèm trước khi xóa bỏ</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.InvoiceForPaymentAttachedFiles</types>
+    <types>CatalogObject.InventoryAssemblyAttachedFiles</types>
+    <types>CatalogObject.IndividualsAttachedFiles</types>
+    <types>CatalogObject.SettlementsReconciliationAttachedFiles</types>
+    <types>CatalogObject.WorkOrderAttachedFiles</types>
+    <types>CatalogObject.CounterpartiesAttachedFiles</types>
+    <types>CatalogObject.SupplierInvoiceForPaymentAttachedFiles</types>
+    <types>CatalogObject.SpecificationsAttachedFiles</types>
+    <types>CatalogObject.LegalDocumentsAttachedFiles</types>
+    <types>CatalogObject.ProductsAndServicesAttachedFiles</types>
+    <types>CatalogObject.EventAttachedFiles</types>
+    <types>CatalogObject.FileFoldersAttachedFiles</types>
+    <types>CatalogObject.CompaniesAttachedFiles</types>
+    <types>CatalogObject.ProductionOrderAttachedFiles</types>
+    <types>CatalogObject.AcceptanceCertificateAttachedFiles</types>
+    <types>CatalogObject.PaymentReceiptAttachedFiles</types>
+    <types>CatalogObject.BulkMailAttachedFiles</types>
+    <types>CatalogObject.PaymentExpenseAttachedFiles</types>
+    <types>CatalogObject.InventoryReconciliationAttachedFiles</types>
+    <types>CatalogObject.CustomerOrderAttachedFiles</types>
+    <types>CatalogObject.CustomerInvoiceAttachedFiles</types>
+    <types>CatalogObject.SupplierInvoiceAttachedFiles</types>
+    <types>CatalogObject.CashOutflowPlanAttachedFiles</types>
+    <types>CatalogObject.CounterpartyContractsAttachedFiles</types>
+    <types>CatalogObject.PurchaseOrderAttachedFiles</types>
+    <types>CatalogObject.ExpenseReportAttachedFiles</types>
+  </source>
+  <event>BeforeDelete</event>
+  <handler>CommonModule.AttachedFiles.ExecuteActionsBeforeDeleteAttachedFile</handler>
+</mdclass:EventSubscription>

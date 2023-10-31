@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="590d573e-f045-4bd3-b32a-b1a0fae4873f">
+  <name>SetDeletionMarkOnDocumentFiles</name>
+  <synonym>
+    <key>en</key>
+    <value>Select the deletion mark of the document files</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Установить пометку удаления файлов документов</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Đặt dấu xóa tệp chứng từ</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.PaymentExpense</types>
+    <types>DocumentObject.ExpenseReport</types>
+    <types>DocumentObject.CustomerOrder</types>
+    <types>DocumentObject.WorkOrder</types>
+    <types>DocumentObject.PurchaseOrder</types>
+    <types>DocumentObject.Event</types>
+    <types>DocumentObject.SupplierInvoiceForPayment</types>
+    <types>DocumentObject.SupplierInvoice</types>
+    <types>DocumentObject.PaymentReceipt</types>
+    <types>DocumentObject.InventoryReconciliation</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.FileOperations.SetDeletionMarkOfDocumentFilesBeforeWrite</handler>
+</mdclass:EventSubscription>

@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e870a1bd-0c08-4d1e-832a-357922983c19">
+  <producedTypes>
+    <objectType typeId="ca943bb0-8da4-47d9-9894-8b34fa1b30ac" valueTypeId="20249d73-fa66-4305-a525-8f62322fe74a"/>
+    <managerType typeId="5e70040e-d153-44a3-8517-c5546978aafe" valueTypeId="dd9bbde9-e6ec-4651-ba81-b6e932f3eeed"/>
+  </producedTypes>
+  <name>XDTOObjectsConversion</name>
+  <synonym>
+    <key>en</key>
+    <value>XDTO object conversion</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Конвертация объектов XDTO</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Chuyển đổi đối tượng XDTO</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <attributes uuid="9f71aeac-f889-40dc-91bd-d670da4efd2b">
+    <name>InfoMessagesOutputToMessagesWindow</name>
+    <synonym>
+      <key>en</key>
+      <value>Display diagnostic messages in the window</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Вывод в окно сообщений информационных сообщений</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Hiển thị thông báo trong cửa sổ thông báo </value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="62f8a9b2-9e56-4d5c-a7e2-a85f5b27a5b7">
+    <name>OutputInInformationMessagesToProtocol</name>
+    <synonym>
+      <key>en</key>
+      <value>Write diagnostic messages to the information log</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Вывод в протокол информационных сообщений</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Hiển thị giao thức thông báo</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="614ef0bd-3298-408b-bf71-37df8ee60702">
+    <name>ExportAllowedOnly</name>
+    <synonym>
+      <key>en</key>
+      <value>Export only allowed</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Выгружать только разрешенные</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Chỉ kết xuất những đối tượng được phép</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="26ff1be6-f72a-456a-9dce-302029752603">
+    <name>AppendDataToExchangeProtocol</name>
+    <synonym>
+      <key>en</key>
+      <value>Append data to the data exchange protocol</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Дописывать данные в протокол обмена</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Thêm dữ liệu vào giao thức trao đổi</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="db850a08-0c99-4a57-9b04-38be64bd38fb">
+    <name>ExchangePlanNameVRO</name>
+    <synonym>
+      <key>en</key>
+      <value>Name of exchange plan with custom object registration</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Имя плана обмена с выборочной регистраций объектов</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tên sơ đồ trao đổi với ghi nhận đối tượng đã chọn</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="abeca127-5ae9-46af-a5e8-d6438fd68367">
+    <name>ExchangeFileName</name>
+    <synonym>
+      <key>en</key>
+      <value>Exchange file name</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Имя файла обмена</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tên tệp trao đổi</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="bce81631-9f6d-42b3-b4b6-2199afb08f2f">
+    <name>ExchangeProtocolFileName</name>
+    <synonym>
+      <key>en</key>
+      <value>Name of file with exchange protocol</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Имя файла протокола обмена</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tên tệp giao thức trao đổi</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>255</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="67d6878f-3e47-4142-8f98-c5a207f0b8a8">
+    <name>UseTransactions</name>
+    <synonym>
+      <key>en</key>
+      <value>Use transactions</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Использовать транзакции</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Sử dụng giao tác</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="7f4b872f-0e50-49dd-984d-f5fc3ac3f2f0">
+    <name>CountProcessedObjectsForRefreshStatus</name>
+    <synonym>
+      <key>en</key>
+      <value>Number of Processed Objects for Status Update</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Количество обработанных объектов для обновления статуса:</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số lượng đối tượng đã được xử lý để cập nhật trạng thái:</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="68636657-4d46-4c2a-9b2f-11521a55dfb4">
+    <name>ObjectsCountForTransactions</name>
+    <synonym>
+      <key>en</key>
+      <value>Number of objects in a single transaction</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Количество объектов на транзакцию</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số lượng đối tượng trên một giao tác</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="18a83f43-dc84-4f8a-9580-681b19f571c4">
+    <name>CommentDuringDataExport</name>
+    <synonym>
+      <key>en</key>
+      <value>Comment on data export</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий при выгрузке данных</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ghi chú khi kết xuất dữ liệu</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="01c588b0-d0ce-4978-b04d-084e6a00fcc7">
+    <name>CommentDuringDataImport</name>
+    <synonym>
+      <key>en</key>
+      <value>Comment during data import</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий при загрузке данных</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ghi chú khi kết nhập dữ liệu</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="a23642d9-8c4f-44a5-8865-bfb286e47c55">
+    <name>Parameters</name>
+    <synonym>
+      <key>en</key>
+      <value>Parameters</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Параметры</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tham số</value>
+    </synonym>
+    <type/>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="7b37e038-dcef-41e1-b6e7-ed73c6958415">
+    <name>ContinueOnError</name>
+    <synonym>
+      <key>en</key>
+      <value>Continue if an error occurs</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Продолжить при ошибке</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tiếp tục nếu lỗi</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="24df2d14-5ebf-4ded-ba14-5daee7a0c536">
+    <name>DataImportMode</name>
+    <synonym>
+      <key>en</key>
+      <value>Data Import Mode</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Режим загрузки данных</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Chế độ kết nhập dữ liệu</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="13d6e2e9-b268-4c1b-8b8b-30c5296cfe4c">
+    <name>ExchangeMode</name>
+    <synonym>
+      <key>en</key>
+      <value>Exchange mode</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Режим обмена</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Chế độ trao đổi</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="03bb028a-ee8c-411e-8382-653046f803c6">
+    <name>NodeForExchange</name>
+    <synonym>
+      <key>en</key>
+      <value>Exchange node</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Узел для обмена</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Nút dành cho trao đổi</value>
+    </synonym>
+    <type>
+      <types>ExchangePlanRef</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="c4fa80ca-32d6-4a44-9fe2-7ffd67e1cb30">
+    <name>ExchangeNodeForDataImport</name>
+    <synonym>
+      <key>en</key>
+      <value>Exchange node data import</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Узел обмена загрузка данных</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Nút trao đổi kết nhập dữ liệu</value>
+    </synonym>
+    <type>
+      <types>ExchangePlanRef</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="8aa73dfd-41ac-4f79-bf73-cd2da51b1232">
+    <name>ExchangeComponents</name>
+    <synonym>
+      <key>en</key>
+      <value>Exchange components</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Компоненты обмена</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Cấu phần trao đổi</value>
+    </synonym>
+    <type/>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="38d5ed93-133b-44fe-827a-69a6cfc0461d">
+    <name>EventLogMonitorMessageKey</name>
+    <synonym>
+      <key>en</key>
+      <value>Event Log Message Key</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Ключ сообщения журнала регистрации</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Khóa thông báo nhật ký sự kiện</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+</mdclass:DataProcessor>

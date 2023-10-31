@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f1381abc-e09f-407d-b6b5-c59e7c9e2fd7">
+  <name>ContactInformationTypesFillOrderingAttributeValue</name>
+  <synonym>
+    <key>en</key>
+    <value>Contact information kinds fill in arrangement attribute value</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Виды контактной информации заполнить значение реквизита упорядочивания</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Dạng thông tin liên hệ điền giá trị mục tin sắp xếp</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.ContactInformationKinds</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ItemOrderSetup.FillOrderingAttributeValue</handler>
+</mdclass:EventSubscription>

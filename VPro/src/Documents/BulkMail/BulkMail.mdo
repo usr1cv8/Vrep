@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1ab3264c-e0a4-4066-9961-52ef8b657bb2">
+  <producedTypes>
+    <objectType typeId="59062c93-0636-4213-b813-51ae0c1272e4" valueTypeId="a75d11b6-883b-4459-abda-8c04cf69e124"/>
+    <refType typeId="d52ba891-8e86-4189-abed-a3c5ef564fd1" valueTypeId="696b9f13-11a6-4e8e-841e-892a242f9670"/>
+    <selectionType typeId="df03a98d-f193-430a-9034-81cb72fa3c69" valueTypeId="96fa63dd-17b8-4930-82ae-c1f6068de400"/>
+    <listType typeId="0a5da691-782d-4f6e-bec3-3d5c88f97abe" valueTypeId="b43ffabf-3f88-446f-92f4-04b91b7da301"/>
+    <managerType typeId="1bbb6ea3-0f31-41e9-b5ab-ab04c8920f78" valueTypeId="08d92c48-7ffb-431e-89d7-c94a24bbdb2d"/>
+  </producedTypes>
+  <name>BulkMail</name>
+  <synonym>
+    <key>en</key>
+    <value>Bulk mailing</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Массовая рассылка</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Gửi hàng loạt</value>
+  </synonym>
+  <inputByString>Document.BulkMail.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Posted</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Date</name>
+    <synonym>
+      <key>en</key>
+      <value>Creation date</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Дата создания</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ngày tạo</value>
+    </synonym>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Number</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <createOnInput>Use</createOnInput>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>en</key>
+    <value>Emails, SMS sending</value>
+  </objectPresentation>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Рассылка E-mail, SMS</value>
+  </objectPresentation>
+  <objectPresentation>
+    <key>vi</key>
+    <value>Gửi E-mail, SMS</value>
+  </objectPresentation>
+  <listPresentation>
+    <key>en</key>
+    <value>Bulk mailings (Email, SMS)</value>
+  </listPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Массовые рассылки (E-mail, SMS)</value>
+  </listPresentation>
+  <listPresentation>
+    <key>vi</key>
+    <value>Gửi hàng loạt (E-mail, SMS)</value>
+  </listPresentation>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.BulkMail.Form.DocumentForm</defaultObjectForm>
+  <defaultListForm>Document.BulkMail.Form.ListForm</defaultListForm>
+  <defaultChoiceForm>Document.BulkMail.Form.ChoiceForm</defaultChoiceForm>
+  <posting>Deny</posting>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="2811d17a-9a89-4f2d-98d8-3b5d38f5c000">
+    <name>SendingMethod</name>
+    <synonym>
+      <key>en</key>
+      <value>Sending method</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Способ отправки</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Cách gửi</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ConnectionChannelTypes</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Mailing option</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Вариант отправки рассылки</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Phương án gửi</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Enum.ConnectionChannelTypes.EnumValue.Email</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="accf8f69-9150-4227-bfee-fd2c13448484">
+    <name>State</name>
+    <synonym>
+      <key>en</key>
+      <value>State</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Trạng thái</value>
+    </synonym>
+    <type>
+      <types>EnumRef.SendingMailingsStages</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Enum.SendingMailingsStages.EnumValue.Draft</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="216567df-f70a-4826-9933-e83a93c80961">
+    <name>Subject</name>
+    <synonym>
+      <key>en</key>
+      <value>Subject</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Тема</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tiêu đề</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <types>CatalogRef.EventsSubjects</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Mailing subject</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Тематика рассылки</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Những đề tài gửi</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="0ee29296-19dd-4502-9215-54f671922a17">
+    <name>Content</name>
+    <synonym>
+      <key>en</key>
+      <value>Content</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Состав</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Thành phần</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Event description</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Описание события</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Mô tả sự kiện</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7f1a72fe-81ea-4588-9893-6be1173e5381">
+    <name>ContentHTML</name>
+    <synonym>
+      <key>en</key>
+      <value>HTML content</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Содержание HTML</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Nội dung HTML</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="6e783b6c-e961-4e3a-b7a3-f127a0052765">
+    <name>ImagesHTML</name>
+    <synonym>
+      <key>en</key>
+      <value>Images HTML</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Images HTML</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Hình vẽ HTML</value>
+    </synonym>
+    <comment>Structure of formatted document pictures</comment>
+    <type>
+      <types>ValueStorage</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="5ebfee8c-8413-4fd4-b79f-9734f152cb6b">
+    <name>UserAccount</name>
+    <synonym>
+      <key>en</key>
+      <value>Profile</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Учетная запись</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Trương mục E-mail</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.EmailAccounts</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Email account that will be used for sending emails</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Учетная запись электронной почты, которая будет использована для отправки электронных писем</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Trương mục E-mail mà sẽ được dùng để gửi E-mail</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="358286b4-2f03-4998-803b-62752e9c3c66">
+    <name>SMSSenderName</name>
+    <synonym>
+      <key>en</key>
+      <value>Sender name</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Имя отправителя</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tên người gửi</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>SMS sender name that will be displayed instead of a number for recipients</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Имя отправителя SMS, которое будет отображаться вместо номера у получателей</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tên người nhận SMS mà sẽ hiển thị thay cho số của người nhận</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1fa71149-39f7-4605-b1d6-5e4d4f907dad">
+    <name>CreateEvents</name>
+    <synonym>
+      <key>en</key>
+      <value>Create events</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Создавать события</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tạo sự kiện</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Shows whether event documents should be created for each sent email or SMS</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак необходимости создавать документы-события для каждого отправленного E-mail или SMS</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Dấu hiệu cần thiết tạo chứng từ-sự kiện cho mỗi E-mail hoặc SMS gửi đi</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:BooleanValue">
+      <value>true</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="5a00de61-f8cb-4a54-85c1-98981702771e">
+    <name>DateMailings</name>
+    <synonym>
+      <key>en</key>
+      <value>Mailing date</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Дата рассылки</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ngày gửi</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="cf5c737b-0fff-4e8f-a765-4088079cb46a">
+    <name>Responsible</name>
+    <synonym>
+      <key>en</key>
+      <value>Responsible manager</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный менеджер</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Chịu trách nhiệm quản lý</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Employees</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Information about the employee responsible for entering the current document</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Информация о сотруднике ответственном за ввод текущего документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Thông tin về người lao động chịu trách nhiệm nhập chứng từ hiện tại</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.Employees.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="cf9fd8f6-820e-40e7-a468-f4825789795d">
+    <name>Author</name>
+    <synonym>
+      <key>en</key>
+      <value>Created by</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Ведомость составил</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Người lập</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Users</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>User who created the document</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Пользователь, создавший документ</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Người sử dụng mà đã lập chứng từ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="43bb8b2d-01a7-4f85-89b1-3f2c63cdc0bf">
+    <name>Comment</name>
+    <synonym>
+      <key>en</key>
+      <value>Note</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Примечание</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ghi chú</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Arbitrary comment</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Произвольный комментарий</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Ghi chú tùy ý </value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="013a743f-0dcf-4575-9e17-c491afbd0278">
+    <name>DocumentForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Document form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu chứng từ</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="05257526-7aba-4539-8eb4-54e411d68f47">
+    <name>ListForm</name>
+    <synonym>
+      <key>en</key>
+      <value>List form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu danh sách</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="38da04c4-d197-4d77-83a6-4bae3890fb13">
+    <name>ChoiceForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Selection form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu chọn</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="7981539f-a30a-453c-900b-38b6060c0737">
+    <producedTypes>
+      <objectType typeId="3b9a9d98-692e-4c18-913c-9cdf17bec838" valueTypeId="5bd23cbc-a656-4c80-895b-456a33e090ba"/>
+      <rowType typeId="db153dcd-87e2-4ee4-8e42-549273f2d3ed" valueTypeId="daccd595-e882-412f-a8b5-0d632dfea27b"/>
+    </producedTypes>
+    <name>Recipients</name>
+    <synonym>
+      <key>en</key>
+      <value>Recipients</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Получатели</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Người nhận</value>
+    </synonym>
+    <fillChecking>ShowError</fillChecking>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="85fc22fc-cb4f-4a5b-bd62-9cea168ebd44">
+      <name>Contact</name>
+      <synonym>
+        <key>en</key>
+        <value>Contact</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Контактное лицо</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Người liên hệ</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ContactPersons</types>
+        <types>String</types>
+        <types>CatalogRef.Counterparties</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Mailing recipient</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Получатель рассылки</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Nơi nhận E-mail</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="2886da0f-50ce-48cf-ab6c-20d153c58788">
+      <name>HowToContact</name>
+      <synonym>
+        <key>en</key>
+        <value>How to contact</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Как связаться</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Cách liên hệ</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="d4a26cc3-c3af-47e5-a888-705c72aaa148">
+      <name>NumberForSending</name>
+      <synonym>
+        <key>en</key>
+        <value>Number for sending</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Номер для отправки</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Số để gửi</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>30</length>
+        </stringQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Number from the &quot;How to contact&quot; field for SMS sending converted to the xxxxxxxxxxxx format</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Преобразованный в формат +xxxxxxxxxxxx номер из поля &quot;Как связаться&quot; для отправки SMS</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Chuyển số từ trường &quot;Liên kết thế nào&quot; vào định dạng +xxxxxxxxxxxx để gửi SMS</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="b01387c3-a648-47f5-9375-9087f844570b">
+      <name>MessageID</name>
+      <synonym>
+        <key>en</key>
+        <value>Message ID</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Идентификатор сообщения</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Tên thông báo</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>20</length>
+        </stringQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Message identifier submitted by provider. Using it, you can receive SMS delivery status</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Идентификатор сообщения, который передал провайдер. По нему можно получать статус доставки сообщения SMS</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Tên (ID) thông báo mà nhà cung cấp đã chuyển. Theo đó có thể nhận trạng thái gửi và nhận thông báo SMS</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="00253b41-5f3b-4518-9d94-bea702cb7898">
+      <name>DeliveryStatus</name>
+      <synonym>
+        <key>en</key>
+        <value>Delivery status</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Статус доставки</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Trạng thái chuyển tin</value>
+      </synonym>
+      <type>
+        <types>EnumRef.SMSMessageStates</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>SMS message delivery status</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Статус доставки сообщения SMS адресату</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Trạng thái gửi SMS cho người nhận</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <commands uuid="c110a52c-a55c-49f7-a5b5-0c9968f1ee00">
+    <name>OpenMailingList</name>
+    <synonym>
+      <key>en</key>
+      <value>Bulk mailings (Email, SMS)</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Массовые рассылки (E-mail, SMS)</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Gửi hàng loạt (E-mail, SMS)</value>
+    </synonym>
+    <group>ActionsPanelTools</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:Document>

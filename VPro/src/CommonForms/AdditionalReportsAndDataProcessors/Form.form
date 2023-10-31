@@ -1,0 +1,1566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <items xsi:type="form:FormGroup">
+    <name>Pages</name>
+    <id>37</id>
+    <items xsi:type="form:FormGroup">
+      <name>PageOpenProcessing</name>
+      <id>38</id>
+      <items xsi:type="form:Table">
+        <name>CommandTable</name>
+        <id>15</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>CommandTable</segments>
+        </dataPath>
+        <skipOnInput>false</skipOnInput>
+        <titleLocation>None</titleLocation>
+        <excludedCommands>Add</excludedCommands>
+        <excludedCommands>Change</excludedCommands>
+        <excludedCommands>Copy</excludedCommands>
+        <excludedCommands>Delete</excludedCommands>
+        <excludedCommands>EndEdit</excludedCommands>
+        <excludedCommands>MoveDown</excludedCommands>
+        <excludedCommands>MoveUp</excludedCommands>
+        <excludedCommands>SortListAsc</excludedCommands>
+        <excludedCommands>SortListDesc</excludedCommands>
+        <items xsi:type="form:FormField">
+          <name>DataProcessorsPresentation</name>
+          <id>26</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>CommandTable.Presentation</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>DataProcessorsPresentationExtendedTooltip</name>
+            <id>57</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>DataProcessorsPresentationContextMenu</name>
+            <id>27</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <commandBarLocation>None</commandBarLocation>
+        <autoCommandBar>
+          <name>CommandTableCommandBar</name>
+          <id>17</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <horizontalAlign>Left</horizontalAlign>
+          <autoFill>true</autoFill>
+        </autoCommandBar>
+        <handlers>
+          <event>Selection</event>
+          <name>TableOfCommandsChoice</name>
+        </handlers>
+        <searchStringAddition>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <name>CommandTableSearchString</name>
+          <id>70</id>
+          <extendedTooltip>
+            <name>CommandTableSearchStringExtendedTooltip</name>
+            <id>72</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>CommandTableSearchStringContextMenu</name>
+            <id>71</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <source>CommandTableSearchString</source>
+          <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </searchStringAddition>
+        <viewStatusAddition>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <name>CommandTableViewStatus</name>
+          <id>73</id>
+          <extendedTooltip>
+            <name>CommandTableViewStatusExtendedTooltip</name>
+            <id>75</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>CommandTableViewStatusContextMenu</name>
+            <id>74</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>ViewStatusAddition</type>
+          <source>CommandTableViewStatus</source>
+          <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </viewStatusAddition>
+        <searchControlAddition>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <name>CommandTableSearchControl</name>
+          <id>76</id>
+          <extendedTooltip>
+            <name>CommandTableSearchControlExtendedTooltip</name>
+            <id>78</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>CommandTableSearchControlContextMenu</name>
+            <id>77</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>SearchControlAddition</type>
+          <source>CommandTableSearchControl</source>
+          <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </searchControlAddition>
+        <extendedTooltip>
+          <name>CommandTableExtendedTooltip</name>
+          <id>56</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>CommandTableContextMenu</name>
+          <id>16</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <readOnly>true</readOnly>
+        <changeRowSet>true</changeRowSet>
+        <changeRowOrder>true</changeRowOrder>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <autoMaxRowsCount>true</autoMaxRowsCount>
+        <headerHeight>1</headerHeight>
+        <footerHeight>1</footerHeight>
+        <horizontalScrollBar>AutoUse</horizontalScrollBar>
+        <verticalScrollBar>AutoUse</verticalScrollBar>
+        <verticalLines>true</verticalLines>
+        <autoInsertNewRow>true</autoInsertNewRow>
+        <searchOnInput>Auto</searchOnInput>
+        <initialListView>Auto</initialListView>
+        <horizontalStretch>true</horizontalStretch>
+        <verticalStretch>true</verticalStretch>
+        <enableStartDrag>true</enableStartDrag>
+        <enableDrag>true</enableDrag>
+        <searchStringLocation>None</searchStringLocation>
+        <viewStatusLocation>None</viewStatusLocation>
+        <searchControlLocation>None</searchControlLocation>
+        <rowFilter xsi:type="core:UndefinedValue"/>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Open data processor page</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Страница открыть обработку</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Thẻ mở bộ xử lý</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Open data processor page</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Страница открыть обработку</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Thẻ mở bộ xử lý</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>PageOpenProcessingExtendedTooltip</name>
+        <id>55</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>Page</type>
+      <extInfo xsi:type="form:PageGroupExtInfo">
+        <group>Vertical</group>
+        <showTitle>true</showTitle>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>DataProcessorExecutionPage</name>
+      <id>39</id>
+      <items xsi:type="form:Decoration">
+        <name>LongOperationDecoration</name>
+        <id>44</id>
+        <title>
+          <key>en</key>
+          <value>Long action</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Длительная операция</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Giao dịch chạy lâu</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>LongOperationDecorationExtendedTooltip</name>
+          <id>59</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>LongOperationDecorationContextMenu</name>
+          <id>45</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <width>7</width>
+        <autoMaxWidth>true</autoMaxWidth>
+        <height>3</height>
+        <autoMaxHeight>true</autoMaxHeight>
+        <horizontalStretch>false</horizontalStretch>
+        <verticalStretch>false</verticalStretch>
+        <skipOnInput>true</skipOnInput>
+        <extInfo xsi:type="form:PictureDecorationExtInfo">
+          <picture xsi:type="core:PictureRef">
+            <picture>CommonPicture.LongOperation48</picture>
+          </picture>
+        </extInfo>
+      </items>
+      <items xsi:type="form:Decoration">
+        <name>ExplanatoryDecoration</name>
+        <id>46</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>ExplanatoryDecorationExtendedTooltip</name>
+          <id>60</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ExplanatoryDecorationContextMenu</name>
+          <id>47</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <height>3</height>
+        <autoMaxHeight>true</autoMaxHeight>
+        <horizontalStretch>true</horizontalStretch>
+        <verticalStretch>false</verticalStretch>
+        <skipOnInput>true</skipOnInput>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+          <verticalAlign>Center</verticalAlign>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Processing page</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Страница выполнения обработки</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Thẻ thực hiện xử lý</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Processing page</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Страница выполнения обработки</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Thẻ thực hiện xử lý</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>DataProcessorExecutionPageExtendedTooltip</name>
+        <id>58</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>Page</type>
+      <extInfo xsi:type="form:PageGroupExtInfo">
+        <showTitle>true</showTitle>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Pages</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Странницы</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Thẻ</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Pages</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Странницы</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Thẻ</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>PagesExtendedTooltip</name>
+      <id>54</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>Pages</type>
+    <extInfo xsi:type="form:PagesGroupExtInfo">
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>PagesCommandBars</name>
+    <id>48</id>
+    <items xsi:type="form:FormGroup">
+      <name>PageOpenDataProcessorPageCommandBar</name>
+      <id>49</id>
+      <items xsi:type="form:Button">
+        <name>CustomizeList</name>
+        <id>35</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <skipOnInput>false</skipOnInput>
+        <extendedTooltip>
+          <name>CustomizeListExtendedTooltip</name>
+          <id>63</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>Hyperlink</type>
+        <commandName>Form.Command.CustomizeList</commandName>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>OpenDataProcessorPageCommandBar</name>
+        <id>36</id>
+        <items xsi:type="form:Button">
+          <name>RunDataProcessor</name>
+          <id>28</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <defaultItem>true</defaultItem>
+          <skipOnInput>false</skipOnInput>
+          <extendedTooltip>
+            <name>ExecuteProcessingExtendedTooltip</name>
+            <id>65</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.RunDataProcessor</commandName>
+          <representation>Auto</representation>
+          <defaultButton>true</defaultButton>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:Button">
+          <name>Cancel</name>
+          <id>29</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <skipOnInput>false</skipOnInput>
+          <extendedTooltip>
+            <name>CancelExtendedTooltip</name>
+            <id>66</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.StandardCommand.Cancel</commandName>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>en</key>
+          <value>Command bar pages open data processor</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Командная панель страницы открыть обработку</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Thanh lệnh trang mở bộ xử lý</value>
+        </title>
+        <toolTip>
+          <key>en</key>
+          <value>Command bar pages open data processor</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>Командная панель страницы открыть обработку</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Thanh lệnh trang mở bộ xử lý</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>OpenDataProcessorPageCommandBarExtendedTooltip</name>
+          <id>64</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>CommandBar</type>
+        <extInfo xsi:type="form:CommandBarExtInfo">
+          <horizontalAlign>Right</horizontalAlign>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Page command bar pages open data processor</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Страница командная панель страницы открыть обработку</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Thẻ thanh lệnh thẻ mở bộ xử lý</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Page command bar pages open data processor</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Страница командная панель страницы открыть обработку</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Thẻ thanh lệnh thẻ mở bộ xử lý</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>PageCommandBarOfPageOpenProcessingExtendedTooltip</name>
+        <id>62</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>Page</type>
+      <extInfo xsi:type="form:PageGroupExtInfo">
+        <showTitle>true</showTitle>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>DataProcessorExecutionPageCommandBarPage</name>
+      <id>50</id>
+      <items xsi:type="form:FormGroup">
+        <name>DataProcessorExecutionPageCommandBar</name>
+        <id>51</id>
+        <items xsi:type="form:Button">
+          <name>CancelDataProcessorExecution</name>
+          <id>53</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <skipOnInput>false</skipOnInput>
+          <extendedTooltip>
+            <name>CancelDataProcessorExecutionExtendedTooltip</name>
+            <id>69</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.CancelDataProcessorExecution</commandName>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>en</key>
+          <value>Processing page command bar</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Командная панель страницы выполнения обработки</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Thanh lệnh trang thực hiện xử lý</value>
+        </title>
+        <toolTip>
+          <key>en</key>
+          <value>Command bar</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>Командная панель</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Thanh lệnh</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>DataProcessorExecutionPageCommandBarExtendedTooltip</name>
+          <id>68</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>CommandBar</type>
+        <extInfo xsi:type="form:CommandBarExtInfo">
+          <horizontalAlign>Right</horizontalAlign>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Page command bar processing pages</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Страница командная панель страницы выполнения обработки</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Thẻ thanh lệnh thẻ thực hiện xử lý</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Command bar pages open data processor</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Командная панель страницы открыть обработку</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Thanh lệnh trang mở bộ xử lý</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>DataProcessorExecutionPageCommandBarPageExtendedTooltip</name>
+        <id>67</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>Page</type>
+      <extInfo xsi:type="form:PageGroupExtInfo">
+        <group>Vertical</group>
+        <showTitle>true</showTitle>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Pages command bars</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Страницы командные панели</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Thẻ thanh lệnh</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Pages command bars</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Страницы командные панели</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Thẻ thanh lệnh</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>PagesCommandBarsExtendedTooltip</name>
+      <id>61</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>Pages</type>
+    <extInfo xsi:type="form:PagesGroupExtInfo">
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <commandBarLocation>None</commandBarLocation>
+  <autoCommandBar>
+    <name>FormCommandBar</name>
+    <id>-1</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <horizontalAlign>Right</horizontalAlign>
+  </autoCommandBar>
+  <handlers>
+    <event>ChoiceProcessing</event>
+    <name>ChoiceProcessing</name>
+  </handlers>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>OnCreateAtServer</name>
+  </handlers>
+  <excludedCommands>CustomizeForm</excludedCommands>
+  <width>70</width>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <allowFormCustomize>true</allowFormCustomize>
+  <enabled>true</enabled>
+  <verticalScroll>UseIfNecessary</verticalScroll>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>CommandTable</name>
+    <title>
+      <key>en</key>
+      <value>Commands</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Команды</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Lệnh</value>
+    </title>
+    <id>1</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Ref</name>
+      <title>
+        <key>en</key>
+        <value>Ref</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Ссылка</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Tham chiếu</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>CatalogRef.AdditionalReportsAndDataProcessors</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Presentation</name>
+      <title>
+        <key>en</key>
+        <value>Presentation</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Представление</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Trình bày</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ID</name>
+      <title>
+        <key>en</key>
+        <value>Identifier</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Идентификатор</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Tên định danh</value>
+      </title>
+      <id>4</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>StartVariant</name>
+      <title>
+        <key>en</key>
+        <value>Launch option</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Вариант запуска</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Phương án khởi động</value>
+      </title>
+      <id>5</id>
+      <valueType>
+        <types>EnumRef.AdditionalDataProcessorsCallMethods</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ShowAlert</name>
+      <title>
+        <key>en</key>
+        <value>Show notification</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Показывать оповещение</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Hiển thị thông báo</value>
+      </title>
+      <id>6</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Modifier</name>
+      <title>
+        <key>en</key>
+        <value>Modifier</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Модификатор</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Bộ biến thể</value>
+      </title>
+      <id>7</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>DestinationObjects</name>
+    <title>
+      <key>en</key>
+      <value>Purpose objects</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Объекты назначения</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Đối tượng ấn định</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>ValueList</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <extInfo xsi:type="form:ValueListExtInfo">
+      <itemValueType/>
+    </extInfo>
+  </attributes>
+  <attributes>
+    <name>KindOfDataProcessors</name>
+    <title>
+      <key>en</key>
+      <value>Data processor kinds</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Вид обработок</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Dạng xử lý</value>
+    </title>
+    <id>3</id>
+    <valueType>
+      <types>EnumRef.AdditionalReportsAndDataProcessorsKinds</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ThisIsGlobalDataProcessors</name>
+    <title>
+      <key>en</key>
+      <value>Global data processors</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Это глобальные обработки</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Đây là bộ xử lý toàn cục</value>
+    </title>
+    <id>4</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ThisIsAppointedDataProcessors</name>
+    <title>
+      <key>en</key>
+      <value>Assignable data processors</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Это назначаемые обработки</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Đây là bộ xử lý đã ấn định</value>
+    </title>
+    <id>6</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ParentRef</name>
+    <id>8</id>
+    <valueType>
+      <types>CatalogRef.MetadataObjectIDs</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ThisIsObjectForm</name>
+    <title>
+      <key>en</key>
+      <value>Object form</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Это форма объекта</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Đây là biểu mẫu đối tượng</value>
+    </title>
+    <id>5</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>BackgroundJobID</name>
+    <title>
+      <key>en</key>
+      <value>Background job ID</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Идентификатор фонового задания</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Tên nhiệm vụ nền</value>
+    </title>
+    <id>9</id>
+    <valueType>
+      <types>UUID</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>BackgroundJobStorageAddress</name>
+    <title>
+      <key>en</key>
+      <value>Background job storage address</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Фоновое задание адрес хранилища</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Nhiệm vụ nền địa chỉ kho chứa</value>
+    </title>
+    <id>11</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ExplanatoryDecoration</name>
+    <title>
+      <key>en</key>
+      <value>Explaining decoration</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Поясняющая декорация</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Trang trí giải thích</value>
+    </title>
+    <id>14</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>AreReports</name>
+    <title>
+      <key>en</key>
+      <value>These are reports</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Это отчеты</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Đây là báo cáo</value>
+    </title>
+    <id>12</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>SectionReference</name>
+    <title>
+      <key>en</key>
+      <value>Section reference</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Ссылка раздела</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Tham chiếu của phần hành</value>
+    </title>
+    <id>7</id>
+    <valueType>
+      <types>CatalogRef.MetadataObjectIDs</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>OwnerFormName</name>
+    <title>
+      <key>en</key>
+      <value>Owner form name</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Имя формы владельца</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Tên biểu mẫu chủ sở hữu</value>
+    </title>
+    <id>10</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>BackgroundJobCheckExecutionOnClose</name>
+    <title>
+      <key>en</key>
+      <value>Background job check execution on closing</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Фоновое задание проверить выполнение при закрытии</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Kiểm tra việc thực hiện nhiệm vụ nền khi đóng</value>
+    </title>
+    <id>13</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <formCommands>
+    <name>RunDataProcessor</name>
+    <title>
+      <key>en</key>
+      <value>Execute</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Выполнить</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Thực hiện</value>
+    </title>
+    <id>4</id>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.GenerateReport</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>RunDataProcessor</name>
+      </handler>
+    </action>
+    <representation>TextPicture</representation>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>CustomizeList</name>
+    <title>
+      <key>en</key>
+      <value>Set up list</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Настроить список</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Tùy chỉnh danh sách</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>en</key>
+      <value>Set up list of my reports or data processors</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Настроить список моих отчетов или обработок</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tùy chỉnh danh sách báo cáo và bộ xử lý của tôi</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.ListSettings</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>CustomizeList</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>CancelDataProcessorExecution</name>
+    <title>
+      <key>en</key>
+      <value>Cancel</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Отменить</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Hủy bỏ</value>
+    </title>
+    <id>2</id>
+    <toolTip>
+      <key>en</key>
+      <value>Cancel processing</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Отменить выполнение обработки</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Hủy bỏ thực hiện xử lý</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>CancelDataProcessorExecution</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <parameters>
+    <name>DestinationObjects</name>
+    <valueType>
+      <types>ValueList</types>
+    </valueType>
+  </parameters>
+  <parameters>
+    <name>Kind</name>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+  </parameters>
+  <parameters>
+    <name>SectionName</name>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+  </parameters>
+  <parameters>
+    <name>FormName</name>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+  </parameters>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+</form:Form>

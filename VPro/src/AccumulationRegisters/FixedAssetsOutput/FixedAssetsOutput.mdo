@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="499c7b60-2fe5-43b1-99b4-cd32df645b49">
+  <producedTypes>
+    <selectionType typeId="107469fe-74ab-41a1-bef6-c9ae6c43d4a1" valueTypeId="722b608c-3c39-4efc-bb50-86a3d74b7f66"/>
+    <listType typeId="98142c87-816c-4a44-b0ae-d6f5c328be3a" valueTypeId="9eb408ef-35b3-49f8-b532-945e390e421f"/>
+    <managerType typeId="534e933d-378e-401f-aece-2f5c32ca58d5" valueTypeId="3281b07d-cb95-47ed-aa0e-dc4c95dc9a2f"/>
+    <recordSetType typeId="918fa2e6-ee59-4984-86af-3911e46a0f82" valueTypeId="6f3927aa-c190-4422-96c6-0692befed5ca"/>
+    <recordKeyType typeId="edd19ed3-db2d-43fa-a118-2026c80ab8b1" valueTypeId="932f6d7d-c47b-44c4-b280-ddf4a82a94a4"/>
+    <recordType typeId="12b14d7f-7be4-469f-9bd6-12b1c53c1c7a" valueTypeId="b1d590a6-b71c-4d4f-a57d-a99ce0e9ddad"/>
+  </producedTypes>
+  <name>FixedAssetsOutput</name>
+  <synonym>
+    <key>en</key>
+    <value>Property output</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Выработка имущества</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Sản lượng tài sản</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <registerType>Turnovers</registerType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="6e64ae9d-836b-4c44-b1c0-27a6f4037c79">
+    <name>Quantity</name>
+    <synonym>
+      <key>en</key>
+      <value>Quantity</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số lượng</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="ce5d404a-69d3-4da5-917c-338deee44a21">
+    <name>Company</name>
+    <synonym>
+      <key>en</key>
+      <value>Company</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Doanh nghiệp</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Companies</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="7c603364-aa56-4ca3-99fc-a16db2153a15">
+    <name>FixedAsset</name>
+    <synonym>
+      <key>en</key>
+      <value>Property</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Имущество</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tài sản</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.FixedAssets</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

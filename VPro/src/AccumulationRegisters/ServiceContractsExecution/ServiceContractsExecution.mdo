@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6a35544c-a54a-47e0-b739-72d4b16c4113">
+  <producedTypes>
+    <selectionType typeId="467103ec-8215-47e0-9297-419d4a5d13be" valueTypeId="994777d0-93c2-4309-a606-b36d8ddc6c9a"/>
+    <listType typeId="2a082390-c9b1-4c84-9aed-2943c036c88b" valueTypeId="13d6aa18-b196-4be3-8a1f-b3d06aa9bd25"/>
+    <managerType typeId="efeaf222-ab54-4895-beb4-ff5c2de404e3" valueTypeId="bed7d88f-f1c2-4bd2-8b5c-1d91a8d7745a"/>
+    <recordSetType typeId="5c36e780-5f4c-4877-8d4c-d7f499692a9a" valueTypeId="c8c2addc-a7df-4cd0-a785-f608656e4693"/>
+    <recordKeyType typeId="0c328b33-59bf-4266-84b8-e10f342b8510" valueTypeId="e2908746-d2b2-4f0c-8dea-950dad63e61f"/>
+    <recordType typeId="89582d3d-4926-4eb9-94f1-de77bf1a57e3" valueTypeId="86dc8ccf-992c-437a-b8d0-7474ef4b75a7"/>
+  </producedTypes>
+  <name>ServiceContractsExecution</name>
+  <synonym>
+    <key>en</key>
+    <value>Fulfillment of service contracts</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Выполнение договоров обслуживания</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Thực hiện hợp đồng dịch vụ</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <registerType>Turnovers</registerType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="00c9b46f-4bdf-40da-98c6-8f7644f9408f">
+    <name>Quantity</name>
+    <synonym>
+      <key>en</key>
+      <value>Quantity</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số lượng</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="933cd1d6-65bb-4480-84b0-6442b73aa0d6">
+    <name>Amount</name>
+    <synonym>
+      <key>en</key>
+      <value>Amount</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số tiền</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="51684322-16d2-4651-b3c2-569aef91c55f">
+    <name>Contract</name>
+    <synonym>
+      <key>en</key>
+      <value>Contract</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Hợp đồng</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.CounterpartyContracts</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="9462aea6-ba47-4fad-a811-2ef73e5afbdf">
+    <name>ServiceContractObject</name>
+    <synonym>
+      <key>en</key>
+      <value>Products and services and expenses</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура и затраты</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Mặt hàng và chi phí</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Managerial</types>
+      <types>CatalogRef.ProductsAndServices</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="eaaed9fa-3e00-48f5-ae0b-43a79bba68b8">
+    <name>CHARACTERISTIC</name>
+    <synonym>
+      <key>en</key>
+      <value>Characteristic</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đặc tính</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ProductsAndServicesCharacteristics</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="bdcd5715-9812-4912-8fec-fb3d86ee9e28">
+    <name>CostSpecified</name>
+    <synonym>
+      <key>en</key>
+      <value>Price is specified</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Указана стоимость</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đã chỉ ra giá trị</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

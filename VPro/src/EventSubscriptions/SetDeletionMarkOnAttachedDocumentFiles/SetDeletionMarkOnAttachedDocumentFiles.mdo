@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="af2e9b44-3f5b-46f0-8d29-e312a3cc47cf">
+  <name>SetDeletionMarkOnAttachedDocumentFiles</name>
+  <synonym>
+    <key>en</key>
+    <value>Mark the attached document files for deletion</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Установить пометку удаления присоединенных файлов документов</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Đặt dấu xóa tệp đính kèm của chứng từ</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.SettlementsReconciliation</types>
+    <types>DocumentObject.InvoiceForPayment</types>
+    <types>DocumentObject.PaymentExpense</types>
+    <types>DocumentObject.ExpenseReport</types>
+    <types>DocumentObject.CustomerOrder</types>
+    <types>DocumentObject.WorkOrder</types>
+    <types>DocumentObject.BulkMail</types>
+    <types>DocumentObject.CashOutflowPlan</types>
+    <types>DocumentObject.PurchaseOrder</types>
+    <types>DocumentObject.Event</types>
+    <types>DocumentObject.ProductionOrder</types>
+    <types>DocumentObject.SupplierInvoiceForPayment</types>
+    <types>DocumentObject.SupplierInvoice</types>
+    <types>DocumentObject.InventoryAssembly</types>
+    <types>DocumentObject.CustomerInvoice</types>
+    <types>DocumentObject.AcceptanceCertificate</types>
+    <types>DocumentObject.PaymentReceipt</types>
+    <types>DocumentObject.InventoryReconciliation</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.AttachedFiles.SetDeletionMarkOnAttachedDocumentFiles</handler>
+</mdclass:EventSubscription>

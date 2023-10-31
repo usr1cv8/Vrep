@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f2e463c6-135a-4e07-b528-641ed4539690">
+  <producedTypes>
+    <selectionType typeId="78be6ccc-67dc-4b7e-b8b3-8e9efe078553" valueTypeId="4e90ebf2-55df-40e8-803c-985e8f8c2e62"/>
+    <listType typeId="5fab48c9-67f3-4a1c-93c8-561975b7d520" valueTypeId="96996180-f7e5-447d-aa77-444b510fb456"/>
+    <managerType typeId="e866e3d3-80e0-4180-b282-3710e04f26e0" valueTypeId="96101c91-aa15-426c-8455-59b8cd697180"/>
+    <recordSetType typeId="362623c3-d4c5-4c64-afe8-1576f777eca6" valueTypeId="cf30b938-ca68-48a5-8fe9-24d01e962428"/>
+    <recordKeyType typeId="5213e09e-502f-4978-9bb7-c8a2e9a17a73" valueTypeId="0567eae7-d22a-4688-97ec-b684b6d95606"/>
+    <recordType typeId="8b452530-0213-4e1f-88dc-99acb0704484" valueTypeId="1539d084-9f61-487e-bf70-2d0ca6a74300"/>
+    <recordManagerType typeId="631ed4d5-e148-4f49-aa1f-ce6167e4470b" valueTypeId="b1910737-b2fe-4920-896c-ba6fa23694db"/>
+  </producedTypes>
+  <name>DefaultSpecifications</name>
+  <synonym>
+    <key>en</key>
+    <value>Default specifications</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Default specifications</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Bảng kê chi tiết mặc định</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="e81624ad-00ee-401e-8a8c-fc017379faa8">
+    <name>Specification</name>
+    <synonym>
+      <key>en</key>
+      <value>Bill of materials</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Спецификация</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Bảng phân loại</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Specifications</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Filter.Owner</name>
+      <field>InformationRegister.DefaultSpecifications.Dimension.ProductsAndServices</field>
+    </choiceParameterLinks>
+    <choiceParameterLinks>
+      <name>Filter.ProductCharacteristic</name>
+      <field>InformationRegister.DefaultSpecifications.Dimension.Characteristic</field>
+    </choiceParameterLinks>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="a322d180-6bb7-4c6b-b677-c5ba22decafd">
+    <name>ProductsAndServices</name>
+    <synonym>
+      <key>en</key>
+      <value>Products and services</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Mặt hàng</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ProductsAndServices</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="b483548d-b4f5-4b07-8dc5-02d9b91bdaac">
+    <name>Characteristic</name>
+    <synonym>
+      <key>en</key>
+      <value>Characteristic</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đặc tính</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ProductsAndServicesCharacteristics</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Filter.Owner</name>
+      <field>InformationRegister.DefaultSpecifications.Dimension.ProductsAndServices</field>
+    </choiceParameterLinks>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

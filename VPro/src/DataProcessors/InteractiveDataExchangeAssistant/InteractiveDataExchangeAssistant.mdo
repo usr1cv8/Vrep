@@ -1,0 +1,940 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a62906e5-27f8-4e72-8769-9a3eed6997d7">
+  <producedTypes>
+    <objectType typeId="c7043298-e776-4b37-b131-4e1c0175c52a" valueTypeId="eeb642a6-f66a-4485-87d4-b7daf4090b09"/>
+    <managerType typeId="1ca2526b-e98f-44c7-a9b9-b84e69c7d3f9" valueTypeId="87f045f5-1165-4a49-9c56-da35282b9f12"/>
+  </producedTypes>
+  <name>InteractiveDataExchangeAssistant</name>
+  <synonym>
+    <key>en</key>
+    <value>Wizard of interactive data synchronization</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Помощник интерактивной синхронизации данных</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Trợ giúp đồng bộ hóa dữ liệu trực tác</value>
+  </synonym>
+  <defaultForm>DataProcessor.InteractiveDataExchangeAssistant.Form.Form</defaultForm>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <attributes uuid="6c5d0ac3-6086-434c-812b-1c1158ecc574">
+    <name>ExchangeMessageTransportKind</name>
+    <synonym>
+      <key>en</key>
+      <value>Set the data exchange method</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Укажите способ обмена данными</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Hãy chỉ ra phương pháp trao đổi dữ liệu</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ExchangeMessagesTransportKinds</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Data exchange method</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Способ обмена данными</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Phương thức trao đổi dữ liệu</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="783536d7-c0db-44c9-96e8-58b57804d7c8">
+    <name>TemporaryExchangeMessagesDirectoryName</name>
+    <synonym>
+      <key>en</key>
+      <value>Temporary exchange message directory name</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Имя временного каталога сообщений обмена</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tên thư mục tạm thời thông điệp trao đổi</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Temporary directory to store exchange files</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Временный каталог для хранения файлов обмена</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Thư mục tạm thời để lưu tệp trao đổi</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="a8295435-c2c4-4aff-874b-7412556aa76d">
+    <name>ExchangePlanName</name>
+    <synonym>
+      <key>en</key>
+      <value>Exchange plan name</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Имя плана обмена</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tên sơ đồ trao đổi</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Exchange plan name</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Имя плана обмена</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tên sơ đồ trao đổi</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="f6c4e24b-172b-4ba3-8e3e-988306ade660">
+    <name>ExchangeMessageFileName</name>
+    <synonym>
+      <key>en</key>
+      <value>Exchange message file name</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Имя файла сообщения обмена</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tên tệp thông điệp trao đổi</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Exchange message file</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Файл сообщения обмена</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tệp thông điệp trao đổi</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="9baab24c-a5a3-46f4-ad17-a28d4a49f851">
+    <name>InfobaseNode</name>
+    <synonym>
+      <key>en</key>
+      <value>Infobase node</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Узел информационной базы</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Nút cơ sở thông tin</value>
+    </synonym>
+    <type>
+      <types>ExchangePlanRef</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Exchange infobase node</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Узел информационной базы обмена</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nút cơ sở thông tin trao đổi</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="d1952319-0e42-4684-a386-fbe7c24526c2">
+    <producedTypes>
+      <objectType typeId="e564f1b7-d61a-4bf5-8385-f5e7a5d0b7cc" valueTypeId="51e5cdcf-3c11-4db1-be2e-35438161cfb0"/>
+      <rowType typeId="62c7df4f-8142-4040-b29f-f617ce0618f3" valueTypeId="004606cc-6d95-4952-a315-f9c0b29acc5c"/>
+    </producedTypes>
+    <name>StatisticsInformation</name>
+    <synonym>
+      <key>en</key>
+      <value>Statistics information</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Информация статистики</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Thông tin thống kê</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="01cd59fc-8577-4b3c-9d69-6db75e81e7c4">
+      <name>DataSuccessfullyImported</name>
+      <synonym>
+        <key>en</key>
+        <value>Data imported successfully</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Данные успешно загружены</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Dữ liệu đã kết nhập thành công</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Successful data import check box</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Флаг успешной загрузки данных</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Hộp kiểm kết nhập dữ liệu thành công.</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="83b47a9d-d44b-4c40-becd-df74f9cb2e91">
+      <name>ReceiverTableName</name>
+      <synonym>
+        <key>en</key>
+        <value>Target table name</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Имя таблицы приемника</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Tên bảng đích</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Target table name</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Имя таблицы приемника</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Tên bảng đích</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="d03e636e-ff88-4e96-bf3c-d795d10cbcb0">
+      <name>PictureIndex</name>
+      <synonym>
+        <key>en</key>
+        <value>Image index</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Индекс картинки</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Chỉ số hình vẽ</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>1</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Image index</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Индекс картинки</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Chỉ số hình vẽ</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="86e2a2eb-160f-4e93-a449-b2f726286d1b">
+      <name>UsePreview</name>
+      <synonym>
+        <key>en</key>
+        <value>Use preview</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Использовать предварительный просмотр</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Sử dụng xem trước</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Preview is required</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Требуется использовать предварительный просмотр</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Cần sử dụng xem trước</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="8e6e1f24-83bf-42c2-9eda-b3874c7910c3">
+      <name>Key</name>
+      <synonym>
+        <key>en</key>
+        <value>Key</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Ключ</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Khóa</value>
+      </synonym>
+      <comment>Key of the row for linking with the value tree on form</comment>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Key of the row for linking it with the value tree in the form</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Ключ строки для связи с деревом значений на форме</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Khóa dòng để kết nối với cây giá trị trong biểu mẫu</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="364184c2-ec71-44be-b40c-ba719b4ab0e1">
+      <name>ObjectsCountInSource</name>
+      <synonym>
+        <key>en</key>
+        <value>Number of objects in source</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Количество объектов в источнике</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Số lượng đối tượng trong nguồn</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Number of objects in source base, pcs</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Количество объектов в базе-источнике, шт</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Số lượng đối tượng trong cơ sở nguồn</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="7ef46c54-ec0c-4211-a750-e5949956b593">
+      <name>ObjectsCountInReceiver</name>
+      <synonym>
+        <key>en</key>
+        <value>Number of objects in the target</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Количество объектов в приемнике</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Số lượng đối tượng trong đích</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Number of objects in this base, pcs</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Количество объектов в этой базе, шт</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Số lượng đối tượng trong dữ liệu này</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="04823681-875e-459a-b3cf-051c89527f38">
+      <name>UnmappedObjectsCount</name>
+      <synonym>
+        <key>en</key>
+        <value>Number of unmapped objects</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Количество объектов несопоставленных</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Số lượng đối tượng chưa so sánh</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Number of unmapped objects, pcs</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Количество несопоставленных объектов, шт</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Số lượng đối tượng chưa so sánh</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="8e115a0c-a17c-4d7e-bd2c-305fb53d09ca">
+      <name>NumberOfObjectsMapped</name>
+      <synonym>
+        <key>en</key>
+        <value>Number of mapped objects</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Количество объектов сопоставленных</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Số lượng đối tượng đã so sánh</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Number of mapped objects, pcs</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Количество сопоставленных объектов, шт</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Số lượng đối tượng đã so sánh</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="38265f08-3301-40d1-b630-a319c983e826">
+      <name>OneToMany</name>
+      <synonym>
+        <key>en</key>
+        <value>One to many</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Один ко многим</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Một với nhiều</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>One-to-many relationship</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Отношение один ко многим</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Mối liên hệ một nhiều</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="5175c496-bac7-4c57-9628-793b727aecd0">
+      <name>SearchFields</name>
+      <synonym>
+        <key>en</key>
+        <value>Search fields</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Поля поиска</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Trường tìm kiếm</value>
+      </synonym>
+      <comment>Default search fields</comment>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Default search fields</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Поля поиска по умолчанию</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Trường tìm kiếm theo mặc định</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="1453309e-77d0-444d-ac3f-fd7c2cb65c0c">
+      <name>TableFields</name>
+      <synonym>
+        <key>en</key>
+        <value>Table fields</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Поля таблицы</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Hộp bảng</value>
+      </synonym>
+      <comment>Table fields, for which properties conversion rules are defined</comment>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Table fields for which property conversion rules are determined</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Поля таблицы, для которых определены правила конвертации свойств</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Hộp bảng mà có xác định quy tắc chuyển đổi thuộc tính</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="fc42df4a-93f0-461f-acfe-fea09158030f">
+      <name>Presentation</name>
+      <synonym>
+        <key>en</key>
+        <value>Presentation</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Представление</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Trình bày</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Statistics presentation</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Представление статистики</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Trình bày thống kê</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="9f0a7909-0b97-48a7-964f-a52cb3c19c4e">
+      <name>ObjectsMappingPercent</name>
+      <synonym>
+        <key>en</key>
+        <value>Mapped, %</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Сопоставление, %</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>So sánh, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>3</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Object mapping percent</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Процент сопоставления объектов</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Tỷ lệ so sánh đối tượng</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="6d002aef-00c9-4069-80df-153151218831">
+      <name>SynchronizeByID</name>
+      <synonym>
+        <key>en</key>
+        <value>Synchronize by ID</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Синхронизировать по идентификатору</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Đồng bộ hóa theo tên</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Synchronization by identifier is required</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Требуется синхронизировать по идентификатору</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Cần đồng bộ hóa theo Tên định danh</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="4fec3a6c-5a99-4763-aa07-d5de8712559e">
+      <name>SourceTypeAsString</name>
+      <synonym>
+        <key>en</key>
+        <value>Source type as a string</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Тип источника строкой</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Kiểu nguồn dòng</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Source type as text</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Тип источника в текстом виде</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Kiểu nguồn dạng văn bản thuần</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="968a1202-d271-43e0-bfd4-d38e49ceadd4">
+      <name>ObjectTypeAsString</name>
+      <synonym>
+        <key>en</key>
+        <value>Object type as a string</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Тип объекта строкой</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Kiểu đối tượng dòng</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Object type as text</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Тип объекта в текстовом виде</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Kiểu đối tượng dạng văn bản thuần</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="c80e2ef7-93b6-4cef-806a-2dfcf2fd80e6">
+      <name>ReceiverTypeAsString</name>
+      <synonym>
+        <key>en</key>
+        <value>Target type as a string</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Тип приемника строкой</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Kiểu đích dòng</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value> Receiver type in text form</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value> Тип приемника в текстовом виде</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Kiểu người nhận theo dạng văn bản</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="b3b4fbf1-cbf0-4ee2-a490-4d657693479b">
+      <name>IsClassifier</name>
+      <synonym>
+        <key>en</key>
+        <value>This is a classifier</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Это классификатор</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Bảng mã hiệu này</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Indicates that the current object is a classifier</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Флаг того, что текущий объект - классификатор</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Hộp kiểm nhận biết đối tượng này là bảng mã hiệu</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="ea61e442-273e-4ce4-a806-8090893729ba">
+      <name>ThisIsObjectDeletion</name>
+      <synonym>
+        <key>en</key>
+        <value>This is object deletion</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Это удаление объекта</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Đấy là xóa bỏ đối tượng</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Indicates that the current object is object deletion</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Флаг того, что текущий объект - удаление объекта</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Hộp kiểm nhận biết đối tượng này là xóa đối tượng</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="e7100f2b-d169-4635-ab87-7a2225ff12ee">
+    <name>Form</name>
+    <synonym>
+      <key>en</key>
+      <value>Form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

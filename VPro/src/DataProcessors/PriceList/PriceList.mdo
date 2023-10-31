@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1c6d5c0d-d6d8-4783-af14-cfa1a82358e1">
+  <producedTypes>
+    <objectType typeId="a240da04-88a7-4071-ae73-51d48a851df2" valueTypeId="205c0f6c-fb58-4e8d-9005-af70c520a5c9"/>
+    <managerType typeId="67f77523-a065-4bbd-81e8-981de252683a" valueTypeId="4a1b4b86-f3fd-4c5f-aa10-173517f266a2"/>
+  </producedTypes>
+  <name>PriceList</name>
+  <synonym>
+    <key>en</key>
+    <value>Price list</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Прайс-лист</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Bảng giá</value>
+  </synonym>
+  <defaultForm>DataProcessor.PriceList.Form.Form</defaultForm>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <extendedPresentation>
+    <key>en</key>
+    <value>Company price list</value>
+  </extendedPresentation>
+  <extendedPresentation>
+    <key>ru</key>
+    <value>Прайс-лист компании</value>
+  </extendedPresentation>
+  <extendedPresentation>
+    <key>vi</key>
+    <value>Bảng giá của doanh nghiệp</value>
+  </extendedPresentation>
+  <explanation>
+    <key>en</key>
+    <value>Data processor is used to view and edit the prices</value>
+  </explanation>
+  <explanation>
+    <key>ru</key>
+    <value>Обработка предназначена для просмотра и редактирования цен</value>
+  </explanation>
+  <explanation>
+    <key>vi</key>
+    <value>Bộ xử lý được dùng để xem và soạn giá</value>
+  </explanation>
+  <tabularSections uuid="e4c59742-f395-4154-8a76-b281f9634a23">
+    <producedTypes>
+      <objectType typeId="fdd35e9b-edcd-436c-9965-8e55af2ec8e9" valueTypeId="b3431622-7156-41dd-8520-497ef3abfc28"/>
+      <rowType typeId="b8ea6df0-f1aa-4080-abd3-e97ae1b9fd52" valueTypeId="4b12cfd0-dc38-450b-9481-844436228dd7"/>
+    </producedTypes>
+    <name>PriceKinds</name>
+    <synonym>
+      <key>en</key>
+      <value>Price kinds</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Виды цен</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Dạng giá</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="a8c7f6b4-7081-4b13-83c0-5ff72bb00098">
+      <name>Ref</name>
+      <synonym>
+        <key>en</key>
+        <value>Price kind</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Вид цены</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Dạng giá</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.PriceKinds</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceForm>Catalog.PriceKinds.Form.ChoiceForm</choiceForm>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="a68bb682-6927-4a55-8677-8057512172ef">
+    <producedTypes>
+      <objectType typeId="835a0e0a-73b4-4dc3-9cd2-de90e3ca5df8" valueTypeId="1cd9a6ee-0979-4d41-b0ac-90e140e3801f"/>
+      <rowType typeId="9a22a785-7b2d-4111-97b3-33744a17c6fc" valueTypeId="7be503b2-c4a4-433c-b912-67c06a13597b"/>
+    </producedTypes>
+    <name>PriceGroups</name>
+    <synonym>
+      <key>en</key>
+      <value>Price groups</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Ценовые группы</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Nhóm giá</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="beeb1380-73db-47fd-8715-f8ad745e1400">
+      <name>Ref</name>
+      <synonym>
+        <key>en</key>
+        <value>Price group</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Ценовая группа</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Nhóm giá</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.PriceGroups</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceForm>Catalog.PriceGroups.Form.ChoiceForm</choiceForm>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="14a56277-ce5d-4f47-bcd4-27891312b79b">
+    <producedTypes>
+      <objectType typeId="7c666fec-568c-4750-b49e-a2075e62b38f" valueTypeId="aa0196ef-c961-48ea-97c6-60db053d8a4e"/>
+      <rowType typeId="44180281-f19f-4e03-bd4b-6abed9eaccee" valueTypeId="4fafbc72-b343-4c5c-a421-518197fa0695"/>
+    </producedTypes>
+    <name>ProductsAndServices</name>
+    <synonym>
+      <key>en</key>
+      <value>Products and services</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Продукция и услуги</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Mặt hàng</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="753227ec-761d-43e8-8ffa-6843eae9f0a7">
+      <name>Ref</name>
+      <synonym>
+        <key>en</key>
+        <value>Products and services</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Продукция и услуги</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Mặt hàng</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ProductsAndServices</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceFoldersAndItems>FoldersAndItems</choiceFoldersAndItems>
+      <choiceForm>Catalog.ProductsAndServices.Form.ChoiceForm</choiceForm>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="067f319c-2434-40f0-a424-6fb2827aa64e">
+    <name>Form</name>
+    <synonym>
+      <key>en</key>
+      <value>Form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="e9dd06df-4d26-4429-891d-7e2074aa9ee3">
+    <name>MultipleFiltersForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Multiple filter form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма множественных отборов</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu chọn nhiều</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="2efb939a-2821-46aa-a0eb-cb50a62e4ab3">
+    <name>PricesKindsEditForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Price kind edit form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма редактирования видов цен</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu soạn dạng giá</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="69639f03-8ad3-4217-808a-7d305ae97e71">
+    <name>PriceGroupsEditForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Price group edit form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма редактирования ценовых групп</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu soạn nhóm giá</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="2704095d-c93f-4c3d-bb58-ea49d474dc5b">
+    <name>ProductsAndServicesEditForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Products and services edit form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма редактирования номенклатуры</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu soạn mặt hàng</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="97ca1359-7812-42b0-8bc5-6c6a34f5ca4c">
+    <name>Template</name>
+    <synonym>
+      <key>en</key>
+      <value>Template</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Макет</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Khuôn in</value>
+    </synonym>
+  </templates>
+  <commands uuid="9479bd1f-e771-438b-a4d8-488e6ecbcd53">
+    <name>OpenPriceList</name>
+    <synonym>
+      <key>en</key>
+      <value>Price lists</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Прайс-листы</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Bảng giá</value>
+    </synonym>
+    <group>NavigationPanelOrdinary</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:DataProcessor>

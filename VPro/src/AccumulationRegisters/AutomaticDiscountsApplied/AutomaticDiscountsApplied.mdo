@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b184ee08-697a-45eb-96e1-693e01e2482c">
+  <producedTypes>
+    <selectionType typeId="8adcf26f-962e-474c-b9ff-3444a9c637e3" valueTypeId="476b331e-e9a9-459b-a5f1-d13f09a567ed"/>
+    <listType typeId="07c8484c-8886-4651-ab4d-d8fb290dd933" valueTypeId="95807d9a-838a-4b77-a83a-d6679ef6d0f0"/>
+    <managerType typeId="069da88a-3d90-4c2e-9196-e0189954f98c" valueTypeId="a5ac1fcb-b405-415b-a134-f38bf674b056"/>
+    <recordSetType typeId="409b151b-6d85-4a86-887a-b4dbbcd5b5d4" valueTypeId="d22c6bf2-160a-4a8d-babe-44360004470b"/>
+    <recordKeyType typeId="9e0b29f0-ffec-4b44-8039-717c836b67ca" valueTypeId="d6973586-cb13-4656-b674-b8e292ca54ba"/>
+    <recordType typeId="3c0096c7-0c67-44e5-b9bb-193f11484e25" valueTypeId="17570d2b-2f39-4ff2-ba83-9f827e6e3684"/>
+  </producedTypes>
+  <name>AutomaticDiscountsApplied</name>
+  <synonym>
+    <key>en</key>
+    <value>Provided automatic discounts</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Предоставленные автоматические скидки</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Chiết khấu tự động được phép</value>
+  </synonym>
+  <registerType>Turnovers</registerType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <resources uuid="c5e3ff50-0238-439b-9ec2-e1dba0686b92">
+    <name>DiscountAmount</name>
+    <synonym>
+      <key>en</key>
+      <value>Discount amount</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма скидки</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số tiền chiết khấu</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="be8919e5-b0c3-4243-8370-d4df536a3add">
+    <name>AutomaticDiscount</name>
+    <synonym>
+      <key>en</key>
+      <value>Automatic discount</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Автоматическая скидка</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Chiết khấu tự động</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.AutomaticDiscounts</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="7b0d07ca-3352-43bd-9dfe-4db27ed30fad">
+    <name>ProductsAndServices</name>
+    <synonym>
+      <key>en</key>
+      <value>Product or service</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Mặt hàng</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ProductsAndServices</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="20b2a327-e9b3-4972-93d1-eb42a71747ae">
+    <name>Characteristic</name>
+    <synonym>
+      <key>en</key>
+      <value>Characteristic</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đặc tính</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ProductsAndServicesCharacteristics</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="2a0234be-ee4f-4e6a-ba6c-692919e9eaaa">
+    <name>DocumentDiscounts</name>
+    <synonym>
+      <key>en</key>
+      <value>Discount document</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Документ скидки</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Chứng từ chiết khấu</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.CustomerInvoice</types>
+      <types>DocumentRef.ReceiptCRReturn</types>
+      <types>DocumentRef.AcceptanceCertificate</types>
+      <types>DocumentRef.ReceiptCR</types>
+      <types>DocumentRef.ProcessingReport</types>
+      <types>DocumentRef.CustomerOrder</types>
+      <types>DocumentRef.RetailReport</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="b962f9c8-d433-4531-981d-c7c68e13d8a9">
+    <name>RecipientDiscounts</name>
+    <synonym>
+      <key>en</key>
+      <value>Discount recipient</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Получатель скидки</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Người nhận chiết khấu</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.StructuralUnits</types>
+      <types>CatalogRef.Counterparties</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

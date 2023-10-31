@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e1b94dcf-ec37-4b2d-a7af-120eeee40944">
+  <producedTypes>
+    <objectType typeId="f06540d8-044b-4f8c-99c2-22070273fd43" valueTypeId="e4b23ce6-eec6-4dfb-9dcf-82cb128cee0c"/>
+    <managerType typeId="06559a1a-2dff-4161-9fbf-77334a8e5426" valueTypeId="625e752b-9e2e-4173-9661-94c8bc893610"/>
+  </producedTypes>
+  <name>GroupAttributeChange</name>
+  <synonym>
+    <key>en</key>
+    <value>Bulk attribute editing</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Групповое изменение реквизитов</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Thay đổi mục tin theo nhóm</value>
+  </synonym>
+  <defaultForm>DataProcessor.GroupAttributeChange.Form.Form</defaultForm>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <attributes uuid="7d2a37b1-a1a0-435a-846a-95e255655044">
+    <name>ChangeInTransaction</name>
+    <synonym>
+      <key>en</key>
+      <value>Change in transaction</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Изменять в транзакции</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Thay đổi trong giao tác</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>If items cannot be changed in the transaction, all changes will be canceled.</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>При невозможности изменения элементов в транзакции, все изменения будут отменены.</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Khi không thể thay đổi phần tử trong giao tác, tất cả thay đổi sẽ bị hủy bỏ.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="109db64c-00dc-490e-99a5-4430d9344e99">
+    <name>AbortOnError</name>
+    <synonym>
+      <key>en</key>
+      <value>Abort if an error occurs</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Прерывать при ошибке</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ngừng khi có lỗi</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Warn if errors occur while changing items.</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Предупреждать, если во время изменения элементов возникнут ошибки.</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Cảnh báo, nếu trong thời gian thay đổi phần tử có lỗi.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="85837a55-fed5-4b7b-a622-30d728b9a677">
+    <name>UsedAdditAttributes</name>
+    <synonym>
+      <key>en</key>
+      <value>Additional attributes are used</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Используются доп реквизиты</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Có sử dụng mục tin bổ sung</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Objects to change have additional attributes</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>У изменяемых объектов есть дополнительные реквизиты</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Ở các đối tượng thay đổi có các mục tin bổ sung</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="0fd79cdb-dc7a-40ca-a3bc-2c7a7b4691bb">
+    <name>UsedAdditInfo</name>
+    <synonym>
+      <key>en</key>
+      <value>Additional information is used</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Используются доп сведения</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Có sử dụng thông tin bổ sung</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>There is additional information for the objects being changed</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>У изменяемых объектов есть дополнительные сведения</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Ở các đối tượng thay đổi có các thông tin bổ sung</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="6ede8b5c-7df0-44a5-9136-8109bbd8b5a9">
+    <name>ShowServiceAttributes</name>
+    <synonym>
+      <key>en</key>
+      <value>Show service attributes</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Показывать служебные реквизиты</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Hiển thị mục tin hệ thống</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Show all attributes and tabular sections of items including service items.</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Показывать все реквизиты и табличные части элементов, в том числе служебные.</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Hiển thị tất cả mục tin và phần bảng phần tử, bao gồm cả mục tin hệ thống.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="da9821c3-4b16-48b7-9088-d3cf8ac536a6">
+    <name>Form</name>
+    <synonym>
+      <key>en</key>
+      <value>Form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="d5142574-a040-4dd0-a482-cdc61c1d86ab">
+    <name>AdditionalParameters</name>
+    <synonym>
+      <key>en</key>
+      <value>Additional parameters</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Дополниетельные параметры</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tham số bổ sung</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>en</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="fb36c775-1124-4ba6-8af8-133bf66fcb54">
+    <name>SelectedItems</name>
+    <synonym>
+      <key>en</key>
+      <value>Selected items</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Выбранные элементы</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Phần tử đã chọn</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="51f9aff4-71da-4b1b-b48b-04122a17d855">
+    <name>ObjectKindSelection</name>
+    <synonym>
+      <key>en</key>
+      <value>Select object kind</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Выбор вида объектов</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Chọn dạng đối tượng</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="778e79ee-eb1a-4d52-8a31-58e781c78fe4">
+    <name>AttributesFilter</name>
+    <synonym>
+      <key>en</key>
+      <value>Attribute filter</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Фильтр реквизитов</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Lọc các mục tin</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <commands uuid="90385850-d37b-4b2e-ac87-95c17f32197c">
+    <name>GroupAttributeChange</name>
+    <synonym>
+      <key>en</key>
+      <value>Bulk attribute editing</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Групповое изменение реквизитов</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Thay đổi mục tin theo nhóm</value>
+    </synonym>
+    <group>ActionsPanelTools</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+    <toolTip>
+      <key>en</key>
+      <value>Bulk attribute editing and tabular sections of arbitrary objects</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Групповое изменение реквизитов и табличных частей произвольных объектов</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Thay đổi mục tin và phần bảng các đối tượng tùy ý theo nhóm</value>
+    </toolTip>
+  </commands>
+</mdclass:DataProcessor>

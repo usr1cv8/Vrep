@@ -1,0 +1,1501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <title>
+    <key>en</key>
+    <value>Management of contact information print</value>
+  </title>
+  <title>
+    <key>ru</key>
+    <value>Управление составом печати контактной информации</value>
+  </title>
+  <title>
+    <key>vi</key>
+    <value>Quản lý thành phần in thông tin liên hệ</value>
+  </title>
+  <items xsi:type="form:FormGroup">
+    <name>ContentContactInformation</name>
+    <id>1</id>
+    <items xsi:type="form:FormGroup">
+      <name>Counterparty</name>
+      <id>5</id>
+      <items xsi:type="form:FormGroup">
+        <name>CounterpartyAttributes</name>
+        <id>45</id>
+        <items xsi:type="form:Decoration">
+          <name>CounterpartyTitle</name>
+          <id>7</id>
+          <title>
+            <key>en</key>
+            <value>Counterparties</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Контрагенты</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Đối tác</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>CounterpartyTitleExtendedTooltip</name>
+            <id>9</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>CounterpartyHeaderContextMenu</name>
+            <id>8</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>true</horizontalStretch>
+          <font xsi:type="core:FontRef">
+            <font>Style.ExtraLargeTextFont</font>
+            <bold>true</bold>
+            <italic>false</italic>
+            <underline>false</underline>
+            <strikeout>false</strikeout>
+          </font>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>CounterpartyTIN</name>
+          <id>10</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>CounterpartyTIN</segments>
+          </dataPath>
+          <titleLocation>Right</titleLocation>
+          <handlers>
+            <event>OnChange</event>
+            <name>CounterpartyTINOnChange</name>
+          </handlers>
+          <extendedTooltip>
+            <name>CounterpartyTINExtendedTooltip</name>
+            <id>12</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>CounterpartyTINContextMenu</name>
+            <id>11</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>CheckBoxField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>en</key>
+          <value>Counterparty details</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Реквизиты контрагента</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Mục tin đối tác</value>
+        </title>
+        <toolTip>
+          <key>en</key>
+          <value>Counterparty details</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>Реквизиты контрагента</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Mục tin đối tác</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>CounterpartyAttributesExtendedTooltip</name>
+          <id>46</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>HorizontalIfPossible</group>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>CICounterparty</name>
+        <id>13</id>
+        <items xsi:type="form:FormGroup">
+          <name>ContactInformationCounterparty1</name>
+          <id>47</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>en</key>
+            <value>Contact information counterparty1</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Контактная информация контрагент1</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Thông tin liên hệ đối tác1</value>
+          </title>
+          <toolTip>
+            <key>en</key>
+            <value>Contact information counterparty1</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Контактная информация контрагент1</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Thông tin liên hệ đối tác1</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>ContactInformationCounterparty1ExtendedTooltip</name>
+            <id>48</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>Vertical</group>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>ContactInformationCounterparty2</name>
+          <id>49</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>en</key>
+            <value>Contact information counterparty2</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Контактная информация контрагент2</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Thông tin liên hệ đối tác2</value>
+          </title>
+          <toolTip>
+            <key>en</key>
+            <value>Contact information counterparty1</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Контактная информация контрагент1</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Thông tin liên hệ đối tác1</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>ContactInformationCounterparty2ExtendedTooltip</name>
+            <id>50</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>Vertical</group>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>ContactInformationCounterparty3</name>
+          <id>51</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>en</key>
+            <value>Contact information counterparty3</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Контактная информация контрагент3</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Thông tin liên hệ đối tác3</value>
+          </title>
+          <toolTip>
+            <key>en</key>
+            <value>Contact information counterparty1</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Контактная информация контрагент1</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Thông tin liên hệ đối tác1</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>ContactInformationCounterparty3ExtendedTooltip</name>
+            <id>52</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>Vertical</group>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>en</key>
+          <value>CI Counterparty</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>КИ Контрагент</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>CI Đối tác</value>
+        </title>
+        <toolTip>
+          <key>en</key>
+          <value>CICounterparty</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>CICounterparty</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>CICounterparty</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>CICounterpartyExtendedTooltip</name>
+          <id>14</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>HorizontalIfPossible</group>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <items xsi:type="form:Decoration">
+        <name>IndentDecorationCounterparty</name>
+        <id>58</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>IndentDecorationCounterpartyExtendedTooltip</name>
+          <id>60</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>IndentDecorationCounterpartyContextMenu</name>
+          <id>59</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <horizontalStretch>true</horizontalStretch>
+        <font xsi:type="core:FontRef">
+          <font>System.DefaultGUIFont</font>
+          <height>5.0</height>
+        </font>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+          <borderColor xsi:type="core:ColorRef">
+            <color>Style.FormTextColor</color>
+          </borderColor>
+          <border xsi:type="core:BorderDef">
+            <style>Underline</style>
+            <width>1</width>
+          </border>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Counterparties</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Контрагенты</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Đối tác</value>
+      </title>
+      <titleTextColor xsi:type="core:ColorRef">
+        <color>Style.FormTextColor</color>
+      </titleTextColor>
+      <titleFont xsi:type="core:FontRef">
+        <font>Style.ExtraLargeTextFont</font>
+        <bold>true</bold>
+        <italic>false</italic>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+      </titleFont>
+      <toolTip>
+        <key>en</key>
+        <value>Counterparties</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Контрагенты</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Đối tác</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>CounterpartyExtendedTooltip</name>
+        <id>6</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>ContactPersons</name>
+      <id>15</id>
+      <items xsi:type="form:FormGroup">
+        <name>ContactPersonsData</name>
+        <id>61</id>
+        <items xsi:type="form:FormGroup">
+          <name>GroupMainContactPerson</name>
+          <id>17</id>
+          <items xsi:type="form:FormField">
+            <name>MainContactPerson</name>
+            <id>19</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>MainContactPerson</segments>
+            </dataPath>
+            <titleLocation>Right</titleLocation>
+            <handlers>
+              <event>OnChange</event>
+              <name>MainContactPersonOnChange</name>
+            </handlers>
+            <extendedTooltip>
+              <name>MainContactPersonExtendedTooltip</name>
+              <id>21</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>MainContactPersonContextMenu</name>
+              <id>20</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>CheckBoxField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>OtherContactPersons</name>
+            <id>53</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>OtherContactPersons</segments>
+            </dataPath>
+            <titleLocation>Right</titleLocation>
+            <handlers>
+              <event>OnChange</event>
+              <name>OtherContactPersonsOnChange</name>
+            </handlers>
+            <extendedTooltip>
+              <name>OtherContactPersonsExtendedTooltip</name>
+              <id>55</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>OtherContactPersonsContextMenu</name>
+              <id>54</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>CheckBoxField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>en</key>
+            <value>Group main contact person</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Группа основное контактное лицо</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Nhóm người liên hệ chính</value>
+          </title>
+          <toolTip>
+            <key>en</key>
+            <value>Group main contact person</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Группа основное контактное лицо</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Nhóm người liên hệ chính</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>GroupMainContactPersonExtendedTooltip</name>
+            <id>18</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>Vertical</group>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>ContactInformationContactPersons</name>
+          <id>22</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>en</key>
+            <value>Contact information contact persons</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Контактная информация контактные лица</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Thông tin liên hệ (người liên hệ)</value>
+          </title>
+          <toolTip>
+            <key>en</key>
+            <value>Contact information contact persons</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Контактная информация контактные лица</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Thông tin liên hệ (người liên hệ)</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>ContactInformationContactPersonsExtendedTooltip</name>
+            <id>23</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>Vertical</group>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>en</key>
+          <value>Contact person information</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Контактные лица данные</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Người liên hệ dữ liệu</value>
+        </title>
+        <toolTip>
+          <key>en</key>
+          <value>Contact person information</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>Контактные лица данные</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Người liên hệ dữ liệu</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>ContactPersonsDataExtendedTooltip</name>
+          <id>62</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>HorizontalIfPossible</group>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <items xsi:type="form:Decoration">
+        <name>IndentDecorationContactPersons</name>
+        <id>63</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>IndentDecorationContactPersonsExtendedTooltip</name>
+          <id>65</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>IndentDecorationContactPersonsContextMenu</name>
+          <id>64</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <horizontalStretch>true</horizontalStretch>
+        <font xsi:type="core:FontRef">
+          <font>System.DefaultGUIFont</font>
+          <height>5.0</height>
+        </font>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+          <borderColor xsi:type="core:ColorRef">
+            <color>Style.FormTextColor</color>
+          </borderColor>
+          <border xsi:type="core:BorderDef">
+            <style>Underline</style>
+            <width>1</width>
+          </border>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Contact persons</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Контактные лица</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Người liên hệ</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Contact persons</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Контактные лица</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Người liên hệ</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>ContactPersonsExtendedTooltip</name>
+        <id>16</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
+        <representation>WeakSeparation</representation>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <showTitle>true</showTitle>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>Manager</name>
+      <id>34</id>
+      <items xsi:type="form:FormField">
+        <name>ResponsibleManager</name>
+        <id>36</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>ResponsibleManager</segments>
+        </dataPath>
+        <titleLocation>Right</titleLocation>
+        <handlers>
+          <event>OnChange</event>
+          <name>ResponsibleManagerOnChange</name>
+        </handlers>
+        <extendedTooltip>
+          <name>ResponsibleManagerExtendedTooltip</name>
+          <id>38</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ResponsibleManagerContextMenu</name>
+          <id>37</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>CheckBoxField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>ContactInformationResponsibleManager</name>
+        <id>39</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>en</key>
+          <value>Contact information responsible manager</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Контактная информация ответственный менеджер</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Thông tin liên hệ người quản lý chịu trách nhiệm</value>
+        </title>
+        <toolTip>
+          <key>en</key>
+          <value>Contact information responsible manager</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>Контактная информация ответственный менеджер</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Thông tin liên hệ người quản lý chịu trách nhiệm</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>ContactInformationResponsibleManagerExtendedTooltip</name>
+          <id>40</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>Vertical</group>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Manager</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Менеджер</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Người quản lý</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Manager</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Менеджер</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Người quản lý</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>ManagerExtendedTooltip</name>
+        <id>35</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>HorizontalIfPossible</group>
+        <representation>WeakSeparation</representation>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <showTitle>true</showTitle>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Contact information content</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Состав контактной информации</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Thành phần thông tin liên hệ</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Contact information content</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Состав контактной информации</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Thành phần thông tin liên hệ</value>
+    </toolTip>
+    <horizontalStretch>false</horizontalStretch>
+    <extendedTooltip>
+      <name>ContentContactInformationExtendedTooltip</name>
+      <id>2</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>Settings</name>
+    <id>3</id>
+    <items xsi:type="form:Button">
+      <name>SaveAndClose</name>
+      <id>41</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>SaveAndCloseExtendedTooltip</name>
+        <id>42</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualButton</type>
+      <commandName>Form.Command.SaveAndClose</commandName>
+      <representation>Auto</representation>
+      <width>15</width>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <textColor xsi:type="core:ColorRef">
+        <color>Style.ButtonBackColor</color>
+      </textColor>
+      <backColor xsi:type="core:ColorRef">
+        <color>Web.DarkGreen</color>
+      </backColor>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <items xsi:type="form:Button">
+      <name>Cancel</name>
+      <id>56</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>CancelExtendedTooltip</name>
+        <id>57</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualButton</type>
+      <commandName>Form.Command.Cancel</commandName>
+      <representation>Auto</representation>
+      <width>15</width>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <textColor xsi:type="core:ColorRef">
+        <color>Style.ButtonBackColor</color>
+      </textColor>
+      <backColor xsi:type="core:ColorRef">
+        <color>Style.MinorInscriptionText</color>
+      </backColor>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Settings</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Настройки</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Tùy chỉnh</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Settings</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Настройки</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tùy chỉnh</value>
+    </toolTip>
+    <verticalStretch>true</verticalStretch>
+    <extendedTooltip>
+      <name>SettingsExtendedTooltip</name>
+      <id>4</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <representation>StrongSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <commandBarLocation>None</commandBarLocation>
+  <autoCommandBar>
+    <name>FormCommandBar</name>
+    <id>-1</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
+  </autoCommandBar>
+  <handlers>
+    <event>BeforeClose</event>
+    <name>BeforeClose</name>
+  </handlers>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>OnCreateAtServer</name>
+  </handlers>
+  <autoUrl>true</autoUrl>
+  <group>HorizontalIfPossible</group>
+  <autoFillCheck>true</autoFillCheck>
+  <allowFormCustomize>true</allowFormCustomize>
+  <enabled>true</enabled>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>CounterpartyTIN</name>
+    <title>
+      <key>en</key>
+      <value>TIN</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>ИНН</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Mã số thuế</value>
+    </title>
+    <id>1</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>MainContactPerson</name>
+    <title>
+      <key>en</key>
+      <value>Main contact person</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Основное контактное лицо</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Người liên hệ chính</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>OtherContactPersons</name>
+    <title>
+      <key>en</key>
+      <value>Contact persons</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Контактные лица</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Người liên hệ</value>
+    </title>
+    <id>3</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ResponsibleManager</name>
+    <title>
+      <key>en</key>
+      <value>Responsible manager</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Ответственный менеджер</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Chịu trách nhiệm quản lý</value>
+    </title>
+    <id>4</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>StructureOfCIAttributesAndKinds</name>
+    <title>
+      <key>en</key>
+      <value>Structure of CI attributes and kinds</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Структура реквизитов и видов КИ</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Cấu trúc mục tin và dạng thông tin liên hệ</value>
+    </title>
+    <id>5</id>
+    <valueType/>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>PrintContentChanged</name>
+    <title>
+      <key>en</key>
+      <value>Print content is changed</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Состав печати изменен</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Thành phần in đã bị thay đổi</value>
+    </title>
+    <id>6</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <formCommands>
+    <name>SaveAndClose</name>
+    <title>
+      <key>en</key>
+      <value>Save and close</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Сохранить и закрыть</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Lưu và đóng</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>en</key>
+      <value>Save and close</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Сохранить и закрыть</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Lưu và đóng</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>SaveAndClose</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Cancel</name>
+    <title>
+      <key>en</key>
+      <value>Cancel</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Отменить</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Hủy bỏ</value>
+    </title>
+    <id>2</id>
+    <toolTip>
+      <key>en</key>
+      <value>Cancel</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Отменить</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Hủy bỏ</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Cancel</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+</form:Form>

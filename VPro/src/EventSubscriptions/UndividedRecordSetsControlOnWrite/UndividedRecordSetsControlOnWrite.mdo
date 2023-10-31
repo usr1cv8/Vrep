@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="38ac9a13-665a-4201-b5cc-687fe4a01130">
+  <name>UndividedRecordSetsControlOnWrite</name>
+  <synonym>
+    <key>en</key>
+    <value>Control of undivided record sets on record</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Контроль неразделенных наборов записей при записи</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Kiểm soát tập hợp bản ghi chưa phân tách khi ghi lại</value>
+  </synonym>
+  <source>
+    <types>InformationRegisterRecordSet.BusinessCalendarData</types>
+    <types>InformationRegisterRecordSet.RecipientSubscriptions</types>
+    <types>InformationRegisterRecordSet.DeleteDataAreas</types>
+    <types>InformationRegisterRecordSet.DeleteDataAreasSessionsBlockings</types>
+    <types>InformationRegisterRecordSet.DataExchangeRules</types>
+    <types>InformationRegisterRecordSet.PermissionQueriesOnUseExternalResources</types>
+    <types>InformationRegisterRecordSet.ExternalResourcesUsingPermissions</types>
+    <types>InformationRegisterRecordSet.DeleteWorldCountries</types>
+    <types>InformationRegisterRecordSet.SubsystemVersions</types>
+    <types>InformationRegisterRecordSet.DataExchangeMessages</types>
+    <types>InformationRegisterRecordSet.ExternalModulesConnectionModes</types>
+    <types>InformationRegisterRecordSet.DeleteAreasForBackup</types>
+    <types>InformationRegisterRecordSet.DeleteDataAreasActivityRating</types>
+    <types>InformationRegisterRecordSet.AccessRightsCorrelation</types>
+    <types>InformationRegisterRecordSet.SenderSettings</types>
+    <types>InformationRegisterRecordSet.InformationPackagesOnLaunch</types>
+    <types>InformationRegisterRecordSet.DemandDataProcessorSuppliedDataAreas</types>
+    <types>InformationRegisterRecordSet.DeleteJobQueue</types>
+    <types>InformationRegisterRecordSet.DeleteTimeMeasurements</types>
+    <types>InformationRegisterRecordSet.RolesRights</types>
+    <types>InformationRegisterRecordSet.DeleteVersionSubsystems</types>
+    <types>InformationRegisterRecordSet.DeleteTextExtractionQueue</types>
+    <types>InformationRegisterRecordSet.SuppliedDataForDataProcessors</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.SaaSOperations.UndividedRecordSetsControlOnWrite</handler>
+</mdclass:EventSubscription>

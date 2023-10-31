@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b8ba07f0-4299-42af-8350-a915eb7060ce">
+  <producedTypes>
+    <objectType typeId="2edb47a6-105d-4637-a66f-a012544d7699" valueTypeId="64b27b10-b49c-403f-ae9d-3b6cf1a073f7"/>
+    <refType typeId="38723b8a-a6b8-41e5-bd4d-06710d6f7969" valueTypeId="add08da8-0dbd-4285-8bff-4f9f0d7a32ac"/>
+    <selectionType typeId="4ffe64db-4083-4eec-add4-d13aca2eb347" valueTypeId="10c629ef-1fb5-43e4-b507-028e9c86f50c"/>
+    <listType typeId="f3a74458-ba3d-4232-92fd-afff85542004" valueTypeId="bd500887-70eb-47d7-a1e6-da81d4c6ef54"/>
+    <managerType typeId="d41b0b2f-94bc-4e1c-bd0e-11bac503608b" valueTypeId="b59f2c18-5b47-4603-a86e-a18f392437f5"/>
+  </producedTypes>
+  <name>Shipment</name>
+  <synonym>
+    <key>ru</key>
+    <value>Shipment</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.Shipment.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.Shipment.Form.DocumentForm</defaultObjectForm>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="0771e1a9-3bc6-446e-818b-0a75a57552de">
+    <name>DeliveryAddress</name>
+    <synonym>
+      <key>ru</key>
+      <value>Delivery address</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1856320f-eaf0-4095-8afd-98b89165d7b9">
+    <name>MapOfDelivery</name>
+    <synonym>
+      <key>ru</key>
+      <value>Map of delivery</value>
+    </synonym>
+    <type>
+      <types>ValueStorage</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="a8390355-d87d-4203-9829-0ce02ac72d81">
+    <name>DocumentForm</name>
+    <synonym>
+      <key>ru</key>
+      <value>Document form</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="f770beb2-89ce-4adc-9b56-3fe8a647382f">
+    <producedTypes>
+      <objectType typeId="af16e303-4e58-49d0-af7c-2cd42a88da36" valueTypeId="6e147d92-2546-4b54-b50e-67b1314f8392"/>
+      <rowType typeId="b4a1c3ef-6e0b-405f-b56e-8b91d50a48e6" valueTypeId="91bd7058-4916-403d-a728-860bfc896a41"/>
+    </producedTypes>
+    <name>CustomerOrders</name>
+    <synonym>
+      <key>ru</key>
+      <value>Customer orders</value>
+    </synonym>
+    <attributes uuid="b9c87f87-1aaf-470c-84c6-0f85317479c5">
+      <name>CustomerOrder</name>
+      <synonym>
+        <key>ru</key>
+        <value>Customer order</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.CustomerOrder</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

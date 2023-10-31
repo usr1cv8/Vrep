@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="249812c1-7ac0-4459-a796-53da854c206a">
+  <name>UndividedRecordSetsControlOnWriteServiceTechnology</name>
+  <synonym>
+    <key>en</key>
+    <value>Control undivided record sets while writing service technology</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Контроль неразделенных наборов записей при записи технология сервиса</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Kiểm soát tập hợp bản ghi chưa phân tách khi ghi lại công nghệ dịch vụ</value>
+  </synonym>
+  <source>
+    <types>InformationRegisterRecordSet.ExternalResourcesUsingPermissionsSaaS</types>
+    <types>InformationRegisterRecordSet.UnseparatedUsers</types>
+    <types>InformationRegisterRecordSet.RequestsForPermissionsToUseExternalResourcesSaaS</types>
+    <types>InformationRegisterRecordSet.DataAreasTransportExchangeSettings</types>
+    <types>InformationRegisterRecordSet.ExternalModulesConnectionModesSaaS</types>
+    <types>InformationRegisterRecordSet.PermissionApplicationOnUseExternalResourcesSaaS</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.SaaSOperations.UndividedRecordSetsControlOnWrite</handler>
+</mdclass:EventSubscription>

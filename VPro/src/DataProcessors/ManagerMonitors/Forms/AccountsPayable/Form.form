@@ -1,0 +1,5546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <title>
+    <key>en</key>
+    <value>Company debt</value>
+  </title>
+  <title>
+    <key>ru</key>
+    <value>Долг организации</value>
+  </title>
+  <title>
+    <key>vi</key>
+    <value>Công nợ phải trả</value>
+  </title>
+  <items xsi:type="form:FormGroup">
+    <name>Header</name>
+    <id>61</id>
+    <items xsi:type="form:FormGroup">
+      <name>Filters</name>
+      <id>1</id>
+      <items xsi:type="form:FormField">
+        <name>Period</name>
+        <id>4</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Period</segments>
+        </dataPath>
+        <titleLocation>None</titleLocation>
+        <toolTip>
+          <key>en</key>
+          <value>As of</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>As of</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Như</value>
+        </toolTip>
+        <handlers>
+          <event>OnChange</event>
+          <name>PeriodOnChange</name>
+        </handlers>
+        <extendedTooltip>
+          <name>PeriodExtendedTooltip</name>
+          <id>68</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>PeriodContextMenu</name>
+          <id>5</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <width>10</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>Company</name>
+        <id>8</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Company</segments>
+        </dataPath>
+        <titleLocation>None</titleLocation>
+        <toolTip>
+          <key>en</key>
+          <value>Company</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>Контрагент</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Đối tác</value>
+        </toolTip>
+        <handlers>
+          <event>OnChange</event>
+          <name>CompanyOnChange</name>
+        </handlers>
+        <extendedTooltip>
+          <name>CounterpartyExtendedTooltip</name>
+          <id>70</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>CounterpartyContextMenu</name>
+          <id>9</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Filters</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Отборы</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Lọc</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Filters</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Отборы</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Lọc</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>FiltersExtendedTooltip</name>
+        <id>66</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>CommandBar</name>
+      <id>58</id>
+      <items xsi:type="form:Button">
+        <name>Refresh</name>
+        <id>294</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>RefreshExtendedTooltip</name>
+          <id>295</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <commandName>Form.Command.Refresh</commandName>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <items xsi:type="form:Button">
+        <name>ChangeForm</name>
+        <id>59</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <skipOnInput>false</skipOnInput>
+        <extendedTooltip>
+          <name>ChangeFormExtendedTooltip</name>
+          <id>72</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <commandName>Form.StandardCommand.CustomizeForm</commandName>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <items xsi:type="form:Button">
+        <name>Help</name>
+        <id>60</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <skipOnInput>false</skipOnInput>
+        <extendedTooltip>
+          <name>HelpExtendedTooltip</name>
+          <id>73</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <commandName>Form.StandardCommand.Help</commandName>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+        <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Command bar</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Командная панель</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Thanh lệnh</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Command bar</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Командная панель</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Thanh lệnh</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>CommandBarExtendedTooltip</name>
+        <id>71</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>CommandBar</type>
+      <extInfo xsi:type="form:CommandBarExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Header</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Шапка</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Phần đầu</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Header</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Шапка</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Phần đầu</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>HeaderExtendedTooltip</name>
+      <id>65</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>Indicators</name>
+    <id>64</id>
+    <items xsi:type="form:FormGroup">
+      <name>Diagrams</name>
+      <id>62</id>
+      <items xsi:type="form:FormGroup">
+        <name>WidgetChartCreditors</name>
+        <id>145</id>
+        <items xsi:type="form:FormField">
+          <name>ChartCreditors</name>
+          <id>11</id>
+          <title>
+            <key>en</key>
+            <value>Debtors</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>дебиторов</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>người nợ</value>
+          </title>
+          <titleFont xsi:type="core:FontRef">
+            <font>System.DefaultGUIFont</font>
+            <bold>true</bold>
+            <italic>false</italic>
+            <underline>false</underline>
+            <strikeout>false</strikeout>
+          </titleFont>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ChartCreditors</segments>
+          </dataPath>
+          <titleLocation>None</titleLocation>
+          <extendedTooltip>
+            <name>ChartCreditorsExtendedTooltip</name>
+            <id>76</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>CreditorsChartContextMenu</name>
+            <id>12</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>ChartField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:ChartFieldExtInfo">
+            <width>35</width>
+            <autoMaxWidth>true</autoMaxWidth>
+            <height>8</height>
+            <autoMaxHeight>true</autoMaxHeight>
+            <horizontalStretch>true</horizontalStretch>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>en</key>
+          <value>Widget chart creditors</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Виджет диаграмма кредиторы</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Widget biểu đồ nợ phải trả</value>
+        </title>
+        <toolTip>
+          <key>en</key>
+          <value>Widget chart creditors</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>Виджет диаграмма кредиторы</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Widget biểu đồ nợ phải trả</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>ChartWidgetCreditorsExtendedTooltip</name>
+          <id>146</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>Vertical</group>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <backColor xsi:type="core:ColorDef">
+            <red>214</red>
+            <green>251</green>
+            <blue>211</blue>
+          </backColor>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <items xsi:type="form:Decoration">
+        <name>DecorationIndentVertical</name>
+        <id>282</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>DecorationIndentVerticalExtendedTooltip</name>
+          <id>284</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>DecorationIndentVerticalContextMenu</name>
+          <id>283</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <height>1</height>
+        <autoMaxHeight>true</autoMaxHeight>
+        <horizontalStretch>true</horizontalStretch>
+        <font xsi:type="core:FontRef">
+          <font>Style.SmallTextFont</font>
+          <height>1.0</height>
+        </font>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>WidgetChartCreditorsOnTerms</name>
+        <id>206</id>
+        <items xsi:type="form:FormField">
+          <name>ChartCreditorsOnTerms</name>
+          <id>25</id>
+          <titleFont xsi:type="core:FontRef">
+            <font>System.DefaultGUIFont</font>
+            <bold>true</bold>
+            <italic>false</italic>
+            <underline>false</underline>
+            <strikeout>false</strikeout>
+          </titleFont>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ChartCreditorsOnTerms</segments>
+          </dataPath>
+          <titleLocation>None</titleLocation>
+          <extendedTooltip>
+            <name>ChartCreditorsOnTermsExtendedTooltip</name>
+            <id>77</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ChartCreditorsOnTermsContextMenu</name>
+            <id>26</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>ChartField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:ChartFieldExtInfo">
+            <width>35</width>
+            <autoMaxWidth>true</autoMaxWidth>
+            <height>8</height>
+            <autoMaxHeight>true</autoMaxHeight>
+            <horizontalStretch>true</horizontalStretch>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>en</key>
+          <value>Widget chart creditors by periods</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Виджет диаграмма кредиторы по срокам</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Widget biểu đồ nợ phải trả theo thời hạn</value>
+        </title>
+        <toolTip>
+          <key>en</key>
+          <value>Widget chart creditors by periods</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>Виджет диаграмма кредиторы по срокам</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Widget biểu đồ nợ phải trả theo thời hạn</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>ChartWidgetCreditorsOnTermsExtendedTooltip</name>
+          <id>207</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>Vertical</group>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <backColor xsi:type="core:ColorDef">
+            <red>255</red>
+            <green>255</green>
+            <blue>192</blue>
+          </backColor>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <items xsi:type="form:Decoration">
+        <name>DecorationIndentVertical2</name>
+        <id>285</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>DecorationIndentVertical2ExtendedTooltip</name>
+          <id>287</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>DecorationIndentVertical2ContextMenu</name>
+          <id>286</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <height>1</height>
+        <autoMaxHeight>true</autoMaxHeight>
+        <horizontalStretch>true</horizontalStretch>
+        <font xsi:type="core:FontRef">
+          <font>Style.SmallTextFont</font>
+          <height>1.0</height>
+        </font>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>WidgetChartDebtDynamics</name>
+        <id>208</id>
+        <items xsi:type="form:FormField">
+          <name>ChartDebtDynamics</name>
+          <id>41</id>
+          <title>
+            <key>en</key>
+            <value>Receivable dynamics</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Динамика задолженности дебиторов</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Biến động công nợ phải thu</value>
+          </title>
+          <titleFont xsi:type="core:FontRef">
+            <font>System.DefaultGUIFont</font>
+            <bold>true</bold>
+            <italic>false</italic>
+            <underline>false</underline>
+            <strikeout>false</strikeout>
+          </titleFont>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ChartDebtDynamics</segments>
+          </dataPath>
+          <titleLocation>None</titleLocation>
+          <extendedTooltip>
+            <name>ChartDebtDynamicsExtendedTooltip</name>
+            <id>78</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>DebtDynamicsChartContextMenu</name>
+            <id>42</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>ChartField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:ChartFieldExtInfo">
+            <width>35</width>
+            <autoMaxWidth>true</autoMaxWidth>
+            <height>8</height>
+            <autoMaxHeight>true</autoMaxHeight>
+            <horizontalStretch>true</horizontalStretch>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>en</key>
+          <value>Widget chart debt dynamics</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Виджет диаграмма динамика задолженности</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Widget biểu đồ biến động công nợ</value>
+        </title>
+        <toolTip>
+          <key>en</key>
+          <value>Widget chart debt dynamics</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>Виджет диаграмма динамика задолженности</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Widget biểu đồ biến động công nợ</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>ChartWidgetDebtDynamicsExtendedTooltip</name>
+          <id>209</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>Vertical</group>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <backColor xsi:type="core:ColorDef">
+            <red>214</red>
+            <green>251</green>
+            <blue>211</blue>
+          </backColor>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Charts</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Диаграммы</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Biểu đồ</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Charts</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Диаграммы</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Biểu đồ</value>
+      </toolTip>
+      <width>39</width>
+      <horizontalStretch>false</horizontalStretch>
+      <extendedTooltip>
+        <name>ChartsExtendedTooltip</name>
+        <id>75</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>Tables</name>
+      <id>63</id>
+      <items xsi:type="form:FormGroup">
+        <name>Creditors</name>
+        <id>80</id>
+        <items xsi:type="form:FormGroup">
+          <name>CreditorsHeader</name>
+          <id>82</id>
+          <items xsi:type="form:FormGroup">
+            <name>CreditorsHeaderLeft</name>
+            <id>84</id>
+            <items xsi:type="form:Decoration">
+              <name>DecorationCreditors</name>
+              <id>86</id>
+              <title>
+                <key>en</key>
+                <value>Creditors</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Кредиторы</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Đối tác phải trả</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>DecorationCreditorsExtendedTooltip</name>
+                <id>88</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>DecorationCreditorsContextMenu</name>
+                <id>87</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <width>11</width>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <horizontalStretch>false</horizontalStretch>
+              <textColor xsi:type="core:ColorRef">
+                <color>Style.ButtonTextColor</color>
+              </textColor>
+              <font xsi:type="core:FontRef">
+                <font>Style.NormalTextFont</font>
+                <bold>true</bold>
+                <italic>false</italic>
+                <underline>false</underline>
+                <strikeout>false</strikeout>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Center</horizontalAlign>
+                <borderColor xsi:type="core:ColorDef">
+                  <red>205</red>
+                  <green>205</green>
+                  <blue>205</blue>
+                </borderColor>
+                <border xsi:type="core:BorderDef">
+                  <style>Underline</style>
+                  <width>1</width>
+                </border>
+              </extInfo>
+            </items>
+            <items xsi:type="form:Decoration">
+              <name>DecorationCreditorsQuantity</name>
+              <id>89</id>
+              <title>
+                <key>en</key>
+                <value>0</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>0</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>0</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>DecorationCreditorsQuantityExtendedTooltip</name>
+                <id>91</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>DecorationCreditorsQuantityContextMenu</name>
+                <id>90</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <width>11</width>
+              <autoMaxWidth>true</autoMaxWidth>
+              <height>1</height>
+              <autoMaxHeight>true</autoMaxHeight>
+              <horizontalStretch>false</horizontalStretch>
+              <textColor xsi:type="core:ColorDef">
+                <red>16</red>
+                <green>207</green>
+                <blue>66</blue>
+              </textColor>
+              <font xsi:type="core:FontRef">
+                <font>Style.ExtraLargeTextFont</font>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Center</horizontalAlign>
+                <verticalAlign>Top</verticalAlign>
+                <borderColor xsi:type="core:ColorDef">
+                  <red>205</red>
+                  <green>205</green>
+                  <blue>205</blue>
+                </borderColor>
+                <border xsi:type="core:BorderDef">
+                  <style>Underline</style>
+                  <width>1</width>
+                </border>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>en</key>
+              <value>Creditors header left</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Кредиторы шапка слева</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Người phải trả phần đầu bên trái</value>
+            </title>
+            <toolTip>
+              <key>en</key>
+              <value>Group creditors quantity</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Группа кредиторы количество</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Nhóm nợ phải trả số lượng</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>HeaderLeftCreditorsExtendedTooltip</name>
+              <id>85</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualGroup</type>
+            <extInfo xsi:type="form:UsualGroupExtInfo">
+              <group>Vertical</group>
+              <showLeftMargin>true</showLeftMargin>
+              <united>true</united>
+              <throughAlign>Auto</throughAlign>
+              <currentRowUse>Auto</currentRowUse>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormGroup">
+            <name>CreditorsHeaderRight</name>
+            <id>92</id>
+            <items xsi:type="form:FormGroup">
+              <name>CreditorsDebtTotal</name>
+              <id>94</id>
+              <items xsi:type="form:Decoration">
+                <name>DecorationCreditorsDebt</name>
+                <id>96</id>
+                <title>
+                  <key>en</key>
+                  <value>Our debt</value>
+                </title>
+                <title>
+                  <key>ru</key>
+                  <value>Наш долг</value>
+                </title>
+                <title>
+                  <key>vi</key>
+                  <value>Công nợ</value>
+                </title>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>DecorationCreditorsDebtExtendedTooltip</name>
+                  <id>98</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <contextMenu>
+                  <name>DecorationCreditorsDebtContextMenu</name>
+                  <id>97</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <autoFill>true</autoFill>
+                </contextMenu>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <horizontalStretch>true</horizontalStretch>
+                <textColor xsi:type="core:ColorRef">
+                  <color>Style.ButtonTextColor</color>
+                </textColor>
+                <font xsi:type="core:FontRef">
+                  <font>Style.NormalTextFont</font>
+                  <bold>true</bold>
+                  <italic>false</italic>
+                  <underline>false</underline>
+                  <strikeout>false</strikeout>
+                </font>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Center</horizontalAlign>
+                  <borderColor xsi:type="core:ColorDef">
+                    <red>205</red>
+                    <green>205</green>
+                    <blue>205</blue>
+                  </borderColor>
+                  <border xsi:type="core:BorderDef">
+                    <style>Underline</style>
+                    <width>1</width>
+                  </border>
+                </extInfo>
+              </items>
+              <items xsi:type="form:Decoration">
+                <name>DecorationCreditorsDebtTotal</name>
+                <id>99</id>
+                <title>
+                  <key>en</key>
+                  <value>1 000 000,00</value>
+                </title>
+                <title>
+                  <key>ru</key>
+                  <value>1 000 000,00</value>
+                </title>
+                <title>
+                  <key>vi</key>
+                  <value>1 000 000,00</value>
+                </title>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>DecorationCreditorsTotalDebtExtendedTooltip</name>
+                  <id>101</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <contextMenu>
+                  <name>DecorationCreditorsDebtTotalContextMenu</name>
+                  <id>100</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <autoFill>true</autoFill>
+                </contextMenu>
+                <formatted>true</formatted>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <height>1</height>
+                <autoMaxHeight>true</autoMaxHeight>
+                <horizontalStretch>true</horizontalStretch>
+                <font xsi:type="core:FontRef">
+                  <font>Style.ExtraLargeTextFont</font>
+                </font>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Center</horizontalAlign>
+                  <verticalAlign>Top</verticalAlign>
+                  <borderColor xsi:type="core:ColorDef">
+                    <red>205</red>
+                    <green>205</green>
+                    <blue>205</blue>
+                  </borderColor>
+                  <border xsi:type="core:BorderDef">
+                    <style>Underline</style>
+                    <width>1</width>
+                  </border>
+                </extInfo>
+              </items>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <title>
+                <key>en</key>
+                <value>Creditor debt total</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Кредиторы задолженность итог</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Người phải trả tổng số</value>
+              </title>
+              <toolTip>
+                <key>en</key>
+                <value>Group creditors the whole debt</value>
+              </toolTip>
+              <toolTip>
+                <key>ru</key>
+                <value>Группа кредиторы вся задолженность</value>
+              </toolTip>
+              <toolTip>
+                <key>vi</key>
+                <value>Nhóm nợ phải trả toàn bộ công nợ</value>
+              </toolTip>
+              <extendedTooltip>
+                <name>CreditorsTotalDebtExtendedTooltip</name>
+                <id>95</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualGroup</type>
+              <extInfo xsi:type="form:UsualGroupExtInfo">
+                <group>Vertical</group>
+                <showLeftMargin>true</showLeftMargin>
+                <united>true</united>
+                <throughAlign>Auto</throughAlign>
+                <currentRowUse>Auto</currentRowUse>
+              </extInfo>
+            </items>
+            <items xsi:type="form:FormGroup">
+              <name>CreditorsAdvanceTotal</name>
+              <id>102</id>
+              <items xsi:type="form:Decoration">
+                <name>DecorationCreditorsAdvance</name>
+                <id>104</id>
+                <title>
+                  <key>en</key>
+                  <value>Advance payment</value>
+                </title>
+                <title>
+                  <key>ru</key>
+                  <value>Является ли платеж авансом</value>
+                </title>
+                <title>
+                  <key>vi</key>
+                  <value>Ứng trước</value>
+                </title>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>DecorationCreditorsAdvanceExtendedTooltip</name>
+                  <id>106</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <contextMenu>
+                  <name>CreditorsDecorationAdvanceContextMenu</name>
+                  <id>105</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <autoFill>true</autoFill>
+                </contextMenu>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <horizontalStretch>true</horizontalStretch>
+                <textColor xsi:type="core:ColorRef">
+                  <color>Style.ButtonTextColor</color>
+                </textColor>
+                <font xsi:type="core:FontRef">
+                  <font>Style.NormalTextFont</font>
+                  <bold>true</bold>
+                  <italic>false</italic>
+                  <underline>false</underline>
+                  <strikeout>false</strikeout>
+                </font>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Center</horizontalAlign>
+                  <borderColor xsi:type="core:ColorDef">
+                    <red>205</red>
+                    <green>205</green>
+                    <blue>205</blue>
+                  </borderColor>
+                  <border xsi:type="core:BorderDef">
+                    <style>Underline</style>
+                    <width>1</width>
+                  </border>
+                </extInfo>
+              </items>
+              <items xsi:type="form:Decoration">
+                <name>DecorationCreditorsAdvanceTotal</name>
+                <id>107</id>
+                <title>
+                  <key>en</key>
+                  <value>1 000 000,00</value>
+                </title>
+                <title>
+                  <key>ru</key>
+                  <value>1 000 000,00</value>
+                </title>
+                <title>
+                  <key>vi</key>
+                  <value>1 000 000,00</value>
+                </title>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>DecorationCreditorsAdvanceTotalExtendedTooltip</name>
+                  <id>109</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <contextMenu>
+                  <name>DecorationCreditorsAdvanceTotalContextMenu</name>
+                  <id>108</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <autoFill>true</autoFill>
+                </contextMenu>
+                <formatted>true</formatted>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <height>1</height>
+                <autoMaxHeight>true</autoMaxHeight>
+                <horizontalStretch>true</horizontalStretch>
+                <font xsi:type="core:FontRef">
+                  <font>Style.ExtraLargeTextFont</font>
+                </font>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Center</horizontalAlign>
+                  <verticalAlign>Top</verticalAlign>
+                  <borderColor xsi:type="core:ColorDef">
+                    <red>205</red>
+                    <green>205</green>
+                    <blue>205</blue>
+                  </borderColor>
+                  <border xsi:type="core:BorderDef">
+                    <style>Underline</style>
+                    <width>1</width>
+                  </border>
+                </extInfo>
+              </items>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <title>
+                <key>en</key>
+                <value>Creditors advance total</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Кредиторы аванс итог</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Người phải trả ứng trước tổng số</value>
+              </title>
+              <toolTip>
+                <key>en</key>
+                <value>Group creditors arrear</value>
+              </toolTip>
+              <toolTip>
+                <key>ru</key>
+                <value>Группа кредиторы просрочено</value>
+              </toolTip>
+              <toolTip>
+                <key>vi</key>
+                <value>Nhóm nợ phải trả quá hạn</value>
+              </toolTip>
+              <extendedTooltip>
+                <name>CreditorsAdvanceTotalExtendedTooltip</name>
+                <id>103</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualGroup</type>
+              <extInfo xsi:type="form:UsualGroupExtInfo">
+                <group>Vertical</group>
+                <showLeftMargin>true</showLeftMargin>
+                <united>true</united>
+                <throughAlign>Auto</throughAlign>
+                <currentRowUse>Auto</currentRowUse>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>en</key>
+              <value>Creditors header right</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Кредиторы шапка справа</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Người phải trả phần đầu bên phải</value>
+            </title>
+            <toolTip>
+              <key>en</key>
+              <value>Creditors header right</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Кредиторы шапка справа</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Người phải trả phần đầu bên phải</value>
+            </toolTip>
+            <horizontalStretch>true</horizontalStretch>
+            <extendedTooltip>
+              <name>CreditorsHeaderRightExtendedTooltip</name>
+              <id>93</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualGroup</type>
+            <extInfo xsi:type="form:UsualGroupExtInfo">
+              <showLeftMargin>true</showLeftMargin>
+              <united>true</united>
+              <slaveItemsWidth>Equal</slaveItemsWidth>
+              <throughAlign>Auto</throughAlign>
+              <currentRowUse>Auto</currentRowUse>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>en</key>
+            <value>Creditors header</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Кредиторы шапка</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Người phải trả phần đầu</value>
+          </title>
+          <toolTip>
+            <key>en</key>
+            <value>Group common creditors</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Группа общая кредиторы</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Nhóm tổng nợ phải trả</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>CreditorsHeaderExtendedTooltip</name>
+            <id>83</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>CreditorsInformation</name>
+          <id>110</id>
+          <items xsi:type="form:FormGroup">
+            <name>CreditorsInformationHeader</name>
+            <id>112</id>
+            <items xsi:type="form:Decoration">
+              <name>CreditorsCounterpartyTitle</name>
+              <id>114</id>
+              <title>
+                <key>en</key>
+                <value>Counterparties</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Контрагенты</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Đối tác</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>CreditorsCounterpartyTitleExtendedTooltip</name>
+                <id>116</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>CreditorsCounterpartyHeaderContextMenu</name>
+                <id>115</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <horizontalStretch>true</horizontalStretch>
+              <font xsi:type="core:FontRef">
+                <font>Style.SmallTextFont</font>
+                <bold>true</bold>
+                <italic>false</italic>
+                <underline>false</underline>
+                <strikeout>false</strikeout>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Center</horizontalAlign>
+              </extInfo>
+            </items>
+            <items xsi:type="form:Decoration">
+              <name>DecorationDebtTitle</name>
+              <id>117</id>
+              <title>
+                <key>en</key>
+                <value>Our debt</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Наш долг</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Công nợ</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>DecorationDebtTitleExtendedTooltip</name>
+                <id>119</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>DecorationDebtHeaderContextMenu</name>
+                <id>118</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <width>7</width>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <font xsi:type="core:FontRef">
+                <font>Style.SmallTextFont</font>
+                <bold>true</bold>
+                <italic>false</italic>
+                <underline>false</underline>
+                <strikeout>false</strikeout>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Center</horizontalAlign>
+              </extInfo>
+            </items>
+            <items xsi:type="form:Decoration">
+              <name>DecorationAdvanceTitle</name>
+              <id>123</id>
+              <title>
+                <key>en</key>
+                <value>Advance payment</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Является ли платеж авансом</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Ứng trước</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>DecorationAdvanceTitleExtendedTooltip</name>
+                <id>125</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>DecorationAdvanceHeaderContextMenu</name>
+                <id>124</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <width>7</width>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <font xsi:type="core:FontRef">
+                <font>Style.SmallTextFont</font>
+                <bold>true</bold>
+                <italic>false</italic>
+                <underline>false</underline>
+                <strikeout>false</strikeout>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Center</horizontalAlign>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>en</key>
+              <value>Creditors information header</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Кредиторы сведения шапка</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Người phải trả thông tin phần đầu</value>
+            </title>
+            <toolTip>
+              <key>en</key>
+              <value>Creditors information header</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Кредиторы сведения шапка</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Người phải trả thông tin phần đầu</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>CreditorsInformationHeaderExtendedTooltip</name>
+              <id>113</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualGroup</type>
+            <extInfo xsi:type="form:UsualGroupExtInfo">
+              <showLeftMargin>true</showLeftMargin>
+              <united>true</united>
+              <throughAlign>Auto</throughAlign>
+              <currentRowUse>Auto</currentRowUse>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormGroup">
+            <name>CreditorsData</name>
+            <id>126</id>
+            <items xsi:type="form:Decoration">
+              <name>CreditorsCounterparty</name>
+              <id>128</id>
+              <title>
+                <key>en</key>
+                <value>Counterparty
+1 Counterparty
+2 Counterparty
+3 Counterparty
+4 Counterparty
+5 Counterparty 6</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Контрагент
+1
+Контрагент
+2 Контрагент
+3 Контрагент
+4 Контрагент 5 Контрагент 6</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Đối tác
+1
+Đối tác
+2 Đối tác
+3 Đối tác
+4 Đối tác 5 Đối tác 6</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>CreditorsCounterpartyExtendedTooltip</name>
+                <id>130</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>CreditorsCounterpartyContextMenu</name>
+                <id>129</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <height>4</height>
+              <autoMaxHeight>true</autoMaxHeight>
+              <horizontalStretch>true</horizontalStretch>
+              <verticalStretch>false</verticalStretch>
+              <font xsi:type="core:FontRef">
+                <font>Style.SmallTextFont</font>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+                <verticalAlign>Top</verticalAlign>
+              </extInfo>
+            </items>
+            <items xsi:type="form:Decoration">
+              <name>CreditorsDebt</name>
+              <id>131</id>
+              <title>
+                <key>en</key>
+                <value>1
+000,00 1
+000,00 1
+000,00 1
+000,00 1
+000,00 1 000,00</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>1
+000,00 1
+000,00 1
+000,00 1
+000,00 1
+000,00 1 000,00</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>1
+000,00 1
+000,00 1
+000,00 1
+000,00 1
+000,00 1 000,00</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>CreditorsDebExtendedTooltip</name>
+                <id>133</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>CreditorsDebtContextMenu</name>
+                <id>132</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <width>7</width>
+              <autoMaxWidth>true</autoMaxWidth>
+              <height>4</height>
+              <autoMaxHeight>true</autoMaxHeight>
+              <verticalStretch>false</verticalStretch>
+              <font xsi:type="core:FontRef">
+                <font>Style.SmallTextFont</font>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Right</horizontalAlign>
+                <verticalAlign>Top</verticalAlign>
+              </extInfo>
+            </items>
+            <items xsi:type="form:Decoration">
+              <name>CreditorsAdvance</name>
+              <id>137</id>
+              <title>
+                <key>en</key>
+                <value>1
+000,00 1
+000,00 1
+000,00 1
+000,00 1
+000,00 1 000,00</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>1
+000,00 1
+000,00 1
+000,00 1
+000,00 1
+000,00 1 000,00</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>1
+000,00 1
+000,00 1
+000,00 1
+000,00 1
+000,00 1 000,00</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>CreditorsAdvanceExtendedTooltip</name>
+                <id>139</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>CreditorsAdvanceContextMenu</name>
+                <id>138</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <width>7</width>
+              <autoMaxWidth>true</autoMaxWidth>
+              <height>4</height>
+              <autoMaxHeight>true</autoMaxHeight>
+              <verticalStretch>false</verticalStretch>
+              <font xsi:type="core:FontRef">
+                <font>Style.SmallTextFont</font>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Right</horizontalAlign>
+                <verticalAlign>Top</verticalAlign>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>en</key>
+              <value>Creditors data</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Кредиторы данные</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Người phải trả dữ liệu</value>
+            </title>
+            <toolTip>
+              <key>en</key>
+              <value>Creditors data</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Кредиторы данные</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Người phải trả dữ liệu</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>CreditorsDataExtendedTooltip</name>
+              <id>127</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualGroup</type>
+            <extInfo xsi:type="form:UsualGroupExtInfo">
+              <showLeftMargin>true</showLeftMargin>
+              <united>true</united>
+              <throughAlign>Auto</throughAlign>
+              <currentRowUse>Auto</currentRowUse>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>en</key>
+            <value>Creditors information</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Кредиторы сведения</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Người phải trả thông tin</value>
+          </title>
+          <toolTip>
+            <key>en</key>
+            <value>Group details creditors</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Группа детальная кредиторы</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Nhóm chi tiết nợ phải trả</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>CreditorsInformationExtendedTooltip</name>
+            <id>111</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>Vertical</group>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>CreditorsFooter</name>
+          <id>140</id>
+          <items xsi:type="form:Decoration">
+            <name>CreditorsDetails</name>
+            <id>142</id>
+            <title>
+              <key>en</key>
+              <value>Explanation</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Расшифровка</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Diễn giải</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <toolTip>
+              <key>en</key>
+              <value>Settlements with suppliers (man. cur.)</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Расчеты с поставщиками (упр. вал.)</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Hạch toán với người bán (tiền tệ quản trị)</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>CreditorsDetailsExtendedTooltip</name>
+              <id>144</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>CreditorsDetailsContextMenu</name>
+              <id>143</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <horizontalStretch>true</horizontalStretch>
+            <font xsi:type="core:FontRef">
+              <font>Style.SmallTextFont</font>
+            </font>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <handlers>
+                <event>Click</event>
+                <name>CreditorsDetailsClick</name>
+              </handlers>
+              <hyperlink>true</hyperlink>
+              <horizontalAlign>Right</horizontalAlign>
+              <borderColor xsi:type="core:ColorDef">
+                <red>205</red>
+                <green>205</green>
+                <blue>205</blue>
+              </borderColor>
+              <border xsi:type="core:BorderDef">
+                <style>Overline</style>
+                <width>1</width>
+              </border>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>en</key>
+            <value>Creditors footer</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Кредиторы подвал</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Người phải trả phần đáy</value>
+          </title>
+          <toolTip>
+            <key>en</key>
+            <value>Cash balance additionally</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Остатки ДСДополнительно</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Số dư ДСДополнительно</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>CreditorsFooterExtendedTooltip</name>
+            <id>141</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>en</key>
+          <value>Creditors</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Кредиторы</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Người cho vay</value>
+        </title>
+        <toolTip>
+          <key>en</key>
+          <value>Balance creditors</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>Остатки кредиторы</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Số dư công nợ phải trả</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>CreditorsExtendedTooltip</name>
+          <id>81</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>Vertical</group>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <backColor xsi:type="core:ColorDef">
+            <red>214</red>
+            <green>251</green>
+            <blue>211</blue>
+          </backColor>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <items xsi:type="form:Decoration">
+        <name>DecorationIndentVertical3</name>
+        <id>288</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>DecorationIndentVertical3ExtendedTooltip</name>
+          <id>290</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>DecorationIndentVertical3ContextMenu</name>
+          <id>289</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <font xsi:type="core:FontRef">
+          <font>System.DefaultGUIFont</font>
+          <height>1.0</height>
+        </font>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>CreditorsOnTerms</name>
+        <id>147</id>
+        <items xsi:type="form:FormGroup">
+          <name>CreditorsOnTermsHeader</name>
+          <id>149</id>
+          <items xsi:type="form:FormGroup">
+            <name>CreditorsLessThan7Total</name>
+            <id>151</id>
+            <items xsi:type="form:Decoration">
+              <name>DecorationCreditorsLessThan7</name>
+              <id>153</id>
+              <title>
+                <key>en</key>
+                <value>Up to 7 days</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>до 7 дней</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>dưới 7 ngày</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>DecorationCreditorsConductedLessThan7ExtendedTooltip</name>
+                <id>155</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>DecorationCreditorsLessThan7ContextMenu</name>
+                <id>154</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <horizontalStretch>true</horizontalStretch>
+              <textColor xsi:type="core:ColorRef">
+                <color>Style.ButtonTextColor</color>
+              </textColor>
+              <font xsi:type="core:FontRef">
+                <font>Style.NormalTextFont</font>
+                <bold>true</bold>
+                <italic>false</italic>
+                <underline>false</underline>
+                <strikeout>false</strikeout>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Center</horizontalAlign>
+                <borderColor xsi:type="core:ColorDef">
+                  <red>205</red>
+                  <green>205</green>
+                  <blue>205</blue>
+                </borderColor>
+                <border xsi:type="core:BorderDef">
+                  <style>Underline</style>
+                  <width>1</width>
+                </border>
+              </extInfo>
+            </items>
+            <items xsi:type="form:Decoration">
+              <name>DecorationCreditorsLessThan7Total</name>
+              <id>156</id>
+              <title>
+                <key>en</key>
+                <value>1 000 000,00</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>1 000 000,00</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>1 000 000,00</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>DecorationCreditorsLessThan7TotalExtendedTooltip</name>
+                <id>158</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>DecorationCreditorsLessThan7TotalContextMenu</name>
+                <id>157</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <formatted>true</formatted>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <height>1</height>
+              <autoMaxHeight>true</autoMaxHeight>
+              <horizontalStretch>true</horizontalStretch>
+              <textColor xsi:type="core:ColorDef">
+                <red>16</red>
+                <green>207</green>
+                <blue>66</blue>
+              </textColor>
+              <font xsi:type="core:FontRef">
+                <font>Style.ExtraLargeTextFont</font>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Center</horizontalAlign>
+                <verticalAlign>Top</verticalAlign>
+                <borderColor xsi:type="core:ColorDef">
+                  <red>205</red>
+                  <green>205</green>
+                  <blue>205</blue>
+                </borderColor>
+                <border xsi:type="core:BorderDef">
+                  <style>Underline</style>
+                  <width>1</width>
+                </border>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>en</key>
+              <value>Creditors less than 7 total</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Кредиторы менее7 итог</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Người phải trả ít hơn 7 tổng số</value>
+            </title>
+            <toolTip>
+              <key>en</key>
+              <value>Group creditors quantity</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Группа кредиторы количество</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Nhóm nợ phải trả số lượng</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>CreditorsLessThan7TotalExtendedTooltip</name>
+              <id>152</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualGroup</type>
+            <extInfo xsi:type="form:UsualGroupExtInfo">
+              <group>Vertical</group>
+              <showLeftMargin>true</showLeftMargin>
+              <united>true</united>
+              <throughAlign>Auto</throughAlign>
+              <currentRowUse>Auto</currentRowUse>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormGroup">
+            <name>CreditorsLessThan30Total</name>
+            <id>161</id>
+            <items xsi:type="form:Decoration">
+              <name>DecorationCreditorsLessThan30</name>
+              <id>163</id>
+              <title>
+                <key>en</key>
+                <value>8-30 days</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>8-30 дней</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>8 - 30 ngày</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>DecorationCreditorsLessThan30ExtendedTooltip</name>
+                <id>165</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>DecorationCreditorsLessThan30ContextMenu</name>
+                <id>164</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <horizontalStretch>true</horizontalStretch>
+              <textColor xsi:type="core:ColorRef">
+                <color>Style.ButtonTextColor</color>
+              </textColor>
+              <font xsi:type="core:FontRef">
+                <font>Style.NormalTextFont</font>
+                <bold>true</bold>
+                <italic>false</italic>
+                <underline>false</underline>
+                <strikeout>false</strikeout>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Center</horizontalAlign>
+                <borderColor xsi:type="core:ColorDef">
+                  <red>205</red>
+                  <green>205</green>
+                  <blue>205</blue>
+                </borderColor>
+                <border xsi:type="core:BorderDef">
+                  <style>Underline</style>
+                  <width>1</width>
+                </border>
+              </extInfo>
+            </items>
+            <items xsi:type="form:Decoration">
+              <name>DecorationCreditorsLessThan30Total</name>
+              <id>166</id>
+              <title>
+                <key>en</key>
+                <value>1 000 000,00</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>1 000 000,00</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>1 000 000,00</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>DecorationCreditorsLessThan30TotalExtendedTooltip</name>
+                <id>168</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>DecorationCreditorsLessThan30TotalContextMenu</name>
+                <id>167</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <formatted>true</formatted>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <height>1</height>
+              <autoMaxHeight>true</autoMaxHeight>
+              <horizontalStretch>true</horizontalStretch>
+              <textColor xsi:type="core:ColorRef">
+                <color>Web.DarkOrange</color>
+              </textColor>
+              <font xsi:type="core:FontRef">
+                <font>Style.ExtraLargeTextFont</font>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Center</horizontalAlign>
+                <verticalAlign>Top</verticalAlign>
+                <borderColor xsi:type="core:ColorDef">
+                  <red>205</red>
+                  <green>205</green>
+                  <blue>205</blue>
+                </borderColor>
+                <border xsi:type="core:BorderDef">
+                  <style>Underline</style>
+                  <width>1</width>
+                </border>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>en</key>
+              <value>Creditors less than 30 total</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Кредиторы менее 30 итог</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Người phải trả ít hơn 30 tổng số</value>
+            </title>
+            <toolTip>
+              <key>en</key>
+              <value>Group creditors the whole debt</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Группа кредиторы вся задолженность</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Nhóm nợ phải trả toàn bộ công nợ</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>CreditorsLessThan30TotalExtendedTooltip</name>
+              <id>162</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualGroup</type>
+            <extInfo xsi:type="form:UsualGroupExtInfo">
+              <group>Vertical</group>
+              <showLeftMargin>true</showLeftMargin>
+              <united>true</united>
+              <throughAlign>Auto</throughAlign>
+              <currentRowUse>Auto</currentRowUse>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormGroup">
+            <name>CreditorsMoreThan30Total</name>
+            <id>169</id>
+            <items xsi:type="form:Decoration">
+              <name>DecorationCreditorsMoreThan31</name>
+              <id>171</id>
+              <title>
+                <key>en</key>
+                <value>over 31 days</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>от 31 дня</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>trên 31 ngày</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>DecorationCreditorsMoreThan31ExtendedTooltip</name>
+                <id>173</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>DecorationCreditorsMoreThan31ContextMenu</name>
+                <id>172</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <horizontalStretch>true</horizontalStretch>
+              <textColor xsi:type="core:ColorRef">
+                <color>Style.ButtonTextColor</color>
+              </textColor>
+              <font xsi:type="core:FontRef">
+                <font>Style.NormalTextFont</font>
+                <bold>true</bold>
+                <italic>false</italic>
+                <underline>false</underline>
+                <strikeout>false</strikeout>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Center</horizontalAlign>
+                <borderColor xsi:type="core:ColorDef">
+                  <red>205</red>
+                  <green>205</green>
+                  <blue>205</blue>
+                </borderColor>
+                <border xsi:type="core:BorderDef">
+                  <style>Underline</style>
+                  <width>1</width>
+                </border>
+              </extInfo>
+            </items>
+            <items xsi:type="form:Decoration">
+              <name>DecorationCreditorsMoreThan31Total</name>
+              <id>174</id>
+              <title>
+                <key>en</key>
+                <value>1 000 000,00</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>1 000 000,00</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>1 000 000,00</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>DecorationCreditorsMoreThan31TotalExtendedTooltip</name>
+                <id>176</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>DecorationCreditorsMoreThan31TotalContextMenu</name>
+                <id>175</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <formatted>true</formatted>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <height>1</height>
+              <autoMaxHeight>true</autoMaxHeight>
+              <horizontalStretch>true</horizontalStretch>
+              <textColor xsi:type="core:ColorDef">
+                <red>193</red>
+                <green>39</green>
+                <blue>45</blue>
+              </textColor>
+              <font xsi:type="core:FontRef">
+                <font>Style.ExtraLargeTextFont</font>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Center</horizontalAlign>
+                <verticalAlign>Top</verticalAlign>
+                <borderColor xsi:type="core:ColorDef">
+                  <red>205</red>
+                  <green>205</green>
+                  <blue>205</blue>
+                </borderColor>
+                <border xsi:type="core:BorderDef">
+                  <style>Underline</style>
+                  <width>1</width>
+                </border>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>en</key>
+              <value>Creditors more than 30 total</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Кредиторы более30 итог</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Người phải trả 30 tổng số</value>
+            </title>
+            <toolTip>
+              <key>en</key>
+              <value>Group creditors arrear</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Группа кредиторы просрочено</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Nhóm nợ phải trả quá hạn</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>CreditorsMoreThan30TotalExtendedTooltip</name>
+              <id>170</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualGroup</type>
+            <extInfo xsi:type="form:UsualGroupExtInfo">
+              <group>Vertical</group>
+              <showLeftMargin>true</showLeftMargin>
+              <united>true</united>
+              <throughAlign>Auto</throughAlign>
+              <currentRowUse>Auto</currentRowUse>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>en</key>
+            <value>Creditors by periods header</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Кредиторы по срокам шапка</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Người phải trả theo thời hạn phần đầu</value>
+          </title>
+          <toolTip>
+            <key>en</key>
+            <value>Group common creditors</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Группа общая кредиторы</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Nhóm tổng nợ phải trả</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>CreditorsOnTermsHeaderExtendedTooltip</name>
+            <id>150</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <slaveItemsWidth>Equal</slaveItemsWidth>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>CreditorsOnTermsInformation</name>
+          <id>177</id>
+          <items xsi:type="form:FormGroup">
+            <name>CreditorsOnTermsInformationHeader</name>
+            <id>179</id>
+            <items xsi:type="form:Decoration">
+              <name>CreditorsOnTermsCounterparty</name>
+              <id>181</id>
+              <title>
+                <key>en</key>
+                <value>Counterparties</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Контрагенты</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Đối tác</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>CreditorsOnTermsCounterpartyExtendedTooltip</name>
+                <id>183</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>CreditorsOnTermsCounterpartyContextMenu</name>
+                <id>182</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <horizontalStretch>true</horizontalStretch>
+              <font xsi:type="core:FontRef">
+                <font>Style.SmallTextFont</font>
+                <bold>true</bold>
+                <italic>false</italic>
+                <underline>false</underline>
+                <strikeout>false</strikeout>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Center</horizontalAlign>
+              </extInfo>
+            </items>
+            <items xsi:type="form:Decoration">
+              <name>DecorationLessThan7</name>
+              <id>184</id>
+              <title>
+                <key>en</key>
+                <value>Up to 7 days</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>до 7 дней</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>dưới 7 ngày</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>DecorationLessThan7ExtendedTooltip</name>
+                <id>186</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>DecorationLessThan7ContextMenu</name>
+                <id>185</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <width>6</width>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <font xsi:type="core:FontRef">
+                <font>Style.SmallTextFont</font>
+                <bold>true</bold>
+                <italic>false</italic>
+                <underline>false</underline>
+                <strikeout>false</strikeout>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Center</horizontalAlign>
+              </extInfo>
+            </items>
+            <items xsi:type="form:Decoration">
+              <name>DecorationLessThan30</name>
+              <id>267</id>
+              <title>
+                <key>en</key>
+                <value>8 - 30</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>8 - 30</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>8 - 30 ngày</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>DecorationLessThan30ExtendedTooltip</name>
+                <id>269</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>DecorationLessThan30ContextMenu</name>
+                <id>268</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <width>6</width>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <font xsi:type="core:FontRef">
+                <font>Style.SmallTextFont</font>
+                <bold>true</bold>
+                <italic>false</italic>
+                <underline>false</underline>
+                <strikeout>false</strikeout>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Center</horizontalAlign>
+              </extInfo>
+            </items>
+            <items xsi:type="form:Decoration">
+              <name>DecorationMoreThan31</name>
+              <id>187</id>
+              <title>
+                <key>en</key>
+                <value>over 31</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>свыше 31</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>trên 31</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>DecorationMoreThan31ExtendedTooltip</name>
+                <id>189</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>DecorationMoreThan31ContextMenu</name>
+                <id>188</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <width>6</width>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <font xsi:type="core:FontRef">
+                <font>Style.SmallTextFont</font>
+                <bold>true</bold>
+                <italic>false</italic>
+                <underline>false</underline>
+                <strikeout>false</strikeout>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Center</horizontalAlign>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>en</key>
+              <value>Creditors by periods information header</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Кредиторы по срокам сведения шапка</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Người phải trả theo thời hạn thông tin phần đầu</value>
+            </title>
+            <toolTip>
+              <key>en</key>
+              <value>Debtors information header</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Дебиторы сведения шапка</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Người phải thu thông tin phần đầu</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>CreditorsOnTermsInformationHeaderExtendedTooltip</name>
+              <id>180</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualGroup</type>
+            <extInfo xsi:type="form:UsualGroupExtInfo">
+              <showLeftMargin>true</showLeftMargin>
+              <united>true</united>
+              <throughAlign>Auto</throughAlign>
+              <currentRowUse>Auto</currentRowUse>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormGroup">
+            <name>CreditorOnTermsData</name>
+            <id>190</id>
+            <items xsi:type="form:Decoration">
+              <name>CounterpartiesOnTerms</name>
+              <id>192</id>
+              <title>
+                <key>en</key>
+                <value>Counterparty
+1 Counterparty
+2 Counterparty
+3 Counterparty
+4 Counterparty
+5 Counterparty 6</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Контрагент
+1
+Контрагент
+2 Контрагент
+3 Контрагент
+4 Контрагент 5 Контрагент 6</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Đối tác
+1
+Đối tác
+2 Đối tác
+3 Đối tác
+4 Đối tác 5 Đối tác 6</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>CounterpartiesOnTermsExtendedTooltip</name>
+                <id>194</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>CounterpartiesOnTermsContextMenu</name>
+                <id>193</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <height>4</height>
+              <autoMaxHeight>true</autoMaxHeight>
+              <horizontalStretch>true</horizontalStretch>
+              <verticalStretch>false</verticalStretch>
+              <font xsi:type="core:FontRef">
+                <font>Style.SmallTextFont</font>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+                <verticalAlign>Top</verticalAlign>
+              </extInfo>
+            </items>
+            <items xsi:type="form:Decoration">
+              <name>CreditorsLessThan7</name>
+              <id>270</id>
+              <title>
+                <key>en</key>
+                <value>1
+000,00 1
+000,00 1
+000,00 1
+000,00 1
+000,00 1 000,00</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>1
+000,00 1
+000,00 1
+000,00 1
+000,00 1
+000,00 1 000,00</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>1
+000,00 1
+000,00 1
+000,00 1
+000,00 1
+000,00 1 000,00</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>CreditorsLessThan7ExtendedTooltip</name>
+                <id>272</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>CreditorsLessThan7ContextMenu</name>
+                <id>271</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <width>6</width>
+              <autoMaxWidth>true</autoMaxWidth>
+              <height>4</height>
+              <autoMaxHeight>true</autoMaxHeight>
+              <verticalStretch>false</verticalStretch>
+              <font xsi:type="core:FontRef">
+                <font>Style.SmallTextFont</font>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Right</horizontalAlign>
+                <verticalAlign>Top</verticalAlign>
+              </extInfo>
+            </items>
+            <items xsi:type="form:Decoration">
+              <name>CreditorsLessThan30</name>
+              <id>195</id>
+              <title>
+                <key>en</key>
+                <value>1
+000,00 1
+000,00 1
+000,00 1
+000,00 1
+000,00 1 000,00</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>1
+000,00 1
+000,00 1
+000,00 1
+000,00 1
+000,00 1 000,00</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>1
+000,00 1
+000,00 1
+000,00 1
+000,00 1
+000,00 1 000,00</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>CreditorsLessThan30ExtendedTooltip</name>
+                <id>197</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>CreditorsLessThan30ContextMenu</name>
+                <id>196</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <width>6</width>
+              <autoMaxWidth>true</autoMaxWidth>
+              <height>4</height>
+              <autoMaxHeight>true</autoMaxHeight>
+              <verticalStretch>false</verticalStretch>
+              <font xsi:type="core:FontRef">
+                <font>Style.SmallTextFont</font>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Right</horizontalAlign>
+                <verticalAlign>Top</verticalAlign>
+              </extInfo>
+            </items>
+            <items xsi:type="form:Decoration">
+              <name>CreditorsMoreThan31</name>
+              <id>198</id>
+              <title>
+                <key>en</key>
+                <value>1
+000,00 1
+000,00 1
+000,00 1
+000,00 1
+000,00 1 000,00</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>1
+000,00 1
+000,00 1
+000,00 1
+000,00 1
+000,00 1 000,00</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>1
+000,00 1
+000,00 1
+000,00 1
+000,00 1
+000,00 1 000,00</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>CreditorsMoreThan31ExtendedTooltip</name>
+                <id>200</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>CreditorsMoreThan31ContextMenu</name>
+                <id>199</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <width>6</width>
+              <autoMaxWidth>true</autoMaxWidth>
+              <height>4</height>
+              <autoMaxHeight>true</autoMaxHeight>
+              <verticalStretch>false</verticalStretch>
+              <font xsi:type="core:FontRef">
+                <font>Style.SmallTextFont</font>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Right</horizontalAlign>
+                <verticalAlign>Top</verticalAlign>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>en</key>
+              <value>Creditors by periods data</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Кредиторы по срокам данные</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Người phải trả theo thời hạn dữ liệu</value>
+            </title>
+            <toolTip>
+              <key>en</key>
+              <value>Debtors data</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Дебиторы данные</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Người phải thu dữ liệu</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>CreditorOnTermsDataExtendedTooltip</name>
+              <id>191</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualGroup</type>
+            <extInfo xsi:type="form:UsualGroupExtInfo">
+              <showLeftMargin>true</showLeftMargin>
+              <united>true</united>
+              <throughAlign>Auto</throughAlign>
+              <currentRowUse>Auto</currentRowUse>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>en</key>
+            <value>Creditors by periods information</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Кредиторы по срокам сведения</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Người phải trả theo thời hạn thông tin</value>
+          </title>
+          <toolTip>
+            <key>en</key>
+            <value>Group details creditors</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Группа детальная кредиторы</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Nhóm chi tiết nợ phải trả</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>CreditorsOnTermsInformationExtendedTooltip</name>
+            <id>178</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>Vertical</group>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>CreditorsOnTermsFooter</name>
+          <id>201</id>
+          <items xsi:type="form:Decoration">
+            <name>CreditorsOnTermsDetails</name>
+            <id>203</id>
+            <title>
+              <key>en</key>
+              <value>Explanation</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Расшифровка</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Diễn giải</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <toolTip>
+              <key>en</key>
+              <value>Debt to suppliers by periods</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Задолженность поставщикам по срокам долга</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Công nợ phải trả theo thời hạn</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>CreditorsOnTermsDetailsExtendedTooltip</name>
+              <id>205</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>CreditorsOnTermsDetailsContextMenu</name>
+              <id>204</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <horizontalStretch>true</horizontalStretch>
+            <font xsi:type="core:FontRef">
+              <font>Style.SmallTextFont</font>
+            </font>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <handlers>
+                <event>Click</event>
+                <name>CreditorsOnTermsDetailsClick</name>
+              </handlers>
+              <hyperlink>true</hyperlink>
+              <horizontalAlign>Right</horizontalAlign>
+              <borderColor xsi:type="core:ColorDef">
+                <red>205</red>
+                <green>205</green>
+                <blue>205</blue>
+              </borderColor>
+              <border xsi:type="core:BorderDef">
+                <style>Overline</style>
+                <width>1</width>
+              </border>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>en</key>
+            <value>Creditors by periods footer</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Кредиторы по срокам подвал</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Người phải trả theo thời hạn phần đáy</value>
+          </title>
+          <toolTip>
+            <key>en</key>
+            <value>Cash balance additionally</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Остатки ДСДополнительно</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Số dư ДСДополнительно</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>CreditorsOnTermsFooterExtendedTooltip</name>
+            <id>202</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>en</key>
+          <value>Creditors by periods</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Кредиторы по срокам</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Người phải trả theo thời hạn</value>
+        </title>
+        <toolTip>
+          <key>en</key>
+          <value>Balance creditors</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>Остатки кредиторы</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Số dư công nợ phải trả</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>CreditorsOnTermsExtendedTooltip</name>
+          <id>148</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>Vertical</group>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <backColor xsi:type="core:ColorDef">
+            <red>255</red>
+            <green>255</green>
+            <blue>192</blue>
+          </backColor>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <items xsi:type="form:Decoration">
+        <name>DecorationIndentVertical4</name>
+        <id>291</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>DecorationIndentVertical4ExtendedTooltip</name>
+          <id>293</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>DecorationIndent4VerticalContextMenu</name>
+          <id>292</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <font xsi:type="core:FontRef">
+          <font>System.DefaultGUIFont</font>
+          <height>1.0</height>
+        </font>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>CreditorsDelay</name>
+        <id>210</id>
+        <items xsi:type="form:FormGroup">
+          <name>CreditorsArrearHeader</name>
+          <id>212</id>
+          <items xsi:type="form:FormGroup">
+            <name>CreditorsArrearHeaderLeft</name>
+            <id>214</id>
+            <items xsi:type="form:Decoration">
+              <name>DecorationCreditorsArrear</name>
+              <id>216</id>
+              <title>
+                <key>en</key>
+                <value>Creditors with arrear</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Кредиторы с просрочкой</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Phải trả quá hạn</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>DecorationCreditorsArrearExtendedTooltip</name>
+                <id>218</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>DecorationArrearCreditorsContextMenu</name>
+                <id>217</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <horizontalStretch>true</horizontalStretch>
+              <textColor xsi:type="core:ColorRef">
+                <color>Style.ButtonTextColor</color>
+              </textColor>
+              <font xsi:type="core:FontRef">
+                <font>Style.NormalTextFont</font>
+                <bold>true</bold>
+                <italic>false</italic>
+                <underline>false</underline>
+                <strikeout>false</strikeout>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Center</horizontalAlign>
+                <borderColor xsi:type="core:ColorDef">
+                  <red>205</red>
+                  <green>205</green>
+                  <blue>205</blue>
+                </borderColor>
+                <border xsi:type="core:BorderDef">
+                  <style>Underline</style>
+                  <width>1</width>
+                </border>
+              </extInfo>
+            </items>
+            <items xsi:type="form:Decoration">
+              <name>DecorationArrearCreditorsQuantity</name>
+              <id>219</id>
+              <title>
+                <key>en</key>
+                <value>0</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>0</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>0</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>DecorationArrearCreditorsQuantityExtendedTooltip</name>
+                <id>221</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>DecorationArrearCreditorsQuantityContextMenu</name>
+                <id>220</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <height>1</height>
+              <autoMaxHeight>true</autoMaxHeight>
+              <horizontalStretch>true</horizontalStretch>
+              <textColor xsi:type="core:ColorDef">
+                <red>16</red>
+                <green>207</green>
+                <blue>66</blue>
+              </textColor>
+              <font xsi:type="core:FontRef">
+                <font>Style.ExtraLargeTextFont</font>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Center</horizontalAlign>
+                <verticalAlign>Top</verticalAlign>
+                <borderColor xsi:type="core:ColorDef">
+                  <red>205</red>
+                  <green>205</green>
+                  <blue>205</blue>
+                </borderColor>
+                <border xsi:type="core:BorderDef">
+                  <style>Underline</style>
+                  <width>1</width>
+                </border>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>en</key>
+              <value>Creditors arrear header left</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Кредиторы просрочено шапка слева</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Người phải trả quá hạn phần đầu bên trái</value>
+            </title>
+            <toolTip>
+              <key>en</key>
+              <value>Group creditors quantity</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Группа кредиторы количество</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Nhóm nợ phải trả số lượng</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>CreditorsArrearHeaderLeftExtendedTooltip</name>
+              <id>215</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualGroup</type>
+            <extInfo xsi:type="form:UsualGroupExtInfo">
+              <group>Vertical</group>
+              <showLeftMargin>true</showLeftMargin>
+              <united>true</united>
+              <throughAlign>Auto</throughAlign>
+              <currentRowUse>Auto</currentRowUse>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormGroup">
+            <name>CreditorsArrearHeaderRight</name>
+            <id>222</id>
+            <items xsi:type="form:Decoration">
+              <name>DecorationCreditorsArrearTitle</name>
+              <id>224</id>
+              <title>
+                <key>en</key>
+                <value>Amount</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Amount</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Số tiền</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>DecorationArrearCreditorsTitleExtendedTooltip</name>
+                <id>226</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>DecorationArrearCreditorsTitleContextMenu</name>
+                <id>225</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <horizontalStretch>true</horizontalStretch>
+              <textColor xsi:type="core:ColorRef">
+                <color>Style.ButtonTextColor</color>
+              </textColor>
+              <font xsi:type="core:FontRef">
+                <font>Style.NormalTextFont</font>
+                <bold>true</bold>
+                <italic>false</italic>
+                <underline>false</underline>
+                <strikeout>false</strikeout>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Center</horizontalAlign>
+                <borderColor xsi:type="core:ColorDef">
+                  <red>205</red>
+                  <green>205</green>
+                  <blue>205</blue>
+                </borderColor>
+                <border xsi:type="core:BorderDef">
+                  <style>Underline</style>
+                  <width>1</width>
+                </border>
+              </extInfo>
+            </items>
+            <items xsi:type="form:Decoration">
+              <name>DecorationCreditorsOverdueTotal</name>
+              <id>227</id>
+              <title>
+                <key>en</key>
+                <value>1 000 000,00</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>1 000 000,00</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>1 000 000,00</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>DecorationCreditorsOverdueTotalExtendedTooltip</name>
+                <id>229</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>DecorationCreditorsOverdueTotalContextMenu</name>
+                <id>228</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <formatted>true</formatted>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <height>1</height>
+              <autoMaxHeight>true</autoMaxHeight>
+              <horizontalStretch>true</horizontalStretch>
+              <font xsi:type="core:FontRef">
+                <font>Style.ExtraLargeTextFont</font>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Center</horizontalAlign>
+                <verticalAlign>Top</verticalAlign>
+                <borderColor xsi:type="core:ColorDef">
+                  <red>205</red>
+                  <green>205</green>
+                  <blue>205</blue>
+                </borderColor>
+                <border xsi:type="core:BorderDef">
+                  <style>Underline</style>
+                  <width>1</width>
+                </border>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>en</key>
+              <value>Creditors arrear header right</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Кредиторы просрочено шапка справа</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Người phải trả quá hạn phần đầu bên phải</value>
+            </title>
+            <toolTip>
+              <key>en</key>
+              <value>Group creditors the whole debt</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Группа кредиторы вся задолженность</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Nhóm nợ phải trả toàn bộ công nợ</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>CreditorsArrearHeaderRightExtendedTooltip</name>
+              <id>223</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualGroup</type>
+            <extInfo xsi:type="form:UsualGroupExtInfo">
+              <group>Vertical</group>
+              <showLeftMargin>true</showLeftMargin>
+              <united>true</united>
+              <throughAlign>Auto</throughAlign>
+              <currentRowUse>Auto</currentRowUse>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>en</key>
+            <value>Creditors arrear header</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Кредиторы просрочено шапка</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Người phải trả quá hạn phần đầu</value>
+          </title>
+          <toolTip>
+            <key>en</key>
+            <value>Group common creditors</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Группа общая кредиторы</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Nhóm tổng nợ phải trả</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>CreditorsArrearHeaderExtendedTooltip</name>
+            <id>213</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <slaveItemsWidth>Equal</slaveItemsWidth>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>CreditorsArrearInformation</name>
+          <id>238</id>
+          <items xsi:type="form:FormGroup">
+            <name>CreditorsArrearInformationHeader</name>
+            <id>240</id>
+            <items xsi:type="form:Decoration">
+              <name>CreditorsArrearCounterpartyTitle</name>
+              <id>242</id>
+              <title>
+                <key>en</key>
+                <value>Counterparties</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Контрагенты</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Đối tác</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>CreditorsArrearCounterpartyTitleExtendedTooltip</name>
+                <id>244</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>CreditorsArrearCounterpartyTitleContextMenu</name>
+                <id>243</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <horizontalStretch>true</horizontalStretch>
+              <font xsi:type="core:FontRef">
+                <font>Style.SmallTextFont</font>
+                <bold>true</bold>
+                <italic>false</italic>
+                <underline>false</underline>
+                <strikeout>false</strikeout>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Center</horizontalAlign>
+              </extInfo>
+            </items>
+            <items xsi:type="form:Decoration">
+              <name>DecorationArrearTitle</name>
+              <id>245</id>
+              <title>
+                <key>en</key>
+                <value>Overdue</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>просрочено</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>đã quá hạn</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>DecorationArrearTitleExtendedTooltip</name>
+                <id>247</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>DecorationArrearTitleContextMenu</name>
+                <id>246</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <width>8</width>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <font xsi:type="core:FontRef">
+                <font>Style.SmallTextFont</font>
+                <bold>true</bold>
+                <italic>false</italic>
+                <underline>false</underline>
+                <strikeout>false</strikeout>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Center</horizontalAlign>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>en</key>
+              <value>Creditors arrear information header</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Кредиторы просрочено сведения шапка</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Người phải trả quá hạn thông tin phần đầu</value>
+            </title>
+            <toolTip>
+              <key>en</key>
+              <value>Debtors information header</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Дебиторы сведения шапка</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Người phải thu thông tin phần đầu</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>CreditorsArrearInformationHeaderExtendedTooltip</name>
+              <id>241</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualGroup</type>
+            <extInfo xsi:type="form:UsualGroupExtInfo">
+              <showLeftMargin>true</showLeftMargin>
+              <united>true</united>
+              <throughAlign>Auto</throughAlign>
+              <currentRowUse>Auto</currentRowUse>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormGroup">
+            <name>CreditorsArrearData</name>
+            <id>251</id>
+            <items xsi:type="form:Decoration">
+              <name>CreditorsArrearCounterparty</name>
+              <id>253</id>
+              <title>
+                <key>en</key>
+                <value>Counterparty
+1 Counterparty
+2 Counterparty
+3 Counterparty
+4 Counterparty
+5 Counterparty 6</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Контрагент
+1
+Контрагент
+2 Контрагент
+3 Контрагент
+4 Контрагент 5 Контрагент 6</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Đối tác
+1
+Đối tác
+2 Đối tác
+3 Đối tác
+4 Đối tác 5 Đối tác 6</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>CreditorsArrearCounterpartyExtendedTooltip</name>
+                <id>255</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>CreditorsArrearCounterpartyContextMenu</name>
+                <id>254</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <height>4</height>
+              <autoMaxHeight>true</autoMaxHeight>
+              <horizontalStretch>true</horizontalStretch>
+              <verticalStretch>false</verticalStretch>
+              <font xsi:type="core:FontRef">
+                <font>Style.SmallTextFont</font>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+                <verticalAlign>Top</verticalAlign>
+              </extInfo>
+            </items>
+            <items xsi:type="form:Decoration">
+              <name>CreditorsOverdue</name>
+              <id>256</id>
+              <title>
+                <key>en</key>
+                <value>1
+000,00 1
+000,00 1
+000,00 1
+000,00 1
+000,00 1 000,00</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>1
+000,00 1
+000,00 1
+000,00 1
+000,00 1
+000,00 1 000,00</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>1
+000,00 1
+000,00 1
+000,00 1
+000,00 1
+000,00 1 000,00</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>CreditorsArrearExtendedTooltip</name>
+                <id>258</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>CreditorsArrearContextMenu</name>
+                <id>257</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <width>8</width>
+              <autoMaxWidth>true</autoMaxWidth>
+              <height>4</height>
+              <autoMaxHeight>true</autoMaxHeight>
+              <verticalStretch>false</verticalStretch>
+              <font xsi:type="core:FontRef">
+                <font>Style.SmallTextFont</font>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Right</horizontalAlign>
+                <verticalAlign>Top</verticalAlign>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>en</key>
+              <value>Creditors arrear data</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Кредиторы просрочено данные</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Người phải trả quá hạn dữ liệu</value>
+            </title>
+            <toolTip>
+              <key>en</key>
+              <value>Debtors data</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Дебиторы данные</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Người phải thu dữ liệu</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>CreditorsArrearDataExtendedTooltip</name>
+              <id>252</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualGroup</type>
+            <extInfo xsi:type="form:UsualGroupExtInfo">
+              <showLeftMargin>true</showLeftMargin>
+              <united>true</united>
+              <throughAlign>Auto</throughAlign>
+              <currentRowUse>Auto</currentRowUse>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>en</key>
+            <value>Creditors arrear information</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Кредиторы просрочено сведения</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Người phải trả quá hạn thông tin</value>
+          </title>
+          <toolTip>
+            <key>en</key>
+            <value>Group details creditors</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Группа детальная кредиторы</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Nhóm chi tiết nợ phải trả</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>CreditorsArrearInformationExtendedTooltip</name>
+            <id>239</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>Vertical</group>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>CreditorsArrearFooter</name>
+          <id>262</id>
+          <items xsi:type="form:FormField">
+            <name>PresentationPeriodArrear</name>
+            <id>279</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>PeriodPresentation</segments>
+            </dataPath>
+            <titleLocation>None</titleLocation>
+            <extendedTooltip>
+              <name>PresentationPeriodArrearExtendedTooltip</name>
+              <id>281</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>PresentationPeriodArrearContextMenu</name>
+              <id>280</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>LabelField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:LabelFieldExtInfo">
+              <width>28</width>
+              <autoMaxWidth>true</autoMaxWidth>
+              <height>1</height>
+              <autoMaxHeight>true</autoMaxHeight>
+              <border xsi:type="core:BorderDef">
+                <style>Overline</style>
+                <width>1</width>
+              </border>
+              <borderColor xsi:type="core:ColorDef">
+                <red>205</red>
+                <green>205</green>
+                <blue>205</blue>
+              </borderColor>
+              <font xsi:type="core:FontRef">
+                <font>Style.SmallTextFont</font>
+              </font>
+            </extInfo>
+          </items>
+          <items xsi:type="form:Decoration">
+            <name>CreditorsArrearDetails</name>
+            <id>264</id>
+            <title>
+              <key>en</key>
+              <value>Explanation</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Расшифровка</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Diễn giải</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <toolTip>
+              <key>en</key>
+              <value>Debt to suppliers by periods</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Задолженность поставщикам по срокам долга</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Công nợ phải trả theo thời hạn</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>CreditorsArrearDetailsExtendedTooltip</name>
+              <id>266</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>CreditorsArrearDetailsContextMenu</name>
+              <id>265</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <horizontalStretch>true</horizontalStretch>
+            <font xsi:type="core:FontRef">
+              <font>Style.SmallTextFont</font>
+            </font>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <handlers>
+                <event>Click</event>
+                <name>CreditorsArrearDetailsClick</name>
+              </handlers>
+              <hyperlink>true</hyperlink>
+              <horizontalAlign>Right</horizontalAlign>
+              <borderColor xsi:type="core:ColorDef">
+                <red>205</red>
+                <green>205</green>
+                <blue>205</blue>
+              </borderColor>
+              <border xsi:type="core:BorderDef">
+                <style>Overline</style>
+                <width>1</width>
+              </border>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>en</key>
+            <value>Creditors arrear footer</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Кредиторы просрочено подвал</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Người phải trả quá hạn phần đáy</value>
+          </title>
+          <toolTip>
+            <key>en</key>
+            <value>Cash balance additionally</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Остатки ДСДополнительно</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Số dư ДСДополнительно</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>CreditorsArrearFooterExtendedTooltip</name>
+            <id>263</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>en</key>
+          <value>Creditors arrear</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Кредиторы просрочка</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Người phải trả quá hạn</value>
+        </title>
+        <toolTip>
+          <key>en</key>
+          <value>Balance creditors</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>Остатки кредиторы</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Số dư công nợ phải trả</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>CreditorsArrearExtendedTooltip</name>
+          <id>211</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>Vertical</group>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <backColor xsi:type="core:ColorDef">
+            <red>214</red>
+            <green>251</green>
+            <blue>211</blue>
+          </backColor>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Tables</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Таблицы</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Bảng</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Tables</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Таблицы</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Bảng</value>
+      </toolTip>
+      <width>39</width>
+      <horizontalStretch>false</horizontalStretch>
+      <extendedTooltip>
+        <name>TablesExtendedTooltip</name>
+        <id>79</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Indicators</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Показатели</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Chỉ tiêu</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Indicators</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Показатели</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Chỉ tiêu</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>IndicatorsExtendedTooltip</name>
+      <id>74</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <slaveItemsWidth>Equal</slaveItemsWidth>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <commandBarLocation>None</commandBarLocation>
+  <autoCommandBar>
+    <name>FormCommandBar</name>
+    <id>-1</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
+  </autoCommandBar>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>OnCreateAtServer</name>
+  </handlers>
+  <handlers>
+    <event>OnClose</event>
+    <name>OnClose</name>
+  </handlers>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <allowFormCustomize>true</allowFormCustomize>
+  <enabled>true</enabled>
+  <verticalScroll>UseIfNecessary</verticalScroll>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>Object</name>
+    <id>1</id>
+    <valueType>
+      <types>DataProcessorObject.ManagerMonitors</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <main>true</main>
+  </attributes>
+  <attributes>
+    <name>Company</name>
+    <title>
+      <key>en</key>
+      <value>Company</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Đối tác</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>CatalogRef.Companies</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <functionalOptions>FunctionalOption.MultipleCompaniesAccounting</functionalOptions>
+  </attributes>
+  <attributes>
+    <name>Period</name>
+    <id>4</id>
+    <valueType>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ChartCreditors</name>
+    <title>
+      <key>en</key>
+      <value>Chart creditors</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Диаграмма кредиторы</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Biểu đồ nợ phải trả</value>
+    </title>
+    <id>6</id>
+    <valueType>
+      <types>Chart</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <extInfo xsi:type="form:ChartExtInfo"/>
+  </attributes>
+  <attributes>
+    <name>ChartCreditorsOnTerms</name>
+    <title>
+      <key>en</key>
+      <value>Creditor debt by periods</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Кредиторы задолженность по срокам</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Người phải trả theo thời hạn</value>
+    </title>
+    <id>7</id>
+    <valueType>
+      <types>Chart</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <extInfo xsi:type="form:ChartExtInfo"/>
+  </attributes>
+  <attributes>
+    <name>ChartDebtDynamics</name>
+    <title>
+      <key>en</key>
+      <value>Customer debt dynamics</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Динамика задолженности покупателей</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Biến động công nợ phải thu</value>
+    </title>
+    <id>8</id>
+    <valueType>
+      <types>Chart</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <extInfo xsi:type="form:ChartExtInfo"/>
+  </attributes>
+  <attributes>
+    <name>PeriodPresentation</name>
+    <title>
+      <key>en</key>
+      <value>Period presentation</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Представление периода</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Trình bày kỳ</value>
+    </title>
+    <id>3</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <formCommands>
+    <name>Refresh</name>
+    <title>
+      <key>en</key>
+      <value>Update calendar</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Обновить календарь</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Cập nhật lịch</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>en</key>
+      <value>Update calendar</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Обновить календарь</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Cập nhật lịch</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <shortcut>F5</shortcut>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.Refresh</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Refresh</name>
+      </handler>
+    </action>
+    <representation>Picture</representation>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+  <extInfo xsi:type="form:ObjectFormExtInfo"/>
+</form:Form>

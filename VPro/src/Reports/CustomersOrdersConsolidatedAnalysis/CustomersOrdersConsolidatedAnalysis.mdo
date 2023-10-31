@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bc097764-d83b-47ac-9300-3cfd7973dbcc">
+  <producedTypes>
+    <objectType typeId="63f858f9-d428-42e5-9552-0b432021d34d" valueTypeId="5ec6672a-1d6d-4e1d-8129-19e0ac63e2f8"/>
+    <managerType typeId="81a541ac-a135-4a97-955e-04f49fb03daa" valueTypeId="416c6d1f-b1e5-49fd-aa27-d02764a8699c"/>
+  </producedTypes>
+  <name>CustomersOrdersConsolidatedAnalysis</name>
+  <synonym>
+    <key>en</key>
+    <value>Summary customer order analysis</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Сводный анализ заказов покупателей</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Phân tích tổng hợp đơn hàng của khách</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.CustomersOrdersConsolidatedAnalysis.Form.ReportForm</defaultForm>
+  <mainDataCompositionSchema>Report.CustomersOrdersConsolidatedAnalysis.Template.MainDataCompositionSchema</mainDataCompositionSchema>
+  <variantsStorage>SettingsStorage.ReportsVariantsStorage</variantsStorage>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <attributes uuid="d2d5cd12-bedb-4449-901a-d1a1545868a4">
+    <name>FilterByShippingState</name>
+    <synonym>
+      <key>en</key>
+      <value>Filter by shipping state</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Фильтр по состоянию отгрузки</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Lọc theo trạng thái giao hàng</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>25</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="9d61574e-2b19-4681-b792-9ac9df2534ad">
+    <name>FilterByPaymentState</name>
+    <synonym>
+      <key>en</key>
+      <value>Filter by payment state</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Фильтр по состоянию оплаты</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Lọc theo trạng thái thanh toán</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>25</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="33141f9b-f53f-4315-8294-519651140578">
+    <name>ReportForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Report form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu báo cáo</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="39502d6a-0bc1-4745-94c7-89c6cb09692b">
+    <name>MainDataCompositionSchema</name>
+    <synonym>
+      <key>en</key>
+      <value>Main data composition schema</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Sơ đồ dàn dựng dữ liệu chính</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

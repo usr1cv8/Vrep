@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0b13cad5-91ae-4cd1-a620-9a315ae8024c">
+  <producedTypes>
+    <selectionType typeId="bbb16b42-2be8-49f2-8c9b-4a0d3a7d536e" valueTypeId="16f5cc67-80a1-4838-99ee-4138d06e9b6f"/>
+    <listType typeId="e5f32b2b-6841-44db-a3d9-c23fdf2eae93" valueTypeId="b2cd82da-6850-4abe-9e7f-1bbafee10480"/>
+    <managerType typeId="2e9f8fa9-2ea9-40e0-b1d8-62c99c7868e7" valueTypeId="ffc30151-897d-4761-90a0-430d6d04fb20"/>
+    <recordSetType typeId="f79ed9af-7b11-42f4-a97d-6fdb4bc2aca0" valueTypeId="a3c79808-8173-4651-a6a3-1fbeee6352f7"/>
+    <recordKeyType typeId="7d5432a6-533f-48ca-b437-489f1053c702" valueTypeId="b12d70d3-57e4-400e-8295-f0fcfa2bb9f4"/>
+    <recordType typeId="a9da2bc5-5a31-4b09-a650-cf06b3a0e8c6" valueTypeId="a232db53-fc88-40f1-8df4-2061d91d08fd"/>
+    <recordManagerType typeId="aa9c4af3-bc12-4077-8cc4-bbf6e56008c7" valueTypeId="cd2115ab-b9bc-4b22-9acf-e651ee17ce32"/>
+  </producedTypes>
+  <name>ObjectsVersions</name>
+  <synonym>
+    <key>en</key>
+    <value>Object versions</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Версии объектов</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Phiên bản đối tượng</value>
+  </synonym>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>en</key>
+    <value>Object version</value>
+  </recordPresentation>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Версия объекта</value>
+  </recordPresentation>
+  <recordPresentation>
+    <key>vi</key>
+    <value>Phiên bản của đối tượng</value>
+  </recordPresentation>
+  <listPresentation>
+    <key>en</key>
+    <value>Records of object versions</value>
+  </listPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Записи о версиях объектов</value>
+  </listPresentation>
+  <listPresentation>
+    <key>vi</key>
+    <value>Bản ghi về các phiên bản của đối tượng</value>
+  </listPresentation>
+  <resources uuid="d0634a8e-676f-4f49-9a38-7cb80cfa9fdf">
+    <name>ObjectVersioning</name>
+    <synonym>
+      <key>en</key>
+      <value>Object version</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Версия объекта</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Phiên bản của đối tượng</value>
+    </synonym>
+    <type>
+      <types>ValueStorage</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Object presentation as Fast InfoSet</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Представление объекта в виде Fast InfoSet</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Trình bày đối tượng dưới dạng Fast InfoSet</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="59bb5271-4cc7-45aa-8e2a-f556a4afa2dc">
+    <name>VersionAuthor</name>
+    <synonym>
+      <key>en</key>
+      <value>Version author</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Автор версии</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Người lập của phiên bản</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ExternalUsers</types>
+      <types>CatalogRef.Users</types>
+      <types>ExchangePlanRef</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>User who made changes to the object</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Пользователь, внесший изменения в объект</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Người sử dụng đưa những thay đổi vào đối tượng</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="81dd61e5-fe02-4272-a525-affda9b606ca">
+    <name>VersionDate</name>
+    <synonym>
+      <key>en</key>
+      <value>Version date</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Дата версии</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ngày phiên bản</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Date and time of object change</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Дата и время изменения объекта</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Ngày và thời gian thay đổi đối tượng</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:DateValue">
+      <value>0001-01-01T00:00:00</value>
+    </fillValue>
+  </attributes>
+  <attributes uuid="8de7b423-b7d1-46fe-b1dc-fb936736b864">
+    <name>Comment</name>
+    <synonym>
+      <key>en</key>
+      <value>Note</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Примечание</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ghi chú</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1024</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Comment to version</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Комментарий к версии</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Ghi chú với phiên bản</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </attributes>
+  <attributes uuid="f565876c-0326-4b12-895e-c248b9e64115">
+    <name>ObjectVersioningType</name>
+    <synonym>
+      <key>en</key>
+      <value>Object version type</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Тип версии объекта</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Kiểu phiên bản đối tượng</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ObjectVersionsTypes</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Version may be created by user or in the event of data exchange problems (collisions or data import prohibition)</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Версия может быть создана пользователем или при возникновении проблем обмена данными (коллизий или запрета загрузки данных)</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Phiên bản có thể được tạo bởi người sử dụng hoặc khi phát sinh vấn đề trao đổi dữ liệu (xung đột hoặc cấm kết nhập dữ liệu)</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="62f075c5-1ad0-4a29-9f40-567b9fa70cdf">
+    <name>VersionIgnored</name>
+    <synonym>
+      <key>en</key>
+      <value>Version ignored</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Версия проигнорирована</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Phiên bản đã bỏ qua</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Shows whether the version in the data exchange problems is ignored. It is not applied for versions created by a user.</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак игнорирования версии в проблемах обмена данными. Не используется для версий созданных пользователем.</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Dấu hiệu bỏ qua phiên bản trong vấn đề trao đổi dữ liệu. Không sử dụng đối với phiên bản đã tạo bởi người sử dụng.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="88cefe4a-a6c5-4753-935e-f956d9de9f77">
+    <name>DataSize</name>
+    <synonym>
+      <key>en</key>
+      <value>Data size</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Размер данных</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Dung lượng dữ liệu</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Size of the stored data version in bytes</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Размер данных хранимой версии в байтах</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Dung lượng dữ liệu của phiên bản đã lưu theo byte</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="882e78b7-90bd-4b95-8852-146bdb51ec15">
+    <name>CheckSum</name>
+    <synonym>
+      <key>en</key>
+      <value>Checksum</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Контрольная сумма</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Kiểm tra tổng số</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>32</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Version data checksum by MD5 algorithm</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Контрольная сумма данных версии по алгоритму MD5</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Kiểm tra tổng số dữ liệu của phiên bản theo thuật toán MD5</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value> </value>
+    </fillValue>
+  </attributes>
+  <attributes uuid="ae4435c3-62c0-4f08-b526-7f9571eed8ae">
+    <name>ThereIsVersionData</name>
+    <synonym>
+      <key>en</key>
+      <value>There is version data</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Есть данные версии</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Có dữ liệu của phiên bản</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Shows whether there is version data</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак наличия данных версии</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Dấu hiệu sẵn có dữ liệu của phiên bản</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="0f6f8fd9-b3af-4d06-bc47-bdad238d15b7">
+    <name>Object</name>
+    <synonym>
+      <key>en</key>
+      <value>Object</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>объект</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>đối tượng</value>
+    </synonym>
+    <type>
+      <types>AnyRef</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Reference to an object which version data is stored in the register</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Ссылка на объект, сведения о версии которого хранятся в регистре</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tham chiếu đến đối tượng mà thông tin về phiên bản của đối tượng đó đượ lưu trong biểu ghi</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="460e76d2-4ed6-464e-bf9c-a6bcf920aaf2">
+    <name>VersionNumber</name>
+    <synonym>
+      <key>en</key>
+      <value>Version No.</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Version No.</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Phiên bản Số</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Object version unique number</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Уникальный номер версии объекта</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tên đơn trị của phiên bản đối tượng</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="80c23bf0-cef0-4d07-a017-d90635f8041d">
+    <name>ListForm</name>
+    <synonym>
+      <key>en</key>
+      <value>List form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu danh sách</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="47a24216-3299-470b-a18c-d8c1258fff24">
+    <name>ReportOnObjectVersions</name>
+    <synonym>
+      <key>en</key>
+      <value>Report on object versions</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Отчет по версиям объекта</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Báo cáo theo phiên bản đối tượng</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="72dcfd46-491e-4f88-a0ea-57919f8fbdea">
+    <name>RecordForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Entry form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu bản ghi</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>en</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="fa7a11cc-7ee0-4550-8d0d-9c7464d57a37">
+    <name>StoredVersionsChoice</name>
+    <synonym>
+      <key>en</key>
+      <value>Select stored versions</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Выбор хранимых версий</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Chọn phiên bản được lưu</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>en</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="8317ac49-890d-4921-8c0d-1bfc676f0b40">
+    <name>ObjectAttributesChoice</name>
+    <synonym>
+      <key>en</key>
+      <value>Select object attributes</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Выбор реквизитов объекта</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Chọn mục tin của đối tượng</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="f9161bc3-9a1c-4870-8681-8e97d8ce838a">
+    <name>StandardTemplateOfObjectPresentation</name>
+    <synonym>
+      <key>en</key>
+      <value>Standard object presentation template</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Стандартный макет представления объекта</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Khuôn in chuẩn trình bày đối tượng</value>
+    </synonym>
+  </templates>
+</mdclass:InformationRegister>

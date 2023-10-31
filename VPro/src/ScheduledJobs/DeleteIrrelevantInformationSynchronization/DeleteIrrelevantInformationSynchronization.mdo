@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ScheduledJob xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6a5f7521-270e-476e-88ec-a8cf79ea61a6">
+  <name>DeleteIrrelevantInformationSynchronization</name>
+  <synonym>
+    <key>en</key>
+    <value>Delete outdated synchronization information</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Удаление неактуальной информации синхронизации</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Xóa bỏ thông tin đồng bộ hóa không thiết thực</value>
+  </synonym>
+  <comment>Performs deletion of synchroniztion information, which was not deleted because of application failures. Files with posting date over 24 hours are subject for deletion.</comment>
+  <methodName>CommonModule.DataExchangeServer.DeleteInvalidMessagesFromDataExchange</methodName>
+  <use>true</use>
+  <predefined>true</predefined>
+  <restartCountOnFailure>3</restartCountOnFailure>
+  <restartIntervalOnFailure>10</restartIntervalOnFailure>
+</mdclass:ScheduledJob>

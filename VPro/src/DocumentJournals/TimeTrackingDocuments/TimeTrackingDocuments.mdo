@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DocumentJournal xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="37e6bd42-7168-4d30-8974-65db5c911fd0">
+  <producedTypes>
+    <selectionType typeId="345fae38-90ee-46b8-82e8-2adfb1df451e" valueTypeId="87ef4b6a-b5c6-479f-9c61-be7e4305b36f"/>
+    <listType typeId="4ffdb070-969b-4f6d-9ca9-ee7e0b7fd5fa" valueTypeId="928a41d4-d427-4f2f-b127-69391d370421"/>
+    <managerType typeId="0b4a4c8e-f02e-4533-9566-333297716334" valueTypeId="b7f7cf0e-66ae-475b-9296-4303cfa2a927"/>
+  </producedTypes>
+  <name>TimeTrackingDocuments</name>
+  <synonym>
+    <key>en</key>
+    <value>Time-keeping documents</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Документы по учету времени</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Chứng từ tính thời gian</value>
+  </synonym>
+  <defaultForm>DocumentJournal.TimeTrackingDocuments.Form.ListForm</defaultForm>
+  <useStandardCommands>true</useStandardCommands>
+  <registeredDocuments>Document.TimeTracking</registeredDocuments>
+  <registeredDocuments>Document.WorkOrder</registeredDocuments>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Type</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Date</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Posted</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Number</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <columns uuid="279256d7-653a-44c6-8e95-178b8d6fc2d2">
+    <name>Company</name>
+    <synonym>
+      <key>en</key>
+      <value>Company</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Doanh nghiệp</value>
+    </synonym>
+    <references>Document.WorkOrder.Attribute.Company</references>
+    <references>Document.TimeTracking.Attribute.Company</references>
+  </columns>
+  <columns uuid="27d17984-17ab-4d6c-8ff1-c13dc94f9e77">
+    <name>Department</name>
+    <synonym>
+      <key>en</key>
+      <value>Department</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Bộ phận</value>
+    </synonym>
+    <references>Document.WorkOrder.Attribute.StructuralUnit</references>
+    <references>Document.TimeTracking.Attribute.StructuralUnit</references>
+  </columns>
+  <columns uuid="750e6297-cea9-40eb-a5dd-6994b4b34991">
+    <name>Employee</name>
+    <synonym>
+      <key>en</key>
+      <value>Employee</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Người lao động</value>
+    </synonym>
+    <references>Document.WorkOrder.Attribute.Employee</references>
+    <references>Document.TimeTracking.Attribute.Employee</references>
+  </columns>
+  <columns uuid="41b7b599-b8c6-48b8-b27a-b30eb2f4416b">
+    <name>Comment</name>
+    <synonym>
+      <key>en</key>
+      <value>Note</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Примечание</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ghi chú</value>
+    </synonym>
+    <references>Document.WorkOrder.Attribute.Comment</references>
+    <references>Document.TimeTracking.Attribute.Comment</references>
+  </columns>
+  <forms uuid="e7da56c7-8794-414a-ac4e-deb38cbace4b">
+    <name>ListForm</name>
+    <synonym>
+      <key>en</key>
+      <value>List form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu danh sách</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DocumentJournal>

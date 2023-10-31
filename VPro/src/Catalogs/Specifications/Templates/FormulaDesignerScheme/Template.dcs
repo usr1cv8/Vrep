@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>DataSource1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>DataSet1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ProductsAndServices</dataPath>
+			<field>ProductsAndServices</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Mặt hàng</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Products and services</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Characteristic</dataPath>
+			<field>Characteristic</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Characteristic</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Đặc tính</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>CustomerOrder</dataPath>
+			<field>CustomerOrder</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказ покупателя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Customer order</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Đặt hàng của khách</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Specification</dataPath>
+			<field>Specification</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Bill of materials</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Спецификация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Bảng kê chi tiết</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ProductionOrder</dataPath>
+			<field>ProductionOrder</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказ на производство</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Production order</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Đơn hàng sản xuất</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>DataSource1</dataSource>
+		<query>SELECT
+	VALUE(Catalog.ProductsAndServices.EmptyRef) AS ProductsAndServices,
+	VALUE(Catalog.ProductsAndServicesCharacteristics.EmptyRef) AS Characteristic,
+	VALUE(Catalog.Specifications.EmptyRef) AS Specification,
+	VALUE(Document.CustomerOrder.EmptyRef) AS CustomerOrder,
+	VALUE(Document.ProductionOrder.EmptyRef) AS ProductionOrder
+{CharacteristicS
+	TYPE(Catalog.Specifications)
+	CharacteristicTypes (SELECT
+			AdditionalAttributesAndInformationSetsAdditionalAttributes.Property.Presentation AS Presentation,
+			AdditionalAttributesAndInformationSetsAdditionalAttributes.Property.ValueType AS ValueType,
+			AdditionalAttributesAndInformationSetsAdditionalAttributes.Property AS Property
+		FROM
+			Catalog.AdditionalAttributesAndInformationSets.AdditionalAttributes AS AdditionalAttributesAndInformationSetsAdditionalAttributes
+		WHERE
+			(AdditionalAttributesAndInformationSetsAdditionalAttributes.Ref = VALUE(Catalog.AdditionalAttributesAndInformationSets.Catalog_Specifications_Common)
+					OR AdditionalAttributesAndInformationSetsAdditionalAttributes.Ref = &amp;SpecificationAttributesArray)
+			AND AdditionalAttributesAndInformationSetsAdditionalAttributes.Property.Available)
+	KEYFIELD Property
+	NameFIELD Presentation
+	VALUETYPEFIELD ValueType
+	CharacteristicVALUES (SELECT
+			SpecificationsAdditionalAttributes.Ref AS Ref,
+			SpecificationsAdditionalAttributes.Property AS PropertiesKind,
+			SpecificationsAdditionalAttributes.Value AS Value
+		FROM
+			Catalog.Specifications.AdditionalAttributes AS SpecificationsAdditionalAttributes)
+	OBJECTFIELD Ref
+	TYPEFIELD PropertiesKind
+	VALUEFIELD Value }
+{CharacteristicS
+	TYPE(Catalog.ProductsAndServicesCharacteristics)
+	CharacteristicTypes (SELECT
+			AdditionalAttributesAndInformationSetsAdditionalAttributes.Property.Presentation AS Presentation,
+			AdditionalAttributesAndInformationSetsAdditionalAttributes.Property.ValueType AS ValueType,
+			AdditionalAttributesAndInformationSetsAdditionalAttributes.Property AS Property
+		FROM
+			Catalog.AdditionalAttributesAndInformationSets.AdditionalAttributes AS AdditionalAttributesAndInformationSetsAdditionalAttributes
+		WHERE
+			(AdditionalAttributesAndInformationSetsAdditionalAttributes.Ref = VALUE(Catalog.AdditionalAttributesAndInformationSets.Catalog_ProductsAndServicesCharacteristics)
+					OR AdditionalAttributesAndInformationSetsAdditionalAttributes.Ref = &amp;CharacteristicPropertySet)
+			AND AdditionalAttributesAndInformationSetsAdditionalAttributes.Property.Available)
+	KEYFIELD Property
+	NameFIELD Presentation
+	VALUETYPEFIELD ValueType
+	CharacteristicVALUES (SELECT
+			ProductsAndServicesCharacteristicsAdditionalAttributes.Ref AS Ref,
+			ProductsAndServicesCharacteristicsAdditionalAttributes.Property AS PropertiesKind,
+			ProductsAndServicesCharacteristicsAdditionalAttributes.Value AS Value
+		FROM
+			Catalog.ProductsAndServicesCharacteristics.AdditionalAttributes AS ProductsAndServicesCharacteristicsAdditionalAttributes)
+	OBJECTFIELD Ref
+	TYPEFIELD PropertiesKind
+	VALUEFIELD Value }
+{CharacteristicS
+	TYPE(Catalog.ProductsAndServices)
+	CharacteristicTypes (SELECT
+			AdditionalAttributesAndInformationSetsAdditionalAttributes.Property.Presentation AS Presentation,
+			AdditionalAttributesAndInformationSetsAdditionalAttributes.Property.ValueType AS ValueType,
+			AdditionalAttributesAndInformationSetsAdditionalAttributes.Property AS Property
+		FROM
+			Catalog.AdditionalAttributesAndInformationSets.AdditionalAttributes AS AdditionalAttributesAndInformationSetsAdditionalAttributes
+		WHERE
+			(AdditionalAttributesAndInformationSetsAdditionalAttributes.Ref = VALUE(Catalog.AdditionalAttributesAndInformationSets.Catalog_ProductsAndServices_Common)
+					OR AdditionalAttributesAndInformationSetsAdditionalAttributes.Ref = &amp;PropertySet)
+			AND AdditionalAttributesAndInformationSetsAdditionalAttributes.Property.Available)
+	KEYFIELD Property
+	NameFIELD Presentation
+	VALUETYPEFIELD ValueType
+	CharacteristicVALUES (SELECT
+			ProductsAndServicesAdditionalAttributes.Ref AS Ref,
+			ProductsAndServicesAdditionalAttributes.Property AS PropertiesKind,
+			ProductsAndServicesAdditionalAttributes.Value AS Value
+		FROM
+			Catalog.ProductsAndServices.AdditionalAttributes AS ProductsAndServicesAdditionalAttributes)
+	OBJECTFIELD Ref
+	TYPEFIELD PropertiesKind
+	VALUEFIELD Value }</query>
+	</dataSet>
+	<parameter>
+		<name>PropertySet</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Набор свойств</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Property set</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Tập hợp thuộc tính</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.AdditionalAttributesAndInformationSets</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>CharacteristicPropertySet</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Набор свойств характеристики</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Characteristic property set</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Tập hợp thuộc tính đặc tính</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.AdditionalAttributesAndInformationSets</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>SpecificationAttributesArray</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Набор свойств спецификации</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Specification property set</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Tập hợp thuộc tính bảng kê chi tiết</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.AdditionalAttributesAndInformationSets</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Main</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Main</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Chính</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows"/>
+	</settingsVariant>
+</DataCompositionSchema>

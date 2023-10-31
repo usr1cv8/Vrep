@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DocumentJournal xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e6e6a673-d55e-4ea5-b503-d435c749fa02">
+  <producedTypes>
+    <selectionType typeId="663ad667-58c7-4e9e-9a42-c0ac9931c81c" valueTypeId="33cf07a4-b302-46ef-8126-4b3a6fa50b31"/>
+    <listType typeId="ef07b775-0a2b-4778-bbf6-ab772a7c3689" valueTypeId="75963fbe-e0bd-4816-87ed-d1588fae0f0a"/>
+    <managerType typeId="ade0f0c8-f5c3-4390-845b-57c1611017e7" valueTypeId="e11fb078-3d5d-4ba1-abdd-4818879968a4"/>
+  </producedTypes>
+  <name>ResourcesPlanningDocuments</name>
+  <synonym>
+    <key>en</key>
+    <value>Resource planning documents</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Документы планирования ресурсов</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Chứng từ hoạch định nguồn lực</value>
+  </synonym>
+  <defaultForm>DocumentJournal.ResourcesPlanningDocuments.Form.ListForm</defaultForm>
+  <registeredDocuments>Document.ProductionOrder</registeredDocuments>
+  <registeredDocuments>Document.CustomerOrder</registeredDocuments>
+  <includeHelpInContents>true</includeHelpInContents>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Type</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <synonym>
+      <key>en</key>
+      <value>Order</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đơn hàng</value>
+    </synonym>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Date</name>
+    <synonym>
+      <key>en</key>
+      <value>Order date</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Дата заказа</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ngày đặt hàng</value>
+    </synonym>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Posted</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Number</name>
+    <synonym>
+      <key>en</key>
+      <value>order No.</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>№ заказа</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số đơn hàng</value>
+    </synonym>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <columns uuid="960f608c-2bf0-4ac0-85dc-df1cef8538de">
+    <name>OperationKind</name>
+    <synonym>
+      <key>en</key>
+      <value>Operation kind</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Вид операции</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Dạng giao dịch</value>
+    </synonym>
+    <references>Document.ProductionOrder.Attribute.OperationKind</references>
+    <references>Document.CustomerOrder.Attribute.OperationKind</references>
+  </columns>
+  <columns uuid="f6040454-4696-45d5-8ea4-a656dfd525e0">
+    <name>Closed</name>
+    <synonym>
+      <key>en</key>
+      <value>Closed</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Закрыта</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đã đóng</value>
+    </synonym>
+    <references>Document.ProductionOrder.Attribute.Closed</references>
+    <references>Document.CustomerOrder.Attribute.Closed</references>
+  </columns>
+  <columns uuid="600fde10-c919-461d-89fa-3a283c852a76">
+    <name>OrderState</name>
+    <synonym>
+      <key>en</key>
+      <value>Status</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Статус</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Trạng thái</value>
+    </synonym>
+    <references>Document.ProductionOrder.Attribute.OrderState</references>
+    <references>Document.CustomerOrder.Attribute.OrderState</references>
+  </columns>
+  <columns uuid="e26b304b-4c72-4af5-8793-36184b8a1b10">
+    <name>Company</name>
+    <synonym>
+      <key>en</key>
+      <value>Company</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Doanh nghiệp</value>
+    </synonym>
+    <references>Document.ProductionOrder.Attribute.Company</references>
+    <references>Document.CustomerOrder.Attribute.Company</references>
+  </columns>
+  <columns uuid="b50844f9-85a8-473b-a5af-fba8e1205ce3">
+    <name>Start</name>
+    <synonym>
+      <key>en</key>
+      <value>Start</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Старт</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Bắt đầu</value>
+    </synonym>
+    <references>Document.ProductionOrder.Attribute.Start</references>
+    <references>Document.CustomerOrder.Attribute.Start</references>
+  </columns>
+  <columns uuid="b32cbbbf-98fe-43d2-9d10-a4d114367b93">
+    <name>Finish</name>
+    <synonym>
+      <key>en</key>
+      <value>Finish</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Финиш</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Kết thúc</value>
+    </synonym>
+    <references>Document.ProductionOrder.Attribute.Finish</references>
+    <references>Document.CustomerOrder.Attribute.Finish</references>
+  </columns>
+  <columns uuid="32150cf1-5b65-47f5-a5c0-0fe73096b0ed">
+    <name>ProductsAndServices</name>
+    <synonym>
+      <key>en</key>
+      <value>Products and services</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Продукция и услуги</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Mặt hàng</value>
+    </synonym>
+    <references>Document.ProductionOrder.Attribute.ProductsAndServicesList</references>
+    <references>Document.CustomerOrder.Attribute.ProductsAndServicesList</references>
+  </columns>
+  <columns uuid="6c02eafc-ab4a-49ac-8710-ef98320e19f7">
+    <name>KeyResources</name>
+    <synonym>
+      <key>en</key>
+      <value>Resources</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Ресурсы</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số đo</value>
+    </synonym>
+    <references>Document.ProductionOrder.Attribute.ResourcesList</references>
+    <references>Document.CustomerOrder.Attribute.ResourcesList</references>
+  </columns>
+  <columns uuid="59002300-e9ec-4927-be05-4d08f80b6210">
+    <name>Counterparty</name>
+    <synonym>
+      <key>en</key>
+      <value>Counterparties</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагенты</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đối tác</value>
+    </synonym>
+    <references>Document.CustomerOrder.Attribute.Counterparty</references>
+  </columns>
+  <columns uuid="271d31f8-6a1f-467f-b65c-8302a85f0602">
+    <name>CustomerOrder</name>
+    <synonym>
+      <key>en</key>
+      <value>Customer order</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ покупателя</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đơn hàng của khách</value>
+    </synonym>
+    <references>Document.ProductionOrder.Attribute.CustomerOrder</references>
+  </columns>
+  <columns uuid="8d2fdbac-0f40-43de-8230-7560fea95ac8">
+    <name>Department</name>
+    <synonym>
+      <key>en</key>
+      <value>Department</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Bộ phận</value>
+    </synonym>
+    <references>Document.ProductionOrder.Attribute.StructuralUnit</references>
+    <references>Document.CustomerOrder.Attribute.SalesStructuralUnit</references>
+  </columns>
+  <columns uuid="da6ce201-0a6e-4328-8b78-9f47bcff6278">
+    <name>Responsible</name>
+    <synonym>
+      <key>en</key>
+      <value>Responsible manager</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный менеджер</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Chịu trách nhiệm quản lý</value>
+    </synonym>
+    <references>Document.ProductionOrder.Attribute.Responsible</references>
+    <references>Document.CustomerOrder.Attribute.Responsible</references>
+  </columns>
+  <columns uuid="0347a90c-693f-476d-a9bb-fc5653bda3ad">
+    <name>Author</name>
+    <synonym>
+      <key>en</key>
+      <value>Created by</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Ведомость составил</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Người lập</value>
+    </synonym>
+    <references>Document.ProductionOrder.Attribute.Author</references>
+    <references>Document.CustomerOrder.Attribute.Author</references>
+  </columns>
+  <forms uuid="19c4b1f8-ecfb-4db4-92c8-aebe0bc603ab">
+    <name>ListForm</name>
+    <synonym>
+      <key>en</key>
+      <value>List form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu danh sách</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DocumentJournal>

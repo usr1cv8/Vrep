@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="973967e5-1702-4fb8-ba36-70fd5b3b7e7c">
+  <producedTypes>
+    <objectType typeId="47321f2f-0ab3-40ca-8419-14c5989b83cc" valueTypeId="b7c649b9-8780-470f-9970-517d3968635e"/>
+    <managerType typeId="7c43ce7e-4dfa-4b9e-b874-4f75b082ea4f" valueTypeId="62a39543-e289-4a54-9e0f-73fb6f466705"/>
+  </producedTypes>
+  <name>InfobaseBackup</name>
+  <synonym>
+    <key>en</key>
+    <value>Infobase backup</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Резервное копирование ИБ</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Sao lưu dự phòng CSTT</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.InfobaseBackup.Form.DataBackup</defaultForm>
+  <includeHelpInContents>true</includeHelpInContents>
+  <attributes uuid="96ab5424-7be1-416d-b74d-d0c815726b1f">
+    <name>BackupScheduleOption</name>
+    <synonym>
+      <key>en</key>
+      <value>Backup schedule option</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Вариант расписания резервного копирования</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Phương án thời gian biểu sao lưu dự phòng</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Backup schedule options</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Варианты расписания резервного копирования</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Phương án lịch biểu sao lưu dự phòng</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="3714e794-ddef-4ad9-a933-6130bbc84545">
+    <name>ExecuteBackingUpNow</name>
+    <synonym>
+      <key>en</key>
+      <value>Back up now</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Выполнить резервное копирование сейчас</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Thực hiện sao lưu dự phòng ngay bây giờ</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Start backup now</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Запустить выполнение резервного копирования сейчас</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Khởi động thực hiện sao lưu dự phòng ngay bây giờ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="282b089c-7411-40d6-9a0a-ceaf6abb5586">
+    <name>BackupDirectory</name>
+    <synonym>
+      <key>en</key>
+      <value>Directory with backups</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Каталог с резервными копиями</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Thư mục có bản sao lưu dự phòng</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Select directory to save backup</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Выберите каталог для сохранения резервной копии</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Hãy chọn thư mục để lưu bản sao dự phòng</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="678188aa-76e7-49bc-a4be-1c55ccd625b1">
+    <name>BackingUpTypeCode</name>
+    <synonym>
+      <key>en</key>
+      <value>Backup type code</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Код типа резервного копирования</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Mã kiểu sao lưu dự phòng</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Internal code of backup type</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Внутренний код типа резервного копирования</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Mã nội bộ của kiểu sao lưu dự phòng</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="6c27eece-2f8e-48eb-b9c7-f9c414ee15bd">
+    <name>CreateBackupWhenDataRestoring</name>
+    <synonym>
+      <key>en</key>
+      <value>Back up data when restoring data</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Проводить резервное копирование при восстановлении данных</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tiến hành sao lưu dự phòng khi khôi phục dữ liệu</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Backup is required on restoring data.</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Требуется проводить резервное копирование при восстановлении данных</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Cần kết chuyển bản sao dự phòng khi khôi phục dữ liệu</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="b3415b4a-d8de-4536-aa4b-82e75fd986ee">
+    <name>BackupImportingFile</name>
+    <synonym>
+      <key>en</key>
+      <value>Backup import file</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Файл загрузки резервной копии</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tệp kết nhập bản sao dự phòng</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Name of backup import file</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Имя файл загрузки резервной копии</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tên tệp kết nhập bản sao dự phòng</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="acc996ab-672a-4602-b7ad-8eee83557e61">
+    <name>AdministratorPassword</name>
+    <synonym>
+      <key>en</key>
+      <value>Administrator password</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Пароль администратора</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Mật khẩu của người quản trị</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Administrator password for copying</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Пароль администратора для копирования</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Mật khẩu của người quản trị để sao chép</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="bf9e9c2f-e5dc-4f82-8e9a-7f35e3ad9a0b">
+    <name>RestoreDataFromBackup</name>
+    <synonym>
+      <key>en</key>
+      <value>Restore data from backup</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Восстановление данных из резервной копии</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Phục hồi dữ liệu từ bản sao dự phòng</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>en</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="371361b6-15fd-4e62-9f60-cc8ee3fbacf0">
+    <name>DataBackup</name>
+    <synonym>
+      <key>en</key>
+      <value>Data backup</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Резервное копирование данных</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Sao lưu dự phòng dữ liệu</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>en</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="97745768-ed35-44f1-beba-abb8b28a29ae">
+    <name>BackupFileTemplate</name>
+    <synonym>
+      <key>en</key>
+      <value>Template of the backup file</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Макет файла резервного копирования</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Khuôn in tệp sao lưu dự phòng</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="69364942-bcd1-4b06-9b57-fa59b4e7c552">
+    <name>BackupSplashScreen</name>
+    <synonym>
+      <key>en</key>
+      <value>Backup splash screen</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Заставка резервного копирования</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Họa tiết sao lưu dự phòng</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="ab201c5f-4134-42cf-a528-c1c4df02f2d7">
+    <name>AdditionalBackupFile</name>
+    <synonym>
+      <key>en</key>
+      <value>Additional backup file</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Доп файл резервного копирования</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tệp bổ sung sao lưu dự phòng</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="303fb7b5-6a23-40ea-ae12-b54f4ebae026">
+    <name>IBImportFileTemplate</name>
+    <synonym>
+      <key>en</key>
+      <value>File template IB import</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Макет файла загрузка ИБ</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Khuôn in tệp kết nhập CSTT</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="634cd26b-78f1-4446-8aad-b96ed16e5329">
+    <name>RecoverySplashScreen</name>
+    <synonym>
+      <key>en</key>
+      <value>Recovery Splash Screen</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Заставка восстановления</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Họa tiết phục hồi</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <commands uuid="d8e62f1a-92ca-4971-9609-e79da798c083">
+    <name>ExecuteInfobaseRecovery</name>
+    <synonym>
+      <key>en</key>
+      <value>Restore data</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Выполнить восстановление данных</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Thực hiện phục hồi dữ liệu</value>
+    </synonym>
+    <group>ActionsPanelTools</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+  </commands>
+  <commands uuid="61892a62-9381-401d-af31-9073ef2509fb">
+    <name>ShowResult</name>
+    <synonym>
+      <key>en</key>
+      <value>Show backup result</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Показать результат резервного копирования</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Hiển thị kết quả sao lưu dự phòng</value>
+    </synonym>
+    <comment>Service command. Not for placement in the command interface</comment>
+    <group>NavigationPanelSeeAlso</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:DataProcessor>

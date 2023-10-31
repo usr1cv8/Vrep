@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f910c577-a52c-4b27-a553-aa90ee616fc6">
+  <producedTypes>
+    <selectionType typeId="f2fa214d-6f1c-40e1-abbf-e2c2d8aea801" valueTypeId="5c833126-fc37-4277-a749-fa3ca28ba543"/>
+    <listType typeId="701452df-f16a-4960-b749-0424d889797f" valueTypeId="fef3f33a-d169-4c20-8a1d-1c2d5c9aed38"/>
+    <managerType typeId="aadbb99d-4c92-4ed7-8a39-40b3874bd58b" valueTypeId="d34710ae-43a0-4235-9b60-5431ff858b43"/>
+    <recordSetType typeId="46f60870-be45-4c4a-b83c-05f31a03e9e9" valueTypeId="5df1cb27-74c5-4663-aa30-b2c0045aa3ce"/>
+    <recordKeyType typeId="d0377259-4fa5-4a7b-91f2-aabf658418f5" valueTypeId="402f854f-2d7d-4bc4-85ce-c9bacd766176"/>
+    <recordType typeId="fafdb363-9a29-442d-9e86-2eb76aa4aa8e" valueTypeId="90d90a6e-8d52-481f-92be-b31ba947b3a3"/>
+    <recordManagerType typeId="3cc04d30-f28e-4e8e-abcf-a3ab44d09311" valueTypeId="e0daf5c4-3648-4731-abe3-8b34ecbcb3bb"/>
+  </producedTypes>
+  <name>PaymentsSchedule</name>
+  <synonym>
+    <key>en</key>
+    <value>Payment schedule</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>График платежей</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Lịch biểu thanh toán</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="74103fd8-de1b-4500-a0b5-b8c9becabca8">
+    <name>DocumentAmount</name>
+    <synonym>
+      <key>en</key>
+      <value>Document amount</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма документа</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số tiền chứng từ</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="6ac0a494-7742-429b-bb50-1b2973ae36e7">
+    <name>AmountOfPlanBalance</name>
+    <synonym>
+      <key>en</key>
+      <value>Amount plan balance</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма план остаток</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số dư dự tính</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="ed1ebe80-906b-4242-b9ea-e0bb42ff4710">
+    <name>CashAssetsType</name>
+    <synonym>
+      <key>en</key>
+      <value>Funds type</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Тип денежных средств</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Kiểu vốn bằng tiền</value>
+    </synonym>
+    <type>
+      <types>EnumRef.CashAssetTypes</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="a91eaaa4-c12d-49e2-90dc-498ca2e4acec">
+    <name>Counterparty</name>
+    <synonym>
+      <key>en</key>
+      <value>Counterparty</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đối tác</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Counterparties</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="e386d57b-52f4-4bb5-87c5-ef00c7a40e01">
+    <name>Currency</name>
+    <synonym>
+      <key>en</key>
+      <value>Currency</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Валюта</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tiền tệ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Currencies</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="30bac80c-d0bd-4d7f-a60f-ac802835606a">
+    <name>Item</name>
+    <synonym>
+      <key>en</key>
+      <value>Item</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Статья</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Dạng</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.CashFlowItems</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="2c796817-1fcd-4b0d-a99a-d8235c9235e0">
+    <name>BankAccountPettyCash</name>
+    <synonym>
+      <key>en</key>
+      <value>Bank account, cash fund</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Банковский счет, касса</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tài khoản ngân hàng, quỹ tiền mặt</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.BankAccounts</types>
+      <types>CatalogRef.PettyCashes</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="7d2d5b03-c29e-40bc-b819-34a8f57806a9">
+    <name>Company</name>
+    <synonym>
+      <key>en</key>
+      <value>Company</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Doanh nghiệp</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Companies</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="f22dd066-e85c-4a78-969b-4817236e1178">
+    <name>ThisFlow</name>
+    <synonym>
+      <key>en</key>
+      <value>This is receipt</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Это поступление</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đây là khoản thu</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="7b4e7e1a-8fbe-44ff-aa62-86780a479a52">
+    <name>InvoiceForPayment</name>
+    <synonym>
+      <key>en</key>
+      <value>Proforma invoice</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Счет на оплату</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Hóa đơn thanh toán</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.CashTransferPlan</types>
+      <types>DocumentRef.PaymentReceiptPlan</types>
+      <types>DocumentRef.CustomerOrder</types>
+      <types>DocumentRef.InvoiceForPayment</types>
+      <types>DocumentRef.CashOutflowPlan</types>
+      <types>DocumentRef.PurchaseOrder</types>
+      <types>DocumentRef.SupplierInvoiceForPayment</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

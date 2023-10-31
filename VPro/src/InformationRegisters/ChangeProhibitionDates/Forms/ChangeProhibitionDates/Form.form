@@ -1,0 +1,5024 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <title>
+    <key>en</key>
+    <value>Closing dates of data change</value>
+  </title>
+  <title>
+    <key>ru</key>
+    <value>Даты запрета изменения данных</value>
+  </title>
+  <title>
+    <key>vi</key>
+    <value>Ngày cấm thay đổi dữ liệu</value>
+  </title>
+  <items xsi:type="form:FormField">
+    <name>ProhibitionDateSetting</name>
+    <id>201</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>ProhibitionDateSetting</segments>
+    </dataPath>
+    <extendedTooltip>
+      <name>SetProhibitionDateExtendedTooltip</name>
+      <id>322</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>SetProhibitionDateContextMenu</name>
+      <id>202</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>InputField</type>
+    <editMode>Enter</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:InputFieldExtInfo">
+      <handlers>
+        <event>Clearing</event>
+        <name>ProhibitionDateSettingClearing</name>
+      </handlers>
+      <handlers>
+        <event>ChoiceProcessing</event>
+        <name>ProhibitionDateSettingChoiceProcessing</name>
+      </handlers>
+      <width>28</width>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <horizontalStretch>false</horizontalStretch>
+      <wrap>true</wrap>
+      <listChoiceMode>true</listChoiceMode>
+      <chooseType>true</chooseType>
+      <typeDomainEnabled>true</typeDomainEnabled>
+      <choiceList>
+        <presentation>
+          <key>en</key>
+          <value>Data change is not prohibited</value>
+        </presentation>
+        <presentation>
+          <key>ru</key>
+          <value>Нет запрета изменения данных</value>
+        </presentation>
+        <presentation>
+          <key>vi</key>
+          <value>Không cấm thay đổi dữ liệu</value>
+        </presentation>
+        <value xsi:type="core:StringValue">
+          <value>NoProhibition</value>
+        </value>
+      </choiceList>
+      <choiceList>
+        <presentation>
+          <key>en</key>
+          <value>All users</value>
+        </presentation>
+        <presentation>
+          <key>ru</key>
+          <value>У всех пользователей</value>
+        </presentation>
+        <presentation>
+          <key>vi</key>
+          <value>Tất cả người sử dụng</value>
+        </presentation>
+        <value xsi:type="core:StringValue">
+          <value>ForAllUsers</value>
+        </value>
+      </choiceList>
+      <choiceList>
+        <presentation>
+          <key>en</key>
+          <value>By users</value>
+        </presentation>
+        <presentation>
+          <key>ru</key>
+          <value>По пользователям</value>
+        </presentation>
+        <presentation>
+          <key>vi</key>
+          <value>Theo người sử dụng</value>
+        </presentation>
+        <value xsi:type="core:StringValue">
+          <value>ByUsers</value>
+        </value>
+      </choiceList>
+      <backColor xsi:type="core:ColorRef">
+        <color>Style.MasterFieldBackground</color>
+      </backColor>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>SettingsOfProhibitionDate</name>
+    <id>203</id>
+    <items xsi:type="form:FormGroup">
+      <name>SettingByUsers</name>
+      <id>204</id>
+      <items xsi:type="form:Table">
+        <name>Users</name>
+        <id>124</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>ProhibitionDatesUsers</segments>
+        </dataPath>
+        <titleLocation>None</titleLocation>
+        <excludedCommands>CancelSearch</excludedCommands>
+        <excludedCommands>Copy</excludedCommands>
+        <excludedCommands>EndEdit</excludedCommands>
+        <excludedCommands>Find</excludedCommands>
+        <excludedCommands>MoveDown</excludedCommands>
+        <excludedCommands>MoveUp</excludedCommands>
+        <excludedCommands>OutputList</excludedCommands>
+        <excludedCommands>SortListAsc</excludedCommands>
+        <excludedCommands>SortListDesc</excludedCommands>
+        <items xsi:type="form:FormField">
+          <name>UsersFullPresentation</name>
+          <id>127</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ProhibitionDatesUsers.FullPresentation</segments>
+          </dataPath>
+          <toolTip>
+            <key>en</key>
+            <value>User or user group</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Пользователь или группа пользователей</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Người sử dụng hoặc nhóm người sử dụng</value>
+          </toolTip>
+          <handlers>
+            <event>OnChange</event>
+            <name>UsersFullPresentationOnChange</name>
+          </handlers>
+          <extendedTooltip>
+            <name>UsersFullPresentationExtendedTooltip</name>
+            <id>328</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>UsersFullPresentationContextMenu</name>
+            <id>128</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <handlers>
+              <event>AutoComplete</event>
+              <name>UsersFullPresentationAutoCompleteText</name>
+            </handlers>
+            <handlers>
+              <event>StartChoice</event>
+              <name>UsersFullPresentationStartChoice</name>
+            </handlers>
+            <handlers>
+              <event>Opening</event>
+              <name>UsersFullPresentationOpening</name>
+            </handlers>
+            <handlers>
+              <event>Clearing</event>
+              <name>UsersFullPresentationClearing</name>
+            </handlers>
+            <handlers>
+              <event>TextEditEnd</event>
+              <name>UsersFullPresentationTextEditEnd</name>
+            </handlers>
+            <handlers>
+              <event>ChoiceProcessing</event>
+              <name>UsersFullPresentationChoiceProcessing</name>
+            </handlers>
+            <width>31</width>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <choiceButton>true</choiceButton>
+            <openButton>true</openButton>
+            <autoMarkIncomplete>true</autoMarkIncomplete>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>UsersComment</name>
+          <id>129</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ProhibitionDatesUsers.Comment</segments>
+          </dataPath>
+          <toolTip>
+            <key>en</key>
+            <value>Reason for separate prohibition for user or user group</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Причина отдельного запрета для пользователя или группы пользователей</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Nguyên nhân cấm riêng đối với người sử dụng hoặc nhóm người sử dụng</value>
+          </toolTip>
+          <handlers>
+            <event>OnChange</event>
+            <name>UsersCommentOnChange</name>
+          </handlers>
+          <extendedTooltip>
+            <name>UsersCommentExtendedTooltip</name>
+            <id>329</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>UsersCommentContextMenu</name>
+            <id>130</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <width>31</width>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <extendedEdit>true</extendedEdit>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <autoCommandBar>
+          <name>UsersCommandBar</name>
+          <id>126</id>
+          <items xsi:type="form:Button">
+            <name>UsersFill</name>
+            <id>176</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>UsersSelectExtendedTooltip</name>
+              <id>325</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <commandName>Form.Command.SelectUsers</commandName>
+            <representation>Auto</representation>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <placementArea>UserCmds</placementArea>
+            <representationInContextMenu>Auto</representationInContextMenu>
+          </items>
+          <items xsi:type="form:Button">
+            <name>UsersAdd</name>
+            <id>397</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>UsersAddExtendedTooltip</name>
+              <id>398</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <commandName>Form.Item.Users.StandardCommand.Add</commandName>
+            <representation>Auto</representation>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <placementArea>UserCmds</placementArea>
+            <representationInContextMenu>Auto</representationInContextMenu>
+            <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
+          </items>
+          <items xsi:type="form:FormGroup">
+            <name>UsersStandardCommands</name>
+            <id>177</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>en</key>
+              <value>Users standard commands</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Пользователи стандартные команды</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Người sử dụng lệnh chuẩn</value>
+            </title>
+            <toolTip>
+              <key>en</key>
+              <value>Users standard commands</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Пользователи стандартные команды</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Người sử dụng lệnh chuẩn</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>UsersStandardCommandsExtendedTooltip</name>
+              <id>326</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <extInfo xsi:type="form:ButtonGroupExtInfo">
+              <commandSource>Item.Users</commandSource>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <horizontalAlign>Left</horizontalAlign>
+        </autoCommandBar>
+        <handlers>
+          <event>OnEditEnd</event>
+          <name>UsersOnEditEnd</name>
+        </handlers>
+        <handlers>
+          <event>Selection</event>
+          <name>UsersChoice</name>
+        </handlers>
+        <handlers>
+          <event>BeforeAddRow</event>
+          <name>UsersBeforeAddRow</name>
+        </handlers>
+        <handlers>
+          <event>BeforeDeleteRow</event>
+          <name>UsersBeforeDeleteRow</name>
+        </handlers>
+        <handlers>
+          <event>OnActivateRow</event>
+          <name>UsersOnActivateRow</name>
+        </handlers>
+        <handlers>
+          <event>ChoiceProcessing</event>
+          <name>UsersChoiceProcessing</name>
+        </handlers>
+        <handlers>
+          <event>BeforeRowChange</event>
+          <name>UsersBeforeRowChange</name>
+        </handlers>
+        <handlers>
+          <event>OnStartEdit</event>
+          <name>UsersOnStartEdit</name>
+        </handlers>
+        <searchStringAddition>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <name>UsersSearchString</name>
+          <id>411</id>
+          <extendedTooltip>
+            <name>UsersSearchStringExtendedTooltip</name>
+            <id>413</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>UsersSearchStringContextMenu</name>
+            <id>412</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <source>UsersSearchString</source>
+          <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </searchStringAddition>
+        <viewStatusAddition>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <name>UsersViewStatus</name>
+          <id>414</id>
+          <extendedTooltip>
+            <name>UsersViewStatusExtendedTooltip</name>
+            <id>416</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>UsersViewStatusContextMenu</name>
+            <id>415</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>ViewStatusAddition</type>
+          <source>UsersViewStatus</source>
+          <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </viewStatusAddition>
+        <searchControlAddition>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <name>UsersSearchManagement</name>
+          <id>417</id>
+          <extendedTooltip>
+            <name>UsersSearchManagementExtendedTooltip</name>
+            <id>419</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>UsersSearchManagementContextMenu</name>
+            <id>418</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>SearchControlAddition</type>
+          <source>UsersSearchManagement</source>
+          <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </searchControlAddition>
+        <extendedTooltip>
+          <name>UsersExtendedTooltip</name>
+          <id>327</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>UsersContextMenu</name>
+          <id>125</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <changeRowSet>true</changeRowSet>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <heightInTableRows>3</heightInTableRows>
+        <autoMaxRowsCount>true</autoMaxRowsCount>
+        <header>true</header>
+        <headerHeight>1</headerHeight>
+        <footerHeight>1</footerHeight>
+        <horizontalScrollBar>AutoUse</horizontalScrollBar>
+        <verticalScrollBar>AutoUse</verticalScrollBar>
+        <horizontalLines>true</horizontalLines>
+        <verticalLines>true</verticalLines>
+        <autoInsertNewRow>true</autoInsertNewRow>
+        <searchOnInput>Auto</searchOnInput>
+        <initialListView>Auto</initialListView>
+        <horizontalStretch>true</horizontalStretch>
+        <verticalStretch>true</verticalStretch>
+        <enableStartDrag>true</enableStartDrag>
+        <enableDrag>true</enableDrag>
+        <rowPictureDataPath xsi:type="form:DataPath">
+          <segments>ProhibitionDatesUsers.PictureNumber</segments>
+        </rowPictureDataPath>
+        <rowsPicture xsi:type="core:PictureRef">
+          <picture>CommonPicture.UserStates</picture>
+        </rowsPicture>
+        <searchStringLocation>None</searchStringLocation>
+        <viewStatusLocation>None</viewStatusLocation>
+        <searchControlLocation>None</searchControlLocation>
+        <rowFilter xsi:type="core:UndefinedValue"/>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Install by users</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Установка по пользователям</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Đặt theo người sử dụng</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Install by users</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Установка по пользователям</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Đặt theo người sử dụng</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>SetByUsersExtendedTooltip</name>
+        <id>324</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>CurrentUserPresentation</name>
+      <id>409</id>
+      <items xsi:type="form:FormGroup">
+        <name>UserData</name>
+        <id>266</id>
+        <items xsi:type="form:FormGroup">
+          <name>UserPageIsNotSelected</name>
+          <id>267</id>
+          <items xsi:type="form:Decoration">
+            <name>UserNotSelected</name>
+            <id>269</id>
+            <title>
+              <key>en</key>
+              <value>User is not specified</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Пользователь не выбран</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Người sử dụng không được chọn</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>UserNotSelectedExtendedTooltip</name>
+              <id>333</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>UserNotSelectedContextMenu</name>
+              <id>270</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>en</key>
+            <value>Page user not selected</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Страница пользователь не выбран</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Trang người sử dụng chưa chọn</value>
+          </title>
+          <toolTip>
+            <key>en</key>
+            <value>Page user not selected</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Страница пользователь не выбран</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Trang người sử dụng chưa chọn</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>PageUserNotSelectedExtendedTooltip</name>
+            <id>332</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>Page</type>
+          <extInfo xsi:type="form:PageGroupExtInfo">
+            <group>Vertical</group>
+            <showTitle>true</showTitle>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>PageSelectedUser</name>
+          <id>268</id>
+          <items xsi:type="form:FormField">
+            <name>ProhibitionDateSpecifiedMode</name>
+            <id>216</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>ProhibitionDateSpecifiedMode</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>SetMethodOfProhibitionDateExtendedTooltip</name>
+              <id>335</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>SetMethodOfProhibitionDateContextMenu</name>
+              <id>217</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <handlers>
+                <event>Clearing</event>
+                <name>ProhibitionDateSpecifiedModeClearing</name>
+              </handlers>
+              <handlers>
+                <event>ChoiceProcessing</event>
+                <name>ProhibitionDateSpecifiedModeChoiceProcessing</name>
+              </handlers>
+              <width>24</width>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <horizontalStretch>false</horizontalStretch>
+              <wrap>true</wrap>
+              <listChoiceMode>true</listChoiceMode>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <choiceList>
+                <presentation>
+                  <key>en</key>
+                  <value>Common date</value>
+                </presentation>
+                <presentation>
+                  <key>ru</key>
+                  <value>Общая дата</value>
+                </presentation>
+                <presentation>
+                  <key>vi</key>
+                  <value>Ngày chung</value>
+                </presentation>
+                <value xsi:type="core:StringValue">
+                  <value>CommonDate</value>
+                </value>
+              </choiceList>
+              <choiceList>
+                <presentation>
+                  <key>en</key>
+                  <value>By Sections</value>
+                </presentation>
+                <presentation>
+                  <key>ru</key>
+                  <value>По разделам</value>
+                </presentation>
+                <presentation>
+                  <key>vi</key>
+                  <value>Theo phần hành</value>
+                </presentation>
+                <value xsi:type="core:StringValue">
+                  <value>BySections</value>
+                </value>
+              </choiceList>
+              <choiceList>
+                <presentation>
+                  <key>en</key>
+                  <value>By Sections And Objects</value>
+                </presentation>
+                <presentation>
+                  <key>ru</key>
+                  <value>По разделам и объектам</value>
+                </presentation>
+                <presentation>
+                  <key>vi</key>
+                  <value>Theo phần hành và đối tượng</value>
+                </presentation>
+                <value xsi:type="core:StringValue">
+                  <value>BySectionsAndObjects</value>
+                </value>
+              </choiceList>
+              <choiceList>
+                <presentation>
+                  <key>en</key>
+                  <value>By Objects</value>
+                </presentation>
+                <presentation>
+                  <key>ru</key>
+                  <value>По объектам</value>
+                </presentation>
+                <presentation>
+                  <key>vi</key>
+                  <value>Theo đối tượng</value>
+                </presentation>
+                <value xsi:type="core:StringValue">
+                  <value>ByObjects</value>
+                </value>
+              </choiceList>
+              <backColor xsi:type="core:ColorRef">
+                <color>Style.MasterFieldBackground</color>
+              </backColor>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormGroup">
+            <name>SpecificationModes</name>
+            <id>218</id>
+            <items xsi:type="form:FormGroup">
+              <name>SpecifiedModeCommonDate</name>
+              <id>219</id>
+              <items xsi:type="form:Decoration">
+                <name>Indent</name>
+                <id>220</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>IndentExtendedTooltip</name>
+                  <id>338</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <contextMenu>
+                  <name>IndentContextMenu</name>
+                  <id>221</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <autoFill>true</autoFill>
+                </contextMenu>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </items>
+              <items xsi:type="form:FormGroup">
+                <name>ProhibitionDateWithDescription</name>
+                <id>222</id>
+                <items xsi:type="form:FormField">
+                  <name>ProhibitionDateDescription</name>
+                  <id>223</id>
+                  <title>
+                    <key>en</key>
+                    <value>Closing date</value>
+                  </title>
+                  <title>
+                    <key>ru</key>
+                    <value>Дата запрета</value>
+                  </title>
+                  <title>
+                    <key>vi</key>
+                    <value>Ngày cấm</value>
+                  </title>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <dataPath xsi:type="form:DataPath">
+                    <segments>ProhibitionDateDescription</segments>
+                  </dataPath>
+                  <handlers>
+                    <event>OnChange</event>
+                    <name>ProhibitionDateDescriptionOnChange</name>
+                  </handlers>
+                  <extendedTooltip>
+                    <name>DetailsProhibitionDatesExtendedTooltip</name>
+                    <id>340</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <contextMenu>
+                    <name>DetailsProhibitionDatesContextMenu</name>
+                    <id>224</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <autoFill>true</autoFill>
+                  </contextMenu>
+                  <type>InputField</type>
+                  <editMode>Enter</editMode>
+                  <showInHeader>true</showInHeader>
+                  <headerHorizontalAlign>Left</headerHorizontalAlign>
+                  <showInFooter>true</showInFooter>
+                  <extInfo xsi:type="form:InputFieldExtInfo">
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <horizontalStretch>false</horizontalStretch>
+                    <wrap>true</wrap>
+                    <listChoiceMode>true</listChoiceMode>
+                    <chooseType>true</chooseType>
+                    <typeDomainEnabled>true</typeDomainEnabled>
+                    <choiceList>
+                      <presentation>
+                        <key>en</key>
+                        <value>Custom date</value>
+                      </presentation>
+                      <presentation>
+                        <key>ru</key>
+                        <value>Произвольная дата</value>
+                      </presentation>
+                      <presentation>
+                        <key>vi</key>
+                        <value>Ngày tùy ý</value>
+                      </presentation>
+                      <value xsi:type="core:StringValue">
+                        <value>Custom</value>
+                      </value>
+                    </choiceList>
+                    <choiceList>
+                      <presentation>
+                        <key>en</key>
+                        <value>Last year end</value>
+                      </presentation>
+                      <presentation>
+                        <key>ru</key>
+                        <value>Конец прошлого года</value>
+                      </presentation>
+                      <presentation>
+                        <key>vi</key>
+                        <value>Cuối năm ngoái</value>
+                      </presentation>
+                      <value xsi:type="core:StringValue">
+                        <value>LastYearEnd</value>
+                      </value>
+                    </choiceList>
+                    <choiceList>
+                      <presentation>
+                        <key>en</key>
+                        <value>Last quarter end</value>
+                      </presentation>
+                      <presentation>
+                        <key>ru</key>
+                        <value>Конец прошлого квартала</value>
+                      </presentation>
+                      <presentation>
+                        <key>vi</key>
+                        <value>Cuối quý trước</value>
+                      </presentation>
+                      <value xsi:type="core:StringValue">
+                        <value>LastQuarterEnd</value>
+                      </value>
+                    </choiceList>
+                    <choiceList>
+                      <presentation>
+                        <key>en</key>
+                        <value>Last month end</value>
+                      </presentation>
+                      <presentation>
+                        <key>ru</key>
+                        <value>Конец прошлого месяца</value>
+                      </presentation>
+                      <presentation>
+                        <key>vi</key>
+                        <value>Cuối tháng trước</value>
+                      </presentation>
+                      <value xsi:type="core:StringValue">
+                        <value>LastMonthEnd</value>
+                      </value>
+                    </choiceList>
+                    <choiceList>
+                      <presentation>
+                        <key>en</key>
+                        <value>Last week end</value>
+                      </presentation>
+                      <presentation>
+                        <key>ru</key>
+                        <value>Конец прошлой недели</value>
+                      </presentation>
+                      <presentation>
+                        <key>vi</key>
+                        <value>Cuối tuần trước</value>
+                      </presentation>
+                      <value xsi:type="core:StringValue">
+                        <value>LastWeekEnd</value>
+                      </value>
+                    </choiceList>
+                    <choiceList>
+                      <presentation>
+                        <key>en</key>
+                        <value>Previous day</value>
+                      </presentation>
+                      <presentation>
+                        <key>ru</key>
+                        <value>Предыдущий день</value>
+                      </presentation>
+                      <presentation>
+                        <key>vi</key>
+                        <value>Ngày trước</value>
+                      </presentation>
+                      <value xsi:type="core:StringValue">
+                        <value>PreviousDay</value>
+                      </value>
+                    </choiceList>
+                    <backColor xsi:type="core:ColorRef">
+                      <color>Style.MasterFieldBackground</color>
+                    </backColor>
+                  </extInfo>
+                </items>
+                <items xsi:type="form:FormGroup">
+                  <name>Custom</name>
+                  <id>225</id>
+                  <items xsi:type="form:FormGroup">
+                    <name>ArbitraryDateIsUsed</name>
+                    <id>226</id>
+                    <items xsi:type="form:FormField">
+                      <name>ProhibitionDate</name>
+                      <id>227</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <dataPath xsi:type="form:DataPath">
+                        <segments>ProhibitionDate</segments>
+                      </dataPath>
+                      <titleLocation>None</titleLocation>
+                      <handlers>
+                        <event>OnChange</event>
+                        <name>ProhibitionDateOnChange</name>
+                      </handlers>
+                      <extendedTooltip>
+                        <name>ProhibitionDateExtendedTooltip</name>
+                        <id>343</id>
+                        <visible>true</visible>
+                        <enabled>true</enabled>
+                        <userVisible>
+                          <common>true</common>
+                        </userVisible>
+                        <type>Label</type>
+                        <autoMaxWidth>true</autoMaxWidth>
+                        <autoMaxHeight>true</autoMaxHeight>
+                        <extInfo xsi:type="form:LabelDecorationExtInfo">
+                          <horizontalAlign>Left</horizontalAlign>
+                        </extInfo>
+                      </extendedTooltip>
+                      <contextMenu>
+                        <name>ProhibitionDateContextMenu</name>
+                        <id>228</id>
+                        <visible>true</visible>
+                        <enabled>true</enabled>
+                        <userVisible>
+                          <common>true</common>
+                        </userVisible>
+                        <autoFill>true</autoFill>
+                      </contextMenu>
+                      <type>InputField</type>
+                      <editMode>Enter</editMode>
+                      <showInHeader>true</showInHeader>
+                      <headerHorizontalAlign>Left</headerHorizontalAlign>
+                      <showInFooter>true</showInFooter>
+                      <extInfo xsi:type="form:InputFieldExtInfo">
+                        <autoMaxWidth>true</autoMaxWidth>
+                        <autoMaxHeight>true</autoMaxHeight>
+                        <wrap>true</wrap>
+                        <clearButton>true</clearButton>
+                        <chooseType>true</chooseType>
+                        <typeDomainEnabled>true</typeDomainEnabled>
+                        <textEdit>true</textEdit>
+                      </extInfo>
+                    </items>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <title>
+                      <key>en</key>
+                      <value>Custom date is used</value>
+                    </title>
+                    <title>
+                      <key>ru</key>
+                      <value>Произвольная дата используется</value>
+                    </title>
+                    <title>
+                      <key>vi</key>
+                      <value>Ngày tùy ý được sử dụng</value>
+                    </title>
+                    <toolTip>
+                      <key>en</key>
+                      <value>Custom date is used</value>
+                    </toolTip>
+                    <toolTip>
+                      <key>ru</key>
+                      <value>Произвольная дата используется</value>
+                    </toolTip>
+                    <toolTip>
+                      <key>vi</key>
+                      <value>Ngày tùy ý được sử dụng</value>
+                    </toolTip>
+                    <extendedTooltip>
+                      <name>CustomDateInUseExtendedTooltip</name>
+                      <id>342</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <type>Page</type>
+                    <extInfo xsi:type="form:PageGroupExtInfo">
+                      <group>Vertical</group>
+                      <showTitle>true</showTitle>
+                    </extInfo>
+                  </items>
+                  <items xsi:type="form:FormGroup">
+                    <name>ArbitraryDateIsNotUsed</name>
+                    <id>229</id>
+                    <items xsi:type="form:Decoration">
+                      <name>EmptyTitleForPageRepresentation1</name>
+                      <id>230</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <extendedTooltip>
+                        <name>EmptyLabelForDisplayPages1ExtendedTooltip</name>
+                        <id>345</id>
+                        <visible>true</visible>
+                        <enabled>true</enabled>
+                        <userVisible>
+                          <common>true</common>
+                        </userVisible>
+                        <type>Label</type>
+                        <autoMaxWidth>true</autoMaxWidth>
+                        <autoMaxHeight>true</autoMaxHeight>
+                        <extInfo xsi:type="form:LabelDecorationExtInfo">
+                          <horizontalAlign>Left</horizontalAlign>
+                        </extInfo>
+                      </extendedTooltip>
+                      <contextMenu>
+                        <name>EmptyLabelForDisplayPages1ContextMenu</name>
+                        <id>231</id>
+                        <visible>true</visible>
+                        <enabled>true</enabled>
+                        <userVisible>
+                          <common>true</common>
+                        </userVisible>
+                        <autoFill>true</autoFill>
+                      </contextMenu>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </items>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <title>
+                      <key>en</key>
+                      <value>Custom date is not used</value>
+                    </title>
+                    <title>
+                      <key>ru</key>
+                      <value>Произвольная дата не используется</value>
+                    </title>
+                    <title>
+                      <key>vi</key>
+                      <value>Ngày tùy ý không được sử dụng</value>
+                    </title>
+                    <toolTip>
+                      <key>en</key>
+                      <value>Custom date is not used</value>
+                    </toolTip>
+                    <toolTip>
+                      <key>ru</key>
+                      <value>Произвольная дата не используется</value>
+                    </toolTip>
+                    <toolTip>
+                      <key>vi</key>
+                      <value>Ngày tùy ý không được sử dụng</value>
+                    </toolTip>
+                    <extendedTooltip>
+                      <name>CustomDateNotUsedExtendedTooltip</name>
+                      <id>344</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <type>Page</type>
+                    <extInfo xsi:type="form:PageGroupExtInfo">
+                      <group>Vertical</group>
+                      <showTitle>true</showTitle>
+                    </extInfo>
+                  </items>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <title>
+                    <key>en</key>
+                    <value>Custom date</value>
+                  </title>
+                  <title>
+                    <key>ru</key>
+                    <value>Произвольная дата</value>
+                  </title>
+                  <title>
+                    <key>vi</key>
+                    <value>Ngày tùy ý</value>
+                  </title>
+                  <toolTip>
+                    <key>en</key>
+                    <value>Custom date</value>
+                  </toolTip>
+                  <toolTip>
+                    <key>ru</key>
+                    <value>Произвольная дата</value>
+                  </toolTip>
+                  <toolTip>
+                    <key>vi</key>
+                    <value>Ngày tùy ý</value>
+                  </toolTip>
+                  <extendedTooltip>
+                    <name>CustomDateToolTip</name>
+                    <id>341</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <type>Pages</type>
+                  <extInfo xsi:type="form:PagesGroupExtInfo">
+                    <currentRowUse>Auto</currentRowUse>
+                  </extInfo>
+                </items>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <title>
+                  <key>en</key>
+                  <value>Closing date with description</value>
+                </title>
+                <title>
+                  <key>ru</key>
+                  <value>Дата запрета с описанием</value>
+                </title>
+                <title>
+                  <key>vi</key>
+                  <value>Ngày cấm mô tả</value>
+                </title>
+                <toolTip>
+                  <key>en</key>
+                  <value>Closing date with description</value>
+                </toolTip>
+                <toolTip>
+                  <key>ru</key>
+                  <value>Дата запрета с описанием</value>
+                </toolTip>
+                <toolTip>
+                  <key>vi</key>
+                  <value>Ngày cấm mô tả</value>
+                </toolTip>
+                <extendedTooltip>
+                  <name>ProhibitionDateWithDescriptionExtendedTooltip</name>
+                  <id>339</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualGroup</type>
+                <extInfo xsi:type="form:UsualGroupExtInfo">
+                  <showLeftMargin>true</showLeftMargin>
+                  <united>true</united>
+                  <throughAlign>Auto</throughAlign>
+                  <currentRowUse>Auto</currentRowUse>
+                </extInfo>
+              </items>
+              <items xsi:type="form:FormGroup">
+                <name>AutomaticalDateProperties</name>
+                <id>232</id>
+                <items xsi:type="form:FormGroup">
+                  <name>AutomaticalDateUsed</name>
+                  <id>233</id>
+                  <items xsi:type="form:FormField">
+                    <name>AllowDataChangingToProhibitionDate</name>
+                    <id>234</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <dataPath xsi:type="form:DataPath">
+                      <segments>AllowDataChangingToProhibitionDate</segments>
+                    </dataPath>
+                    <titleLocation>Right</titleLocation>
+                    <handlers>
+                      <event>OnChange</event>
+                      <name>AllowDataChangingToProhibitionDateOnChange</name>
+                    </handlers>
+                    <extendedTooltip>
+                      <name>AllowDataChangeBeforeProhibitionDatesExtendedTooltip</name>
+                      <id>348</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>AllowDataChangeBeforeProhibitionDatesContextMenu</name>
+                      <id>235</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>CheckBoxField</type>
+                    <editMode>Enter</editMode>
+                    <showInHeader>true</showInHeader>
+                    <headerHorizontalAlign>Left</headerHorizontalAlign>
+                    <showInFooter>true</showInFooter>
+                    <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+                  </items>
+                  <items xsi:type="form:FormGroup">
+                    <name>PropertyPermissionDaysCountChanges</name>
+                    <id>236</id>
+                    <items xsi:type="form:FormGroup">
+                      <name>DataChangingBeforeProhibitionDateIsAllowed</name>
+                      <id>237</id>
+                      <items xsi:type="form:Decoration">
+                        <name>PermissionDaysCountTitle</name>
+                        <id>238</id>
+                        <title>
+                          <key>en</key>
+                          <value>During</value>
+                        </title>
+                        <title>
+                          <key>ru</key>
+                          <value>В течение</value>
+                        </title>
+                        <title>
+                          <key>vi</key>
+                          <value>Trong</value>
+                        </title>
+                        <visible>true</visible>
+                        <enabled>true</enabled>
+                        <userVisible>
+                          <common>true</common>
+                        </userVisible>
+                        <extendedTooltip>
+                          <name>NumberOfPermissionDaysHeaderExtendedTooltip</name>
+                          <id>351</id>
+                          <visible>true</visible>
+                          <enabled>true</enabled>
+                          <userVisible>
+                            <common>true</common>
+                          </userVisible>
+                          <type>Label</type>
+                          <autoMaxWidth>true</autoMaxWidth>
+                          <autoMaxHeight>true</autoMaxHeight>
+                          <extInfo xsi:type="form:LabelDecorationExtInfo">
+                            <horizontalAlign>Left</horizontalAlign>
+                          </extInfo>
+                        </extendedTooltip>
+                        <contextMenu>
+                          <name>NumberOfPermissionDaysHeaderContextMenu</name>
+                          <id>239</id>
+                          <visible>true</visible>
+                          <enabled>true</enabled>
+                          <userVisible>
+                            <common>true</common>
+                          </userVisible>
+                          <autoFill>true</autoFill>
+                        </contextMenu>
+                        <type>Label</type>
+                        <autoMaxWidth>true</autoMaxWidth>
+                        <autoMaxHeight>true</autoMaxHeight>
+                        <extInfo xsi:type="form:LabelDecorationExtInfo">
+                          <horizontalAlign>Left</horizontalAlign>
+                        </extInfo>
+                      </items>
+                      <items xsi:type="form:FormField">
+                        <name>PermissionDaysCount</name>
+                        <id>240</id>
+                        <title>
+                          <key>en</key>
+                          <value>  days after prohibition date</value>
+                        </title>
+                        <title>
+                          <key>ru</key>
+                          <value>  дней после даты запрета</value>
+                        </title>
+                        <title>
+                          <key>vi</key>
+                          <value>ngày sau ngày cấm</value>
+                        </title>
+                        <visible>true</visible>
+                        <enabled>true</enabled>
+                        <userVisible>
+                          <common>true</common>
+                        </userVisible>
+                        <dataPath xsi:type="form:DataPath">
+                          <segments>PermissionDaysCount</segments>
+                        </dataPath>
+                        <titleLocation>Right</titleLocation>
+                        <handlers>
+                          <event>OnChange</event>
+                          <name>PermissionDaysCountOnChange</name>
+                        </handlers>
+                        <extendedTooltip>
+                          <name>PermissionCountOfDaysExtendedTooltip</name>
+                          <id>352</id>
+                          <visible>true</visible>
+                          <enabled>true</enabled>
+                          <userVisible>
+                            <common>true</common>
+                          </userVisible>
+                          <type>Label</type>
+                          <autoMaxWidth>true</autoMaxWidth>
+                          <autoMaxHeight>true</autoMaxHeight>
+                          <extInfo xsi:type="form:LabelDecorationExtInfo">
+                            <horizontalAlign>Left</horizontalAlign>
+                          </extInfo>
+                        </extendedTooltip>
+                        <contextMenu>
+                          <name>PermissionCountOfDaysContextMenu</name>
+                          <id>241</id>
+                          <visible>true</visible>
+                          <enabled>true</enabled>
+                          <userVisible>
+                            <common>true</common>
+                          </userVisible>
+                          <autoFill>true</autoFill>
+                        </contextMenu>
+                        <type>InputField</type>
+                        <editMode>Enter</editMode>
+                        <showInHeader>true</showInHeader>
+                        <headerHorizontalAlign>Left</headerHorizontalAlign>
+                        <showInFooter>true</showInFooter>
+                        <extInfo xsi:type="form:InputFieldExtInfo">
+                          <handlers>
+                            <event>AutoComplete</event>
+                            <name>PermissionDaysCountAutoCompleteText</name>
+                          </handlers>
+                          <autoMaxWidth>true</autoMaxWidth>
+                          <autoMaxHeight>true</autoMaxHeight>
+                          <wrap>true</wrap>
+                          <chooseType>true</chooseType>
+                          <typeDomainEnabled>true</typeDomainEnabled>
+                          <textEdit>true</textEdit>
+                        </extInfo>
+                      </items>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <title>
+                        <key>en</key>
+                        <value>It is allowed to change data before closing date</value>
+                      </title>
+                      <title>
+                        <key>ru</key>
+                        <value>Изменение данных до даты запрета разрешено</value>
+                      </title>
+                      <title>
+                        <key>vi</key>
+                        <value>Cho phép thay đổi dữ liệu trước ngày cấm</value>
+                      </title>
+                      <toolTip>
+                        <key>en</key>
+                        <value>It is allowed to change data before closing date</value>
+                      </toolTip>
+                      <toolTip>
+                        <key>ru</key>
+                        <value>Изменение данных до даты запрета разрешено</value>
+                      </toolTip>
+                      <toolTip>
+                        <key>vi</key>
+                        <value>Cho phép thay đổi dữ liệu trước ngày cấm</value>
+                      </toolTip>
+                      <extendedTooltip>
+                        <name>UpdateDataToProhibitionDateAllowedExtendedTooltip</name>
+                        <id>350</id>
+                        <visible>true</visible>
+                        <enabled>true</enabled>
+                        <userVisible>
+                          <common>true</common>
+                        </userVisible>
+                        <type>Label</type>
+                        <autoMaxWidth>true</autoMaxWidth>
+                        <autoMaxHeight>true</autoMaxHeight>
+                        <extInfo xsi:type="form:LabelDecorationExtInfo">
+                          <horizontalAlign>Left</horizontalAlign>
+                        </extInfo>
+                      </extendedTooltip>
+                      <type>Page</type>
+                      <extInfo xsi:type="form:PageGroupExtInfo">
+                        <showTitle>true</showTitle>
+                      </extInfo>
+                    </items>
+                    <items xsi:type="form:FormGroup">
+                      <name>DataChangingBeforeProhibitionDateIsNotAllowed</name>
+                      <id>242</id>
+                      <items xsi:type="form:Decoration">
+                        <name>EmptyTitleForPageRepresentation2</name>
+                        <id>243</id>
+                        <visible>true</visible>
+                        <enabled>true</enabled>
+                        <userVisible>
+                          <common>true</common>
+                        </userVisible>
+                        <extendedTooltip>
+                          <name>EmptyLabelForDisplayPages2ExtendedTooltip</name>
+                          <id>354</id>
+                          <visible>true</visible>
+                          <enabled>true</enabled>
+                          <userVisible>
+                            <common>true</common>
+                          </userVisible>
+                          <type>Label</type>
+                          <autoMaxWidth>true</autoMaxWidth>
+                          <autoMaxHeight>true</autoMaxHeight>
+                          <extInfo xsi:type="form:LabelDecorationExtInfo">
+                            <horizontalAlign>Left</horizontalAlign>
+                          </extInfo>
+                        </extendedTooltip>
+                        <contextMenu>
+                          <name>EmptyLabelFor2PagesDisplayContextMenu</name>
+                          <id>244</id>
+                          <visible>true</visible>
+                          <enabled>true</enabled>
+                          <userVisible>
+                            <common>true</common>
+                          </userVisible>
+                          <autoFill>true</autoFill>
+                        </contextMenu>
+                        <type>Label</type>
+                        <autoMaxWidth>true</autoMaxWidth>
+                        <autoMaxHeight>true</autoMaxHeight>
+                        <extInfo xsi:type="form:LabelDecorationExtInfo">
+                          <horizontalAlign>Left</horizontalAlign>
+                        </extInfo>
+                      </items>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <title>
+                        <key>en</key>
+                        <value>It is not allowed to change data before closing date</value>
+                      </title>
+                      <title>
+                        <key>ru</key>
+                        <value>Изменение данных до даты запрета не разрешено</value>
+                      </title>
+                      <title>
+                        <key>vi</key>
+                        <value>Không cho phép thay đổi dữ liệu trước ngày cấm</value>
+                      </title>
+                      <toolTip>
+                        <key>en</key>
+                        <value>It is not allowed to change data before closing date</value>
+                      </toolTip>
+                      <toolTip>
+                        <key>ru</key>
+                        <value>Изменение данных до даты запрета не разрешено</value>
+                      </toolTip>
+                      <toolTip>
+                        <key>vi</key>
+                        <value>Không cho phép thay đổi dữ liệu trước ngày cấm</value>
+                      </toolTip>
+                      <extendedTooltip>
+                        <name>DataChangeToProhibitionDateNotAllowedExtendedTooltip</name>
+                        <id>353</id>
+                        <visible>true</visible>
+                        <enabled>true</enabled>
+                        <userVisible>
+                          <common>true</common>
+                        </userVisible>
+                        <type>Label</type>
+                        <autoMaxWidth>true</autoMaxWidth>
+                        <autoMaxHeight>true</autoMaxHeight>
+                        <extInfo xsi:type="form:LabelDecorationExtInfo">
+                          <horizontalAlign>Left</horizontalAlign>
+                        </extInfo>
+                      </extendedTooltip>
+                      <type>Page</type>
+                      <extInfo xsi:type="form:PageGroupExtInfo">
+                        <group>Vertical</group>
+                        <showTitle>true</showTitle>
+                      </extInfo>
+                    </items>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <title>
+                      <key>en</key>
+                      <value>Number of days when change is enabled property</value>
+                    </title>
+                    <title>
+                      <key>ru</key>
+                      <value>Свойство количество дней разрешения изменения</value>
+                    </title>
+                    <title>
+                      <key>vi</key>
+                      <value>Thuộc tính số lượng ngày cho phép thay đổi</value>
+                    </title>
+                    <toolTip>
+                      <key>en</key>
+                      <value>Number of days when change is enabled property</value>
+                    </toolTip>
+                    <toolTip>
+                      <key>ru</key>
+                      <value>Свойство количество дней разрешения изменения</value>
+                    </toolTip>
+                    <toolTip>
+                      <key>vi</key>
+                      <value>Thuộc tính số lượng ngày cho phép thay đổi</value>
+                    </toolTip>
+                    <extendedTooltip>
+                      <name>PropertyCountDaysPermissionsChangesExtendedTooltip</name>
+                      <id>349</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <type>Pages</type>
+                    <extInfo xsi:type="form:PagesGroupExtInfo">
+                      <currentRowUse>Auto</currentRowUse>
+                    </extInfo>
+                  </items>
+                  <items xsi:type="form:Decoration">
+                    <name>AutomaticalDateExplanation</name>
+                    <id>245</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <extendedTooltip>
+                      <name>DescriptionOfAutomaticDateExtendedTooltip</name>
+                      <id>355</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>DescriptionOfAutomaticDateContextMenu</name>
+                      <id>246</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>Label</type>
+                    <width>53</width>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <height>3</height>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <textColor xsi:type="core:ColorDef">
+                      <blue>128</blue>
+                    </textColor>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </items>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <title>
+                    <key>en</key>
+                    <value>Automatic date is used</value>
+                  </title>
+                  <title>
+                    <key>ru</key>
+                    <value>Непроизвольная дата используется</value>
+                  </title>
+                  <title>
+                    <key>vi</key>
+                    <value>Ngày không tùy ý được sử dụng</value>
+                  </title>
+                  <toolTip>
+                    <key>en</key>
+                    <value>Automatic date is used</value>
+                  </toolTip>
+                  <toolTip>
+                    <key>ru</key>
+                    <value>Непроизвольная дата используется</value>
+                  </toolTip>
+                  <toolTip>
+                    <key>vi</key>
+                    <value>Ngày không tùy ý được sử dụng</value>
+                  </toolTip>
+                  <extendedTooltip>
+                    <name>CustomDateInUseExtendedTooltip</name>
+                    <id>347</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <type>Page</type>
+                  <extInfo xsi:type="form:PageGroupExtInfo">
+                    <group>Vertical</group>
+                  </extInfo>
+                </items>
+                <items xsi:type="form:FormGroup">
+                  <name>AutomaticalDateNotUsed</name>
+                  <id>247</id>
+                  <items xsi:type="form:Decoration">
+                    <name>EmptyTitleForPageRepresentation3</name>
+                    <id>248</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <extendedTooltip>
+                      <name>EmptyLabelForDisplayPages3ExtendedTooltip</name>
+                      <id>357</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>EmptyLabelForDisplayPages3ContextMenu</name>
+                      <id>249</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </items>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <title>
+                    <key>en</key>
+                    <value>Automatic date is not used</value>
+                  </title>
+                  <title>
+                    <key>ru</key>
+                    <value>Непроизвольная дата не используется</value>
+                  </title>
+                  <title>
+                    <key>vi</key>
+                    <value>Ngày không tùy ý không được sử dụng</value>
+                  </title>
+                  <toolTip>
+                    <key>en</key>
+                    <value>Automatic date is not used</value>
+                  </toolTip>
+                  <toolTip>
+                    <key>ru</key>
+                    <value>Непроизвольная дата не используется</value>
+                  </toolTip>
+                  <toolTip>
+                    <key>vi</key>
+                    <value>Ngày không tùy ý không được sử dụng</value>
+                  </toolTip>
+                  <extendedTooltip>
+                    <name>CustomDateNotUsedExtendedTooltip</name>
+                    <id>356</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <type>Page</type>
+                  <extInfo xsi:type="form:PageGroupExtInfo">
+                    <group>Vertical</group>
+                    <showTitle>true</showTitle>
+                  </extInfo>
+                </items>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <title>
+                  <key>en</key>
+                  <value>Properties of not arbitrary date</value>
+                </title>
+                <title>
+                  <key>ru</key>
+                  <value>Свойства непроизвольной даты</value>
+                </title>
+                <title>
+                  <key>vi</key>
+                  <value>Thuộc tính của ngày không tùy ý</value>
+                </title>
+                <toolTip>
+                  <key>en</key>
+                  <value>Properties of not arbitrary date</value>
+                </toolTip>
+                <toolTip>
+                  <key>ru</key>
+                  <value>Свойства непроизвольной даты</value>
+                </toolTip>
+                <toolTip>
+                  <key>vi</key>
+                  <value>Thuộc tính của ngày không tùy ý</value>
+                </toolTip>
+                <extendedTooltip>
+                  <name>PropertiesOfAutomaticDatesExtendedTooltip</name>
+                  <id>346</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>Pages</type>
+                <extInfo xsi:type="form:PagesGroupExtInfo">
+                  <currentRowUse>Auto</currentRowUse>
+                </extInfo>
+              </items>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <title>
+                <key>en</key>
+                <value>Indication method common date</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Способ указания общая дата</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Phương thức chỉ ra ngày chung</value>
+              </title>
+              <toolTip>
+                <key>en</key>
+                <value>Indication method common date</value>
+              </toolTip>
+              <toolTip>
+                <key>ru</key>
+                <value>Способ указания общая дата</value>
+              </toolTip>
+              <toolTip>
+                <key>vi</key>
+                <value>Phương thức chỉ ra ngày chung</value>
+              </toolTip>
+              <extendedTooltip>
+                <name>InstructionMethodCommonDateExtendedTooltip</name>
+                <id>337</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>Page</type>
+              <extInfo xsi:type="form:PageGroupExtInfo">
+                <group>Vertical</group>
+                <showTitle>true</showTitle>
+              </extInfo>
+            </items>
+            <items xsi:type="form:FormGroup">
+              <name>SpecifiedModeBySectionsObjects</name>
+              <id>250</id>
+              <items xsi:type="form:Table">
+                <name>ProhibitionDates</name>
+                <id>132</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <dataPath xsi:type="form:DataPath">
+                  <segments>ProhibitionDates</segments>
+                </dataPath>
+                <titleLocation>None</titleLocation>
+                <excludedCommands>Change</excludedCommands>
+                <excludedCommands>Copy</excludedCommands>
+                <excludedCommands>EndEdit</excludedCommands>
+                <excludedCommands>HierarchicalList</excludedCommands>
+                <excludedCommands>List</excludedCommands>
+                <excludedCommands>MoveDown</excludedCommands>
+                <excludedCommands>MoveUp</excludedCommands>
+                <excludedCommands>OutputList</excludedCommands>
+                <excludedCommands>SortListAsc</excludedCommands>
+                <excludedCommands>SortListDesc</excludedCommands>
+                <excludedCommands>Tree</excludedCommands>
+                <items xsi:type="form:FormField">
+                  <name>ProhibitionDatesFullPresentation</name>
+                  <id>143</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <dataPath xsi:type="form:DataPath">
+                    <segments>ProhibitionDates.FullPresentation</segments>
+                  </dataPath>
+                  <toolTip>
+                    <key>en</key>
+                    <value>Section of change closing dates and section objects</value>
+                  </toolTip>
+                  <toolTip>
+                    <key>ru</key>
+                    <value>Раздел дат запрета изменения и объекты разделов</value>
+                  </toolTip>
+                  <toolTip>
+                    <key>vi</key>
+                    <value>Phần hành ngày cấm thay đổi và đối tượng của phần</value>
+                  </toolTip>
+                  <extendedTooltip>
+                    <name>ProhibitionDatesFullPresentationExtendedTooltip</name>
+                    <id>394</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <contextMenu>
+                    <name>ProhibitionDatesFullPresentationContextMenu</name>
+                    <id>144</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <autoFill>true</autoFill>
+                  </contextMenu>
+                  <type>InputField</type>
+                  <editMode>EnterOnInput</editMode>
+                  <showInHeader>true</showInHeader>
+                  <headerHorizontalAlign>Left</headerHorizontalAlign>
+                  <showInFooter>true</showInFooter>
+                  <extInfo xsi:type="form:InputFieldExtInfo">
+                    <handlers>
+                      <event>StartChoice</event>
+                      <name>ProhibitionDatesFullPresentationStartChoice</name>
+                    </handlers>
+                    <handlers>
+                      <event>Clearing</event>
+                      <name>ProhibitionDatesFullPresentationClearing</name>
+                    </handlers>
+                    <handlers>
+                      <event>ChoiceProcessing</event>
+                      <name>ProhibitionDatesFullPresentationChoiceProcessing</name>
+                    </handlers>
+                    <width>16</width>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <wrap>true</wrap>
+                    <choiceButton>true</choiceButton>
+                    <chooseType>true</chooseType>
+                    <typeDomainEnabled>true</typeDomainEnabled>
+                  </extInfo>
+                </items>
+                <items xsi:type="form:FormField">
+                  <name>ProhibitionDatesProhibitionDateDescriptionPresentation</name>
+                  <id>141</id>
+                  <title>
+                    <key>en</key>
+                    <value>Closing date</value>
+                  </title>
+                  <title>
+                    <key>ru</key>
+                    <value>Дата запрета</value>
+                  </title>
+                  <title>
+                    <key>vi</key>
+                    <value>Ngày cấm</value>
+                  </title>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <dataPath xsi:type="form:DataPath">
+                    <segments>ProhibitionDates.ProhibitionDateDescriptionPresentation</segments>
+                  </dataPath>
+                  <extendedTooltip>
+                    <name>ProhibitionDatesDateDescriptionPresentationExtendedTooltip</name>
+                    <id>395</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <contextMenu>
+                    <name>ProhibitionDatesDateDescriptionPresentationContextMenu</name>
+                    <id>142</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <autoFill>true</autoFill>
+                  </contextMenu>
+                  <type>InputField</type>
+                  <editMode>EnterOnInput</editMode>
+                  <showInHeader>true</showInHeader>
+                  <headerHorizontalAlign>Left</headerHorizontalAlign>
+                  <showInFooter>true</showInFooter>
+                  <extInfo xsi:type="form:InputFieldExtInfo">
+                    <width>16</width>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <wrap>true</wrap>
+                    <choiceButton>true</choiceButton>
+                    <chooseType>true</chooseType>
+                    <typeDomainEnabled>true</typeDomainEnabled>
+                  </extInfo>
+                </items>
+                <items xsi:type="form:FormField">
+                  <name>ProhibitionDatesProhibitionDate</name>
+                  <id>135</id>
+                  <title>
+                    <key>en</key>
+                    <value>Prevent changes to</value>
+                  </title>
+                  <title>
+                    <key>ru</key>
+                    <value>Запрет изменения по</value>
+                  </title>
+                  <title>
+                    <key>vi</key>
+                    <value>Cấm thay đổi</value>
+                  </title>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <dataPath xsi:type="form:DataPath">
+                    <segments>ProhibitionDates.ProhibitionDate</segments>
+                  </dataPath>
+                  <handlers>
+                    <event>OnChange</event>
+                    <name>ProhibitionDatesProhibitionDateOnChange</name>
+                  </handlers>
+                  <extendedTooltip>
+                    <name>ProhibitionDatesProhibitionDateExtendedTooltip</name>
+                    <id>396</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <contextMenu>
+                    <name>ProhibitionDatesProhibitionDateContextMenu</name>
+                    <id>136</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <autoFill>true</autoFill>
+                  </contextMenu>
+                  <type>InputField</type>
+                  <editMode>EnterOnInput</editMode>
+                  <showInHeader>true</showInHeader>
+                  <headerHorizontalAlign>Left</headerHorizontalAlign>
+                  <showInFooter>true</showInFooter>
+                  <extInfo xsi:type="form:InputFieldExtInfo">
+                    <width>16</width>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <wrap>true</wrap>
+                    <clearButton>true</clearButton>
+                    <chooseType>true</chooseType>
+                    <typeDomainEnabled>true</typeDomainEnabled>
+                    <textEdit>true</textEdit>
+                  </extInfo>
+                </items>
+                <autoCommandBar>
+                  <name>ProhibitionDatesCommandPanel</name>
+                  <id>134</id>
+                  <items xsi:type="form:Button">
+                    <name>ProhibitionDataSections</name>
+                    <id>399</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <extendedTooltip>
+                      <name>ProhibitionDataSectionsExtendedTooltip</name>
+                      <id>400</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <commandName>Form.Command.Sections</commandName>
+                    <representation>Auto</representation>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <placementArea>UserCmds</placementArea>
+                    <representationInContextMenu>Auto</representationInContextMenu>
+                  </items>
+                  <items xsi:type="form:Button">
+                    <name>ProhibitionDatesPick</name>
+                    <id>401</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <extendedTooltip>
+                      <name>ProhibitionDatesPickExtendedTooltip</name>
+                      <id>402</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <commandName>Form.Command.PickObjects</commandName>
+                    <representation>Auto</representation>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <placementArea>UserCmds</placementArea>
+                    <representationInContextMenu>Auto</representationInContextMenu>
+                  </items>
+                  <items xsi:type="form:Button">
+                    <name>ProhibitionDatesAdd</name>
+                    <id>405</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <extendedTooltip>
+                      <name>ProhibitionDatesAddExtendedTooltip</name>
+                      <id>406</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <commandName>Form.Item.ProhibitionDates.StandardCommand.Add</commandName>
+                    <representation>Auto</representation>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <placementArea>UserCmds</placementArea>
+                    <representationInContextMenu>Auto</representationInContextMenu>
+                    <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
+                  </items>
+                  <items xsi:type="form:Button">
+                    <name>ProhibitionDatesChange</name>
+                    <id>407</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <extendedTooltip>
+                      <name>ProhibitionDatesChangeExtendedTooltip</name>
+                      <id>408</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <commandName>Form.Command.ProhibitionDatesChange</commandName>
+                    <representation>Auto</representation>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <placementArea>UserCmds</placementArea>
+                    <representationInContextMenu>Auto</representationInContextMenu>
+                  </items>
+                  <items xsi:type="form:FormGroup">
+                    <name>ProhibitionDatesStandardCommands</name>
+                    <id>403</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <title>
+                      <key>en</key>
+                      <value>Closing dates standard commands</value>
+                    </title>
+                    <title>
+                      <key>ru</key>
+                      <value>Даты запрета стандартные команды</value>
+                    </title>
+                    <title>
+                      <key>vi</key>
+                      <value>Ngày cấm lệnh chuẩn</value>
+                    </title>
+                    <toolTip>
+                      <key>en</key>
+                      <value>Closing dates standard commands</value>
+                    </toolTip>
+                    <toolTip>
+                      <key>ru</key>
+                      <value>Даты запрета стандартные команды</value>
+                    </toolTip>
+                    <toolTip>
+                      <key>vi</key>
+                      <value>Ngày cấm lệnh chuẩn</value>
+                    </toolTip>
+                    <extendedTooltip>
+                      <name>ProhibitionDatesStandardCommandsExtendedTooltip</name>
+                      <id>404</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <extInfo xsi:type="form:ButtonGroupExtInfo">
+                      <commandSource>Item.ProhibitionDates</commandSource>
+                    </extInfo>
+                  </items>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <horizontalAlign>Left</horizontalAlign>
+                </autoCommandBar>
+                <handlers>
+                  <event>OnEditEnd</event>
+                  <name>ProhibitionDatesOnEditEnd</name>
+                </handlers>
+                <handlers>
+                  <event>Selection</event>
+                  <name>ProhibitionDatesSelection</name>
+                </handlers>
+                <handlers>
+                  <event>BeforeAddRow</event>
+                  <name>ProhibitionDatesBeforeAddRow</name>
+                </handlers>
+                <handlers>
+                  <event>BeforeDeleteRow</event>
+                  <name>ProhibitionDatesBeforeDeleteRow</name>
+                </handlers>
+                <handlers>
+                  <event>OnActivateRow</event>
+                  <name>ProhibitionDatesOnActivateRow</name>
+                </handlers>
+                <handlers>
+                  <event>ChoiceProcessing</event>
+                  <name>ProhibitionDatesChoiceProcessing</name>
+                </handlers>
+                <handlers>
+                  <event>BeforeRowChange</event>
+                  <name>ProhibitionDatesBeforeRowChange</name>
+                </handlers>
+                <handlers>
+                  <event>OnStartEdit</event>
+                  <name>ProhibitionDatesOnStartEdit</name>
+                </handlers>
+                <searchStringAddition>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <name>ProhibitionDatesSearchString</name>
+                  <id>420</id>
+                  <extendedTooltip>
+                    <name>ProhibitionDatesSearchStringExtendedTooltip</name>
+                    <id>422</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <contextMenu>
+                    <name>ProhibitionDatesSearchStringContextMenu</name>
+                    <id>421</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <autoFill>true</autoFill>
+                  </contextMenu>
+                  <source>ProhibitionDatesSearchString</source>
+                  <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+                    <autoMaxWidth>true</autoMaxWidth>
+                  </extInfo>
+                </searchStringAddition>
+                <viewStatusAddition>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <name>ProhibitionDatesViewStatus</name>
+                  <id>423</id>
+                  <extendedTooltip>
+                    <name>ProhibitionDatesViewStatusExtendedTooltip</name>
+                    <id>425</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <contextMenu>
+                    <name>ProhibitionDatesViewStatusContextMenu</name>
+                    <id>424</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <autoFill>true</autoFill>
+                  </contextMenu>
+                  <type>ViewStatusAddition</type>
+                  <source>ProhibitionDatesViewStatus</source>
+                  <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+                    <autoMaxWidth>true</autoMaxWidth>
+                  </extInfo>
+                </viewStatusAddition>
+                <searchControlAddition>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <name>ProhibitionDatesSearchManagement</name>
+                  <id>426</id>
+                  <extendedTooltip>
+                    <name>ProhibitionDatesSearchManagementExtendedTooltip</name>
+                    <id>428</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <contextMenu>
+                    <name>ProhibitionDatesSearchManagementContextMenu</name>
+                    <id>427</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <autoFill>true</autoFill>
+                  </contextMenu>
+                  <type>SearchControlAddition</type>
+                  <source>ProhibitionDatesSearchManagement</source>
+                  <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+                    <autoMaxWidth>true</autoMaxWidth>
+                  </extInfo>
+                </searchControlAddition>
+                <extendedTooltip>
+                  <name>ProhibitionDatesExtendedTooltip</name>
+                  <id>393</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <contextMenu>
+                  <name>ProhibitionDatesContextMenu</name>
+                  <id>133</id>
+                  <items xsi:type="form:Button">
+                    <name>ProhibitionDatesContextMenuAdd</name>
+                    <id>274</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <extendedTooltip>
+                      <name>ProhibitionDatesContextMenuAddExtendedTooltip</name>
+                      <id>389</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <commandName>Form.Item.ProhibitionDates.StandardCommand.Add</commandName>
+                    <representation>Auto</representation>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <placementArea>UserCmds</placementArea>
+                    <representationInContextMenu>Auto</representationInContextMenu>
+                  </items>
+                  <items xsi:type="form:Button">
+                    <name>ProhibitionDatesContextMenuChange</name>
+                    <id>273</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <extendedTooltip>
+                      <name>ProhibitionDatesContextMenuChangeExtendedTooltip</name>
+                      <id>390</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <commandName>Form.Command.ProhibitionDatesChange</commandName>
+                    <representation>Auto</representation>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <placementArea>UserCmds</placementArea>
+                    <representationInContextMenu>Auto</representationInContextMenu>
+                  </items>
+                  <items xsi:type="form:Button">
+                    <name>ProhibitionDatesContextMenuDelete</name>
+                    <id>276</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <extendedTooltip>
+                      <name>ProhibitionDatesContextMenuDeleteExtendedTooltip</name>
+                      <id>391</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <commandName>Form.Item.ProhibitionDates.StandardCommand.Delete</commandName>
+                    <representation>Auto</representation>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <placementArea>UserCmds</placementArea>
+                    <representationInContextMenu>Auto</representationInContextMenu>
+                  </items>
+                  <items xsi:type="form:FormGroup">
+                    <name>ProhibitionDatesContextMenuStandardCommands</name>
+                    <id>275</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <title>
+                      <key>en</key>
+                      <value>Closing dates context menu standard commands</value>
+                    </title>
+                    <title>
+                      <key>ru</key>
+                      <value>Даты запрета контекстное меню стандартные команды</value>
+                    </title>
+                    <title>
+                      <key>vi</key>
+                      <value>Ngày cấm menu nóng thanh lệnh chuẩn</value>
+                    </title>
+                    <extendedTooltip>
+                      <name>ProhibitionDatesContextMenuStandardCommandsExtendedTooltip</name>
+                      <id>392</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <extInfo xsi:type="form:ButtonGroupExtInfo">
+                      <commandSource>Item.ProhibitionDates</commandSource>
+                    </extInfo>
+                  </items>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                </contextMenu>
+                <representation>Tree</representation>
+                <changeRowSet>true</changeRowSet>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <heightInTableRows>3</heightInTableRows>
+                <autoMaxRowsCount>true</autoMaxRowsCount>
+                <selectionMode>MultiRow</selectionMode>
+                <header>true</header>
+                <headerHeight>1</headerHeight>
+                <footerHeight>1</footerHeight>
+                <horizontalScrollBar>AutoUse</horizontalScrollBar>
+                <verticalScrollBar>AutoUse</verticalScrollBar>
+                <horizontalLines>true</horizontalLines>
+                <verticalLines>true</verticalLines>
+                <autoInsertNewRow>true</autoInsertNewRow>
+                <searchOnInput>Auto</searchOnInput>
+                <initialListView>Auto</initialListView>
+                <initialTreeView>ExpandAllLevels</initialTreeView>
+                <horizontalStretch>true</horizontalStretch>
+                <verticalStretch>true</verticalStretch>
+                <enableStartDrag>true</enableStartDrag>
+                <enableDrag>true</enableDrag>
+                <searchStringLocation>None</searchStringLocation>
+                <viewStatusLocation>None</viewStatusLocation>
+                <searchControlLocation>None</searchControlLocation>
+              </items>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <title>
+                <key>en</key>
+                <value>Indication method by sections objects</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Способ указания по разделам объектам</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Phương thức chỉ ra theo phần hành đối tượng</value>
+              </title>
+              <toolTip>
+                <key>en</key>
+                <value>Indication method by sections objects</value>
+              </toolTip>
+              <toolTip>
+                <key>ru</key>
+                <value>Способ указания по разделам объектам</value>
+              </toolTip>
+              <toolTip>
+                <key>vi</key>
+                <value>Phương thức chỉ ra theo phần hành đối tượng</value>
+              </toolTip>
+              <extendedTooltip>
+                <name>MethodOfInstructionBySectionsObjectsExtendedTooltip</name>
+                <id>358</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>Page</type>
+              <extInfo xsi:type="form:PageGroupExtInfo">
+                <group>Vertical</group>
+                <showTitle>true</showTitle>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>en</key>
+              <value>Indication methods</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Способы указания</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Phương thức chỉ ra</value>
+            </title>
+            <toolTip>
+              <key>en</key>
+              <value>Indication methods</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Способы указания</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Phương thức chỉ ra</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>WaysToSpecifyExtendedTooltip</name>
+              <id>336</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>Pages</type>
+            <extInfo xsi:type="form:PagesGroupExtInfo">
+              <currentRowUse>Auto</currentRowUse>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>en</key>
+            <value>Page user selected</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Страница пользователь выбран</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Trang người sử dụng được chọn</value>
+          </title>
+          <toolTip>
+            <key>en</key>
+            <value>Page user selected</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Страница пользователь выбран</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Trang người sử dụng được chọn</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>PageSelectedUserExtendedTooltip</name>
+            <id>334</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>Page</type>
+          <extInfo xsi:type="form:PageGroupExtInfo">
+            <group>Vertical</group>
+            <showTitle>true</showTitle>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>UserDataExtendedTooltip</name>
+          <id>331</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>Pages</type>
+        <extInfo xsi:type="form:PagesGroupExtInfo">
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>CurrentUserPresentationExtendedTooltip</name>
+        <id>410</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Set up closing date</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Настройка даты запрета</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Tùy chỉnh ngày cấm</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Set up closing date</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Настройка даты запрета</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tùy chỉnh ngày cấm</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>SettingProhibitionDatesExtendedTooltip</name>
+      <id>323</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <autoCommandBar>
+    <name>FormCommandBar</name>
+    <id>-1</id>
+    <items xsi:type="form:FormGroup">
+      <name>Reports</name>
+      <id>197</id>
+      <items xsi:type="form:Button">
+        <name>ProhibitionDatesByUsers</name>
+        <id>198</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>ProhibitionDatesByUsersExtendedTooltip</name>
+          <id>318</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <commandName>Form.Command.ProhibitionDatesByUsers</commandName>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <items xsi:type="form:Button">
+        <name>ProhibitionDatesBySectionsObjectsForUsers</name>
+        <id>199</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>ProhibitionDatesBySectionsObjectsForUsersExtendedTooltip</name>
+          <id>319</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <commandName>Form.Command.ProhibitionDatesBySectionsObjectsForUsers</commandName>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Reports</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Отчеты</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Báo cáo</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Reports according to closing dates of data change specified &quot;By users&quot;</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Отчеты по
+датам запрета изменения данных, установленным &quot;По пользователям&quot;</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Báo cáo theo
+ngày cấm thay đổi dữ liệu mà đã thiết lập &quot;Theo người sử dụng&quot;</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>ReportsExtendedTooltip</name>
+        <id>317</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>Popup</type>
+      <extInfo xsi:type="form:PopupGroupExtInfo">
+        <picture xsi:type="core:PictureRef">
+          <picture>StdPicture.Report</picture>
+        </picture>
+        <representation>Auto</representation>
+      </extInfo>
+    </items>
+    <items xsi:type="form:Button">
+      <name>RecalculateDates</name>
+      <id>316</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>RecalculateDatesExtendedTooltip</name>
+        <id>320</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.RecalculateDates</commandName>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+      <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
+    </items>
+    <items xsi:type="form:Button">
+      <name>Refresh</name>
+      <id>200</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>RefreshExtendedTooltip</name>
+        <id>321</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.Refresh</commandName>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+      <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
+  </autoCommandBar>
+  <handlers>
+    <event>ChoiceProcessing</event>
+    <name>ChoiceProcessing</name>
+  </handlers>
+  <handlers>
+    <event>BeforeClose</event>
+    <name>BeforeClose</name>
+  </handlers>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>OnCreateAtServer</name>
+  </handlers>
+  <handlers>
+    <event>OnClose</event>
+    <name>OnClose</name>
+  </handlers>
+  <width>60</width>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <allowFormCustomize>true</allowFormCustomize>
+  <enabled>true</enabled>
+  <verticalScroll>UseIfNecessary</verticalScroll>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>ProhibitionDates</name>
+    <title>
+      <key>en</key>
+      <value>Closing date</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Даты запрета</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Ngày cấm</value>
+    </title>
+    <id>1</id>
+    <valueType>
+      <types>ValueTree</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>FullPresentation</name>
+      <title>
+        <key>en</key>
+        <value>Section, object</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Раздел, объект</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Phần hành, đối tượng</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Presentation</name>
+      <title>
+        <key>en</key>
+        <value>Presentation</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Представление</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Trình bày</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Section</name>
+      <title>
+        <key>en</key>
+        <value>Section</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Раздел</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Phần hành</value>
+      </title>
+      <id>4</id>
+      <valueType>
+        <types>ChartOfCharacteristicTypesRef.ChangingProhibitionDatesSections</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Object</name>
+      <title>
+        <key>en</key>
+        <value>Object</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>объект</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>đối tượng</value>
+      </title>
+      <id>6</id>
+      <valueType>
+        <types>Characteristic.ChangingProhibitionDatesSections</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ProhibitionDate</name>
+      <title>
+        <key>en</key>
+        <value>Closing date</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Дата запрета</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Ngày cấm</value>
+      </title>
+      <id>10</id>
+      <valueType>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ProhibitionDateDescriptionPresentation</name>
+      <title>
+        <key>en</key>
+        <value>Closing date description</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Описание даты запрета</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Mô tả ngày cấm</value>
+      </title>
+      <id>8</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ProhibitionDateDescription</name>
+      <title>
+        <key>en</key>
+        <value>Closing date description</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Описание даты запрета</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Mô tả ngày cấm</value>
+      </title>
+      <id>5</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>PermissionDaysCount</name>
+      <title>
+        <key>en</key>
+        <value>Number of permission days</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Количество дней разрешения</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Số ngày được phép</value>
+      </title>
+      <id>7</id>
+      <valueType>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>2</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ThisIsSection</name>
+      <title>
+        <key>en</key>
+        <value>This is a section</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Это раздел</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Phần hành này</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>WithoutProhibitionDate</name>
+      <title>
+        <key>en</key>
+        <value>Without closing date</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Без даты запрета</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Không có ngày cấm</value>
+      </title>
+      <id>11</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>SectionWithoutObjects</name>
+      <title>
+        <key>en</key>
+        <value>Section without objects</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Раздел без объектов</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Phần hành không có đối tượng</value>
+      </title>
+      <id>12</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>WriteExist</name>
+      <title>
+        <key>en</key>
+        <value>Record exists</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Запись существует</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Bản ghi đã tồn tại</value>
+      </title>
+      <id>9</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>ProhibitionDatesUsers</name>
+    <title>
+      <key>en</key>
+      <value>Closing date users</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Пользователи дат запрета</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Người sử dụng ngày cấm</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>FullPresentation</name>
+      <title>
+        <key>en</key>
+        <value>User, user group</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Пользователь, группа пользователей</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Người sử dụng, nhóm người sử dụng</value>
+      </title>
+      <id>4</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>User</name>
+      <title>
+        <key>en</key>
+        <value>User</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Пользователь</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Người sử dụng</value>
+      </title>
+      <id>9</id>
+      <valueType>
+        <types>CatalogRef.ExternalUsers</types>
+        <types>CatalogRef.ExternalUsersGroups</types>
+        <types>CatalogRef.UsersGroups</types>
+        <types>CatalogRef.Users</types>
+        <types>EnumRef.ProhibitionDatesPurposeKinds</types>
+        <types>ExchangePlanRef</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Presentation</name>
+      <title>
+        <key>en</key>
+        <value>Presentation</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Представление</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Trình bày</value>
+      </title>
+      <id>11</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Comment</name>
+      <title>
+        <key>en</key>
+        <value>Note</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Примечание</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Ghi chú</value>
+      </title>
+      <id>12</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>1000</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ProhibitionDate</name>
+      <title>
+        <key>en</key>
+        <value>Closing date</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Дата запрета</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Ngày cấm</value>
+      </title>
+      <id>14</id>
+      <valueType>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ProhibitionDateDescription</name>
+      <title>
+        <key>en</key>
+        <value>Closing date description</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Описание даты запрета</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Mô tả ngày cấm</value>
+      </title>
+      <id>15</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>WithoutProhibitionDate</name>
+      <title>
+        <key>en</key>
+        <value>Without closing date</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Без даты запрета</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Không có ngày cấm</value>
+      </title>
+      <id>16</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>PictureNumber</name>
+      <title>
+        <key>en</key>
+        <value>Image number</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Номер картинки</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Số hình vẽ</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>1</precision>
+        </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>AllSectionsWithoutObjects</name>
+    <title>
+      <key>en</key>
+      <value>All sections without objects</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Все разделы без объектов</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Tất cả các phần hành không có đối tượng</value>
+    </title>
+    <id>4</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>SectionObjectsTypes</name>
+    <title>
+      <key>en</key>
+      <value>Section object types</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Типы объектов разделов</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Kiểu đối tượng của phần hành</value>
+    </title>
+    <id>5</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Section</name>
+      <title>
+        <key>en</key>
+        <value>Section</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Раздел</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Phần hành</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>ChartOfCharacteristicTypesRef.ChangingProhibitionDatesSections</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ObjectTypes</name>
+      <title>
+        <key>en</key>
+        <value>Object types</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Типы объекта</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Kiểu đối tượng</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>ValueList</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>WithoutSectionsAndObjects</name>
+    <title>
+      <key>en</key>
+      <value>Without sections and objects</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Без разделов и объектов</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Không có phần hành và đối tượng</value>
+    </title>
+    <id>6</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>SingleSection</name>
+    <title>
+      <key>en</key>
+      <value>Single section</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Единственный раздел</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Phần hành duy nhất</value>
+    </title>
+    <id>7</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ShowCurrentUserSections</name>
+    <title>
+      <key>en</key>
+      <value>Show current user sections</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Показывать разделы текущего пользователя</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Hiển thị các phần hành của người sử dụng hiện tại</value>
+    </title>
+    <id>11</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>UseExternalUsers</name>
+    <title>
+      <key>en</key>
+      <value>Use external users</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Использовать внешних пользователей</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Sử dụng người sử dụng ngoài</value>
+    </title>
+    <id>12</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>CatalogExternalUsersEnabled</name>
+    <title>
+      <key>en</key>
+      <value>External users catalog is available</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Справочник внешние пользователи доступен</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Có sử dụng danh sách người sử dụng ngoài</value>
+    </title>
+    <id>13</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ListOfUserTypes</name>
+    <title>
+      <key>en</key>
+      <value>User type list</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Список типов пользователей</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Danh sách kiểu người sử dụng</value>
+    </title>
+    <id>14</id>
+    <valueType>
+      <types>ValueList</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <extInfo xsi:type="form:ValueListExtInfo">
+      <itemValueType/>
+    </extInfo>
+  </attributes>
+  <attributes>
+    <name>SetLocks</name>
+    <title>
+      <key>en</key>
+      <value>Set locks</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Установленные блокировки</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Phong tỏa đã thiết lập</value>
+    </title>
+    <id>10</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Section</name>
+      <title>
+        <key>en</key>
+        <value>Section</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Раздел</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Phần hành</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>ChartOfCharacteristicTypesRef.ChangingProhibitionDatesSections</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Object</name>
+      <title>
+        <key>en</key>
+        <value>Object</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>объект</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>đối tượng</value>
+      </title>
+      <id>4</id>
+      <valueType>
+        <types>Characteristic.ChangingProhibitionDatesSections</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>User</name>
+      <title>
+        <key>en</key>
+        <value>User</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Пользователь</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Người sử dụng</value>
+      </title>
+      <id>5</id>
+      <valueType>
+        <types>CatalogRef.ExternalUsers</types>
+        <types>CatalogRef.ExternalUsersGroups</types>
+        <types>CatalogRef.UsersGroups</types>
+        <types>CatalogRef.Users</types>
+        <types>EnumRef.ProhibitionDatesPurposeKinds</types>
+        <types>ExchangePlanRef</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>SectionEmptyRef</name>
+    <title>
+      <key>en</key>
+      <value>Section empty reference</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Раздел пустая ссылка</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Phần hành tham chiếu rỗng</value>
+    </title>
+    <id>3</id>
+    <valueType>
+      <types>ChartOfCharacteristicTypesRef.ChangingProhibitionDatesSections</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>CurrentUser</name>
+    <title>
+      <key>en</key>
+      <value>Current user</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Текущий пользователь</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Người sử dụng hiện tại</value>
+    </title>
+    <id>15</id>
+    <valueType>
+      <types>CatalogRef.ExternalUsers</types>
+      <types>CatalogRef.ExternalUsersGroups</types>
+      <types>CatalogRef.UsersGroups</types>
+      <types>CatalogRef.Users</types>
+      <types>EnumRef.ProhibitionDatesPurposeKinds</types>
+      <types>ExchangePlanRef</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>UsersCurrentRow</name>
+    <title>
+      <key>en</key>
+      <value>Users current line</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Пользователи текущая строка</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Người sử dụng dòng hiện tại</value>
+    </title>
+    <id>16</id>
+    <valueType/>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>SectionsWithoutObjects</name>
+    <title>
+      <key>en</key>
+      <value>Sections without objects</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Разделы без объектов</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Phần hành không có đối tượng</value>
+    </title>
+    <id>17</id>
+    <valueType>
+      <types>ValueList</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <extInfo xsi:type="form:ValueListExtInfo">
+      <itemValueType/>
+    </extInfo>
+  </attributes>
+  <attributes>
+    <name>ShowSections</name>
+    <title>
+      <key>en</key>
+      <value>Show sections</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Показывать разделы</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Hiển thị các phần hành</value>
+    </title>
+    <id>18</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ProhibitionDateSetting</name>
+    <title>
+      <key>en</key>
+      <value>Set up closing date</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Настройка даты запрета</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Tùy chỉnh ngày cấm</value>
+    </title>
+    <id>19</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>PermissionDaysCount</name>
+    <title>
+      <key>en</key>
+      <value>Number of permission days</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Количество дней разрешения</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Số ngày được phép</value>
+    </title>
+    <id>21</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>AllowDataChangingToProhibitionDate</name>
+    <title>
+      <key>en</key>
+      <value>Allow changing data before closing date</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Разрешить изменение данных до даты запрета</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Cho phép thay đổi dữ liệu trước ngày cấm</value>
+    </title>
+    <id>22</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ProhibitionDate</name>
+    <title>
+      <key>en</key>
+      <value>Closing date</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Дата запрета</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Ngày cấm</value>
+    </title>
+    <id>23</id>
+    <valueType>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ProhibitionDateDescription</name>
+    <title>
+      <key>en</key>
+      <value>Closing date description</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Описание даты запрета</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Mô tả ngày cấm</value>
+    </title>
+    <id>24</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ProhibitionDateSpecifiedMode</name>
+    <title>
+      <key>en</key>
+      <value>Closing date indication method</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Способ указания даты запрета</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Phương thức chỉ ra ngày cấm</value>
+    </title>
+    <id>25</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>CurrentDateAtServer</name>
+    <title>
+      <key>en</key>
+      <value>Current date on the server</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Текущая дата на сервере</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Ngày hiện tại trên server</value>
+    </title>
+    <id>26</id>
+    <valueType>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>FirstSection</name>
+    <title>
+      <key>en</key>
+      <value>First section</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Первый раздел</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Phần hành đầu tiên</value>
+    </title>
+    <id>8</id>
+    <valueType>
+      <types>ChartOfCharacteristicTypesRef.ChangingProhibitionDatesSections</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ValueForAllUsers</name>
+    <title>
+      <key>en</key>
+      <value>Value for all users</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Значение для всех пользователей</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Giá trị đối với tất cả người sử dụng</value>
+    </title>
+    <id>27</id>
+    <valueType>
+      <types>EnumRef.ProhibitionDatesPurposeKinds</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>CloseFormWithoutConfirmation</name>
+    <title>
+      <key>en</key>
+      <value>Close the form without confirmation</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Закрыть форму без подтверждения</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Đóng biểu mẫu mà không cần xác nhận</value>
+    </title>
+    <id>9</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>InterfaceVersion82</name>
+    <title>
+      <key>en</key>
+      <value>Interface version82</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Интерфейс версия82</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Giao diện phiên bản 82</value>
+    </title>
+    <id>28</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <formCommands>
+    <name>ProhibitionDatesByUsers</name>
+    <title>
+      <key>en</key>
+      <value>Closing dates by users</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Даты запрета по пользователям</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Ngày cấm theo người sử dụng</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>en</key>
+      <value>Closing dates of data change of users and user groups</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Даты
+запрета изменения данных по пользователям и группам пользователей</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Ngày
+cấm thay đổi dữ liệu theo người sử dụng và nhóm người sử dụng</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.Report</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ProhibitionDatesByUsers</name>
+      </handler>
+    </action>
+    <representation>TextPicture</representation>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>PickObjects</name>
+    <title>
+      <key>en</key>
+      <value>Select</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Подобрать</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Chọn</value>
+    </title>
+    <id>2</id>
+    <toolTip>
+      <key>en</key>
+      <value>Select section objects</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Подобрать объекты раздела</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Chọn đối tượng của phần hành</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>PickObjects</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Refresh</name>
+    <title>
+      <key>en</key>
+      <value>Update calendar</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Обновить календарь</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Cập nhật lịch</value>
+    </title>
+    <id>3</id>
+    <toolTip>
+      <key>en</key>
+      <value>Update calendar</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Обновить календарь</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Cập nhật lịch</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <shortcut>F5</shortcut>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.Refresh</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Refresh</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>SelectUsers</name>
+    <title>
+      <key>en</key>
+      <value>Select</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Подобрать</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Chọn</value>
+    </title>
+    <id>4</id>
+    <toolTip>
+      <key>en</key>
+      <value>Select users</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Подобрать пользователей</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Chọn người sử dụng</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>SelectUsers</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ProhibitionDatesBySectionsObjectsForUsers</name>
+    <title>
+      <key>en</key>
+      <value>Closing dates by sections and objects for users</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Даты запрета по разделам и объектам для пользователей</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Ngày cấm theo phần hành và đối tượng đối với người sử dụng</value>
+    </title>
+    <id>5</id>
+    <toolTip>
+      <key>en</key>
+      <value>Closing dates of data change of sections and objects for users and user groups</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Даты
+запрета изменения данных по разделам и объектам для пользователей и групп пользователей</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Ngày
+cấm thay đổi dữ liệu theo các phần hành và các đối tượng đối với người sử dụng và nhóm người sử dụng</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.Report</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ProhibitionDatesBySectionsObjectsForUsers</name>
+      </handler>
+    </action>
+    <representation>TextPicture</representation>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Sections</name>
+    <title>
+      <key>en</key>
+      <value>Sections</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>секции</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>quầy
+hàng</value>
+    </title>
+    <id>6</id>
+    <toolTip>
+      <key>en</key>
+      <value>Sections</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>секции</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>quầy
+hàng</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Sections</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ProhibitionDatesChange</name>
+    <title>
+      <key>en</key>
+      <value>Change</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Изменить</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Thay đổi</value>
+    </title>
+    <id>7</id>
+    <toolTip>
+      <key>en</key>
+      <value>Change</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Изменить</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Thay đổi</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <shortcut>F2</shortcut>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.Change</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ProhibitionDatesChange</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>RecalculateDates</name>
+    <title>
+      <key>en</key>
+      <value>Recalculate dates</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Пересчитать даты</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Đọc lại ngày</value>
+    </title>
+    <id>8</id>
+    <toolTip>
+      <key>en</key>
+      <value>Recalculate current values of relative closing dates</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Пересчитать текущие значения относительных дат запрета</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tính lại các giá trị hiện tại của ngày cấm tương đối</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>RecalculateDates</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <parameters>
+    <name>DataImportingProhibitionDates</name>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <keyParameter>true</keyParameter>
+  </parameters>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+</form:Form>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="51eb7a0c-a0ed-4bc5-b6f2-2fd5666b0f70">
+  <producedTypes>
+    <objectType typeId="0c2c9902-597d-460b-8bd8-8c8f98ebe20b" valueTypeId="3df377c9-4683-4211-9562-440811201f3b"/>
+    <managerType typeId="3d3fe72e-1704-4b89-8e29-009c73addf95" valueTypeId="50718e33-f5ce-4337-8616-80eb4eff2c03"/>
+  </producedTypes>
+  <name>SupplierInvoiceForPaymentAnalysis</name>
+  <synonym>
+    <key>en</key>
+    <value>Analysis of supplier proforma invoices</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Анализ счетов на оплату поставщиков</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Phân tích hóa đơn thanh toán của nhà cung cấp</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.SupplierInvoiceForPaymentAnalysis.Form.ReportForm</defaultForm>
+  <mainDataCompositionSchema>Report.SupplierInvoiceForPaymentAnalysis.Template.MainDataCompositionSchema</mainDataCompositionSchema>
+  <variantsStorage>SettingsStorage.ReportsVariantsStorage</variantsStorage>
+  <attributes uuid="f923159e-95e3-4a2a-92c8-bdf42845f0af">
+    <name>FilterByPaymentState</name>
+    <synonym>
+      <key>en</key>
+      <value>Filter by payment state</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Фильтр по состоянию оплаты</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Lọc theo trạng thái thanh toán</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>25</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="65fc8546-cb06-4c84-b621-c247ec0260d6">
+    <name>ReportForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Report form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu báo cáo</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="7e7f69f6-28cc-4674-a6cb-dfed53038187">
+    <name>MainDataCompositionSchema</name>
+    <synonym>
+      <key>en</key>
+      <value>Main data composition schema</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Sơ đồ dàn dựng dữ liệu chính</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <commands uuid="6268701e-d588-414f-bea4-e30d9ef8925c">
+    <name>InvoicePaymentAnalysis</name>
+    <synonym>
+      <key>en</key>
+      <value>Invoice payment</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Оплата счета</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Thanh toán theo hóa đơn</value>
+    </synonym>
+    <group>FormNavigationPanelImportant</group>
+    <commandParameterType>
+      <types>DocumentRef.SupplierInvoiceForPayment</types>
+    </commandParameterType>
+    <parameterUseMode>Multiple</parameterUseMode>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:Report>

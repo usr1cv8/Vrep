@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7bcfac1e-930b-4ec1-9f99-9bd8cf870c2a">
+  <name>ExchangeSmallBusinessAccounting30RegisterRecordSetChange</name>
+  <synonym>
+    <key>en</key>
+    <value>Data exchange between Small Business - Enterprise Accounting 3.0&quot;. Before the register is recorded.</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Trao đổi dữ liệu giữa Quản lý doanh nghiệp - Kế toán doanh nghiệp 3.0&quot;. Trước khi ghi lại biểu ghi.</value>
+  </synonym>
+  <source>
+    <types>InformationRegisterRecordSet.IndividualsDocuments</types>
+    <types>InformationRegisterRecordSet.IndividualsDescriptionFull</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.DataExchangeEventsBP.ExchangeSmallBusinessAccounting30BeforeWriteRegister</handler>
+</mdclass:EventSubscription>

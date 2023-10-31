@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a467f144-a813-4e24-b255-921964d7f166">
+  <producedTypes>
+    <selectionType typeId="300e54df-461a-4c3b-a194-8bfd96ae321c" valueTypeId="40eff294-63ae-42c1-ad17-9b7fe3130229"/>
+    <listType typeId="eedfad0a-baff-4782-8ab1-167bdcfaa6dc" valueTypeId="3908ea6e-6d51-45a7-ac41-af1352f00bd0"/>
+    <managerType typeId="2051d5ac-f74f-47dc-85dc-8a9c0f76f129" valueTypeId="43de45a5-976f-4152-aac8-795882cface5"/>
+    <recordSetType typeId="cc1ed603-92f3-445f-88cf-e4cd98d2d44a" valueTypeId="b1571f30-f11c-4f86-b6d1-c98e88420155"/>
+    <recordKeyType typeId="11700651-f69b-4740-9283-8359b85fcd47" valueTypeId="8a059bfd-bca8-4808-ad5d-5bda63483cea"/>
+    <recordType typeId="c269e5a7-1410-4f52-b7df-5f26c2cd993b" valueTypeId="299fdd9f-aa81-495c-b2c2-9d460cd4697b"/>
+  </producedTypes>
+  <name>ProductionStages</name>
+  <synonym>
+    <key>en</key>
+    <value>Production stages</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Production stages</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Các công đoạn sản xuất</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <registerType>Turnovers</registerType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="a1b9f200-7a44-464e-8961-e1aa1b3cf270">
+    <name>QuantityPlan</name>
+    <synonym>
+      <key>en</key>
+      <value>Quantity plan</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Quantity plan</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số lượng kế hoạch</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="17130e2b-c2cc-4e29-9801-319b1dee50d0">
+    <name>QuantityFact</name>
+    <synonym>
+      <key>en</key>
+      <value>Quantity fact</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Quantity fact</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số lượng thực tế</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="1e6ba12b-a048-4add-8c86-a7926d41b664">
+    <name>StructuralUnit</name>
+    <synonym>
+      <key>en</key>
+      <value>Structural unit</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Structural unit</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Bộ phận</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.StructuralUnits</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="f6f269c5-40ef-436d-b656-95488e69bb73">
+    <name>Order</name>
+    <synonym>
+      <key>en</key>
+      <value>Order</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Order</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đơn hàng</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.CustomerOrder</types>
+      <types>DocumentRef.ProductionOrder</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="1bdc74ef-9e50-4c9a-9d9f-5c37a6d39f9f">
+    <name>ProductsAndServices</name>
+    <synonym>
+      <key>en</key>
+      <value>Products and services</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Products and services</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Hàng hóa và dịch vụ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ProductsAndServices</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Номенклатура, которую требуется собрать или разобрать</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Mặt hàng cần đóng bộ hoặc tách bộ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameters>
+      <name>Отбор.ТипНоменклатуры</name>
+      <value xsi:type="core:FixedArrayValue">
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.ProductsAndServicesTypes.EnumValue.InventoryItem</value>
+        </values>
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.ProductsAndServicesTypes.EnumValue.Work</value>
+        </values>
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.ProductsAndServicesTypes.EnumValue.Service</value>
+        </values>
+      </value>
+    </choiceParameters>
+    <choiceParameters>
+      <name>Дополнительно.ОграничениеТипа</name>
+      <value xsi:type="core:FixedArrayValue">
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.ProductsAndServicesTypes.EnumValue.InventoryItem</value>
+        </values>
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.ProductsAndServicesTypes.EnumValue.Work</value>
+        </values>
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.ProductsAndServicesTypes.EnumValue.Service</value>
+        </values>
+      </value>
+    </choiceParameters>
+    <choiceParameters>
+      <name>Отбор.ЭтоНабор</name>
+      <value xsi:type="core:BooleanValue"/>
+    </choiceParameters>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="7f477e85-b289-4209-a862-2d07f9f41859">
+    <name>Characteristic</name>
+    <synonym>
+      <key>en</key>
+      <value>Characteristic</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Characteristic</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đặc tính</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ProductsAndServicesCharacteristics</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Характеристика номенклатуры</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Đặc tính mặt hàng</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="433d9a8b-8087-4b59-ab86-4d73e9ce28b5">
+    <name>Specification</name>
+    <synonym>
+      <key>en</key>
+      <value>Bill of materials</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Specification</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Bảng kê chi tiết</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Specifications</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Спецификация изготовления (вид операции Сборка) или разборки (вид операции Разборка) номенклатуры</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Bảng kê chi tiết (dạng giao dịch Đóng bộ) hoặc tách bộ (dạng giao dịch Tách bộ) của mặt hàng</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="5cd89ceb-449a-4b69-baff-f3475bc7c8af">
+    <name>Batch</name>
+    <synonym>
+      <key>en</key>
+      <value>Batch</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Batch</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Lô hàng</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ProductsAndServicesBatches</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Партия номенклатуры</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Lô hàng</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameters>
+      <name>Отбор.Статус</name>
+      <value xsi:type="core:FixedArrayValue">
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.BatchStatuses.EnumValue.OwnInventory</value>
+        </values>
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.BatchStatuses.EnumValue.CommissionMaterials</value>
+        </values>
+      </value>
+    </choiceParameters>
+    <choiceParameters>
+      <name>Дополнительно.ОграничениеСтатуса</name>
+      <value xsi:type="core:FixedArrayValue">
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.BatchStatuses.EnumValue.OwnInventory</value>
+        </values>
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.BatchStatuses.EnumValue.CommissionMaterials</value>
+        </values>
+      </value>
+    </choiceParameters>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="d421950f-651d-4a84-b879-9abda1092b46">
+    <name>Stage</name>
+    <synonym>
+      <key>en</key>
+      <value>Stage</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Stage</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Công đoạn</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ProductionStages</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="1d54f44c-e716-4935-a8c9-c1289903e2ec">
+    <name>Company</name>
+    <synonym>
+      <key>en</key>
+      <value>Company</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Company</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Doanh nghiệp</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Companies</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>DataSource1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>DataSet1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>HalfYearPeriod</dataPath>
+			<field>HalfYearPeriod</field>
+			<role>
+				<dcscom:periodNumber>5</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>YearPeriod</dataPath>
+			<field>YearPeriod</field>
+			<role>
+				<dcscom:periodNumber>6</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>QuarterPeriod</dataPath>
+			<field>QuarterPeriod</field>
+			<role>
+				<dcscom:periodNumber>4</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>InCounterpartyDebtCur</dataPath>
+			<field>InCounterpartyDebtCur</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыто</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Closed</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Đã đóng</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>MonthPeriod</dataPath>
+			<field>MonthPeriod</field>
+			<role>
+				<dcscom:periodNumber>3</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ServiceContract</dataPath>
+			<field>ServiceContract</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор обслуживания</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Service contract</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Hợp đồng dịch vụ</v8:content>
+				</v8:item>
+			</title>
+			<inputParameters>
+				<dcscor:item>
+					<dcscor:parameter>ChoiceParameters</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:ChoiceParameters">
+						<dcscor:item>
+							<dcscor:choiceParameter>Отбор.ЭтоДоговорОбслуживания</dcscor:choiceParameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item>
+					<dcscor:parameter>ChoiceFoldersAndItems</dcscor:parameter>
+					<dcscor:value xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d6p1:FoldersAndItemsUse">Items</dcscor:value>
+				</dcscor:item>
+			</inputParameters>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>DeCounterpartyDebtCur</dataPath>
+			<field>DeCounterpartyDebtCur</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплачено</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Paid</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Đã thanh toán</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Counterparty</dataPath>
+			<field>Counterparty</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Document</dataPath>
+			<field>Document</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>AmountExpenses</dataPath>
+			<field>AmountExpenses</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расходы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Costs</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Chi phí</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Company</dataPath>
+			<field>Company</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>WeekPeriod</dataPath>
+			<field>WeekPeriod</field>
+			<role>
+				<dcscom:periodNumber>2</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>DayPeriod</dataPath>
+			<field>DayPeriod</field>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TariffPlan</dataPath>
+			<field>TariffPlan</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тарифный план</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Tariff plan</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Gói cước</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>SettlementsType</dataPath>
+			<field>SettlementsType</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Contract</dataPath>
+			<field>Contract</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+			<inputParameters>
+				<dcscor:item>
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ChoiceFoldersAndItems</dcscor:parameter>
+					<dcscor:value xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d6p1:FoldersAndItemsUse">Items</dcscor:value>
+				</dcscor:item>
+			</inputParameters>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>AmountInvoiced</dataPath>
+			<field>AmountInvoiced</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выставлено</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Invoiced</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Đã phát hành</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Periodicity</dataPath>
+			<field>Periodicity</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Периодичность</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Periodicity</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Định kỳ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ServiceContractObject</dataPath>
+			<field>ServiceContractObject</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Детализация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Detail</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Chi tiết</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ProductsAndServicesCharacteristic</dataPath>
+			<field>ProductsAndServicesCharacteristic</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Characteristic</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>vi</v8:lang>
+					<v8:content>Đặc tính</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Order</dataPath>
+			<field>Order</field>
+		</field>
+		<dataSource>DataSource1</dataSource>
+		<query>SELECT
+	InvoiceForPayment.Contract AS ServiceContract,
+	InvoiceForPayment.Date AS InvoiceDate,
+	InvoiceForPaymentInventory.ProductsAndServices AS ProductsAndServices,
+	InvoiceForPaymentInventory.CHARACTERISTIC AS ProductsAndServicesCharacteristic,
+	SUM(CASE
+			WHEN InvoiceForPayment.DocumentCurrency = &amp;AccountingCurrency
+				THEN InvoiceForPaymentInventory.Total
+			ELSE CAST(InvoiceForPaymentInventory.Total * CurrencyRates.Multiplicity / CurrencyRates.ExchangeRate AS NUMBER(15, 2))
+		END) AS RowTotal,
+	BEGINOFPERIOD(InvoiceForPayment.Date, DAY) AS DayPeriod
+INTO TTInvoiced
+FROM
+	Document.InvoiceForPayment AS InvoiceForPayment
+		LEFT JOIN Document.InvoiceForPayment.Inventory AS InvoiceForPaymentInventory
+		ON InvoiceForPayment.Ref = InvoiceForPaymentInventory.Ref
+		LEFT JOIN InformationRegister.CurrencyRates AS CurrencyRates
+		ON (BEGINOFPERIOD(InvoiceForPayment.Date, DAY) = BEGINOFPERIOD(CurrencyRates.Period, DAY))
+			AND (CurrencyRates.Currency = &amp;AccountingCurrency)
+			AND (InvoiceForPayment.DocumentCurrency &lt;&gt; &amp;AccountingCurrency)
+WHERE
+	InvoiceForPayment.Posted
+	AND InvoiceForPayment.Contract IN(&amp;ServiceContracts)
+	AND CASE
+			WHEN &amp;EndOfPeriod = DATETIME(1, 1, 1)
+				THEN InvoiceForPayment.Date &gt;= &amp;BeginOfPeriod
+			ELSE InvoiceForPayment.Date BETWEEN &amp;BeginOfPeriod AND &amp;EndOfPeriod
+		END
+
+GROUP BY
+	InvoiceForPayment.Contract,
+	InvoiceForPayment.Date,
+	InvoiceForPaymentInventory.ProductsAndServices,
+	InvoiceForPaymentInventory.CHARACTERISTIC,
+	BEGINOFPERIOD(InvoiceForPayment.Date, DAY)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	ServiceContractsExecution.Contract AS ServiceContract,
+	ServiceContractsExecution.ServiceContractObject AS GLAccount,
+	SUM(ServiceContractsExecution.Amount) AS RowExpensesAmount,
+	ServiceContractsExecution.Period AS Period
+INTO TTExpenses
+FROM
+	AccumulationRegister.ServiceContractsExecution AS ServiceContractsExecution
+WHERE
+	&amp;KeepAccountingExpensesByServiceContracts
+	AND ServiceContractsExecution.Contract IN(&amp;ServiceContracts)
+	AND CASE
+			WHEN &amp;EndOfPeriod = DATETIME(1, 1, 1)
+				THEN ServiceContractsExecution.Period &gt;= &amp;BeginOfPeriod
+			ELSE ServiceContractsExecution.Period BETWEEN &amp;BeginOfPeriod AND &amp;EndOfPeriod
+		END
+	AND VALUETYPE(ServiceContractsExecution.ServiceContractObject) = TYPE(CHARTOFACCOUNTS.Managerial)
+
+GROUP BY
+	ServiceContractsExecution.Contract,
+	ServiceContractsExecution.ServiceContractObject,
+	ServiceContractsExecution.Period
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	CounterpartyContracts.Ref AS ServiceContract,
+	CounterpartyContracts.Owner AS Counterparty,
+	CounterpartyContracts.ServiceContractTariffPlan AS TariffPlan,
+	CounterpartyContracts.ServiceContractPeriodicity AS Periodicity
+INTO TTContracts
+FROM
+	Catalog.CounterpartyContracts AS CounterpartyContracts
+WHERE
+	CounterpartyContracts.Ref IN(&amp;ServiceContracts)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	TTContracts.ServiceContract AS ServiceContract,
+	TTContracts.Counterparty AS Counterparty,
+	TTContracts.TariffPlan AS TariffPlan,
+	TTContracts.Periodicity AS Periodicity,
+	NULL AS ServiceContractObject,
+	NULL AS ProductsAndServicesCharacteristic,
+	0 AS AmountExpenses,
+	0 AS AmountInvoiced,
+	CASE
+		WHEN AccountsReceivableBalanceAndTurnovers.SettlementsType = VALUE(Enum.SettlementsTypes.Debt)
+			THEN AccountsReceivableBalanceAndTurnovers.AmountReceipt
+		ELSE 0
+	END AS InCounterpartyDebtCur,
+	CASE
+		WHEN AccountsReceivableBalanceAndTurnovers.SettlementsType = VALUE(Enum.SettlementsTypes.Advance)
+			THEN AccountsReceivableBalanceAndTurnovers.AmountExpense
+		ELSE 0
+	END AS DeCounterpartyDebtCur,
+	AccountsReceivableBalanceAndTurnovers.DayPeriod AS DayPeriod,
+	AccountsReceivableBalanceAndTurnovers.WeekPeriod AS WeekPeriod,
+	AccountsReceivableBalanceAndTurnovers.MonthPeriod AS MonthPeriod,
+	AccountsReceivableBalanceAndTurnovers.QuarterPeriod AS QuarterPeriod,
+	AccountsReceivableBalanceAndTurnovers.HalfYearPeriod AS HalfYearPeriod,
+	AccountsReceivableBalanceAndTurnovers.YearPeriod AS YearPeriod
+FROM
+	TTContracts AS TTContracts
+		INNER JOIN AccumulationRegister.AccountsReceivable.BalanceAndTurnovers(&amp;BeginOfPeriod, &amp;EndOfPeriod, Auto, , ) AS AccountsReceivableBalanceAndTurnovers
+		ON TTContracts.ServiceContract = AccountsReceivableBalanceAndTurnovers.Contract
+
+UNION ALL
+
+SELECT
+	TTContracts.ServiceContract,
+	TTContracts.Counterparty,
+	TTContracts.TariffPlan,
+	TTContracts.Periodicity,
+	TTInvoiced.ProductsAndServices,
+	TTInvoiced.ProductsAndServicesCharacteristic,
+	0,
+	TTInvoiced.RowTotal,
+	0,
+	0,
+	BEGINOFPERIOD(TTInvoiced.InvoiceDate, DAY),
+	BEGINOFPERIOD(TTInvoiced.InvoiceDate, WEEK),
+	BEGINOFPERIOD(TTInvoiced.InvoiceDate, MONTH),
+	BEGINOFPERIOD(TTInvoiced.InvoiceDate, QUARTER),
+	BEGINOFPERIOD(TTInvoiced.InvoiceDate, HALFYEAR),
+	BEGINOFPERIOD(TTInvoiced.InvoiceDate, YEAR)
+FROM
+	TTContracts AS TTContracts
+		INNER JOIN TTInvoiced AS TTInvoiced
+		ON TTContracts.ServiceContract = TTInvoiced.ServiceContract
+
+UNION ALL
+
+SELECT
+	TTContracts.ServiceContract,
+	TTContracts.Counterparty,
+	TTContracts.TariffPlan,
+	TTContracts.Periodicity,
+	TTExpenses.GLAccount,
+	NULL,
+	TTExpenses.RowExpensesAmount,
+	0,
+	0,
+	0,
+	BEGINOFPERIOD(TTExpenses.Period, DAY),
+	BEGINOFPERIOD(TTExpenses.Period, WEEK),
+	BEGINOFPERIOD(TTExpenses.Period, MONTH),
+	BEGINOFPERIOD(TTExpenses.Period, QUARTER),
+	BEGINOFPERIOD(TTExpenses.Period, HALFYEAR),
+	BEGINOFPERIOD(TTExpenses.Period, YEAR)
+FROM
+	TTContracts AS TTContracts
+		INNER JOIN TTExpenses AS TTExpenses
+		ON TTContracts.ServiceContract = TTExpenses.ServiceContract</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>DynamicPeriod</dataPath>
+		<expression>ДАТАВРЕМЯ(1,1,1)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Динамический период</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Dynamic period</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Kỳ động</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<condition>true</condition>
+		</useRestriction>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+	</calculatedField>
+	<totalField>
+		<dataPath>AmountInvoiced</dataPath>
+		<expression>Sum(AmountInvoiced)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>AmountExpenses</dataPath>
+		<expression>Sum(AmountExpenses)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>InCounterpartyDebtCur</dataPath>
+		<expression>Sum(InCounterpartyDebtCur)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>DeCounterpartyDebtCur</dataPath>
+		<expression>Sum(DeCounterpartyDebtCur)</expression>
+	</totalField>
+	<parameter>
+		<name>Period</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Period</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Kỳ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Periodicity</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Периодичность</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Periodicity</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Định kỳ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.Periodicity</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>BeginOfPeriod</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Period start</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Đầu kỳ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Period.StartDate.Period.StartDate</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>EndOfPeriod</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>End of period</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Cuối kỳ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Period.EndDate.Period.EndDate</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>AccountingCurrency</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Валюта учета</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Accounting currency</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Tiền tệ kế toán</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Currencies</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ServiceContracts</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Договоры обслуживания</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Service contracts</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Hợp đồng dịch vụ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.CounterpartyContracts</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>KeepAccountingExpensesByServiceContracts</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вести учет расходов по договорам обслуживания</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Keep expenses accounting by the service contracts</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Tiến hành ghi nhận chi phí theo hợp đồng dịch vụ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+		<expression>Constants.BillingKeepExpensesAccountingByServiceContracts.Get()</expression>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Main</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Выполнение договоров обслуживания</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Fulfillment of service contracts</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>vi</v8:lang>
+				<v8:content>Thực hiện hợp đồng dịch vụ</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>AmountInvoiced</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>InCounterpartyDebtCur</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>DeCounterpartyDebtCur</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Counterparty</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ServiceContract</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Counterparty</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ServiceContract</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ServiceContractObject</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ProductsAndServicesCharacteristic</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>Title</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType"/>
+						</dcscor:item>
+					</dcsset:outputParameters>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

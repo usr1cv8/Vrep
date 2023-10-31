@@ -1,0 +1,1295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <items xsi:type="form:FormGroup">
+    <name>Group_Step_1</name>
+    <id>1</id>
+    <items xsi:type="form:FormGroup">
+      <name>DebuggingAlgorithmsGroup</name>
+      <id>7</id>
+      <items xsi:type="form:FormField">
+        <name>AlgorithmsDebugging</name>
+        <id>5</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Object.AlgorithmsDebugMode</segments>
+        </dataPath>
+        <handlers>
+          <event>OnChange</event>
+          <name>AlgorythmsDebuggingOnChange</name>
+        </handlers>
+        <extendedTooltip>
+          <name>DebuggingOfAlgorithmsExtendedTooltip</name>
+          <id>31</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>DebuggingOfAlgorithmsContextMenu</name>
+          <id>6</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>RadioButtonField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
+          <columnsCount>1</columnsCount>
+          <choiceList>
+            <presentation>
+              <key>en</key>
+              <value>Without algorithm debugging</value>
+            </presentation>
+            <presentation>
+              <key>ru</key>
+              <value>без отладки алгоритмов</value>
+            </presentation>
+            <presentation>
+              <key>vi</key>
+              <value>chưa gỡ rối thuật toán</value>
+            </presentation>
+            <value xsi:type="core:NumberValue">
+              <value>0</value>
+            </value>
+          </choiceList>
+          <choiceList>
+            <presentation>
+              <key>en</key>
+              <value>Call algorithms as procedures</value>
+            </presentation>
+            <presentation>
+              <key>ru</key>
+              <value>вызывать алгоритмы как процедуры</value>
+            </presentation>
+            <presentation>
+              <key>vi</key>
+              <value>gọi ra thuật toán như là thủ tục</value>
+            </presentation>
+            <value xsi:type="core:NumberValue">
+              <value>1</value>
+            </value>
+          </choiceList>
+          <choiceList>
+            <presentation>
+              <key>en</key>
+              <value>Substitute the algorithm code at the call location</value>
+            </presentation>
+            <presentation>
+              <key>ru</key>
+              <value>подставлять код алгоритмов по месту вызова</value>
+            </presentation>
+            <presentation>
+              <key>vi</key>
+              <value>thay thế mã thuật toán theo nơi gọi ra</value>
+            </presentation>
+            <value xsi:type="core:NumberValue">
+              <value>2</value>
+            </value>
+          </choiceList>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>HintAlgorithmsDebugging</name>
+        <id>20</id>
+        <items xsi:type="form:FormGroup">
+          <name>Group_0</name>
+          <id>21</id>
+          <items xsi:type="form:Decoration">
+            <name>DecorationWithoutDebugging</name>
+            <id>8</id>
+            <title>
+              <key>en</key>
+              <value>Algorithms cannot be exported. The mode is convenient for use when algorithm debugging is not needed. Algorithms will be runnable but their code will be unavailable for debugging.</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Алгоритмы не выгружаются. Режим удобно использовать, когда производить отладку алгоритмов не требуется. Алгоритмы будут выполняться, но их код недоступен для отладки.</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Thuật toán chưa được kết xuất. Chế độ tiện sử dụng khi không cần tiến hành gỡ rối thuật toán. Thuật toán sẽ được thực hiện nhưng mã của nó không sử dụng được để gỡ rối.</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>DecorationWithoutDebuggingExtendedTooltip</name>
+              <id>34</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>DecorationWithoutDebuggingContextMenu</name>
+              <id>9</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>Label</type>
+            <width>34</width>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+              <titleHeight>6</titleHeight>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>en</key>
+            <value>Group 0</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Группа 0</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Nhóm 0</value>
+          </title>
+          <toolTip>
+            <key>en</key>
+            <value>Group 0</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Группа 0</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Nhóm 0</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>Group_0ExtendedTooltip</name>
+            <id>33</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>Page</type>
+          <extInfo xsi:type="form:PageGroupExtInfo">
+            <group>Vertical</group>
+            <showTitle>true</showTitle>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>Group_1</name>
+          <id>22</id>
+          <items xsi:type="form:Decoration">
+            <name>DecorationAsProcedure</name>
+            <id>24</id>
+            <title>
+              <key>en</key>
+              <value>Algorithms cannot be exported. The mode is convenient for use when algorithm debugging is not needed. Algorithms will be runnable but their code will be unavailable for debugging.</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Алгоритмы не выгружаются. Режим удобно использовать, когда производить отладку алгоритмов не требуется. Алгоритмы будут выполняться, но их код недоступен для отладки.</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Thuật toán chưa được kết xuất. Chế độ tiện sử dụng khi không cần tiến hành gỡ rối thuật toán. Thuật toán sẽ được thực hiện nhưng mã của nó không sử dụng được để gỡ rối.</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>DecorationAsProcedureExtendedTooltip</name>
+              <id>36</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>DecorationAsProcedureContextMenu</name>
+              <id>25</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>Label</type>
+            <width>34</width>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+              <titleHeight>6</titleHeight>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>en</key>
+            <value>Group 1</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Группа 1</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Nhóm 1</value>
+          </title>
+          <toolTip>
+            <key>en</key>
+            <value>Group 1</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Группа 1</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Nhóm 1</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>Group_1ExtendedTooltip</name>
+            <id>35</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>Page</type>
+          <extInfo xsi:type="form:PageGroupExtInfo">
+            <group>Vertical</group>
+            <showTitle>true</showTitle>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>Group_2</name>
+          <id>23</id>
+          <items xsi:type="form:Decoration">
+            <name>DecorationByCallingPlace</name>
+            <id>26</id>
+            <title>
+              <key>en</key>
+              <value>The algorithms are exported as an integrated code in the processors, i.e. instead of algorithm call line a full algorithm code is inserted with nested algorithms taken into account. See use restrictions in Help.</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Алгоритмы выгружаются как интегрированный код в обработчиках, т.е. взамен строки вызова алгоритма вставляется полный код алгоритма с учетом вложенных алгоритмов. Ограничения использования режима см. справку.</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Thuật toán được kết xuất như là mã được gom nhóm trong hàm sự kiện, có nghĩa là thay thế dòng gọi ra thuật toán có chèn mã đầy đủ thuật toán có tính đến thuật toán lồng trong. Giới hạn sử dụng chế độ, hãy xem trợ giúp.</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>DecorationInPlaceOfCallExtendedTooltip</name>
+              <id>38</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>DecorationOnPlaceCallContextMenu</name>
+              <id>27</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>Label</type>
+            <width>34</width>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+              <titleHeight>6</titleHeight>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>en</key>
+            <value>Group 2</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Группа 2</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Nhóm 2</value>
+          </title>
+          <toolTip>
+            <key>en</key>
+            <value>Group 2</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Группа 2</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Nhóm 2</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>Group2_ExtendedTooltip</name>
+            <id>37</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>Page</type>
+          <extInfo xsi:type="form:PageGroupExtInfo">
+            <group>Vertical</group>
+            <showTitle>true</showTitle>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>en</key>
+          <value>Tooltip algorithm debugging</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Подсказка отладка алгоритмов</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Chỉ dẫn gỡ rối thuật toán</value>
+        </title>
+        <toolTip>
+          <key>en</key>
+          <value>Tooltip algorithm debugging</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>Подсказка отладка алгоритмов</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Chỉ dẫn gỡ rối thuật toán</value>
+        </toolTip>
+        <height>1</height>
+        <extendedTooltip>
+          <name>ToolTipDebuggingAlgorithmsExtendedTooltip</name>
+          <id>32</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>Pages</type>
+        <extInfo xsi:type="form:PagesGroupExtInfo">
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>DebuggingAlgorithmsGroupExtendedTooltip</name>
+        <id>30</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>1. Select debug mode of algorithm code</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>1. Выберите режим отладки кода алгоритмов</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>1. Hãy chọn chế độ gỡ rối mã thuật toán</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Step 1 group</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа шаг 1</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nhóm bước 1</value>
+    </toolTip>
+    <horizontalStretch>true</horizontalStretch>
+    <extendedTooltip>
+      <name>Group_Step_ExtendedTooltip1</name>
+      <id>29</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <representation>WeakSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <showTitle>true</showTitle>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>Group_Step_2</name>
+    <id>2</id>
+    <items xsi:type="form:FormGroup">
+      <name>GroupExportProcessors</name>
+      <id>11</id>
+      <items xsi:type="form:Button">
+        <name>ExportCodeHandlers</name>
+        <id>10</id>
+        <title>
+          <key>en</key>
+          <value>Generate export debug engine</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Сформировать модуль отладки выгрузки</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Tạo mô-đun gỡ rối kết xuất</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>ExportCodeHandlersExtendedTooltip</name>
+          <id>41</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualButton</type>
+        <commandName>Form.Command.ExportCodeHandlers</commandName>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <items xsi:type="form:Button">
+        <name>OpenFile</name>
+        <id>12</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>OpenFileExtendedTooltip</name>
+          <id>42</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualButton</type>
+        <commandName>Form.Command.OpenFile</commandName>
+        <representation>Auto</representation>
+        <width>3</width>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Processor export group</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Группа выгрузки обработчиков</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Nhóm kết xuất hàm sự kiện</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Processor export group</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Группа выгрузки обработчиков</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Nhóm kết xuất hàm sự kiện</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>ExportHandlersGroupExtendedTooltip</name>
+        <id>40</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>2. Export handler code</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>2. Выгрузите код обработчиков</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>2. Hãy kết xuất mã hàm sự kiện</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Step 2 group</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа шаг 2</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nhóm bước 2</value>
+    </toolTip>
+    <horizontalStretch>true</horizontalStretch>
+    <extendedTooltip>
+      <name>Group_Step_2ExtendedTooltip</name>
+      <id>39</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <representation>WeakSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <showTitle>true</showTitle>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>Group_Step_3</name>
+    <id>3</id>
+    <items xsi:type="form:Decoration">
+      <name>ExplanationDecoration</name>
+      <id>13</id>
+      <title>
+        <key>en</key>
+        <value>1. After the module debugging it is necessary to copy to the clipboard the received code of the handlers.
+2. Open designer and create the new external data processor. Paste from clipboard into the data processor module. Save data processor.
+3. At the final fourth step, specify the newly created data processor as a processor with export procedures of the handlers.
+</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>1. После формирования модуля отладки необходимо скопировать в буфер обмена полученный код обработчиков.
+2. Открыть конфигуратор и создать новую внешнюю обработку. В модуль обработки вставить содержимое буфера обмена. Сохранить обработку.
+3. На завершающем четвертом шаге указать вновь созданную обработку как обработку с экспортными процедурами обработчиков.
+</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>1. Sau khi tạo mô-đun gỡ rối cần sao chép vào bộ đệm trung gian mã hàm sự kiện đã nhận.
+2. Mở Bộ thiết kế và tạo bộ xử lý ngoài mới. Chèn vào mô-đun bộ xử lý nội dung trong bộ đệm trung gian. Lưu bộ xử lý.
+3. Ở bước cuối thứ tư khai báo lại bộ xử lý vừa tạo như là bộ xử lý có thủ tục kết xuất hàm sự kiện.</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ExplanationDecorationExtendedTooltip</name>
+        <id>44</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ExplanationDecorationContextMenu</name>
+        <id>14</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>Label</type>
+      <width>67</width>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+        <titleHeight>6</titleHeight>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>3. How to create an external data processor file</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>3. Пояснения к созданию файла внешней обработки</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>3. Giải thích việc tạo tệp bộ xử lý ngoài</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Step 3 group</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа шаг 3</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nhóm bước 3</value>
+    </toolTip>
+    <horizontalStretch>true</horizontalStretch>
+    <extendedTooltip>
+      <name>Group_Step3_3ExtendedTooltip</name>
+      <id>43</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <representation>WeakSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <showTitle>true</showTitle>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>Group_Step_4</name>
+    <id>4</id>
+    <items xsi:type="form:FormField">
+      <name>EventHandlersExternalDataProcessorFileName</name>
+      <id>15</id>
+      <title>
+        <key>en</key>
+        <value>Name of external data processor file with debug engine on the server</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Имя файла внешней обработки с модулем отладки на сервере</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Tên tệp bộ xử lý ngoài có mô-đun gỡ rối trên Server</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Object.EventHandlersExternalDataProcessorFileName</segments>
+      </dataPath>
+      <titleLocation>Top</titleLocation>
+      <handlers>
+        <event>OnChange</event>
+        <name>EventHandlersExternalDataProcessorFileNameOnChange</name>
+      </handlers>
+      <extendedTooltip>
+        <name>EventHandlersExternalDataProcessorFileNameExtendedTooltip</name>
+        <id>46</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>EventHandlersExternalDataProcessorFileNameContextMenu</name>
+        <id>16</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>InputField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:InputFieldExtInfo">
+        <handlers>
+          <event>StartChoice</event>
+          <name>EventHandlersExternalDataProcessorFileNameStartChoice</name>
+        </handlers>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <wrap>true</wrap>
+        <choiceButton>true</choiceButton>
+        <chooseType>true</chooseType>
+        <typeDomainEnabled>true</typeDomainEnabled>
+        <textEdit>true</textEdit>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>4. Create (update) an external data processor file</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>4. Создайте (обновите) файл внешней обработки</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>4. Hãy tạo (cập nhật) tệp bộ xử lý ngoài</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Step 4 group</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа шаг 4</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nhóm bước 4</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>Group_Step_4ExtendedTooltip</name>
+      <id>45</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <representation>WeakSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <showTitle>true</showTitle>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>LowerCommandBar</name>
+    <id>17</id>
+    <items xsi:type="form:Button">
+      <name>Done</name>
+      <id>18</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>DoneExtendedTooltip</name>
+        <id>48</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.Done</commandName>
+      <representation>Auto</representation>
+      <defaultButton>true</defaultButton>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <items xsi:type="form:Button">
+      <name>Cancel</name>
+      <id>28</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>CancelExtendedTooltip</name>
+        <id>49</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.StandardCommand.Close</commandName>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <extendedTooltip>
+      <name>LowerCommandPanelExtendedTooltip</name>
+      <id>47</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>CommandBar</type>
+    <extInfo xsi:type="form:CommandBarExtInfo">
+      <horizontalAlign>Center</horizontalAlign>
+    </extInfo>
+  </items>
+  <autoCommandBar>
+    <name>FormCommandBar</name>
+    <id>-1</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <horizontalAlign>Left</horizontalAlign>
+  </autoCommandBar>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>OnCreateAtServer</name>
+  </handlers>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <allowFormCustomize>true</allowFormCustomize>
+  <enabled>true</enabled>
+  <verticalScroll>UseIfNecessary</verticalScroll>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>Object</name>
+    <id>1</id>
+    <valueType>
+      <types>DataProcessorObject.UniversalXMLDataExchange</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <main>true</main>
+  </attributes>
+  <formCommands>
+    <name>ExportCodeHandlers</name>
+    <title>
+      <key>en</key>
+      <value>Export processor code</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Выгрузить код обработчиков</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Kết xuất mã của hàm sự kiện</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>en</key>
+      <value>Export processor code</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Выгрузить код обработчиков</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Kết xuất mã của hàm sự kiện</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ExportCodeHandlers</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>OpenFile</name>
+    <title>
+      <key>en</key>
+      <value>Open file</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Открытие файла</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Mở tệp</value>
+    </title>
+    <id>2</id>
+    <toolTip>
+      <key>en</key>
+      <value>Open file</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Открытие файла</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Mở tệp</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.ShowData</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>OpenFile</name>
+      </handler>
+    </action>
+    <representation>Picture</representation>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Done</name>
+    <title>
+      <key>en</key>
+      <value>Finish</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Готово</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Kết thúc</value>
+    </title>
+    <id>3</id>
+    <toolTip>
+      <key>en</key>
+      <value>Finish</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Готово</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Kết thúc</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Done</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <parameters>
+    <name>DataProcessorName</name>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+  </parameters>
+  <parameters>
+    <name>EventHandlersExternalDataProcessorFileName</name>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+  </parameters>
+  <parameters>
+    <name>AlgorithmsDebugMode</name>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </valueType>
+  </parameters>
+  <parameters>
+    <name>ExchangeRulesFilename</name>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+  </parameters>
+  <parameters>
+    <name>ExchangeFileName</name>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+  </parameters>
+  <parameters>
+    <name>EventHandlersReadFromFileOfExchangeRules</name>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+  </parameters>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+  <extInfo xsi:type="form:ObjectFormExtInfo"/>
+</form:Form>

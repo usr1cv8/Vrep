@@ -1,0 +1,4575 @@
+<ExchangeRules>
+	<FormatVersion РежимСовместимости="РежимСовместимостиСБСП20">2.01</FormatVersion>
+	<ID>94466013-aea6-4638-bf4e-b5494b22a151    </ID>
+	<Description>AccountingCORPvi_1 --&gt; Drive_3</Description>
+	<CreationDateTime>2018-11-16T11:07:18</CreationDateTime>
+	<Source PlatformVersion="8.0" ConfigurationVersion="3.2.34.16" ConfigurationSynonym="Бухгалтерия предприятия КОРП, редакция 3.0">AccountingCORPvi</Source>
+	<Receiver PlatformVersion="8.0" ConfigurationVersion="1.0.1.1" ConfigurationSynonym="1C:Company management, version 1.0">CompanyManagement</Receiver>
+	<Parameters/>
+	<DataProcessors/>
+		<OnGetDeletionInfo>МетаданныеОбъекта = Object.Метаданные();
+
+Если Метаданные.Справочники.Содержит(МетаданныеОбъекта) Тогда
+	
+	Cancel = Истина;
+	
+	SetObjectDeletionMark(Object, Истина, "Catalog");
+	
+ИначеЕсли Метаданные.Документы.Содержит(МетаданныеОбъекта) Тогда
+	
+	Cancel = Истина;
+	
+	Если Object.Проведен Тогда
+		
+		UndoObjectPostingInIB(Object, ТипЗнч(Object));
+		
+	КонецЕсли;
+	
+	Если НЕ Object.Проведен Тогда
+		
+		SetObjectDeletionMark(Object, Истина, "Document");
+		
+	КонецЕсли;
+	
+ИначеЕсли Метаданные.ПланыВидовХарактеристик.Содержит(МетаданныеОбъекта) Тогда
+	
+	Cancel  = Истина;
+	
+	SetObjectDeletionMark(Object, Истина, "ChartOfCharacteristicTypes");
+	
+КонецЕсли;</OnGetDeletionInfo>
+
+	<ObjectConversionRules>
+		<Group>
+			<Code>Перечисления</Code>
+			<Description>Перечисления</Description>
+			<Order>50</Order>
+			<Rule>
+				<Code>Periodicity</Code>
+				<Description>Перечисление: Периодичность</Description>
+				<Order>50</Order>
+				<Source>ПеречислениеСсылка.Периодичность</Source>
+				<Receiver>ПеречислениеСсылка.Periodicity</Receiver>
+				<Properties/>
+				<Values>
+					<Value>
+						<Code>1</Code>
+						<Description>Год --&gt; Year</Description>
+						<Order>50</Order>
+						<Source>Год</Source>
+						<Receiver>Year</Receiver>
+					</Value>
+					<Value>
+						<Code>2</Code>
+						<Description>Декада --&gt; TenDays</Description>
+						<Order>100</Order>
+						<Source>Декада</Source>
+						<Receiver>TenDays</Receiver>
+					</Value>
+					<Value>
+						<Code>3</Code>
+						<Description>День --&gt; Day</Description>
+						<Order>150</Order>
+						<Source>День</Source>
+						<Receiver>Day</Receiver>
+					</Value>
+					<Value>
+						<Code>4</Code>
+						<Description>Квартал --&gt; Quarter</Description>
+						<Order>200</Order>
+						<Source>Квартал</Source>
+						<Receiver>Quarter</Receiver>
+					</Value>
+					<Value>
+						<Code>5</Code>
+						<Description>Месяц --&gt; Month</Description>
+						<Order>250</Order>
+						<Source>Месяц</Source>
+						<Receiver>Month</Receiver>
+					</Value>
+					<Value>
+						<Code>6</Code>
+						<Description>Неделя --&gt; Week</Description>
+						<Order>300</Order>
+						<Source>Неделя</Source>
+						<Receiver>Week</Receiver>
+					</Value>
+					<Value>
+						<Code>7</Code>
+						<Description>Полугодие --&gt; HalfYear</Description>
+						<Order>350</Order>
+						<Source>Полугодие</Source>
+						<Receiver>HalfYear</Receiver>
+					</Value>
+				</Values>
+			</Rule>
+			<Rule>
+				<Code>RoundingMethods</Code>
+				<Description>Перечисление: Порядки округления</Description>
+				<Order>100</Order>
+				<Source>ПеречислениеСсылка.ПорядкиОкругления</Source>
+				<Receiver>ПеречислениеСсылка.RoundingMethods</Receiver>
+				<Properties/>
+				<Values>
+					<Value>
+						<Code>1</Code>
+						<Description>Окр0_01 --&gt; Round0_01</Description>
+						<Order>50</Order>
+						<Source>Окр0_01</Source>
+						<Receiver>Round0_01</Receiver>
+					</Value>
+					<Value>
+						<Code>2</Code>
+						<Description>Окр0_05 --&gt; Round0_05</Description>
+						<Order>100</Order>
+						<Source>Окр0_05</Source>
+						<Receiver>Round0_05</Receiver>
+					</Value>
+					<Value>
+						<Code>3</Code>
+						<Description>Окр0_1 --&gt; Round0_1</Description>
+						<Order>150</Order>
+						<Source>Окр0_1</Source>
+						<Receiver>Round0_1</Receiver>
+					</Value>
+					<Value>
+						<Code>4</Code>
+						<Description>Окр0_5 --&gt; Round0_5</Description>
+						<Order>200</Order>
+						<Source>Окр0_5</Source>
+						<Receiver>Round0_5</Receiver>
+					</Value>
+					<Value>
+						<Code>5</Code>
+						<Description>Окр1 --&gt; Round1</Description>
+						<Order>250</Order>
+						<Source>Окр1</Source>
+						<Receiver>Round1</Receiver>
+					</Value>
+					<Value>
+						<Code>6</Code>
+						<Description>Окр10 --&gt; Round10</Description>
+						<Order>300</Order>
+						<Source>Окр10</Source>
+						<Receiver>Round10</Receiver>
+					</Value>
+					<Value>
+						<Code>7</Code>
+						<Description>Окр100 --&gt; Round100</Description>
+						<Order>350</Order>
+						<Source>Окр100</Source>
+						<Receiver>Round100</Receiver>
+					</Value>
+					<Value>
+						<Code>8</Code>
+						<Description>Окр5 --&gt; Round5</Description>
+						<Order>400</Order>
+						<Source>Окр5</Source>
+						<Receiver>Round5</Receiver>
+					</Value>
+					<Value>
+						<Code>9</Code>
+						<Description>Окр50 --&gt; Round50</Description>
+						<Order>450</Order>
+						<Source>Окр50</Source>
+						<Receiver>Round50</Receiver>
+					</Value>
+				</Values>
+			</Rule>
+			<Rule>
+				<Code>ContactInformationTypes</Code>
+				<Description>Перечисление: Типы контактной информации</Description>
+				<Order>150</Order>
+				<Source>ПеречислениеСсылка.ТипыКонтактнойИнформации</Source>
+				<Receiver>ПеречислениеСсылка.ContactInformationTypes</Receiver>
+				<Properties/>
+				<Values>
+					<Value>
+						<Code>1</Code>
+						<Description>Адрес --&gt; Address</Description>
+						<Order>50</Order>
+						<Source>Адрес</Source>
+						<Receiver>Address</Receiver>
+					</Value>
+					<Value>
+						<Code>2</Code>
+						<Description>АдресЭлектроннойПочты --&gt; EmailAddress</Description>
+						<Order>100</Order>
+						<Source>АдресЭлектроннойПочты</Source>
+						<Receiver>EmailAddress</Receiver>
+					</Value>
+					<Value>
+						<Code>3</Code>
+						<Description>ВебСтраница --&gt; WebPage</Description>
+						<Order>150</Order>
+						<Source>ВебСтраница</Source>
+						<Receiver>WebPage</Receiver>
+					</Value>
+					<Value>
+						<Code>4</Code>
+						<Description>Другое --&gt; Other</Description>
+						<Order>200</Order>
+						<Source>Другое</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+					<Value>
+						<Code>5</Code>
+						<Description>Телефон --&gt; Phone</Description>
+						<Order>250</Order>
+						<Source>Телефон</Source>
+						<Receiver>Phone</Receiver>
+					</Value>
+					<Value>
+						<Code>6</Code>
+						<Description>Факс --&gt; Fax</Description>
+						<Order>300</Order>
+						<Source>Факс</Source>
+						<Receiver>Fax</Receiver>
+					</Value>
+				</Values>
+			</Rule>
+			<Rule>
+				<Code>CounterpartyKinds</Code>
+				<Description>Перечисление: ЮрIDическое / физическое лицо</Description>
+				<Order>200</Order>
+				<Source>ПеречислениеСсылка.ЮрIDическоеФизическоеЛицо</Source>
+				<Receiver>ПеречислениеСсылка.CounterpartyKinds</Receiver>
+				<Properties/>
+				<Values>
+					<Value>
+						<Code>1</Code>
+						<Description>ФизическоеЛицо --&gt; Individual</Description>
+						<Order>50</Order>
+						<Source>ФизическоеЛицо</Source>
+						<Receiver>Individual</Receiver>
+					</Value>
+					<Value>
+						<Code>2</Code>
+						<Description>ЮрIDическоеЛицо --&gt; LegalEntity</Description>
+						<Order>100</Order>
+						<Source>ЮрIDическоеЛицо</Source>
+						<Receiver>LegalEntity</Receiver>
+					</Value>
+				</Values>
+			</Rule>
+			<Rule>
+				<Code>OperationKindsPaymentReceipt</Code>
+				<Description>Перечисление: ВIDы операций поступления денежных средств</Description>
+				<Order>250</Order>
+				<Source>ПеречислениеСсылка.ВIDыОперацийПоступлениеДенежныхСредств</Source>
+				<Receiver>ПеречислениеСсылка.OperationKindsPaymentReceipt</Receiver>
+				<Properties/>
+				<Values>
+					<Value>
+						<Code>1</Code>
+						<Description>ВозвратЗаймаРаботником --&gt; Other</Description>
+						<Order>50</Order>
+						<Source>ВозвратЗаймаРаботником</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+					<Value>
+						<Code>2</Code>
+						<Description>ВозвратОтПоставщика --&gt; FromVendor</Description>
+						<Order>100</Order>
+						<Source>ВозвратОтПоставщика</Source>
+						<Receiver>FromVendor</Receiver>
+					</Value>
+					<Value>
+						<Code>3</Code>
+						<Description>Инкассация --&gt; Other</Description>
+						<Order>150</Order>
+						<Source>Инкассация</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+					<Value>
+						<Code>4</Code>
+						<Description>ОплатаПокупателя --&gt; FromCustomer</Description>
+						<Order>200</Order>
+						<Source>ОплатаПокупателя</Source>
+						<Receiver>FromCustomer</Receiver>
+					</Value>
+					<Value>
+						<Code>5</Code>
+						<Description>ПоступленияОтПродажиИностраннойВалюты --&gt; Other</Description>
+						<Order>250</Order>
+						<Source>ПоступленияОтПродажиИностраннойВалюты</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+					<Value>
+						<Code>6</Code>
+						<Description>ПоступленияОтПродажПоПлатежнымКартамИБанковскимКре</Description>
+						<Order>300</Order>
+						<Source>ПоступленияОтПродажПоПлатежнымКартамИБанковскимКредитам</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+					<Value>
+						<Code>7</Code>
+						<Description>ПриобретениеИностраннойВалюты --&gt; CurrencyPurchase</Description>
+						<Order>350</Order>
+						<Source>ПриобретениеИностраннойВалюты</Source>
+						<Receiver>CurrencyPurchase</Receiver>
+					</Value>
+					<Value>
+						<Code>8</Code>
+						<Description>ПрочееПоступление --&gt; Other</Description>
+						<Order>400</Order>
+						<Source>ПрочееПоступление</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+					<Value>
+						<Code>9</Code>
+						<Description>ПрочиеРасчетыСКонтрагентами --&gt; Other</Description>
+						<Order>450</Order>
+						<Source>ПрочиеРасчетыСКонтрагентами</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+					<Value>
+						<Code>10</Code>
+						<Description>РасчетыПоКредитамИЗаймам --&gt; Other</Description>
+						<Order>500</Order>
+						<Source>РасчетыПоКредитамИЗаймам</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+				</Values>
+			</Rule>
+			<Rule>
+				<Code>OperationKindsPaymentExpense</Code>
+				<Description>Перечисление: ВIDы операций списания денежных средств</Description>
+				<Order>300</Order>
+				<Source>ПеречислениеСсылка.ВIDыОперацийСписаниеДенежныхСредств</Source>
+				<Receiver>ПеречислениеСсылка.OperationKindsPaymentExpense</Receiver>
+				<Properties/>
+				<Values>
+					<Value>
+						<Code>1</Code>
+						<Description>ВозвратПокупателю --&gt; ToCustomer</Description>
+						<Order>50</Order>
+						<Source>ВозвратПокупателю</Source>
+						<Receiver>ToCustomer</Receiver>
+					</Value>
+					<Value>
+						<Code>2</Code>
+						<Description>ВыдачаЗаймаРаботнику --&gt; Other</Description>
+						<Order>100</Order>
+						<Source>ВыдачаЗаймаРаботнику</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+					<Value>
+						<Code>3</Code>
+						<Description>ОплатаПоставщику --&gt; Vendor</Description>
+						<Order>150</Order>
+						<Source>ОплатаПоставщику</Source>
+						<Receiver>Vendor</Receiver>
+					</Value>
+					<Value>
+						<Code>4</Code>
+						<Description>ПереводНаДругойСчет --&gt; Other</Description>
+						<Order>200</Order>
+						<Source>ПереводНаДругойСчет</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+					<Value>
+						<Code>5</Code>
+						<Description>ПеречислениеДепонентов --&gt; Other</Description>
+						<Order>250</Order>
+						<Source>ПеречислениеДепонентов</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+					<Value>
+						<Code>6</Code>
+						<Description>ПеречислениеЗаработнойПлатыРаботнику --&gt; Other</Description>
+						<Order>300</Order>
+						<Source>ПеречислениеЗаработнойПлатыРаботнику</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+					<Value>
+						<Code>7</Code>
+						<Description>ПеречислениеЗП --&gt; Other</Description>
+						<Order>350</Order>
+						<Source>ПеречислениеЗП</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+					<Value>
+						<Code>8</Code>
+						<Description>ПеречислениеНалога --&gt; Other</Description>
+						<Order>400</Order>
+						<Source>ПеречислениеНалога</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+					<Value>
+						<Code>9</Code>
+						<Description>ПеречислениеПодотчетномуЛицу --&gt; ToAdvanceHolder</Description>
+						<Order>450</Order>
+						<Source>ПеречислениеПодотчетномуЛицу</Source>
+						<Receiver>ToAdvanceHolder</Receiver>
+					</Value>
+					<Value>
+						<Code>10</Code>
+						<Description>ПрочееСписание --&gt; Other</Description>
+						<Order>500</Order>
+						<Source>ПрочееСписание</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+					<Value>
+						<Code>11</Code>
+						<Description>ПрочиеРасчетыСКонтрагентами --&gt; Other</Description>
+						<Order>550</Order>
+						<Source>ПрочиеРасчетыСКонтрагентами</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+					<Value>
+						<Code>12</Code>
+						<Description>РасчетыПоКредитамИЗаймам --&gt; Other</Description>
+						<Order>600</Order>
+						<Source>РасчетыПоКредитамИЗаймам</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+				</Values>
+			</Rule>
+			<Rule>
+				<Code>OperationKindsCashReceipt</Code>
+				<Description>Перечисление: ВIDы операций документа "ПКО"</Description>
+				<Order>350</Order>
+				<Source>ПеречислениеСсылка.ВIDыОперацийПКО</Source>
+				<Receiver>ПеречислениеСсылка.OperationKindsCashReceipt</Receiver>
+				<Properties/>
+				<Values>
+					<Value>
+						<Code>1</Code>
+						<Description>ВозвратЗаймаРаботником --&gt; Other</Description>
+						<Order>50</Order>
+						<Source>ВозвратЗаймаРаботником</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+					<Value>
+						<Code>2</Code>
+						<Description>ВозвратОтПодотчетногоЛица --&gt; FromAdvanceHolder</Description>
+						<Order>100</Order>
+						<Source>ВозвратОтПодотчетногоЛица</Source>
+						<Receiver>FromAdvanceHolder</Receiver>
+					</Value>
+					<Value>
+						<Code>3</Code>
+						<Description>ВозвратОтПоставщика --&gt; FromVendor</Description>
+						<Order>150</Order>
+						<Source>ВозвратОтПоставщика</Source>
+						<Receiver>FromVendor</Receiver>
+					</Value>
+					<Value>
+						<Code>4</Code>
+						<Description>ОплатаПокупателя --&gt; FromCustomer</Description>
+						<Order>200</Order>
+						<Source>ОплатаПокупателя</Source>
+						<Receiver>FromCustomer</Receiver>
+					</Value>
+					<Value>
+						<Code>5</Code>
+						<Description>ПолучениеНаличныхВБанке --&gt; Other</Description>
+						<Order>250</Order>
+						<Source>ПолучениеНаличныхВБанке</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+					<Value>
+						<Code>6</Code>
+						<Description>ПрочийПриход --&gt; Other</Description>
+						<Order>300</Order>
+						<Source>ПрочийПриход</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+					<Value>
+						<Code>7</Code>
+						<Description>РасчетыПоКредитамИЗаймам --&gt; Other</Description>
+						<Order>350</Order>
+						<Source>РасчетыПоКредитамИЗаймам</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+					<Value>
+						<Code>8</Code>
+						<Description>РозничнаяВыручка --&gt; RetailIncome</Description>
+						<Order>400</Order>
+						<Source>РозничнаяВыручка</Source>
+						<Receiver>RetailIncome</Receiver>
+					</Value>
+				</Values>
+			</Rule>
+			<Rule>
+				<Code>OperationKindsCashPayment</Code>
+				<Description>Перечисление: ВIDы операций документа "РКО"</Description>
+				<Order>400</Order>
+				<Source>ПеречислениеСсылка.ВIDыОперацийРКО</Source>
+				<Receiver>ПеречислениеСсылка.OperationKindsCashPayment</Receiver>
+				<Properties/>
+				<Values>
+					<Value>
+						<Code>1</Code>
+						<Description>ВзносНаличнымиВБанк --&gt; Other</Description>
+						<Order>50</Order>
+						<Source>ВзносНаличнымиВБанк</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+					<Value>
+						<Code>2</Code>
+						<Description>ВозвратПокупателю --&gt; ToCustomer</Description>
+						<Order>100</Order>
+						<Source>ВозвратПокупателю</Source>
+						<Receiver>ToCustomer</Receiver>
+					</Value>
+					<Value>
+						<Code>3</Code>
+						<Description>ВыдачаЗаймаРаботнику --&gt; Other</Description>
+						<Order>150</Order>
+						<Source>ВыдачаЗаймаРаботнику</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+					<Value>
+						<Code>4</Code>
+						<Description>ВыдачаПодотчетномуЛицу --&gt; ToAdvanceHolder</Description>
+						<Order>200</Order>
+						<Source>ВыдачаПодотчетномуЛицу</Source>
+						<Receiver>ToAdvanceHolder</Receiver>
+					</Value>
+					<Value>
+						<Code>5</Code>
+						<Description>ВыплатаДепонентов --&gt; Other</Description>
+						<Order>250</Order>
+						<Source>ВыплатаДепонентов</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+					<Value>
+						<Code>6</Code>
+						<Description>ВыплатаЗаработнойПлатыПоВедомостям --&gt; Salary</Description>
+						<Order>300</Order>
+						<Source>ВыплатаЗаработнойПлатыПоВедомостям</Source>
+						<Receiver>Salary</Receiver>
+					</Value>
+					<Value>
+						<Code>7</Code>
+						<Description>ВыплатаЗаработнойПлатыРаботнику --&gt; SalaryForEmplo</Description>
+						<Order>350</Order>
+						<Source>ВыплатаЗаработнойПлатыРаботнику</Source>
+						<Receiver>SalaryForEmployee</Receiver>
+					</Value>
+					<Value>
+						<Code>8</Code>
+						<Description>Инкассация --&gt; Other</Description>
+						<Order>400</Order>
+						<Source>Инкассация</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+					<Value>
+						<Code>9</Code>
+						<Description>ОплатаПоставщику --&gt; Vendor</Description>
+						<Order>450</Order>
+						<Source>ОплатаПоставщику</Source>
+						<Receiver>Vendor</Receiver>
+					</Value>
+					<Value>
+						<Code>10</Code>
+						<Description>ПрочийРасход --&gt; Other</Description>
+						<Order>500</Order>
+						<Source>ПрочийРасход</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+					<Value>
+						<Code>11</Code>
+						<Description>РасчетыПоКредитамИЗаймам --&gt; Other</Description>
+						<Order>550</Order>
+						<Source>РасчетыПоКредитамИЗаймам</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+				</Values>
+			</Rule>
+			<Rule>
+				<Code>IndividualGender</Code>
+				<Description>Перечисление: Пол физического лица</Description>
+				<Order>450</Order>
+				<Source>ПеречислениеСсылка.ПолФизическогоЛица</Source>
+				<Receiver>ПеречислениеСсылка.IndividualGender</Receiver>
+				<Properties/>
+				<Values>
+					<Value>
+						<Code>1</Code>
+						<Description>Женский --&gt; Female</Description>
+						<Order>50</Order>
+						<Source>Женский</Source>
+						<Receiver>Female</Receiver>
+					</Value>
+					<Value>
+						<Code>2</Code>
+						<Description>Мужской --&gt; Male</Description>
+						<Order>100</Order>
+						<Source>Мужской</Source>
+						<Receiver>Male</Receiver>
+					</Value>
+				</Values>
+			</Rule>
+			<Rule>
+				<Code>ContractKinds</Code>
+				<Description>Перечисление: ВIDы договоров контрагентов</Description>
+				<Order>500</Order>
+				<Source>ПеречислениеСсылка.ВIDыДоговоровКонтрагентов</Source>
+				<Receiver>ПеречислениеСсылка.ContractKinds</Receiver>
+				<Properties/>
+				<Values>
+					<Value>
+						<Code>1</Code>
+						<Description>Прочее --&gt; Other</Description>
+						<Order>50</Order>
+						<Source>Прочее</Source>
+						<Receiver>Other</Receiver>
+					</Value>
+					<Value>
+						<Code>2</Code>
+						<Description>СКомиссионером --&gt; WithAgent</Description>
+						<Order>100</Order>
+						<Source>СКомиссионером</Source>
+						<Receiver>WithAgent</Receiver>
+					</Value>
+					<Value>
+						<Code>3</Code>
+						<Description>СКомиссионеромНаЗакупку --&gt; WithAgent</Description>
+						<Order>150</Order>
+						<Source>СКомиссионеромНаЗакупку</Source>
+						<Receiver>WithAgent</Receiver>
+					</Value>
+					<Value>
+						<Code>4</Code>
+						<Description>СКомитентом --&gt; FromPrincipal</Description>
+						<Order>200</Order>
+						<Source>СКомитентом</Source>
+						<Receiver>FromPrincipal</Receiver>
+					</Value>
+					<Value>
+						<Code>5</Code>
+						<Description>СКомитентомНаЗакупку --&gt; FromPrincipal</Description>
+						<Order>250</Order>
+						<Source>СКомитентомНаЗакупку</Source>
+						<Receiver>FromPrincipal</Receiver>
+					</Value>
+					<Value>
+						<Code>6</Code>
+						<Description>СПокупателем --&gt; WithCustomer</Description>
+						<Order>300</Order>
+						<Source>СПокупателем</Source>
+						<Receiver>WithCustomer</Receiver>
+					</Value>
+					<Value>
+						<Code>7</Code>
+						<Description>СПоставщиком --&gt; WithVendor</Description>
+						<Order>350</Order>
+						<Source>СПоставщиком</Source>
+						<Receiver>WithVendor</Receiver>
+					</Value>
+				</Values>
+			</Rule>
+			<Rule>
+				<Code>BudgetTransferKinds</Code>
+				<Description>Перечисление: ВIDы перечислений в бюджет</Description>
+				<Order>550</Order>
+				<Source>ПеречислениеСсылка.ВIDыПеречисленийВБюджет</Source>
+				<Receiver>ПеречислениеСсылка.BudgetTransferKinds</Receiver>
+				<Properties/>
+				<Values>
+					<Value>
+						<Code>1</Code>
+						<Description>ИнойПлатеж --&gt; OtherPayment</Description>
+						<Order>50</Order>
+						<Source>ИнойПлатеж</Source>
+						<Receiver>OtherPayment</Receiver>
+					</Value>
+					<Value>
+						<Code>2</Code>
+						<Description>НалоговыйПлатеж --&gt; TaxPayment</Description>
+						<Order>100</Order>
+						<Source>НалоговыйПлатеж</Source>
+						<Receiver>TaxPayment</Receiver>
+					</Value>
+					<Value>
+						<Code>3</Code>
+						<Description>ТаможенныйПлатеж --&gt; CustomsPayment</Description>
+						<Order>150</Order>
+						<Source>ТаможенныйПлатеж</Source>
+						<Receiver>CustomsPayment</Receiver>
+					</Value>
+				</Values>
+			</Rule>
+			<Rule>
+				<Code>StructuralUnitsTypes</Code>
+				<Description>Перечисление: Типы складов</Description>
+				<Order>600</Order>
+				<Source>ПеречислениеСсылка.ТипыСкладов</Source>
+				<Receiver>ПеречислениеСсылка.StructuralUnitsTypes</Receiver>
+				<Properties/>
+				<Values>
+					<Value>
+						<Code>1</Code>
+						<Description>НеавтоматизированнаяТорговаяТочка --&gt; RetailAccrua</Description>
+						<Order>50</Order>
+						<Source>НеавтоматизированнаяТорговаяТочка</Source>
+						<Receiver>RetailAccrualAccounting</Receiver>
+					</Value>
+					<Value>
+						<Code>2</Code>
+						<Description>ОптовыйСклад --&gt; Warehouse</Description>
+						<Order>100</Order>
+						<Source>ОптовыйСклад</Source>
+						<Receiver>Warehouse</Receiver>
+					</Value>
+					<Value>
+						<Code>3</Code>
+						<Description>РозничныйМагазин --&gt; Retail</Description>
+						<Order>150</Order>
+						<Source>РозничныйМагазин</Source>
+						<Receiver>Retail</Receiver>
+					</Value>
+				</Values>
+			</Rule>
+		</Group>
+		<Group>
+			<Code>Справочники</Code>
+			<Description>Справочники                                       </Description>
+			<Order>100</Order>
+			<Group>
+				<Code>Классификаторы</Code>
+				<Description>Классификаторы                                    </Description>
+				<Order>50</Order>
+				<Rule>
+					<Code>Banks</Code>
+					<Description>Справочник: Банки</Description>
+					<Order>50</Order>
+					<НеЗамещать>true</НеЗамещать>
+					<SynchronizeByID>true</SynchronizeByID>
+					<ПродолжитьПоискПоПолямПоискаЕслиПоIDентификаторуНеНашли>true</ПродолжитьПоискПоПолямПоискаЕслиПоIDентификаторуНеНашли>
+					<Source>СправочникСсылка.Банки</Source>
+					<Receiver>СправочникСсылка.Banks</Receiver>
+					<Properties>
+						<Property Поиск="true">
+							<Code>1</Code>
+							<Description>Code --&gt; Code</Description>
+							<Order>50</Order>
+							<Source Name="Code" Kind="Property" Type="Строка"/>
+							<Receiver Name="Code" Kind="Property" Type="Строка"/>
+							<ПриводитьКДлине>11</ПриводитьКДлине>
+						</Property>
+						<Property>
+							<Code>2</Code>
+							<Description>Description --&gt; Description</Description>
+							<Order>100</Order>
+							<Source Name="Description" Kind="Property" Type="Строка"/>
+							<Receiver Name="Description" Kind="Property" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>3</Code>
+							<Description>ПометкаУдаления --&gt; ПометкаУдаления</Description>
+							<Order>150</Order>
+							<Source Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+							<Receiver Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+						</Property>
+						<Property>
+							<Code>6</Code>
+							<Description>Адрес --&gt; Address</Description>
+							<Order>200</Order>
+							<Source Name="Адрес" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="Address" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>7</Code>
+							<Description>Город --&gt; City</Description>
+							<Order>250</Order>
+							<Source Name="Город" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="City" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>8</Code>
+							<Description>КоррСчет --&gt; CorrAccount</Description>
+							<Order>300</Order>
+							<Source Name="КоррСчет" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="CorrAccount" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>4</Code>
+							<Description>Родитель --&gt; Родитель</Description>
+							<Order>350</Order>
+							<Source Name="Родитель" Kind="Property" Type="СправочникСсылка.Банки"/>
+							<Receiver Name="Родитель" Kind="Property" Type="СправочникСсылка.Banks"/>
+						</Property>
+						<Property Поиск="true" Обязательное="true">
+							<Code>5</Code>
+							<Description>ЭтоGroup --&gt; ЭтоGroup</Description>
+							<Order>400</Order>
+							<Source Name="ЭтоGroup" Kind="Property" Type="Булево"/>
+							<Receiver Name="ЭтоGroup" Kind="Property" Type="Булево"/>
+						</Property>
+						<Property>
+							<Code>9</Code>
+							<Description>Телефоны --&gt; PhoneNumbers</Description>
+							<Order>450</Order>
+							<Source Name="Телефоны" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="PhoneNumbers" Kind="Реквизит" Type="Строка"/>
+						</Property>
+					</Properties>
+					<Values/>
+				</Rule>
+				<Rule>
+					<Code>Currencies</Code>
+					<Description>Справочник: Валюты</Description>
+					<Order>100</Order>
+					<НеЗамещать>true</НеЗамещать>
+					<SynchronizeByID>true</SynchronizeByID>
+					<ПродолжитьПоискПоПолямПоискаЕслиПоIDентификаторуНеНашли>true</ПродолжитьПоискПоПолямПоискаЕслиПоIDентификаторуНеНашли>
+					<Source>СправочникСсылка.Валюты</Source>
+					<Receiver>СправочникСсылка.Currencies</Receiver>
+					<Properties>
+						<Property Поиск="true">
+							<Code>1</Code>
+							<Description>Code --&gt; Code</Description>
+							<Order>50</Order>
+							<Source Name="Code" Kind="Property" Type="Строка"/>
+							<Receiver Name="Code" Kind="Property" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>2</Code>
+							<Description>Description --&gt; Description</Description>
+							<Order>100</Order>
+							<Source Name="Description" Kind="Property" Type="Строка"/>
+							<Receiver Name="Description" Kind="Property" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>4</Code>
+							<Description>DescriptionПолное --&gt; DescriptionFull</Description>
+							<Order>150</Order>
+							<Source Name="DescriptionПолное" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="DescriptionFull" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>5</Code>
+							<Description>ПараметрыПрописиНаРусском --&gt; InWordParametersInHomeLanguage</Description>
+							<Order>200</Order>
+							<Source Name="ПараметрыПрописиНаРусском" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="InWordParametersInHomeLanguage" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>3</Code>
+							<Description>ПометкаУдаления --&gt; ПометкаУдаления</Description>
+							<Order>250</Order>
+							<Source Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+							<Receiver Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+						</Property>
+					</Properties>
+					<Values/>
+				</Rule>
+				<Rule>
+					<Code>UOMClassifier</Code>
+					<Description>Справочник: Классификатор единиц измерения</Description>
+					<Order>150</Order>
+					<SynchronizeByID>true</SynchronizeByID>
+					<ПродолжитьПоискПоПолямПоискаЕслиПоIDентификаторуНеНашли>true</ПродолжитьПоискПоПолямПоискаЕслиПоIDентификаторуНеНашли>
+					<ГенерироватьНовыйНомерИлиCodeЕслиНеУказан>true</ГенерироватьНовыйНомерИлиCodeЕслиНеУказан>
+					<Source>СправочникСсылка.КлассификаторЕдиницИзмерения</Source>
+					<Receiver>СправочникСсылка.UOMClassifier</Receiver>
+					<Properties>
+						<Property Поиск="true">
+							<Code>1</Code>
+							<Description>Code --&gt; Code</Description>
+							<Order>50</Order>
+							<Source Name="Code" Kind="Property" Type="Строка"/>
+							<Receiver Name="Code" Kind="Property" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>2</Code>
+							<Description>Description --&gt; Description</Description>
+							<Order>100</Order>
+							<Source Name="Description" Kind="Property" Type="Строка"/>
+							<Receiver Name="Description" Kind="Property" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>3</Code>
+							<Description>ПометкаУдаления --&gt; ПометкаУдаления</Description>
+							<Order>150</Order>
+							<Source Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+							<Receiver Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+						</Property>
+						<Property>
+							<Code>4</Code>
+							<Description>DescriptionПолное --&gt; DescriptionFull</Description>
+							<Order>200</Order>
+							<Source Name="DescriptionПолное" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="DescriptionFull" Kind="Реквизит" Type="Строка"/>
+						</Property>
+					</Properties>
+					<Values/>
+				</Rule>
+				<Rule>
+					<Code>WorldCountries</Code>
+					<Description>Справочник: Страны мира</Description>
+					<Order>200</Order>
+					<SynchronizeByID>true</SynchronizeByID>
+					<Source>СправочникСсылка.СтраныМира</Source>
+					<Receiver>СправочникСсылка.WorldCountries</Receiver>
+					<Properties>
+						<Property Поиск="true">
+							<Code>1</Code>
+							<Description>Code --&gt; Code</Description>
+							<Order>50</Order>
+							<Source Name="Code" Kind="Property" Type="Строка"/>
+							<Receiver Name="Code" Kind="Property" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>2</Code>
+							<Description>Description --&gt; Description</Description>
+							<Order>100</Order>
+							<Source Name="Description" Kind="Property" Type="Строка"/>
+							<Receiver Name="Description" Kind="Property" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>3</Code>
+							<Description>ПометкаУдаления --&gt; ПометкаУдаления</Description>
+							<Order>150</Order>
+							<Source Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+							<Receiver Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+						</Property>
+						<Property>
+							<Code>4</Code>
+							<Description>CodeАльфа2 --&gt; AlphaCode2</Description>
+							<Order>200</Order>
+							<Source Name="CodeАльфа2" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="AlphaCode2" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>5</Code>
+							<Description>CodeАльфа3 --&gt; AlphaCode3</Description>
+							<Order>250</Order>
+							<Source Name="CodeАльфа3" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="AlphaCode3" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>6</Code>
+							<Description>DescriptionПолное --&gt; LongDescription</Description>
+							<Order>300</Order>
+							<Source Name="DescriptionПолное" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="LongDescription" Kind="Реквизит" Type="Строка"/>
+						</Property>
+					</Properties>
+					<Values/>
+				</Rule>
+			</Group>
+			<Rule>
+				<Code>Companies</Code>
+				<Description>Справочник: Организации</Description>
+				<Order>100</Order>
+				<SynchronizeByID>true</SynchronizeByID>
+				<Source>СправочникСсылка.Организации</Source>
+				<Receiver>СправочникСсылка.Companies</Receiver>
+				<Properties>
+					<Property>
+						<Code>1</Code>
+						<Description>Code --&gt; Code</Description>
+						<Order>50</Order>
+						<Source Name="Code" Kind="Property" Type="Строка"/>
+						<Receiver Name="Code" Kind="Property" Type="Строка"/>
+					</Property>
+					<Property Поиск="true">
+						<Code>2</Code>
+						<Description>Description --&gt; Description</Description>
+						<Order>100</Order>
+						<Source Name="Description" Kind="Property" Type="Строка"/>
+						<Receiver Name="Description" Kind="Property" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>3</Code>
+						<Description>ПометкаУдаления --&gt; ПометкаУдаления</Description>
+						<Order>150</Order>
+						<Source Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+						<Receiver Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+					</Property>
+					<Property>
+						<Code>4</Code>
+						<Description>ИНН --&gt; TIN</Description>
+						<Order>200</Order>
+						<Source Name="ИНН" Kind="Реквизит" Type="Строка"/>
+						<Receiver Name="TIN" Kind="Реквизит" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>5</Code>
+						<Description>DescriptionПолное --&gt; DescriptionFull</Description>
+						<Order>250</Order>
+						<Source Name="DescriptionПолное" Kind="Реквизит" Type="Строка"/>
+						<Receiver Name="DescriptionFull" Kind="Реквизит" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>6</Code>
+						<Description>Префикс --&gt; Prefix</Description>
+						<Order>300</Order>
+						<Source Name="Префикс" Kind="Реквизит" Type="Строка"/>
+						<Receiver Name="Prefix" Kind="Реквизит" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>7</Code>
+						<Description>ИндивIDуальныйПредприниматель --&gt; Individual</Description>
+						<Order>350</Order>
+						<Source Name="ИндивIDуальныйПредприниматель" Kind="Реквизит" Type="СправочникСсылка.ФизическиеЛица"/>
+						<Receiver Name="Individual" Kind="Реквизит" Type="СправочникСсылка.Individuals"/>
+					</Property>
+					<Property>
+						<Code>8</Code>
+						<Description>ОсновнойБанковскийСчет --&gt; BankAccountByDefault</Description>
+						<Order>400</Order>
+						<Source Name="ОсновнойБанковскийСчет" Kind="Реквизит" Type="СправочникСсылка.БанковскиеСчета"/>
+						<Receiver Name="BankAccountByDefault" Kind="Реквизит" Type="СправочникСсылка.BankAccounts"/>
+					</Property>
+					<Property>
+						<Code>9</Code>
+						<Description>СвIDетельствоДатаВыдачи --&gt; RegistrationDate</Description>
+						<Order>450</Order>
+						<Source Name="СвIDетельствоДатаВыдачи" Kind="Реквизит" Type="Дата"/>
+						<Receiver Name="RegistrationDate" Kind="Реквизит" Type="Дата"/>
+					</Property>
+					<Property>
+						<Code>10</Code>
+						<Description>СвIDетельствоСерияНомер --&gt; RegistrationNumber</Description>
+						<Order>500</Order>
+						<Source Name="СвIDетельствоСерияНомер" Kind="Реквизит" Type="Строка"/>
+						<Receiver Name="RegistrationNumber" Kind="Реквизит" Type="Строка"/>
+					</Property>
+					<Group>
+						<Code>11</Code>
+						<Description>КонтактнаяИнформация --&gt; ContactInformation</Description>
+						<Order>550</Order>
+						<Source Name="КонтактнаяИнформация" Kind="ТабличнаяЧасть"/>
+						<Receiver Name="ContactInformation" Kind="ТабличнаяЧасть"/>
+						<ПередОбработкойВыгрузки>If Source.IsFolder = True Then
+	
+	Cancel = True;
+	
+EndIf;</ПередОбработкойВыгрузки>
+						<Property>
+							<Code>12</Code>
+							<Description>АдресЭП --&gt; EmailAddress</Description>
+							<Order>50</Order>
+							<Source Name="АдресЭП" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="EmailAddress" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>13</Code>
+							<Description>ВID --&gt; Kind</Description>
+							<Order>100</Order>
+							<Source Name="ВID" Kind="Реквизит" Type="СправочникСсылка.ВIDыКонтактнойИнформации"/>
+							<Receiver Name="Kind" Kind="Реквизит" Type="СправочникСсылка.ContactInformationKinds"/>
+							<ConversionRuleCode>ContactInformationKinds                           </ConversionRuleCode>
+						</Property>
+						<Property>
+							<Code>14</Code>
+							<Description>Город --&gt; City</Description>
+							<Order>150</Order>
+							<Source Name="Город" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="City" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>15</Code>
+							<Description>ДоменноеИмяСервера --&gt; ServerDomainName</Description>
+							<Order>200</Order>
+							<Source Name="ДоменноеИмяСервера" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="ServerDomainName" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>16</Code>
+							<Description>ValuesПолей --&gt; FieldValues</Description>
+							<Order>250</Order>
+							<Source Name="ValuesПолей" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="FieldValues" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>17</Code>
+							<Description>НомерТелефона --&gt; PhoneNumber</Description>
+							<Order>300</Order>
+							<Source Name="НомерТелефона" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="PhoneNumber" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>18</Code>
+							<Description>НомерТелефонаБезCodeов --&gt; PhoneNumberWithoutCodes</Description>
+							<Order>350</Order>
+							<Source Name="НомерТелефонаБезCodeов" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="PhoneNumberWithoutCodes" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>19</Code>
+							<Description>Представление --&gt; Presentation</Description>
+							<Order>400</Order>
+							<Source Name="Представление" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="Presentation" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>20</Code>
+							<Description>Регион --&gt; Region</Description>
+							<Order>450</Order>
+							<Source Name="Регион" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="Region" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>21</Code>
+							<Description>Страна --&gt; Country</Description>
+							<Order>500</Order>
+							<Source Name="Страна" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="Country" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>22</Code>
+							<Description>Тип --&gt; Type</Description>
+							<Order>550</Order>
+							<Source Name="Тип" Kind="Реквизит" Type="ПеречислениеСсылка.ТипыКонтактнойИнформации"/>
+							<Receiver Name="Type" Kind="Реквизит" Type="ПеречислениеСсылка.ContactInformationTypes"/>
+							<ConversionRuleCode>ContactInformationTypes                           </ConversionRuleCode>
+						</Property>
+					</Group>
+				</Properties>
+				<Values/>
+			</Rule>
+			<Rule>
+				<Code>BankAccounts</Code>
+				<Description>Справочник: Банковские счета</Description>
+				<Order>150</Order>
+				<SynchronizeByID>true</SynchronizeByID>
+				<Source>СправочникСсылка.БанковскиеСчета</Source>
+				<Receiver>СправочникСсылка.BankAccounts</Receiver>
+				<Properties>
+					<Property>
+						<Code>5</Code>
+						<Description>Банк --&gt; Bank</Description>
+						<Order>50</Order>
+						<Source Name="Банк" Kind="Реквизит" Type="СправочникСсылка.Банки"/>
+						<Receiver Name="Bank" Kind="Реквизит" Type="СправочникСсылка.Banks"/>
+						<ConversionRuleCode>Banks                                             </ConversionRuleCode>
+					</Property>
+					<Property>
+						<Code>6</Code>
+						<Description>ВалютаДенежныхСредств --&gt; CashCurrency</Description>
+						<Order>100</Order>
+						<Source Name="ВалютаДенежныхСредств" Kind="Реквизит" Type="СправочникСсылка.Валюты"/>
+						<Receiver Name="CashCurrency" Kind="Реквизит" Type="СправочникСсылка.Currencies"/>
+						<ConversionRuleCode>Currencies                                        </ConversionRuleCode>
+					</Property>
+					<Property>
+						<Code>7</Code>
+						<Description>ВIDСчета --&gt; AccountType</Description>
+						<Order>150</Order>
+						<Source Name="ВIDСчета" Kind="Реквизит" Type="Строка"/>
+						<Receiver Name="AccountType" Kind="Реквизит" Type="Строка"/>
+					</Property>
+					<Property Поиск="true">
+						<Code>1</Code>
+						<Description>Владелец --&gt; Владелец</Description>
+						<Order>200</Order>
+						<Source Name="Владелец" Kind="Property"/>
+						<Receiver Name="Владелец" Kind="Property"/>
+					</Property>
+					<Property>
+						<Code>8</Code>
+						<Description>ДатаЗакрытия --&gt; ClosingDate</Description>
+						<Order>250</Order>
+						<Source Name="ДатаЗакрытия" Kind="Реквизит" Type="Дата"/>
+						<Receiver Name="ClosingDate" Kind="Реквизит" Type="Дата"/>
+					</Property>
+					<Property>
+						<Code>9</Code>
+						<Description>ДатаОткрытия --&gt; OpeningDate</Description>
+						<Order>300</Order>
+						<Source Name="ДатаОткрытия" Kind="Реквизит" Type="Дата"/>
+						<Receiver Name="OpeningDate" Kind="Реквизит" Type="Дата"/>
+					</Property>
+					<Property>
+						<Code>2</Code>
+						<Description>Code --&gt; Code</Description>
+						<Order>350</Order>
+						<Source Name="Code" Kind="Property" Type="Строка"/>
+						<Receiver Name="Code" Kind="Property" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>3</Code>
+						<Description>Description --&gt; Description</Description>
+						<Order>400</Order>
+						<Source Name="Description" Kind="Property" Type="Строка"/>
+						<Receiver Name="Description" Kind="Property" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>4</Code>
+						<Description>ПометкаУдаления --&gt; ПометкаУдаления</Description>
+						<Order>450</Order>
+						<Source Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+						<Receiver Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+					</Property>
+					<Property>
+						<Code>10</Code>
+						<Description>НомерСчета --&gt; AccountNo</Description>
+						<Order>500</Order>
+						<Source Name="НомерСчета" Kind="Реквизит" Type="Строка"/>
+						<Receiver Name="AccountNo" Kind="Реквизит" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>11</Code>
+						<Description>СуммаБезКопеек --&gt; AmountWithoutCents</Description>
+						<Order>550</Order>
+						<Source Name="СуммаБезКопеек" Kind="Реквизит" Type="Булево"/>
+						<Receiver Name="AmountWithoutCents" Kind="Реквизит" Type="Булево"/>
+					</Property>
+					<Property>
+						<Code>12</Code>
+						<Description>ТекстКорреспондента --&gt; CorrespondentText</Description>
+						<Order>600</Order>
+						<Source Name="ТекстКорреспондента" Kind="Реквизит" Type="Строка"/>
+						<Receiver Name="CorrespondentText" Kind="Реквизит" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>13</Code>
+						<Description>ТекстНаValues --&gt; DestinationText</Description>
+						<Order>650</Order>
+						<Source Name="ТекстНаValues" Kind="Реквизит" Type="Строка"/>
+						<Receiver Name="DestinationText" Kind="Реквизит" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>14</Code>
+						<Description>БанкДляРасчетов --&gt; AccountsBank</Description>
+						<Order>700</Order>
+						<Source Name="БанкДляРасчетов" Kind="Реквизит" Type="СправочникСсылка.Банки"/>
+						<Receiver Name="AccountsBank" Kind="Реквизит" Type="СправочникСсылка.Banks"/>
+						<ConversionRuleCode>Banks                                             </ConversionRuleCode>
+					</Property>
+					<Property>
+						<Code>15</Code>
+						<Description>--&gt; MonthOutputOption</Description>
+						<Order>750</Order>
+						<Source Name="" Kind=""/>
+						<Receiver Name="MonthOutputOption" Kind="Реквизит" Type="ПеречислениеСсылка.MonthOutputTypesInDocumentDate"/>
+						<ПередВыгрузкой>Expression = ?(Source.МесяцПрописью, "Enums.MonthOutputTypesInDocumentDate.InWords","Enums.MonthOutputTypesInDocumentDate.Number");</ПередВыгрузкой>
+					</Property>
+				</Properties>
+				<Values/>
+			</Rule>
+			<Rule>
+				<Code>Counterparties</Code>
+				<Description>Справочник: Контрагенты</Description>
+				<Order>200</Order>
+				<SynchronizeByID>true</SynchronizeByID>
+				<Source>СправочникСсылка.Контрагенты</Source>
+				<Receiver>СправочникСсылка.Counterparties</Receiver>
+				<Properties>
+					<Property>
+						<Code>1</Code>
+						<Description>Code --&gt; Code</Description>
+						<Order>50</Order>
+						<Source Name="Code" Kind="Property" Type="Строка"/>
+						<Receiver Name="Code" Kind="Property" Type="Строка"/>
+					</Property>
+					<Property Поиск="true">
+						<Code>2</Code>
+						<Description>Description --&gt; Description</Description>
+						<Order>100</Order>
+						<Source Name="Description" Kind="Property" Type="Строка"/>
+						<Receiver Name="Description" Kind="Property" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>4</Code>
+						<Description>Родитель --&gt; Родитель</Description>
+						<Order>150</Order>
+						<Source Name="Родитель" Kind="Property" Type="СправочникСсылка.Контрагенты"/>
+						<Receiver Name="Родитель" Kind="Property" Type="СправочникСсылка.Counterparties"/>
+						<ПередВыгрузкой>If Source.Parent = Source.Ref Then
+	Value = Undefined;	
+EndIf;</ПередВыгрузкой>
+					</Property>
+					<Property Поиск="true" Обязательное="true">
+						<Code>5</Code>
+						<Description>ЭтоGroup --&gt; ЭтоGroup</Description>
+						<Order>200</Order>
+						<Source Name="ЭтоGroup" Kind="Property" Type="Булево"/>
+						<Receiver Name="ЭтоGroup" Kind="Property" Type="Булево"/>
+					</Property>
+					<Property Поиск="true">
+						<Code>6</Code>
+						<Description>ИНН --&gt; TIN</Description>
+						<Order>250</Order>
+						<Source Name="ИНН" Kind="Реквизит" Type="Строка"/>
+						<Receiver Name="TIN" Kind="Реквизит" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>7</Code>
+						<Description>DescriptionПолное --&gt; DescriptionFull</Description>
+						<Order>300</Order>
+						<Source Name="DescriptionПолное" Kind="Реквизит" Type="Строка"/>
+						<Receiver Name="DescriptionFull" Kind="Реквизит" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>8</Code>
+						<Description>ЮрIDическоеФизическоеЛицо --&gt; LegalForm</Description>
+						<Order>350</Order>
+						<Source Name="ЮрIDическоеФизическоеЛицо" Kind="Реквизит" Type="ПеречислениеСсылка.ЮрIDическоеФизическоеЛицо"/>
+						<Receiver Name="LegalForm" Kind="Реквизит" Type="СправочникСсылка.LegalForms"/>
+					</Property>
+					<Property>
+						<Code>3</Code>
+						<Description>ПометкаУдаления --&gt; ПометкаУдаления</Description>
+						<Order>400</Order>
+						<Source Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+						<Receiver Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+					</Property>
+					<Property>
+						<Code>9</Code>
+						<Description>ОсновнойБанковскийСчет --&gt; BankAccountByDefault</Description>
+						<Order>450</Order>
+						<Source Name="ОсновнойБанковскийСчет" Kind="Реквизит" Type="СправочникСсылка.БанковскиеСчета"/>
+						<Receiver Name="BankAccountByDefault" Kind="Реквизит" Type="СправочникСсылка.BankAccounts"/>
+						<ConversionRuleCode>BankAccounts                                      </ConversionRuleCode>
+					</Property>
+					<Property>
+						<Code>10</Code>
+						<Description>ОсновнойДоговорКонтрагента --&gt; ContractByDefault</Description>
+						<Order>500</Order>
+						<Source Name="ОсновнойДоговорКонтрагента" Kind="Реквизит" Type="СправочникСсылка.ДоговорыКонтрагентов"/>
+						<Receiver Name="ContractByDefault" Kind="Реквизит" Type="СправочникСсылка.CounterpartyContracts"/>
+					</Property>
+					<Group>
+						<Code>11</Code>
+						<Description>КонтактнаяИнформация --&gt; ContactInformation</Description>
+						<Order>550</Order>
+						<Source Name="КонтактнаяИнформация" Kind="ТабличнаяЧасть"/>
+						<Receiver Name="ContactInformation" Kind="ТабличнаяЧасть"/>
+						<ПередОбработкойВыгрузки>If Source.Isfolder = True Then
+	
+	Cancel = True;
+	
+EndIf;</ПередОбработкойВыгрузки>
+						<Property>
+							<Code>12</Code>
+							<Description>АдресЭП --&gt; EmailAddress</Description>
+							<Order>50</Order>
+							<Source Name="АдресЭП" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="EmailAddress" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>13</Code>
+							<Description>ВID --&gt; Kind</Description>
+							<Order>100</Order>
+							<Source Name="ВID" Kind="Реквизит" Type="СправочникСсылка.ВIDыКонтактнойИнформации"/>
+							<Receiver Name="Kind" Kind="Реквизит" Type="СправочникСсылка.ContactInformationKinds"/>
+							<ConversionRuleCode>ContactInformationKinds                           </ConversionRuleCode>
+						</Property>
+						<Property>
+							<Code>14</Code>
+							<Description>Город --&gt; City</Description>
+							<Order>150</Order>
+							<Source Name="Город" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="City" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>15</Code>
+							<Description>ДоменноеИмяСервера --&gt; ServerDomainName</Description>
+							<Order>200</Order>
+							<Source Name="ДоменноеИмяСервера" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="ServerDomainName" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>16</Code>
+							<Description>ValuesПолей --&gt; FieldValues</Description>
+							<Order>250</Order>
+							<Source Name="ValuesПолей" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="FieldValues" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>17</Code>
+							<Description>НомерТелефона --&gt; PhoneNumber</Description>
+							<Order>300</Order>
+							<Source Name="НомерТелефона" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="PhoneNumber" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>18</Code>
+							<Description>НомерТелефонаБезCodeов --&gt; PhoneNumberWithoutCodes</Description>
+							<Order>350</Order>
+							<Source Name="НомерТелефонаБезCodeов" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="PhoneNumberWithoutCodes" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>19</Code>
+							<Description>Представление --&gt; Presentation</Description>
+							<Order>400</Order>
+							<Source Name="Представление" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="Presentation" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>20</Code>
+							<Description>Регион --&gt; Region</Description>
+							<Order>450</Order>
+							<Source Name="Регион" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="Region" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>21</Code>
+							<Description>Страна --&gt; Country</Description>
+							<Order>500</Order>
+							<Source Name="Страна" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="Country" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>22</Code>
+							<Description>Тип --&gt; Type</Description>
+							<Order>550</Order>
+							<Source Name="Тип" Kind="Реквизит" Type="ПеречислениеСсылка.ТипыКонтактнойИнформации"/>
+							<Receiver Name="Type" Kind="Реквизит" Type="ПеречислениеСсылка.ContactInformationTypes"/>
+							<ConversionRuleCode>ContactInformationTypes                           </ConversionRuleCode>
+						</Property>
+					</Group>
+					<Property>
+						<Code>23</Code>
+						<Description>Комментарий --&gt; Comment</Description>
+						<Order>600</Order>
+						<Source Name="Комментарий" Kind="Реквизит" Type="Строка"/>
+						<Receiver Name="Comment" Kind="Реквизит" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>24</Code>
+						<Description>--&gt; DoOperationsByContracts</Description>
+						<Order>650</Order>
+						<Source Name="" Kind=""/>
+						<Receiver Name="DoOperationsByContracts" Kind="Реквизит" Type="Булево"/>
+						<ПередВыгрузкой>Value = True;</ПередВыгрузкой>
+					</Property>
+				</Properties>
+				<Values/>
+			</Rule>
+			<Rule>
+				<Code>ProductsAndServices</Code>
+				<Description>Справочник: Номенклатура</Description>
+				<Order>250</Order>
+				<SynchronizeByID>true</SynchronizeByID>
+				<Source>СправочникСсылка.Номенклатура</Source>
+				<Receiver>СправочникСсылка.ProductsAndServices</Receiver>
+				<AfterImport>
+				If Object.IsNew() Then
+	
+	Object.BusinessActivity = Catalogs.BusinessActivities.MainActivity;
+	Object.ProductsAndServicesCategory = Catalogs.ProductsAndServicesCategories.WithoutCategory;
+	
+	Object.InventoryGLAccount = ChartsOfAccounts.Managerial.RawMaterialsAndMaterials;
+	
+	UseSubsystemProduction = GetFunctionalOption("UseSubsystemProduction");
+	
+	If UseSubsystemProduction Then
+		Object.ExpensesGLAccount = ChartsOfAccounts.Managerial.UnfinishedProduction;
+	Else
+		Object.ExpensesGLAccount = ChartsOfAccounts.Managerial.CommercialExpenses;
+	EndIf;
+	
+EndIf;
+				</AfterImport>
+				<Properties>
+					<Property>
+						<Code>1</Code>
+						<Description>Code --&gt; Code</Description>
+						<Order>50</Order>
+						<Source Name="Code" Kind="Property" Type="Строка"/>
+						<Receiver Name="Code" Kind="Property" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>6</Code>
+						<Description>Комментарий --&gt; Comment</Description>
+						<Order>100</Order>
+						<Source Name="Комментарий" Kind="Реквизит" Type="Строка"/>
+						<Receiver Name="Comment" Kind="Реквизит" Type="Строка"/>
+					</Property>
+					<Property Поиск="true">
+						<Code>7</Code>
+						<Description>Артикул --&gt; SKU</Description>
+						<Order>150</Order>
+						<Source Name="Артикул" Kind="Реквизит" Type="Строка"/>
+						<Receiver Name="SKU" Kind="Реквизит" Type="Строка"/>
+					</Property>
+					<Property Поиск="true">
+						<Code>2</Code>
+						<Description>Description --&gt; Description</Description>
+						<Order>200</Order>
+						<Source Name="Description" Kind="Property" Type="Строка"/>
+						<Receiver Name="Description" Kind="Property" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>8</Code>
+						<Description>DescriptionПолное --&gt; DescriptionFull</Description>
+						<Order>250</Order>
+						<Source Name="DescriptionПолное" Kind="Реквизит" Type="Строка"/>
+						<Receiver Name="DescriptionFull" Kind="Реквизит" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>9</Code>
+						<Description>НоменклатурнаяGroup --&gt; ProductsAndServicesCategory</Description>
+						<Order>300</Order>
+						<Source Name="НоменклатурнаяGroup" Kind="Реквизит" Type="СправочникСсылка.НоменклатурныеГруппы"/>
+						<Receiver Name="ProductsAndServicesCategory" Kind="Реквизит" Type="СправочникСсылка.ProductsAndServicesCategories"/>
+					</Property>
+					<Property>
+						<Code>3</Code>
+						<Description>ПометкаУдаления --&gt; ПометкаУдаления</Description>
+						<Order>350</Order>
+						<Source Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+						<Receiver Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+					</Property>
+					<Property Поиск="true">
+						<Code>4</Code>
+						<Description>Родитель --&gt; Родитель</Description>
+						<Order>400</Order>
+						<Source Name="Родитель" Kind="Property" Type="СправочникСсылка.Номенклатура"/>
+						<Receiver Name="Родитель" Kind="Property" Type="СправочникСсылка.ProductsAndServices"/>
+						<ПередВыгрузкой>If Source.Parent = Source.Ref Then
+	Value = Undefined;	
+EndIf;</ПередВыгрузкой>
+					</Property>
+					<Property>
+						<Code>10</Code>
+						<Description>СтавкаНДС --&gt; ТекстЗапросаСтавкаНДС</Description>
+						<Order>450</Order>
+						<Source Name="СтавкаНДС" Kind="Реквизит" Type="ПеречислениеСсылка.СтавкиНДС"/>
+						<Receiver Name="" Kind=""/>
+						<ИмяПараметраДляПередачи>ТекстЗапросаСтавкаНДС</ИмяПараметраДляПередачи>
+						<ПередВыгрузкой>Execute(Algorithms.FillHeaderVatRate);</ПередВыгрузкой>
+					</Property>
+					<Property Поиск="true" Обязательное="true">
+						<Code>5</Code>
+						<Description>ЭтоGroup --&gt; ЭтоGroup</Description>
+						<Order>500</Order>
+						<Source Name="ЭтоGroup" Kind="Property" Type="Булево"/>
+						<Receiver Name="ЭтоGroup" Kind="Property" Type="Булево"/>
+					</Property>
+					<Property>
+						<Code>11</Code>
+						<Description>ЕдиницаИзмерения --&gt; MeasurementUnit</Description>
+						<Order>550</Order>
+						<Source Name="ЕдиницаИзмерения" Kind="Реквизит" Type="СправочникСсылка.КлассификаторЕдиницИзмерения"/>
+						<Receiver Name="MeasurementUnit" Kind="Реквизит" Type="СправочникСсылка.UOMClassifier"/>
+						<ConversionRuleCode>UOMClassifier                                     </ConversionRuleCode>
+					</Property>
+					<Property>
+						<Code>13</Code>
+						<Description>--&gt; ReplenishmentMethod</Description>
+						<Order>650</Order>
+						<Source Name="" Kind=""/>
+						<Receiver Name="ReplenishmentMethod" Kind="Реквизит" Type="ПеречислениеСсылка.InventoryReplenishmentMethods"/>
+						<ПередВыгрузкой>Cancel = Source.IsFolder;
+If Not Cancel Then
+	Expression = "Enums.InventoryReplenishmentMethods.Purchase";
+EndIf;</ПередВыгрузкой>
+					</Property>
+					<Property>
+						<Code>14</Code>
+						<Description>Услуга --&gt; ProductsAndServicesType</Description>
+						<Order>700</Order>
+						<Source Name="Услуга" Kind="Реквизит" Type="Булево"/>
+						<Receiver Name="ProductsAndServicesType" Kind="Реквизит" Type="ПеречислениеСсылка.ProductsAndServicesTypes"/>
+						<ПередВыгрузкой>If Source.Услуга = True Then
+	Expression = "Enums.ProductsAndServicesTypes.Service";
+Else
+	Expression = "Enums.ProductsAndServicesTypes.InventoryItem";
+endIf;</ПередВыгрузкой>
+					</Property>
+					<Property>
+						<Code>15</Code>
+						<Description>--&gt; EstimationMethod</Description>
+						<Order>750</Order>
+						<Source Name="" Kind=""/>
+						<Receiver Name="EstimationMethod" Kind="Реквизит" Type="ПеречислениеСсылка.InventoryValuationMethods"/>
+						<ПередВыгрузкой>Expression = "Enums.InventoryValuationMethods.ByAverage";</ПередВыгрузкой>
+					</Property>
+					<Property>
+						<Code>16</Code>
+						<Description>СтранаПроисхождения --&gt; CountryOfOrigin</Description>
+						<Order>800</Order>
+						<Source Name="СтранаПроисхождения" Kind="Реквизит" Type="СправочникСсылка.СтраныМира"/>
+						<Receiver Name="CountryOfOrigin" Kind="Реквизит" Type="СправочникСсылка.WorldCountries"/>
+						<ConversionRuleCode>WorldCountries                                    </ConversionRuleCode>
+					</Property>
+				</Properties>
+				<Values/>
+			</Rule>
+			<Rule>
+				<Code>ProductsAndServicesCategories</Code>
+				<Description>Справочник: Номенклатурные группы</Description>
+				<Order>300</Order>
+				<SynchronizeByID>true</SynchronizeByID>
+				<Source>СправочникСсылка.НоменклатурныеГруппы</Source>
+				<Receiver>СправочникСсылка.ProductsAndServicesCategories</Receiver>
+				<Properties>
+					<Property>
+						<Code>1</Code>
+						<Description>Code --&gt; Code</Description>
+						<Order>50</Order>
+						<Source Name="Code" Kind="Property" Type="Строка"/>
+						<Receiver Name="Code" Kind="Property" Type="Строка"/>
+					</Property>
+					<Property Поиск="true">
+						<Code>2</Code>
+						<Description>Description --&gt; Description</Description>
+						<Order>100</Order>
+						<Source Name="Description" Kind="Property" Type="Строка"/>
+						<Receiver Name="Description" Kind="Property" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>3</Code>
+						<Description>ПометкаУдаления --&gt; ПометкаУдаления</Description>
+						<Order>150</Order>
+						<Source Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+						<Receiver Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+					</Property>
+					<Property>
+						<Code>4</Code>
+						<Description>Родитель --&gt; Родитель</Description>
+						<Order>200</Order>
+						<Source Name="Родитель" Kind="Property" Type="СправочникСсылка.НоменклатурныеГруппы"/>
+						<Receiver Name="Родитель" Kind="Property" Type="СправочникСсылка.ProductsAndServicesCategories"/>
+					</Property>
+				</Properties>
+				<Values/>
+			</Rule>
+			<Rule>
+				<Code>Individuals</Code>
+				<Description>Справочник: Физические лица</Description>
+				<Order>350</Order>
+				<SynchronizeByID>true</SynchronizeByID>
+				<Source>СправочникСсылка.ФизическиеЛица</Source>
+				<Receiver>СправочникСсылка.Individuals</Receiver>
+				<Properties>
+					<Property Поиск="true">
+						<Code>2</Code>
+						<Description>Description --&gt; Description</Description>
+						<Order>50</Order>
+						<Source Name="Description" Kind="Property" Type="Строка"/>
+						<Receiver Name="Description" Kind="Property" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>4</Code>
+						<Description>Родитель --&gt; Родитель</Description>
+						<Order>100</Order>
+						<Source Name="Родитель" Kind="Property" Type="СправочникСсылка.ФизическиеЛица"/>
+						<Receiver Name="Родитель" Kind="Property" Type="СправочникСсылка.Individuals"/>
+					</Property>
+					<Property Поиск="true" Обязательное="true">
+						<Code>5</Code>
+						<Description>ЭтоGroup --&gt; ЭтоGroup</Description>
+						<Order>150</Order>
+						<Source Name="ЭтоGroup" Kind="Property" Type="Булево"/>
+						<Receiver Name="ЭтоGroup" Kind="Property" Type="Булево"/>
+					</Property>
+					<Property>
+						<Code>1</Code>
+						<Description>Code --&gt; Code</Description>
+						<Order>200</Order>
+						<Source Name="Code" Kind="Property" Type="Строка"/>
+						<Receiver Name="Code" Kind="Property" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>6</Code>
+						<Description>ДатаРождения --&gt; Birthdate</Description>
+						<Order>250</Order>
+						<Source Name="ДатаРождения" Kind="Реквизит" Type="Дата"/>
+						<Receiver Name="Birthdate" Kind="Реквизит" Type="Дата"/>
+					</Property>
+					<Property>
+						<Code>7</Code>
+						<Description>Пол --&gt; Gender</Description>
+						<Order>300</Order>
+						<Source Name="Пол" Kind="Реквизит" Type="ПеречислениеСсылка.ПолФизическогоЛица"/>
+						<Receiver Name="Gender" Kind="Реквизит" Type="ПеречислениеСсылка.IndividualGender"/>
+						<ConversionRuleCode>IndividualGender                                  </ConversionRuleCode>
+					</Property>
+					<Property>
+						<Code>3</Code>
+						<Description>ПометкаУдаления --&gt; ПометкаУдаления</Description>
+						<Order>350</Order>
+						<Source Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+						<Receiver Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+					</Property>
+					<Group>
+						<Code>8</Code>
+						<Description>КонтактнаяИнформация --&gt; ContactInformation</Description>
+						<Order>400</Order>
+						<Source Name="КонтактнаяИнформация" Kind="ТабличнаяЧасть"/>
+						<Receiver Name="ContactInformation" Kind="ТабличнаяЧасть"/>
+						<ПередОбработкойВыгрузки>If Source.IsFolder = True Then
+	
+	Cancel = True;
+	
+EndIf;</ПередОбработкойВыгрузки>
+						<Property>
+							<Code>9</Code>
+							<Description>АдресЭП --&gt; EmailAddress</Description>
+							<Order>50</Order>
+							<Source Name="АдресЭП" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="EmailAddress" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>10</Code>
+							<Description>ВID --&gt; Kind</Description>
+							<Order>100</Order>
+							<Source Name="ВID" Kind="Реквизит" Type="СправочникСсылка.ВIDыКонтактнойИнформации"/>
+							<Receiver Name="Kind" Kind="Реквизит" Type="СправочникСсылка.ContactInformationKinds"/>
+							<ConversionRuleCode>ContactInformationKinds                           </ConversionRuleCode>
+						</Property>
+						<Property>
+							<Code>11</Code>
+							<Description>Город --&gt; City</Description>
+							<Order>150</Order>
+							<Source Name="Город" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="City" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>12</Code>
+							<Description>ДоменноеИмяСервера --&gt; ServerDomainName</Description>
+							<Order>200</Order>
+							<Source Name="ДоменноеИмяСервера" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="ServerDomainName" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>13</Code>
+							<Description>ValuesПолей --&gt; FieldValues</Description>
+							<Order>250</Order>
+							<Source Name="ValuesПолей" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="FieldValues" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>14</Code>
+							<Description>НомерТелефона --&gt; PhoneNumber</Description>
+							<Order>300</Order>
+							<Source Name="НомерТелефона" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="PhoneNumber" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>15</Code>
+							<Description>НомерТелефонаБезCodeов --&gt; PhoneNumberWithoutCodes</Description>
+							<Order>350</Order>
+							<Source Name="НомерТелефонаБезCodeов" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="PhoneNumberWithoutCodes" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>16</Code>
+							<Description>Представление --&gt; Presentation</Description>
+							<Order>400</Order>
+							<Source Name="Представление" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="Presentation" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>17</Code>
+							<Description>Регион --&gt; Region</Description>
+							<Order>450</Order>
+							<Source Name="Регион" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="Region" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>18</Code>
+							<Description>Страна --&gt; Country</Description>
+							<Order>500</Order>
+							<Source Name="Страна" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="Country" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>19</Code>
+							<Description>Тип --&gt; Type</Description>
+							<Order>550</Order>
+							<Source Name="Тип" Kind="Реквизит" Type="ПеречислениеСсылка.ТипыКонтактнойИнформации"/>
+							<Receiver Name="Type" Kind="Реквизит" Type="ПеречислениеСсылка.ContactInformationTypes"/>
+							<ConversionRuleCode>ContactInformationTypes                           </ConversionRuleCode>
+						</Property>
+					</Group>
+				</Properties>
+				<Values/>
+			</Rule>
+			<Rule>
+				<Code>CounterpartyContracts</Code>
+				<Description>Справочник: Договоры контрагентов</Description>
+				<Order>400</Order>
+				<SynchronizeByID>true</SynchronizeByID>
+				<Source>СправочникСсылка.ДоговорыКонтрагентов</Source>
+				<Receiver>СправочникСсылка.CounterpartyContracts</Receiver>
+				<Properties>
+					<Property Поиск="true">
+						<Code>1</Code>
+						<Description>Владелец --&gt; Владелец</Description>
+						<Order>50</Order>
+						<Source Name="Владелец" Kind="Property" Type="СправочникСсылка.Контрагенты"/>
+						<Receiver Name="Владелец" Kind="Property" Type="СправочникСсылка.Counterparties"/>
+					</Property>
+					<Property>
+						<Code>2</Code>
+						<Description>Code --&gt; Code</Description>
+						<Order>100</Order>
+						<Source Name="Code" Kind="Property" Type="Строка"/>
+						<Receiver Name="Code" Kind="Property" Type="Строка"/>
+					</Property>
+					<Property Поиск="true">
+						<Code>3</Code>
+						<Description>Description --&gt; Description</Description>
+						<Order>150</Order>
+						<Source Name="Description" Kind="Property" Type="Строка"/>
+						<Receiver Name="Description" Kind="Property" Type="Строка"/>
+					</Property>
+					<Property Поиск="true">
+						<Code>6</Code>
+						<Description>Организация --&gt; Company</Description>
+						<Order>200</Order>
+						<Source Name="Организация" Kind="Реквизит" Type="СправочникСсылка.Организации"/>
+						<Receiver Name="Company" Kind="Реквизит" Type="СправочникСсылка.Companies"/>
+						<ConversionRuleCode>Companies                                         </ConversionRuleCode>
+					</Property>
+					<Property>
+						<Code>4</Code>
+						<Description>ПометкаУдаления --&gt; ПометкаУдаления</Description>
+						<Order>250</Order>
+						<Source Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+						<Receiver Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+					</Property>
+					<Property>
+						<Code>7</Code>
+						<Description>РасчетыВУсловныхЕдиницах --&gt; SettlementsInStandardUnits</Description>
+						<Order>300</Order>
+						<Source Name="РасчетыВУсловныхЕдиницах" Kind="Реквизит" Type="Булево"/>
+						<Receiver Name="SettlementsInStandardUnits" Kind="Реквизит" Type="Булево"/>
+					</Property>
+					<Property>
+						<Code>5</Code>
+						<Description>Родитель --&gt; Родитель</Description>
+						<Order>350</Order>
+						<Source Name="Родитель" Kind="Property" Type="СправочникСсылка.ДоговорыКонтрагентов"/>
+						<Receiver Name="Родитель" Kind="Property" Type="СправочникСсылка.CounterpartyContracts"/>
+						<ПередВыгрузкой>Empty = True;</ПередВыгрузкой>
+					</Property>
+					<Property Поиск="true">
+						<Code>8</Code>
+						<Description>ВалютаВзаиморасчетов --&gt; SettlementsCurrency</Description>
+						<Order>400</Order>
+						<Source Name="ВалютаВзаиморасчетов" Kind="Реквизит" Type="СправочникСсылка.Валюты"/>
+						<Receiver Name="SettlementsCurrency" Kind="Реквизит" Type="СправочникСсылка.Currencies"/>
+						<ConversionRuleCode>Currencies                                        </ConversionRuleCode>
+					</Property>
+					<Property Поиск="true">
+						<Code>9</Code>
+						<Description>ВIDДоговора --&gt; ContractKind</Description>
+						<Order>450</Order>
+						<Source Name="ВIDДоговора" Kind="Реквизит" Type="ПеречислениеСсылка.ВIDыДоговоровКонтрагентов"/>
+						<Receiver Name="ContractKind" Kind="Реквизит" Type="ПеречислениеСсылка.ContractKinds"/>
+						<ConversionRuleCode>ContractKinds                                     </ConversionRuleCode>
+					</Property>
+					<Property>
+						<Code>10</Code>
+						<Description>ТипЦен --&gt; PriceKind</Description>
+						<Order>500</Order>
+						<Source Name="ТипЦен" Kind="Реквизит" Type="СправочникСсылка.ТипыЦенНоменклатуры"/>
+						<Receiver Name="PriceKind" Kind="Реквизит" Type="СправочникСсылка.PriceKinds"/>
+						<ConversionRuleCode>PriceKinds                                        </ConversionRuleCode>
+					</Property>
+					<Property>
+						<Code>11</Code>
+						<Description>Дата --&gt; ContractDate</Description>
+						<Order>550</Order>
+						<Source Name="Дата" Kind="Реквизит" Type="Дата"/>
+						<Receiver Name="ContractDate" Kind="Реквизит" Type="Дата"/>
+					</Property>
+					<Property>
+						<Code>12</Code>
+						<Description>Номер --&gt; ContractNo</Description>
+						<Order>600</Order>
+						<Source Name="Номер" Kind="Реквизит" Type="Строка"/>
+						<Receiver Name="ContractNo" Kind="Реквизит" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>13</Code>
+						<Description>СрокОплаты --&gt; CustomerPaymentDueDate</Description>
+						<Order>650</Order>
+						<Source Name="СрокОплаты" Kind="Реквизит" Type="Число"/>
+						<Receiver Name="CustomerPaymentDueDate" Kind="Реквизит" Type="Число"/>
+						<ПередВыгрузкой>If Source.УстановленСрокОплаты
+	And (Source.ВIDДоговора = Enums.ВIDыДоговоровКонтрагентов.СПокупателем
+	Or Source.ВIDДоговора = Enums.ВIDыДоговоровКонтрагентов.СКомиссионером) Then
+	
+	Value = Source.СрокОплаты;
+Else
+	Value = 0;
+EndIf;</ПередВыгрузкой>
+					</Property>
+					<Property>
+						<Code>14</Code>
+						<Description>СрокОплаты --&gt; VendorPaymentDueDate</Description>
+						<Order>700</Order>
+						<Source Name="СрокОплаты" Kind="Реквизит" Type="Число"/>
+						<Receiver Name="VendorPaymentDueDate" Kind="Реквизит" Type="Число"/>
+						<ПередВыгрузкой>
+If Source.УстановленСрокОплаты
+	And (Source.ВIDДоговора = Enums.ВIDыДоговоровКонтрагентов.СПоставщиком
+	Or Source.ВIDДоговора = Enums.ВIDыДоговоровКонтрагентов.СКомитентом) Then
+	
+	Value = Source.СрокОплаты;
+Else
+	Value = 0;
+EndIf;</ПередВыгрузкой>
+					</Property>
+				</Properties>
+				<Values/>
+			</Rule>
+			<Rule>
+				<Code>CashFlowItems</Code>
+				<Description>Справочник: Статьи движения денежных средств</Description>
+				<Order>450</Order>
+				<SynchronizeByID>true</SynchronizeByID>
+				<Source>СправочникСсылка.СтатьIDвиженияДенежныхСредств</Source>
+				<Receiver>СправочникСсылка.CashFlowItems</Receiver>
+				<Properties>
+					<Property>
+						<Code>1</Code>
+						<Description>Code --&gt; Code</Description>
+						<Order>50</Order>
+						<Source Name="Code" Kind="Property" Type="Строка"/>
+						<Receiver Name="Code" Kind="Property" Type="Строка"/>
+					</Property>
+					<Property Поиск="true">
+						<Code>2</Code>
+						<Description>Description --&gt; Description</Description>
+						<Order>100</Order>
+						<Source Name="Description" Kind="Property" Type="Строка"/>
+						<Receiver Name="Description" Kind="Property" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>3</Code>
+						<Description>ПометкаУдаления --&gt; ПометкаУдаления</Description>
+						<Order>150</Order>
+						<Source Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+						<Receiver Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+					</Property>
+					<Property>
+						<Code>4</Code>
+						<Description>Родитель --&gt; Родитель</Description>
+						<Order>200</Order>
+						<Source Name="Родитель" Kind="Property" Type="СправочникСсылка.СтатьIDвиженияДенежныхСредств"/>
+						<Receiver Name="Родитель" Kind="Property" Type="СправочникСсылка.CashFlowItems"/>
+					</Property>
+					<Property Поиск="true" Обязательное="true">
+						<Code>5</Code>
+						<Description>ЭтоGroup --&gt; ЭтоGroup</Description>
+						<Order>250</Order>
+						<Source Name="ЭтоGroup" Kind="Property" Type="Булево"/>
+						<Receiver Name="ЭтоGroup" Kind="Property" Type="Булево"/>
+					</Property>
+				</Properties>
+				<Values/>
+			</Rule>
+			<Rule>
+				<Code>StructuralUnitsWhareHouse</Code>
+				<Description>Справочник: Склады (места хранения)</Description>
+				<Order>500</Order>
+				<SynchronizeByID>true</SynchronizeByID>
+				<Source>СправочникСсылка.Склады</Source>
+				<Receiver>СправочникСсылка.StructuralUnits</Receiver>
+				<Properties>
+					<Property>
+						<Code>1</Code>
+						<Description>Code --&gt; Code</Description>
+						<Order>50</Order>
+						<Source Name="Code" Kind="Property" Type="Строка"/>
+						<Receiver Name="Code" Kind="Property" Type="Строка"/>
+					</Property>
+					<Property Поиск="true">
+						<Code>2</Code>
+						<Description>Description --&gt; Description</Description>
+						<Order>100</Order>
+						<Source Name="Description" Kind="Property" Type="Строка"/>
+						<Receiver Name="Description" Kind="Property" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>3</Code>
+						<Description>ПометкаУдаления --&gt; ПометкаУдаления</Description>
+						<Order>150</Order>
+						<Source Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+						<Receiver Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+					</Property>
+					<Property>
+						<Code>4</Code>
+						<Description>Родитель --&gt; Родитель</Description>
+						<Order>200</Order>
+						<Source Name="Родитель" Kind="Property" Type="СправочникСсылка.Склады"/>
+						<Receiver Name="Родитель" Kind="Property" Type="СправочникСсылка.StructuralUnits"/>
+						<ПередВыгрузкой>Empty = True;</ПередВыгрузкой>
+					</Property>
+					<Property Поиск="true">
+						<Code>5</Code>
+						<Description>ТипСклада --&gt; StructuralUnitType</Description>
+						<Order>250</Order>
+						<Source Name="ТипСклада" Kind="Реквизит" Type="ПеречислениеСсылка.ТипыСкладов"/>
+						<Receiver Name="StructuralUnitType" Kind="Реквизит" Type="ПеречислениеСсылка.StructuralUnitsTypes"/>
+						<ConversionRuleCode>StructuralUnitsTypes                              </ConversionRuleCode>
+					</Property>
+					<Property>
+						<Code>6</Code>
+						<Description>--&gt; FRP</Description>
+						<Order>300</Order>
+						<Source Name="" Kind=""/>
+						<Receiver Name="FRP" Kind="Реквизит" Type="СправочникСсылка.Individuals"/>
+						<ПередВыгрузкой>Filter = New Structure("СтруктурнаяЕдиница");
+Filter.СтруктурнаяЕдиница = Source.Ссылка;
+SliceLast = InformationRegisters.ОтветственныеЛица.SliceLast(CurrentDate(), Filter);
+
+Value = ?(SliceLast.Count() &gt; 1, SliceLast[0].ФизическоеЛицо, Undefined);</ПередВыгрузкой>
+					</Property>
+					<Property>
+						<Code>7</Code>
+						<Description>ТипЦенРозничнойТорговли --&gt; RetailPriceKind</Description>
+						<Order>350</Order>
+						<Source Name="ТипЦенРозничнойТорговли" Kind="Реквизит" Type="СправочникСсылка.ТипыЦенНоменклатуры"/>
+						<Receiver Name="RetailPriceKind" Kind="Реквизит" Type="СправочникСсылка.PriceKinds"/>
+						<ConversionRuleCode>PriceKinds                                        </ConversionRuleCode>
+					</Property>
+					<Property>
+						<Code>8</Code>
+						<Description>--&gt; GLAccountInRetail</Description>
+						<Order>400</Order>
+						<Source Name="" Kind=""/>
+						<Receiver Name="GLAccountInRetail" Kind="Реквизит" Type="ПланСчетовСсылка.Managerial"/>
+						<ПередВыгрузкой>Expression = "ChartsOfAccounts.Managerial.ProductsFinishedProducts";</ПередВыгрузкой>
+					</Property>
+					<Property>
+						<Code>9</Code>
+						<Description>--&gt; MarkupGLAccount</Description>
+						<Order>450</Order>
+						<Source Name="" Kind=""/>
+						<Receiver Name="MarkupGLAccount" Kind="Реквизит" Type="ПланСчетовСсылка.Managerial"/>
+						<ПередВыгрузкой>Expression = "ChartsOfAccounts.Managerial.CostOfGoodsSold";</ПередВыгрузкой>
+					</Property>
+				</Properties>
+				<Values/>
+			</Rule>
+			<Rule>
+				<Code>Specifications</Code>
+				<Description>Справочник: Спецификации номенклатуры</Description>
+				<Order>550</Order>
+				<SynchronizeByID>true</SynchronizeByID>
+				<Source>СправочникСсылка.СпецификацииНоменклатуры</Source>
+				<Receiver>СправочникСсылка.Specifications</Receiver>
+				<Properties>
+					<Property Поиск="true">
+						<Code>1</Code>
+						<Description>Владелец --&gt; Владелец</Description>
+						<Order>50</Order>
+						<Source Name="Владелец" Kind="Property" Type="СправочникСсылка.Номенклатура"/>
+						<Receiver Name="Владелец" Kind="Property" Type="СправочникСсылка.ProductsAndServices"/>
+					</Property>
+					<Property>
+						<Code>2</Code>
+						<Description>Code --&gt; Code</Description>
+						<Order>100</Order>
+						<Source Name="Code" Kind="Property" Type="Строка"/>
+						<Receiver Name="Code" Kind="Property" Type="Строка"/>
+					</Property>
+					<Property Поиск="true">
+						<Code>3</Code>
+						<Description>Description --&gt; Description</Description>
+						<Order>150</Order>
+						<Source Name="Description" Kind="Property" Type="Строка"/>
+						<Receiver Name="Description" Kind="Property" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>4</Code>
+						<Description>ПометкаУдаления --&gt; ПометкаУдаления</Description>
+						<Order>200</Order>
+						<Source Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+						<Receiver Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+					</Property>
+					<Group>
+						<Code>5</Code>
+						<Description>ИсходныеКомплектующие --&gt; Content</Description>
+						<Order>250</Order>
+						<Source Name="ИсходныеКомплектующие" Kind="ТабличнаяЧасть"/>
+						<Receiver Name="Content" Kind="ТабличнаяЧасть"/>
+						<Property>
+							<Code>6</Code>
+							<Description>Количество --&gt; Quantity</Description>
+							<Order>50</Order>
+							<Source Name="Количество" Kind="Реквизит" Type="Число"/>
+							<Receiver Name="Quantity" Kind="Реквизит" Type="Число"/>
+						</Property>
+						<Property>
+							<Code>7</Code>
+							<Description>Номенклатура --&gt; ProductsAndServices</Description>
+							<Order>100</Order>
+							<Source Name="Номенклатура" Kind="Реквизит" Type="СправочникСсылка.Номенклатура"/>
+							<Receiver Name="ProductsAndServices" Kind="Реквизит" Type="СправочникСсылка.ProductsAndServices"/>
+							<ConversionRuleCode>ProductsAndServices                               </ConversionRuleCode>
+						</Property>
+						<Property>
+							<Code>8</Code>
+							<Description>--&gt; ProductsQuantity</Description>
+							<Order>150</Order>
+							<Source Name="" Kind=""/>
+							<Receiver Name="ProductsQuantity" Kind="Реквизит" Type="Число"/>
+							<ПередВыгрузкой>Value = Source.Количество;</ПередВыгрузкой>
+						</Property>
+						<Property>
+							<Code>9</Code>
+							<Description>--&gt; ContentRowType</Description>
+							<Order>200</Order>
+							<Source Name="" Kind=""/>
+							<Receiver Name="ContentRowType" Kind="Реквизит" Type="ПеречислениеСсылка.SpecificationContentRowTypes"/>
+							<ПередВыгрузкой>Expression = "Enums.SpecificationContentRowTypes.Material";</ПередВыгрузкой>
+						</Property>
+						<Property>
+							<Code>10</Code>
+							<Description>--&gt; CostPercentage</Description>
+							<Order>250</Order>
+							<Source Name="" Kind=""/>
+							<Receiver Name="CostPercentage" Kind="Реквизит" Type="Число"/>
+							<ПередВыгрузкой>Value = 1;</ПередВыгрузкой>
+						</Property>
+					</Group>
+				</Properties>
+				<Values/>
+			</Rule>
+			<Rule>
+				<Code>PriceKinds</Code>
+				<Description>Справочник: Типы цен номенклатуры</Description>
+				<Order>600</Order>
+				<SynchronizeByID>true</SynchronizeByID>
+				<Source>СправочникСсылка.ТипыЦенНоменклатуры</Source>
+				<Receiver>СправочникСсылка.PriceKinds</Receiver>
+				<Properties>
+					<Property Поиск="true">
+						<Code>4</Code>
+						<Description>ВалютаЦены --&gt; PriceCurrency</Description>
+						<Order>50</Order>
+						<Source Name="ВалютаЦены" Kind="Реквизит" Type="СправочникСсылка.Валюты"/>
+						<Receiver Name="PriceCurrency" Kind="Реквизит" Type="СправочникСсылка.Currencies"/>
+						<ConversionRuleCode>Currencies                                        </ConversionRuleCode>
+					</Property>
+					<Property>
+						<Code>1</Code>
+						<Description>Code --&gt; Code</Description>
+						<Order>100</Order>
+						<Source Name="Code" Kind="Property" Type="Строка"/>
+						<Receiver Name="Code" Kind="Property" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>5</Code>
+						<Description>Комментарий --&gt; Comment</Description>
+						<Order>150</Order>
+						<Source Name="Комментарий" Kind="Реквизит" Type="Строка"/>
+						<Receiver Name="Comment" Kind="Реквизит" Type="Строка"/>
+					</Property>
+					<Property Поиск="true">
+						<Code>2</Code>
+						<Description>Description --&gt; Description</Description>
+						<Order>200</Order>
+						<Source Name="Description" Kind="Property" Type="Строка"/>
+						<Receiver Name="Description" Kind="Property" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>6</Code>
+						<Description>ОкруглятьВБольшуюСторону --&gt; RoundUp</Description>
+						<Order>250</Order>
+						<Source Name="ОкруглятьВБольшуюСторону" Kind="Реквизит" Type="Булево"/>
+						<Receiver Name="RoundUp" Kind="Реквизит" Type="Булево"/>
+					</Property>
+					<Property>
+						<Code>3</Code>
+						<Description>ПометкаУдаления --&gt; ПометкаУдаления</Description>
+						<Order>300</Order>
+						<Source Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+						<Receiver Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+					</Property>
+					<Property>
+						<Code>7</Code>
+						<Description>OrderОкругления --&gt; RoundingOrder</Description>
+						<Order>350</Order>
+						<Source Name="OrderОкругления" Kind="Реквизит" Type="ПеречислениеСсылка.ПорядкиОкругления"/>
+						<Receiver Name="RoundingOrder" Kind="Реквизит" Type="ПеречислениеСсылка.RoundingMethods"/>
+						<ConversionRuleCode>RoundingMethods                                   </ConversionRuleCode>
+					</Property>
+					<Property>
+						<Code>8</Code>
+						<Description>ЦенаВключаетНДС --&gt; PriceIncludesVAT</Description>
+						<Order>400</Order>
+						<Source Name="ЦенаВключаетНДС" Kind="Реквизит" Type="Булево"/>
+						<Receiver Name="PriceIncludesVAT" Kind="Реквизит" Type="Булево"/>
+					</Property>
+				</Properties>
+				<Values/>
+			</Rule>
+			<Rule>
+				<Code>StructuralUnits</Code>
+				<Description>Справочник: Подразделения</Description>
+				<Order>650</Order>
+				<SynchronizeByID>true</SynchronizeByID>
+				<Source>СправочникСсылка.ПодразделенияОрганизаций</Source>
+				<Receiver>СправочникСсылка.StructuralUnits</Receiver>
+				<Properties>
+					<Property Поиск="true">
+						<Code>1</Code>
+						<Description>Code --&gt; Code</Description>
+						<Order>50</Order>
+						<Source Name="Code" Kind="Property" Type="Строка"/>
+						<Receiver Name="Code" Kind="Property" Type="Строка"/>
+					</Property>
+					<Property Поиск="true">
+						<Code>2</Code>
+						<Description>Description --&gt; Description</Description>
+						<Order>100</Order>
+						<Source Name="Description" Kind="Property" Type="Строка"/>
+						<Receiver Name="Description" Kind="Property" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>3</Code>
+						<Description>ПометкаУдаления --&gt; ПометкаУдаления</Description>
+						<Order>150</Order>
+						<Source Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+						<Receiver Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+					</Property>
+					<Property>
+						<Code>4</Code>
+						<Description>Родитель --&gt; Родитель</Description>
+						<Order>200</Order>
+						<Source Name="Родитель" Kind="Property" Type="СправочникСсылка.ПодразделенияОрганизаций"/>
+						<Receiver Name="Родитель" Kind="Property" Type="СправочникСсылка.StructuralUnits"/>
+					</Property>
+					<Property>
+						<Code>5</Code>
+						<Description>--&gt; StructuralUnitType</Description>
+						<Order>250</Order>
+						<Source Name="" Kind=""/>
+						<Receiver Name="StructuralUnitType" Kind="Реквизит" Type="ПеречислениеСсылка.StructuralUnitsTypes"/>
+						<ПередВыгрузкой>Expression = "Перечисления.ТипыСтруктурныхЕдиниц.Подразделение";</ПередВыгрузкой>
+					</Property>
+					<Property Поиск="true">
+						<Code>6</Code>
+						<Description>Владелец --&gt; Company</Description>
+						<Order>300</Order>
+						<Source Name="Владелец" Kind="Property" Type="СправочникСсылка.Организации"/>
+						<Receiver Name="Company" Kind="Реквизит" Type="СправочникСсылка.Companies"/>
+						<ConversionRuleCode>Companies                                         </ConversionRuleCode>
+					</Property>
+				</Properties>
+				<Values/>
+			</Rule>
+			<Rule>
+				<Code>ContactInformationKinds</Code>
+				<Description>Справочник: ВIDы контактной информации</Description>
+				<Order>700</Order>
+				<SynchronizeByID>true</SynchronizeByID>
+				<Source>СправочникСсылка.ВидыКонтактнойИнформации</Source>
+				<Receiver>СправочникСсылка.ContactInformationKinds</Receiver>
+				<Properties>
+					<Property>
+						<Code>2</Code>
+						<Description>ПометкаУдаления --&gt; ПометкаУдаления</Description>
+						<Order>50</Order>
+						<Source Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+						<Receiver Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+					</Property>
+					<Property>
+						<Code>5</Code>
+						<Description>Тип --&gt; Type</Description>
+						<Order>100</Order>
+						<Source Name="Тип" Kind="Реквизит" Type="ПеречислениеСсылка.ТипыКонтактнойИнформации"/>
+						<Receiver Name="Type" Kind="Реквизит" Type="ПеречислениеСсылка.ContactInformationTypes"/>
+						<ConversionRuleCode>ContactInformationTypes                           </ConversionRuleCode>
+					</Property>
+					<Property Поиск="true">
+						<Code>1</Code>
+						<Description>Description --&gt; Description</Description>
+						<Order>150</Order>
+						<Source Name="Description" Kind="Property" Type="Строка"/>
+						<Receiver Name="Description" Kind="Property" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>6</Code>
+						<Description>АдресТолькоРоссийский --&gt; DomesticAddressOnly</Description>
+						<Order>200</Order>
+						<Source Name="АдресТолькоРоссийский" Kind="Реквизит" Type="Булево"/>
+						<Receiver Name="DomesticAddressOnly" Kind="Реквизит" Type="Булево"/>
+					</Property>
+					<Property>
+						<Code>7</Code>
+						<Description>МожноИзменятьСпособРедактирования --&gt; CanChangeEditMode</Description>
+						<Order>250</Order>
+						<Source Name="МожноИзменятьСпособРедактирования" Kind="Реквизит" Type="Булево"/>
+						<Receiver Name="CanChangeEditMode" Kind="Реквизит" Type="Булево"/>
+					</Property>
+					<Property>
+						<Code>8</Code>
+						<Description>РедактированиеТолькоВДиалоге --&gt; EditInDialogOnly</Description>
+						<Order>300</Order>
+						<Source Name="РедактированиеТолькоВДиалоге" Kind="Реквизит" Type="Булево"/>
+						<Receiver Name="EditInDialogOnly" Kind="Реквизит" Type="Булево"/>
+					</Property>
+					<Property>
+						<Code>9</Code>
+						<Description>РеквизитДопУпорядочивания --&gt; AdditionalOrderingAttribute</Description>
+						<Order>350</Order>
+						<Source Name="РеквизитДопУпорядочивания" Kind="Реквизит" Type="Число"/>
+						<Receiver Name="AdditionalOrderingAttribute" Kind="Реквизит" Type="Число"/>
+					</Property>
+					<Property Поиск="true">
+						<Code>3</Code>
+						<Description>Родитель --&gt; Родитель</Description>
+						<Order>400</Order>
+						<Source Name="Родитель" Kind="Property" Type="СправочникСсылка.ВIDыКонтактнойИнформации"/>
+						<Receiver Name="Родитель" Kind="Property" Type="СправочникСсылка.ContactInformationKinds"/>
+					</Property>
+					<Property Поиск="true" Обязательное="true">
+						<Code>4</Code>
+						<Description>ЭтоGroup --&gt; ЭтоGroup</Description>
+						<Order>450</Order>
+						<Source Name="ЭтоGroup" Kind="Property" Type="Булево"/>
+						<Receiver Name="ЭтоGroup" Kind="Property" Type="Булево"/>
+					</Property>
+				</Properties>
+				<Values/>
+			</Rule>
+			<Rule>
+				<Code>PettyCashes</Code>
+				<Description>Справочник: Подразделения</Description>
+				<Order>750</Order>
+				<SynchronizeByID>true</SynchronizeByID>
+				<Source>СправочникСсылка.ПодразделенияОрганизаций</Source>
+				<Receiver>СправочникСсылка.PettyCashes</Receiver>
+				<Properties>
+					<Property>
+						<Code>1</Code>
+						<Description>Код --&gt; Код</Description>
+						<Order>50</Order>
+						<Source Name="Код" Kind="Свойство" Type="Строка"/>
+						<Receiver Name="Код" Kind="Свойство" Type="Строка"/>
+					</Property>
+					<Property Поиск="true">
+						<Code>2</Code>
+						<Description>Наименование --&gt; Наименование</Description>
+						<Order>100</Order>
+						<Source Name="Наименование" Kind="Свойство" Type="Строка"/>
+						<Receiver Name="Наименование" Kind="Свойство" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>3</Code>
+						<Description>ПометкаУдаления --&gt; ПометкаУдаления</Description>
+						<Order>150</Order>
+						<Source Name="ПометкаУдаления" Kind="Свойство" Type="Булево"/>
+						<Receiver Name="ПометкаУдаления" Kind="Свойство" Type="Булево"/>
+					</Property>
+				</Properties>
+				<Values/>
+			</Rule>
+		</Group>
+		<Group>
+			<Code>Регистры сведений</Code>
+			<Description>Регистры сведений                                 </Description>
+			<Order>150</Order>
+			<Rule>
+				<Code>IndividualsDescriptionFull</Code>
+				<Description>Регистр сведений: Фамилия, имя, отчество физического лица</Description>
+				<Order>50</Order>
+				<НеЗапоминатьВыгруженные>true</НеЗапоминатьВыгруженные>
+				<Source>РегистрСведенийЗапись.ФИОФизическихЛиц</Source>
+				<Receiver>РегистрСведенийЗапись.IndividualsDescriptionFull</Receiver>
+				<Properties>
+					<Property>
+						<Code>1</Code>
+						<Description>Активность --&gt; Активность</Description>
+						<Order>50</Order>
+						<Source Name="Активность" Kind="Property" Type="Булево"/>
+						<Receiver Name="Активность" Kind="Property" Type="Булево"/>
+					</Property>
+					<Property>
+						<Code>2</Code>
+						<Description>Период --&gt; Период</Description>
+						<Order>100</Order>
+						<Source Name="Период" Kind="Property" Type="Дата"/>
+						<Receiver Name="Период" Kind="Property" Type="Дата"/>
+					</Property>
+					<Property>
+						<Code>3</Code>
+						<Description>ФизическоеЛицо --&gt; Ind</Description>
+						<Order>150</Order>
+						<Source Name="ФизическоеЛицо" Kind="Измерение"/>
+						<Receiver Name="Ind" Kind="Измерение" Type="СправочникСсылка.Individuals"/>
+					</Property>
+					<Property>
+						<Code>4</Code>
+						<Description>Имя --&gt; Name</Description>
+						<Order>200</Order>
+						<Source Name="Имя" Kind="Ресурс" Type="Строка"/>
+						<Receiver Name="Name" Kind="Ресурс" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>5</Code>
+						<Description>Отчество --&gt; Patronymic</Description>
+						<Order>250</Order>
+						<Source Name="Отчество" Kind="Ресурс" Type="Строка"/>
+						<Receiver Name="Patronymic" Kind="Ресурс" Type="Строка"/>
+					</Property>
+					<Property>
+						<Code>6</Code>
+						<Description>Фамилия --&gt; Surname</Description>
+						<Order>300</Order>
+						<Source Name="Фамилия" Kind="Ресурс" Type="Строка"/>
+						<Receiver Name="Surname" Kind="Ресурс" Type="Строка"/>
+					</Property>
+				</Properties>
+				<Values/>
+			</Rule>
+		</Group>
+		<Group>
+			<Code>Документы</Code>
+			<Description>Документы                                         </Description>
+			<Order>200</Order>
+			<Group>
+				<Code>ДенежныеСредства</Code>
+				<Description>ДенежныеСредства                                  </Description>
+				<Order>50</Order>
+				<Rule>
+					<Code>PaymentReceipt</Code>
+					<Description>Документ: Поступление на расчетный счет</Description>
+					<Order>50</Order>
+					<SynchronizeByID>true</SynchronizeByID>
+					<Source>ДокументСсылка.ПоступлениеНаРасчетныйСчет</Source>
+					<Receiver>ДокументСсылка.PaymentReceipt</Receiver>
+					<Properties>
+						<Property>
+							<Code>5</Code>
+							<Description>ВIDОперации --&gt; OperationKind</Description>
+							<Order>50</Order>
+							<Source Name="ВIDОперации" Kind="Реквизит" Type="ПеречислениеСсылка.ВIDыОперацийПоступлениеДенежныхСредств"/>
+							<Receiver Name="OperationKind" Kind="Реквизит" Type="ПеречислениеСсылка.OperationKindsPaymentReceipt"/>
+							<ConversionRuleCode>OperationKindsPaymentReceipt                      </ConversionRuleCode>
+						</Property>
+						<Property Поиск="true">
+							<Code>1</Code>
+							<Description>Дата --&gt; Дата</Description>
+							<Order>100</Order>
+							<Source Name="Дата" Kind="Property" Type="Дата"/>
+							<Receiver Name="Дата" Kind="Property" Type="Дата"/>
+						</Property>
+						<Property>
+							<Code>6</Code>
+							<Description>ДатаВходящегоДокумента --&gt; IncomingDocumentDate</Description>
+							<Order>150</Order>
+							<Source Name="ДатаВходящегоДокумента" Kind="Реквизит" Type="Дата"/>
+							<Receiver Name="IncomingDocumentDate" Kind="Реквизит" Type="Дата"/>
+						</Property>
+						<Property>
+							<Code>7</Code>
+							<Description>Контрагент --&gt; Counterparty</Description>
+							<Order>200</Order>
+							<Source Name="Контрагент" Kind="Реквизит" Type="СправочникСсылка.Контрагенты"/>
+							<Receiver Name="Counterparty" Kind="Реквизит" Type="СправочникСсылка.Counterparties"/>
+							<ConversionRuleCode>Counterparties                                    </ConversionRuleCode>
+							<ПередВыгрузкой>If Source.ВIDОперации &lt;&gt; Enums.ВIDыОперацийПоступлениеДенежныхСредств.ВозвратОтПоставщика
+And  Source.ВIDОперации &lt;&gt; Enums.ВIDыОперацийПоступлениеДенежныхСредств.ОплатаПокупателя Then
+   Value = "";
+EndIf;</ПередВыгрузкой>
+						</Property>
+						<Property Поиск="true">
+							<Code>2</Code>
+							<Description>Номер --&gt; Номер</Description>
+							<Order>250</Order>
+							<Source Name="Номер" Kind="Property" Type="Строка"/>
+							<Receiver Name="Номер" Kind="Property" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>8</Code>
+							<Description>Организация --&gt; Company</Description>
+							<Order>300</Order>
+							<Source Name="Организация" Kind="Реквизит" Type="СправочникСсылка.Организации"/>
+							<Receiver Name="Company" Kind="Реквизит" Type="СправочникСсылка.Companies"/>
+							<ConversionRuleCode>Companies                                         </ConversionRuleCode>
+						</Property>
+						<Property>
+							<Code>3</Code>
+							<Description>ПометкаУдаления --&gt; ПометкаУдаления</Description>
+							<Order>350</Order>
+							<Source Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+							<Receiver Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+						</Property>
+						<Property>
+							<Code>4</Code>
+							<Description>Проведен --&gt; Проведен</Description>
+							<Order>400</Order>
+							<Source Name="Проведен" Kind="Property" Type="Булево"/>
+							<Receiver Name="Проведен" Kind="Property" Type="Булево"/>
+						</Property>
+						<Property>
+							<Code>9</Code>
+							<Description>СуммаДокумента --&gt; DocumentAmount</Description>
+							<Order>450</Order>
+							<Source Name="СуммаДокумента" Kind="Реквизит" Type="Число"/>
+							<Receiver Name="DocumentAmount" Kind="Реквизит" Type="Число"/>
+						</Property>
+						<Property>
+							<Code>10</Code>
+							<Description>ВалютаДокумента --&gt; CashCurrency</Description>
+							<Order>500</Order>
+							<Source Name="ВалютаДокумента" Kind="Реквизит" Type="СправочникСсылка.Валюты"/>
+							<Receiver Name="CashCurrency" Kind="Реквизит" Type="СправочникСсылка.Currencies"/>
+							<ConversionRuleCode>Currencies                                        </ConversionRuleCode>
+						</Property>
+						<Property>
+							<Code>11</Code>
+							<Description>СтатьяДвиженияДенежныхСредств --&gt; Item</Description>
+							<Order>550</Order>
+							<Source Name="СтатьяДвиженияДенежныхСредств" Kind="Реквизит" Type="СправочникСсылка.СтатьIDвиженияДенежныхСредств"/>
+							<Receiver Name="Item" Kind="Реквизит" Type="СправочникСсылка.CashFlowItems"/>
+							<ConversionRuleCode>CashFlowItems                                     </ConversionRuleCode>
+							<ПередВыгрузкой>If Not ValueIsFilled(Source.СтатьяДвиженияДенежныхСредств)
+	  And Source.РасшифровкаПлатежа.Count() &gt; 0 Then
+	Value = Source.РасшифровкаПлатежа[0].СтатьяДвиженияДенежныхСредств;
+EndIf</ПередВыгрузкой>
+						</Property>
+						<Property>
+							<Code>12</Code>
+							<Description>СчетОрганизации --&gt; BankAccount</Description>
+							<Order>600</Order>
+							<Source Name="СчетОрганизации" Kind="Реквизит" Type="СправочникСсылка.БанковскиеСчета"/>
+							<Receiver Name="BankAccount" Kind="Реквизит" Type="СправочникСсылка.BankAccounts"/>
+							<ConversionRuleCode>BankAccounts                                      </ConversionRuleCode>
+						</Property>
+						<Property>
+							<Code>13</Code>
+							<Description>НомерВходящегоДокумента --&gt; IncomingDocumentNumber</Description>
+							<Order>650</Order>
+							<Source Name="НомерВходящегоДокумента" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="IncomingDocumentNumber" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>14</Code>
+							<Description>ДокументОснование --&gt; BasisDocument</Description>
+							<Order>700</Order>
+							<Source Name="ДокументОснование" Kind="Реквизит"/>
+							<Receiver Name="BasisDocument" Kind="Реквизит"/>
+						</Property>
+						<Property>
+							<Code>15</Code>
+							<Description>НазначениеПлатежа --&gt; PaymentDestination</Description>
+							<Order>750</Order>
+							<Source Name="НазначениеПлатежа" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="PaymentDestination" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>16</Code>
+							<Description>--&gt; Multiplicity</Description>
+							<Order>800</Order>
+							<Source Name="" Kind=""/>
+							<Receiver Name="Multiplicity" Kind="Реквизит" Type="Число"/>
+							<ПередВыгрузкой>If Source.ВIDОперации = Enums.ВIDыОперацийПоступлениеДенежныхСредств.ПриобретениеИностраннойВалюты
+   And Source.РасшифровкаПлатежа.Count() &gt; 0 Then
+	Value = Source.РасшифровкаПлатежа[0].КратностьВзаиморасчетов;
+Иначе
+	Value = 1;
+КонецЕсли;</ПередВыгрузкой>
+						</Property>
+						<Property>
+							<Code>17</Code>
+							<Description>--&gt; ExchangeRate</Description>
+							<Order>850</Order>
+							<Source Name="" Kind=""/>
+							<Receiver Name="ExchangeRate" Kind="Реквизит" Type="Число"/>
+							<ПередВыгрузкой>If Source.ВIDОперации = Enums.ВIDыОперацийПоступлениеДенежныхСредств.ПриобретениеИностраннойВалюты
+   And Source.РасшифровкаПлатежа.Count() &gt; 0 Then
+	Value = Source.РасшифровкаПлатежа[0].КурсВзаиморасчетов;
+Else
+	Value = 1;
+EndIf;</ПередВыгрузкой>
+						</Property>
+						<Property>
+							<Code>18</Code>
+							<Description>Комментарий --&gt; Comment</Description>
+							<Order>900</Order>
+							<Source Name="Комментарий" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="Comment" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Group>
+							<Code>19</Code>
+							<Description>РасшифровкаПлатежа --&gt; PaymentDetails</Description>
+							<Order>950</Order>
+							<Source Name="РасшифровкаПлатежа" Kind="ТабличнаяЧасть"/>
+							<Receiver Name="PaymentDetails" Kind="ТабличнаяЧасть"/>
+							<Property>
+								<Code>20</Code>
+								<Description>СуммаНДС --&gt; VATAmount</Description>
+								<Order>50</Order>
+								<Source Name="СуммаНДС" Kind="Реквизит" Type="Число"/>
+								<Receiver Name="VATAmount" Kind="Реквизит" Type="Число"/>
+							</Property>
+							<Property>
+								<Code>21</Code>
+								<Description>СуммаПлатежа --&gt; PaymentAmount</Description>
+								<Order>100</Order>
+								<Source Name="СуммаПлатежа" Kind="Реквизит" Type="Число"/>
+								<Receiver Name="PaymentAmount" Kind="Реквизит" Type="Число"/>
+							</Property>
+							<Property>
+								<Code>22</Code>
+								<Description>ДоговорКонтрагента --&gt; Contract</Description>
+								<Order>150</Order>
+								<Source Name="ДоговорКонтрагента" Kind="Реквизит" Type="СправочникСсылка.ДоговорыКонтрагентов"/>
+								<Receiver Name="Contract" Kind="Реквизит" Type="СправочникСсылка.CounterpartyContracts"/>
+								<ConversionRuleCode>CounterpartyContracts                             </ConversionRuleCode>
+							</Property>
+							<Property>
+								<Code>23</Code>
+								<Description>КратностьВзаиморасчетов --&gt; Multiplicity</Description>
+								<Order>200</Order>
+								<Source Name="КратностьВзаиморасчетов" Kind="Реквизит" Type="Число"/>
+								<Receiver Name="Multiplicity" Kind="Реквизит" Type="Число"/>
+							</Property>
+							<Property>
+								<Code>24</Code>
+								<Description>КурсВзаиморасчетов --&gt; ExchangeRate</Description>
+								<Order>250</Order>
+								<Source Name="КурсВзаиморасчетов" Kind="Реквизит" Type="Число"/>
+								<Receiver Name="ExchangeRate" Kind="Реквизит" Type="Число"/>
+							</Property>
+							<Property>
+								<Code>25</Code>
+								<Description>СуммаВзаиморасчетов --&gt; SettlementsAmount</Description>
+								<Order>300</Order>
+								<Source Name="СуммаВзаиморасчетов" Kind="Реквизит" Type="Число"/>
+								<Receiver Name="SettlementsAmount" Kind="Реквизит" Type="Число"/>
+							</Property>
+							<Property>
+								<Code>26</Code>
+								<Description>Сделка --&gt; Document</Description>
+								<Order>350</Order>
+								<Source Name="Сделка" Kind="Реквизит"/>
+								<Receiver Name="Document" Kind="Реквизит"/>
+							</Property>
+							<Property>
+								<Code>27</Code>
+								<Description>--&gt; AdvanceFlag</Description>
+								<Order>400</Order>
+								<Source Name="" Kind=""/>
+								<Receiver Name="AdvanceFlag" Kind="Реквизит" Type="Булево"/>
+								<ПередВыгрузкой>Value = Not ValueIsFilled(CollectionObject.Сделка);</ПередВыгрузкой>
+							</Property>
+							<Property>
+								<Code>28</Code>
+								<Description>СтавкаНДС --&gt; ТекстЗапросаСтавкаНДС</Description>
+								<Order>450</Order>
+								<Source Name="СтавкаНДС" Kind="Реквизит" Type="ПеречислениеСсылка.СтавкиНДС"/>
+								<Receiver Name="" Kind=""/>
+								<ИмяПараметраДляПередачи>ТекстЗапросаСтавкаНДС</ИмяПараметраДляПередачи>
+								<ПередВыгрузкой>Execute(Algorithms.FillTabularSectionVATRate);</ПередВыгрузкой>
+							</Property>
+						</Group>
+					</Properties>
+					<Values/>
+				</Rule>
+				<Rule>
+					<Code>CashReceipt</Code>
+					<Description>Документ: Приходный кассовый ордер</Description>
+					<Order>100</Order>
+					<SynchronizeByID>true</SynchronizeByID>
+					<Source>ДокументСсылка.ПриходныйКассовыйОрдер</Source>
+					<Receiver>ДокументСсылка.CashReceipt</Receiver>
+					<Properties>
+						<Property>
+							<Code>5</Code>
+							<Description>ВIDОперации --&gt; OperationKind</Description>
+							<Order>50</Order>
+							<Source Name="ВIDОперации" Kind="Реквизит" Type="ПеречислениеСсылка.ВIDыОперацийПКО"/>
+							<Receiver Name="OperationKind" Kind="Реквизит" Type="ПеречислениеСсылка.OperationKindsCashReceipt"/>
+							<ConversionRuleCode>OperationKindsCashReceipt                         </ConversionRuleCode>
+						</Property>
+						<Property Поиск="true">
+							<Code>1</Code>
+							<Description>Дата --&gt; Дата</Description>
+							<Order>100</Order>
+							<Source Name="Дата" Kind="Property" Type="Дата"/>
+							<Receiver Name="Дата" Kind="Property" Type="Дата"/>
+						</Property>
+						<Property>
+							<Code>6</Code>
+							<Description>Контрагент --&gt; Counterparty</Description>
+							<Order>150</Order>
+							<Source Name="Контрагент" Kind="Реквизит"/>
+							<Receiver Name="Counterparty" Kind="Реквизит" Type="СправочникСсылка.Counterparties"/>
+							<ConversionRuleCode>Counterparties                                    </ConversionRuleCode>
+							<ПередВыгрузкой>If Source.ВIDОперации &lt;&gt; Enums.ВIDыОперацийПКО.ВозвратОтПоставщика
+   And Source.ВIDОперации &lt;&gt; Enums.ВIDыОперацийПКО.ОплатаПокупателя Then
+   Value = "";
+EndIf;</ПередВыгрузкой>
+						</Property>
+						<Property Поиск="true">
+							<Code>2</Code>
+							<Description>Номер --&gt; Номер</Description>
+							<Order>200</Order>
+							<Source Name="Номер" Kind="Property" Type="Строка"/>
+							<Receiver Name="Номер" Kind="Property" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>7</Code>
+							<Description>Организация --&gt; Company</Description>
+							<Order>250</Order>
+							<Source Name="Организация" Kind="Реквизит" Type="СправочникСсылка.Организации"/>
+							<Receiver Name="Company" Kind="Реквизит" Type="СправочникСсылка.Companies"/>
+							<ConversionRuleCode>Companies                                         </ConversionRuleCode>
+						</Property>
+						<Property>
+							<Code>8</Code>
+							<Description>Основание --&gt; Basis</Description>
+							<Order>300</Order>
+							<Source Name="Основание" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="Basis" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>3</Code>
+							<Description>ПометкаУдаления --&gt; ПометкаУдаления</Description>
+							<Order>350</Order>
+							<Source Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+							<Receiver Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+						</Property>
+						<Property>
+							<Code>9</Code>
+							<Description>Приложение --&gt; Application</Description>
+							<Order>400</Order>
+							<Source Name="Приложение" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="Application" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>10</Code>
+							<Description>ПринятоОт --&gt; AcceptedFrom</Description>
+							<Order>450</Order>
+							<Source Name="ПринятоОт" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="AcceptedFrom" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>4</Code>
+							<Description>Проведен --&gt; Проведен</Description>
+							<Order>500</Order>
+							<Source Name="Проведен" Kind="Property" Type="Булево"/>
+							<Receiver Name="Проведен" Kind="Property" Type="Булево"/>
+						</Property>
+						<Property>
+							<Code>11</Code>
+							<Description>СуммаДокумента --&gt; DocumentAmount</Description>
+							<Order>550</Order>
+							<Source Name="СуммаДокумента" Kind="Реквизит" Type="Число"/>
+							<Receiver Name="DocumentAmount" Kind="Реквизит" Type="Число"/>
+						</Property>
+						<Property>
+							<Code>12</Code>
+							<Description>ВалютаДокумента --&gt; CashCurrency</Description>
+							<Order>600</Order>
+							<Source Name="ВалютаДокумента" Kind="Реквизит" Type="СправочникСсылка.Валюты"/>
+							<Receiver Name="CashCurrency" Kind="Реквизит" Type="СправочникСсылка.Currencies"/>
+							<ConversionRuleCode>Currencies                                        </ConversionRuleCode>
+						</Property>
+						<Property>
+							<Code>13</Code>
+							<Description>СтатьяДвиженияДенежныхСредств --&gt; Item</Description>
+							<Order>650</Order>
+							<Source Name="СтатьяДвиженияДенежныхСредств" Kind="Реквизит" Type="СправочникСсылка.СтатьIDвиженияДенежныхСредств"/>
+							<Receiver Name="Item" Kind="Реквизит" Type="СправочникСсылка.CashFlowItems"/>
+							<ConversionRuleCode>CashFlowItems                                     </ConversionRuleCode>
+						</Property>
+						<Property>
+							<Code>14</Code>
+							<Description>ДокументОснование --&gt; BasisDocument</Description>
+							<Order>700</Order>
+							<Source Name="ДокументОснование" Kind="Реквизит"/>
+							<Receiver Name="BasisDocument" Kind="Реквизит"/>
+						</Property>
+						<Property>
+							<Code>15</Code>
+							<Description>--&gt; Ind</Description>
+							<Order>750</Order>
+							<Source Name="" Kind=""/>
+							<Receiver Name="" Kind=""/>
+							<ИмяПараметраДляПередачи>Ind</ИмяПараметраДляПередачи>
+							<ПередВыгрузкой>If Source.ВIDОперации = Enums.ВIDыОперацийПКО.ВозвратОтПодотчетногоЛица
+	And TypeOf(Source.Контрагент) = Type("CatalogRef.ФизическиеЛица")
+	И ValueIsFilled(Source.Контрагент) Then
+	
+	Value = Source.Контрагент;
+	
+EndIf;</ПередВыгрузкой>
+						</Property>
+						<Property>
+							<Code>16</Code>
+							<Description>НомерЧекаККМ --&gt; ReceiptCRNumber</Description>
+							<Order>800</Order>
+							<Source Name="НомерЧекаККМ" Kind="Реквизит" Type="Число"/>
+							<Receiver Name="ReceiptCRNumber" Kind="Реквизит" Type="Число"/>
+						</Property>
+						<Property>
+							<Code>17</Code>
+							<Description>Комментарий --&gt; Comment</Description>
+							<Order>850</Order>
+							<Source Name="Комментарий" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="Comment" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Group>
+							<Code>18</Code>
+							<Description>РасшифровкаПлатежа --&gt; PaymentDetails</Description>
+							<Order>900</Order>
+							<Source Name="РасшифровкаПлатежа" Kind="ТабличнаяЧасть"/>
+							<Receiver Name="PaymentDetails" Kind="ТабличнаяЧасть"/>
+							<Property>
+								<Code>19</Code>
+								<Description>СуммаНДС --&gt; VATAmount</Description>
+								<Order>50</Order>
+								<Source Name="СуммаНДС" Kind="Реквизит" Type="Число"/>
+								<Receiver Name="VATAmount" Kind="Реквизит" Type="Число"/>
+							</Property>
+							<Property>
+								<Code>20</Code>
+								<Description>СуммаПлатежа --&gt; PaymentAmount</Description>
+								<Order>100</Order>
+								<Source Name="СуммаПлатежа" Kind="Реквизит" Type="Число"/>
+								<Receiver Name="PaymentAmount" Kind="Реквизит" Type="Число"/>
+							</Property>
+							<Property>
+								<Code>21</Code>
+								<Description>СчетНаОплату --&gt; Document</Description>
+								<Order>150</Order>
+								<Source Name="СчетНаОплату" Kind="Реквизит" Type="ДокументСсылка.СчетНаОплатуПокупателю"/>
+								<Receiver Name="Document" Kind="Реквизит"/>
+							</Property>
+							<Property>
+								<Code>22</Code>
+								<Description>ДоговорКонтрагента --&gt; Contract</Description>
+								<Order>200</Order>
+								<Source Name="ДоговорКонтрагента" Kind="Реквизит" Type="СправочникСсылка.ДоговорыКонтрагентов"/>
+								<Receiver Name="Contract" Kind="Реквизит" Type="СправочникСсылка.CounterpartyContracts"/>
+								<ConversionRuleCode>CounterpartyContracts                             </ConversionRuleCode>
+							</Property>
+							<Property>
+								<Code>23</Code>
+								<Description>КратностьВзаиморасчетов --&gt; Multiplicity</Description>
+								<Order>250</Order>
+								<Source Name="КратностьВзаиморасчетов" Kind="Реквизит" Type="Число"/>
+								<Receiver Name="Multiplicity" Kind="Реквизит" Type="Число"/>
+							</Property>
+							<Property>
+								<Code>24</Code>
+								<Description>КурсВзаиморасчетов --&gt; ExchangeRate</Description>
+								<Order>300</Order>
+								<Source Name="КурсВзаиморасчетов" Kind="Реквизит" Type="Число"/>
+								<Receiver Name="ExchangeRate" Kind="Реквизит" Type="Число"/>
+							</Property>
+							<Property>
+								<Code>25</Code>
+								<Description>СуммаВзаиморасчетов --&gt; SettlementsAmount</Description>
+								<Order>350</Order>
+								<Source Name="СуммаВзаиморасчетов" Kind="Реквизит" Type="Число"/>
+								<Receiver Name="SettlementsAmount" Kind="Реквизит" Type="Число"/>
+							</Property>
+							<Property>
+								<Code>26</Code>
+								<Description>Сделка --&gt; Document</Description>
+								<Order>400</Order>
+								<Source Name="Сделка" Kind="Реквизит"/>
+								<Receiver Name="Document" Kind="Реквизит"/>
+							</Property>
+							<Property>
+								<Code>27</Code>
+								<Description>--&gt; AdvanceFlag</Description>
+								<Order>450</Order>
+								<Source Name="" Kind=""/>
+								<Receiver Name="AdvanceFlag" Kind="Реквизит" Type="Булево"/>
+								<ПередВыгрузкой>Value = Not ValueIsFilled(CollectionObject.Сделка);</ПередВыгрузкой>
+							</Property>
+							<Property>
+								<Code>28</Code>
+								<Description>СтавкаНДС --&gt; ТекстЗапросаСтавкаНДС</Description>
+								<Order>500</Order>
+								<Source Name="СтавкаНДС" Kind="Реквизит" Type="ПеречислениеСсылка.СтавкиНДС"/>
+								<Receiver Name="" Kind=""/>
+								<ИмяПараметраДляПередачи>ТекстЗапросаСтавкаНДС</ИмяПараметраДляПередачи>
+								<BeforeExport>Execute(Algorithms.FillTabularSectionVATRate);</BeforeExport>
+							</Property>
+						</Group>
+						<Property>
+							<Code>29</Code>
+							<Description>ПодразделениеОрганизации --&gt; PettyCash</Description>
+							<Order>950</Order>
+							<Source Name="ПодразделениеОрганизации" Kind="Реквизит" Type="СправочникСсылка.ПодразделенияОрганизаций"/>
+							<Receiver Name="PettyCash" Kind="Реквизит" Type="СправочникСсылка.PettyCashes"/>
+							<ConversionRuleCode>PettyCashes                                       </ConversionRuleCode>
+							<BeforeExport>GetRefNodeOnly = False;</BeforeExport>
+						</Property>
+					</Properties>
+					<Values/>
+				</Rule>
+				<Rule>
+					<Code>PaymentExpense</Code>
+					<Description>Документ: Списание с расчетного счета</Description>
+					<Order>150</Order>
+					<SynchronizeByID>true</SynchronizeByID>
+					<Source>ДокументСсылка.СписаниеСРасчетногоСчета</Source>
+					<Receiver>ДокументСсылка.PaymentExpense</Receiver>
+					<Properties>
+						<Property>
+							<Code>5</Code>
+							<Description>ВIDОперации --&gt; OperationKind</Description>
+							<Order>50</Order>
+							<Source Name="ВIDОперации" Kind="Реквизит" Type="ПеречислениеСсылка.ВIDыОперацийСписаниеДенежныхСредств"/>
+							<Receiver Name="OperationKind" Kind="Реквизит" Type="ПеречислениеСсылка.OperationKindsPaymentExpense"/>
+							<ConversionRuleCode>OperationKindsPaymentExpense                      </ConversionRuleCode>
+						</Property>
+						<Property Поиск="true">
+							<Code>1</Code>
+							<Description>Дата --&gt; Дата</Description>
+							<Order>100</Order>
+							<Source Name="Дата" Kind="Property" Type="Дата"/>
+							<Receiver Name="Дата" Kind="Property" Type="Дата"/>
+						</Property>
+						<Property>
+							<Code>6</Code>
+							<Description>Контрагент --&gt; Counterparty</Description>
+							<Order>150</Order>
+							<Source Name="Контрагент" Kind="Реквизит" Type="СправочникСсылка.Контрагенты"/>
+							<Receiver Name="Counterparty" Kind="Реквизит" Type="СправочникСсылка.Counterparties"/>
+							<ConversionRuleCode>Counterparties                                    </ConversionRuleCode>
+							<ПередВыгрузкой>If Source.ВIDОперации &lt;&gt; Перечисления.ВIDыОперацийСписаниеДенежныхСредств.ВозвратПокупателю
+   and Source.ВIDОперации &lt;&gt; Перечисления.ВIDыОперацийСписаниеДенежныхСредств.ОплатаПоставщику Then
+   Value= "";
+EndIf;</ПередВыгрузкой>
+						</Property>
+						<Property Поиск="true">
+							<Code>2</Code>
+							<Description>Номер --&gt; Номер</Description>
+							<Order>200</Order>
+							<Source Name="Номер" Kind="Property" Type="Строка"/>
+							<Receiver Name="Номер" Kind="Property" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>7</Code>
+							<Description>Организация --&gt; Company</Description>
+							<Order>250</Order>
+							<Source Name="Организация" Kind="Реквизит" Type="СправочникСсылка.Организации"/>
+							<Receiver Name="Company" Kind="Реквизит" Type="СправочникСсылка.Companies"/>
+							<ConversionRuleCode>Companies                                         </ConversionRuleCode>
+						</Property>
+						<Property>
+							<Code>3</Code>
+							<Description>ПометкаУдаления --&gt; ПометкаУдаления</Description>
+							<Order>300</Order>
+							<Source Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+							<Receiver Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+						</Property>
+						<Property>
+							<Code>4</Code>
+							<Description>Проведен --&gt; Проведен</Description>
+							<Order>350</Order>
+							<Source Name="Проведен" Kind="Property" Type="Булево"/>
+							<Receiver Name="Проведен" Kind="Property" Type="Булево"/>
+						</Property>
+						<Property>
+							<Code>8</Code>
+							<Description>СуммаДокумента --&gt; DocumentAmount</Description>
+							<Order>400</Order>
+							<Source Name="СуммаДокумента" Kind="Реквизит" Type="Число"/>
+							<Receiver Name="DocumentAmount" Kind="Реквизит" Type="Число"/>
+						</Property>
+						<Property>
+							<Code>9</Code>
+							<Description>ВалютаДокумента --&gt; CashCurrency</Description>
+							<Order>450</Order>
+							<Source Name="ВалютаДокумента" Kind="Реквизит" Type="СправочникСсылка.Валюты"/>
+							<Receiver Name="CashCurrency" Kind="Реквизит" Type="СправочникСсылка.Currencies"/>
+							<ConversionRuleCode>Currencies                                        </ConversionRuleCode>
+						</Property>
+						<Property>
+							<Code>10</Code>
+							<Description>СтатьяДвиженияДенежныхСредств --&gt; Item</Description>
+							<Order>500</Order>
+							<Source Name="СтатьяДвиженияДенежныхСредств" Kind="Реквизит" Type="СправочникСсылка.СтатьIDвиженияДенежныхСредств"/>
+							<Receiver Name="Item" Kind="Реквизит" Type="СправочникСсылка.CashFlowItems"/>
+							<ConversionRuleCode>CashFlowItems                                     </ConversionRuleCode>
+							<ПередВыгрузкой>If Not ValueIsFilled(Source.СтатьяДвиженияДенежныхСредств)
+	  And Source.РасшифровкаПлатежа.Count() &gt; 0 Then
+	Value = Source.РасшифровкаПлатежа[0].СтатьяДвиженияДенежныхСредств;
+EndIf;</ПередВыгрузкой>
+						</Property>
+						<Property>
+							<Code>11</Code>
+							<Description>СчетОрганизации --&gt; BankAccount</Description>
+							<Order>550</Order>
+							<Source Name="СчетОрганизации" Kind="Реквизит" Type="СправочникСсылка.БанковскиеСчета"/>
+							<Receiver Name="BankAccount" Kind="Реквизит" Type="СправочникСсылка.BankAccounts"/>
+							<ConversionRuleCode>BankAccounts                                      </ConversionRuleCode>
+						</Property>
+						<Property>
+							<Code>12</Code>
+							<Description>ФизЛицо --&gt; Ind</Description>
+							<Order>600</Order>
+							<Source Name="ФизЛицо" Kind="Реквизит" Type="СправочникСсылка.ФизическиеЛица"/>
+							<Receiver Name="" Kind=""/>
+							<ИмяПараметраДляПередачи>Ind</ИмяПараметраДляПередачи>
+							<ПередВыгрузкой>If Source.ВIDОперации = Enums.ВIDыОперацийСписаниеДенежныхСредств.ПеречислениеПодотчетномуЛицу
+	And TypeOf(Source.ФизЛицо) = Type("CatalogRef.ФизическиеЛица")
+	And ValueIsFilled(Source.ФизЛицо) Then
+	
+	Value = Source.ФизЛицо;
+EndIf;</ПередВыгрузкой>
+						</Property>
+						<Property>
+							<Code>13</Code>
+							<Description>ДокументОснование --&gt; BasisDocument</Description>
+							<Order>650</Order>
+							<Source Name="ДокументОснование" Kind="Реквизит"/>
+							<Receiver Name="BasisDocument" Kind="Реквизит"/>
+						</Property>
+						<Property>
+							<Code>14</Code>
+							<Description>ДатаВходящегоДокумента --&gt; IncomingDocumentDate</Description>
+							<Order>700</Order>
+							<Source Name="ДатаВходящегоДокумента" Kind="Реквизит" Type="Дата"/>
+							<Receiver Name="IncomingDocumentDate" Kind="Реквизит" Type="Дата"/>
+						</Property>
+						<Property>
+							<Code>15</Code>
+							<Description>НаValueПлатежа --&gt; PaymentDestination</Description>
+							<Order>750</Order>
+							<Source Name="НаValueПлатежа" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="PaymentDestination" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>16</Code>
+							<Description>НомерВходящегоДокумента --&gt; IncomingDocumentNumber</Description>
+							<Order>800</Order>
+							<Source Name="НомерВходящегоДокумента" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="IncomingDocumentNumber" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>17</Code>
+							<Description>Комментарий --&gt; Comment</Description>
+							<Order>850</Order>
+							<Source Name="Комментарий" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="Comment" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Group>
+							<Code>18</Code>
+							<Description>РасшифровкаПлатежа --&gt; PaymentDetails</Description>
+							<Order>900</Order>
+							<Source Name="РасшифровкаПлатежа" Kind="ТабличнаяЧасть"/>
+							<Receiver Name="PaymentDetails" Kind="ТабличнаяЧасть"/>
+							<Property>
+								<Code>19</Code>
+								<Description>СуммаНДС --&gt; VATAmount</Description>
+								<Order>50</Order>
+								<Source Name="СуммаНДС" Kind="Реквизит" Type="Число"/>
+								<Receiver Name="VATAmount" Kind="Реквизит" Type="Число"/>
+							</Property>
+							<Property>
+								<Code>20</Code>
+								<Description>СуммаПлатежа --&gt; PaymentAmount</Description>
+								<Order>100</Order>
+								<Source Name="СуммаПлатежа" Kind="Реквизит" Type="Число"/>
+								<Receiver Name="PaymentAmount" Kind="Реквизит" Type="Число"/>
+							</Property>
+							<Property>
+								<Code>21</Code>
+								<Description>ДоговорКонтрагента --&gt; Contract</Description>
+								<Order>150</Order>
+								<Source Name="ДоговорКонтрагента" Kind="Реквизит" Type="СправочникСсылка.ДоговорыКонтрагентов"/>
+								<Receiver Name="Contract" Kind="Реквизит" Type="СправочникСсылка.CounterpartyContracts"/>
+								<ConversionRuleCode>CounterpartyContracts                             </ConversionRuleCode>
+							</Property>
+							<Property>
+								<Code>22</Code>
+								<Description>КратностьВзаиморасчетов --&gt; Multiplicity</Description>
+								<Order>200</Order>
+								<Source Name="КратностьВзаиморасчетов" Kind="Реквизит" Type="Число"/>
+								<Receiver Name="Multiplicity" Kind="Реквизит" Type="Число"/>
+							</Property>
+							<Property>
+								<Code>23</Code>
+								<Description>КурсВзаиморасчетов --&gt; ExchangeRate</Description>
+								<Order>250</Order>
+								<Source Name="КурсВзаиморасчетов" Kind="Реквизит" Type="Число"/>
+								<Receiver Name="ExchangeRate" Kind="Реквизит" Type="Число"/>
+							</Property>
+							<Property>
+								<Code>24</Code>
+								<Description>СуммаВзаиморасчетов --&gt; SettlementsAmount</Description>
+								<Order>300</Order>
+								<Source Name="СуммаВзаиморасчетов" Kind="Реквизит" Type="Число"/>
+								<Receiver Name="SettlementsAmount" Kind="Реквизит" Type="Число"/>
+							</Property>
+							<Property>
+								<Code>25</Code>
+								<Description>Сделка --&gt; Document</Description>
+								<Order>350</Order>
+								<Source Name="Сделка" Kind="Реквизит"/>
+								<Receiver Name="Document" Kind="Реквизит"/>
+							</Property>
+							<Property>
+								<Code>26</Code>
+								<Description>--&gt; AdvanceFlag</Description>
+								<Order>400</Order>
+								<Source Name="" Kind=""/>
+								<Receiver Name="AdvanceFlag" Kind="Реквизит" Type="Булево"/>
+								<ПередВыгрузкой>Value = Not ValueIsFilled(CollectionObject.Сделка);</ПередВыгрузкой>
+							</Property>
+							<Property>
+								<Code>27</Code>
+								<Description>СтавкаНДС --&gt; ТекстЗапросаСтавкаНДС</Description>
+								<Order>450</Order>
+								<Source Name="СтавкаНДС" Kind="Реквизит" Type="ПеречислениеСсылка.СтавкиНДС"/>
+								<Receiver Name="" Kind=""/>
+								<ИмяПараметраДляПередачи>ТекстЗапросаСтавкаНДС</ИмяПараметраДляПередачи>
+								<ПередВыгрузкой>Execute(Algorithms.FillTabularSectionVATRate);</ПередВыгрузкой>
+							</Property>
+							<Property Disable="true">
+								<Code>28</Code>
+								<Description>--&gt;</Description>
+								<Order>500</Order>
+								<Source Name="" Kind=""/>
+								<Receiver Name="" Kind=""/>
+								<ПередВыгрузкой>Cancel = true</ПередВыгрузкой>
+							</Property>
+						</Group>
+						<Property>
+							<Code>29</Code>
+							<Description>--&gt; ВIDНалогаСтрока</Description>
+							<Order>950</Order>
+							<Source Name="" Kind=""/>
+							<Receiver Name="" Kind=""/>
+							<ИмяПараметраДляПередачи>ВидНалогаСтрока</ИмяПараметраДляПередачи>
+							<ПередВыгрузкой>If Source.ВидОперации = Enums.ВидыОперацийСписаниеДенежныхСредств.ПеречислениеНалога Then
+
+	If Source.СчетУчетаРасчетовСКонтрагентом = ChartsOfAccounts.Хозрасчетный.НДФЛ Then
+		ВидНалогаСтрока = "Налог на доходы";
+	ElsIf Source.СчетУчетаРасчетовСКонтрагентом = ChartsOfAccounts.Хозрасчетный.НДС Then
+		ВидНалогаСтрока = "НДС";
+	ElsIf Source.СчетУчетаРасчетовСКонтрагентом.Родитель = ChartsOfAccounts.Хозрасчетный.НалогНаПрибыль Then
+		ВидНалогаСтрока = "Налог на прибыль";
+	ElsIf Найти(Source.СчетУчетаРасчетовСКонтрагентом.Code, "69") Then
+		ВидНалогаСтрока = "ЕСН";
+	Else
+		ВидНалогаСтрока = "Прочие налоги и сборы";
+	EndIf;
+	
+	Value = ВидНалогаСтрока;
+Else
+	Empty = True;
+EndIf;</ПередВыгрузкой>
+						</Property>
+						<Property>
+							<Code>30</Code>
+							<Description>--&gt; Correspondence</Description>
+							<Order>1000</Order>
+							<Source Name="" Kind=""/>
+							<Receiver Name="Correspondence" Kind="Реквизит" Type="ПланСчетовСсылка.Managerial"/>
+							<ПередВыгрузкой>Cancel = True;
+</ПередВыгрузкой>
+						</Property>
+					</Properties>
+					<Values/>
+				</Rule>
+				<Rule>
+					<Code>CashPayment</Code>
+					<Description>Документ: Расходный кассовый ордер</Description>
+					<Order>200</Order>
+					<SynchronizeByID>true</SynchronizeByID>
+					<Source>ДокументСсылка.РасходныйКассовыйОрдер</Source>
+					<Receiver>ДокументСсылка.CashPayment</Receiver>
+					<Properties>
+						<Property>
+							<Code>5</Code>
+							<Description>ВIDОперации --&gt; OperationKind</Description>
+							<Order>50</Order>
+							<Source Name="ВIDОперации" Kind="Реквизит" Type="ПеречислениеСсылка.ВIDыОперацийРКО"/>
+							<Receiver Name="OperationKind" Kind="Реквизит" Type="ПеречислениеСсылка.OperationKindsCashPayment"/>
+							<ConversionRuleCode>OperationKindsCashPayment                         </ConversionRuleCode>
+						</Property>
+						<Property>
+							<Code>6</Code>
+							<Description>Выдать --&gt; Issue</Description>
+							<Order>100</Order>
+							<Source Name="Выдать" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="Issue" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property Поиск="true">
+							<Code>1</Code>
+							<Description>Дата --&gt; Дата</Description>
+							<Order>150</Order>
+							<Source Name="Дата" Kind="Property" Type="Дата"/>
+							<Receiver Name="Дата" Kind="Property" Type="Дата"/>
+						</Property>
+						<Property>
+							<Code>7</Code>
+							<Description>Контрагент --&gt; Counterparty</Description>
+							<Order>200</Order>
+							<Source Name="Контрагент" Kind="Реквизит"/>
+							<Receiver Name="Counterparty" Kind="Реквизит" Type="СправочникСсылка.Counterparties"/>
+							<ПередВыгрузкой>If Source.ВIDОперации &lt;&gt; Enums.ВIDыОперацийРКО.ВозвратПокупателю
+   И Source.ВIDОперации &lt;&gt; Enums.ВIDыОперацийРКО.ОплатаПоставщику Then
+   Value = "";
+EndIf;</ПередВыгрузкой>
+						</Property>
+						<Property Поиск="true">
+							<Code>2</Code>
+							<Description>Номер --&gt; Номер</Description>
+							<Order>250</Order>
+							<Source Name="Номер" Kind="Property" Type="Строка"/>
+							<Receiver Name="Номер" Kind="Property" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>8</Code>
+							<Description>Организация --&gt; Company</Description>
+							<Order>300</Order>
+							<Source Name="Организация" Kind="Реквизит" Type="СправочникСсылка.Организации"/>
+							<Receiver Name="Company" Kind="Реквизит" Type="СправочникСсылка.Companies"/>
+							<ConversionRuleCode>Companies                                         </ConversionRuleCode>
+						</Property>
+						<Property>
+							<Code>3</Code>
+							<Description>ПометкаУдаления --&gt; ПометкаУдаления</Description>
+							<Order>350</Order>
+							<Source Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+							<Receiver Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+						</Property>
+						<Property>
+							<Code>9</Code>
+							<Description>Основание --&gt; Basis</Description>
+							<Order>400</Order>
+							<Source Name="Основание" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="Basis" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>10</Code>
+							<Description>Приложение --&gt; Application</Description>
+							<Order>450</Order>
+							<Source Name="Приложение" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="Application" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>4</Code>
+							<Description>Проведен --&gt; Проведен</Description>
+							<Order>500</Order>
+							<Source Name="Проведен" Kind="Property" Type="Булево"/>
+							<Receiver Name="Проведен" Kind="Property" Type="Булево"/>
+						</Property>
+						<Property>
+							<Code>11</Code>
+							<Description>СуммаДокумента --&gt; DocumentAmount</Description>
+							<Order>550</Order>
+							<Source Name="СуммаДокумента" Kind="Реквизит" Type="Число"/>
+							<Receiver Name="DocumentAmount" Kind="Реквизит" Type="Число"/>
+						</Property>
+						<Property>
+							<Code>12</Code>
+							<Description>ВалютаДокумента --&gt; CashCurrency</Description>
+							<Order>600</Order>
+							<Source Name="ВалютаДокумента" Kind="Реквизит" Type="СправочникСсылка.Валюты"/>
+							<Receiver Name="CashCurrency" Kind="Реквизит" Type="СправочникСсылка.Currencies"/>
+							<ConversionRuleCode>Currencies                                        </ConversionRuleCode>
+						</Property>
+						<Property>
+							<Code>13</Code>
+							<Description>СтатьяДвиженияДенежныхСредств --&gt; Item</Description>
+							<Order>650</Order>
+							<Source Name="СтатьяДвиженияДенежныхСредств" Kind="Реквизит" Type="СправочникСсылка.СтатьIDвиженияДенежныхСредств"/>
+							<Receiver Name="Item" Kind="Реквизит" Type="СправочникСсылка.CashFlowItems"/>
+							<ConversionRuleCode>CashFlowItems                                     </ConversionRuleCode>
+							<ПередВыгрузкой>IF Not ValueIsFilled(Source.СтатьяДвиженияДенежныхСредств)
+	  And Source.РасшифровкаПлатежа.Count() &gt; 0 Then
+	Value = Source.РасшифровкаПлатежа[0].СтатьяДвиженияДенежныхСредств;
+EndIf;</ПередВыгрузкой>
+						</Property>
+						<Property>
+							<Code>14</Code>
+							<Description>ДокументОснование --&gt; BasisDocument</Description>
+							<Order>700</Order>
+							<Source Name="ДокументОснование" Kind="Реквизит"/>
+							<Receiver Name="BasisDocument" Kind="Реквизит"/>
+						</Property>
+						<Property>
+							<Code>15</Code>
+							<Description>ПоДокументу --&gt; ByDocument</Description>
+							<Order>750</Order>
+							<Source Name="ПоДокументу" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="ByDocument" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>16</Code>
+							<Description>--&gt; Ind</Description>
+							<Order>800</Order>
+							<Source Name="" Kind=""/>
+							<Receiver Name="" Kind=""/>
+							<ИмяПараметраДляПередачи>Ind</ИмяПараметраДляПередачи>
+							<ПередВыгрузкой>If (Source.ВIDОперации = Enums.ВIDыОперацийРКО.ВыдачаПодотчетномуЛицу
+	ИЛИ Source.ВIDОперации = Enums.ВIDыОперацийРКО.ВыплатаЗаработнойПлатыРаботнику)
+	И TypeOf(Source.Контрагент) = Type("CatalogRef.ФизическиеЛица")
+	И ValueIsFilled(Source.Контрагент) Then
+	
+	Value = Source.Контрагент;
+EndIf;</ПередВыгрузкой>
+						</Property>
+						<Property>
+							<Code>17</Code>
+							<Description>Комментарий --&gt; Comment</Description>
+							<Order>850</Order>
+							<Source Name="Комментарий" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="Comment" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Group>
+							<Code>18</Code>
+							<Description>РасшифровкаПлатежа --&gt; PaymentDetails</Description>
+							<Order>900</Order>
+							<Source Name="РасшифровкаПлатежа" Kind="ТабличнаяЧасть"/>
+							<Receiver Name="PaymentDetails" Kind="ТабличнаяЧасть"/>
+							<Property>
+								<Code>19</Code>
+								<Description>СуммаНДС --&gt; VATAmount</Description>
+								<Order>50</Order>
+								<Source Name="СуммаНДС" Kind="Реквизит" Type="Число"/>
+								<Receiver Name="VATAmount" Kind="Реквизит" Type="Число"/>
+							</Property>
+							<Property>
+								<Code>20</Code>
+								<Description>СуммаПлатежа --&gt; PaymentAmount</Description>
+								<Order>100</Order>
+								<Source Name="СуммаПлатежа" Kind="Реквизит" Type="Число"/>
+								<Receiver Name="PaymentAmount" Kind="Реквизит" Type="Число"/>
+							</Property>
+							<Property>
+								<Code>21</Code>
+								<Description>ДоговорКонтрагента --&gt; Contract</Description>
+								<Order>150</Order>
+								<Source Name="ДоговорКонтрагента" Kind="Реквизит" Type="СправочникСсылка.ДоговорыКонтрагентов"/>
+								<Receiver Name="Contract" Kind="Реквизит" Type="СправочникСсылка.CounterpartyContracts"/>
+								<ConversionRuleCode>CounterpartyContracts                             </ConversionRuleCode>
+							</Property>
+							<Property>
+								<Code>22</Code>
+								<Description>КратностьВзаиморасчетов --&gt; Multiplicity</Description>
+								<Order>200</Order>
+								<Source Name="КратностьВзаиморасчетов" Kind="Реквизит" Type="Число"/>
+								<Receiver Name="Multiplicity" Kind="Реквизит" Type="Число"/>
+							</Property>
+							<Property>
+								<Code>23</Code>
+								<Description>КурсВзаиморасчетов --&gt; ExchangeRate</Description>
+								<Order>250</Order>
+								<Source Name="КурсВзаиморасчетов" Kind="Реквизит" Type="Число"/>
+								<Receiver Name="ExchangeRate" Kind="Реквизит" Type="Число"/>
+							</Property>
+							<Property>
+								<Code>24</Code>
+								<Description>СуммаВзаиморасчетов --&gt; SettlementsAmount</Description>
+								<Order>300</Order>
+								<Source Name="СуммаВзаиморасчетов" Kind="Реквизит" Type="Число"/>
+								<Receiver Name="SettlementsAmount" Kind="Реквизит" Type="Число"/>
+							</Property>
+							<Property>
+								<Code>25</Code>
+								<Description>Сделка --&gt; Document</Description>
+								<Order>350</Order>
+								<Source Name="Сделка" Kind="Реквизит"/>
+								<Receiver Name="Document" Kind="Реквизит"/>
+							</Property>
+							<Property>
+								<Code>26</Code>
+								<Description>--&gt; AdvanceFlag</Description>
+								<Order>400</Order>
+								<Source Name="" Kind=""/>
+								<Receiver Name="AdvanceFlag" Kind="Реквизит" Type="Булево"/>
+								<ПередВыгрузкой>Value = Not ValueIsFilled(CollectionObject.Сделка);</ПередВыгрузкой>
+							</Property>
+							<Property>
+								<Code>27</Code>
+								<Description>СтавкаНДС --&gt; ТекстЗапросаСтавкаНДС</Description>
+								<Order>450</Order>
+								<Source Name="СтавкаНДС" Kind="Реквизит" Type="ПеречислениеСсылка.СтавкиНДС"/>
+								<Receiver Name="" Kind=""/>
+								<ИмяПараметраДляПередачи>ТекстЗапросаСтавкаНДС</ИмяПараметраДляПередачи>
+								<ПередВыгрузкой>Execute(Algorithms.FillTabularSectionVATRate);</ПередВыгрузкой>
+							</Property>
+						</Group>
+						<Group>
+							<Code>28</Code>
+							<Description>ВыплатаЗаработнойПлаты --&gt; PayrollPayment</Description>
+							<Order>950</Order>
+							<Source Name="ВыплатаЗаработнойПлаты" Kind="ТабличнаяЧасть"/>
+							<Receiver Name="PayrollPayment" Kind="ТабличнаяЧасть"/>
+							<Property>
+								<Code>29</Code>
+								<Description>СуммаКВыплате --&gt; PaymentAmount</Description>
+								<Order>50</Order>
+								<Source Name="СуммаКВыплате" Kind="Реквизит" Type="Число"/>
+								<Receiver Name="PaymentAmount" Kind="Реквизит" Type="Число"/>
+							</Property>
+						</Group>
+						<Property>
+							<Code>30</Code>
+							<Description>--&gt; Correspondence</Description>
+							<Order>1000</Order>
+							<Source Name="" Kind=""/>
+							<Receiver Name="Correspondence" Kind="Реквизит" Type="ПланСчетовСсылка.Managerial"/>
+							<ПередВыгрузкой>Cancel = True;
+</ПередВыгрузкой>
+						</Property>
+					</Properties>
+					<Values/>
+				</Rule>
+				<Rule>
+					<Code>PaymentOrder</Code>
+					<Description>Документ: Платежное поручение</Description>
+					<Order>250</Order>
+					<SynchronizeByID>true</SynchronizeByID>
+					<Source>ДокументСсылка.ПлатежноеПоручение</Source>
+					<Receiver>ДокументСсылка.PaymentOrder</Receiver>
+					<Properties>
+						<Property>
+							<Code>4</Code>
+							<Description>ВIDПеречисленияВБюджет --&gt; TransferToBudgetKind</Description>
+							<Order>50</Order>
+							<Source Name="ВIDПеречисленияВБюджет" Kind="Реквизит" Type="ПеречислениеСсылка.ВIDыПеречисленийВБюджет"/>
+							<Receiver Name="TransferToBudgetKind" Kind="Реквизит" Type="ПеречислениеСсылка.BudgetTransferKinds"/>
+							<ConversionRuleCode>BudgetTransferKinds                               </ConversionRuleCode>
+						</Property>
+						<Property Поиск="true">
+							<Code>1</Code>
+							<Description>Дата --&gt; Дата</Description>
+							<Order>100</Order>
+							<Source Name="Дата" Kind="Property" Type="Дата"/>
+							<Receiver Name="Дата" Kind="Property" Type="Дата"/>
+						</Property>
+						<Property>
+							<Code>5</Code>
+							<Description>ВIDПлатежа --&gt; PaymentKind</Description>
+							<Order>150</Order>
+							<Source Name="ВIDПлатежа" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="PaymentKind" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>6</Code>
+							<Description>ИННПлательщика --&gt; PayerTIN</Description>
+							<Order>200</Order>
+							<Source Name="ИННПлательщика" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="PayerTIN" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>7</Code>
+							<Description>ИННПолучателя --&gt; PayeeTIN</Description>
+							<Order>250</Order>
+							<Source Name="ИННПолучателя" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="PayeeTIN" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>8</Code>
+							<Description>Комментарий --&gt; Comment</Description>
+							<Order>300</Order>
+							<Source Name="Комментарий" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="Comment" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>9</Code>
+							<Description>Контрагент --&gt; Counterparty</Description>
+							<Order>350</Order>
+							<Source Name="Контрагент" Kind="Реквизит" Type="СправочникСсылка.Контрагенты"/>
+							<Receiver Name="Counterparty" Kind="Реквизит" Type="СправочникСсылка.Counterparties"/>
+							<ConversionRuleCode>Counterparties                                    </ConversionRuleCode>
+						</Property>
+						<Property>
+							<Code>10</Code>
+							<Description>НаValueПлатежа --&gt; PaymentDestination</Description>
+							<Order>400</Order>
+							<Source Name="НаValueПлатежа" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="PaymentDestination" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property Поиск="true">
+							<Code>2</Code>
+							<Description>Номер --&gt; Номер</Description>
+							<Order>450</Order>
+							<Source Name="Номер" Kind="Property" Type="Строка"/>
+							<Receiver Name="Номер" Kind="Property" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>11</Code>
+							<Description>Организация --&gt; Company</Description>
+							<Order>500</Order>
+							<Source Name="Организация" Kind="Реквизит" Type="СправочникСсылка.Организации"/>
+							<Receiver Name="Company" Kind="Реквизит" Type="СправочникСсылка.Companies"/>
+							<ConversionRuleCode>Companies                                         </ConversionRuleCode>
+						</Property>
+						<Property>
+							<Code>12</Code>
+							<Description>ПоказательНомера --&gt; NumberIndicator</Description>
+							<Order>550</Order>
+							<Source Name="ПоказательНомера" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="NumberIndicator" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>13</Code>
+							<Description>ПоказательОснования --&gt; BasisIndicator</Description>
+							<Order>600</Order>
+							<Source Name="ПоказательОснования" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="BasisIndicator" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>14</Code>
+							<Description>ПоказательТипа --&gt; TypeIndicator</Description>
+							<Order>650</Order>
+							<Source Name="ПоказательТипа" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="TypeIndicator" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>15</Code>
+							<Description>Комментарий --&gt; Comment</Description>
+							<Order>700</Order>
+							<Source Name="Комментарий" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="Comment" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>3</Code>
+							<Description>ПометкаУдаления --&gt; ПометкаУдаления</Description>
+							<Order>750</Order>
+							<Source Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+							<Receiver Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+						</Property>
+						<Property>
+							<Code>16</Code>
+							<Description>СтавкаНДС --&gt;</Description>
+							<Order>800</Order>
+							<Source Name="СтавкаНДС" Kind="Реквизит" Type="ПеречислениеСсылка.СтавкиНДС"/>
+							<Receiver Name="" Kind=""/>
+							<ПередВыгрузкой>Execute(Algorithms.FillHeaderVatRate);</ПередВыгрузкой>
+						</Property>
+						<Property>
+							<Code>17</Code>
+							<Description>СтатусСоставителя --&gt; AuthorStatus</Description>
+							<Order>850</Order>
+							<Source Name="СтатусСоставителя" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="AuthorStatus" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>18</Code>
+							<Description>ВалютаДокумента --&gt; DocumentCurrency</Description>
+							<Order>900</Order>
+							<Source Name="ВалютаДокумента" Kind="Реквизит" Type="СправочникСсылка.Валюты"/>
+							<Receiver Name="DocumentCurrency" Kind="Реквизит" Type="СправочникСсылка.Currencies"/>
+							<ConversionRuleCode>Currencies                                        </ConversionRuleCode>
+						</Property>
+						<Property>
+							<Code>19</Code>
+							<Description>СуммаДокумента --&gt; DocumentAmount</Description>
+							<Order>950</Order>
+							<Source Name="СуммаДокумента" Kind="Реквизит" Type="Число"/>
+							<Receiver Name="DocumentAmount" Kind="Реквизит" Type="Число"/>
+						</Property>
+						<Property>
+							<Code>20</Code>
+							<Description>СуммаНДС --&gt; VATAmount</Description>
+							<Order>1000</Order>
+							<Source Name="СуммаНДС" Kind="Реквизит" Type="Число"/>
+							<Receiver Name="VATAmount" Kind="Реквизит" Type="Число"/>
+						</Property>
+						<Property>
+							<Code>21</Code>
+							<Description>СчетКонтрагента --&gt; CounterpartyAccount</Description>
+							<Order>1050</Order>
+							<Source Name="СчетКонтрагента" Kind="Реквизит" Type="СправочникСсылка.БанковскиеСчета"/>
+							<Receiver Name="CounterpartyAccount" Kind="Реквизит" Type="СправочникСсылка.BankAccounts"/>
+							<ConversionRuleCode>BankAccounts                                      </ConversionRuleCode>
+						</Property>
+						<Property>
+							<Code>22</Code>
+							<Description>ТекстПлательщика --&gt; PayerText</Description>
+							<Order>1100</Order>
+							<Source Name="ТекстПлательщика" Kind="Реквизит" Type="Строка"/>
+							<Receiver Name="PayerText" Kind="Реквизит" Type="Строка"/>
+						</Property>
+						<Property>
+							<Code>23</Code>
+							<Description>СчетОрганизации --&gt; BankAccount</Description>
+							<Order>1150</Order>
+							<Source Name="СчетОрганизации" Kind="Реквизит" Type="СправочникСсылка.БанковскиеСчета"/>
+							<Receiver Name="BankAccount" Kind="Реквизит" Type="СправочникСсылка.BankAccounts"/>
+							<ConversionRuleCode>BankAccounts                                      </ConversionRuleCode>
+						</Property>
+						<Property>
+							<Code>24</Code>
+							<Description>ПеречислениеВБюджет --&gt; OperationKind</Description>
+							<Order>1200</Order>
+							<Source Name="ПеречислениеВБюджет" Kind="Реквизит" Type="Булево"/>
+							<Receiver Name="OperationKind" Kind="Реквизит" Type="ПеречислениеСсылка.OperationKindsPaymentOrder"/>
+							<ПередВыгрузкой>Expression= ?(Source.ПеречислениеВБюджет, "Enums.ВIDыОперацийПлатежноеПоручение.ПеречислениеНалога", "Enums.ВIDыОперацийПлатежноеПоручение.Оплата");</ПередВыгрузкой>
+						</Property>
+						<Property>
+							<Code>25</Code>
+							<Description>Оплачено --&gt; Paid</Description>
+							<Order>1250</Order>
+							<Source Name="Оплачено" Kind="Реквизит" Type="Булево"/>
+							<Receiver Name="Paid" Kind="Реквизит" Type="Булево"/>
+						</Property>
+					</Properties>
+					<Values/>
+				</Rule>
+				<Group>
+					<Code>ПеремещениеДенег</Code>
+					<Description>ПеремещениеДенег                                  </Description>
+					<Order>300</Order>
+					<Rule>
+						<Code>CashTransferReceipt</Code>
+						<Description>Документ: Приходный кассовый ордер</Description>
+						<Order>50</Order>
+						<SynchronizeByID>true</SynchronizeByID>
+						<Source>ДокументСсылка.ПриходныйКассовыйОрдер</Source>
+						<Receiver>ДокументСсылка.CashTransfer</Receiver>
+						<Properties>
+							<Property Поиск="true">
+								<Code>1</Code>
+								<Description>Дата --&gt; Дата</Description>
+								<Order>50</Order>
+								<Source Name="Дата" Kind="Property" Type="Дата"/>
+								<Receiver Name="Дата" Kind="Property" Type="Дата"/>
+							</Property>
+							<Property Disable="true" Поиск="true">
+								<Code>2</Code>
+								<Description>Номер --&gt; Номер</Description>
+								<Order>100</Order>
+								<Source Name="Номер" Kind="Property" Type="Строка"/>
+								<Receiver Name="Номер" Kind="Property" Type="Строка"/>
+							</Property>
+							<Property>
+								<Code>5</Code>
+								<Description>Организация --&gt; Company</Description>
+								<Order>150</Order>
+								<Source Name="Организация" Kind="Реквизит" Type="СправочникСсылка.Организации"/>
+								<Receiver Name="Company" Kind="Реквизит" Type="СправочникСсылка.Companies"/>
+								<ConversionRuleCode>Companies                                         </ConversionRuleCode>
+							</Property>
+							<Property>
+								<Code>6</Code>
+								<Description>СуммаДокумента --&gt; DocumentAmount</Description>
+								<Order>200</Order>
+								<Source Name="СуммаДокумента" Kind="Реквизит" Type="Число"/>
+								<Receiver Name="DocumentAmount" Kind="Реквизит" Type="Число"/>
+							</Property>
+							<Property>
+								<Code>3</Code>
+								<Description>ПометкаУдаления --&gt; ПометкаУдаления</Description>
+								<Order>250</Order>
+								<Source Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+								<Receiver Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+							</Property>
+							<Property>
+								<Code>4</Code>
+								<Description>Проведен --&gt; Проведен</Description>
+								<Order>300</Order>
+								<Source Name="Проведен" Kind="Property" Type="Булево"/>
+								<Receiver Name="Проведен" Kind="Property" Type="Булево"/>
+							</Property>
+							<Property>
+								<Code>7</Code>
+								<Description>Комментарий --&gt; Comment</Description>
+								<Order>350</Order>
+								<Source Name="Комментарий" Kind="Реквизит" Type="Строка"/>
+								<Receiver Name="Comment" Kind="Реквизит" Type="Строка"/>
+							</Property>
+							<Property>
+								<Code>8</Code>
+								<Description>ДокументОснование --&gt; BasisDocument</Description>
+								<Order>400</Order>
+								<Source Name="ДокументОснование" Kind="Реквизит"/>
+								<Receiver Name="BasisDocument" Kind="Реквизит" Type="ДокументСсылка.CashTransferPlan"/>
+							</Property>
+							<Property>
+								<Code>9</Code>
+								<Description>ВалютаДокумента --&gt; CashCurrency</Description>
+								<Order>450</Order>
+								<Source Name="ВалютаДокумента" Kind="Реквизит" Type="СправочникСсылка.Валюты"/>
+								<Receiver Name="CashCurrency" Kind="Реквизит" Type="СправочникСсылка.Currencies"/>
+								<ConversionRuleCode>Currencies                                        </ConversionRuleCode>
+							</Property>
+							<Property>
+								<Code>10</Code>
+								<Description>СтатьяДвиженияДенежныхСредств --&gt; Item</Description>
+								<Order>500</Order>
+								<Source Name="СтатьяДвиженияДенежныхСредств" Kind="Реквизит" Type="СправочникСсылка.СтатьIDвиженияДенежныхСредств"/>
+								<Receiver Name="Item" Kind="Реквизит" Type="СправочникСсылка.CashFlowItems"/>
+								<ConversionRuleCode>CashFlowItems                                     </ConversionRuleCode>
+							</Property>
+							<Property>
+								<Code>11</Code>
+								<Description>Контрагент --&gt; BankAccount</Description>
+								<Order>550</Order>
+								<Source Name="Контрагент" Kind="Реквизит"/>
+								<Receiver Name="BankAccount" Kind="Реквизит" Type="СправочникСсылка.BankAccounts"/>
+							</Property>
+							<Property>
+								<Code>12</Code>
+								<Description>--&gt; CashAssetsType</Description>
+								<Order>600</Order>
+								<Source Name="" Kind=""/>
+								<Receiver Name="CashAssetsType" Kind="Реквизит" Type="ПеречислениеСсылка.CashAssetTypes"/>
+								<ПередВыгрузкой>Value = "Noncash";</ПередВыгрузкой>
+							</Property>
+							<Property>
+								<Code>13</Code>
+								<Description>--&gt; CashAssetsTypePayee</Description>
+								<Order>650</Order>
+								<Source Name="" Kind=""/>
+								<Receiver Name="CashAssetsTypePayee" Kind="Реквизит" Type="ПеречислениеСсылка.CashAssetTypes"/>
+								<ПередВыгрузкой>Value = "Cash";</ПередВыгрузкой>
+							</Property>
+						</Properties>
+						<Values/>
+					</Rule>
+					<Rule>
+						<Code>CashTransferPayment</Code>
+						<Description>Документ: Расходный кассовый ордер</Description>
+						<Order>100</Order>
+						<SynchronizeByID>true</SynchronizeByID>
+						<Source>ДокументСсылка.РасходныйКассовыйОрдер</Source>
+						<Receiver>ДокументСсылка.CashTransfer</Receiver>
+						<Properties>
+							<Property Поиск="true">
+								<Code>1</Code>
+								<Description>Дата --&gt; Дата</Description>
+								<Order>50</Order>
+								<Source Name="Дата" Kind="Property" Type="Дата"/>
+								<Receiver Name="Дата" Kind="Property" Type="Дата"/>
+							</Property>
+							<Property>
+								<Code>2</Code>
+								<Description>Номер --&gt; Номер</Description>
+								<Order>100</Order>
+								<Source Name="Номер" Kind="Property" Type="Строка"/>
+								<Receiver Name="Номер" Kind="Property" Type="Строка"/>
+							</Property>
+							<Property>
+								<Code>5</Code>
+								<Description>Организация --&gt; Company</Description>
+								<Order>150</Order>
+								<Source Name="Организация" Kind="Реквизит" Type="СправочникСсылка.Организации"/>
+								<Receiver Name="Company" Kind="Реквизит" Type="СправочникСсылка.Companies"/>
+								<ConversionRuleCode>Companies                                         </ConversionRuleCode>
+							</Property>
+							<Property>
+								<Code>6</Code>
+								<Description>СуммаДокумента --&gt; DocumentAmount</Description>
+								<Order>200</Order>
+								<Source Name="СуммаДокумента" Kind="Реквизит" Type="Число"/>
+								<Receiver Name="DocumentAmount" Kind="Реквизит" Type="Число"/>
+							</Property>
+							<Property>
+								<Code>3</Code>
+								<Description>ПометкаУдаления --&gt; ПометкаУдаления</Description>
+								<Order>250</Order>
+								<Source Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+								<Receiver Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+							</Property>
+							<Property>
+								<Code>4</Code>
+								<Description>Проведен --&gt; Проведен</Description>
+								<Order>300</Order>
+								<Source Name="Проведен" Kind="Property" Type="Булево"/>
+								<Receiver Name="Проведен" Kind="Property" Type="Булево"/>
+							</Property>
+							<Property>
+								<Code>7</Code>
+								<Description>Комментарий --&gt; Comment</Description>
+								<Order>350</Order>
+								<Source Name="Комментарий" Kind="Реквизит" Type="Строка"/>
+								<Receiver Name="Comment" Kind="Реквизит" Type="Строка"/>
+							</Property>
+							<Property>
+								<Code>8</Code>
+								<Description>ДокументОснование --&gt; BasisDocument</Description>
+								<Order>400</Order>
+								<Source Name="ДокументОснование" Kind="Реквизит"/>
+								<Receiver Name="BasisDocument" Kind="Реквизит" Type="ДокументСсылка.CashTransferPlan"/>
+							</Property>
+							<Property>
+								<Code>9</Code>
+								<Description>ВалютаДокумента --&gt; CashCurrency</Description>
+								<Order>450</Order>
+								<Source Name="ВалютаДокумента" Kind="Реквизит" Type="СправочникСсылка.Валюты"/>
+								<Receiver Name="CashCurrency" Kind="Реквизит" Type="СправочникСсылка.Currencies"/>
+								<ConversionRuleCode>Currencies                                        </ConversionRuleCode>
+							</Property>
+							<Property>
+								<Code>10</Code>
+								<Description>СтатьяДвиженияДенежныхСредств --&gt; Item</Description>
+								<Order>500</Order>
+								<Source Name="СтатьяДвиженияДенежныхСредств" Kind="Реквизит" Type="СправочникСсылка.СтатьIDвиженияДенежныхСредств"/>
+								<Receiver Name="Item" Kind="Реквизит" Type="СправочникСсылка.CashFlowItems"/>
+								<ConversionRuleCode>CashFlowItems                                     </ConversionRuleCode>
+							</Property>
+							<Property>
+								<Code>11</Code>
+								<Description>СчетОрганизации --&gt; BankAccountPayee</Description>
+								<Order>550</Order>
+								<Source Name="СчетОрганизации" Kind="Реквизит" Type="СправочникСсылка.БанковскиеСчета"/>
+								<Receiver Name="BankAccountPayee" Kind="Реквизит" Type="СправочникСсылка.BankAccounts"/>
+								<ConversionRuleCode>BankAccounts                                      </ConversionRuleCode>
+							</Property>
+							<Property>
+								<Code>12</Code>
+								<Description>--&gt; CashAssetsType</Description>
+								<Order>600</Order>
+								<Source Name="" Kind=""/>
+								<Receiver Name="CashAssetsType" Kind="Реквизит" Type="ПеречислениеСсылка.CashAssetTypes"/>
+								<ПередВыгрузкой>Value = "Cash";</ПередВыгрузкой>
+							</Property>
+							<Property>
+								<Code>13</Code>
+								<Description>--&gt; CashAssetsTypePayee</Description>
+								<Order>650</Order>
+								<Source Name="" Kind=""/>
+								<Receiver Name="CashAssetsTypePayee" Kind="Реквизит" Type="ПеречислениеСсылка.CashAssetTypes"/>
+								<ПередВыгрузкой>Value = "Noncash";</ПередВыгрузкой>
+							</Property>
+						</Properties>
+						<Values/>
+					</Rule>
+					<Rule>
+						<Code>CashTransferPaymentExpence</Code>
+						<Description>Документ: Списание с расчетного счета</Description>
+						<Order>150</Order>
+						<SynchronizeByID>true</SynchronizeByID>
+						<Source>ДокументСсылка.СписаниеСРасчетногоСчета</Source>
+						<Receiver>ДокументСсылка.CashTransfer</Receiver>
+						<Properties>
+							<Property Поиск="true">
+								<Code>1</Code>
+								<Description>Дата --&gt; Дата</Description>
+								<Order>50</Order>
+								<Source Name="Дата" Kind="Property" Type="Дата"/>
+								<Receiver Name="Дата" Kind="Property" Type="Дата"/>
+							</Property>
+							<Property Disable="true" Поиск="true">
+								<Code>2</Code>
+								<Description>Номер --&gt; Номер</Description>
+								<Order>100</Order>
+								<Source Name="Номер" Kind="Property" Type="Строка"/>
+								<Receiver Name="Номер" Kind="Property" Type="Строка"/>
+							</Property>
+							<Property>
+								<Code>5</Code>
+								<Description>Организация --&gt; Company</Description>
+								<Order>150</Order>
+								<Source Name="Организация" Kind="Реквизит" Type="СправочникСсылка.Организации"/>
+								<Receiver Name="Company" Kind="Реквизит" Type="СправочникСсылка.Companies"/>
+								<ConversionRuleCode>Companies                                         </ConversionRuleCode>
+							</Property>
+							<Property>
+								<Code>6</Code>
+								<Description>СуммаДокумента --&gt; DocumentAmount</Description>
+								<Order>200</Order>
+								<Source Name="СуммаДокумента" Kind="Реквизит" Type="Число"/>
+								<Receiver Name="DocumentAmount" Kind="Реквизит" Type="Число"/>
+							</Property>
+							<Property>
+								<Code>3</Code>
+								<Description>ПометкаУдаления --&gt; ПометкаУдаления</Description>
+								<Order>250</Order>
+								<Source Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+								<Receiver Name="ПометкаУдаления" Kind="Property" Type="Булево"/>
+							</Property>
+							<Property>
+								<Code>4</Code>
+								<Description>Проведен --&gt; Проведен</Description>
+								<Order>300</Order>
+								<Source Name="Проведен" Kind="Property" Type="Булево"/>
+								<Receiver Name="Проведен" Kind="Property" Type="Булево"/>
+							</Property>
+							<Property>
+								<Code>7</Code>
+								<Description>Комментарий --&gt; Comment</Description>
+								<Order>350</Order>
+								<Source Name="Комментарий" Kind="Реквизит" Type="Строка"/>
+								<Receiver Name="Comment" Kind="Реквизит" Type="Строка"/>
+							</Property>
+							<Property>
+								<Code>8</Code>
+								<Description>ДокументОснование --&gt; BasisDocument</Description>
+								<Order>400</Order>
+								<Source Name="ДокументОснование" Kind="Реквизит"/>
+								<Receiver Name="BasisDocument" Kind="Реквизит" Type="ДокументСсылка.CashTransferPlan"/>
+							</Property>
+							<Property>
+								<Code>9</Code>
+								<Description>ВалютаДокумента --&gt; CashCurrency</Description>
+								<Order>450</Order>
+								<Source Name="ВалютаДокумента" Kind="Реквизит" Type="СправочникСсылка.Валюты"/>
+								<Receiver Name="CashCurrency" Kind="Реквизит" Type="СправочникСсылка.Currencies"/>
+								<ConversionRuleCode>Currencies                                        </ConversionRuleCode>
+							</Property>
+							<Property>
+								<Code>10</Code>
+								<Description>СтатьяДвиженияДенежныхСредств --&gt; Item</Description>
+								<Order>500</Order>
+								<Source Name="СтатьяДвиженияДенежныхСредств" Kind="Реквизит" Type="СправочникСсылка.СтатьIDвиженияДенежныхСредств"/>
+								<Receiver Name="Item" Kind="Реквизит" Type="СправочникСсылка.CashFlowItems"/>
+								<ConversionRuleCode>CashFlowItems                                     </ConversionRuleCode>
+							</Property>
+							<Property>
+								<Code>11</Code>
+								<Description>СчетОрганизации --&gt; BankAccount</Description>
+								<Order>550</Order>
+								<Source Name="СчетОрганизации" Kind="Реквизит" Type="СправочникСсылка.БанковскиеСчета"/>
+								<Receiver Name="BankAccount" Kind="Реквизит" Type="СправочникСсылка.BankAccounts"/>
+								<ConversionRuleCode>BankAccounts                                      </ConversionRuleCode>
+							</Property>
+							<Property>
+								<Code>12</Code>
+								<Description>СчетКонтрагента --&gt; BankAccountPayee</Description>
+								<Order>600</Order>
+								<Source Name="СчетКонтрагента" Kind="Реквизит" Type="СправочникСсылка.БанковскиеСчета"/>
+								<Receiver Name="BankAccountPayee" Kind="Реквизит" Type="СправочникСсылка.BankAccounts"/>
+								<ConversionRuleCode>BankAccounts                                      </ConversionRuleCode>
+							</Property>
+							<Property>
+								<Code>13</Code>
+								<Description>--&gt; CashAssetsType</Description>
+								<Order>650</Order>
+								<Source Name="" Kind=""/>
+								<Receiver Name="CashAssetsType" Kind="Реквизит" Type="ПеречислениеСсылка.CashAssetTypes"/>
+								<ПередВыгрузкой>Value = "Noncash";</ПередВыгрузкой>
+							</Property>
+							<Property>
+								<Code>14</Code>
+								<Description>--&gt; CashAssetsTypePayee</Description>
+								<Order>700</Order>
+								<Source Name="" Kind=""/>
+								<Receiver Name="CashAssetsTypePayee" Kind="Реквизит" Type="ПеречислениеСсылка.CashAssetTypes"/>
+								<ПередВыгрузкой>Value = "Noncash";</ПередВыгрузкой>
+							</Property>
+						</Properties>
+						<Values/>
+					</Rule>
+				</Group>
+			</Group>
+			<Group>
+				<Code>ДокументыРасчетов</Code>
+				<Description>ДокументыРасчетов                                 </Description>
+				<Order>100</Order>
+				<Rule>
+					<Code>AcceptanceCertificate</Code>
+					<Description>Документ: Оказание производственных услуг</Description>
+					<Order>50</Order>
+					<SynchronizeByID>true</SynchronizeByID>
+					<Source>ДокументСсылка.АктОбОказанииПроизводственныхУслуг</Source>
+					<Receiver>ДокументСсылка.AcceptanceCertificate</Receiver>
+					<Properties>
+						<Property Поиск="true">
+							<Code>1</Code>
+							<Description>Дата --&gt; Дата</Description>
+							<Order>50</Order>
+							<Source Name="Дата" Kind="Property" Type="Дата"/>
+							<Receiver Name="Дата" Kind="Property" Type="Дата"/>
+						</Property>
+						<Property Поиск="true">
+							<Code>2</Code>
+							<Description>Номер --&gt; Номер</Description>
+							<Order>100</Order>
+							<Source Name="Номер" Kind="Property" Type="Строка"/>
+							<Receiver Name="Номер" Kind="Property" Type="Строка"/>
+						</Property>
+					</Properties>
+					<Values/>
+				</Rule>
+				<Rule>
+					<Code>ExpenseReport</Code>
+					<Description>Документ: Авансовый отчет</Description>
+					<Order>100</Order>
+					<SynchronizeByID>true</SynchronizeByID>
+					<Source>ДокументСсылка.АвансовыйОтчет</Source>
+					<Receiver>ДокументСсылка.ExpenseReport</Receiver>
+					<Properties>
+						<Property Поиск="true">
+							<Code>1</Code>
+							<Description>Дата --&gt; Дата</Description>
+							<Order>50</Order>
+							<Source Name="Дата" Kind="Property" Type="Дата"/>
+							<Receiver Name="Дата" Kind="Property" Type="Дата"/>
+						</Property>
+						<Property Поиск="true">
+							<Code>2</Code>
+							<Description>Номер --&gt; Номер</Description>
+							<Order>100</Order>
+							<Source Name="Номер" Kind="Property" Type="Строка"/>
+							<Receiver Name="Номер" Kind="Property" Type="Строка"/>
+						</Property>
+					</Properties>
+					<Values/>
+				</Rule>
+				<Rule>
+					<Code>AgentReport</Code>
+					<Description>Документ: Отчет комиссионера (агента) о продажах</Description>
+					<Order>150</Order>
+					<SynchronizeByID>true</SynchronizeByID>
+					<Source>ДокументСсылка.ОтчетКомиссионераОПродажах</Source>
+					<Receiver>ДокументСсылка.AgentReport</Receiver>
+					<Properties>
+						<Property Поиск="true">
+							<Code>1</Code>
+							<Description>Дата --&gt; Дата</Description>
+							<Order>50</Order>
+							<Source Name="Дата" Kind="Property" Type="Дата"/>
+							<Receiver Name="Дата" Kind="Property" Type="Дата"/>
+						</Property>
+						<Property Поиск="true">
+							<Code>2</Code>
+							<Description>Номер --&gt; Номер</Description>
+							<Order>100</Order>
+							<Source Name="Номер" Kind="Property" Type="Строка"/>
+							<Receiver Name="Номер" Kind="Property" Type="Строка"/>
+						</Property>
+					</Properties>
+					<Values/>
+				</Rule>
+				<Rule>
+					<Code>SupplierInvoiceReturn</Code>
+					<Description>Документ: Возврат товаров от покупателя</Description>
+					<Order>200</Order>
+					<SynchronizeByID>true</SynchronizeByID>
+					<Source>ДокументСсылка.ВозвратТоваровОтПокупателя</Source>
+					<Receiver>ДокументСсылка.SupplierInvoice</Receiver>
+					<Properties>
+						<Property Поиск="true">
+							<Code>1</Code>
+							<Description>Дата --&gt; Дата</Description>
+							<Order>50</Order>
+							<Source Name="Дата" Kind="Property" Type="Дата"/>
+							<Receiver Name="Дата" Kind="Property" Type="Дата"/>
+						</Property>
+						<Property Поиск="true">
+							<Code>2</Code>
+							<Description>Номер --&gt; Номер</Description>
+							<Order>100</Order>
+							<Source Name="Номер" Kind="Property" Type="Строка"/>
+							<Receiver Name="Номер" Kind="Property" Type="Строка"/>
+						</Property>
+					</Properties>
+					<Values/>
+				</Rule>
+				<Rule>
+					<Code>ReportToPrincipal</Code>
+					<Description>Документ: Отчет комитенту</Description>
+					<Order>250</Order>
+					<SynchronizeByID>true</SynchronizeByID>
+					<Source>ДокументСсылка.ОтчетКомитентуОПродажах</Source>
+					<Receiver>ДокументСсылка.ReportToPrincipal</Receiver>
+					<Properties>
+						<Property Поиск="true">
+							<Code>1</Code>
+							<Description>Дата --&gt; Дата</Description>
+							<Order>50</Order>
+							<Source Name="Дата" Kind="Property" Type="Дата"/>
+							<Receiver Name="Дата" Kind="Property" Type="Дата"/>
+						</Property>
+						<Property Поиск="true">
+							<Code>2</Code>
+							<Description>Номер --&gt; Номер</Description>
+							<Order>100</Order>
+							<Source Name="Номер" Kind="Property" Type="Строка"/>
+							<Receiver Name="Номер" Kind="Property" Type="Строка"/>
+						</Property>
+					</Properties>
+					<Values/>
+				</Rule>
+				<Rule>
+					<Code>CustomerInvoiceVendor</Code>
+					<Description>Документ: Возврат товаров поставщику</Description>
+					<Order>300</Order>
+					<SynchronizeByID>true</SynchronizeByID>
+					<Source>ДокументСсылка.ВозвратТоваровПоставщику</Source>
+					<Receiver>ДокументСсылка.CustomerInvoice</Receiver>
+					<Properties>
+						<Property Поиск="true">
+							<Code>1</Code>
+							<Description>Дата --&gt; Дата</Description>
+							<Order>50</Order>
+							<Source Name="Дата" Kind="Property" Type="Дата"/>
+							<Receiver Name="Дата" Kind="Property" Type="Дата"/>
+						</Property>
+						<Property Поиск="true">
+							<Code>2</Code>
+							<Description>Номер --&gt; Номер</Description>
+							<Order>100</Order>
+							<Source Name="Номер" Kind="Property" Type="Строка"/>
+							<Receiver Name="Номер" Kind="Property" Type="Строка"/>
+						</Property>
+					</Properties>
+					<Values/>
+				</Rule>
+				<Rule>
+					<Code>SupplierInvoice</Code>
+					<Description>Документ: Поступление товаров и услуг</Description>
+					<Order>350</Order>
+					<SynchronizeByID>true</SynchronizeByID>
+					<Source>ДокументСсылка.ПоступлениеТоваровУслуг</Source>
+					<Receiver>ДокументСсылка.SupplierInvoice</Receiver>
+					<Properties>
+						<Property Поиск="true">
+							<Code>1</Code>
+							<Description>Дата --&gt; Дата</Description>
+							<Order>50</Order>
+							<Source Name="Дата" Kind="Property" Type="Дата"/>
+							<Receiver Name="Дата" Kind="Property" Type="Дата"/>
+						</Property>
+						<Property Поиск="true">
+							<Code>2</Code>
+							<Description>Номер --&gt; Номер</Description>
+							<Order>100</Order>
+							<Source Name="Номер" Kind="Property" Type="Строка"/>
+							<Receiver Name="Номер" Kind="Property" Type="Строка"/>
+						</Property>
+					</Properties>
+					<Values/>
+				</Rule>
+				<Rule>
+					<Code>CustomerInvoiceTransfer</Code>
+					<Description>Документ: Передача товаров</Description>
+					<Order>400</Order>
+					<SynchronizeByID>true</SynchronizeByID>
+					<Source>ДокументСсылка.ПередачаТоваров</Source>
+					<Receiver>ДокументСсылка.CustomerInvoice</Receiver>
+					<Properties>
+						<Property Поиск="true">
+							<Code>1</Code>
+							<Description>Дата --&gt; Дата</Description>
+							<Order>50</Order>
+							<Source Name="Дата" Kind="Property" Type="Дата"/>
+							<Receiver Name="Дата" Kind="Property" Type="Дата"/>
+						</Property>
+						<Property Поиск="true">
+							<Code>2</Code>
+							<Description>Номер --&gt; Номер</Description>
+							<Order>100</Order>
+							<Source Name="Номер" Kind="Property" Type="Строка"/>
+							<Receiver Name="Номер" Kind="Property" Type="Строка"/>
+						</Property>
+					</Properties>
+					<Values/>
+				</Rule>
+				<Rule>
+					<Code>CustomerInvoice</Code>
+					<Description>Документ: Реализация товаров и услуг</Description>
+					<Order>450</Order>
+					<SynchronizeByID>true</SynchronizeByID>
+					<Source>ДокументСсылка.РеализацияТоваровУслуг</Source>
+					<Receiver>ДокументСсылка.CustomerInvoice</Receiver>
+					<Properties>
+						<Property Поиск="true">
+							<Code>1</Code>
+							<Description>Дата --&gt; Дата</Description>
+							<Order>50</Order>
+							<Source Name="Дата" Kind="Property" Type="Дата"/>
+							<Receiver Name="Дата" Kind="Property" Type="Дата"/>
+						</Property>
+						<Property Поиск="true">
+							<Code>2</Code>
+							<Description>Номер --&gt; Номер</Description>
+							<Order>100</Order>
+							<Source Name="Номер" Kind="Property" Type="Строка"/>
+							<Receiver Name="Номер" Kind="Property" Type="Строка"/>
+						</Property>
+					</Properties>
+					<Values/>
+				</Rule>
+				<Rule>
+					<Code>AdditionalCosts</Code>
+					<Description>Документ: Поступление доп. расходов</Description>
+					<Order>500</Order>
+					<SynchronizeByID>true</SynchronizeByID>
+					<Source>ДокументСсылка.ПоступлениеДопРасходов</Source>
+					<Receiver>ДокументСсылка.AdditionalCosts</Receiver>
+					<Properties>
+						<Property Поиск="true">
+							<Code>1</Code>
+							<Description>Дата --&gt; Дата</Description>
+							<Order>50</Order>
+							<Source Name="Дата" Kind="Property" Type="Дата"/>
+							<Receiver Name="Дата" Kind="Property" Type="Дата"/>
+						</Property>
+						<Property Поиск="true">
+							<Code>2</Code>
+							<Description>Номер --&gt; Номер</Description>
+							<Order>100</Order>
+							<Source Name="Номер" Kind="Property" Type="Строка"/>
+							<Receiver Name="Номер" Kind="Property" Type="Строка"/>
+						</Property>
+					</Properties>
+					<Values/>
+				</Rule>
+			</Group>
+		</Group>
+	</ObjectConversionRules>
+	<DataUnloadRules>
+		<Group Disable="false">
+			<Code>Справочники</Code>
+			<Description>Справочники</Description>
+			<Order>50</Order>
+			<Rule Disable="false">
+				<Code>СтатьIDвиженияДенежныхСредств</Code>
+				<Description>Статьи движения денежных средств</Description>
+				<Order>50</Order>
+				<ConversionRuleCode>CashFlowItems                                     </ConversionRuleCode>
+				<DataSelectionVariant>СтандартнаяВыборка</DataSelectionVariant>
+				<SelectionObject>СправочникСсылка.СтатьIDвиженияДенежныхСредств</SelectionObject>
+			</Rule>
+			<Rule Disable="false">
+				<Code>НоменклатурныеГруппы</Code>
+				<Description>Номенклатурные группы</Description>
+				<Order>100</Order>
+				<ConversionRuleCode>ProductsAndServicesCategories                     </ConversionRuleCode>
+				<DataSelectionVariant>СтандартнаяВыборка</DataSelectionVariant>
+				<SelectionObject>СправочникСсылка.НоменклатурныеГруппы</SelectionObject>
+				<ПередВыгрузкойОбъекта>If Object.IsFolder Then
+	Cancel = True;
+EndIf;</ПередВыгрузкойОбъекта>
+			</Rule>
+			<Rule Disable="false">
+				<Code>Номенклатура</Code>
+				<Description>Номенклатура</Description>
+				<Order>150</Order>
+				<ConversionRuleCode>ProductsAndServices                               </ConversionRuleCode>
+				<DataSelectionVariant>СтандартнаяВыборка</DataSelectionVariant>
+				<SelectionObject>СправочникСсылка.Номенклатура</SelectionObject>
+			</Rule>
+			<Rule Disable="false">
+				<Code>КлассификаторЕдиницИзмерения</Code>
+				<Description>Классификатор единиц измерения</Description>
+				<Order>200</Order>
+				<ConversionRuleCode>UOMClassifier                                     </ConversionRuleCode>
+				<DataSelectionVariant>СтандартнаяВыборка</DataSelectionVariant>
+				<SelectionObject>СправочникСсылка.КлассификаторЕдиницИзмерения</SelectionObject>
+			</Rule>
+			<Rule Disable="false">
+				<Code>ДоговорыКонтрагентов</Code>
+				<Description>Договоры контрагентов</Description>
+				<Order>250</Order>
+				<ConversionRuleCode>CounterpartyContracts                             </ConversionRuleCode>
+				<DataSelectionVariant>СтандартнаяВыборка</DataSelectionVariant>
+				<SelectionObject>СправочникСсылка.ДоговорыКонтрагентов</SelectionObject>
+				<ПередВыгрузкойОбъекта>IF Object.IsFolder Then
+	Cancel = True;
+EndIf;</ПередВыгрузкойОбъекта>
+			</Rule>
+			<Rule Disable="false">
+				<Code>Банки</Code>
+				<Description>Банки</Description>
+				<Order>300</Order>
+				<ConversionRuleCode>Banks                                             </ConversionRuleCode>
+				<DataSelectionVariant>СтандартнаяВыборка</DataSelectionVariant>
+				<SelectionObject>СправочникСсылка.Банки</SelectionObject>
+			</Rule>
+			<Rule Disable="false">
+				<Code>БанковскиеСчета</Code>
+				<Description>Банковские счета</Description>
+				<Order>350</Order>
+				<ConversionRuleCode>BankAccounts                                      </ConversionRuleCode>
+				<DataSelectionVariant>СтандартнаяВыборка</DataSelectionVariant>
+				<SelectionObject>СправочникСсылка.БанковскиеСчета</SelectionObject>
+			</Rule>
+			<Rule Disable="false">
+				<Code>ФизическиеЛица</Code>
+				<Description>Физические лица</Description>
+				<Order>400</Order>
+				<ConversionRuleCode>Individuals                                       </ConversionRuleCode>
+				<DataSelectionVariant>СтандартнаяВыборка</DataSelectionVariant>
+				<SelectionObject>СправочникСсылка.ФизическиеЛица</SelectionObject>
+			</Rule>
+			<Rule Disable="false">
+				<Code>Контрагенты</Code>
+				<Description>Контрагенты</Description>
+				<Order>450</Order>
+				<ConversionRuleCode>Counterparties                                    </ConversionRuleCode>
+				<DataSelectionVariant>СтандартнаяВыборка</DataSelectionVariant>
+				<SelectionObject>СправочникСсылка.Контрагенты</SelectionObject>
+			</Rule>
+			<Rule Disable="false">
+				<Code>Организации</Code>
+				<Description>Организации</Description>
+				<Order>500</Order>
+				<ConversionRuleCode>Companies                                         </ConversionRuleCode>
+				<DataSelectionVariant>СтандартнаяВыборка</DataSelectionVariant>
+				<SelectionObject>СправочникСсылка.Организации</SelectionObject>
+			</Rule>
+			<Rule Disable="false">
+				<Code>Валюты</Code>
+				<Description>Валюты</Description>
+				<Order>550</Order>
+				<ConversionRuleCode>Currencies                                        </ConversionRuleCode>
+				<DataSelectionVariant>СтандартнаяВыборка</DataSelectionVariant>
+				<SelectionObject>СправочникСсылка.Валюты</SelectionObject>
+			</Rule>
+			<Rule Disable="false">
+				<Code>Склады</Code>
+				<Description>Склады (места хранения)</Description>
+				<Order>600</Order>
+				<ConversionRuleCode>StructuralUnitsWhareHouse                         </ConversionRuleCode>
+				<DataSelectionVariant>СтандартнаяВыборка</DataSelectionVariant>
+				<SelectionObject>СправочникСсылка.Склады</SelectionObject>
+			</Rule>
+			<Rule Disable="false">
+				<Code>СпецификацииНоменклатуры</Code>
+				<Description>Спецификации номенклатуры</Description>
+				<Order>650</Order>
+				<ConversionRuleCode>Specifications                                    </ConversionRuleCode>
+				<DataSelectionVariant>СтандартнаяВыборка</DataSelectionVariant>
+				<SelectionObject>СправочникСсылка.СпецификацииНоменклатуры</SelectionObject>
+				<ПередВыгрузкойОбъекта>If  Object.IsFolder Then
+	Cancel = True;
+EndIf;</ПередВыгрузкойОбъекта>
+			</Rule>
+			<Rule Disable="false">
+				<Code>ТипыЦенНоменклатуры</Code>
+				<Description>Типы цен номенклатуры</Description>
+				<Order>700</Order>
+				<ConversionRuleCode>PriceKinds                                        </ConversionRuleCode>
+				<DataSelectionVariant>СтандартнаяВыборка</DataSelectionVariant>
+				<SelectionObject>СправочникСсылка.ТипыЦенНоменклатуры</SelectionObject>
+			</Rule>
+			<Rule Disable="false">
+				<Code>ПодразделенияОрганизаций</Code>
+				<Description>Подразделения oрганизаций</Description>
+				<Order>750</Order>
+				<ConversionRuleCode>StructuralUnits                                   </ConversionRuleCode>
+				<DataSelectionVariant>СтандартнаяВыборка</DataSelectionVariant>
+				<SelectionObject>СправочникСсылка.ПодразделенияОрганизаций</SelectionObject>
+			</Rule>
+			<Rule Disable="false">
+				<Code>ВIDыКонтактнойИнформации</Code>
+				<Description>ВIDы контактной информации</Description>
+				<Order>800</Order>
+				<ConversionRuleCode>ContactInformationKinds                           </ConversionRuleCode>
+				<DataSelectionVariant>СтандартнаяВыборка</DataSelectionVariant>
+				<SelectionObject>СправочникСсылка.ВIDыКонтактнойИнформации</SelectionObject>
+			</Rule>
+		</Group>
+		<Group Disable="false">
+			<Code>РегистрыСведений</Code>
+			<Description>РегистрыСведений                                  </Description>
+			<Order>100</Order>
+			<Rule Disable="false">
+				<Code>ФИОФизическихЛиц</Code>
+				<Description>Фамилия, имя, отчество физического лица</Description>
+				<Order>50</Order>
+				<ConversionRuleCode>IndividualsDescriptionFull                        </ConversionRuleCode>
+				<DataSelectionVariant>СтандартнаяВыборка</DataSelectionVariant>
+				<SelectionObject>РегистрСведенийЗапись.ФИОФизическихЛиц</SelectionObject>
+			</Rule>
+		</Group>
+		<Group Disable="false">
+			<Code>Документы</Code>
+			<Description>Документы                                         </Description>
+			<Order>150</Order>
+			<Group Disable="false">
+				<Code>ДенежныеСредства</Code>
+				<Description>ДенежныеСредства                                  </Description>
+				<Order>50</Order>
+				<Rule Disable="false">
+					<Code>РасходныйКассовыйОрдер</Code>
+					<Description>Расходный кассовый ордер</Description>
+					<Order>50</Order>
+					<ConversionRuleCode>CashPayment                                       </ConversionRuleCode>
+					<DataSelectionVariant>СтандартнаяВыборка</DataSelectionVariant>
+					<SelectionObject>ДокументСсылка.РасходныйКассовыйОрдер</SelectionObject>
+					<ПередВыгрузкойОбъекта>If Object.ВIDОперации = Enums.ВIDыОперацийРКО.ВзносНаличнымиВБанк Then
+	OCRName = "CashTransferPayment";
+Else
+	OCRName = "CashPayment";
+EndIf;</ПередВыгрузкойОбъекта>
+				</Rule>
+				<Rule Disable="false">
+					<Code>ПриходныйКассовыйОрдер</Code>
+					<Description>Приходный кассовый ордер</Description>
+					<Order>100</Order>
+					<ConversionRuleCode>CashReceipt                                       </ConversionRuleCode>
+					<DataSelectionVariant>СтандартнаяВыборка</DataSelectionVariant>
+					<SelectionObject>ДокументСсылка.ПриходныйКассовыйОрдер</SelectionObject>
+					<ПередВыгрузкойОбъекта>If Object.ВIDОперации = Enums.ВIDыОперацийПКО.ПолучениеНаличныхВБанке Then
+	OCRName = "CashTransferReceipt";
+Else
+	OCRName = "CashReceipt";
+EndIf;</ПередВыгрузкойОбъекта>
+				</Rule>
+				<Rule Disable="false">
+					<Code>СписаниеСРасчетногоСчета</Code>
+					<Description>Списание с расчетного счета</Description>
+					<Order>150</Order>
+					<ConversionRuleCode>PaymentExpense                                    </ConversionRuleCode>
+					<DataSelectionVariant>СтандартнаяВыборка</DataSelectionVariant>
+					<SelectionObject>ДокументСсылка.СписаниеСРасчетногоСчета</SelectionObject>
+					<ПередВыгрузкойОбъекта>If Object.ВIDОперации = Enums.ВIDыОперацийСписаниеДенежныхСредств.ПереводНаДругойСчет Then
+	OCRName = "CashTransferPaymentExpence";
+Else
+	OCRName = "PaymentExpense";
+EndIf;</ПередВыгрузкойОбъекта>
+				</Rule>
+				<Rule Disable="false">
+					<Code>ПоступлениеНаРасчетныйСчет</Code>
+					<Description>Поступление на расчетный счет</Description>
+					<Order>200</Order>
+					<ConversionRuleCode>PaymentReceipt                                    </ConversionRuleCode>
+					<DataSelectionVariant>СтандартнаяВыборка</DataSelectionVariant>
+					<SelectionObject>ДокументСсылка.ПоступлениеНаРасчетныйСчет</SelectionObject>
+				</Rule>
+				<Rule Disable="false">
+					<Code>ПлатежноеПоручение</Code>
+					<Description>Платежное поручение</Description>
+					<Order>250</Order>
+					<ConversionRuleCode>PaymentOrder                                      </ConversionRuleCode>
+					<DataSelectionVariant>СтандартнаяВыборка</DataSelectionVariant>
+					<SelectionObject>ДокументСсылка.ПлатежноеПоручение</SelectionObject>
+				</Rule>
+			</Group>
+		</Group>
+	</DataUnloadRules>
+	<DataClearingRules/>
+	<Algorithms>
+		<Algorithm Name="FillHeaderVatRate" ИспользуетсяПриЗагрузке="false">
+			<Text>If Source.СтавкаНДС = Enums.СтавкиНДС.НДС18 Then
+	Value =
+	"ВЫБРАТЬ
+	|	СтавкиНДС.Ссылка КАК СтавкаНДС
+	|ИЗ
+	|	Справочник.СтавкиНДС КАК СтавкиНДС
+	|ГДЕ
+	////|	СтавкиНДС.Ставка = 18
+	// 1VS - Thay
+	|	СтавкиНДС.Ставка = 10
+	// 1VS
+	|	И НЕ СтавкиНДС.НеОблагается
+	|	И НЕ СтавкиНДС.Расчетная";
+ИначеЕсли Source.СтавкаНДС = Enums.СтавкиНДС.НДС18_118 Then
+	Value = 
+	"ВЫБРАТЬ
+	|	СтавкиНДС.Ссылка КАК СтавкаНДС
+	|ИЗ
+	|	Справочник.СтавкиНДС КАК СтавкиНДС
+	|ГДЕ
+	////|	СтавкиНДС.Ставка = 18
+	// 1VS - Thay
+	|	СтавкиНДС.Ставка = 10
+	// 1VS
+	|	И НЕ СтавкиНДС.НеОблагается
+	|	И СтавкиНДС.Расчетная";
+ИначеЕсли Source.СтавкаНДС = Enums.СтавкиНДС.НДС10 Then
+	Value = 
+	"ВЫБРАТЬ
+	|	СтавкиНДС.Ссылка КАК СтавкаНДС
+	|ИЗ
+	|	Справочник.СтавкиНДС КАК СтавкиНДС
+	|ГДЕ
+	////|	СтавкиНДС.Ставка = 10
+	// 1VS - Thay
+	|	СтавкиНДС.Ставка = 5
+	// 1VS 
+	|	И НЕ СтавкиНДС.НеОблагается
+	|	И НЕ СтавкиНДС.Расчетная";
+ИначеЕсли Source.СтавкаНДС = Enums.СтавкиНДС.НДС10_110 Then
+	Value =
+	"ВЫБРАТЬ
+	|	СтавкиНДС.Ссылка КАК СтавкаНДС
+	|ИЗ
+	|	Справочник.СтавкиНДС КАК СтавкиНДС
+	|ГДЕ
+	////|	СтавкиНДС.Ставка = 10
+	// 1VS - Thay
+	|	СтавкиНДС.Ставка = 5
+	// 1VS
+	|	И НЕ СтавкиНДС.НеОблагается
+	|	И СтавкиНДС.Расчетная";
+ИначеЕсли Source.СтавкаНДС = Enums.СтавкиНДС.НДС0 Then
+	Value = 
+	"ВЫБРАТЬ
+	|	СтавкиНДС.Ссылка КАК СтавкаНДС
+	|ИЗ
+	|	Справочник.СтавкиНДС КАК СтавкиНДС
+	|ГДЕ
+	|	СтавкиНДС.Ставка = 0
+	|	И НЕ СтавкиНДС.НеОблагается";
+Иначе
+	Value = 
+	"ВЫБРАТЬ
+	|	СтавкиНДС.Ссылка КАК СтавкаНДС
+	|ИЗ
+	|	Справочник.СтавкиНДС КАК СтавкиНДС
+	|ГДЕ
+	|	СтавкиНДС.НеОблагается";
+КонецЕсли;</Text>
+			<Parameters>Value, Source</Parameters>
+		</Algorithm>
+		<Algorithm Name="FillTabularSectionVATRate" ИспользуетсяПриЗагрузке="false">
+			<Text>If CollectionObject.СтавкаНДС = Enums.СтавкиНДС.НДС18 Then
+	Value =
+	"ВЫБРАТЬ
+	|	СтавкиНДС.Ссылка КАК СтавкаНДС
+	|ИЗ
+	|	Справочник.СтавкиНДС КАК СтавкиНДС
+	|ГДЕ
+	////|	СтавкиНДС.Ставка = 18
+	// 1VS - Thay
+	|	СтавкиНДС.Ставка = 10
+	// 1VS
+	|	И НЕ СтавкиНДС.НеОблагается
+	|	И НЕ СтавкиНДС.Расчетная";
+ElsIf CollectionObject.СтавкаНДС = Enums.СтавкиНДС.НДС18_118 Then
+	Value = 
+	"ВЫБРАТЬ
+	|	СтавкиНДС.Ссылка КАК СтавкаНДС
+	|ИЗ
+	|	Справочник.СтавкиНДС КАК СтавкиНДС
+	|ГДЕ
+	////|	СтавкиНДС.Ставка = 18
+	// 1VS - Thay
+	|	СтавкиНДС.Ставка = 10
+	// 1VS
+	|	И НЕ СтавкиНДС.НеОблагается
+	|	И СтавкиНДС.Расчетная";
+ElsIf CollectionObject.СтавкаНДС = Enums.СтавкиНДС.НДС10 Then
+	Value = 
+	"ВЫБРАТЬ
+	|	СтавкиНДС.Ссылка КАК СтавкаНДС
+	|ИЗ
+	|	Справочник.СтавкиНДС КАК СтавкиНДС
+	|ГДЕ
+	////|	СтавкиНДС.Ставка = 10
+	// 1VS - Thay
+	|	СтавкиНДС.Ставка = 5
+	// 1VS
+	|	И НЕ СтавкиНДС.НеОблагается
+	|	И НЕ СтавкиНДС.Расчетная";
+ElsIf CollectionObject.СтавкаНДС = Enums.СтавкиНДС.НДС10_110 Then
+	Value =
+	"ВЫБРАТЬ
+	|	СтавкиНДС.Ссылка КАК СтавкаНДС
+	|ИЗ
+	|	Справочник.СтавкиНДС КАК СтавкиНДС
+	|ГДЕ
+	////|	СтавкиНДС.Ставка = 10
+	// 1VS - Thay
+	|	СтавкиНДС.Ставка = 5
+	// 1VS
+	|	И НЕ СтавкиНДС.НеОблагается
+	|	И СтавкиНДС.Расчетная";
+ElsIf CollectionObject.СтавкаНДС = Enums.СтавкиНДС.НДС0 Then
+	Value = 
+	"ВЫБРАТЬ
+	|	СтавкиНДС.Ссылка КАК СтавкаНДС
+	|ИЗ
+	|	Справочник.СтавкиНДС КАК СтавкиНДС
+	|ГДЕ
+	|	СтавкиНДС.Ставка = 0
+	|	И НЕ СтавкиНДС.НеОблагается";
+Else
+	Value = 
+	"ВЫБРАТЬ
+	|	СтавкиНДС.Ссылка КАК СтавкаНДС
+	|ИЗ
+	|	Справочник.СтавкиНДС КАК СтавкиНДС
+	|ГДЕ
+	|	СтавкиНДС.НеОблагается";
+	
+EndIf;</Text>
+			<Parameters>Value, CollectionObject</Parameters>
+		</Algorithm>
+	</Algorithms>
+	<Queries/>
+</ExchangeRules>

@@ -1,0 +1,3454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <items xsi:type="form:FormGroup">
+    <name>HeaderGroup</name>
+    <id>245</id>
+    <items xsi:type="form:FormGroup">
+      <name>ГруппаНаименованиеИТип</name>
+      <id>360</id>
+      <items xsi:type="form:FormField">
+        <name>Description</name>
+        <id>234</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Object.Description</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>DescriptionExtendedTooltip</name>
+          <id>236</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>DescriptionContextMenu</name>
+          <id>235</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <maxWidth>30</maxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>ScheduleType</name>
+        <id>394</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Object.ScheduleType</segments>
+        </dataPath>
+        <toolTipRepresentation>Button</toolTipRepresentation>
+        <handlers>
+          <event>OnChange</event>
+          <name>ScheduleTypeOnChange</name>
+        </handlers>
+        <extendedTooltip>
+          <name>ScheduleTypeExtendedTooltip</name>
+          <id>396</id>
+          <title>
+            <key>ru</key>
+            <value>1. Тип графика &lt;b>&quot;По дням недели&quot;&lt;/> используется для ввода рабочих дней в разрезе календарной недели (пятидневка, шестидневка и пр). 
+2. Тип графика &lt;b>&quot;&lt;/>&lt;b>Сменный&lt;/>&lt;b>&quot;&lt;/> используется для ввода рабочих дней в произвольном порядке с  момента даты отсчета, без привязки к дням недели  (день через два, два через два и пр.). При формировании графика данного типа необходимо ввести порядок рабочих и нерабочих дней.</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>1. Kiểu lịch biểu &lt;b>&quot;Theo ngày trong tuần&quot;&lt;/> được dùng để nhập ngày làm việc theo từng tuần trên lịch (5 ngày, 6 ngày...). 
+2. Kiểu lịch biểu &lt;b>&quot;&lt;/>&lt;b>Theo ca&lt;/>&lt;b>&quot;&lt;/> được dùng để nhập ngày làm việc theo trình tự tùy ý từ ngày tính toán, không gắn với các ngày trong tuần (hai ngày sau, bốn ngày sau...). Khi tạo lịch biểu kiểu này, cần nhập trình tự ngày làm việc và ngày không làm việc.</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <formatted>true</formatted>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ScheduleTypeContextMenu</name>
+          <id>395</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>RadioButtonField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
+          <choiceList>
+            <presentation>
+              <key>en</key>
+              <value>On week days</value>
+            </presentation>
+            <presentation>
+              <key>ru</key>
+              <value>По дням недели</value>
+            </presentation>
+            <presentation>
+              <key>vi</key>
+              <value>Các ngày trong tuần</value>
+            </presentation>
+            <value xsi:type="core:ReferenceValue">
+              <value>Enum.WorkScheduleTypes.EnumValue.CalendarDays</value>
+            </value>
+          </choiceList>
+          <choiceList>
+            <presentation>
+              <key>en</key>
+              <value>Shift work</value>
+            </presentation>
+            <presentation>
+              <key>ru</key>
+              <value>Сменный</value>
+            </presentation>
+            <presentation>
+              <key>vi</key>
+              <value>Theo ca</value>
+            </presentation>
+            <value xsi:type="core:ReferenceValue">
+              <value>Enum.WorkScheduleTypes.EnumValue.ShiftWork</value>
+            </value>
+          </choiceList>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>ru</key>
+        <value>Группа наименование и тип</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Nhóm tên và loại</value>
+      </title>
+      <toolTip>
+        <key>ru</key>
+        <value>Группа наименование и тип</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Nhóm tên và loại</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>ГруппаНаименованиеИТипExtendedTooltip</name>
+        <id>361</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
+        <representation>WeakSeparation</representation>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>ru</key>
+      <value>Группа шапка</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Nhóm phần đầu</value>
+    </title>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа шапка</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nhóm phần đầu</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>HeaderGroupExtendedTooltip</name>
+      <id>246</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <representation>WeakSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>ТаблицыФормыГруппа</name>
+    <id>86</id>
+    <items xsi:type="form:FormGroup">
+      <name>РасписаниеРаботыОбщаяГруппа</name>
+      <id>66</id>
+      <items xsi:type="form:FormGroup">
+        <name>РасписаниеРаботыГруппа</name>
+        <id>210</id>
+        <items xsi:type="form:FormGroup">
+          <name>ГруппаКоманднаяПанельРасписание</name>
+          <id>365</id>
+          <items xsi:type="form:Decoration">
+            <name>ГруппаКоманднаяПанельРасписаниеНадпись</name>
+            <id>367</id>
+            <title>
+              <key>ru</key>
+              <value>Добавить день:</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Thêm ngày:</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>ГруппаКоманднаяПанельРасписаниеНадписьExtendedTooltip</name>
+              <id>369</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>ГруппаКоманднаяПанельРасписаниеНадписьContextMenu</name>
+              <id>368</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </items>
+          <items xsi:type="form:Button">
+            <name>РасписаниеКнопкаДобавитьРабочийДень</name>
+            <id>370</id>
+            <title>
+              <key>en</key>
+              <value>Working</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Рабочий</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Làm việc</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>РасписаниеКнопкаДобавитьРабочийДеньExtendedTooltip</name>
+              <id>371</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualButton</type>
+            <commandName>Form.Command.РасписаниеДобавитьРабочийДень</commandName>
+            <representation>PictureAndText</representation>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <placementArea>UserCmds</placementArea>
+            <representationInContextMenu>Auto</representationInContextMenu>
+          </items>
+          <items xsi:type="form:Button">
+            <name>РасписаниеКнопкаДобавитьНеРабочийДень</name>
+            <id>372</id>
+            <title>
+              <key>en</key>
+              <value>Not working</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Нерабочий</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Không làm việc</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>РасписаниеКнопкаДобавитьНеРабочийДеньExtendedTooltip</name>
+              <id>373</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualButton</type>
+            <commandName>Form.Command.РасписаниеДобавитьНеРабочийДень</commandName>
+            <representation>PictureAndText</representation>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <placementArea>UserCmds</placementArea>
+            <representationInContextMenu>Auto</representationInContextMenu>
+          </items>
+          <items xsi:type="form:FormGroup">
+            <name>ГруппаПереместить</name>
+            <id>407</id>
+            <items xsi:type="form:FormGroup">
+              <name>ГруппаКнопкиПереместить</name>
+              <id>409</id>
+              <items xsi:type="form:Button">
+                <name>РасписаниеКнопкаПереместитьВверх</name>
+                <id>390</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>РасписаниеКнопкаПереместитьВверхExtendedTooltip</name>
+                  <id>391</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <commandName>Form.Item.WorkSchedule.StandardCommand.MoveUp</commandName>
+                <representation>Picture</representation>
+                <width>3</width>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <picture xsi:type="core:PictureRef">
+                  <picture>StdPicture.MoveUp</picture>
+                </picture>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <items xsi:type="form:Button">
+                <name>РасписаниеКнопкаПереместитьВниз</name>
+                <id>392</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>РасписаниеКнопкаПереместитьВнизExtendedTooltip</name>
+                  <id>393</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <commandName>Form.Item.WorkSchedule.StandardCommand.MoveDown</commandName>
+                <representation>Picture</representation>
+                <width>3</width>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <picture xsi:type="core:PictureRef">
+                  <picture>StdPicture.MoveDown</picture>
+                </picture>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <title>
+                <key>ru</key>
+                <value>Группа кнопки переместить</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Nhóm nút di chuyển</value>
+              </title>
+              <toolTip>
+                <key>ru</key>
+                <value>Группа кнопки переместить</value>
+              </toolTip>
+              <toolTip>
+                <key>vi</key>
+                <value>Nhóm nút di chuyển</value>
+              </toolTip>
+              <extendedTooltip>
+                <name>ГруппаКнопкиПереместитьExtendedTooltip</name>
+                <id>410</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <extInfo xsi:type="form:ButtonGroupExtInfo">
+                <representation>Compact</representation>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>ru</key>
+              <value>Группа переместить</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Nhóm di chuyển</value>
+            </title>
+            <toolTip>
+              <key>ru</key>
+              <value>Группа переместить</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Nhóm di chuyển</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>ГруппаПереместитьExtendedTooltip</name>
+              <id>408</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>CommandBar</type>
+            <extInfo xsi:type="form:CommandBarExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>ru</key>
+            <value>Группа командная панель расписание</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Nhóm bảng điều khiển lịch</value>
+          </title>
+          <toolTip>
+            <key>ru</key>
+            <value>Группа командная панель расписание</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Nhóm bảng điều khiển lịch</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>ГруппаКоманднаяПанельРасписаниеExtendedTooltip</name>
+            <id>366</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>HorizontalIfPossible</group>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <items xsi:type="form:Table">
+          <name>WorkSchedule</name>
+          <id>316</id>
+          <title>
+            <key>ru</key>
+            <value>Номер дня</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Số ngày</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Object.WorkSchedule</segments>
+          </dataPath>
+          <titleLocation>None</titleLocation>
+          <titleHeight>1</titleHeight>
+          <excludedCommands>Copy</excludedCommands>
+          <items xsi:type="form:FormField">
+            <name>WorkScheduleDayNumberDescription</name>
+            <id>352</id>
+            <title>
+              <key>en</key>
+              <value>Day number</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Номер дня</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Số ngày</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Object.WorkSchedule.НомерДняПредставление</segments>
+            </dataPath>
+            <titleLocation>Left</titleLocation>
+            <titleHeight>1</titleHeight>
+            <extendedTooltip>
+              <name>WorkScheduleDayNumberDescriptionExtendedTooltip</name>
+              <id>354</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>WorkScheduleDayNumberDescriptionContextMenu</name>
+              <id>353</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>EnterOnInput</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <width>3</width>
+              <maxWidth>3</maxWidth>
+              <horizontalStretch>false</horizontalStretch>
+              <wrap>true</wrap>
+              <multiLine>false</multiLine>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormGroup">
+            <name>WorkScheduleGroupWorkDay</name>
+            <id>350</id>
+            <items xsi:type="form:FormField">
+              <name>WorkScheduleStartWorkDay</name>
+              <id>335</id>
+              <title>
+                <key>en</key>
+                <value>Start</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Начало</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Bắt đầu</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <dataPath xsi:type="form:DataPath">
+                <segments>Object.WorkSchedule.BeginTime</segments>
+              </dataPath>
+              <handlers>
+                <event>OnChange</event>
+                <name>РасписаниеРаботыНачалоРабочегоДняПриИзменении</name>
+              </handlers>
+              <extendedTooltip>
+                <name>WorkScheduleStartWorkDayExtendedTooltip</name>
+                <id>337</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>WorkScheduleStartWorkDayContextMenu</name>
+                <id>336</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>InputField</type>
+              <editMode>EnterOnInput</editMode>
+              <showInHeader>true</showInHeader>
+              <headerHorizontalAlign>Left</headerHorizontalAlign>
+              <showInFooter>true</showInFooter>
+              <extInfo xsi:type="form:InputFieldExtInfo">
+                <width>6</width>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <wrap>true</wrap>
+                <spinButton>true</spinButton>
+                <format>
+                  <key>ru</key>
+                  <value>ДФ=HH:mm</value>
+                </format>
+                <format>
+                  <key>vi</key>
+                  <value>DF=HH:mm</value>
+                </format>
+                <editFormat>
+                  <key>ru</key>
+                  <value>ДФ=HH:mm</value>
+                </editFormat>
+                <editFormat>
+                  <key>vi</key>
+                  <value>DF=HH:mm</value>
+                </editFormat>
+                <chooseType>true</chooseType>
+                <typeDomainEnabled>true</typeDomainEnabled>
+                <textEdit>true</textEdit>
+              </extInfo>
+            </items>
+            <items xsi:type="form:FormField">
+              <name>WorkScheduleEndWorkDay</name>
+              <id>338</id>
+              <title>
+                <key>en</key>
+                <value>Finish</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Окончание</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Kết thúc</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <dataPath xsi:type="form:DataPath">
+                <segments>Object.WorkSchedule.EndTime</segments>
+              </dataPath>
+              <handlers>
+                <event>OnChange</event>
+                <name>РасписаниеРаботыОкончаниеРабочегоДняПриИзменении</name>
+              </handlers>
+              <extendedTooltip>
+                <name>WorkScheduleEndWorkDayExtendedTooltip</name>
+                <id>340</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>WorkScheduleEndWorkDayContextMenu</name>
+                <id>339</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>InputField</type>
+              <editMode>EnterOnInput</editMode>
+              <showInHeader>true</showInHeader>
+              <headerHorizontalAlign>Left</headerHorizontalAlign>
+              <showInFooter>true</showInFooter>
+              <extInfo xsi:type="form:InputFieldExtInfo">
+                <width>5</width>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <wrap>true</wrap>
+                <spinButton>true</spinButton>
+                <format>
+                  <key>ru</key>
+                  <value>ДФ=HH:mm</value>
+                </format>
+                <format>
+                  <key>vi</key>
+                  <value>DF=HH:mm</value>
+                </format>
+                <editFormat>
+                  <key>ru</key>
+                  <value>ДФ=HH:mm</value>
+                </editFormat>
+                <editFormat>
+                  <key>vi</key>
+                  <value>DF=HH:mm</value>
+                </editFormat>
+                <autoMarkIncomplete>false</autoMarkIncomplete>
+                <chooseType>true</chooseType>
+                <typeDomainEnabled>true</typeDomainEnabled>
+                <textEdit>true</textEdit>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>en</key>
+              <value>Work day</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Рабочий день</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Ngày làm việc</value>
+            </title>
+            <toolTip>
+              <key>en</key>
+              <value>Work schedule group work day</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Расписание работы группа рабочий день</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Lịch làm việc nhóm ngày làm việc</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>WorkScheduleGroupWorkDayExtendedTooltip</name>
+              <id>351</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>ColumnGroup</type>
+            <extInfo xsi:type="form:ColumnGroupExtInfo">
+              <showTitle>true</showTitle>
+              <showInHeader>true</showInHeader>
+              <headerHorizontalAlign>Center</headerHorizontalAlign>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>WorkScheduleWorkHoursQuantity</name>
+            <id>341</id>
+            <title>
+              <key>en</key>
+              <value>Work hours</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Часов работы</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Giờ công làm việc</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Object.WorkSchedule.WorkHoursQuantity</segments>
+            </dataPath>
+            <handlers>
+              <event>OnChange</event>
+              <name>WorkScheduleWorkHoursQuantityOnChange</name>
+            </handlers>
+            <extendedTooltip>
+              <name>WorkScheduleWorkHoursQuantityExtendedTooltip</name>
+              <id>343</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>WorkScheduleWorkHoursQuantityContextMenu</name>
+              <id>342</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>EnterOnInput</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <maxWidth>1</maxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <spinButton>true</spinButton>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>WorkScheduleTimeBreak</name>
+            <id>344</id>
+            <title>
+              <key>ru</key>
+              <value>Часов перерывов</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Giờ giải lao</value>
+            </title>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Object.WorkSchedule.TimeBreak</segments>
+            </dataPath>
+            <toolTip>
+              <key>ru</key>
+              <value>Для ввода расписания перерывов перейдите в текщей колонке по кнопке &quot;Открыть&quot;.</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Để nhập lịch nghỉ, nhấp vào nút &quot;Mở&quot; trong cột hiện tại.</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>WorkScheduleTimeBreakExtendedTooltip</name>
+              <id>346</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>WorkScheduleTimeBreakContextMenu</name>
+              <id>345</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>EnterOnInput</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <choiceButton>false</choiceButton>
+              <spinButton>true</spinButton>
+              <openButton>true</openButton>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>WorkScheduleTimeBreakDescription</name>
+            <id>397</id>
+            <title>
+              <key>en</key>
+              <value>Break hours</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Часов перерывов</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Giờ giải lao</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Object.WorkSchedule.ЧасовПерерывовПредставление</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>WorkScheduleTimeBreakDescriptionExtendedTooltip</name>
+              <id>399</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>WorkScheduleTimeBreakDescriptionContextMenu</name>
+              <id>398</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>EnterOnInput</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <handlers>
+                <event>StartChoice</event>
+                <name>WorkScheduleЧасовПерерывовПредставлениеStartChoice</name>
+              </handlers>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <choiceButton>true</choiceButton>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+            </extInfo>
+          </items>
+          <autoCommandBar>
+            <name>WorkScheduleCommandBar</name>
+            <id>318</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <horizontalAlign>Left</horizontalAlign>
+          </autoCommandBar>
+          <handlers>
+            <event>BeforeAddRow</event>
+            <name>WorkScheduleBeforeAddRow</name>
+          </handlers>
+          <handlers>
+            <event>BeforeDeleteRow</event>
+            <name>WorkScheduleBeforeDeleteRow</name>
+          </handlers>
+          <handlers>
+            <event>OnActivateRow</event>
+            <name>WorkScheduleOnActivateRow</name>
+          </handlers>
+          <handlers>
+            <event>BeforeRowChange</event>
+            <name>WorkScheduleBeforeRowChange</name>
+          </handlers>
+          <handlers>
+            <event>OnStartEdit</event>
+            <name>WorkScheduleOnStartEdit</name>
+          </handlers>
+          <handlers>
+            <event>AfterDeleteRow</event>
+            <name>WorkScheduleAfterDeleteRow</name>
+          </handlers>
+          <handlers>
+            <event>OnChange</event>
+            <name>WorkScheduleOnChange</name>
+          </handlers>
+          <searchStringAddition>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <name>WorkScheduleSearchString</name>
+            <id>320</id>
+            <extendedTooltip>
+              <name>WorkScheduleSearchStringExtendedTooltip</name>
+              <id>322</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>WorkScheduleSearchStringContextMenu</name>
+              <id>321</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <source>WorkScheduleSearchString</source>
+            <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+            </extInfo>
+          </searchStringAddition>
+          <viewStatusAddition>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <name>WorkScheduleViewStatus</name>
+            <id>323</id>
+            <extendedTooltip>
+              <name>WorkScheduleViewStatusExtendedTooltip</name>
+              <id>325</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>WorkScheduleViewStatusContextMenu</name>
+              <id>324</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>ViewStatusAddition</type>
+            <source>WorkScheduleViewStatus</source>
+            <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+            </extInfo>
+          </viewStatusAddition>
+          <searchControlAddition>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <name>WorkScheduleSearchControl</name>
+            <id>326</id>
+            <extendedTooltip>
+              <name>WorkScheduleSearchControlExtendedTooltip</name>
+              <id>328</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>WorkScheduleSearchControlContextMenu</name>
+              <id>327</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>SearchControlAddition</type>
+            <source>WorkScheduleSearchControl</source>
+            <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+            </extInfo>
+          </searchControlAddition>
+          <extendedTooltip>
+            <name>WorkScheduleExtendedTooltip</name>
+            <id>319</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>WorkScheduleContextMenu</name>
+            <id>317</id>
+            <items xsi:type="form:Button">
+              <name>РасписаниеРаботыКонтекстноеМенюЗаполнитьТекущим</name>
+              <id>405</id>
+              <title>
+                <key>ru</key>
+                <value>Заполнить все дни текущим</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Điền vào tất cả các ngày với hiện tại</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>РасписаниеРаботыКонтекстноеМенюЗаполнитьТекущимExtendedTooltip</name>
+                <id>406</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.ЗаполнитьТекущим</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>РасписаниеРаботыКонтекстноеМенюДобавитьРабочийДень</name>
+              <id>374</id>
+              <title>
+                <key>ru</key>
+                <value>Добавить рабочий день</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Thêm ngày làm việc</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>РасписаниеРаботыКонтекстноеМенюДобавитьРабочийДеньExtendedTooltip</name>
+                <id>375</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.РасписаниеДобавитьРабочийДень</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>РасписаниеРаботыКонтекстноеМенюДобавитьНерабочийДень</name>
+              <id>376</id>
+              <title>
+                <key>ru</key>
+                <value>Добавить нерабочий день</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Thêm một ngày nghỉ</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>РасписаниеРаботыКонтекстноеМенюДобавитьНерабочийДеньExtendedTooltip</name>
+                <id>377</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.РасписаниеДобавитьНеРабочийДень</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:FormGroup">
+              <name>РасписаниеРаботыКонтекстноеМенюГруппаСтандартныеКоманды</name>
+              <id>378</id>
+              <items xsi:type="form:Button">
+                <name>РасписаниеРаботыКонтекстноеМенюСкопировать</name>
+                <id>403</id>
+                <title>
+                  <key>ru</key>
+                  <value>Скопировать</value>
+                </title>
+                <title>
+                  <key>vi</key>
+                  <value>Sao chép</value>
+                </title>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>РасписаниеРаботыКонтекстноеМенюСкопироватьExtendedTooltip</name>
+                  <id>404</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <commandName>Form.Command.СкопироватьСтрокиРасписания</commandName>
+                <representation>PictureAndText</representation>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <picture xsi:type="core:PictureRef">
+                  <picture>StdPicture.CloneListItem</picture>
+                </picture>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <items xsi:type="form:Button">
+                <name>РасписаниеРаботыКонтекстноеМенюИзменить</name>
+                <id>380</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>РасписаниеРаботыКонтекстноеМенюИзменитьExtendedTooltip</name>
+                  <id>381</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <commandName>Form.Item.WorkSchedule.StandardCommand.Change</commandName>
+                <representation>Auto</representation>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <items xsi:type="form:Button">
+                <name>РасписаниеРаботыКонтекстноеМенюУдалить</name>
+                <id>382</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>РасписаниеРаботыКонтекстноеМенюУдалитьExtendedTooltip</name>
+                  <id>383</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <commandName>Form.Item.WorkSchedule.StandardCommand.Delete</commandName>
+                <representation>Auto</representation>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <items xsi:type="form:Button">
+                <name>РасписаниеРаботыКонтекстноеМенюОчиститьРасипасние</name>
+                <id>416</id>
+                <title>
+                  <key>ru</key>
+                  <value>Очистить перерывы</value>
+                </title>
+                <title>
+                  <key>vi</key>
+                  <value>Xóa nghỉ</value>
+                </title>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>РасписаниеРаботыКонтекстноеМенюОчиститьРасипасниеExtendedTooltip</name>
+                  <id>417</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <commandName>Form.Command.ОчиститьРасипасние</commandName>
+                <representation>Auto</representation>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <items xsi:type="form:Button">
+                <name>РасписаниеРаботыКонтекстноеМенюПереместитьВверх</name>
+                <id>386</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>РасписаниеРаботыКонтекстноеМенюПереместитьВверхExtendedTooltip</name>
+                  <id>387</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <commandName>Form.Item.WorkSchedule.StandardCommand.MoveUp</commandName>
+                <representation>Auto</representation>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <items xsi:type="form:Button">
+                <name>РасписаниеРаботыКонтекстноеМенюПереместитьВниз</name>
+                <id>388</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>РасписаниеРаботыКонтекстноеМенюПереместитьВнизExtendedTooltip</name>
+                  <id>389</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <commandName>Form.Item.WorkSchedule.StandardCommand.MoveDown</commandName>
+                <representation>Auto</representation>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <items xsi:type="form:Button">
+                <name>РасписаниеРаботыКонтекстноеМенюВывестиСписок</name>
+                <id>384</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>РасписаниеРаботыКонтекстноеМенюВывестиСписокExtendedTooltip</name>
+                  <id>385</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <commandName>Form.Item.WorkSchedule.StandardCommand.OutputList</commandName>
+                <representation>Auto</representation>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <title>
+                <key>ru</key>
+                <value>Расписание работы контекстное меню группа стандартные команды</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Lịch trình các lệnh tiêu chuẩn nhóm ngữ cảnh nhóm</value>
+              </title>
+              <toolTip>
+                <key>ru</key>
+                <value>Расписание работы контекстное меню группа стандартные команды</value>
+              </toolTip>
+              <toolTip>
+                <key>vi</key>
+                <value>Lịch trình các lệnh tiêu chuẩn nhóm ngữ cảnh nhóm</value>
+              </toolTip>
+              <extendedTooltip>
+                <name>РасписаниеРаботыКонтекстноеМенюГруппаСтандартныеКомандыExtendedTooltip</name>
+                <id>379</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <extInfo xsi:type="form:ButtonGroupExtInfo"/>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+          </contextMenu>
+          <representation>HierarchicalList</representation>
+          <changeRowSet>true</changeRowSet>
+          <changeRowOrder>true</changeRowOrder>
+          <width>67</width>
+          <maxWidth>67</maxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <heightInTableRows>9</heightInTableRows>
+          <selectionMode>MultiRow</selectionMode>
+          <header>true</header>
+          <headerHeight>1</headerHeight>
+          <footerHeight>1</footerHeight>
+          <horizontalScrollBar>AutoUse</horizontalScrollBar>
+          <verticalScrollBar>AutoUse</verticalScrollBar>
+          <horizontalLines>true</horizontalLines>
+          <verticalLines>true</verticalLines>
+          <autoAddIncomplete>false</autoAddIncomplete>
+          <autoMarkIncomplete>true</autoMarkIncomplete>
+          <searchOnInput>Auto</searchOnInput>
+          <initialListView>Auto</initialListView>
+          <horizontalStretch>true</horizontalStretch>
+          <enableStartDrag>true</enableStartDrag>
+          <enableDrag>true</enableDrag>
+          <rowFilter xsi:type="core:UndefinedValue"/>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Настройки расписания</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Cài đặt lịch</value>
+        </title>
+        <toolTip>
+          <key>ru</key>
+          <value>Расписание работы группа</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Lịch làm việc nhóm</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>РасписаниеРаботыГруппаExtendedTooltip</name>
+          <id>211</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>Vertical</group>
+          <representation>WeakSeparation</representation>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <showTitle>true</showTitle>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>GroupAdditionalSettings</name>
+        <id>240</id>
+        <items xsi:type="form:FormField">
+          <name>AccountHolidays</name>
+          <id>400</id>
+          <title>
+            <key>en</key>
+            <value>Account public holidays as weekends</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Учитывать праздничные дни как выходные</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Tính ngày nghỉ là cuối tuần</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Object.AccountHolidays</segments>
+          </dataPath>
+          <titleLocation>Right</titleLocation>
+          <extendedTooltip>
+            <name>AccountHolidaysExtendedTooltip</name>
+            <id>402</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>AccountHolidaysContextMenu</name>
+            <id>401</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>CheckBoxField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        </items>
+        <items xsi:type="form:Table">
+          <name>AdditionalFillingSettings</name>
+          <id>294</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Object.AdditionalFillingSettings</segments>
+          </dataPath>
+          <titleLocation>None</titleLocation>
+          <excludedCommands>Change</excludedCommands>
+          <excludedCommands>Copy</excludedCommands>
+          <excludedCommands>CopyToClipboard</excludedCommands>
+          <items xsi:type="form:FormField">
+            <name>AdditionalFillingSettingsChange</name>
+            <id>310</id>
+            <title>
+              <key>en</key>
+              <value>Change</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Изменить</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Thay đổi</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Object.AdditionalFillingSettings.SettingValue</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>AdditionalFillingSettingsChangeExtendedTooltip</name>
+              <id>312</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>AdditionalFillingSettingsChangeContextMenu</name>
+              <id>311</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>EnterOnInput</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <handlers>
+                <event>ChoiceProcessing</event>
+                <name>ДополнительныеНастройкиЗаполненияИзменитьОбработкаВыбора</name>
+              </handlers>
+              <width>15</width>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <dropListButton>true</dropListButton>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+              <choiceList>
+                <presentation>
+                  <key>ru</key>
+                  <value>По четным числам</value>
+                </presentation>
+                <presentation>
+                  <key>vi</key>
+                  <value>Theo số chẵn</value>
+                </presentation>
+                <value xsi:type="core:StringValue">
+                  <value>По четным числам</value>
+                </value>
+              </choiceList>
+              <choiceList>
+                <presentation>
+                  <key>ru</key>
+                  <value>По нечетным числам</value>
+                </presentation>
+                <presentation>
+                  <key>vi</key>
+                  <value>Theo số lẻ</value>
+                </presentation>
+                <value xsi:type="core:StringValue">
+                  <value>По нечетным числам</value>
+                </value>
+              </choiceList>
+              <choiceList>
+                <presentation>
+                  <key>ru</key>
+                  <value>По субботам</value>
+                </presentation>
+                <presentation>
+                  <key>vi</key>
+                  <value>Vào các ngày thứ bảy</value>
+                </presentation>
+                <value xsi:type="core:StringValue">
+                  <value>По субботам</value>
+                </value>
+              </choiceList>
+              <choiceList>
+                <presentation>
+                  <key>ru</key>
+                  <value>По воскресеньям</value>
+                </presentation>
+                <presentation>
+                  <key>vi</key>
+                  <value>Vào những ngày chủ nhật</value>
+                </presentation>
+                <value xsi:type="core:StringValue">
+                  <value>По воскресеньям</value>
+                </value>
+              </choiceList>
+              <choiceList>
+                <presentation>
+                  <key>ru</key>
+                  <value>В праздники</value>
+                </presentation>
+                <presentation>
+                  <key>vi</key>
+                  <value>Vào ngày lễ</value>
+                </presentation>
+                <value xsi:type="core:StringValue">
+                  <value>В праздники</value>
+                </value>
+              </choiceList>
+              <choiceList>
+                <presentation>
+                  <key>ru</key>
+                  <value>В выходные (сб, вс, праздники)</value>
+                </presentation>
+                <presentation>
+                  <key>vi</key>
+                  <value>Vào cuối tuần (Thứ bảy, Chủ nhật, ngày lễ)</value>
+                </presentation>
+                <value xsi:type="core:StringValue">
+                  <value>В выходные</value>
+                </value>
+              </choiceList>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormGroup">
+            <name>AdditionalFillingSettingsGroupWorkDay</name>
+            <id>418</id>
+            <items xsi:type="form:FormField">
+              <name>AdditionalFillingSettingsBeginTime</name>
+              <id>420</id>
+              <title>
+                <key>en</key>
+                <value>Start</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Начало</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Bắt đầu</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <dataPath xsi:type="form:DataPath">
+                <segments>Object.AdditionalFillingSettings.BeginTime</segments>
+              </dataPath>
+              <handlers>
+                <event>OnChange</event>
+                <name>AdditionalFillingSettingsBeginTimeOnChange</name>
+              </handlers>
+              <extendedTooltip>
+                <name>AdditionalFillingSettingsBeginTimeExtendedTooltip</name>
+                <id>422</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>AdditionalFillingSettingsBeginTimeContextMenu</name>
+                <id>421</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>InputField</type>
+              <editMode>EnterOnInput</editMode>
+              <showInHeader>true</showInHeader>
+              <headerHorizontalAlign>Left</headerHorizontalAlign>
+              <showInFooter>true</showInFooter>
+              <extInfo xsi:type="form:InputFieldExtInfo">
+                <width>6</width>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <wrap>true</wrap>
+                <spinButton>true</spinButton>
+                <format>
+                  <key>ru</key>
+                  <value>ДФ=HH:mm</value>
+                </format>
+                <format>
+                  <key>vi</key>
+                  <value>DF=HH:mm</value>
+                </format>
+                <editFormat>
+                  <key>ru</key>
+                  <value>ДФ=HH:mm</value>
+                </editFormat>
+                <editFormat>
+                  <key>vi</key>
+                  <value>DF=HH:mm</value>
+                </editFormat>
+                <autoMarkIncomplete>false</autoMarkIncomplete>
+                <chooseType>true</chooseType>
+                <typeDomainEnabled>true</typeDomainEnabled>
+                <textEdit>true</textEdit>
+              </extInfo>
+            </items>
+            <items xsi:type="form:FormField">
+              <name>AdditionalFillingSettingsEndTime</name>
+              <id>423</id>
+              <title>
+                <key>en</key>
+                <value>Finish</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Окончание</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Kết thúc</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <dataPath xsi:type="form:DataPath">
+                <segments>Object.AdditionalFillingSettings.EndTime</segments>
+              </dataPath>
+              <handlers>
+                <event>OnChange</event>
+                <name>AdditionalFillingSettingsEndTimeOnChange</name>
+              </handlers>
+              <extendedTooltip>
+                <name>AdditionalFillingSettingsEndTimeExtendedTooltip</name>
+                <id>425</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>AdditionalFillingSettingsEndTimeContextMenu</name>
+                <id>424</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>InputField</type>
+              <editMode>EnterOnInput</editMode>
+              <showInHeader>true</showInHeader>
+              <headerHorizontalAlign>Left</headerHorizontalAlign>
+              <showInFooter>true</showInFooter>
+              <extInfo xsi:type="form:InputFieldExtInfo">
+                <width>6</width>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <wrap>true</wrap>
+                <spinButton>true</spinButton>
+                <format>
+                  <key>ru</key>
+                  <value>ДФ=HH:mm</value>
+                </format>
+                <format>
+                  <key>vi</key>
+                  <value>DF=HH:mm</value>
+                </format>
+                <editFormat>
+                  <key>ru</key>
+                  <value>ДФ=HH:mm</value>
+                </editFormat>
+                <editFormat>
+                  <key>vi</key>
+                  <value>DF=HH:mm</value>
+                </editFormat>
+                <autoMarkIncomplete>false</autoMarkIncomplete>
+                <chooseType>true</chooseType>
+                <typeDomainEnabled>true</typeDomainEnabled>
+                <textEdit>true</textEdit>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>en</key>
+              <value>Work day</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Рабочий день</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Ngày làm việc</value>
+            </title>
+            <toolTip>
+              <key>en</key>
+              <value>Additional filling settings group work day</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Дополнительные настройки заполнения группа рабочий день</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Cài đặt bổ sung điền nhóm ngày làm việc</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>AdditionalFillingSettingsGroupWorkDayExtendedTooltip</name>
+              <id>419</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>ColumnGroup</type>
+            <extInfo xsi:type="form:ColumnGroupExtInfo">
+              <showTitle>true</showTitle>
+              <showInHeader>true</showInHeader>
+              <headerHorizontalAlign>Center</headerHorizontalAlign>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>AdditionalFillingSettingsWorkHoursQuantity</name>
+            <id>426</id>
+            <title>
+              <key>en</key>
+              <value>Work hours</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Часов работы</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Giờ công làm việc</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Object.AdditionalFillingSettings.WorkHoursQuantity</segments>
+            </dataPath>
+            <handlers>
+              <event>OnChange</event>
+              <name>AdditionalFillingSettingsWorkHoursQuantityOnChange</name>
+            </handlers>
+            <extendedTooltip>
+              <name>AdditionalFillingSettingsWorkHoursQuantityExtendedTooltip</name>
+              <id>428</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>AdditionalFillingSettingsWorkHoursQuantityContextMenu</name>
+              <id>427</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>EnterOnInput</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <spinButton>true</spinButton>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>AdditionalFillingSettingsSchedule</name>
+            <id>313</id>
+            <title>
+              <key>en</key>
+              <value>Break hours</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Часов перерывов</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Giờ giải lao</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>Object.AdditionalFillingSettings.ЧасовПерерывовПредставление</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>AdditionalFillingSettingsScheduleExtendedTooltip</name>
+              <id>315</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>AdditionalFillingSettingsScheduleContextMenu</name>
+              <id>314</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>EnterOnInput</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <handlers>
+                <event>StartChoice</event>
+                <name>ДополнительныеНастройкиЗаполненияРасписаниеНачалоВыбора</name>
+              </handlers>
+              <width>20</width>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <choiceButton>true</choiceButton>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+            </extInfo>
+          </items>
+          <autoCommandBar>
+            <name>AdditionalFillingSettingsCommandBar</name>
+            <id>296</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <horizontalAlign>Left</horizontalAlign>
+            <autoFill>true</autoFill>
+          </autoCommandBar>
+          <handlers>
+            <event>BeforeDeleteRow</event>
+            <name>AdditionalFillingSettingsBeforeDeleteRow</name>
+          </handlers>
+          <handlers>
+            <event>BeforeRowChange</event>
+            <name>AdditionalFillingSettingsBeforeRowChange</name>
+          </handlers>
+          <handlers>
+            <event>OnStartEdit</event>
+            <name>AdditionalFillingSettingsOnStartEdit</name>
+          </handlers>
+          <handlers>
+            <event>AfterDeleteRow</event>
+            <name>AdditionalFillingSettingsAfterDeleteRow</name>
+          </handlers>
+          <handlers>
+            <event>OnChange</event>
+            <name>AdditionalFillingSettingsOnChange</name>
+          </handlers>
+          <searchStringAddition>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <name>AdditionalFillingSettingsSearchString</name>
+            <id>298</id>
+            <extendedTooltip>
+              <name>AdditionalFillingSettingsSearchStringExtendedTooltip</name>
+              <id>300</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>AdditionalFillingSettingsSearchStringContextMenu</name>
+              <id>299</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <source>AdditionalFillingSettingsSearchString</source>
+            <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+            </extInfo>
+          </searchStringAddition>
+          <viewStatusAddition>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <name>AdditionalFillingSettingsViewStatus</name>
+            <id>301</id>
+            <extendedTooltip>
+              <name>AdditionalFillingSettingsViewStatusExtendedTooltip</name>
+              <id>303</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>AdditionalFillingSettingsViewStatusContextMenu</name>
+              <id>302</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>ViewStatusAddition</type>
+            <source>AdditionalFillingSettingsViewStatus</source>
+            <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+            </extInfo>
+          </viewStatusAddition>
+          <searchControlAddition>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <name>AdditionalFillingSettingsSearchControl</name>
+            <id>304</id>
+            <extendedTooltip>
+              <name>AdditionalFillingSettingsSearchControlExtendedTooltip</name>
+              <id>306</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>AdditionalFillingSettingsSearchControlContextMenu</name>
+              <id>305</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>SearchControlAddition</type>
+            <source>AdditionalFillingSettingsSearchControl</source>
+            <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+            </extInfo>
+          </searchControlAddition>
+          <extendedTooltip>
+            <name>AdditionalFillingSettingsExtendedTooltip</name>
+            <id>297</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>AdditionalFillingSettingsContextMenu</name>
+            <id>295</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <representation>HierarchicalList</representation>
+          <changeRowSet>true</changeRowSet>
+          <changeRowOrder>true</changeRowOrder>
+          <width>67</width>
+          <maxWidth>67</maxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <heightInTableRows>3</heightInTableRows>
+          <selectionMode>MultiRow</selectionMode>
+          <header>true</header>
+          <headerHeight>1</headerHeight>
+          <footerHeight>1</footerHeight>
+          <horizontalScrollBar>AutoUse</horizontalScrollBar>
+          <verticalScrollBar>AutoUse</verticalScrollBar>
+          <horizontalLines>true</horizontalLines>
+          <verticalLines>true</verticalLines>
+          <autoAddIncomplete>false</autoAddIncomplete>
+          <searchOnInput>Auto</searchOnInput>
+          <initialListView>Auto</initialListView>
+          <horizontalStretch>true</horizontalStretch>
+          <enableStartDrag>true</enableStartDrag>
+          <enableDrag>true</enableDrag>
+          <rowFilter xsi:type="core:UndefinedValue"/>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>NotValid</name>
+          <id>413</id>
+          <title>
+            <key>en</key>
+            <value>Not valid</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Недействителен</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Không có hiệu lực</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Object.NotValid</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>NotValidExtendedTooltip</name>
+            <id>415</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>NotValidContextMenu</name>
+            <id>414</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>CheckBoxField</type>
+          <groupHorizontalAlign>Right</groupHorizontalAlign>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Дополнительно</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Bổ sung</value>
+        </title>
+        <width>67</width>
+        <horizontalStretch>false</horizontalStretch>
+        <extendedTooltip>
+          <name>GroupAdditionalSettingsExtendedTooltip</name>
+          <id>241</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <groupHorizontalAlign>Left</groupHorizontalAlign>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>Vertical</group>
+          <collapsed>true</collapsed>
+          <controlRepresentation>Picture</controlRepresentation>
+          <representation>WeakSeparation</representation>
+          <united>true</united>
+          <showTitle>true</showTitle>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>ru</key>
+        <value>Расписание работы общая группа</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Lịch trình nhóm chung</value>
+      </title>
+      <toolTip>
+        <key>ru</key>
+        <value>Расписание работы общая группа</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Lịch trình nhóm chung</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>РасписаниеРаботыОбщаяГруппаExtendedTooltip</name>
+        <id>108</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
+        <representation>WeakSeparation</representation>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>ru</key>
+      <value>Таблицы формы группа</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Bảng mẫu nhóm</value>
+    </title>
+    <toolTip>
+      <key>ru</key>
+      <value>Таблицы формы группа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Bảng mẫu nhóm</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>ТаблицыФормыГруппаExtendedTooltip</name>
+      <id>107</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <commandBarLocation>Top</commandBarLocation>
+  <autoCommandBar>
+    <name>FormCommandBar</name>
+    <id>-1</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
+  </autoCommandBar>
+  <handlers>
+    <event>OnOpen</event>
+    <name>OnOpen</name>
+  </handlers>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>OnCreateAtServer</name>
+  </handlers>
+  <excludedCommands>Abort</excludedCommands>
+  <excludedCommands>Cancel</excludedCommands>
+  <excludedCommands>Close</excludedCommands>
+  <excludedCommands>CustomizeForm</excludedCommands>
+  <excludedCommands>Delete</excludedCommands>
+  <excludedCommands>Ignore</excludedCommands>
+  <excludedCommands>No</excludedCommands>
+  <excludedCommands>OK</excludedCommands>
+  <excludedCommands>RestoreValues</excludedCommands>
+  <excludedCommands>Retry</excludedCommands>
+  <excludedCommands>SaveValues</excludedCommands>
+  <excludedCommands>Yes</excludedCommands>
+  <autoTitle>true</autoTitle>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <allowFormCustomize>true</allowFormCustomize>
+  <enabled>true</enabled>
+  <verticalScroll>UseIfNecessary</verticalScroll>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>FillMethod</name>
+    <title>
+      <key>ru</key>
+      <value>Способ заполнения</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Phương thức điền</value>
+    </title>
+    <id>1</id>
+    <valueType>
+      <types>EnumRef.WorkScheduleFillingMethods</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>Object</name>
+    <title>
+      <key>ru</key>
+      <value>Объект</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Đối tượng</value>
+    </title>
+    <id>29</id>
+    <valueType>
+      <types>CatalogObject.WorkTimeGraphsTemplates</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <main>true</main>
+    <additionalColumns>
+      <tablePath xsi:type="form:DataPath">
+        <segments>Object.WorkSchedule</segments>
+      </tablePath>
+      <columns>
+        <name>НомерДняПредставление</name>
+        <id>1</id>
+        <valueType>
+          <types>String</types>
+          <stringQualifiers>
+            <length>5</length>
+          </stringQualifiers>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+      <columns>
+        <name>ЗаполненПериодРабочегоДня</name>
+        <title>
+          <key>ru</key>
+          <value>Заполнен период рабочего дня</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Điền ngày làm việc</value>
+        </title>
+        <id>2</id>
+        <valueType>
+          <types>Boolean</types>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+      <columns>
+        <name>ЗаполненПериодПерерывов</name>
+        <title>
+          <key>ru</key>
+          <value>Заполнен период перерывов</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Điền thời gian nghỉ</value>
+        </title>
+        <id>3</id>
+        <valueType>
+          <types>Boolean</types>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+      <columns>
+        <name>ЧасовПерерывовПредставление</name>
+        <title>
+          <key>ru</key>
+          <value>Часов перерывов представление</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Giờ nghỉ giải lao</value>
+        </title>
+        <id>4</id>
+        <valueType>
+          <types>String</types>
+          <stringQualifiers/>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+      <columns>
+        <name>ОшибкаПериода</name>
+        <title>
+          <key>ru</key>
+          <value>Ошибка периода</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Lỗi thời gian</value>
+        </title>
+        <id>5</id>
+        <valueType>
+          <types>Boolean</types>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+    </additionalColumns>
+    <additionalColumns>
+      <tablePath xsi:type="form:DataPath">
+        <segments>Object.AdditionalFillingSettings</segments>
+      </tablePath>
+      <columns>
+        <name>ЧасовПерерывовПредставление</name>
+        <title>
+          <key>ru</key>
+          <value>Часов перерывов представление</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Giờ nghỉ giải lao</value>
+        </title>
+        <id>1</id>
+        <valueType>
+          <types>String</types>
+          <stringQualifiers/>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+      <columns>
+        <name>ОшибкаПериода</name>
+        <title>
+          <key>ru</key>
+          <value>Ошибка периода</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Lỗi thời gian</value>
+        </title>
+        <id>2</id>
+        <valueType>
+          <types>Boolean</types>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+      <columns>
+        <name>ЗаполненПериодРабочегоДня</name>
+        <title>
+          <key>ru</key>
+          <value>Заполнен период рабочего дня</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Điền ngày làm việc</value>
+        </title>
+        <id>3</id>
+        <valueType>
+          <types>Boolean</types>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+      <columns>
+        <name>ЗаполненПериодПерерывов</name>
+        <title>
+          <key>ru</key>
+          <value>Заполнен период перерывов</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Điền thời gian nghỉ</value>
+        </title>
+        <id>4</id>
+        <valueType>
+          <types>Boolean</types>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+    </additionalColumns>
+  </attributes>
+  <attributes>
+    <name>DayBreaks</name>
+    <title>
+      <key>en</key>
+      <value>Day Breaks</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Перерывы по дню</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Nghỉ đến ngày</value>
+    </title>
+    <id>30</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>BeginTime</name>
+      <title>
+        <key>ru</key>
+        <value>Время начала</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Thời gian bắt đầu</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Time</dateFractions>
+        </dateQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>EndTime</name>
+      <title>
+        <key>ru</key>
+        <value>Время окончания</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Thời gian kết thúc</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Time</dateFractions>
+        </dateQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Duration</name>
+      <title>
+        <key>ru</key>
+        <value>Длительность</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Thời lượng</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>4</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>LineNumber</name>
+      <title>
+        <key>ru</key>
+        <value>Номер строки</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Thứ tự dòng</value>
+      </title>
+      <id>4</id>
+      <valueType>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>DayBreaksAddSettings</name>
+    <title>
+      <key>en</key>
+      <value>Day Breaks Additional Settings</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Перерывы по дню</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Nghỉ đến ngày</value>
+    </title>
+    <id>31</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>BeginTime</name>
+      <title>
+        <key>ru</key>
+        <value>Время начала</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Thời gian bắt đầu</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Time</dateFractions>
+        </dateQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>EndTime</name>
+      <title>
+        <key>ru</key>
+        <value>Время окончания</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Thời gian kết thúc</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Time</dateFractions>
+        </dateQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Duration</name>
+      <title>
+        <key>ru</key>
+        <value>Длительность</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Thời lượng</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>4</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>SettingValue</name>
+      <title>
+        <key>ru</key>
+        <value>Значение настройки</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Giá trị cài đặt</value>
+      </title>
+      <id>4</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>50</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>LineNumber</name>
+      <title>
+        <key>ru</key>
+        <value>Номер строки</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Thứ tự dòng</value>
+      </title>
+      <id>5</id>
+      <valueType>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>ScheduleChanged</name>
+    <title>
+      <key>en</key>
+      <value>Schedule Changed</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Было изменение расписания</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Có một sự thay đổi lịch trình</value>
+    </title>
+    <id>32</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <formCommands>
+    <name>РасписаниеДобавитьРабочийДень</name>
+    <title>
+      <key>en</key>
+      <value>Schedule add working day</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Расписание добавить рабочий день</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Lịch trình thêm ngày làm việc</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Расписание добавить рабочий день</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Lịch trình thêm ngày làm việc</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>РасписаниеДобавитьРабочийДень</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>РасписаниеДобавитьНеРабочийДень</name>
+    <title>
+      <key>en</key>
+      <value>Schedule add not working day</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Расписание добавить не рабочий день</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Lịch trình thêm ngày không làm việc</value>
+    </title>
+    <id>2</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Расписание добавить не рабочий день</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Lịch trình thêm ngày không làm việc</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>РасписаниеДобавитьНеРабочийДень</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>СкопироватьСтрокиРасписания</name>
+    <title>
+      <key>en</key>
+      <value>Copy schedule rows</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Скопировать строки расписания</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Sao chép dòng lịch trình</value>
+    </title>
+    <id>3</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Скопировать строки расписания</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Sao chép dòng lịch trình</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>СкопироватьСтрокиРасписания</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ЗаполнитьТекущим</name>
+    <title>
+      <key>en</key>
+      <value>Fill by current</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Заполнить текущим</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Điền hiện tại</value>
+    </title>
+    <id>4</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Заполнить текущим</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Điền hiện tại</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ЗаполнитьТекущим</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ОчиститьРасипасние</name>
+    <title>
+      <key>en</key>
+      <value>Clean schedule</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Очистить расипасние</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Xóa lịch trình</value>
+    </title>
+    <id>5</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Очистить расипасние</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Xóa lịch trình</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.InputFieldClear</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ОчиститьРасипасние</name>
+      </handler>
+    </action>
+    <representation>TextPicture</representation>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+  <extInfo xsi:type="form:CatalogFormExtInfo">
+    <handlers>
+      <event>AfterWrite</event>
+      <name>AfterWrite</name>
+    </handlers>
+    <handlers>
+      <event>BeforeWrite</event>
+      <name>BeforeWrite</name>
+    </handlers>
+  </extInfo>
+</form:Form>

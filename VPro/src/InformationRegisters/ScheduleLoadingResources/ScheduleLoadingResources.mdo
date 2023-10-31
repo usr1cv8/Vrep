@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c34d5785-6f04-45c7-9555-088544ddc489">
+  <producedTypes>
+    <selectionType typeId="400a431f-7f5c-4bd0-8ac5-56cb88832640" valueTypeId="01bba783-6311-4e2d-b0ff-5d2e44d293be"/>
+    <listType typeId="c94dbf4c-0178-46e1-9a96-61564216e0c6" valueTypeId="e12f48b5-9e60-4004-b9b2-c487aa68f4f4"/>
+    <managerType typeId="bf07866b-1b98-4501-b14b-e67a6f73c09a" valueTypeId="4044add4-d280-486d-8f3f-c316d0820638"/>
+    <recordSetType typeId="6834ee53-d8aa-4f34-8e96-6d226940e79e" valueTypeId="c4debd98-0376-40d7-a13e-cc4f0f21a8bd"/>
+    <recordKeyType typeId="b5e1ba69-21d0-4d89-8834-b9ef7e0c091e" valueTypeId="89c8d6c5-99d2-46ae-a8af-1b63bc0d4860"/>
+    <recordType typeId="5baef429-1f42-4f75-8b2f-288cc3a02e0f" valueTypeId="62caa32b-0ff6-4719-85b7-1945bb85fe00"/>
+    <recordManagerType typeId="a0a5f177-a457-4c5b-b123-5d0d175a1323" valueTypeId="bb5c9b84-8e63-4957-9375-9533c665b53c"/>
+  </producedTypes>
+  <name>ScheduleLoadingResources</name>
+  <synonym>
+    <key>en</key>
+    <value>Resource loading schedule</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Расписание загрузки ресурсов</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Lịch tải nguồn lực</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <listPresentation>
+    <key>en</key>
+    <value>Resource loading schedule</value>
+  </listPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Расписание загрузки ресурсов</value>
+  </listPresentation>
+  <listPresentation>
+    <key>vi</key>
+    <value>Lịch tải nguồn lực</value>
+  </listPresentation>
+  <resources uuid="709ba1ee-c392-42ad-afa0-72deb98d83f0">
+    <name>Capacity</name>
+    <synonym>
+      <key>ru</key>
+      <value>Мощность</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Công suất</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="ac844cf6-cd3f-4542-a711-e6a891b60c5f">
+    <name>Counterparty</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đối tác</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Counterparties</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="2b203f2a-6c08-48c7-ad6d-d151e6abc914">
+    <name>Department</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Bộ phận</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.StructuralUnits</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="0333d151-396d-4ce3-9ef7-9feb37d19e3a">
+    <name>Responsible</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Chịu trách nhiệm</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Employees</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="23f1b498-f339-41c7-a142-d2fc8f0029b3">
+    <name>EnterpriseResource</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ресурс предприятия</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Nguồn lực của doanh nghiệp</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.KeyResources</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="ae50616d-a606-4e0a-b209-65cffb32962d">
+    <name>Start</name>
+    <synonym>
+      <key>ru</key>
+      <value>Старт</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Bắt đầu</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="9f33b8ca-827a-434d-8441-165656b79ab0">
+    <name>Finish</name>
+    <synonym>
+      <key>ru</key>
+      <value>Финиш</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Kết thúc</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="9852d238-b149-4520-9745-75b0234529c8">
+    <name>NumberRowResourceTable</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер строки таблицы ресурсов</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Bảng số tài nguyên</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="1f11906c-8344-4f59-ba28-15f016bb3d8f">
+    <name>Document</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Chứng từ giao hàng</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.CustomerOrder</types>
+      <types>DocumentRef.ProductionOrder</types>
+      <types>DocumentRef.Event</types>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

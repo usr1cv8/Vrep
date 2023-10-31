@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="313f452a-a2ec-42b6-acb2-48246e6d3c1b">
+  <producedTypes>
+    <selectionType typeId="70cb8d87-4284-4523-81d4-f9137cb82d96" valueTypeId="60b4cb57-d5b5-4a70-a00f-dd93ae90940a"/>
+    <listType typeId="40530c61-c1c7-42af-8e6c-9e48117d86e4" valueTypeId="5161a1c9-0149-42af-8f06-446ffbaace32"/>
+    <managerType typeId="353a39fb-ea56-423a-abae-883c143cfe03" valueTypeId="b7bb0afa-2649-43a0-ad7c-45d141b335f7"/>
+    <recordSetType typeId="f83952e0-875f-4d26-b672-2e465e1ce5ce" valueTypeId="855276c7-d393-4f73-8f43-56e38d476726"/>
+    <recordKeyType typeId="ae4d78a5-0c67-4099-8c34-2dfa930274e2" valueTypeId="f2723620-43fa-4b9b-ba3d-7c68185ea25e"/>
+    <recordType typeId="c3e42d89-2dcc-4230-8e26-6f67900721d9" valueTypeId="bc41a1c7-1bbc-4191-9d69-f54e40ba0ba1"/>
+    <recordManagerType typeId="1fdc9e16-da09-4b12-9709-7824e6e79c04" valueTypeId="3bb039cb-921c-4187-8be2-8203dc640b56"/>
+  </producedTypes>
+  <name>EnterpriseResourcesKinds</name>
+  <synonym>
+    <key>en</key>
+    <value>Company resource kinds</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Виды ресурсов предприятия</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Dạng nguồn lực trong doanh nghiệp</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.EnterpriseResourcesKinds.Form.RecordForm</defaultRecordForm>
+  <defaultListForm>InformationRegister.EnterpriseResourcesKinds.Form.ListForm</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>en</key>
+    <value>Resource kind content</value>
+  </recordPresentation>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Состав вида ресурсов</value>
+  </recordPresentation>
+  <recordPresentation>
+    <key>vi</key>
+    <value>Thành phần dạng nguồn lực</value>
+  </recordPresentation>
+  <dimensions uuid="c435622b-9b9d-488f-b29c-0bb3b0838385">
+    <name>EnterpriseResourceKind</name>
+    <synonym>
+      <key>en</key>
+      <value>Company resource kind</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Вид ресурса предприятия</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Dạng nguồn lực trong doanh nghiệp</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.EnterpriseResourcesKinds</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.EnterpriseResourcesKinds.EmptyRef</value>
+    </fillValue>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="e4b7665d-4b42-40f3-8893-fb91fd3f08cd">
+    <name>EnterpriseResource</name>
+    <synonym>
+      <key>en</key>
+      <value>Company resource</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Ресурс предприятия</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Nguồn lực của doanh nghiệp</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.KeyResources</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="07cf95c6-5dfa-4430-a33e-c35c69ca6407">
+    <name>RecordForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Entry form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu bản ghi</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="ace74437-a5fb-4c03-b07d-2fcdf8304977">
+    <name>ListForm</name>
+    <synonym>
+      <key>en</key>
+      <value>List form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu danh sách</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="ea5e2417-dc16-471b-92bc-f343a1474030">
+    <name>FormForResources</name>
+    <synonym>
+      <key>en</key>
+      <value>Form for resources</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма для ресурсов</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu cho nguồn lực</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

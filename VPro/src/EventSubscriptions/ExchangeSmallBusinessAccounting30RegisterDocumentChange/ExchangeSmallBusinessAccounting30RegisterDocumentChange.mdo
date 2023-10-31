@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bf0698bc-e165-4d38-814a-73c8b4dd6f2d">
+  <name>ExchangeSmallBusinessAccounting30RegisterDocumentChange</name>
+  <synonym>
+    <key>en</key>
+    <value>Data exchange between Small Business - Enterprise Accounting 3.0&quot;. Before you write the document.</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Trao đổi dữ liệu giữa Quản lý doanh nghiệp - Kế toán doanh nghiệp 3.0&quot;. Trước khi Bạn ghi chứng từ.</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.SubcontractorReport</types>
+    <types>DocumentObject.InvoiceForPayment</types>
+    <types>DocumentObject.PaymentExpense</types>
+    <types>DocumentObject.CashTransfer</types>
+    <types>DocumentObject.ProcessingReport</types>
+    <types>DocumentObject.AdditionalCosts</types>
+    <types>DocumentObject.CashPayment</types>
+    <types>DocumentObject.ExpenseReport</types>
+    <types>DocumentObject.PaymentOrder</types>
+    <types>DocumentObject.InventoryReceipt</types>
+    <types>DocumentObject.CustomerOrder</types>
+    <types>DocumentObject.InventoryTransfer</types>
+    <types>DocumentObject.AgentReport</types>
+    <types>DocumentObject.Netting</types>
+    <types>DocumentObject.ExpensesOnImport</types>
+    <types>DocumentObject.RetailReport</types>
+    <types>DocumentObject.RetailRevaluation</types>
+    <types>DocumentObject.CostAllocation</types>
+    <types>DocumentObject.ReportToPrincipal</types>
+    <types>DocumentObject.SupplierInvoice</types>
+    <types>DocumentObject.InventoryAssembly</types>
+    <types>DocumentObject.CustomerInvoice</types>
+    <types>DocumentObject.AcceptanceCertificate</types>
+    <types>DocumentObject.InventoryWriteOff</types>
+    <types>DocumentObject.PaymentReceipt</types>
+    <types>DocumentObject.CashReceipt</types>
+    <types>DocumentObject.InventoryReconciliation</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.DataExchangeEventsBP.ExchangeSmallBusinessAccounting30BeforeWriteDocument</handler>
+</mdclass:EventSubscription>

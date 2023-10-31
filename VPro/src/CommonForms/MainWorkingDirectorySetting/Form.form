@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <title>
+    <key>en</key>
+    <value>Set up main working directory</value>
+  </title>
+  <title>
+    <key>ru</key>
+    <value>Настройка основного рабочего каталога</value>
+  </title>
+  <title>
+    <key>vi</key>
+    <value>Tùy chỉnh thư mục làm việc chính</value>
+  </title>
+  <items xsi:type="form:FormGroup">
+    <name>GroupLocation</name>
+    <id>26</id>
+    <items xsi:type="form:FormField">
+      <name>UserWorkingDirectory</name>
+      <id>4</id>
+      <title>
+        <key>en</key>
+        <value>Location</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Location</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Cục bộ</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>UserWorkingDirectory</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>UsersWorkingDirectoryExtendedTooltip</name>
+        <id>31</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>UsersWorkingDirectoryContextMenu</name>
+        <id>5</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>InputField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <footerHorizontalAlign>Left</footerHorizontalAlign>
+      <extInfo xsi:type="form:InputFieldExtInfo">
+        <handlers>
+          <event>StartChoice</event>
+          <name>UserWorkingDirectoryStartChoice</name>
+        </handlers>
+        <width>48</width>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <choiceButton>true</choiceButton>
+        <chooseType>true</chooseType>
+        <typeDomainEnabled>true</typeDomainEnabled>
+        <borderColor xsi:type="core:ColorRef">
+          <color>Style.BorderColor</color>
+        </borderColor>
+      </extInfo>
+    </items>
+    <items xsi:type="form:Button">
+      <name>PathToWorkingDirectoryByDefault</name>
+      <id>27</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <skipOnInput>false</skipOnInput>
+      <extendedTooltip>
+        <name>PathToWorkingDirectoryDefaultExtendedTooltip</name>
+        <id>32</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualButton</type>
+      <commandName>Form.Command.PathToWorkingDirectoryByDefault</commandName>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <toolTip>
+      <key>en</key>
+      <value>Location group</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа расположение</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nhóm vị trí</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>GroupLocationExtendedTooltip</name>
+      <id>30</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormField">
+    <name>LocalFilesCacheMaximumSize</name>
+    <id>2</id>
+    <title>
+      <key>en</key>
+      <value>Max size (MB)</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Максимальный размер (Мб)</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Dung lượng tối đa (Mb)</value>
+    </title>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>LocalFilesCacheMaximumSize</segments>
+    </dataPath>
+    <handlers>
+      <event>OnChange</event>
+      <name>LocalFilesCacheMaximumSizeOnChange</name>
+    </handlers>
+    <extendedTooltip>
+      <name>MaximumSizeOfLocalCacheFilesExtendedTooltip</name>
+      <id>33</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>MaximumSizeOfLocalCacheFilesContextMenu</name>
+      <id>3</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>InputField</type>
+    <editMode>Enter</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <footerHorizontalAlign>Left</footerHorizontalAlign>
+    <extInfo xsi:type="form:InputFieldExtInfo">
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <chooseType>true</chooseType>
+      <typeDomainEnabled>true</typeDomainEnabled>
+      <textEdit>true</textEdit>
+      <borderColor xsi:type="core:ColorRef">
+        <color>Style.BorderColor</color>
+      </borderColor>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormField">
+    <name>ConfirmWhenDeletingFromLocalFilesCache</name>
+    <id>24</id>
+    <title>
+      <key>en</key>
+      <value>Confirm on deleting from the main working directory</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Подтверждать при удалении из основного рабочего каталога</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Xác nhận khi xóa từ thư mục làm việc chính</value>
+    </title>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>ConfirmWhenDeletingFromLocalFilesCache</segments>
+    </dataPath>
+    <titleLocation>Right</titleLocation>
+    <handlers>
+      <event>OnChange</event>
+      <name>ConfirmWhenDeletingFilesFormLocalCacheOnChange</name>
+    </handlers>
+    <extendedTooltip>
+      <name>ConfirmWhenDeletingFromLocalCacheOfFilesExtendedTooltip</name>
+      <id>34</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>ConfirmWhenDeletingFromLocalCacheOfFilesContextMenu</name>
+      <id>25</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>CheckBoxField</type>
+    <editMode>Enter</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+  </items>
+  <items xsi:type="form:FormField">
+    <name>DeleteFileFromFilesLocalCacheOnEditEnd</name>
+    <id>16</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>DeleteFileFromFilesLocalCacheOnEditEnd</segments>
+    </dataPath>
+    <titleLocation>Right</titleLocation>
+    <handlers>
+      <event>OnChange</event>
+      <name>DeleteFileFromFilesLocalCacheOnEditEndOnChange</name>
+    </handlers>
+    <extendedTooltip>
+      <name>DeleteFileFromLocalCacheFilesOnCompleteEditingExtendedTooltip</name>
+      <id>35</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>DeleteFileFromLocalCacheFilesOnCompleteEditingContextMenu</name>
+      <id>17</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>CheckBoxField</type>
+    <editMode>Enter</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>NowAtLocalFilesCache</name>
+    <id>18</id>
+    <items xsi:type="form:FormField">
+      <name>QuantitySummary</name>
+      <id>11</id>
+      <title>
+        <key>en</key>
+        <value>Files</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Файлы</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Tệp</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>QuantitySummary</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>QuantitySummaryExtendedTooltip</name>
+        <id>37</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>QuantitySummaryContextMenu</name>
+        <id>12</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>InputField</type>
+      <readOnly>true</readOnly>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <footerHorizontalAlign>Left</footerHorizontalAlign>
+      <extInfo xsi:type="form:InputFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <chooseType>true</chooseType>
+        <typeDomainEnabled>true</typeDomainEnabled>
+        <textEdit>true</textEdit>
+        <borderColor xsi:type="core:ColorRef">
+          <color>Style.BorderColor</color>
+        </borderColor>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>FilesSizeInWorkingDirectory</name>
+      <id>9</id>
+      <title>
+        <key>en</key>
+        <value>Total space (MB)</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Общий объем (Мб)</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Tổng dung lượng (Mb)</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>FilesSizeInWorkingDirectory</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>FilesSizeInWorkingDirectoryExtendedTooltip</name>
+        <id>38</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>FilesSizeInWorkingDirectoryContextMenu</name>
+        <id>10</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>InputField</type>
+      <readOnly>true</readOnly>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <footerHorizontalAlign>Left</footerHorizontalAlign>
+      <extInfo xsi:type="form:InputFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <chooseType>true</chooseType>
+        <typeDomainEnabled>true</typeDomainEnabled>
+        <textEdit>true</textEdit>
+        <borderColor xsi:type="core:ColorRef">
+          <color>Style.BorderColor</color>
+        </borderColor>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Current state:</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Текущее состояние:</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Trạng thái hiện tại:</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Current state:</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Текущее состояние:</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Trạng thái hiện tại:</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>NowAtLocalFilesCacheExtendedTooltip</name>
+      <id>36</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <representation>NormalSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <showTitle>true</showTitle>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:Button">
+    <name>FileList</name>
+    <id>14</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <skipOnInput>false</skipOnInput>
+    <extendedTooltip>
+      <name>FileListExtendedTooltip</name>
+      <id>39</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualButton</type>
+    <commandName>Form.Command.FileList</commandName>
+    <representation>Auto</representation>
+    <autoMaxWidth>true</autoMaxWidth>
+    <autoMaxHeight>true</autoMaxHeight>
+    <placementArea>UserCmds</placementArea>
+    <textColor xsi:type="core:ColorRef">
+      <color>Style.ButtonTextColor</color>
+    </textColor>
+    <backColor xsi:type="core:ColorRef">
+      <color>Style.ButtonBackColor</color>
+    </backColor>
+    <borderColor xsi:type="core:ColorRef">
+      <color>Style.BorderColor</color>
+    </borderColor>
+    <representationInContextMenu>Auto</representationInContextMenu>
+  </items>
+  <items xsi:type="form:Button">
+    <name>ClearWorkingDirectory</name>
+    <id>13</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <skipOnInput>false</skipOnInput>
+    <extendedTooltip>
+      <name>ClearWorkingDirectoryExtendedTooltip</name>
+      <id>40</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualButton</type>
+    <commandName>Form.Command.ClearLocalFilesCache</commandName>
+    <representation>Auto</representation>
+    <autoMaxWidth>true</autoMaxWidth>
+    <autoMaxHeight>true</autoMaxHeight>
+    <placementArea>UserCmds</placementArea>
+    <textColor xsi:type="core:ColorRef">
+      <color>Style.ButtonTextColor</color>
+    </textColor>
+    <backColor xsi:type="core:ColorRef">
+      <color>Style.ButtonBackColor</color>
+    </backColor>
+    <borderColor xsi:type="core:ColorRef">
+      <color>Style.BorderColor</color>
+    </borderColor>
+    <representationInContextMenu>Auto</representationInContextMenu>
+  </items>
+  <commandBarLocation>Bottom</commandBarLocation>
+  <autoCommandBar>
+    <name>FormCommandBar</name>
+    <id>-1</id>
+    <items xsi:type="form:Button">
+      <name>Close</name>
+      <id>21</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <skipOnInput>false</skipOnInput>
+      <extendedTooltip>
+        <name>CloseExtendedTooltip</name>
+        <id>28</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.StandardCommand.Close</commandName>
+      <defaultButton>true</defaultButton>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <horizontalAlign>Right</horizontalAlign>
+    <autoFill>true</autoFill>
+  </autoCommandBar>
+  <handlers>
+    <event>OnOpen</event>
+    <name>OnOpen</name>
+  </handlers>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>OnCreateAtServer</name>
+  </handlers>
+  <windowOpeningMode>LockOwnerWindow</windowOpeningMode>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <enabled>true</enabled>
+  <verticalScroll>UseIfNecessary</verticalScroll>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>LocalFilesCacheMaximumSize</name>
+    <title>
+      <key>en</key>
+      <value>Max size of local file cache</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Максимальный размер локального кэша файлов</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Dung lượng tối đa của kho chứa tệp cục bộ</value>
+    </title>
+    <id>1</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>UserWorkingDirectory</name>
+    <title>
+      <key>en</key>
+      <value>User working directory</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Рабочий каталог пользователя</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Thư mục làm việc của người sử dụng</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>FilesSizeInWorkingDirectory</name>
+    <title>
+      <key>en</key>
+      <value>Size</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Размер</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Dung lượng</value>
+    </title>
+    <id>3</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>QuantitySummary</name>
+    <title>
+      <key>en</key>
+      <value>Total number</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Количество суммарное</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Số lượng tổng</value>
+    </title>
+    <id>4</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>DeleteFileFromFilesLocalCacheOnEditEnd</name>
+    <title>
+      <key>en</key>
+      <value>Delete files on finishing editing</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Удалять файлы при завершении редактирования</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Xóa bỏ tệp khi kết thúc soạn</value>
+    </title>
+    <id>5</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ConfirmWhenDeletingFromLocalFilesCache</name>
+    <title>
+      <key>en</key>
+      <value>Confirm on deleting from the local file cache</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Подтверждать при удалении из локального кэша файлов</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Xác nhận </value>
+    </title>
+    <id>6</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <formCommands>
+    <name>ClearLocalFilesCache</name>
+    <title>
+      <key>en</key>
+      <value>Clear main working directory</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Очистить основной рабочий каталог</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Xóa thư mục làm việc chính</value>
+    </title>
+    <id>3</id>
+    <toolTip>
+      <key>en</key>
+      <value>Clear main working directory</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Очистить основной рабочий каталог</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Xóa thư mục làm việc chính</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ClearLocalFilesCache</name>
+      </handler>
+    </action>
+    <representation>Picture</representation>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>FileList</name>
+    <title>
+      <key>en</key>
+      <value>Open file list...</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Открыть список файлов...</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Mở danh sách tệp...</value>
+    </title>
+    <id>4</id>
+    <toolTip>
+      <key>en</key>
+      <value>File list</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Список файлов</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Danh sách tệp</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>FileListExecute</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>PathToWorkingDirectoryByDefault</name>
+    <title>
+      <key>en</key>
+      <value>Path to the default working directory</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Путь к рабочему каталогу по умолчанию</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Đường dẫn tới thư mục làm việc theo mặc định</value>
+    </title>
+    <id>2</id>
+    <toolTip>
+      <key>en</key>
+      <value>Restore default value</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Восстановить значение по умолчанию</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Phục hồi giá trị theo mặc định</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>CommonPicture.WorkingDirectoryByDefault</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>PathToWorkingDirectoryByDefault</name>
+      </handler>
+    </action>
+    <representation>Picture</representation>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+</form:Form>

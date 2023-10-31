@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6771e8e9-514a-440c-9556-1a741f96a42b">
+  <producedTypes>
+    <objectType typeId="898ad173-d30b-4b95-adc1-5b1d04392d3d" valueTypeId="7566799d-b6bc-47f3-95ed-8dc6e172436c"/>
+    <managerType typeId="983af41c-b7ad-4424-a397-c58f85d0a76e" valueTypeId="bcecd864-c9b7-478b-8b3b-da687f2b113a"/>
+  </producedTypes>
+  <name>PurchaseOrders</name>
+  <synonym>
+    <key>en</key>
+    <value>Purchase orders</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Заказы поставщикам</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Đơn hàng đặt nhà cung cấp</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <mainDataCompositionSchema>Report.PurchaseOrders.Template.MainDataCompositionSchema</mainDataCompositionSchema>
+  <variantsStorage>SettingsStorage.ReportsVariantsStorage</variantsStorage>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <forms uuid="cefb59c7-3114-4358-aa87-3bdfe4e9ac53">
+    <name>ReportForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Report form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu báo cáo</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="6ea26045-e5a8-4131-9c7e-5b87d07ad0a5">
+    <name>MainDataCompositionSchema</name>
+    <synonym>
+      <key>en</key>
+      <value>Main data composition schema</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Sơ đồ dàn dựng dữ liệu chính</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <commands uuid="03ceb330-e159-49bd-beea-121c967c1532">
+    <name>OrderAnalysis</name>
+    <synonym>
+      <key>en</key>
+      <value>Order analysis</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Анализ заказа</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Phân tích đơn hàng</value>
+    </synonym>
+    <group>FormNavigationPanelImportant</group>
+    <commandParameterType>
+      <types>DocumentRef.SupplierInvoice</types>
+      <types>DocumentRef.SubcontractorReport</types>
+    </commandParameterType>
+    <parameterUseMode>Multiple</parameterUseMode>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:Report>

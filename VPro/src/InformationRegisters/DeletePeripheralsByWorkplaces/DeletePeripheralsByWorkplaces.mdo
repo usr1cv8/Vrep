@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7fe1cb09-993f-44e1-bae8-4d406e318eca">
+  <producedTypes>
+    <selectionType typeId="46ed9ec5-e9b7-4976-9e3f-54531a5a59be" valueTypeId="762ec6fd-bded-4ec5-8106-9d3b5f0c301e"/>
+    <listType typeId="59bc40d8-d03a-486f-b000-edff8fd4927a" valueTypeId="56aa35e1-6d33-4002-9dfe-55657819d84e"/>
+    <managerType typeId="d255d2fe-f3d8-4775-a655-df0b183e7ce4" valueTypeId="b037421d-3c43-468a-b363-5e0fa8c632a4"/>
+    <recordSetType typeId="fdf2fcdf-adb6-4b17-8e1a-bf59d486b059" valueTypeId="3c873d75-fa32-4906-9c49-2d6565945bf7"/>
+    <recordKeyType typeId="abb3e0cd-0941-479d-8444-fe2496cdcb38" valueTypeId="ff6cb779-a0c3-49f5-93bf-b41a08ad58ec"/>
+    <recordType typeId="ff8646db-a064-402f-8348-7f32ba4a6670" valueTypeId="a390b477-e119-4d8f-b4ef-806f5dc34db0"/>
+    <recordManagerType typeId="0118f586-2970-47ce-98dd-18fbdae38758" valueTypeId="1dfbfecc-3d31-4945-82ca-fb85520ccfeb"/>
+  </producedTypes>
+  <name>DeletePeripheralsByWorkplaces</name>
+  <synonym>
+    <key>en</key>
+    <value>Peripherals by remote work places</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Подключаемое оборудование по удаленным рабочим местам</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Thiết bị được kết nối theo chỗ làm việc ở xa</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultRecordForm>InformationRegister.DeletePeripheralsByWorkplaces.Form.WorkplacesSetting</defaultRecordForm>
+  <defaultListForm>InformationRegister.DeletePeripheralsByWorkplaces.Form.ListForm</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="931c6123-2246-40ee-96c3-e354c1743c2f">
+    <name>Workplace</name>
+    <synonym>
+      <key>en</key>
+      <value>Work place</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>рабочее место</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>chỗ làm việc</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Workplaces</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="07f516b1-2ed2-48d0-ac00-d78520b471a1">
+    <name>Device</name>
+    <synonym>
+      <key>en</key>
+      <value>Device</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Устройство</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Thiết bị</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Peripherals</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="016a956b-40c4-4503-bac0-d6e2cdde9886">
+    <name>ListForm</name>
+    <synonym>
+      <key>en</key>
+      <value>List form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu danh sách</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="6ad5105f-3034-42d4-bf8f-c7754992bfae">
+    <name>WorkplacesSetting</name>
+    <synonym>
+      <key>en</key>
+      <value>Work place setup</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Настройка рабочих мест</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tùy chỉnh chỗ làm việc</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

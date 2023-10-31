@@ -1,0 +1,1984 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c63e7296-8bd5-4572-b1ca-d62e9d4681b3">
+  <producedTypes>
+    <objectType typeId="527bb7b4-f67c-4d81-aaef-3424e62adcdf" valueTypeId="fbe8fd53-10d9-467c-b397-3fd071092bb4"/>
+    <refType typeId="18f143e3-9f5c-4784-8d7e-88ef021c722e" valueTypeId="7e36f173-0bdb-4629-a3b4-74cb80cf7c56"/>
+    <selectionType typeId="7a50f746-a045-41b7-b9cb-76af6367f775" valueTypeId="6b8c4011-d2a6-4e10-966f-287d8ac8659d"/>
+    <listType typeId="ae3d216b-e5ca-4e40-a1cc-136898a2b177" valueTypeId="8e491fd4-c601-4283-bcd8-c16a217eaa52"/>
+    <managerType typeId="6df9e328-eead-48ee-a74b-f97ce8228baf" valueTypeId="dcec0885-edd6-45ee-89f3-2907f75e960f"/>
+  </producedTypes>
+  <name>InventoryTransfer</name>
+  <synonym>
+    <key>en</key>
+    <value>Inventory movement</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Перемещение запасов</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Điều chuyển vật tư</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.InventoryTransfer.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Posted</name>
+    <synonym>
+      <key>en</key>
+      <value>Posted</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Проведен</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đã kết chuyển</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Document posting flag</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак проведения документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Dấu hiệu kết chuyển chứng từ</value>
+    </toolTip>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <synonym>
+      <key>en</key>
+      <value>Ref</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Ссылка</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tham chiếu</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Reference to document</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Ссылка на документ</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tham chiếu đến chứng từ</value>
+    </toolTip>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <synonym>
+      <key>en</key>
+      <value>Deletion mark</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>ПометкаУдаления</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đặt dấu xóa</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Document deletion mark</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Пометка удаления документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Đặt dấu xóa chứng từ</value>
+    </toolTip>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Date</name>
+    <synonym>
+      <key>en</key>
+      <value>Date</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ngày</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Document date</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Дата документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Ngày chứng từ</value>
+    </toolTip>
+    <fillValue xsi:type="core:DateValue">
+      <value>0001-01-01T00:00:00</value>
+    </fillValue>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Number</name>
+    <synonym>
+      <key>en</key>
+      <value>Number</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Номер</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Document number</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Номер документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Số chứng từ</value>
+    </toolTip>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <basedOn>Document.TransferBetweenCells</basedOn>
+  <basedOn>Document.ProductionOrder</basedOn>
+  <basedOn>Document.InventoryAssembly</basedOn>
+  <basedOn>Document.GoodsReceipt</basedOn>
+  <basedOn>Document.SupplierInvoice</basedOn>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <listPresentation>
+    <key>en</key>
+    <value>Inventory movements</value>
+  </listPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Перемещения запасов</value>
+  </listPresentation>
+  <listPresentation>
+    <key>vi</key>
+    <value>Điều chuyển vật tư</value>
+  </listPresentation>
+  <explanation>
+    <key>en</key>
+    <value>Documents of inventory transfer from one business unit to another, and documents of inventory write-off to internal expenses</value>
+  </explanation>
+  <explanation>
+    <key>ru</key>
+    <value>Документы передачи запасов из одной структурной единицы в другую, а также списания запасов на внутренние расходы</value>
+  </explanation>
+  <explanation>
+    <key>vi</key>
+    <value>Chứng từ chuyển giao vật tư từ một đơn vị cấu trúc này sang đơn vị cấu trúc khác, cũng như ghi giảm vật tư vào chi phí nội bộ</value>
+  </explanation>
+  <numberType>String</numberType>
+  <numberLength>11</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.InventoryTransfer.Form.DocumentForm</defaultObjectForm>
+  <defaultListForm>Document.InventoryTransfer.Form.ListForm</defaultListForm>
+  <defaultChoiceForm>Document.InventoryTransfer.Form.ChoiceForm</defaultChoiceForm>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecordsDeletion>AutoDeleteOff</registerRecordsDeletion>
+  <registerRecords>AccumulationRegister.InventoryByCCD</registerRecords>
+  <registerRecords>AccumulationRegister.RetailAmountAccounting</registerRecords>
+  <registerRecords>AccumulationRegister.InventoryFromWarehouses</registerRecords>
+  <registerRecords>AccumulationRegister.InventoryForWarehouses</registerRecords>
+  <registerRecords>AccumulationRegister.InventoryInWarehouses</registerRecords>
+  <registerRecords>AccumulationRegister.SerialNumbers</registerRecords>
+  <registerRecords>AccountingRegister.Managerial</registerRecords>
+  <registerRecords>AccumulationRegister.Inventory</registerRecords>
+  <registerRecords>AccumulationRegister.InventoryReceived</registerRecords>
+  <registerRecords>InformationRegister.SerialNumbersGuarantees</registerRecords>
+  <registerRecords>AccumulationRegister.IncomeAndExpenses</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="bc903c70-92bd-4b1f-98b2-ad50b8bb044c">
+    <name>Vehicle</name>
+    <synonym>
+      <key>en</key>
+      <value>Vehicle</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Автотранспортное средство</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Phương tiện vận tải</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Vehicles</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="9ed471c0-7303-4652-b434-1027727c5b67">
+    <name>Author</name>
+    <synonym>
+      <key>en</key>
+      <value>Created by</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Ведомость составил</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Người lập</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Users</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>User who created the document</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Пользователь, создавший документ</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Người sử dụng mà đã lập chứng từ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="259b7032-9476-4cfe-97a1-7a2faa232a3c">
+    <name>ShippingAddress</name>
+    <synonym>
+      <key>en</key>
+      <value>Delivery address</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>адрес доставки</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>địa chỉ giao nhận</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>500</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="12ff336b-db98-4018-b0bf-ac31a4a7c9d3">
+    <name>CarrierBankAccount</name>
+    <synonym>
+      <key>en</key>
+      <value>Carrier bank account</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Банковский счет перевозчика</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tài khoản ngân hàng của người vận chuyển</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.BankAccounts</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="aa5b33fe-cf43-49b9-b5ea-b7826671f562">
+    <name>OperationKind</name>
+    <synonym>
+      <key>en</key>
+      <value>Operation kind</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Вид операции</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Dạng giao dịch</value>
+    </synonym>
+    <type>
+      <types>EnumRef.OperationKindsInventoryTransfer</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Operation kind: inventory movement, write off as expenses, commissioning, return from operation</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Вид операции: перемещение запасов, списание на расходы, передача в эксплуатацию, возврат из эксплуатации</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Dạng giao dịch: điều chuyển vật tư, ghi giảm vào chi phí, chuyển giao vào sử dụng, trả lại từ sử dụng</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Enum.OperationKindsInventoryTransfer.EnumValue.Move</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="9627732b-060e-4169-a38e-bd066c80b5bd">
+    <name>Driver</name>
+    <synonym>
+      <key>en</key>
+      <value>Driver</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Драйвер</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Driver</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Individuals</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="147dd6f7-5465-4a35-9320-57d7913900f2">
+    <name>ChiefAccountant</name>
+    <synonym>
+      <key>en</key>
+      <value>Chief accountant</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Главный бухгалтер</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Kế toán trưởng</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Employees</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="9a08f25c-206a-4c4f-8425-c8fbc6886127">
+    <name>PowerOfAttorneyIssued</name>
+    <synonym>
+      <key>en</key>
+      <value>Power of Attorney Issued</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Доверенность выдана</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Giấy giới thiệu được cấp cho</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="94e66d5e-ab29-41bb-a0f0-067b4379500b">
+    <name>PowerOfAttorneyDate</name>
+    <synonym>
+      <key>en</key>
+      <value>Power of attorney date</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Доверенность дата</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Giấy giới thiệu ngày</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e9d3462f-7d95-423f-9822-3a2968421e7e">
+    <name>PowerAttorneyPerson</name>
+    <synonym>
+      <key>en</key>
+      <value>Power of attorney person</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Доверенность лицо</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Giấy giới thiệu cá nhân</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Individuals</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="cf73a592-303f-4ae5-84a9-2ac76b905794">
+    <name>PowerOfAttorneyNumber</name>
+    <synonym>
+      <key>en</key>
+      <value>Power of attorney number</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Доверенность номер</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Giấy giới thiệu số</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>15</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7aac74b0-dad1-4683-b774-99427e67983a">
+    <name>BasisDocument</name>
+    <synonym>
+      <key>en</key>
+      <value>Basis</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Основание</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Cơ sở</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.SupplierInvoice</types>
+      <types>DocumentRef.ProductionOrder</types>
+      <types>DocumentRef.InventoryAssembly</types>
+      <types>DocumentRef.TransferBetweenCells</types>
+      <types>DocumentRef.GoodsReceipt</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Basis document</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Документ-основание</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Chứng từ-cơ sở</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Document.InventoryReconciliation.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="739c93ad-81cc-401b-95f3-ec81b0e6ca07">
+    <name>CustomerOrder</name>
+    <synonym>
+      <key>en</key>
+      <value>Customer order</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ покупателя</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đơn hàng của khách</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.CustomerOrder</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Customer order within which inventory is moved</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Заказ покупателя, в рамках которого осуществляется перемещение запасов</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Đơn hàng của khách mà theo đó có thực hiện điều chuyển vật tư</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>OperationKind</name>
+      <field>Document.InventoryTransfer.Attribute.OperationKind</field>
+    </choiceParameterLinks>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Document.CustomerOrder.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="743962e9-651e-42ac-9605-ee91b64795aa">
+    <name>Comment</name>
+    <synonym>
+      <key>en</key>
+      <value>Note</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Примечание</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ghi chú</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Arbitrary comment</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Произвольный комментарий</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Ghi chú tùy ý </value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="89592531-f8c0-4bcf-b2f0-fc6a8387e335">
+    <name>BusinessActivity</name>
+    <synonym>
+      <key>en</key>
+      <value>Direction</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Направление выбытия</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Mục đích chi</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.BusinessActivities</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Business area for allocating cost of inventory written off as expenses</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Направление деятельности, на которое будет отнесена стоимость списанных на расходы запасов</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Lĩnh vực hoạt động mà sẽ đưa giá trị vật tư đã ghi giảm vào chi phí</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>OperationKind</name>
+      <field>Document.InventoryTransfer.Attribute.OperationKind</field>
+    </choiceParameterLinks>
+    <choiceParameterLinks>
+      <name>GLExpenseAccount</name>
+      <field>Document.InventoryTransfer.Attribute.GLExpenseAccount</field>
+    </choiceParameterLinks>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.BusinessActivities.MainActivity</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b99b4c3c-b6c9-4d5b-a573-3969efe6420f">
+    <name>Company</name>
+    <synonym>
+      <key>en</key>
+      <value>Company</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Doanh nghiệp</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Companies</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Own company on whose behalf the document is issued</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Собственная организация, от имени которой оформляется документ</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Doanh nghiệp riêng mà nhân danh doanh nghiệp đó để lập chứng từ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.Companies.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b416a275-d38d-4c4d-88df-33e9e426c0d2">
+    <name>StampBase</name>
+    <synonym>
+      <key>en</key>
+      <value>Base of stamp</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Основание печати</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Cơ sở in</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>300</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b24155eb-b7a6-458a-863b-530bfb318fbc">
+    <name>Released</name>
+    <synonym>
+      <key>en</key>
+      <value>Released</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Released</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Miễn nhiệm</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Employees</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="388bb1be-5b16-4351-92f0-3e44a73e470f">
+    <name>ReleasedPosition</name>
+    <synonym>
+      <key>en</key>
+      <value>Released position</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Отпустил должность</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Miễn nhiệm</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Positions</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c379b91c-317e-486f-9e21-1fcaebfc3bb4">
+    <name>Carrier</name>
+    <synonym>
+      <key>en</key>
+      <value>Carrier</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Перевозчик</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Người vận chuyển</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Counterparties</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e61a0297-dec9-4dc9-8327-e611df8cf9ca">
+    <name>CustomerOrderPosition</name>
+    <synonym>
+      <key>en</key>
+      <value>Customer order position</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Положение заказа покупателя</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Quy định đơn hàng của khách</value>
+    </synonym>
+    <type>
+      <types>EnumRef.AttributePositionOnForm</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Customer order position (in header, in list)</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Положение заказа покупателя (в шапке, в списке)</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Quy định đơn hàng của khách (ở phần đầu, trong danh sách)</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Enum.AttributePositionOnForm.EnumValue.InHeader</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="8780c2f4-ac4f-4c85-8eda-04cfd48add1d">
+    <name>Trailer</name>
+    <synonym>
+      <key>en</key>
+      <value>Trailer</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Прицеп</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đoạn giới thiệu</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Vehicles</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameters>
+      <name>Filter.VehicleType</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.VehicleKinds.EnumValue.TowedVehicle</value>
+      </value>
+    </choiceParameters>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="71d9137f-1684-4dc4-8d0c-7adb1cd344eb">
+    <name>Head</name>
+    <synonym>
+      <key>en</key>
+      <value>Manager</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Менеджер</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Người quản lý</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Employees</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="0e117488-8b53-44b5-ba6e-1a016c64e0fc">
+    <name>HeadPosition</name>
+    <synonym>
+      <key>en</key>
+      <value>Manager position</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Руководитель должность</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Lãnh đạo chức vụ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Positions</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1a303e89-7c8d-482d-a162-cabb8065ef09">
+    <name>DeliveryTerm</name>
+    <synonym>
+      <key>en</key>
+      <value>Delivery period</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Срок доставки</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Thời hạn giao hàng</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2f9254d3-924b-4caf-b47a-628781e5adb8">
+    <name>StructuralUnit</name>
+    <synonym>
+      <key>en</key>
+      <value>From</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Отправитель</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Nơi gửi</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.StructuralUnits</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Department or warehouse</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Подразделение или склад</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Bộ phận hoặc kho bãi</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameterLinks>
+      <name>OperationKind</name>
+      <field>Document.InventoryTransfer.Attribute.OperationKind</field>
+    </choiceParameterLinks>
+    <choiceParameters>
+      <name>Filter.StructuralUnitType</name>
+      <value xsi:type="core:FixedArrayValue">
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.StructuralUnitsTypes.EnumValue.Department</value>
+        </values>
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.StructuralUnitsTypes.EnumValue.Warehouse</value>
+        </values>
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.StructuralUnitsTypes.EnumValue.Retail</value>
+        </values>
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.StructuralUnitsTypes.EnumValue.RetailAccrualAccounting</value>
+        </values>
+      </value>
+    </choiceParameters>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.StructuralUnits.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="f202ea25-5f08-454c-bcd4-d55a2675affb">
+    <name>StructuralUnitPayee</name>
+    <synonym>
+      <key>en</key>
+      <value>Recipient:</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Получатель:</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Nơi nhận</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.StructuralUnits</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Recipient:</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Получатель:</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nơi nhận</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameterLinks>
+      <name>OperationKind</name>
+      <field>Document.InventoryTransfer.Attribute.OperationKind</field>
+    </choiceParameterLinks>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.StructuralUnits.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="6fcc9ac8-8471-48b7-a809-243a1da6d33e">
+    <name>GLExpenseAccount</name>
+    <synonym>
+      <key>en</key>
+      <value>Cost account</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Счет затрат</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tài khoản chi phí</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Managerial</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Expenses account to which the cost of ones written off for inventory will be allocated</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Счет расходов, на который будет отнесена стоимость списанных на запасов</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tài khoản chi phí mà có đưa vào giá trị ghi giảm vào vật tư</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>OperationKind</name>
+      <field>Document.InventoryTransfer.Attribute.OperationKind</field>
+    </choiceParameterLinks>
+    <choiceParameters>
+      <name>Filter.TypeOfAccount</name>
+      <value xsi:type="core:FixedArrayValue">
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.GLAccountsTypes.EnumValue.Expenses</value>
+        </values>
+        <values xsi:type="core:ReferenceValue">
+          <value>Enum.GLAccountsTypes.EnumValue.IndirectExpenses</value>
+        </values>
+      </value>
+    </choiceParameters>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>ChartOfAccounts.Managerial.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2ea1fc21-bf58-41ff-9b62-421a3ffc846f">
+    <name>Cell</name>
+    <synonym>
+      <key>en</key>
+      <value>Bin (sender)</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Ячейка (отправитель)</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ô hàng (nơi gửi)</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Cells</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Warehouse bin</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Ячейка склада</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Ô hàng</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Filter.Owner</name>
+      <field>Document.InventoryTransfer.Attribute.StructuralUnit</field>
+    </choiceParameterLinks>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.Cells.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="93db1c83-ec44-4e17-a675-b53a1859d1b5">
+    <name>CellPayee</name>
+    <synonym>
+      <key>en</key>
+      <value>Bin (waste recipient)</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Ячейка (получатель отходов)</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ô hàng (nơi nhận phế liệu)</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Cells</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Recipient bin</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Ячейка получателя</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Ô hàng của người nhận</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Filter.Owner</name>
+      <field>Document.InventoryTransfer.Attribute.StructuralUnitPayee</field>
+    </choiceParameterLinks>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.Cells.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="80f2f5ca-1362-45a6-83ca-1cfd8a15725f">
+    <name>StructuralUnitType</name>
+    <synonym>
+      <key>en</key>
+      <value>Structural unit type</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Loại đơn vị kết cấu</value>
+    </synonym>
+    <type>
+      <types>EnumRef.StructuralUnitsTypes</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="08767a40-b60b-42ea-b32f-da155f947263">
+    <name>StructuralUnitPayeeType</name>
+    <synonym>
+      <key>en</key>
+      <value>Structural unit payee type</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Cơ cấu đơn vị thanh toán loại</value>
+    </synonym>
+    <type>
+      <types>EnumRef.StructuralUnitsTypes</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="e3d56259-3c9a-493f-874e-9f41738c2634">
+    <name>DocumentForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Document form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu chứng từ</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="a4aad2a6-60e8-4033-ada6-636259fee407">
+    <name>ListForm</name>
+    <synonym>
+      <key>en</key>
+      <value>List form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu danh sách</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="5230e2bd-7fd6-4e81-8b48-08efb32e9b4d">
+    <name>ChoiceForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Selection form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu chọn</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="2e1d10ce-4594-477f-ace1-dcad764157ce">
+    <producedTypes>
+      <objectType typeId="627ba830-319a-421b-9a9e-ef92448b479b" valueTypeId="94c47f92-0f75-43ad-8988-37f08ff71978"/>
+      <rowType typeId="0ea14dcf-cee4-4da6-b5b9-9d9ba6533304" valueTypeId="933cf8c9-8a0c-45e2-b12e-392794ff2087"/>
+    </producedTypes>
+    <name>Inventory</name>
+    <synonym>
+      <key>en</key>
+      <value>Inventory</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Запасы</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Hàng tồn kho</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Inventory list</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Список запасов</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Danh sách vật tư</value>
+    </toolTip>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="0ab759b1-5453-423a-9808-dae7f0d62e7d">
+      <name>ProductsAndServices</name>
+      <synonym>
+        <key>en</key>
+        <value>Products and services</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Продукция и услуги</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Hàng hóa và dịch vụ</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ProductsAndServices</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Inventory products and services</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Номенклатура запасов</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Mặt hàng vật tư</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <choiceParameters>
+        <name>Filter.ProductsAndServicesType</name>
+        <value xsi:type="core:ReferenceValue">
+          <value>Enum.ProductsAndServicesTypes.EnumValue.InventoryItem</value>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="594d5818-02d3-4902-811e-e8692cc12658">
+      <name>Characteristic</name>
+      <synonym>
+        <key>en</key>
+        <value>Characteristic</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Characteristic</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Đặc tính</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ProductsAndServicesCharacteristics</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Characteristic of products and services</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Характеристика номенклатуры</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Đặc tính mặt hàng</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Filter.Owner</name>
+        <field>Document.InventoryTransfer.TabularSection.Inventory.Attribute.ProductsAndServices</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="8be5842e-e9d5-4f18-90f6-545c2288eb9c">
+      <name>Batch</name>
+      <synonym>
+        <key>en</key>
+        <value>Batch</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Партия</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Lô hàng</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ProductsAndServicesBatches</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Products and services batch</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Партия номенклатуры</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Lô hàng</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Cell</name>
+        <field>Document.InventoryTransfer.Attribute.Cell</field>
+      </choiceParameterLinks>
+      <choiceParameterLinks>
+        <name>Company</name>
+        <field>Document.InventoryTransfer.Attribute.Company</field>
+      </choiceParameterLinks>
+      <choiceParameterLinks>
+        <name>Date</name>
+        <field>Document.InventoryTransfer.StandardAttribute.Date</field>
+      </choiceParameterLinks>
+      <choiceParameterLinks>
+        <name>Characteristic</name>
+        <field>Document.InventoryTransfer.TabularSection.Inventory.Attribute.Characteristic</field>
+      </choiceParameterLinks>
+      <choiceParameterLinks>
+        <name>Filter.Owner</name>
+        <field>Document.InventoryTransfer.TabularSection.Inventory.Attribute.ProductsAndServices</field>
+      </choiceParameterLinks>
+      <choiceParameterLinks>
+        <name>StructuralUnit</name>
+        <field>Document.InventoryTransfer.Attribute.StructuralUnit</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="9c8e5c4e-d9b1-415a-8d9c-77359fe3b5f3">
+      <name>Quantity</name>
+      <synonym>
+        <key>en</key>
+        <value>Quantity</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Количество</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Số lượng</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Quantity of products and services</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Количество номенклатуры</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Số lượng mặt hàng</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="94f0835b-0bc7-40b5-af7a-b49634e874d8">
+      <name>Reserve</name>
+      <synonym>
+        <key>en</key>
+        <value>Reserve</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Резерв</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Dự phòng</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Amount of inventory reserved under order</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Зарезервированное под заказ количество запасов</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Số lượng vật tư được dự phòng theo đơn hàng</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="f890776d-32fc-4a55-888f-ab5f04372bb2">
+      <name>MeasurementUnit</name>
+      <synonym>
+        <key>en</key>
+        <value>UOM</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Единицы измерения</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Đơn vị tính</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.UOMClassifier</types>
+        <types>CatalogRef.UOM</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Products and services unit of measure</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Единица измерения номенклатуры</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Đơn vị tính mặt hàng</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <choiceParameterLinks>
+        <name>Filter.Owner</name>
+        <field>Document.InventoryTransfer.TabularSection.Inventory.Attribute.ProductsAndServices</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="16492692-d666-4064-915d-c87d37cab732">
+      <name>CustomerOrder</name>
+      <synonym>
+        <key>en</key>
+        <value>Customer order</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Заказ покупателя</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Đơn hàng của khách</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.CustomerOrder</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Customer order within which inventory is moved</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Заказ покупателя, в рамках которого осуществляется перемещение запасов</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Đơn hàng của khách mà theo đó có thực hiện điều chuyển vật tư</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>OperationKind</name>
+        <field>Document.InventoryTransfer.Attribute.OperationKind</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="93c6f638-bc15-47b7-9268-7d8a77d4ca28">
+      <name>Cost</name>
+      <synonym>
+        <key>en</key>
+        <value>Cost</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Себестоимость</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Giá vốn</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Cost of products and services of this line</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Стоимость номенклатуры по данной строке</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Giá trị của mặt hàng theo dòng này</value>
+      </toolTip>
+      <markNegatives>true</markNegatives>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="c5cd63d4-614d-4f48-8364-002d2b3b99d3">
+      <name>Amount</name>
+      <synonym>
+        <key>en</key>
+        <value>Amount</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Số tiền</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Cost of products and services of this line</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Стоимость номенклатуры по данной строке</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Giá trị của mặt hàng theo dòng này</value>
+      </toolTip>
+      <markNegatives>true</markNegatives>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="5866a844-b943-40f0-bdbe-1ccd88b0dec7">
+      <name>SerialNumbers</name>
+      <synonym>
+        <key>en</key>
+        <value>Serial numbers</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Серийные номера</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Số sê-ri</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="948c2d5c-c06d-4c0b-bde4-41d28256a1e6">
+      <name>ConnectionKey</name>
+      <synonym>
+        <key>en</key>
+        <value>Connection key</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Ключ связи</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Khóa liên kết</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Link ID of the Goods tabular section row and Discounts (mark-ups) tabular section row. Generated automatically, cannot be edited by user.</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Идентификатор связи строки табличной части Товары и строки табличной части Скидки (наценки). Формируется автоматически, пользователем не редактируется.</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Tên (ID) liên kết dòng phần bảng Hàng hóa và dòng phần bảng Chiết khấu (phụ thu). Lập tự động, người sử dụng không thể soạn.</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="57001e53-e9c9-434b-8225-eaf7c072766b">
+      <name>CountryOfOrigin</name>
+      <synonym>
+        <key>en</key>
+        <value>Country of origin</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Страна происхождения</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Nước xuất xứ</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.WorldCountries</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="56d9e4e7-504d-473f-8b32-a333950aa29b">
+      <name>CCDNo</name>
+      <synonym>
+        <key>en</key>
+        <value>CCD number</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Номер ГТД</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Số tờ khai hải quan</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.CCDNumbers</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Номер грузовой таможенной декларации</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Số tờ khai hải quan hàng hóa</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="1c70b641-dbaf-4e5c-b9b1-425b9ae8abb1">
+    <producedTypes>
+      <objectType typeId="d827df32-8e92-402a-9f7b-7bef151f0b5b" valueTypeId="6f99d54c-36f9-4648-9dc6-b67f91f5b820"/>
+      <rowType typeId="e99cd9e7-6974-429d-834c-9d6eb26d8d70" valueTypeId="7a870303-ec32-4b55-a509-f06f3a56cacd"/>
+    </producedTypes>
+    <name>SerialNumbers</name>
+    <synonym>
+      <key>en</key>
+      <value>Serial numbers</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Серийные номера</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số sê-ri</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Goods serial numbers</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Серии принимаемых товаров</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Sê-ri hàng hóa tiếp nhận</value>
+    </toolTip>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="6f4fb1f1-7654-411f-9dc8-2d67fd55b819">
+      <name>SerialNumber</name>
+      <synonym>
+        <key>en</key>
+        <value>Serial number</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Серийный номер</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Số sê-ri</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.SerialNumbers</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Goods serie</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Серия товаров</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Sê-ri hàng hóa</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="cc4779fe-273f-44b9-a327-4b2dbb4dd86e">
+      <name>ConnectionKey</name>
+      <synonym>
+        <key>en</key>
+        <value>Connection key</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Ключ связи</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Khóa liên kết</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <templates uuid="3aded70f-bef7-42f7-b49d-000983aa9c5b">
+    <name>PF_MXL_InventoryTransfer</name>
+    <synonym>
+      <key>en</key>
+      <value>Inventory movement</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Перемещение запасов</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Điều chuyển vật tư</value>
+    </synonym>
+  </templates>
+  <templates uuid="1c023824-6ddb-4593-b5d1-e03d382f9ef3">
+    <name>PF_MXL_MerchandiseFillingForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Goods content form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Бланк товарного наполнения</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Mẫu bổ sung hàng hóa</value>
+    </synonym>
+  </templates>
+  <templates uuid="5ee5f74f-9803-4332-ab0a-d443c6f75303">
+    <name>PF_MXL_WarehouseOutputSlipAndInternalTransportation</name>
+    <synonym>
+      <key>en</key>
+      <value>Warehouse output slip and transporttation</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Warehouse output slip and transporttation</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Phiếu xuất kho kiêm vận chuyển nội bộ</value>
+    </synonym>
+    <comment>CHIENTN-18-02-2019</comment>
+  </templates>
+</mdclass:Document>

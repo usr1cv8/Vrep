@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ca0df29f-e086-4e61-9ac7-b848e0aad640">
+  <producedTypes>
+    <objectType typeId="ba5732cc-89b4-48fd-b947-c24865b12679" valueTypeId="c8f342e3-707f-437e-9b63-dd7f1a4c7e71"/>
+    <refType typeId="3883060d-26da-4ef5-9a4e-78ac1dcbb9a9" valueTypeId="d133d0ba-db65-4605-9f2c-29cd85465f87"/>
+    <selectionType typeId="eab3382d-62b7-4e82-94a6-79060eba11e1" valueTypeId="fe7dfdc7-5fea-4dc2-9a1a-eb5f874cdb00"/>
+    <listType typeId="b463ccd9-3650-4627-b008-a847e386439d" valueTypeId="b01b4f3e-eeff-48ad-bc48-a37bddb8b70f"/>
+    <managerType typeId="82f6c888-c00d-44ed-be56-f29720436a9c" valueTypeId="7ff325a4-69dd-45d2-84b1-7e033d024723"/>
+  </producedTypes>
+  <name>TaxAccrual</name>
+  <synonym>
+    <key>en</key>
+    <value>Tax accrual</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Начисления налогов</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Tính thuế</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.TaxAccrual.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Posted</name>
+    <synonym>
+      <key>en</key>
+      <value>Posted</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Проведен</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đã kết chuyển</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Document posting flag</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак проведения документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Dấu hiệu kết chuyển chứng từ</value>
+    </toolTip>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <synonym>
+      <key>en</key>
+      <value>Ref</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Ссылка</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Tham chiếu</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Reference to document</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Ссылка на документ</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tham chiếu đến chứng từ</value>
+    </toolTip>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <synonym>
+      <key>en</key>
+      <value>Deletion mark </value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Deletion mark </value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đánh dấu xóa</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Document deletion mark</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Пометка удаления документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Đặt dấu xóa chứng từ</value>
+    </toolTip>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Date</name>
+    <synonym>
+      <key>en</key>
+      <value>Date</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ngày</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Document date</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Дата документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Ngày chứng từ</value>
+    </toolTip>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Number</name>
+    <synonym>
+      <key>en</key>
+      <value>Number</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Номер</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Document number</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Номер документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Số chứng từ</value>
+    </toolTip>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <listPresentation>
+    <key>en</key>
+    <value>Tax accrual</value>
+  </listPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Начисления налогов</value>
+  </listPresentation>
+  <listPresentation>
+    <key>vi</key>
+    <value>Tính thuế</value>
+  </listPresentation>
+  <explanation>
+    <key>en</key>
+    <value>Tax accrual documents</value>
+  </explanation>
+  <explanation>
+    <key>ru</key>
+    <value>Документы начисления налогов</value>
+  </explanation>
+  <explanation>
+    <key>vi</key>
+    <value>Chứng từ tính thuế</value>
+  </explanation>
+  <numberType>String</numberType>
+  <numberLength>11</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.TaxAccrual.Form.DocumentForm</defaultObjectForm>
+  <defaultListForm>Document.TaxAccrual.Form.ListForm</defaultListForm>
+  <defaultChoiceForm>Document.TaxAccrual.Form.ChoiceForm</defaultChoiceForm>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecordsDeletion>AutoDeleteOff</registerRecordsDeletion>
+  <registerRecords>AccountingRegister.Managerial</registerRecords>
+  <registerRecords>AccumulationRegister.TaxesSettlements</registerRecords>
+  <registerRecords>AccumulationRegister.Inventory</registerRecords>
+  <registerRecords>AccumulationRegister.IncomeAndExpenses</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="dc8abd04-2c73-4647-b726-cf204e5c365c">
+    <name>Company</name>
+    <synonym>
+      <key>en</key>
+      <value>Company</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Doanh nghiệp</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Companies</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Own company for which taxes are accrued</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Собственная организация, для которой производится начисление налогов</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Doanh nghiệp riêng mà có tiến hành tính thuế</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.Companies.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="985cf54f-6836-48c5-8b81-e7d0894b3ad7">
+    <name>Comment</name>
+    <synonym>
+      <key>en</key>
+      <value>Note</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Примечание</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Ghi chú</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Comment to the document is specified</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Указывается комментарий к документу</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Chỉ ra ghi chú đến chứng từ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b645cfa3-0f49-481d-91f1-91e5c277e66c">
+    <name>DocumentAmount</name>
+    <synonym>
+      <key>en</key>
+      <value>Amount</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số tiền</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Document amount</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Заполняется сумма документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Điền số tiền của chứng từ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <quickChoice>DontUse</quickChoice>
+    <createOnInput>Use</createOnInput>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="77689b0d-0569-46e8-bb64-36b7997fc522">
+    <name>OperationKind</name>
+    <synonym>
+      <key>en</key>
+      <value>Operation kind</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Вид операции</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Dạng giao dịch</value>
+    </synonym>
+    <type>
+      <types>EnumRef.OperationKindsTaxAccrual</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Document operation kind</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Вид операции документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Dạng giao dịch của chứng từ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Enum.OperationKindsTaxAccrual.EnumValue.Accrual</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="646362cf-ef1b-4c96-919c-5af71716335a">
+    <name>Author</name>
+    <synonym>
+      <key>en</key>
+      <value>Created by</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Ведомость составил</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Người lập</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Users</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>User who created the document</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Пользователь, создавший документ</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Người sử dụng mà đã lập chứng từ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="493d70e5-e932-4899-9038-c6e7fd922f48">
+    <name>DocumentForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Document form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu chứng từ</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="fddda32f-5e8d-4bca-9526-677492a5854b">
+    <name>ListForm</name>
+    <synonym>
+      <key>en</key>
+      <value>List form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu danh sách</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="dfc34e02-7b9f-4dd8-ba8f-623b87314580">
+    <name>ChoiceForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Selection form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu chọn</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="deaf3ede-a418-4c15-b214-e3006bfca36d">
+    <producedTypes>
+      <objectType typeId="a6513c00-9e22-47e9-bcf2-c6ff58944f8c" valueTypeId="8f3a280b-6fbb-4dfd-bf57-511e4615779a"/>
+      <rowType typeId="3b4c0e0b-0412-4da1-8f52-d0440294fd42" valueTypeId="5214b92d-881f-4883-9941-a0bbe51e2869"/>
+    </producedTypes>
+    <name>Taxes</name>
+    <synonym>
+      <key>en</key>
+      <value>Taxes</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Налоги</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Thuế</value>
+    </synonym>
+    <toolTip>
+      <key>en</key>
+      <value>Tax accrued</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Начисленные налоги</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Thuế đã tính</value>
+    </toolTip>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="64149e1f-4468-4854-859c-080d983ef45b">
+      <name>TaxKind</name>
+      <synonym>
+        <key>en</key>
+        <value>Tax kind</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Вид налога</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Dạng thuế</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.TaxTypes</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Accrued tax kind</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Вид начисляемого налога</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Dạng thuế đã tính</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <quickChoice>DontUse</quickChoice>
+      <createOnInput>Use</createOnInput>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="9ab634a9-f444-4b1a-bc0e-38aec0a71b48">
+      <name>Amount</name>
+      <synonym>
+        <key>en</key>
+        <value>Amount</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Số tiền</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Tax amount</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Сумма налога</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Tiền thuế</value>
+      </toolTip>
+      <markNegatives>true</markNegatives>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a408c2f7-7fa0-4016-b99b-1e3fc01361b4">
+      <name>Correspondence</name>
+      <synonym>
+        <key>en</key>
+        <value>Cost account</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Счет затрат</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Tài khoản chi phí</value>
+      </synonym>
+      <type>
+        <types>ChartOfAccountsRef.Managerial</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Tax accrual correspondence</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Корреспонденция начисления налога</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Đối ứng tính thuế</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <choiceParameterLinks>
+        <name>OperationKind</name>
+        <field>Document.TaxAccrual.Attribute.OperationKind</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="e611b65a-f7a5-4ef2-9669-30f35b0ca79b">
+      <name>BusinessActivity</name>
+      <synonym>
+        <key>en</key>
+        <value>Business area</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Направление деятельности</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Lĩnh vực hoạt động</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.BusinessActivities</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Business area for expense allocation</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Направление деятельности, на которое будут отнесены расходы</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Lĩnh vực hoạt động mà sẽ đưa chi phí vào đó</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>GLExpenseAccount</name>
+        <field>Document.TaxAccrual.TabularSection.Taxes.Attribute.Correspondence</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="2df6a36b-dcb6-44b3-80fd-bdd48efd6f93">
+      <name>CustomerOrder</name>
+      <synonym>
+        <key>en</key>
+        <value>Customer order</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Заказ покупателя</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Đơn hàng của khách</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.CustomerOrder</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Customer order to which expenses will be allocated</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Заказ покупателя, на который будут отнесены расходы</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Đơn hàng của khách mà sẽ phát sinh chi phí</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>GLExpenseAccount</name>
+        <field>Document.TaxAccrual.TabularSection.Taxes.Attribute.Correspondence</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="95727c6c-666b-48e1-96de-14bf3d4451b3">
+      <name>Department</name>
+      <synonym>
+        <key>en</key>
+        <value>Department</value>
+      </synonym>
+      <synonym>
+        <key>ru</key>
+        <value>Подразделение</value>
+      </synonym>
+      <synonym>
+        <key>vi</key>
+        <value>Bộ phận</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.StructuralUnits</types>
+      </type>
+      <toolTip>
+        <key>en</key>
+        <value>Department to which expenses are allocated</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Подразделение, на которое относятся расходы</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Bộ phận mà có liên quan đến chi phí</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>GLExpenseAccount</name>
+        <field>Document.TaxAccrual.TabularSection.Taxes.Attribute.Correspondence</field>
+      </choiceParameterLinks>
+      <choiceParameters>
+        <name>Filter.StructuralUnitType</name>
+        <value xsi:type="core:ReferenceValue">
+          <value>Enum.StructuralUnitsTypes.EnumValue.Department</value>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

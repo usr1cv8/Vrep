@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7b16b294-593b-4e0f-a492-adaf9b4f783e">
+  <producedTypes>
+    <objectType typeId="3c0a6379-a249-4ed1-bb57-a0e8bd39b6f2" valueTypeId="aa7eaf90-c185-49f8-b64b-44d040fc9cc2"/>
+    <managerType typeId="c75c00ec-2b13-4220-ab1b-5ed1e96e7a1b" valueTypeId="bfeaad25-b907-4bee-a8ec-1e3197ca2a47"/>
+  </producedTypes>
+  <name>DemandAnalysis</name>
+  <synonym>
+    <key>en</key>
+    <value>Demand analysis</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Анализ потребности</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Phân tích nhu cầu</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <mainDataCompositionSchema>Report.DemandAnalysis.Template.MainDataCompositionSchema</mainDataCompositionSchema>
+  <variantsStorage>SettingsStorage.ReportsVariantsStorage</variantsStorage>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <forms uuid="b616fd60-7b1e-4042-9b56-2dce2c1b4933">
+    <name>ReportForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Report form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu báo cáo</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="0d266bb3-ce24-4f72-8e2e-bf93bd1e2e37">
+    <name>MainDataCompositionSchema</name>
+    <synonym>
+      <key>en</key>
+      <value>Main data composition schema</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Sơ đồ dàn dựng dữ liệu chính</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <commands uuid="a4321488-d87e-4d54-9287-93cc57b1280b">
+    <name>DemandAnalysis</name>
+    <synonym>
+      <key>en</key>
+      <value>Inventory demand</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Потребность в запасах</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Nhu cầu vật tư</value>
+    </synonym>
+    <group>FormNavigationPanelSeeAlso</group>
+    <commandParameterType>
+      <types>DocumentRef.CustomerOrder</types>
+    </commandParameterType>
+    <parameterUseMode>Multiple</parameterUseMode>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:Report>

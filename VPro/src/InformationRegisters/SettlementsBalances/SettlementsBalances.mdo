@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4e7dd904-edeb-4bb5-b808-b1211cbf2c26">
+  <producedTypes>
+    <selectionType typeId="a69de898-bbb3-49aa-b80a-3e6e147b47ac" valueTypeId="15c4e787-e5d4-4118-b735-42c9357a1cad"/>
+    <listType typeId="0858b9b9-ba75-4869-a978-ebd890a73fac" valueTypeId="56d26ce3-40c7-463e-83ea-e1262bdcfcc4"/>
+    <managerType typeId="558515ea-9656-43bc-8233-258795f2f74a" valueTypeId="7e308521-a494-415a-8533-5ff130c9b0a6"/>
+    <recordSetType typeId="9e7408ca-aff4-4bff-bc27-f21a048aa0a0" valueTypeId="80446445-3578-4297-ba0c-b680275ccbb3"/>
+    <recordKeyType typeId="9c897035-027e-4318-9f80-d1727b0d5032" valueTypeId="6479bfeb-23ed-48d2-ae35-00adbccd1d45"/>
+    <recordType typeId="5ff23c42-4d99-45f2-8560-3a5510b46f0d" valueTypeId="d53133fc-974c-4481-b29c-e651275573bf"/>
+    <recordManagerType typeId="c7d79e02-925e-48d0-a3cf-2d2eba935d58" valueTypeId="cc550e20-34e2-423a-a42b-b9503ef6fc3c"/>
+  </producedTypes>
+  <name>SettlementsBalances</name>
+  <synonym>
+    <key>ru</key>
+    <value>Остатки взаиморасчетов</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Số dư hạch toán công nợ</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="2f58a9ca-8d17-4eb4-827d-dfec062ab81f">
+    <name>Amount</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Số tiền</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="acda369a-b2ef-477f-a2e6-a63d4b67566d">
+    <name>Counterparty</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đối tác</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Counterparties</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

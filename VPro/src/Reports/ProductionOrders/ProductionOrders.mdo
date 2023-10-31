@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="edbfa9ce-3b20-49ed-abe6-3cb7889d7158">
+  <producedTypes>
+    <objectType typeId="9782f03b-0825-4694-b845-b5d4678a2590" valueTypeId="c0ac1232-9530-4487-b013-d34304858794"/>
+    <managerType typeId="347ad72a-c018-47ec-b188-fe7115838e54" valueTypeId="5c1157cc-44ce-4455-92d3-ceacc4541762"/>
+  </producedTypes>
+  <name>ProductionOrders</name>
+  <synonym>
+    <key>en</key>
+    <value>Production orders</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Заказы на производство</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Đơn hàng sản xuất</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <mainDataCompositionSchema>Report.ProductionOrders.Template.MainDataCompositionSchema</mainDataCompositionSchema>
+  <variantsStorage>SettingsStorage.ReportsVariantsStorage</variantsStorage>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <forms uuid="e512c632-9995-44fa-9fb6-3e405c54c804">
+    <name>ReportForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Report form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu báo cáo</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="ff62e898-32b1-4fb0-898d-b04804c3fcd7">
+    <name>MainDataCompositionSchema</name>
+    <synonym>
+      <key>en</key>
+      <value>Main data composition schema</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Sơ đồ dàn dựng dữ liệu chính</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <commands uuid="49e53a4f-8ac1-474b-b9f7-356fa946b981">
+    <name>OrderAnalysis</name>
+    <synonym>
+      <key>en</key>
+      <value>Order analysis</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Анализ заказа</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Phân tích đơn hàng</value>
+    </synonym>
+    <group>FormNavigationPanelImportant</group>
+    <commandParameterType>
+      <types>DocumentRef.ProductionOrder</types>
+      <types>DocumentRef.InventoryAssembly</types>
+    </commandParameterType>
+    <parameterUseMode>Multiple</parameterUseMode>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:Report>

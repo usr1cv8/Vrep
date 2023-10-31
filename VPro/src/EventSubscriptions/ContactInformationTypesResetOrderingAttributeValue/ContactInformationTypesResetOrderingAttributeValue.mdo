@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e6c871d6-e06f-420b-ae04-dbf735d3233d">
+  <name>ContactInformationTypesResetOrderingAttributeValue</name>
+  <synonym>
+    <key>en</key>
+    <value>Contact information kinds reset arrangement attribute value</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Виды контактной информации сбросить значение реквизита упорядочивания</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Dạng thông tin liên hệ bỏ giá trị mục tin sắp xếp</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.ContactInformationKinds</types>
+  </source>
+  <event>OnCopy</event>
+  <handler>CommonModule.ItemOrderSetup.ResetOrderingAttributeValue</handler>
+</mdclass:EventSubscription>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="173592f6-8c06-479b-9918-f22a3af40c43">
+  <producedTypes>
+    <managerType typeId="7fdea974-a10f-46c1-bb3a-5c2532658728" valueTypeId="37d080fc-97e4-4d12-a270-205982bd5a9e"/>
+    <valueManagerType typeId="88fea891-63f5-4066-a164-e4fe8c68b8c8" valueTypeId="441b11d3-6df2-4878-a949-e9ce978e1572"/>
+    <valueKeyType typeId="a2e85ba0-cf00-5098-9aa4-510e8a8ead8f" valueTypeId="868f2709-cde1-5b68-9c0b-ff20a687d340"/>
+  </producedTypes>
+  <name>CustomerOrdersInProgressStatus</name>
+  <synonym>
+    <key>en</key>
+    <value>State customer orders in progress</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Состояние в работе заказов покупателей</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Trạng thái đang xử lý đơn hàng của khách</value>
+  </synonym>
+  <type>
+    <types>CatalogRef.CustomerOrderStates</types>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <choiceParameters>
+    <name>Filter.OrderStatus</name>
+    <value xsi:type="core:ReferenceValue">
+      <value>Enum.OrderStatuses.EnumValue.InProcess</value>
+    </value>
+  </choiceParameters>
+  <choiceForm>Catalog.CustomerOrderStates.Form.ChoiceForm</choiceForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

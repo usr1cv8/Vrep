@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8a0d4f7f-7a80-4e5d-8238-05fc169e0319">
+  <producedTypes>
+    <selectionType typeId="7b995b1d-1f4e-4699-9616-1226c59b2253" valueTypeId="6367f69e-74f9-47ce-9d0a-79ebd409e864"/>
+    <listType typeId="a3636a3a-5984-4504-9173-f12a3f485d79" valueTypeId="ea3fe36e-ece3-4c92-95c6-a5b5229e5bc6"/>
+    <managerType typeId="0eee9294-9644-44bb-adac-b0d0f239de81" valueTypeId="6aab3af5-4736-45f4-aae6-717ab9fcf767"/>
+    <recordSetType typeId="e1b81571-9aa6-41f2-b316-0faae28acbcf" valueTypeId="2c482cf4-5f70-4c04-bdd2-1163f9d3db46"/>
+    <recordKeyType typeId="08381ae5-3d08-4d19-85fe-dbb6f66191e2" valueTypeId="b8b3da11-bdfa-4f99-bf93-57b0093c120d"/>
+    <recordType typeId="aafec09c-670a-486a-b575-c4ae6653c84d" valueTypeId="e64431b6-5977-4ea2-9149-00c3138ce8e9"/>
+    <recordManagerType typeId="ca2aa7c1-51c7-4e39-9c8f-6f7567de5d94" valueTypeId="09fc8d2c-5dc2-45a3-a284-7a63de148a9a"/>
+  </producedTypes>
+  <name>AccessGroupsTables</name>
+  <synonym>
+    <key>en</key>
+    <value>Access group tables</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Таблицы групп доступа</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Bảng nhóm truy cập</value>
+  </synonym>
+  <defaultRecordForm>InformationRegister.AccessGroupsTables.Form.RecordForm</defaultRecordForm>
+  <defaultListForm>InformationRegister.AccessGroupsTables.Form.ListForm</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="8e9f9baf-8d12-46cc-915f-f6f290af5512">
+    <name>Update</name>
+    <synonym>
+      <key>en</key>
+      <value>Update</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Изменение</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Thay đổi</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Check box set to true shows that the specified user has the Edit access rights to the specified table within the specified access group</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Флажок, установленный истина, показывает наличие права изменения в заданной таблице для заданного пользователя в пределах заданной группы доступа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Hộp kiểm đặt là đúng, nghĩa là có quyền thay đổi trong bảng đã đặt đối với người sử dụng này trong phạm vi nhóm truy cập đã đặt</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:BooleanValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <attributes uuid="5808331f-9ab4-4a23-a592-1f65087f3214">
+    <name>TableType</name>
+    <synonym>
+      <key>en</key>
+      <value>Table type</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Тип таблицы</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Kiểu bảng</value>
+    </synonym>
+    <type>
+      <types>ExchangePlanRef</types>
+      <types>BusinessProcessRef</types>
+      <types>DocumentRef</types>
+      <types>ChartOfCalculationTypesRef</types>
+      <types>TaskRef</types>
+      <types>ChartOfCharacteristicTypesRef</types>
+      <types>ChartOfAccountsRef</types>
+      <types>CatalogRef</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>The auxiliary attribute containing the empty reference for object type tables.
+Attribute is used in the access restriction templates to speed up the working.</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Вспомогательный реквизит, содержащий пустую ссылку для таблиц объектного типа.
+Реквизит используется в шаблонах ограничения доступа для ускорения работы.</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Mục tin phụ trợ mà có tham chiếu trống đối với các bảng có kiểu đối tượng.
+Mục tin được sử dụng trong các khuôn mẫu hạn chế truy cập để đẩy nhanh công việc.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="9316738d-3d38-4068-818e-a001355b19fb">
+    <name>Table</name>
+    <synonym>
+      <key>en</key>
+      <value>Table</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Таблица</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Bảng</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.MetadataObjectIDs</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Metadata object identifier for which access rights are set in one of profile roles.</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Идентификатор объекта метаданных для которого в одной из ролей профиля заданы права доступа.</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Tên đối tượng metadata mà một trong các vai trò của hồ sơ đã đặt quyền truy cập.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="d86d766f-021a-4c11-b9e8-403af08918cc">
+    <name>AccessGroup</name>
+    <synonym>
+      <key>en</key>
+      <value>Access group</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Группа доступа</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Nhóm truy cập</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.AccessGroups</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Access group to which the description of available tables on users and rights belongs.</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа доступа, которой принадлежит описание доступных таблиц по пользователям и правам.</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nhóm truy cập có mô tả bảng truy cập theo người sử dụng và quyền.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.AccessGroups.EmptyRef</value>
+    </fillValue>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="2cedfef0-5d93-475a-b2dd-ee36e553e6e1">
+    <name>ListForm</name>
+    <synonym>
+      <key>en</key>
+      <value>List form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu danh sách</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="29200d04-d7da-435a-89e6-858c11a1a98c">
+    <name>RecordForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Entry form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu bản ghi</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

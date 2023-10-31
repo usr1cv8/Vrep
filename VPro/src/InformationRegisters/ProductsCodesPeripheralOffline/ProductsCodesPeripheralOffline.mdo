@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="705adae4-b4d3-406e-b4dc-a424b1f0b707">
+  <producedTypes>
+    <selectionType typeId="925442c9-8632-479d-a15e-1e8b25733aa9" valueTypeId="94ac1e73-0fc3-499a-be00-12bf53fb46c3"/>
+    <listType typeId="201582dd-56b9-4ab1-b898-0a739edc14c8" valueTypeId="c0cec600-81da-4de1-8874-ff0951f31f4a"/>
+    <managerType typeId="0d78eec2-6068-43a2-a59b-ba7788c60ce4" valueTypeId="5f87b29e-19d8-4bea-9404-dfbfaa9880b9"/>
+    <recordSetType typeId="c4702023-9018-44a6-82f4-2bfd9f8e763e" valueTypeId="6c7788eb-f628-4713-a793-42c2091c5400"/>
+    <recordKeyType typeId="34ea654c-ecbd-4ff9-a91e-32e214e6c338" valueTypeId="ac289a55-cb4a-4e85-9d71-262883690b40"/>
+    <recordType typeId="6a4c519a-86b4-48dd-b9fe-8de5b8531e45" valueTypeId="47fd5550-493c-4010-9f09-037ce4ce9c58"/>
+    <recordManagerType typeId="367d3245-78b8-49af-b04b-ff22b8d2a731" valueTypeId="e5f3f73b-852a-4fb8-be2c-72df722a979f"/>
+  </producedTypes>
+  <name>ProductsCodesPeripheralOffline</name>
+  <synonym>
+    <key>en</key>
+    <value>Goods codes of offline peripherals</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Коды товаров подключаемого оборудования offline</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Mã hàng hóa thiết bị bán hàng offline</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultRecordForm>InformationRegister.ProductsCodesPeripheralOffline.Form.RecordForm</defaultRecordForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:DateValue">
+      <value>0001-01-01T00:00:00</value>
+    </fillValue>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <resources uuid="d80ed33f-b175-4d24-a651-d3bff94e8ae3">
+    <name>ProductsAndServices</name>
+    <synonym>
+      <key>en</key>
+      <value>Products and services</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Продукция и услуги</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Mặt hàng</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ProductsAndServices</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Products and services for which the goods code is specified.</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Номенклатура для которой задается код товара.</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Mặt hàng mà được đặt mã hàng.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameters>
+      <name>Filter.ProductsAndServicesType</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.ProductsAndServicesTypes.EnumValue.InventoryItem</value>
+      </value>
+    </choiceParameters>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.ProductsAndServices.EmptyRef</value>
+    </fillValue>
+    <indexing>Index</indexing>
+  </resources>
+  <resources uuid="5cb89a28-59e2-4b27-a28d-c671c8c3e181">
+    <name>Characteristic</name>
+    <synonym>
+      <key>en</key>
+      <value>Characteristic</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Characteristic</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đặc tính</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ProductsAndServicesCharacteristics</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>If the selected products and services use characteristics, then specify  characteristics of products and services in this field.</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Если у выбранной номенклатуры используются характеристики, то в данном поле указывается  характеристика номенклатуры.</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nếu mặt hàng đã chọn có sử dụng đặc tính thì trong trường này cần chỉ ra đặc tính mặt hàng.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Filter.Owner</name>
+      <changeMode>DontChange</changeMode>
+      <field>InformationRegister.ProductsCodesPeripheralOffline.Resource.ProductsAndServices</field>
+    </choiceParameterLinks>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.ProductsAndServicesCharacteristics.EmptyRef</value>
+    </fillValue>
+  </resources>
+  <resources uuid="a3fea9db-04e5-4482-b0a4-7e8cf4caeb14">
+    <name>Batch</name>
+    <synonym>
+      <key>en</key>
+      <value>Batch</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Партия</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Lô hàng</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ProductsAndServicesBatches</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>If the selected products and services use characteristics, then specify  characteristics of products and services in this field.</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Если у выбранной номенклатуры используются характеристики, то в данном поле указывается  характеристика номенклатуры.</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nếu mặt hàng đã chọn có sử dụng đặc tính thì trong trường này cần chỉ ra đặc tính mặt hàng.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Filter.Owner</name>
+      <changeMode>DontChange</changeMode>
+      <field>InformationRegister.ProductsCodesPeripheralOffline.Resource.ProductsAndServices</field>
+    </choiceParameterLinks>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.ProductsAndServicesBatches.EmptyRef</value>
+    </fillValue>
+  </resources>
+  <resources uuid="98902815-1a29-4021-824d-22c7dfe836ab">
+    <name>MeasurementUnit</name>
+    <synonym>
+      <key>en</key>
+      <value>Unit of measure</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Единица измерения</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đơn vị tính</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.UOM</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>If the selected products and services use packagings, then specify packaging of products and services in this field.</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Если у выбранной номенклатуры используются упаковки, то в данном поле указывается упаковка номенклатуры.</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nếu mặt hàng đã chọn có sử dụng đóng gói thì trong trường này cần chỉ ra bộ đóng gói mặt hàng.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Filter.Owner</name>
+      <changeMode>DontChange</changeMode>
+      <field>InformationRegister.ProductsCodesPeripheralOffline.Resource.ProductsAndServices</field>
+    </choiceParameterLinks>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="64b1e397-1e97-40e4-b11c-874f74d50ebc">
+    <name>Used</name>
+    <synonym>
+      <key>en</key>
+      <value>Used</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Используется</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Đang sử dụng</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Shows that the current record satisfies the filter set in the exchange rule.</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак, указывающий что данная запись соответствует отбору, заданному в правиле обмена.</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Dấu hiệu chỉ ra rằng, bản ghi này phù hợp với bộ lọc đã đặt trong quy tắc trao đổi.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="78979e52-ac99-4a9a-82f2-282378703809">
+    <name>ExchangeRule</name>
+    <synonym>
+      <key>en</key>
+      <value>Exchange rule</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Правило обмена</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Quy tắc trao đổi</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ExchangeWithPeripheralsOfflineRules</types>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Rule of exchange with Offline peripherals.</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Правило обмена с подключаемым оборудованием Offline.</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Quy tắc trao đổi với thiết bị bán hàng Offline.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="bb848a09-50a3-4d01-9933-762034a12178">
+    <name>Code</name>
+    <synonym>
+      <key>en</key>
+      <value>Code</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>код</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>mã</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>en</key>
+      <value>Goods code acc. to the exchange rule with peripherals.</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Код товара по правилу обмена с подключаемым оборудованием.</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Mã hàng hóa theo quy tắc trao đổi với thiết bị bán hàng.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="0e0332da-f8d5-440c-a1a6-27168090504c">
+    <name>ProductsList</name>
+    <synonym>
+      <key>en</key>
+      <value>Goods list</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Список товаров</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Danh sách hàng hóa</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>en</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="e273574e-df12-4344-857e-a7d0b7af51a1">
+    <name>RecordForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Entry form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu bản ghi</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

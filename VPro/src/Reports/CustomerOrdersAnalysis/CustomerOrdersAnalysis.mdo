@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d6d23bcd-6aa7-43e0-b16f-092b8afdd6a4">
+  <producedTypes>
+    <objectType typeId="e41a4469-f62f-428f-a1d5-705c98a9d1ce" valueTypeId="13f86cd8-f06d-49cc-87bf-124766a29b23"/>
+    <managerType typeId="bf0421f7-0570-4f91-9602-bc3726acc41b" valueTypeId="c9754728-4210-4589-97c2-3c617cfbdc62"/>
+  </producedTypes>
+  <name>CustomerOrdersAnalysis</name>
+  <synonym>
+    <key>en</key>
+    <value>Customer order fulfillment analysis</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Анализ выполнения заказов покупателей</value>
+  </synonym>
+  <synonym>
+    <key>vi</key>
+    <value>Phân tích thực hiện đơn hàng của khách</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.CustomerOrdersAnalysis.Form.ReportForm</defaultForm>
+  <mainDataCompositionSchema>Report.CustomerOrdersAnalysis.Template.MainDataCompositionSchema</mainDataCompositionSchema>
+  <variantsStorage>SettingsStorage.ReportsVariantsStorage</variantsStorage>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>en</lang>
+    </pages>
+  </help>
+  <attributes uuid="29879858-148c-431d-8775-e2a59d9f58d9">
+    <name>FilterByOrderStatuses</name>
+    <synonym>
+      <key>en</key>
+      <value>Filter by order states</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Фильтр по состояниям заказов</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Lọc theo trạng thái đơn hàng</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>25</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="a86acca0-a243-4601-b8b7-07443621b6e4">
+    <name>ReportForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Report form</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Biểu mẫu báo cáo</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="22250984-14c3-4a74-97ee-354471c476dd">
+    <name>MainDataCompositionSchema</name>
+    <synonym>
+      <key>en</key>
+      <value>Main data composition schema</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Sơ đồ dàn dựng dữ liệu chính</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <commands uuid="0b9f0472-278f-4022-bc10-a1287b3fe880">
+    <name>OrderProcessingAnalysis</name>
+    <synonym>
+      <key>en</key>
+      <value>Order analysis</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Анализ заказа</value>
+    </synonym>
+    <synonym>
+      <key>vi</key>
+      <value>Phân tích đơn hàng</value>
+    </synonym>
+    <group>FormNavigationPanelImportant</group>
+    <commandParameterType>
+      <types>DocumentRef.CustomerInvoice</types>
+      <types>DocumentRef.AcceptanceCertificate</types>
+      <types>DocumentRef.InventoryReservation</types>
+    </commandParameterType>
+    <parameterUseMode>Multiple</parameterUseMode>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:Report>

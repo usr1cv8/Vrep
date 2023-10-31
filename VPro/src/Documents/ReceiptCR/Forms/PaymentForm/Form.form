@@ -1,0 +1,5430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <items xsi:type="form:FormGroup">
+    <name>GroupDocumentAmount</name>
+    <id>226</id>
+    <items xsi:type="form:FormField">
+      <name>DocumentAmount</name>
+      <id>41</id>
+      <title>
+        <key>en</key>
+        <value>Amount</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Сумма</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Số tiền</value>
+      </title>
+      <titleTextColor xsi:type="core:ColorRef">
+        <color>Style.FormTextColor</color>
+      </titleTextColor>
+      <titleFont xsi:type="core:FontRef">
+        <font>Style.ExtraLargeTextFont</font>
+      </titleFont>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>DocumentAmount</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>DocumentAmountExtendedTooltip</name>
+        <id>43</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>DocumentAmountContextMenu</name>
+        <id>42</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>LabelField</type>
+      <horizontalAlign>Left</horizontalAlign>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:LabelFieldExtInfo">
+        <width>27</width>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <horizontalStretch>true</horizontalStretch>
+        <textColor xsi:type="core:ColorRef">
+          <color>Style.FormTextColor</color>
+        </textColor>
+        <font xsi:type="core:FontRef">
+          <font>Style.ExtraLargeTextFont</font>
+          <bold>false</bold>
+          <italic>false</italic>
+          <underline>false</underline>
+          <strikeout>false</strikeout>
+        </font>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Group document amount</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Группа сумма документа</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Nhóm số tiền chứng từ</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Group document amount</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа сумма документа</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nhóm số tiền chứng từ</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>GroupDocumentAmountExtendedTooltip</name>
+      <id>227</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <backColor xsi:type="core:ColorRef">
+        <color>Style.UnselectedImageTextColor</color>
+      </backColor>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>GroupPayment</name>
+    <id>141</id>
+    <items xsi:type="form:FormGroup">
+      <name>GroupPaymentByCash</name>
+      <id>58</id>
+      <items xsi:type="form:FormGroup">
+        <name>Cash</name>
+        <id>8</id>
+        <items xsi:type="form:FormField">
+          <name>CashReceived</name>
+          <id>12</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>CashReceived</segments>
+          </dataPath>
+          <defaultItem>true</defaultItem>
+          <skipOnInput>true</skipOnInput>
+          <titleLocation>None</titleLocation>
+          <handlers>
+            <event>OnChange</event>
+            <name>DocumentReceiptCRCashReceivedOnChange</name>
+          </handlers>
+          <extendedTooltip>
+            <name>CashReceivedExtendedTooltip</name>
+            <id>14</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ReceivedCashContextMenu</name>
+            <id>13</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <width>30</width>
+            <autoMaxWidth>true</autoMaxWidth>
+            <height>1</height>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <dropListButton>true</dropListButton>
+            <choiceButton>false</choiceButton>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+            <font xsi:type="core:FontRef">
+              <font>Style.LargeTextFont</font>
+            </font>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>en</key>
+          <value>Cash</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Наличными</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Tiền mặt</value>
+        </title>
+        <toolTip>
+          <key>en</key>
+          <value>Cash</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>Наличными</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Tiền mặt</value>
+        </toolTip>
+        <toolTipRepresentation>None</toolTipRepresentation>
+        <extendedTooltip>
+          <name>CashExtendedTooltip</name>
+          <id>9</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>DocumentCurrency</name>
+        <id>148</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>DocumentCurrency</segments>
+        </dataPath>
+        <titleLocation>None</titleLocation>
+        <extendedTooltip>
+          <name>DocumentCurrencyExtendedTooltip</name>
+          <id>150</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>DocumentCurrencyContextMenu</name>
+          <id>149</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>LabelField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:LabelFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+        </extInfo>
+      </items>
+      <items xsi:type="form:Decoration">
+        <name>DecorationSplitter</name>
+        <id>132</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>DecorationSeparatorExtendedTooltip</name>
+          <id>134</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>DecorationSplitterContextMenu</name>
+          <id>133</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <horizontalStretch>true</horizontalStretch>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>GroupRightColumn</name>
+        <id>102</id>
+        <items xsi:type="form:FormGroup">
+          <name>GroupCalculator</name>
+          <id>104</id>
+          <items xsi:type="form:FormGroup">
+            <name>GroupButtonsColumn1</name>
+            <id>110</id>
+            <items xsi:type="form:Button">
+              <name>Button7</name>
+              <id>118</id>
+              <title>
+                <key>en</key>
+                <value>7</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>7</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>7</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>Button7ExtendedTooltip</name>
+                <id>119</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualButton</type>
+              <commandName>Form.Command.Button7</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <height>1</height>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <font xsi:type="core:FontRef">
+                <font>Style.LargeTextFont</font>
+              </font>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>Button4</name>
+              <id>116</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>Button4ExtendedTooltip</name>
+                <id>117</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualButton</type>
+              <commandName>Form.Command.Button4</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <font xsi:type="core:FontRef">
+                <font>Style.LargeTextFont</font>
+              </font>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>Button1</name>
+              <id>112</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>Button1ExtendedTooltip</name>
+                <id>113</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualButton</type>
+              <commandName>Form.Command.Button1</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <font xsi:type="core:FontRef">
+                <font>Style.LargeTextFont</font>
+              </font>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>Button0</name>
+              <id>114</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>Button0ExtendedTooltip</name>
+                <id>115</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualButton</type>
+              <commandName>Form.Command.Button0</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <font xsi:type="core:FontRef">
+                <font>Style.LargeTextFont</font>
+              </font>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>en</key>
+              <value>Button group column 1</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Группа кнопки колонка 1</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Nhóm cột cột 1</value>
+            </title>
+            <toolTip>
+              <key>en</key>
+              <value>Button group column 1</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Группа кнопки колонка 1</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Nhóm cột cột 1</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>GroupColumnButtons1ExtendedTooltip</name>
+              <id>111</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualGroup</type>
+            <extInfo xsi:type="form:UsualGroupExtInfo">
+              <group>Vertical</group>
+              <showLeftMargin>true</showLeftMargin>
+              <united>true</united>
+              <throughAlign>Auto</throughAlign>
+              <currentRowUse>Auto</currentRowUse>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormGroup">
+            <name>GroupButtonsColumn2</name>
+            <id>108</id>
+            <items xsi:type="form:Button">
+              <name>Button8</name>
+              <id>124</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>Button8ExtendedTooltip</name>
+                <id>125</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualButton</type>
+              <commandName>Form.Command.Button8</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <font xsi:type="core:FontRef">
+                <font>Style.LargeTextFont</font>
+              </font>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>Button5</name>
+              <id>122</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>Button5ExtendedTooltip</name>
+                <id>123</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualButton</type>
+              <commandName>Form.Command.Button5</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <font xsi:type="core:FontRef">
+                <font>Style.LargeTextFont</font>
+              </font>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>Button2</name>
+              <id>120</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>Button2ExtendedTooltip</name>
+                <id>121</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualButton</type>
+              <commandName>Form.Command.Button2</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <font xsi:type="core:FontRef">
+                <font>Style.LargeTextFont</font>
+              </font>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>DelimiterFractionalParts</name>
+              <id>137</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>FractionalPartDelimiterExtendedTooltip</name>
+                <id>138</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualButton</type>
+              <commandName>Form.Command.DelimiterFractionalParts</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <font xsi:type="core:FontRef">
+                <font>Style.LargeTextFont</font>
+              </font>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>en</key>
+              <value>Button group column 2</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Группа кнопки колонка 2</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Nhóm cột cột 2</value>
+            </title>
+            <toolTip>
+              <key>en</key>
+              <value>Button group column 2</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Группа кнопки колонка 2</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Nhóm cột cột 2</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>GroupColumnExtended2ButtonsToolTip</name>
+              <id>109</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualGroup</type>
+            <extInfo xsi:type="form:UsualGroupExtInfo">
+              <group>Vertical</group>
+              <showLeftMargin>true</showLeftMargin>
+              <united>true</united>
+              <throughAlign>Auto</throughAlign>
+              <currentRowUse>Auto</currentRowUse>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormGroup">
+            <name>GroupButtonsColumn3</name>
+            <id>106</id>
+            <items xsi:type="form:Button">
+              <name>Button9</name>
+              <id>130</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>Button9ExtendedTooltip</name>
+                <id>131</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualButton</type>
+              <commandName>Form.Command.Button9</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <font xsi:type="core:FontRef">
+                <font>Style.LargeTextFont</font>
+              </font>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>Button6</name>
+              <id>128</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>Button6ExtendedTooltip</name>
+                <id>129</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualButton</type>
+              <commandName>Form.Command.Button6</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <font xsi:type="core:FontRef">
+                <font>Style.LargeTextFont</font>
+              </font>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>Button3</name>
+              <id>126</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>Button3ExtendedTooltip</name>
+                <id>127</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualButton</type>
+              <commandName>Form.Command.Button3</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <font xsi:type="core:FontRef">
+                <font>Style.LargeTextFont</font>
+              </font>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>Reset</name>
+              <id>135</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>ResetExtendedTooltip</name>
+                <id>136</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualButton</type>
+              <commandName>Form.Command.Reset</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <font xsi:type="core:FontRef">
+                <font>Style.LargeTextFont</font>
+              </font>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>en</key>
+              <value>Button group column 3</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Группа кнопки колонка 3</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Nhóm cột cột 3</value>
+            </title>
+            <toolTip>
+              <key>en</key>
+              <value>Button group column 3</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Группа кнопки колонка 3</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Nhóm cột cột 3</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>GroupColumn3ButtonsExtendedTooltip</name>
+              <id>107</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualGroup</type>
+            <extInfo xsi:type="form:UsualGroupExtInfo">
+              <group>Vertical</group>
+              <showLeftMargin>true</showLeftMargin>
+              <united>true</united>
+              <throughAlign>Auto</throughAlign>
+              <currentRowUse>Auto</currentRowUse>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>en</key>
+            <value>Group calculator</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Группа калькулятор</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Nhóm máy tính</value>
+          </title>
+          <toolTip>
+            <key>en</key>
+            <value>Group calculator</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Группа калькулятор</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Nhóm máy tính</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>GroupCalculatorExtendedTooltip</name>
+            <id>105</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <backColor xsi:type="core:ColorRef">
+              <color>Style.UnselectedImageTextColor</color>
+            </backColor>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>en</key>
+          <value>Group right column</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Группа правая колонка</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Nhóm cột phải</value>
+        </title>
+        <toolTip>
+          <key>en</key>
+          <value>Group right column</value>
+        </toolTip>
+        <toolTip>
+          <key>ru</key>
+          <value>Группа правая колонка</value>
+        </toolTip>
+        <toolTip>
+          <key>vi</key>
+          <value>Nhóm cột phải</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>GroupRightColumnExtendedTooltip</name>
+          <id>103</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>Vertical</group>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Cash payment</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Наличная оплата</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Tiền mặt</value>
+      </title>
+      <titleFont xsi:type="core:FontRef">
+        <font>System.DefaultGUIFont</font>
+      </titleFont>
+      <toolTip>
+        <key>en</key>
+        <value>Cash payment</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Наличная оплата</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Tiền mặt</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>GroupPaymentByCashExtendedTooltip</name>
+        <id>59</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>Page</type>
+      <extInfo xsi:type="form:PageGroupExtInfo">
+        <showTitle>true</showTitle>
+        <backColor xsi:type="core:ColorRef">
+          <color>Style.FormBackColor</color>
+        </backColor>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>GroupCashlessPayment</name>
+      <id>143</id>
+      <items xsi:type="form:FormGroup">
+        <name>Group2</name>
+        <id>183</id>
+        <items xsi:type="form:FormGroup">
+          <name>GroupPaymentCards</name>
+          <id>51</id>
+          <items xsi:type="form:FormGroup">
+            <name>GroupPatternCardPayments</name>
+            <id>188</id>
+            <items xsi:type="form:FormGroup">
+              <name>GroupAmount</name>
+              <id>192</id>
+              <items xsi:type="form:FormField">
+                <name>FIELDAMOUNT</name>
+                <id>194</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <dataPath xsi:type="form:DataPath">
+                  <segments>Object.PaymentWithPaymentCards[0].Amount</segments>
+                </dataPath>
+                <titleLocation>None</titleLocation>
+                <toolTip>
+                  <key>en</key>
+                  <value>Calculator changes data in the Amount low field or Amount last changed field
+If you need to attach calculator to another field you should click the button with calculator picture in this field</value>
+                </toolTip>
+                <toolTip>
+                  <key>ru</key>
+                  <value>Калькулятор изменяет данные в нижнем поле &quot;Сумма&quot; или в последнем изменённом поле &quot;Сумма&quot;.
+Если нужно привязать калькулятор к другому полю, то нажмите в этом поле кнопку с изображением калькулятора.</value>
+                </toolTip>
+                <toolTip>
+                  <key>vi</key>
+                  <value>Máy tính thay đổi dữ liệu trong trường &quot;Số tiền&quot; bên dưới hoặc trong trường &quot;Số tiền&quot; bị thay đổi sau đó.
+Nếu cần liên kết máy tính với trường khác, hãy nhấn nút có hình máy tình trong trường này.</value>
+                </toolTip>
+                <toolTipRepresentation>Button</toolTipRepresentation>
+                <extendedTooltip>
+                  <name>FieldAmountExtendedTooltip</name>
+                  <id>196</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <contextMenu>
+                  <name>FieldAmountContextMenu</name>
+                  <id>195</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <autoFill>true</autoFill>
+                </contextMenu>
+                <type>InputField</type>
+                <editMode>Enter</editMode>
+                <showInHeader>true</showInHeader>
+                <headerHorizontalAlign>Left</headerHorizontalAlign>
+                <showInFooter>true</showInFooter>
+                <extInfo xsi:type="form:InputFieldExtInfo">
+                  <width>35</width>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <horizontalStretch>false</horizontalStretch>
+                  <wrap>true</wrap>
+                  <choiceButton>true</choiceButton>
+                  <chooseType>true</chooseType>
+                  <incompleteChoiceMode>OnActivate</incompleteChoiceMode>
+                  <typeDomainEnabled>true</typeDomainEnabled>
+                  <textEdit>true</textEdit>
+                </extInfo>
+              </items>
+              <items xsi:type="form:FormField">
+                <name>DocumentCurrencyPattern</name>
+                <id>197</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <dataPath xsi:type="form:DataPath">
+                  <segments>DocumentCurrency</segments>
+                </dataPath>
+                <titleLocation>None</titleLocation>
+                <extendedTooltip>
+                  <name>DocumentCurrencyPatternExtendedTooltip</name>
+                  <id>199</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <contextMenu>
+                  <name>DocumentCurrencyTemplateContextMenu</name>
+                  <id>198</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <autoFill>true</autoFill>
+                </contextMenu>
+                <type>LabelField</type>
+                <editMode>Enter</editMode>
+                <showInHeader>true</showInHeader>
+                <headerHorizontalAlign>Left</headerHorizontalAlign>
+                <showInFooter>true</showInFooter>
+                <extInfo xsi:type="form:LabelFieldExtInfo">
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                </extInfo>
+              </items>
+              <items xsi:type="form:Button">
+                <name>DeletePaymentByCardPattern</name>
+                <id>299</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>DeletePaymentByCardPatternExtendedTooltip</name>
+                  <id>300</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.ChooseCashToDeletePayment</commandName>
+                <representation>Auto</representation>
+                <width>4</width>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <title>
+                <key>en</key>
+                <value>Amount group</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Группа сумма</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Nhóm số tiền</value>
+              </title>
+              <toolTip>
+                <key>en</key>
+                <value>Amount group</value>
+              </toolTip>
+              <toolTip>
+                <key>ru</key>
+                <value>Группа сумма</value>
+              </toolTip>
+              <toolTip>
+                <key>vi</key>
+                <value>Nhóm số tiền</value>
+              </toolTip>
+              <extendedTooltip>
+                <name>GroupAmountExtendedTooltip</name>
+                <id>193</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualGroup</type>
+              <extInfo xsi:type="form:UsualGroupExtInfo">
+                <showLeftMargin>true</showLeftMargin>
+                <united>true</united>
+                <throughAlign>Auto</throughAlign>
+                <currentRowUse>Auto</currentRowUse>
+              </extInfo>
+            </items>
+            <items xsi:type="form:FormGroup">
+              <name>GroupAttributesP1</name>
+              <id>200</id>
+              <items xsi:type="form:FormField">
+                <name>FieldCardKind</name>
+                <id>205</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <dataPath xsi:type="form:DataPath">
+                  <segments>Object.PaymentWithPaymentCards[0].ChargeCardKind</segments>
+                </dataPath>
+                <titleLocation>None</titleLocation>
+                <extendedTooltip>
+                  <name>FieldCardKindExtendedTooltip</name>
+                  <id>207</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <contextMenu>
+                  <name>FieldCardTypeContextMenu</name>
+                  <id>206</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <autoFill>true</autoFill>
+                </contextMenu>
+                <type>InputField</type>
+                <editMode>Enter</editMode>
+                <showInHeader>true</showInHeader>
+                <headerHorizontalAlign>Left</headerHorizontalAlign>
+                <showInFooter>true</showInFooter>
+                <extInfo xsi:type="form:InputFieldExtInfo">
+                  <width>16</width>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <horizontalStretch>false</horizontalStretch>
+                  <wrap>true</wrap>
+                  <chooseType>true</chooseType>
+                  <typeDomainEnabled>true</typeDomainEnabled>
+                  <textEdit>true</textEdit>
+                </extInfo>
+              </items>
+              <items xsi:type="form:FormField">
+                <name>FieldCardNumber</name>
+                <id>202</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <dataPath xsi:type="form:DataPath">
+                  <segments>Object.PaymentWithPaymentCards[0].ChargeCardNo</segments>
+                </dataPath>
+                <titleLocation>None</titleLocation>
+                <extendedTooltip>
+                  <name>FieldCardNumberExtendedTooltip</name>
+                  <id>204</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <contextMenu>
+                  <name>FieldCardNumberContextMenu</name>
+                  <id>203</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <autoFill>true</autoFill>
+                </contextMenu>
+                <type>InputField</type>
+                <editMode>Enter</editMode>
+                <showInHeader>true</showInHeader>
+                <headerHorizontalAlign>Left</headerHorizontalAlign>
+                <showInFooter>true</showInFooter>
+                <extInfo xsi:type="form:InputFieldExtInfo">
+                  <width>27</width>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <horizontalStretch>false</horizontalStretch>
+                  <wrap>true</wrap>
+                  <chooseType>true</chooseType>
+                  <typeDomainEnabled>true</typeDomainEnabled>
+                  <textEdit>true</textEdit>
+                </extInfo>
+              </items>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <title>
+                <key>en</key>
+                <value>Group attributes p.1</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Группа реквизиты ч. 1</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Nhóm mục tin p1</value>
+              </title>
+              <toolTip>
+                <key>en</key>
+                <value>Group attributes P1</value>
+              </toolTip>
+              <toolTip>
+                <key>ru</key>
+                <value>Группа реквизиты ч1</value>
+              </toolTip>
+              <toolTip>
+                <key>vi</key>
+                <value>Nhóm mục tin p1</value>
+              </toolTip>
+              <extendedTooltip>
+                <name>GroupAttributesP1ExtendedTooltip</name>
+                <id>201</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualGroup</type>
+              <extInfo xsi:type="form:UsualGroupExtInfo">
+                <showLeftMargin>true</showLeftMargin>
+                <united>true</united>
+                <throughAlign>Auto</throughAlign>
+                <currentRowUse>Auto</currentRowUse>
+              </extInfo>
+            </items>
+            <items xsi:type="form:FormGroup">
+              <name>GroupAttributesP2</name>
+              <id>208</id>
+              <items xsi:type="form:FormField">
+                <name>FieldETReceiptNo</name>
+                <id>210</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <dataPath xsi:type="form:DataPath">
+                  <segments>Object.PaymentWithPaymentCards[0].ETReceiptNo</segments>
+                </dataPath>
+                <titleLocation>None</titleLocation>
+                <extendedTooltip>
+                  <name>FieldETReceiptNoExtendedTooltip</name>
+                  <id>212</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <contextMenu>
+                  <name>FieldETReceiptNoContextMenu</name>
+                  <id>211</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <autoFill>true</autoFill>
+                </contextMenu>
+                <type>InputField</type>
+                <editMode>Enter</editMode>
+                <showInHeader>true</showInHeader>
+                <headerHorizontalAlign>Left</headerHorizontalAlign>
+                <showInFooter>true</showInFooter>
+                <extInfo xsi:type="form:InputFieldExtInfo">
+                  <width>16</width>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <horizontalStretch>false</horizontalStretch>
+                  <wrap>true</wrap>
+                  <chooseType>true</chooseType>
+                  <typeDomainEnabled>true</typeDomainEnabled>
+                  <textEdit>true</textEdit>
+                </extInfo>
+              </items>
+              <items xsi:type="form:FormField">
+                <name>FieldRefNo</name>
+                <id>213</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <dataPath xsi:type="form:DataPath">
+                  <segments>Object.PaymentWithPaymentCards[0].RefNo</segments>
+                </dataPath>
+                <titleLocation>None</titleLocation>
+                <extendedTooltip>
+                  <name>FieldReferenceNumberExtendedTooltip</name>
+                  <id>215</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <contextMenu>
+                  <name>FieldReferenceNumberContextMenu</name>
+                  <id>214</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <autoFill>true</autoFill>
+                </contextMenu>
+                <type>InputField</type>
+                <editMode>Enter</editMode>
+                <showInHeader>true</showInHeader>
+                <headerHorizontalAlign>Left</headerHorizontalAlign>
+                <showInFooter>true</showInFooter>
+                <extInfo xsi:type="form:InputFieldExtInfo">
+                  <width>27</width>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <horizontalStretch>false</horizontalStretch>
+                  <wrap>true</wrap>
+                  <chooseType>true</chooseType>
+                  <typeDomainEnabled>true</typeDomainEnabled>
+                  <textEdit>true</textEdit>
+                </extInfo>
+              </items>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <title>
+                <key>en</key>
+                <value>Group attributes p.2</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Группа реквизиты ч. 2</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Nhóm mục tin p2</value>
+              </title>
+              <toolTip>
+                <key>en</key>
+                <value>Group attributes P1</value>
+              </toolTip>
+              <toolTip>
+                <key>ru</key>
+                <value>Группа реквизиты ч1</value>
+              </toolTip>
+              <toolTip>
+                <key>vi</key>
+                <value>Nhóm mục tin p1</value>
+              </toolTip>
+              <extendedTooltip>
+                <name>GroupAttributesP2ExtendedTooltip</name>
+                <id>209</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualGroup</type>
+              <extInfo xsi:type="form:UsualGroupExtInfo">
+                <showLeftMargin>true</showLeftMargin>
+                <united>true</united>
+                <throughAlign>Auto</throughAlign>
+                <currentRowUse>Auto</currentRowUse>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>en</key>
+              <value>Group payment card template</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Группа шаблон карты оплаты</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Nhóm khuôn mẫu thẻ thanh toán</value>
+            </title>
+            <toolTip>
+              <key>en</key>
+              <value>Group payment card template</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Группа шаблон карты оплаты</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Nhóm khuôn mẫu thẻ thanh toán</value>
+            </toolTip>
+            <width>46</width>
+            <extendedTooltip>
+              <name>GroupCardPaymentPatternExtendedTooltip</name>
+              <id>189</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualGroup</type>
+            <extInfo xsi:type="form:UsualGroupExtInfo">
+              <group>Vertical</group>
+              <showLeftMargin>true</showLeftMargin>
+              <united>true</united>
+              <backColor xsi:type="core:ColorDef">
+                <red>235</red>
+                <green>235</green>
+                <blue>235</blue>
+              </backColor>
+              <throughAlign>Auto</throughAlign>
+              <currentRowUse>Auto</currentRowUse>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>en</key>
+            <value>Payment card group</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Группа карты оплаты</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Nhóm thẻ thanh toán</value>
+          </title>
+          <toolTip>
+            <key>en</key>
+            <value>Payment card group</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Группа карты оплаты</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Nhóm thẻ thanh toán</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>GroupCardsPaymentExtendedTooltip</name>
+            <id>52</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>Vertical</group>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <items xsi:type="form:Decoration">
+          <name>DecorationDelimiter_2</name>
+          <id>185</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>DecorationDelimiter_2ExtendedTooltip</name>
+            <id>187</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>AttributeDelimiter_2ContextMenu</name>
+            <id>186</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>true</horizontalStretch>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>GroupCalculatorAndCardNumber</name>
+          <id>216</id>
+          <items xsi:type="form:FormGroup">
+            <name>GroupCalculator_2</name>
+            <id>151</id>
+            <items xsi:type="form:FormGroup">
+              <name>GroupButtonsColumn1_2</name>
+              <id>153</id>
+              <items xsi:type="form:Button">
+                <name>Button7_2</name>
+                <id>155</id>
+                <title>
+                  <key>en</key>
+                  <value>7</value>
+                </title>
+                <title>
+                  <key>ru</key>
+                  <value>7</value>
+                </title>
+                <title>
+                  <key>vi</key>
+                  <value>7</value>
+                </title>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>Button7_2ExtendedTooltip</name>
+                  <id>156</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.Button7_2</commandName>
+                <representation>Auto</representation>
+                <autoMaxWidth>true</autoMaxWidth>
+                <height>1</height>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <font xsi:type="core:FontRef">
+                  <font>Style.LargeTextFont</font>
+                </font>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <items xsi:type="form:Button">
+                <name>Button4_2</name>
+                <id>157</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>Button4_2ExtendedTooltip</name>
+                  <id>158</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.Button4_2</commandName>
+                <representation>Auto</representation>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <font xsi:type="core:FontRef">
+                  <font>Style.LargeTextFont</font>
+                </font>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <items xsi:type="form:Button">
+                <name>Button1_2</name>
+                <id>159</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>Button1_2ExtendedTooltip</name>
+                  <id>160</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.Button1_2</commandName>
+                <representation>Auto</representation>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <font xsi:type="core:FontRef">
+                  <font>Style.LargeTextFont</font>
+                </font>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <items xsi:type="form:Button">
+                <name>Button0_2</name>
+                <id>171</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>Button0_2ExtendedTooltip</name>
+                  <id>172</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.Button0_2</commandName>
+                <representation>Auto</representation>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <font xsi:type="core:FontRef">
+                  <font>Style.LargeTextFont</font>
+                </font>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <title>
+                <key>en</key>
+                <value>Button group column 1</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Группа кнопки колонка 1</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Nhóm cột cột 1</value>
+              </title>
+              <toolTip>
+                <key>en</key>
+                <value>Button group column1 2</value>
+              </toolTip>
+              <toolTip>
+                <key>ru</key>
+                <value>Группа кнопки колонка1 2</value>
+              </toolTip>
+              <toolTip>
+                <key>vi</key>
+                <value>Nhóm cột cột1 2</value>
+              </toolTip>
+              <extendedTooltip>
+                <name>GroupButtonsColumn1_2ExtendedTooltip</name>
+                <id>154</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualGroup</type>
+              <extInfo xsi:type="form:UsualGroupExtInfo">
+                <group>Vertical</group>
+                <showLeftMargin>true</showLeftMargin>
+                <united>true</united>
+                <throughAlign>Auto</throughAlign>
+                <currentRowUse>Auto</currentRowUse>
+              </extInfo>
+            </items>
+            <items xsi:type="form:FormGroup">
+              <name>GroupButtonsColumn2_2</name>
+              <id>163</id>
+              <items xsi:type="form:Button">
+                <name>Button8_2</name>
+                <id>165</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>Button8_2ExtendedTooltip</name>
+                  <id>166</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.Button8_2</commandName>
+                <representation>Auto</representation>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <font xsi:type="core:FontRef">
+                  <font>Style.LargeTextFont</font>
+                </font>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <items xsi:type="form:Button">
+                <name>Button5_2</name>
+                <id>167</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>Button5_2ExtendedTooltip</name>
+                  <id>168</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.Button5_2</commandName>
+                <representation>Auto</representation>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <font xsi:type="core:FontRef">
+                  <font>Style.LargeTextFont</font>
+                </font>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <items xsi:type="form:Button">
+                <name>Button2_2</name>
+                <id>169</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>Button2_2ExtendedTooltip</name>
+                  <id>170</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.Button2_2</commandName>
+                <representation>Auto</representation>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <font xsi:type="core:FontRef">
+                  <font>Style.LargeTextFont</font>
+                </font>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <items xsi:type="form:Button">
+                <name>DelimiterFractionalParts_2</name>
+                <id>181</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>DelimiterFractionalParts_2ExtendedTooltip</name>
+                  <id>182</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.DelimiterFractionalParts_2</commandName>
+                <representation>Auto</representation>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <font xsi:type="core:FontRef">
+                  <font>Style.LargeTextFont</font>
+                </font>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <title>
+                <key>en</key>
+                <value>Button group column 2</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Группа кнопки колонка 2</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Nhóm cột cột 2</value>
+              </title>
+              <toolTip>
+                <key>en</key>
+                <value>Button group column2 2</value>
+              </toolTip>
+              <toolTip>
+                <key>ru</key>
+                <value>Группа кнопки колонка2 2</value>
+              </toolTip>
+              <toolTip>
+                <key>vi</key>
+                <value>Nhóm cột cột2 2</value>
+              </toolTip>
+              <extendedTooltip>
+                <name>GroupButtonsColumn2_2ExtendedTooltip</name>
+                <id>164</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualGroup</type>
+              <extInfo xsi:type="form:UsualGroupExtInfo">
+                <group>Vertical</group>
+                <showLeftMargin>true</showLeftMargin>
+                <united>true</united>
+                <throughAlign>Auto</throughAlign>
+                <currentRowUse>Auto</currentRowUse>
+              </extInfo>
+            </items>
+            <items xsi:type="form:FormGroup">
+              <name>GroupButtonsColumn3_2</name>
+              <id>173</id>
+              <items xsi:type="form:Button">
+                <name>Button9_2</name>
+                <id>175</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>Button9_2ExtendedTooltip</name>
+                  <id>176</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.Button9_2</commandName>
+                <representation>Auto</representation>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <font xsi:type="core:FontRef">
+                  <font>Style.LargeTextFont</font>
+                </font>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <items xsi:type="form:Button">
+                <name>Button6_2</name>
+                <id>177</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>Button6_2ExtendedTooltip</name>
+                  <id>178</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.Button6_2</commandName>
+                <representation>Auto</representation>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <font xsi:type="core:FontRef">
+                  <font>Style.LargeTextFont</font>
+                </font>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <items xsi:type="form:Button">
+                <name>Button3_2</name>
+                <id>179</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>Button3_2ExtendedTooltip</name>
+                  <id>180</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.Button3_2</commandName>
+                <representation>Auto</representation>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <font xsi:type="core:FontRef">
+                  <font>Style.LargeTextFont</font>
+                </font>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <items xsi:type="form:Button">
+                <name>Reset_2</name>
+                <id>161</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <extendedTooltip>
+                  <name>Reset_2ExtendedTooltip</name>
+                  <id>162</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>UsualButton</type>
+                <commandName>Form.Command.Reset_2</commandName>
+                <representation>Auto</representation>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <placementArea>UserCmds</placementArea>
+                <font xsi:type="core:FontRef">
+                  <font>Style.LargeTextFont</font>
+                </font>
+                <representationInContextMenu>Auto</representationInContextMenu>
+              </items>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <title>
+                <key>en</key>
+                <value>Button group column 3</value>
+              </title>
+              <title>
+                <key>ru</key>
+                <value>Группа кнопки колонка 3</value>
+              </title>
+              <title>
+                <key>vi</key>
+                <value>Nhóm cột cột 3</value>
+              </title>
+              <toolTip>
+                <key>en</key>
+                <value>Button group column3 2</value>
+              </toolTip>
+              <toolTip>
+                <key>ru</key>
+                <value>Группа кнопки колонка3 2</value>
+              </toolTip>
+              <toolTip>
+                <key>vi</key>
+                <value>Nhóm cột cột3 2</value>
+              </toolTip>
+              <extendedTooltip>
+                <name>GroupButtonsColumn3_2ExtendedTooltip</name>
+                <id>174</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualGroup</type>
+              <extInfo xsi:type="form:UsualGroupExtInfo">
+                <group>Vertical</group>
+                <showLeftMargin>true</showLeftMargin>
+                <united>true</united>
+                <throughAlign>Auto</throughAlign>
+                <currentRowUse>Auto</currentRowUse>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>en</key>
+              <value>Group calculator</value>
+            </title>
+            <title>
+              <key>ru</key>
+              <value>Группа калькулятор</value>
+            </title>
+            <title>
+              <key>vi</key>
+              <value>Nhóm máy tính</value>
+            </title>
+            <toolTip>
+              <key>en</key>
+              <value>Group calculator</value>
+            </toolTip>
+            <toolTip>
+              <key>ru</key>
+              <value>Группа калькулятор</value>
+            </toolTip>
+            <toolTip>
+              <key>vi</key>
+              <value>Nhóm máy tính</value>
+            </toolTip>
+            <extendedTooltip>
+              <name>GroupCalculator_2ExtendedTooltip</name>
+              <id>152</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualGroup</type>
+            <extInfo xsi:type="form:UsualGroupExtInfo">
+              <showLeftMargin>true</showLeftMargin>
+              <united>true</united>
+              <backColor xsi:type="core:ColorRef">
+                <color>Style.UnselectedImageTextColor</color>
+              </backColor>
+              <throughAlign>Auto</throughAlign>
+              <currentRowUse>Auto</currentRowUse>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>CurrentInputFieldLabel</name>
+            <id>223</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>CurrentInputFieldLabel</segments>
+            </dataPath>
+            <titleLocation>None</titleLocation>
+            <extendedTooltip>
+              <name>CurrentInputFieldLabelExtendedTooltip</name>
+              <id>225</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>CurrentInputFieldLabelContextMenu</name>
+              <id>224</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <readOnly>true</readOnly>
+            <horizontalAlign>Center</horizontalAlign>
+            <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <width>13</width>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <horizontalStretch>false</horizontalStretch>
+              <wrap>true</wrap>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>en</key>
+            <value>Group calculator and card number</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Группа калькулятор и номер карты</value>
+          </title>
+          <title>
+            <key>vi</key>
+            <value>Nhóm máy tính và số thẻ</value>
+          </title>
+          <toolTip>
+            <key>en</key>
+            <value>Group calculator and card number</value>
+          </toolTip>
+          <toolTip>
+            <key>ru</key>
+            <value>Группа калькулятор и номер карты</value>
+          </toolTip>
+          <toolTip>
+            <key>vi</key>
+            <value>Nhóm máy tính và số thẻ</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>GroupCalculatorAndCardNumberExtendedTooltip</name>
+            <id>217</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>Vertical</group>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <backColor xsi:type="core:ColorRef">
+              <color>Style.UnselectedImageTextColor</color>
+            </backColor>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>Group2ExtendedTooltip</name>
+          <id>184</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <items xsi:type="form:Button">
+        <name>AddCard</name>
+        <id>47</id>
+        <title>
+          <key>en</key>
+          <value>Add card</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Добавить карту</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Thêm thẻ</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>AddCardExtendedTooltip</name>
+          <id>48</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualButton</type>
+        <commandName>Form.Command.AddCard</commandName>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <font xsi:type="core:FontRef">
+          <font>Style.LargeTextFont</font>
+          <bold>true</bold>
+          <italic>false</italic>
+          <underline>false</underline>
+          <strikeout>false</strikeout>
+        </font>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>POSTerminal</name>
+        <id>233</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>Object.POSTerminal</segments>
+        </dataPath>
+        <handlers>
+          <event>OnChange</event>
+          <name>POSTerminalOnChange</name>
+        </handlers>
+        <extendedTooltip>
+          <name>POSTerminalExtendedTooltip</name>
+          <id>235</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>POSTerminalContextMenu</name>
+          <id>234</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <wrap>true</wrap>
+          <autoMarkIncomplete>true</autoMarkIncomplete>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+          <choiceParameterLinks>
+            <name>Filter.PettyCash</name>
+            <datapath xsi:type="form:DataPath">
+              <segments>CashCR</segments>
+            </datapath>
+          </choiceParameterLinks>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Non-cash payment</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Безналичная оплата</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Thẻ thanh toán</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Group non-cash payment</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Группа безналичная оплата</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Nhóm thanh toán bằng tiền gửi</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>GroupCashlessPaymentExtendedTooltip</name>
+        <id>144</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>Page</type>
+      <extInfo xsi:type="form:PageGroupExtInfo">
+        <group>Vertical</group>
+        <showTitle>true</showTitle>
+        <titleDataPath xsi:type="form:DataPath">
+          <segments>CardsAmountForTitle</segments>
+        </titleDataPath>
+        <backColor xsi:type="core:ColorRef">
+          <color>Style.FormBackColor</color>
+        </backColor>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Payment group</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Группа оплата</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Nhóm thanh toán</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Payment group</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа оплата</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nhóm thanh toán</value>
+    </toolTip>
+    <horizontalStretch>true</horizontalStretch>
+    <extendedTooltip>
+      <name>GroupPaymentExtendedTooltip</name>
+      <id>142</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>Pages</type>
+    <extInfo xsi:type="form:PagesGroupExtInfo">
+      <handlers>
+        <event>OnCurrentPageChange</event>
+        <name>GroupPaymentOnCurrentPageChange</name>
+      </handlers>
+      <pagesRepresentation>TabsOnTop</pagesRepresentation>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>GroupAmountDeposit</name>
+    <id>100</id>
+    <items xsi:type="form:FormField">
+      <name>AmountShortChange</name>
+      <id>31</id>
+      <title>
+        <key>en</key>
+        <value>Change</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Сдача</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Cấp</value>
+      </title>
+      <titleTextColor xsi:type="core:ColorRef">
+        <color>Style.FormTextColor</color>
+      </titleTextColor>
+      <titleFont xsi:type="core:FontRef">
+        <font>Style.ExtraLargeTextFont</font>
+        <bold>false</bold>
+        <italic>false</italic>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+      </titleFont>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>AmountShortChange</segments>
+      </dataPath>
+      <skipOnInput>true</skipOnInput>
+      <toolTipRepresentation>None</toolTipRepresentation>
+      <extendedTooltip>
+        <name>ChangeAmountExtendedTooltip</name>
+        <id>33</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ChangeAmountContextMenu</name>
+        <id>32</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>LabelField</type>
+      <horizontalAlign>Left</horizontalAlign>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:LabelFieldExtInfo">
+        <width>27</width>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <horizontalStretch>true</horizontalStretch>
+        <markNegatives>true</markNegatives>
+        <format>
+          <key>en</key>
+          <value>ND=15; NFD=2; NZ=</value>
+        </format>
+        <format>
+          <key>ru</key>
+          <value>ЧЦ=15; ЧДЦ=2; ЧН=</value>
+        </format>
+        <format>
+          <key>vi</key>
+          <value>ND=15; NFD=2; NZ=</value>
+        </format>
+        <textColor xsi:type="core:ColorRef">
+          <color>Style.FormTextColor</color>
+        </textColor>
+        <font xsi:type="core:FontRef">
+          <font>Style.ExtraLargeTextFont</font>
+          <bold>false</bold>
+          <italic>false</italic>
+          <underline>false</underline>
+          <strikeout>false</strikeout>
+        </font>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Group change amount</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Группа сумма сдачи</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Nhóm số tiền chi</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Group change amount</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа сумма сдачи</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nhóm số tiền chi</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>GroupChangeAmountExtendedTooltip</name>
+      <id>101</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <backColor xsi:type="core:ColorRef">
+        <color>Style.UnselectedImageTextColor</color>
+      </backColor>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>FooterGroup</name>
+    <id>36</id>
+    <items xsi:type="form:FormGroup">
+      <name>GroupPrintSalesReceipt</name>
+      <id>231</id>
+      <items xsi:type="form:Decoration">
+        <name>PicturePrinter</name>
+        <id>228</id>
+        <title>
+          <key>en</key>
+          <value>Picture printer</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Картинка принтер</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Hình vẽ máy in</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>PicturePrinterExtendedTooltip</name>
+          <id>230</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>PicturePrinterContextMenu</name>
+          <id>229</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <width>2</width>
+        <autoMaxWidth>true</autoMaxWidth>
+        <height>1</height>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:PictureDecorationExtInfo">
+          <picture xsi:type="core:PictureRef">
+            <picture>StdPicture.Print</picture>
+          </picture>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>GenerateSalesReceipt</name>
+        <id>145</id>
+        <title>
+          <key>en</key>
+          <value>Receipt</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Товарный чек</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Hoá đơn bán lẻ</value>
+        </title>
+        <titleTextColor xsi:type="core:ColorRef">
+          <color>Style.FormTextColor</color>
+        </titleTextColor>
+        <titleFont xsi:type="core:FontRef">
+          <font>Style.NormalTextFont</font>
+          <bold>true</bold>
+          <italic>false</italic>
+          <underline>false</underline>
+          <strikeout>false</strikeout>
+        </titleFont>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>GenerateSalesReceipt</segments>
+        </dataPath>
+        <titleLocation>Right</titleLocation>
+        <extendedTooltip>
+          <name>GenerateSalesReceiptExtendedTooltip</name>
+          <id>147</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>GenerateSalesReceiptContextMenu</name>
+          <id>146</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>CheckBoxField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Group print receipt</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Группа печать товарного чека</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Nhóm in phiếu tính tiền hàng</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Group print receipt</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Группа печать товарного чека</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Nhóm in phiếu tính tiền hàng</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>GroupPrintSalesReceiptExtendedTooltip</name>
+        <id>232</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>GroupFooterButtons</name>
+      <id>98</id>
+      <items xsi:type="form:Button">
+        <name>OK</name>
+        <id>34</id>
+        <title>
+          <key>en</key>
+          <value>Issue cash receipt</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Пробить чек</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Đánh phiếu</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>OKExtendedTooltip</name>
+          <id>35</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <commandName>Form.Command.OK</commandName>
+        <representation>Auto</representation>
+        <defaultButton>true</defaultButton>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <items xsi:type="form:Button">
+        <name>FormUndo</name>
+        <id>139</id>
+        <title>
+          <key>en</key>
+          <value>Cancel</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Отменить</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Hủy bỏ</value>
+        </title>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>FormCancelExtendedTooltip</name>
+          <id>140</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <commandName>Form.Command.Cancel</commandName>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>en</key>
+        <value>Group footer buttons</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Группа кнопки подвала</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Nhóm cột phần đáy</value>
+      </title>
+      <toolTip>
+        <key>en</key>
+        <value>Group footer buttons</value>
+      </toolTip>
+      <toolTip>
+        <key>ru</key>
+        <value>Группа кнопки подвала</value>
+      </toolTip>
+      <toolTip>
+        <key>vi</key>
+        <value>Nhóm cột phần đáy</value>
+      </toolTip>
+      <extendedTooltip>
+        <name>GroupFooterButtonsExtendedTooltip</name>
+        <id>99</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>CommandBar</type>
+      <extInfo xsi:type="form:CommandBarExtInfo">
+        <horizontalAlign>Right</horizontalAlign>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>en</key>
+      <value>Footer group</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Группа подвала</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Nhóm phần đáy</value>
+    </title>
+    <toolTip>
+      <key>en</key>
+      <value>Footer group</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа подвала</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nhóm phần đáy</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>FooterGroupExtendedTooltip</name>
+      <id>37</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <commandBarLocation>Bottom</commandBarLocation>
+  <autoCommandBar>
+    <name>FormCommandBar</name>
+    <id>-1</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <horizontalAlign>Center</horizontalAlign>
+  </autoCommandBar>
+  <handlers>
+    <event>OnOpen</event>
+    <name>OnOpen</name>
+  </handlers>
+  <handlers>
+    <event>BeforeClose</event>
+    <name>BeforeClose</name>
+  </handlers>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>OnCreateAtServer</name>
+  </handlers>
+  <windowOpeningMode>LockOwnerWindow</windowOpeningMode>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <allowFormCustomize>true</allowFormCustomize>
+  <enabled>true</enabled>
+  <verticalScroll>UseIfNecessary</verticalScroll>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>CashReceived</name>
+    <title>
+      <key>en</key>
+      <value>Received in cash</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Получено наличными</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Đã nhận tiền mặt</value>
+    </title>
+    <id>1</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ReceivedPaymentCards</name>
+    <title>
+      <key>en</key>
+      <value>Received by payment cards</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Получено платежными картами</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Đã nhận thẻ thanh toán</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>AmountShortChange</name>
+    <title>
+      <key>en</key>
+      <value>Change Amount</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Сумма сдачи</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Số tiền đã cấp</value>
+    </title>
+    <id>3</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>DocumentAmount</name>
+    <title>
+      <key>en</key>
+      <value>Document amount</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Сумма документа</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Số tiền chứng từ</value>
+    </title>
+    <id>4</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>GenerateSalesReceipt</name>
+    <title>
+      <key>en</key>
+      <value>Generate receipt</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Сформировать товарный чек</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Lập hóa đơn bán lẻ</value>
+    </title>
+    <id>10</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>DocumentCurrency</name>
+    <title>
+      <key>en</key>
+      <value>Currency</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Вал.</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Tiền tệ</value>
+    </title>
+    <id>11</id>
+    <valueType>
+      <types>CatalogRef.Currencies</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>CardsAmount</name>
+    <title>
+      <key>en</key>
+      <value>Card amount</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Количество карт</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Số lượng thẻ</value>
+    </title>
+    <id>5</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>3</precision>
+      </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>FirstEntry</name>
+    <title>
+      <key>en</key>
+      <value>First entry</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Первый ввод</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Nhập lần đầu</value>
+    </title>
+    <id>7</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>SymbolsCountAfterComma</name>
+    <title>
+      <key>en</key>
+      <value>Decimal places</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Количество символов после запятой</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Số lượng ký tự sau dấu phẩy</value>
+    </title>
+    <id>8</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>CashReceivedRow</name>
+    <title>
+      <key>en</key>
+      <value>Cash received (row)</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Получено наличными (строка)</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Đã nhận tiền (dòng)</value>
+    </title>
+    <id>9</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>CurrentFieldEnterAmounts</name>
+    <title>
+      <key>en</key>
+      <value>Current amount input field</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Текущее поле ввода суммы</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Trường hiện tại nhập số tiền</value>
+    </title>
+    <id>12</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ToolTip</name>
+    <title>
+      <key>en</key>
+      <value>ToolTip</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Подсказка</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Chỉ dẫn</value>
+    </title>
+    <id>13</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>CurrentInputFieldLabel</name>
+    <title>
+      <key>en</key>
+      <value>Current input field label</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Надпись текущее поле ввода</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Nhãn trường nhập hiện tại</value>
+    </title>
+    <id>14</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>PaymentCardKinds</name>
+    <title>
+      <key>en</key>
+      <value>Payment card kinds</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Виды платежных карт</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Dạng thẻ thanh toán</value>
+    </title>
+    <id>15</id>
+    <valueType>
+      <types>ValueList</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <extInfo xsi:type="form:ValueListExtInfo">
+      <itemValueType/>
+    </extInfo>
+  </attributes>
+  <attributes>
+    <name>CashCR</name>
+    <title>
+      <key>en</key>
+      <value>Cash register</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Касса ККМ</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Quầy thu ngân</value>
+    </title>
+    <id>17</id>
+    <valueType>
+      <types>CatalogRef.CashRegisters</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>UsePeripherals</name>
+    <title>
+      <key>en</key>
+      <value>Use peripherals</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Использование подключаемого оборудования</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Sử dụng thiết bị đã kết nối</value>
+    </title>
+    <id>18</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>FiscalRegister</name>
+    <title>
+      <key>en</key>
+      <value>Fiscal data recorder</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Фискальный регистратор</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Máy ghi nhận tiền mặt</value>
+    </title>
+    <id>19</id>
+    <valueType>
+      <types>CatalogRef.Peripherals</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>POSTerminal</name>
+    <title>
+      <key>en</key>
+      <value>POS terminal</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Эквайринговый терминал</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Thiết bị thanh toán thẻ</value>
+    </title>
+    <id>20</id>
+    <valueType>
+      <types>CatalogRef.Peripherals</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>CashCRUseWithoutEquipmentConnection</name>
+    <title>
+      <key>en</key>
+      <value>Cash register Use without connecting equipment</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Касса ККМИспользовать без подключения оборудования</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Quầy thu ngânSử dụng mà không cần thiết bị bán hàng</value>
+    </title>
+    <id>21</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>WriteDocument</name>
+    <title>
+      <key>en</key>
+      <value>Write document</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Записать документ</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Ghi lại chứng từ</value>
+    </title>
+    <id>22</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>Object</name>
+    <title>
+      <key>en</key>
+      <value>Object</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>объект</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>đối tượng</value>
+    </title>
+    <id>23</id>
+    <valueType>
+      <types>DocumentObject.ReceiptCR</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>Object.RegisterRecords</segments>
+    </notDefaultUseAlwaysAttributes>
+    <main>true</main>
+    <additionalColumns>
+      <tablePath xsi:type="form:DataPath">
+        <segments>Object.PaymentWithPaymentCards</segments>
+      </tablePath>
+      <columns>
+        <name>AmountRow</name>
+        <title>
+          <key>en</key>
+          <value>Amount row</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Сумма строка</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Số tiền trong dòng</value>
+        </title>
+        <id>1</id>
+        <valueType>
+          <types>String</types>
+          <stringQualifiers/>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+      <columns>
+        <name>FirstEntry</name>
+        <title>
+          <key>en</key>
+          <value>First entry</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Первый ввод</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Nhập lần đầu</value>
+        </title>
+        <id>2</id>
+        <valueType>
+          <types>Boolean</types>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+      <columns>
+        <name>PaymentDeleted</name>
+        <title>
+          <key>en</key>
+          <value>Payment is deleted</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Оплата удалена</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Đã xóa thanh toán</value>
+        </title>
+        <id>3</id>
+        <valueType>
+          <types>Boolean</types>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+      <columns>
+        <name>PaymentAmountDeleted</name>
+        <title>
+          <key>en</key>
+          <value>Amount (del.)</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Сумма (уд.)</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Số tiền (đã xóa)</value>
+        </title>
+        <id>4</id>
+        <valueType>
+          <types>String</types>
+          <stringQualifiers/>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+      <columns>
+        <name>CommandName</name>
+        <title>
+          <key>en</key>
+          <value>Command name</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Имя команды</value>
+        </title>
+        <title>
+          <key>vi</key>
+          <value>Tên lệnh</value>
+        </title>
+        <id>5</id>
+        <valueType>
+          <types>String</types>
+          <stringQualifiers/>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+    </additionalColumns>
+  </attributes>
+  <attributes>
+    <name>ControlAtWarehouseDisabled</name>
+    <title>
+      <key>en</key>
+      <value>Control is disabled for the warehouse</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Контроль на складе отключен</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Đã tắt cơ chế kiểm soát trong kho</value>
+    </title>
+    <id>24</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>TemporaryCardsTable</name>
+    <title>
+      <key>en</key>
+      <value>Temporary card table</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Временная таблица карт</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Bảng thẻ tạm thời</value>
+    </title>
+    <id>6</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>LineNumber</name>
+      <title>
+        <key>en</key>
+        <value>Line number</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Номер строки</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Thứ tự dòng</value>
+      </title>
+      <id>1</id>
+      <valueType>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+        </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ChargeCardKind</name>
+      <title>
+        <key>en</key>
+        <value>Payment card kind</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Вид платежной карты</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Dạng thẻ thanh toán</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ChargeCardNo</name>
+      <title>
+        <key>en</key>
+        <value>Payment card number</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Номер платежной карты</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Số thẻ thanh toán</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Amount</name>
+      <title>
+        <key>en</key>
+        <value>Amount</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Сумма</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Số tiền</value>
+      </title>
+      <id>4</id>
+      <valueType>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>RefNo</name>
+      <title>
+        <key>en</key>
+        <value>Reference number</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Ссылочный номер</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Số tham chiếu</value>
+      </title>
+      <id>5</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ETReceiptNo</name>
+      <title>
+        <key>en</key>
+        <value>POS terminal receipt number</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Номер чека ЭТ</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Số phiếu của bảng điện tử</value>
+      </title>
+      <id>6</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>AmountRow</name>
+      <title>
+        <key>en</key>
+        <value>Amount row</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Сумма строка</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Số tiền trong dòng</value>
+      </title>
+      <id>7</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>FirstEntry</name>
+      <title>
+        <key>en</key>
+        <value>First entry</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Первый ввод</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Nhập lần đầu</value>
+      </title>
+      <id>8</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>PaymentDeleted</name>
+      <title>
+        <key>en</key>
+        <value>Payment is deleted</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Оплата удалена</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Đã xóa thanh toán</value>
+      </title>
+      <id>9</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>PaymentAmountDeleted</name>
+      <title>
+        <key>en</key>
+        <value>Payment is deleted amount</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Оплата удалена сумма</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Đã xóa thanh toán số tiền</value>
+      </title>
+      <id>10</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>CommandName</name>
+      <title>
+        <key>en</key>
+        <value>Command name</value>
+      </title>
+      <title>
+        <key>ru</key>
+        <value>Имя команды</value>
+      </title>
+      <title>
+        <key>vi</key>
+        <value>Tên lệnh</value>
+      </title>
+      <id>11</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>CardsAmountForTitle</name>
+    <title>
+      <key>en</key>
+      <value>Card amount for the title</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Количество карт для заголовка</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Số lượng thẻ dành cho tiêu đề</value>
+    </title>
+    <id>16</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ButtonPressedCancel</name>
+    <title>
+      <key>en</key>
+      <value>Cancel is clicked</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Нажата кнопка отменить</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Nhấn nút hủy bỏ</value>
+    </title>
+    <id>25</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>PressedButtonIssueReceipt</name>
+    <title>
+      <key>en</key>
+      <value>Issue receipt button is clicked</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Нажата кнопка пробить чек</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Nhấn nút đánh phiếu</value>
+    </title>
+    <id>26</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <formCommands>
+    <name>OK</name>
+    <title>
+      <key>en</key>
+      <value>OK</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Ок</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Đồng ý</value>
+    </title>
+    <id>3</id>
+    <toolTip>
+      <key>en</key>
+      <value>OK</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Ок</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Đồng ý</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>OK</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>AddCard</name>
+    <title>
+      <key>en</key>
+      <value>Add card</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Добавить карту</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Thêm thẻ</value>
+    </title>
+    <id>4</id>
+    <toolTip>
+      <key>en</key>
+      <value>Add card</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Добавить карту</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Thêm thẻ</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.CreateListItem</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>AddCard</name>
+      </handler>
+    </action>
+    <representation>Text</representation>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Button0</name>
+    <title>
+      <key>en</key>
+      <value>0</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>0</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>0</value>
+    </title>
+    <id>5</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Button0</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Button1</name>
+    <title>
+      <key>en</key>
+      <value>1</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>1</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>1</value>
+    </title>
+    <id>6</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Button1</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Button2</name>
+    <title>
+      <key>en</key>
+      <value>2</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>2</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>2</value>
+    </title>
+    <id>7</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Button2</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Button3</name>
+    <title>
+      <key>en</key>
+      <value>3</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>3</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>3</value>
+    </title>
+    <id>8</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Button3</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Button4</name>
+    <title>
+      <key>en</key>
+      <value>4</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>4</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>4</value>
+    </title>
+    <id>9</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Button4</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Button5</name>
+    <title>
+      <key>en</key>
+      <value>5</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>5</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>5</value>
+    </title>
+    <id>10</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Button5</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Button6</name>
+    <title>
+      <key>en</key>
+      <value>6</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>6</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>6</value>
+    </title>
+    <id>11</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Button6</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Button7</name>
+    <title>
+      <key>en</key>
+      <value>1</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>1</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>1</value>
+    </title>
+    <id>12</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Button7</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Button8</name>
+    <title>
+      <key>en</key>
+      <value>8</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>8</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>8</value>
+    </title>
+    <id>13</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Button8</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Button9</name>
+    <title>
+      <key>en</key>
+      <value>9</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>9</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>9</value>
+    </title>
+    <id>14</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Button9</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Reset</name>
+    <title>
+      <key>en</key>
+      <value>From</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Списать из</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Ghi giảm từ</value>
+    </title>
+    <id>15</id>
+    <toolTip>
+      <key>en</key>
+      <value>Reset</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Сброшен</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Bỏ</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>CommandClear</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>DelimiterFractionalParts</name>
+    <title>
+      <key>en</key>
+      <value>.</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>.</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>.</value>
+    </title>
+    <id>16</id>
+    <toolTip>
+      <key>en</key>
+      <value>Fractional part separator</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Разделитель дробной части</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Đường chia tách phần thập phân</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>CommandPoint</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Cancel</name>
+    <title>
+      <key>en</key>
+      <value>Cancel</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Отменить</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Hủy bỏ</value>
+    </title>
+    <id>17</id>
+    <toolTip>
+      <key>en</key>
+      <value>Cancel payment by card in POS terminal</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Отменить оплату картой на эквайринговом терминале</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Hủy bỏ thanh toán bằng thẻ trong thiết bị thẻ thanh toán</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Cancel</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Button0_2</name>
+    <title>
+      <key>en</key>
+      <value>0</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>0</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>0</value>
+    </title>
+    <id>19</id>
+    <toolTip>
+      <key>en</key>
+      <value>Button0 2</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Кнопка0 2</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nút0 2</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <shortcut>Alt+Num 0</shortcut>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Button0</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Button1_2</name>
+    <title>
+      <key>en</key>
+      <value>1</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>1</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>1</value>
+    </title>
+    <id>20</id>
+    <toolTip>
+      <key>en</key>
+      <value>Button1 2</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Кнопка1 2</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nút1 2</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <shortcut>Alt+Num 1</shortcut>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Button1</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Button2_2</name>
+    <title>
+      <key>en</key>
+      <value>2</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>2</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>2</value>
+    </title>
+    <id>21</id>
+    <toolTip>
+      <key>en</key>
+      <value>Button2 2</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Кнопка2 2</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nút2 2</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <shortcut>Alt+Num 2</shortcut>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Button2</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Button3_2</name>
+    <title>
+      <key>en</key>
+      <value>3</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>3</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>3</value>
+    </title>
+    <id>22</id>
+    <toolTip>
+      <key>en</key>
+      <value>Button3 2</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Кнопка3 2</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nút3 2</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <shortcut>Alt+Num 3</shortcut>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Button3</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Button4_2</name>
+    <title>
+      <key>en</key>
+      <value>4</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>4</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>4</value>
+    </title>
+    <id>23</id>
+    <toolTip>
+      <key>en</key>
+      <value>Button4 2</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Кнопка4 2</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nút4 2</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <shortcut>Alt+Num 4</shortcut>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Button4</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Button5_2</name>
+    <title>
+      <key>en</key>
+      <value>5</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>5</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>5</value>
+    </title>
+    <id>24</id>
+    <toolTip>
+      <key>en</key>
+      <value>Button5 2</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Кнопка5 2</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nút5 2</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <shortcut>Alt+Num 5</shortcut>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Button5</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Button6_2</name>
+    <title>
+      <key>en</key>
+      <value>6</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>6</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>6</value>
+    </title>
+    <id>25</id>
+    <toolTip>
+      <key>en</key>
+      <value>Button6 2</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Кнопка6 2</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nút6 2</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <shortcut>Alt+Num 6</shortcut>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Button6</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Button7_2</name>
+    <title>
+      <key>en</key>
+      <value>7</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>7</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>7</value>
+    </title>
+    <id>26</id>
+    <toolTip>
+      <key>en</key>
+      <value>Button7 2</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Кнопка7 2</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nút7 2</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <shortcut>Alt+Num 7</shortcut>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Button7</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Button8_2</name>
+    <title>
+      <key>en</key>
+      <value>8</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>8</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>8</value>
+    </title>
+    <id>27</id>
+    <toolTip>
+      <key>en</key>
+      <value>Button8 2</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Кнопка8 2</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nút8 2</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <shortcut>Alt+Num 8</shortcut>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Button8</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Button9_2</name>
+    <title>
+      <key>en</key>
+      <value>9</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>9</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>9</value>
+    </title>
+    <id>28</id>
+    <toolTip>
+      <key>en</key>
+      <value>Button9 2</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Кнопка9 2</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Nút9 2</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <shortcut>Alt+Num 9</shortcut>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Button9</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>DelimiterFractionalParts_2</name>
+    <title>
+      <key>en</key>
+      <value>.</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>.</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>.</value>
+    </title>
+    <id>29</id>
+    <toolTip>
+      <key>en</key>
+      <value>Fractional part separator</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Разделитель дробной части</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Đường chia tách phần thập phân</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <shortcut>Alt+Num .</shortcut>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>CommandPoint</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Reset_2</name>
+    <title>
+      <key>en</key>
+      <value>From</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Списать из</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Ghi giảm từ</value>
+    </title>
+    <id>30</id>
+    <toolTip>
+      <key>en</key>
+      <value>Reset</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Сброшен</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Bỏ</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <shortcut>Alt+BackSpace</shortcut>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>CommandClear</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ChooseCashToDeletePayment</name>
+    <title>
+      <key>en</key>
+      <value>Select card</value>
+    </title>
+    <title>
+      <key>ru</key>
+      <value>Выбрать карту</value>
+    </title>
+    <title>
+      <key>vi</key>
+      <value>Chọn thẻ</value>
+    </title>
+    <id>34</id>
+    <toolTip>
+      <key>en</key>
+      <value>Select card to remove payment</value>
+    </toolTip>
+    <toolTip>
+      <key>ru</key>
+      <value>Выбрать карту для удаления оплаты</value>
+    </toolTip>
+    <toolTip>
+      <key>vi</key>
+      <value>Chọn thẻ để xóa thanh toán</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.MarkToDelete</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ChooseCashToDeletePayment</name>
+      </handler>
+    </action>
+    <representation>Picture</representation>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <commandInterface>
+    <navigationPanel>
+      <cmiFragmentRecord>
+        <command>Report.DiscountsAppliedInDocument.Command.AppliedDiscounts</command>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+      </cmiFragmentRecord>
+    </navigationPanel>
+    <commandBar/>
+  </commandInterface>
+  <extInfo xsi:type="form:DocumentFormExtInfo">
+    <repostOnWrite>true</repostOnWrite>
+  </extInfo>
+</form:Form>
